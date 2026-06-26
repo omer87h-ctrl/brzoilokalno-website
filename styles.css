@@ -256,9 +256,20 @@ a {
   box-shadow: 0 12px 30px rgba(242, 140, 40, 0.12);
 }
 
+.store-btn--google-play:not(.store-btn--soon):hover {
+  transform: translateY(-2px);
+  border-color: rgba(52, 168, 83, 0.45);
+  box-shadow: 0 12px 30px rgba(52, 168, 83, 0.12);
+}
+
+.store-btn--google-play:not(.store-btn--soon) .store-btn__icon {
+  color: #34a853;
+}
+
 .store-btn--soon {
   opacity: 0.55;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .hero-pills {

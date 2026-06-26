@@ -12,6 +12,7 @@ const translations = {
     "hero.pill3": "Blizu mene",
     "store.huaweiSmall": "Preuzmi na",
     "store.playSmall": "Uskoro na",
+    "store.playSmallActive": "Preuzmi na",
     "features.title": "Kako aplikacija radi",
     "features.subtitle": "Od pretrage do dogovora — sve lokalno, brzo i transparentno.",
     "features.f1.tag": "Pametna pretraga",
@@ -36,6 +37,7 @@ const translations = {
     "forWhom.craftsmen.text": "Prikaži svoje radove, primaj prijave na poslove i gradi reputaciju kroz ocjene i recenzije.",
     "download.title": "Preuzmi aplikaciju",
     "download.text": "Brzo i Lokalno je dostupno na Huawei AppGallery. Google Play uskoro.",
+    "download.textBoth": "Brzo i Lokalno je dostupno na Huawei AppGallery i Google Playu.",
     "footer.privacy": "Politika privatnosti",
     "footer.terms": "Uslovi korištenja",
     "footer.delete": "Brisanje naloga",
@@ -54,6 +56,7 @@ const translations = {
     "hero.pill3": "Near me",
     "store.huaweiSmall": "Get it on",
     "store.playSmall": "Coming soon on",
+    "store.playSmallActive": "Get it on",
     "features.title": "How the app works",
     "features.subtitle": "From search to agreement — local, fast and transparent.",
     "features.f1.tag": "Smart search",
@@ -78,6 +81,7 @@ const translations = {
     "forWhom.craftsmen.text": "Show your work, receive job applications and build reputation through ratings and reviews.",
     "download.title": "Download the app",
     "download.text": "Brzo i Lokalno is available on Huawei AppGallery. Google Play coming soon.",
+    "download.textBoth": "Brzo i Lokalno is available on Huawei AppGallery and Google Play.",
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Terms of Use",
     "footer.delete": "Delete Account",
@@ -86,6 +90,48 @@ const translations = {
 };
 
 const LANG_KEY = "bil-lang";
+let googlePlayLive = false;
+
+function applySiteConfig() {
+  const config = window.SITE_CONFIG || {};
+
+  document.querySelectorAll('[data-store="huawei"]').forEach((btn) => {
+    if (config.huaweiAppGallery) {
+      btn.href = config.huaweiAppGallery;
+    }
+  });
+
+  googlePlayLive = Boolean(config.googlePlay && config.googlePlay.trim());
+  document.querySelectorAll('[data-store="googlePlay"]').forEach((btn) => {
+    if (googlePlayLive) {
+      btn.href = config.googlePlay.trim();
+      btn.classList.remove("store-btn--soon");
+      btn.removeAttribute("aria-disabled");
+      btn.setAttribute("target", "_blank");
+      btn.setAttribute("rel", "noopener noreferrer");
+    } else {
+      btn.removeAttribute("href");
+      btn.classList.add("store-btn--soon");
+      btn.setAttribute("aria-disabled", "true");
+    }
+  });
+
+  if (config.googleAnalyticsId && config.googleAnalyticsId.trim()) {
+    const id = config.googleAnalyticsId.trim();
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    window.gtag = gtag;
+    gtag("js", new Date());
+    gtag("config", id);
+  }
+}
 
 function setLanguage(lang) {
   const strings = translations[lang] || translations.bs;
@@ -93,6 +139,14 @@ function setLanguage(lang) {
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
+    if (key === "store.playSmall" && googlePlayLive && strings["store.playSmallActive"]) {
+      el.textContent = strings["store.playSmallActive"];
+      return;
+    }
+    if (key === "download.text" && googlePlayLive && strings["download.textBoth"]) {
+      el.textContent = strings["download.textBoth"];
+      return;
+    }
     if (strings[key]) {
       el.textContent = strings[key];
     }
@@ -112,6 +166,7 @@ document.querySelectorAll(".lang-btn").forEach((btn) => {
 });
 
 const savedLang = localStorage.getItem(LANG_KEY);
+applySiteConfig();
 setLanguage(savedLang === "en" ? "en" : "bs");
 
 const menuToggle = document.getElementById("menu-toggle");

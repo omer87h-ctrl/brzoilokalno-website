@@ -1,37 +1,67 @@
 # Brzo i Lokalno — web stranica
 
-Landing stranica za mobilnu aplikaciju **Brzo i Lokalno**.
+**Uživo:** https://omer87h-ctrl.github.io/brzoilokalno-website/
 
-## Lokalno pregled
+---
 
-Otvori `index.html` u browseru ili pokreni jednostavan server:
+## Kako sam promijeniti link (bez koda) — samo GitHub
+
+Sve linkove držiš u **jednom fajlu**: `site-config.js`
+
+### Koraci
+
+1. Otvori: https://github.com/omer87h-ctrl/brzoilokalno-website
+2. Klikni na fajl **`site-config.js`**
+3. Klikni olovku **Edit** (gore desno)
+4. Promijeni samo ono što treba (primjeri ispod)
+5. Dole klikni **Commit changes** → **Commit changes**
+
+Za 1–2 minute stranica se sama osvježi.
+
+### Google Play (kad app izađe)
+
+U `site-config.js` promijeni:
+
+```javascript
+googlePlay: "",
+```
+
+u npr.:
+
+```javascript
+googlePlay: "https://play.google.com/store/apps/details?id=tvoj.paket.app",
+```
+
+Dok je `""` prazno → na stranici piše **„Uskoro na Google Play”**.  
+Kad zalijepiš link → dugme postaje aktivno **„Preuzmi na Google Play”**.
+
+### Huawei AppGallery
+
+Već postavljeno. Ako se link promijeni, uredi:
+
+```javascript
+huaweiAppGallery: "https://appgallery.huawei.com/app/C117382847",
+```
+
+### Statistika posjeta (opcionalno)
+
+Kad napraviš Google Analytics nalog i dobiješ ID (`G-XXXXXXXXXX`):
+
+```javascript
+googleAnalyticsId: "G-XXXXXXXXXX",
+```
+
+---
+
+## Lokalni pregled
 
 ```powershell
 cd C:\Users\hp\Documents\BrzoiLokalnoWebsite
 python -m http.server 8080
 ```
 
-Zatim otvori: http://localhost:8080
+Otvori: http://localhost:8080
 
-## GitHub Pages
+## Politike app-a
 
-1. Kreiraj repo na GitHubu: `brzoilokalno-website` (nalog `omer87h-ctrl`)
-2. Push ovog foldera:
-
-```powershell
-cd C:\Users\hp\Documents\BrzoiLokalnoWebsite
-git init
-git add .
-git commit -m "Add Brzo i Lokalno landing page"
-git branch -M main
-git remote add origin https://github.com/omer87h-ctrl/brzoilokalno-website.git
-git push -u origin main
-```
-
-3. GitHub → repo → **Settings** → **Pages** → Source: `main` / `/ (root)`
-4. Stranica će biti na: `https://omer87h-ctrl.github.io/brzoilokalno-website/`
-
-## Linkovi
-
-- Huawei AppGallery: https://appgallery.huawei.com/app/C117382847
-- Politike: https://omer87h-ctrl.github.io/brzoilokalno-policy/
+https://omer87h-ctrl.github.io/brzoilokalno-policy/
