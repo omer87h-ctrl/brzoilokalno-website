@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Brzo i Lokalno — pronađi majstora u svom gradu. Ocjene, recenzije i lokalne usluge na jednom mjestu.">
+  <title>Brzo i Lokalno</title>
+  <link rel="icon" href="assets/app-icon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <img src="assets/app-icon.png" alt="" width="44" height="44">
+        <span>Brzo i <em>Lokalno</em></span>
+      </a>
+      <nav class="nav" id="main-nav" aria-label="Glavna navigacija">
+        <a href="#features" data-i18n="nav.features">Kako radi</a>
+        <a href="#for-whom" data-i18n="nav.forWhom">Za koga</a>
+        <a href="#download" data-i18n="nav.download">Preuzmi</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Jezik">
+          <button type="button" class="lang-btn active" data-lang="bs" aria-pressed="true">BS</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Meni">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Lokalne usluge, pametna pretraga</p>
+          <h1>
+            <span data-i18n="hero.title1">Brzo do pravog</span>
+            <span class="accent" data-i18n="hero.title2">majstora</span>
+          </h1>
+          <p class="lead" data-i18n="hero.lead">
+            Pronađi majstora ili kreatora u svom gradu. Ocjene, recenzije, javni radovi i direktan chat — sve na jednom mjestu.
+          </p>
+          <div class="store-buttons">
+            <a class="store-btn store-btn--huawei" href="https://appgallery.huawei.com/app/C117382847" target="_blank" rel="noopener noreferrer">
+              <span class="store-btn__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+              </span>
+              <span>
+                <small data-i18n="store.huaweiSmall">Preuzmi na</small>
+                <strong>Huawei AppGallery</strong>
+              </span>
+            </a>
+            <span class="store-btn store-btn--soon" aria-disabled="true">
+              <span class="store-btn__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12 3.84 21.85c-.5-.24-.84-.76-.84-1.35zm13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27zm3.35-3.03l-2.27-2.27L17.95 2.66l10.16 10.16-2.27 2.27zM6.05 2.66l10.76 6.16-2.27 2.27L6.05 2.66z"/></svg>
+              </span>
+              <span>
+                <small data-i18n="store.playSmall">Uskoro na</small>
+                <strong>Google Play</strong>
+              </span>
+            </span>
+          </div>
+          <ul class="hero-pills">
+            <li data-i18n="hero.pill1">Ocjene i recenzije</li>
+            <li data-i18n="hero.pill2">Slobodni sada</li>
+            <li data-i18n="hero.pill3">Blizu mene</li>
+          </ul>
+        </div>
+        <div class="hero-visual">
+          <div class="phone-frame">
+            <img src="assets/screen-find-majstor.png" alt="" id="hero-shot" width="520" height="520">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="features.title">Kako aplikacija radi</h2>
+          <p data-i18n="features.subtitle">Od pretrage do dogovora — sve lokalno, brzo i transparentno.</p>
+        </div>
+        <div class="feature-list">
+          <article class="feature-card">
+            <div class="feature-card__media">
+              <img src="assets/screen-smart-search.png" alt="" loading="lazy" width="640" height="360">
+            </div>
+            <div class="feature-card__body">
+              <span class="feature-tag" data-i18n="features.f1.tag">Pametna pretraga</span>
+              <h3 data-i18n="features.f1.title">Brzo do pravog majstora</h3>
+              <p data-i18n="features.f1.text">Pametna pretraga koristi ocjene i recenzije da ti preporuči najboljeg izvođača za tvoj posao.</p>
+            </div>
+          </article>
+          <article class="feature-card feature-card--reverse">
+            <div class="feature-card__media">
+              <img src="assets/screen-find-majstor.png" alt="" loading="lazy" width="640" height="360">
+            </div>
+            <div class="feature-card__body">
+              <span class="feature-tag" data-i18n="features.f2.tag">Pretraga</span>
+              <h3 data-i18n="features.f2.title">Pronađi majstora brzo</h3>
+              <p data-i18n="features.f2.text">Filtriraj po gradu, kategoriji, „Slobodni sada” i „Blizu mene”. Popularni gradovi: Kladanj, Tuzla, Sarajevo, Zenica.</p>
+            </div>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__media">
+              <img src="assets/screen-activities.png" alt="" loading="lazy" width="640" height="360">
+            </div>
+            <div class="feature-card__body">
+              <span class="feature-tag" data-i18n="features.f3.tag">Aktivnost</span>
+              <h3 data-i18n="features.f3.title">Sve aktivnosti na jednom mjestu</h3>
+              <p data-i18n="features.f3.text">Prati prijave, dogovorene i završene poslove, obavijesti i svoj napredak na profilu.</p>
+            </div>
+          </article>
+          <article class="feature-card feature-card--reverse">
+            <div class="feature-card__media">
+              <img src="assets/screen-jobs.png" alt="" loading="lazy" width="640" height="360">
+            </div>
+            <div class="feature-card__body">
+              <span class="feature-tag" data-i18n="features.f4.tag">Poslovi</span>
+              <h3 data-i18n="features.f4.title">Objavi posao ili se prijavi</h3>
+              <p data-i18n="features.f4.text">Potražnja i ponuda bez komplikacije. Objavi posao, pronađi izvođača i razgovaraj direktno u chatu.</p>
+            </div>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__media">
+              <img src="assets/screen-public-works.png" alt="" loading="lazy" width="640" height="360">
+            </div>
+            <div class="feature-card__body">
+              <span class="feature-tag" data-i18n="features.f5.tag">Povjerenje</span>
+              <h3 data-i18n="features.f5.title">Pogledaj stvarne radove</h3>
+              <p data-i18n="features.f5.text">Javni radovi, profil izvođača i ocjene pomažu ti da doneseš bolju odluku prije kontakta.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="for-whom" id="for-whom">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="forWhom.title">Za koga je Brzo i Lokalno</h2>
+        </div>
+        <div class="audience-grid">
+          <article class="audience-card">
+            <div class="audience-icon" aria-hidden="true">🏠</div>
+            <h3 data-i18n="forWhom.users.title">Za korisnike</h3>
+            <p data-i18n="forWhom.users.text">Tražiš majstora, kreatora ili lokalnu uslugu? Brzo pronađi provjerenog izvođača u svom gradu.</p>
+          </article>
+          <article class="audience-card">
+            <div class="audience-icon" aria-hidden="true">🔧</div>
+            <h3 data-i18n="forWhom.craftsmen.title">Za majstore</h3>
+            <p data-i18n="forWhom.craftsmen.text">Prikaži svoje radove, primaj prijave na poslove i gradi reputaciju kroz ocjene i recenzije.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="download" id="download">
+      <div class="container download-inner">
+        <div class="download-copy">
+          <h2 data-i18n="download.title">Preuzmi aplikaciju</h2>
+          <p data-i18n="download.text">Brzo i Lokalno je dostupno na Huawei AppGallery. Google Play uskoro.</p>
+        </div>
+        <div class="store-buttons store-buttons--center">
+          <a class="store-btn store-btn--huawei" href="https://appgallery.huawei.com/app/C117382847" target="_blank" rel="noopener noreferrer">
+            <span class="store-btn__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+            </span>
+            <span>
+              <small data-i18n="store.huaweiSmall">Preuzmi na</small>
+              <strong>Huawei AppGallery</strong>
+            </span>
+          </a>
+          <span class="store-btn store-btn--soon" aria-disabled="true">
+            <span class="store-btn__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12 3.84 21.85c-.5-.24-.84-.76-.84-1.35zm13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27zm3.35-3.03l-2.27-2.27L17.95 2.66l10.16 10.16-2.27 2.27zM6.05 2.66l10.76 6.16-2.27 2.27L6.05 2.66z"/></svg>
+            </span>
+            <span>
+              <small data-i18n="store.playSmall">Uskoro na</small>
+              <strong>Google Play</strong>
+            </span>
+          </span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/app-icon.png" alt="" width="36" height="36">
+        <span>Brzo i Lokalno</span>
+      </div>
+      <nav class="footer-links" aria-label="Pravni linkovi">
+        <a href="https://omer87h-ctrl.github.io/brzoilokalno-policy/privacy-policy.html" target="_blank" rel="noopener noreferrer" data-i18n="footer.privacy">Politika privatnosti</a>
+        <a href="https://omer87h-ctrl.github.io/brzoilokalno-policy/terms.html" target="_blank" rel="noopener noreferrer" data-i18n="footer.terms">Uslovi korištenja</a>
+        <a href="https://omer87h-ctrl.github.io/brzoilokalno-policy/delete-account.html" target="_blank" rel="noopener noreferrer" data-i18n="footer.delete">Brisanje naloga</a>
+      </nav>
+      <p class="footer-contact">
+        <a href="mailto:omer.creating.apps87@gmail.com">omer.creating.apps87@gmail.com</a>
+      </p>
+      <p class="footer-copy" data-i18n="footer.copy">© 2026 Brzo i Lokalno. Sva prava zadržana.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
