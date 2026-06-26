@@ -65,3 +65,25 @@ Otvori: http://localhost:8080
 ## Politike app-a
 
 https://omer87h-ctrl.github.io/brzoilokalno-policy/
+
+---
+
+## Zašto me Google još ne nalazi?
+
+Stranica **radi** (link direktno u browseru), ali Google je **nov** i treba mu vrijeme (često **nekoliko dana do 2–4 sedmice**) da je indeksira.
+
+### Ubrzaj pojavljivanje u Googleu
+
+1. Otvori [Google Search Console](https://search.google.com/search-console)
+2. **Dodaj property** → URL: `https://omer87h-ctrl.github.io/brzoilokalno-website/`
+3. Potvrdi vlasništvo (HTML tag ili GitHub način)
+4. Idi na **Sitemaps** → pošalji: `sitemap.xml`
+5. Klikni **Request indexing** za glavnu stranicu
+
+### Šta još pomaže
+
+- Dijeli link na društvenim mrežama, u app-u, u Huawei opisu
+- Dodaj link na policy stranicu (`brzoilokalno-policy`)
+- Kasnije: vlastita domena (npr. `brzoilokalno.ba`) — lakše za pamćenje i Google
+
+**Napomena:** Upis „brzo i lokalno” u Google neće odmah pokazati tvoj sajt dok Google ne indeksira stranicu i dok se ne natječeš sa drugim rezultatima. Direktan link uvijek radi odmah.

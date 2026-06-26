@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://omer87h-ctrl.github.io/brzoilokalno-website/sitemap.xml
