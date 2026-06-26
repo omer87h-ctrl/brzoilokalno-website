@@ -39,12 +39,15 @@ const translations = {
     "joinEarly.title": "Pridruži se među prvima",
     "joinEarly.text": "Ako ste majstor ili kreator, možete se registrovati i predstaviti svoje usluge, radove i dostupnost. U početnoj fazi pomažemo oko boljeg opisa profila kako bi vas korisnici lakše pronašli.",
     "joinEarly.cta": "Registruj se u aplikaciji",
+    "joinEarly.contactLead": "Pitanja ili pomoć oko profila? Javite nam se:",
+    "joinEarly.instagram": "Instagram",
     "download.title": "Preuzmi aplikaciju",
     "download.text": "Brzo i Lokalno je dostupno na Huawei AppGallery. Google Play uskoro.",
     "download.textBoth": "Brzo i Lokalno je dostupno na Huawei AppGallery i Google Playu.",
     "footer.privacy": "Politika privatnosti",
     "footer.terms": "Uslovi korištenja",
     "footer.delete": "Brisanje naloga",
+    "footer.instagram": "Instagram",
     "footer.copy": "© 2026 Brzo i Lokalno. Sva prava zadržana.",
   },
   en: {
@@ -87,12 +90,15 @@ const translations = {
     "joinEarly.title": "Join among the first",
     "joinEarly.text": "If you are a craftsman or creator, you can register and present your services, work samples and availability. In the initial phase we help with a better profile description so users can find you more easily.",
     "joinEarly.cta": "Register in the app",
+    "joinEarly.contactLead": "Questions or help with your profile? Contact us:",
+    "joinEarly.instagram": "Instagram",
     "download.title": "Download the app",
     "download.text": "Brzo i Lokalno is available on Huawei AppGallery. Google Play coming soon.",
     "download.textBoth": "Brzo i Lokalno is available on Huawei AppGallery and Google Play.",
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Terms of Use",
     "footer.delete": "Delete Account",
+    "footer.instagram": "Instagram",
     "footer.copy": "© 2026 Brzo i Lokalno. All rights reserved.",
   },
 };
@@ -121,6 +127,24 @@ function applySiteConfig() {
       btn.removeAttribute("href");
       btn.classList.add("store-btn--soon");
       btn.setAttribute("aria-disabled", "true");
+    }
+  });
+
+  const email = (config.contactEmail || "omer.creating.apps87@gmail.com").trim();
+  document.querySelectorAll('[data-contact="email"]').forEach((link) => {
+    link.href = `mailto:${email}`;
+    if (link.classList.contains("contact-link--email")) {
+      link.textContent = email;
+    }
+  });
+
+  const instagram = config.instagram && config.instagram.trim();
+  document.querySelectorAll('[data-social="instagram"]').forEach((link) => {
+    if (instagram) {
+      link.href = instagram;
+      link.classList.remove("is-hidden");
+    } else {
+      link.classList.add("is-hidden");
     }
   });
 

@@ -43,7 +43,16 @@ Već postavljeno. Ako se link promijeni, uredi:
 huaweiAppGallery: "https://appgallery.huawei.com/app/C117382847",
 ```
 
-### Statistika posjeta (opcionalno)
+### Instagram (kad napraviš profil)
+
+U `site-config.js`:
+
+```javascript
+instagram: "https://www.instagram.com/tvoj_profil/",
+```
+
+Dok je `""` prazno, Instagram dugme se ne prikazuje. Email kontakt je uvijek vidljiv.
+
 
 Kad napraviš Google Analytics nalog i dobiješ ID (`G-XXXXXXXXXX`):
 
