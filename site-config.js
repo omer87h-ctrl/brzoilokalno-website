@@ -17,7 +17,4 @@ window.SITE_CONFIG = {
   // Instagram — kad napraviš profil, zalijepi puni link (npr. https://www.instagram.com/brzoilokalno/)
   // Dok nema linka, ostavi ""  →  dugme se ne prikazuje.
   instagram: "https://www.instagram.com/brzo.i.lokalno/",
-
-  // Kontakt email (prikazuje se na stranici)
-  contactEmail: "omer.creating.apps87@gmail.com",
 };
