@@ -1,0 +1,11 @@
+{
+  "name": "brzoilokalno-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "create-web-config": "node scripts/create-web-config.mjs"
+  },
+  "devDependencies": {
+    "firebase-admin": "^13.0.2"
+  }
+}
