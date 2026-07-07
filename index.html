@@ -47,7 +47,7 @@
       {
         "@type": "SoftwareApplication",
         "name": "Brzo i Lokalno",
-        "description": "Aplikacija za majstore, kreatore i korisnike — objavi posao, pronađi majstora, dogovori uslugu lokalno.",
+        "description": "Platforma za majstore, kreatore i korisnike — web i Android. Objavi posao, pronađi majstora, dogovori uslugu lokalno.",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Android",
         "url": "https://brzoilokalno.com/",
@@ -67,6 +67,7 @@
         <span>Brzo i <em>Lokalno</em></span>
       </a>
       <nav class="nav" id="main-nav" aria-label="Glavna navigacija">
+        <a href="#platform" data-i18n="nav.platform">Platforma</a>
         <a href="#features" data-i18n="nav.features">Kako radi</a>
         <a href="#for-whom" data-i18n="nav.forWhom">Za koga</a>
         <a href="#download" data-i18n="nav.download">Preuzmi</a>
@@ -103,14 +104,18 @@
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow" data-i18n="hero.eyebrow">Lokalne usluge, pametna pretraga</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Lokalna platforma — web i mobilno</p>
           <h1>
-            <span data-i18n="hero.title1">Majstori, kreatori i usluge</span>
-            <span class="accent" data-i18n="hero.title2">u tvom gradu</span>
+            <span data-i18n="hero.title1">Više od aplikacije:</span>
+            <span class="accent" data-i18n="hero.title2">platforma za tvoj grad</span>
           </h1>
           <p class="lead" data-i18n="hero.lead">
-            Objavi posao, pronađi majstora, pregledaj radove i dogovori uslugu lokalno.
+            Majstori, kreatori i korisnici na jednom mjestu — objavi posao, pronađi uslugu, pregledaj radove i dogovori se lokalno. Koristi platformu u browseru ili preko aplikacije.
           </p>
+          <div class="hero-cta-row">
+            <a class="hero-cta hero-cta--primary" href="/app/" data-i18n="hero.openWeb">Otvori platformu u browseru</a>
+            <a class="hero-cta hero-cta--ghost" href="#platform" data-i18n="hero.seePlatform">Pogledaj kako izgleda</a>
+          </div>
           <div class="store-buttons">
             <a class="store-btn store-btn--huawei" data-store="huawei" href="#" target="_blank" rel="noopener noreferrer">
               <span class="store-btn__icon" aria-hidden="true">
@@ -141,6 +146,91 @@
           <div class="phone-frame">
             <img src="assets/screen-find-majstor.png" alt="" id="hero-shot" width="520" height="520">
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="platform-showcase" id="platform">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow--center" data-i18n="platform.eyebrow">Stvarna platforma</p>
+          <h2 data-i18n="platform.title">Nije samo obična aplikacija</h2>
+          <p data-i18n="platform.subtitle">Brzo i Lokalno je živa platforma — profili, poslovi, ponude, radovi, chat i ocjene. Evo kako to izgleda u praksi (stvarni ekrani).</p>
+        </div>
+
+        <div class="platform-stage">
+          <div class="platform-stage__media">
+            <div class="platform-reel" id="platform-reel" aria-label="Pregled platforme">
+              <div class="platform-reel__glow" aria-hidden="true"></div>
+              <div class="platform-reel__phone">
+                <img class="platform-reel__shot is-active" src="assets/screen-smart-search.png" alt="" data-shot="0" width="640" height="360">
+                <img class="platform-reel__shot" src="assets/screen-find-majstor.png" alt="" data-shot="1" width="640" height="360" loading="lazy">
+                <img class="platform-reel__shot" src="assets/screen-jobs.png" alt="" data-shot="2" width="640" height="360" loading="lazy">
+                <img class="platform-reel__shot" src="assets/screen-activities.png" alt="" data-shot="3" width="640" height="360" loading="lazy">
+                <img class="platform-reel__shot" src="assets/screen-public-works.png" alt="" data-shot="4" width="640" height="360" loading="lazy">
+              </div>
+              <div class="platform-reel__caption" id="platform-reel-caption" data-i18n="platform.shot1">Početna i pametna pretraga</div>
+              <div class="platform-reel__dots" id="platform-reel-dots" aria-hidden="true"></div>
+            </div>
+            <div class="platform-video-wrap is-hidden" id="promo-video-wrap">
+              <div class="platform-video">
+                <iframe id="promo-video-iframe" title="Brzo i Lokalno — video prezentacija" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="platform-stage__copy">
+            <ul class="platform-points">
+              <li>
+                <strong data-i18n="platform.p1.title">Web + Android</strong>
+                <span data-i18n="platform.p1.text">Ista platforma u browseru i u aplikaciji — bez čekanja na store da probaš.</span>
+              </li>
+              <li>
+                <strong data-i18n="platform.p2.title">Potražnja i ponuda</strong>
+                <span data-i18n="platform.p2.text">Korisnici objavljuju poslove, majstori i kreatori se prijavljuju ili nude usluge.</span>
+              </li>
+              <li>
+                <strong data-i18n="platform.p3.title">Profili i radovi</strong>
+                <span data-i18n="platform.p3.text">Avatar, ocjene, javni radovi i Provjereno — vidi kome se obraćaš prije kontakta.</span>
+              </li>
+              <li>
+                <strong data-i18n="platform.p4.title">Chat i aktivnost</strong>
+                <span data-i18n="platform.p4.text">Prijave, poruke i obavijesti na jednom mjestu — cijeli tok posla u platformi.</span>
+              </li>
+            </ul>
+            <div class="platform-stage__actions">
+              <a class="platform-entry-btn" href="/app/" data-i18n="platform.ctaWeb">Pridruži se na webu</a>
+              <a class="platform-entry-btn platform-entry-btn--outline" href="#join-early" data-i18n="platform.ctaJoin">Registruj se kao majstor/kreator</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="screenshot-gallery" aria-label="Galerija ekrana platforme">
+          <article class="screenshot-card">
+            <img src="assets/screen-smart-search.png" alt="" loading="lazy" width="640" height="360">
+            <h3 data-i18n="platform.g1.title">Pametna pretraga</h3>
+            <p data-i18n="platform.g1.text">Brzi izbor, gradovi i preporuke po ocjenama.</p>
+          </article>
+          <article class="screenshot-card">
+            <img src="assets/screen-find-majstor.png" alt="" loading="lazy" width="640" height="360">
+            <h3 data-i18n="platform.g2.title">Majstori i kreatori</h3>
+            <p data-i18n="platform.g2.text">Pretraga po gradu, kategoriji i dostupnosti.</p>
+          </article>
+          <article class="screenshot-card">
+            <img src="assets/screen-jobs.png" alt="" loading="lazy" width="640" height="360">
+            <h3 data-i18n="platform.g3.title">Poslovi</h3>
+            <p data-i18n="platform.g3.text">Potražnja, ponude i prijave s profilom autora.</p>
+          </article>
+          <article class="screenshot-card">
+            <img src="assets/screen-activities.png" alt="" loading="lazy" width="640" height="360">
+            <h3 data-i18n="platform.g4.title">Aktivnost</h3>
+            <p data-i18n="platform.g4.text">Prijave, dogovori i obavijesti na jednom ekranu.</p>
+          </article>
+          <article class="screenshot-card">
+            <img src="assets/screen-public-works.png" alt="" loading="lazy" width="640" height="360">
+            <h3 data-i18n="platform.g5.title">Javni radovi</h3>
+            <p data-i18n="platform.g5.text">Portfolio majstora i kreatora prije angažmana.</p>
+          </article>
         </div>
       </div>
     </section>

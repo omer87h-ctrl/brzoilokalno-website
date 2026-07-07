@@ -19,4 +19,8 @@ window.SITE_CONFIG = {
   // Instagram — kad napraviš profil, zalijepi puni link (npr. https://www.instagram.com/brzoilokalno/)
   // Dok nema linka, ostavi ""  →  dugme se ne prikazuje.
   instagram: "https://www.instagram.com/brzo.i.lokalno/",
+
+  // Promo video (opcionalno) — YouTube embed URL, npr. "https://www.youtube.com/embed/VIDEO_ID"
+  // Dok nema linka, ostavi ""  →  prikazuje se automatski reel sa screenshotima.
+  promoVideoUrl: "",
 };
