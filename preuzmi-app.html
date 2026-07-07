@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Preuzmi Brzo i Lokalno</title>
-  <meta name="description" content="Preuzmi Brzo i Lokalno na Androidu preko Huawei AppGallery ili koristi web verziju u browseru.">
+  <meta name="description" content="Preuzmi Brzo i Lokalno na Androidu preko Huawei AppGallery.">
   <meta name="robots" content="noindex">
   <link rel="icon" href="assets/app-icon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -134,14 +134,12 @@
         <p class="preuzmi-note">Otvaranje AppGallery…</p>
         <div class="preuzmi-actions">
           <a class="preuzmi-btn preuzmi-btn--primary" id="store-link" href="#">Otvori u AppGallery</a>
-          <a class="preuzmi-btn preuzmi-btn--ghost" href="/app/">Koristi web verziju</a>
         </div>
       </div>
 
       <div class="preuzmi-desktop-only" id="desktop-view">
         <p class="preuzmi-note">
-          AppGallery radi na <strong>Android telefonu</strong>. Na računaru skeniraj QR kod ili kopiraj link i otvori ga na mobu.
-          Možeš odmah koristiti i <strong>web verziju</strong> u browseru.
+          Skeniraj QR kod mobom ili kopiraj link i otvori na <strong>Android</strong> telefonu u Huawei AppGallery.
         </p>
         <div class="preuzmi-qr">
           <img id="qr-img" width="200" height="200" alt="QR kod za preuzimanje">
@@ -151,7 +149,6 @@
           <button type="button" class="preuzmi-btn preuzmi-btn--ghost" id="copy-btn">Kopiraj</button>
         </div>
         <div class="preuzmi-actions">
-          <a class="preuzmi-btn preuzmi-btn--primary" href="/app/">Otvori web verziju</a>
           <a class="preuzmi-btn preuzmi-btn--ghost" href="/">Natrag na početnu</a>
         </div>
       </div>
@@ -185,7 +182,7 @@
           }, 400);
         } else {
           document.getElementById("lead-text").textContent =
-            "Na iPhoneu koristi web verziju. Android preuzimanje je preko AppGallery.";
+            "AppGallery je dostupan na Android telefonu.";
         }
       } else {
         desktopView.style.display = "block";
