@@ -3,6 +3,7 @@ import {
   collection,
   deleteDoc,
   doc,
+  getDoc,
   getDocs,
   increment,
   query,
@@ -155,6 +156,15 @@ export async function markNotificationsRead(uid) {
 
 export async function applyToJob({ job, profile, authUser }) {
   const workerId = authUser.uid;
+  const appDocId = `${job.id}_${workerId}`;
+  const ref = doc(getDb(), "applications", appDocId);
+  const existing = await getDoc(ref);
+  if (existing.exists()) {
+    const err = new Error("Već si prijavljen na ovaj posao.");
+    err.code = "already-applied";
+    throw err;
+  }
+
   const appData = {
     jobId: job.id,
     jobOwnerId: job.userId || "",
@@ -179,8 +189,6 @@ export async function applyToJob({ job, profile, authUser }) {
   if (profile.profileImageVersionMs) appData.workerProfileImageVersionMs = profile.profileImageVersionMs;
   if (profile.profileVerified === true) appData.workerProfileVerified = true;
 
-  const appDocId = `${job.id}_${profile.uid}`;
-  const ref = doc(getDb(), "applications", appDocId);
   await setDoc(ref, appData);
   const ownerUid = job.userId;
   if (ownerUid) {

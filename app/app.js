@@ -550,6 +550,9 @@ async function loadRouteContent(route) {
       users = await fetchAvailableUsers(city);
     } else if (route.filter === "blizu") {
       const blizuCity = city || profileCity || null;
+      if (!blizuCity) {
+        return renderScreenError("Odaberi grad ili postavi grad u profilu.");
+      }
       users = await fetchUsersInCity(blizuCity);
     }
     const filterKey = route.filter === "top" ? "top" : route.filter;
@@ -1133,6 +1136,10 @@ function bindPhase3Actions() {
     } catch (error) {
       console.error("Apply failed:", error);
       if (button) button.disabled = false;
+      if (error?.code === "already-applied") {
+        alert(error.message);
+        return;
+      }
       alert("Prijava nije uspjela. Pokušaj ponovo.");
     }
   }
