@@ -1615,8 +1615,8 @@ body.app-body.has-app-shell #app-root {
   .brzo-btn__bolt {
     width: 1.95rem;
     height: 1.95rem;
-    background: rgba(255, 244, 232, 0.34);
-    border: 1px solid rgba(26, 16, 8, 0.1);
+    background: #fff4e8;
+    border: 1px solid rgba(26, 16, 8, 0.08);
   }
 
   .brzo-btn__bolt-svg {
