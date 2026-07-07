@@ -1,5 +1,18 @@
-import { doc, setDoc } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+import {
+  deleteField,
+  doc,
+  setDoc,
+} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 import { getDb } from "./firebaseService.js";
+
+/** Polja koja klijent ne smije imati na public_profiles (rules + privatnost). */
+const FORBIDDEN_PUBLIC_PROFILE_FIELDS = [
+  "email",
+  "fcmToken",
+  "acceptedTerms",
+  "acceptedPrivacyPolicy",
+  "policyVersion",
+];
 
 /** Javni profil — bez emaila, tokena i privatnih polja naloga. */
 export function toPublicProfile(uid, data = {}, { forClientWrite = true } = {}) {
@@ -35,6 +48,9 @@ export function toPublicProfile(uid, data = {}, { forClientWrite = true } = {}) 
 export async function syncPublicProfile(uid, userData) {
   if (!uid) return;
   const payload = toPublicProfile(uid, userData, { forClientWrite: true });
+  for (const key of FORBIDDEN_PUBLIC_PROFILE_FIELDS) {
+    payload[key] = deleteField();
+  }
   await setDoc(doc(getDb(), "public_profiles", uid), payload, { merge: true });
 }
 

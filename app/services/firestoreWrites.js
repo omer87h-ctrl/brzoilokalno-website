@@ -81,6 +81,7 @@ export async function updateUserProfile(uid, data) {
 
 export async function createJob({ profile, authUser, fields }) {
   const uid = authUser.uid;
+  const safeProfile = profile || {};
   const when = normalizeSpaces(fields.whenNeeded);
   const payload = {
     title: normalizeSpaces(fields.title),
@@ -93,17 +94,18 @@ export async function createJob({ profile, authUser, fields }) {
     userId: uid,
     ownerId: uid,
     jobOwnerId: uid,
-    authorName: profile.displayName || authUser.displayName || "Korisnik",
+    authorName: safeProfile.displayName || authUser.displayName || "Korisnik",
     timestamp: Timestamp.now(),
-    ...authorMetaFromProfile(profile),
+    ...authorMetaFromProfile(safeProfile),
   };
-  if (profile.preferInAppChat) payload.preferInAppChat = true;
+  if (safeProfile.preferInAppChat) payload.preferInAppChat = true;
   if (fields.contactPhone?.trim()) payload.contactPhone = fields.contactPhone.trim();
   return addDoc(collection(getDb(), "jobs"), payload);
 }
 
 export async function createOffer({ profile, authUser, fields }) {
   const uid = authUser.uid;
+  const safeProfile = profile || {};
   const payload = {
     title: normalizeSpaces(fields.title),
     description: normalizeSpaces(fields.description),
@@ -112,12 +114,12 @@ export async function createOffer({ profile, authUser, fields }) {
     budget: normalizeSpaces(fields.budget),
     availableWhen: normalizeSpaces(fields.availableWhen),
     userId: uid,
-    authorName: profile.displayName || authUser.displayName || "Korisnik",
-    authorRole: profile.role || "",
+    authorName: safeProfile.displayName || authUser.displayName || "Korisnik",
+    authorRole: safeProfile.role || "",
     timestamp: Timestamp.now(),
-    ...authorMetaFromProfile(profile),
+    ...authorMetaFromProfile(safeProfile),
   };
-  if (profile.preferInAppChat) payload.preferInAppChat = true;
+  if (safeProfile.preferInAppChat) payload.preferInAppChat = true;
   if (fields.contactPhone?.trim()) payload.contactPhone = fields.contactPhone.trim();
   return addDoc(collection(getDb(), "offers"), payload);
 }

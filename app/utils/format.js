@@ -39,6 +39,23 @@ export function formatApplicationStatus(status) {
   return map[status] || status || "—";
 }
 
+/** Kratka poruka iz Firebase/Firestore greške za korisnika. */
+export function formatFirestoreError(error) {
+  const code = String(error?.code || "");
+  const message = String(error?.message || "");
+  if (code.includes("permission-denied") || message.includes("permission-denied")) {
+    return "Nemate dozvolu za ovu radnju (Firestore rules).";
+  }
+  if (code.includes("unavailable") || message.includes("unavailable")) {
+    return "Firebase trenutno nije dostupan. Provjerite internet.";
+  }
+  if (code.includes("failed-precondition")) {
+    return "Podaci nisu u ispravnom stanju. Osvježite stranicu i pokušajte ponovo.";
+  }
+  if (message) return message.slice(0, 180);
+  return "";
+}
+
 export function formatNotificationType(type) {
   const map = {
     new_application: "Nova prijava",

@@ -98,7 +98,7 @@ import {
 } from "./utils/textInputValidation.js";
 import { findCategoryBySlug, categoryRole, categoryTabForCategory } from "./data/categories.js";
 import { parseRoute } from "./utils/route.js";
-import { workOwnerName } from "./utils/format.js";
+import { formatFirestoreError, workOwnerName } from "./utils/format.js";
 import { renderMaintenance } from "./views/maintenance.js";
 import { renderPrepScreen } from "./views/prep.js";
 import { renderLogin } from "./views/login.js";
@@ -623,8 +623,8 @@ async function loadRouteContent(route) {
       filterMyCity: posloviFilterMyCity,
       filterMyJobs: posloviFilterMyJobs,
       userCity: profileCity,
-      canCreateJob: role === "korisnik",
-      canCreateOffer: role === "majstor" || role === "kreator",
+      canCreateJob: role === "korisnik" || isAdminUser(currentUser),
+      canCreateOffer: role === "majstor" || role === "kreator" || isAdminUser(currentUser),
       myRole: role,
       applicationsByJobId,
       chatEnabled: isChatEnabled(),
@@ -1379,6 +1379,14 @@ function bindProfileAndModals() {
     });
   });
 
+  document.querySelectorAll(".modal-overlay").forEach((overlay) => {
+    overlay.addEventListener("click", (event) => {
+      if (event.target === overlay) {
+        closeActiveModal();
+      }
+    });
+  });
+
   const fab = document.getElementById("poslovi-fab");
   if (fab) {
     fab.addEventListener("click", () => {
@@ -1556,7 +1564,15 @@ function bindProfileAndModals() {
       event.preventDefault();
       profileFormError = "";
       const form = event.currentTarget;
-      const profile = await fetchUserProfile(currentUser.uid);
+      let profile;
+      try {
+        profile = await fetchUserProfile(currentUser.uid);
+      } catch (error) {
+        console.error("Profile read failed:", error);
+        profileFormError = formatFirestoreError(error) || "Nije moguće učitati profil.";
+        softRenderApp();
+        return;
+      }
       const role = profile?.role || "korisnik";
       const payload = {
         displayName: form.displayName.value,
@@ -1605,14 +1621,19 @@ function bindProfileAndModals() {
 
       try {
         await updateUserProfile(currentUser.uid, payload);
-        profileEditing = false;
         invalidateProfilCache();
         outdoorOutlookCache = null;
-        await refreshProfileCity();
+        try {
+          await refreshProfileCity();
+        } catch (refreshError) {
+          console.warn("refreshProfileCity failed:", refreshError);
+        }
+        profileEditing = false;
+        profileFormError = "";
         renderApp();
       } catch (error) {
         console.error("Profile save failed:", error);
-        profileFormError = "Spremanje profila nije uspjelo.";
+        profileFormError = formatFirestoreError(error) || "Spremanje profila nije uspjelo.";
         softRenderApp();
       }
     });
@@ -1624,7 +1645,20 @@ function bindProfileAndModals() {
       event.preventDefault();
       modalError = "";
       const form = event.currentTarget;
-      const profile = await fetchUserProfile(currentUser.uid);
+      let profile;
+      try {
+        profile = await fetchUserProfile(currentUser.uid);
+      } catch (error) {
+        console.error("Profile read failed:", error);
+        modalError = formatFirestoreError(error) || "Nije moguće učitati profil.";
+        renderModalUpdate();
+        return;
+      }
+      if (!profile) {
+        modalError = "Profil nije pronađen. Dovršite registraciju ili se ponovo prijavite.";
+        renderModalUpdate();
+        return;
+      }
       const fields = {
         title: form.title.value,
         description: form.description.value,
@@ -1652,7 +1686,7 @@ function bindProfileAndModals() {
         navigateTo("#/poslovi");
       } catch (error) {
         console.error("Create job failed:", error);
-        modalError = "Objava posla nije uspjela.";
+        modalError = formatFirestoreError(error) || "Objava posla nije uspjela.";
         renderModalUpdate();
       }
     });
