@@ -140,9 +140,11 @@ let outdoorOutlookCache = null;
 let outdoorOutlookCacheKey = "";
 const scrollPositions = {};
 let lastScrollRoute = null;
+let skipRouteLoading = false;
 
 function scrollMemoryKey(route) {
   if (!route) return null;
+  if (route.name === "profil" || route.name === "kalkulator") return route.name;
   if (route.name === "poslovi") return `poslovi:${route.tab || "potraznja"}`;
   if (route.name === "kategorije" && !route.categorySlug) {
     return `kategorije:${route.tab || "majstori"}`;
@@ -150,26 +152,39 @@ function scrollMemoryKey(route) {
   return null;
 }
 
+function getMainScroller() {
+  return document.querySelector(".screen-feed__body") || document.getElementById("app-main");
+}
+
 function captureMainScroll(route) {
   const key = scrollMemoryKey(route);
   if (!key) return;
-  const el = getFeedScroller();
+  const el = getMainScroller();
   if (el) scrollPositions[key] = el.scrollTop;
 }
 
 function restoreMainScroll(route) {
   const key = scrollMemoryKey(route);
-  const el = getFeedScroller();
+  const el = getMainScroller();
   if (!el || !key) return;
   const top = scrollPositions[key] || 0;
   requestAnimationFrame(() => {
+    const prev = el.style.scrollBehavior;
+    el.style.scrollBehavior = "auto";
     el.scrollTop = top;
+    el.style.scrollBehavior = prev;
     updateFeedHeadShadow();
   });
 }
 
+function softRenderApp() {
+  skipRouteLoading = true;
+  captureMainScroll(parseRoute(getHashRoute()));
+  renderApp();
+}
+
 function getFeedScroller() {
-  return document.querySelector(".screen-feed__body") || document.getElementById("app-main");
+  return getMainScroller();
 }
 
 function updateFeedHeadShadow() {
@@ -725,8 +740,12 @@ async function renderApp() {
 
   const requestId = ++screenRequestId;
   stopChatListener();
-  captureMainScroll(lastScrollRoute);
-  renderShellWithContent(route, renderScreenLoading(), { restoreScroll: false });
+  const softUpdate = skipRouteLoading;
+  skipRouteLoading = false;
+  if (!softUpdate) {
+    captureMainScroll(lastScrollRoute);
+    renderShellWithContent(route, renderScreenLoading(), { restoreScroll: false });
+  }
 
   try {
     await refreshProfileCity();
@@ -739,7 +758,7 @@ async function renderApp() {
     }
     const contentHtml = await loadRouteContent(route);
     if (requestId !== screenRequestId) return;
-    renderShellWithContent(route, contentHtml);
+    renderShellWithContent(route, contentHtml, { restoreScroll: softUpdate });
     if (route.name === "chat" && chatContext) {
       startChatListener(chatContext);
     }
@@ -769,6 +788,17 @@ async function boot() {
       _error: true,
     };
   }
+
+  if (!webConfig.weatherApiKey?.trim()) {
+    try {
+      const local = await import("./weather.local.js");
+      const localKey = local.WEATHER_API_KEY_FALLBACK?.trim();
+      if (localKey) webConfig.weatherApiKey = localKey;
+    } catch (_) {
+      /* optional local dev fallback */
+    }
+  }
+
   booted = true;
   renderApp();
 }
@@ -1348,7 +1378,7 @@ function bindKalkulator() {
   document.querySelectorAll("[data-kalk-module]").forEach((chip) => {
     chip.addEventListener("click", () => {
       kalkState = { ...readKalkulatorState(), module: Number(chip.dataset.kalkModule) || 0 };
-      renderApp();
+      softRenderApp();
     });
   });
   document.querySelectorAll("[data-kalk-field]").forEach((field) => {
@@ -1356,7 +1386,7 @@ function bindKalkulator() {
       clearTimeout(timer);
       timer = window.setTimeout(() => {
         kalkState = readKalkulatorState();
-        renderApp();
+        softRenderApp();
       }, 250);
     };
     field.addEventListener("input", handler);
@@ -1476,7 +1506,7 @@ function bindSearchAndFilters() {
   if (aktivnostToggle) {
     aktivnostToggle.addEventListener("click", () => {
       aktivnostExpanded = !aktivnostExpanded;
-      renderApp();
+      softRenderApp();
     });
   }
 
@@ -1487,7 +1517,7 @@ function bindSearchAndFilters() {
       if (outdoorPlanExpanded) {
         outdoorOutlookCache = null;
       }
-      renderApp();
+      softRenderApp();
     });
   }
 
@@ -1500,7 +1530,7 @@ function bindSearchAndFilters() {
       pendingActivityHideId = appId;
       activeModal = "activity-hide";
       modalError = "";
-      renderApp();
+      softRenderApp();
     });
   });
 

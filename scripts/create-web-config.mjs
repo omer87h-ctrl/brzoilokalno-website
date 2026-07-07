@@ -16,14 +16,32 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const PROJECT_ID = "brzoilokalno-268a5";
 
+function resolveWeatherApiKey() {
+  if (process.env.WEATHER_API_KEY?.trim()) {
+    return String(process.env.WEATHER_API_KEY).trim();
+  }
+
+  const home = process.env.USERPROFILE || process.env.HOME || "";
+  const candidates = [
+    process.env.ANDROID_LOCAL_PROPERTIES,
+    home ? resolve(home, "AndroidStudioProjects/BrzoiLokalno/local.properties") : "",
+    "C:/Users/hp/AndroidStudioProjects/BrzoiLokalno/local.properties",
+  ].filter((p) => p && existsSync(p));
+
+  for (const filePath of candidates) {
+    const text = readFileSync(filePath, "utf8");
+    const match = text.match(/^WEATHER_API_KEY=(.+)$/m);
+    if (match?.[1]?.trim()) return match[1].trim();
+  }
+  return "";
+}
+
 const WEB_CONFIG = {
   enabled: true,
   adminOnly: false,
   chatEnabled: true,
   maintenanceMessage: "Brzo i Lokalno Web je trenutno u pripremi.",
-  ...(process.env.WEATHER_API_KEY
-    ? { weatherApiKey: String(process.env.WEATHER_API_KEY).trim() }
-    : {}),
+  ...(resolveWeatherApiKey() ? { weatherApiKey: resolveWeatherApiKey() } : {}),
 };
 
 function resolveCredentialsPath() {

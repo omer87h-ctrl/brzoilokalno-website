@@ -29,7 +29,7 @@ export function renderOutdoorPlan({
   } else if (missingRole) {
     body = `<p class="form-hint">Plan je dostupan za uloge majstor, kreator i korisnik.</p>`;
   } else if (missingKey) {
-    body = `<p class="form-hint">Vremenska prognoza nije konfigurirana na webu (postavi <code>weatherApiKey</code> u Firestore dokumentu <code>app_public/web</code>).</p>`;
+    body = `<p class="form-hint">Prognoza nije dostupna. U Firebase dokumentu <code>app_public/web</code> dodaj polje <code>weatherApiKey</code> (isti ključ kao <code>WEATHER_API_KEY</code> u Android <code>local.properties</code>), ili lokalno pokreni <code>npm run sync-weather</code>.</p>`;
   } else if (loading) {
     body = `<p class="form-hint">Učitavam prognozu…</p>`;
   } else if (outlook) {
