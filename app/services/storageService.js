@@ -81,6 +81,31 @@ export async function clearProfileImage(uid) {
   });
 }
 
+export async function uploadWorkImage(uid, file) {
+  const img = await loadImage(file);
+  const [fullBlob, thumbBlob] = await Promise.all([
+    resizeToJpeg(img, 1280, 0.8),
+    resizeToJpeg(img, 480, 0.7),
+  ]);
+  const ts = Date.now();
+  const pathFull = `works/${uid}/${ts}_full.jpg`;
+  const pathThumb = `works/${uid}/${ts}_thumb.jpg`;
+  const storage = getStorageInstance();
+  const fullRef = ref(storage, pathFull);
+  const thumbRef = ref(storage, pathThumb);
+
+  await uploadBytes(fullRef, fullBlob, { contentType: "image/jpeg" });
+  await uploadBytes(thumbRef, thumbBlob, { contentType: "image/jpeg" });
+  const [urlFull, urlThumb] = await Promise.all([getDownloadURL(fullRef), getDownloadURL(thumbRef)]);
+
+  return {
+    urlFull,
+    urlThumb,
+    pathFull,
+    pathThumb,
+  };
+}
+
 export function profileAvatarUrl(user) {
   const thumb = user?.profileImageUrlThumb;
   const full = user?.profileImageUrlFull;

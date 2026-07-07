@@ -1,10 +1,66 @@
-import { escapeHtml, formatRating } from "../utils/format.js";
+import { escapeHtml, formatRating, workImageUrl } from "../utils/format.js";
 import { profileAvatarUrl } from "../services/storageService.js";
 import { renderProfileWorks } from "./radovi.js";
 import { ALL_CITIES, KREATOR_CATEGORIES, MAJSTOR_CATEGORIES } from "../data/categories.js";
 
 function isWorker(role) {
   return role === "majstor" || role === "kreator";
+}
+
+function renderAvatar(user, className = "profile-card__avatar") {
+  const avatarUrl = profileAvatarUrl(user);
+  const initial = escapeHtml((user.displayName || "K").charAt(0).toUpperCase());
+  if (avatarUrl) {
+    return `<img class="${className} ${className}--img" src="${escapeHtml(avatarUrl)}" alt="" />`;
+  }
+  return `<div class="${className}">${initial}</div>`;
+}
+
+function renderMyWorksSection({ works = [], canAdd = false }) {
+  const cards = works
+    .map((work) => {
+      const img = workImageUrl(work);
+      const desc = escapeHtml((work.description || "").slice(0, 120));
+      const isPublic = work.isPublic === true;
+      const imgHtml = img
+        ? `<img class="my-work-card__img" src="${escapeHtml(img)}" alt="" loading="lazy" />`
+        : `<div class="my-work-card__img my-work-card__img--placeholder">🖼</div>`;
+
+      return `
+        <article class="my-work-card" data-work-id="${escapeHtml(work.id)}">
+          ${imgHtml}
+          <div class="my-work-card__body">
+            <p class="my-work-card__desc">${desc || "Rad"}</p>
+            <label class="my-work-card__public">
+              <input type="checkbox" class="work-public-toggle" data-work-id="${escapeHtml(work.id)}" ${isPublic ? "checked" : ""}>
+              <span>Javno</span>
+            </label>
+          </div>
+        </article>`;
+    })
+    .join("");
+
+  const empty = works.length
+    ? ""
+    : `<div class="my-works-empty">Nema još dodanih radova. Dodajte radove za veću vidljivost.</div>`;
+
+  const addBtn =
+    canAdd && works.length < 3
+      ? `<button type="button" class="btn btn--primary btn--sm" id="add-work-btn">Dodaj rad</button>`
+      : "";
+  const limitHint =
+    works.length >= 3 ? `<p class="form-hint">Možete imati najviše 3 rada.</p>` : "";
+
+  return `
+    <section class="detail-section my-works-section">
+      <div class="my-works-section__head">
+        <h3 class="detail-section__title">Moji radovi</h3>
+        ${addBtn}
+      </div>
+      ${limitHint}
+      ${empty}
+      ${works.length ? `<div class="my-works-row">${cards}</div>` : ""}
+    </section>`;
 }
 
 function cityOptions(selected = "") {
@@ -28,6 +84,7 @@ export function renderProfil({
   editing = false,
   formError = "",
   myTip = null,
+  myWorks = [],
 }) {
   if (!user) {
     return `
@@ -40,16 +97,13 @@ export function renderProfil({
 
   const role = user.role || "korisnik";
   const worker = isWorker(role);
-  const avatarUrl = profileAvatarUrl(user);
-  const initial = escapeHtml((user.displayName || "K").charAt(0).toUpperCase());
-  const avatarHtml = avatarUrl
-    ? `<img class="profile-card__avatar profile-card__avatar--img" src="${escapeHtml(avatarUrl)}" alt="" />`
-    : `<div class="profile-card__avatar">${initial}</div>`;
+  const avatarHtml = renderAvatar(user);
 
   if (!editing) {
     const rating = escapeHtml(
       user.ratingCount > 0 ? `${Number(user.ratingAverage || 0).toFixed(1)} ★ (${user.ratingCount})` : "Nema ocjena"
     );
+    const avatarUrl = profileAvatarUrl(user);
     return `
       <div class="screen-scroll">
         <h2 class="screen-title">Profil</h2>
@@ -73,6 +127,7 @@ export function renderProfil({
           ${worker ? `<button type="button" class="btn btn--ghost btn--block" id="edit-tip-btn">${myTip ? "Uredi savjet" : "Dodaj savjet za početnu"}</button>` : ""}
           ${avatarUrl ? `<button type="button" class="btn btn--ghost btn--block btn--danger" id="delete-profile-image-btn">Ukloni sliku</button>` : ""}
         </div>
+        ${worker ? renderMyWorksSection({ works: myWorks, canAdd: true }) : ""}
       </div>`;
   }
 
@@ -138,12 +193,13 @@ export function renderPregledProfila({ user, works = [] }) {
   const status = escapeHtml(user.status || "—");
   const rating = formatRating(user.ratingAverage, user.ratingCount);
   const desc = escapeHtml(user.description || "Nema opisa.");
+  const avatarHtml = renderAvatar(user);
 
   return `
     <div class="screen-scroll">
       <a class="back-link" href="javascript:history.back()">← Natrag</a>
       <article class="profile-card">
-        <div class="profile-card__avatar">${name.charAt(0).toUpperCase()}</div>
+        ${avatarHtml}
         <h3 class="profile-card__name">${name}</h3>
         <p class="profile-card__meta">${role} · ${category}</p>
         <p class="profile-card__meta">${city} · ${status}</p>

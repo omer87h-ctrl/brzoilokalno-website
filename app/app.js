@@ -40,15 +40,17 @@ import {
   clearMyUnread,
   createJob,
   createOffer,
+  createWork,
   deleteHomeTip,
   markNotificationsRead,
   saveHomeTip,
   sendChatMessage,
   updateApplicationStatus,
   updateUserProfile,
+  updateWorkPublic,
 } from "./services/firestoreWrites.js";
 import { subscribeToChatMessages } from "./services/chatService.js";
-import { uploadProfileImage, clearProfileImage } from "./services/storageService.js";
+import { uploadProfileImage, clearProfileImage, uploadWorkImage } from "./services/storageService.js";
 import { createUserProfile, isProfileComplete } from "./services/userProfile.js";
 import {
   firstMissingJobFields,
@@ -80,7 +82,7 @@ import { renderChat, renderChatMessages } from "./views/chat.js";
 import { renderPretraga } from "./views/pretraga.js";
 import { renderPonudaDetail } from "./views/ponude.js";
 import { renderKalkulator, readKalkulatorState } from "./views/kalkulator.js";
-import { renderCreateJobForm, renderCreateOfferForm, renderTipEditorForm } from "./views/forms.js";
+import { renderCreateJobForm, renderCreateOfferForm, renderTipEditorForm, renderAddWorkForm } from "./views/forms.js";
 import { renderScreenError, renderScreenLoading } from "./views/shared.js";
 
 const root = document.getElementById("app-root");
@@ -138,6 +140,7 @@ function buildModalsHtml() {
   if (activeModal === "job") return renderCreateJobForm({ defaults: { city: profileCity }, error: modalError });
   if (activeModal === "offer") return renderCreateOfferForm({ defaults: { city: profileCity }, error: modalError });
   if (activeModal === "tip") return renderTipEditorForm({ tip: myTip, error: modalError });
+  if (activeModal === "work") return renderAddWorkForm({ error: modalError });
   return "";
 }
 
@@ -335,9 +338,17 @@ async function loadRouteContent(route) {
 
   if (route.name === "profil") {
     const uid = currentUser?.uid;
-    const [user, tip] = await Promise.all([
-      uid ? fetchUserProfile(uid) : Promise.resolve(null),
+    const user = uid ? await fetchUserProfile(uid) : null;
+    const role = user?.role || "";
+    const worker = role === "majstor" || role === "kreator";
+    const [tip, myWorks] = await Promise.all([
       uid ? fetchMyHomeTip(uid) : Promise.resolve(null),
+      uid && worker
+        ? fetchWorksByUser(uid, false).catch((error) => {
+            console.warn("My works load failed:", error);
+            return [];
+          })
+        : Promise.resolve([]),
     ]);
     myTip = tip;
     return renderProfil({
@@ -346,14 +357,20 @@ async function loadRouteContent(route) {
       editing: profileEditing,
       formError: profileFormError,
       myTip: tip,
+      myWorks,
     });
   }
 
   if (route.name === "pregled") {
-    const [user, works] = await Promise.all([
-      fetchUserProfile(route.uid),
-      fetchWorksByUser(route.uid, true),
-    ]);
+    const user = await fetchUserProfile(route.uid);
+    let works = [];
+    if (user) {
+      try {
+        works = await fetchWorksByUser(route.uid, true);
+      } catch (error) {
+        console.warn("Public works load failed:", error);
+      }
+    }
     return renderPregledProfila({ user, works });
   }
 
@@ -641,6 +658,98 @@ function bindProfileAndModals() {
       activeModal = "tip";
       modalError = "";
       renderApp();
+    });
+  }
+
+  const addWorkBtn = document.getElementById("add-work-btn");
+  if (addWorkBtn) {
+    addWorkBtn.addEventListener("click", () => {
+      activeModal = "work";
+      modalError = "";
+      renderApp();
+    });
+  }
+
+  document.querySelectorAll(".work-public-toggle").forEach((input) => {
+    input.addEventListener("change", async (event) => {
+      const workId = event.currentTarget.dataset.workId;
+      if (!workId) return;
+      const checked = event.currentTarget.checked;
+      try {
+        await updateWorkPublic(workId, checked);
+      } catch (error) {
+        console.error("Work visibility update failed:", error);
+        event.currentTarget.checked = !checked;
+        alert(checked ? "Rad nije mogao biti javan." : "Sakrivanje rada nije uspjelo.");
+      }
+    });
+  });
+
+  const workImageInput = document.getElementById("work-image-input");
+  if (workImageInput) {
+    workImageInput.addEventListener("change", (event) => {
+      const file = event.target.files?.[0];
+      const preview = document.getElementById("work-image-preview");
+      if (!preview) return;
+      if (!file) {
+        preview.hidden = true;
+        preview.innerHTML = "";
+        return;
+      }
+      const url = URL.createObjectURL(file);
+      preview.hidden = false;
+      preview.innerHTML = `<img src="${url}" alt="Pregled slike" />`;
+    });
+  }
+
+  const workForm = document.getElementById("add-work-form");
+  if (workForm) {
+    workForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      modalError = "";
+      const form = event.currentTarget;
+      const description = normalizeSpaces(form.description.value);
+      const file = form.image?.files?.[0];
+      if (!description) {
+        modalError = "Opis rada je obavezan.";
+        renderApp();
+        return;
+      }
+      if (!file) {
+        modalError = "Odaberite sliku rada.";
+        renderApp();
+        return;
+      }
+
+      const profile = await fetchUserProfile(currentUser.uid);
+      const existing = await fetchWorksByUser(currentUser.uid, false).catch(() => []);
+      if (existing.length >= 3) {
+        modalError = "Možete dodati najviše 3 rada.";
+        renderApp();
+        return;
+      }
+
+      const submitBtn = document.getElementById("add-work-submit");
+      if (submitBtn) submitBtn.disabled = true;
+
+      try {
+        const imageData = await uploadWorkImage(currentUser.uid, file);
+        await createWork({
+          profile,
+          authUser: currentUser,
+          description,
+          imageUrls: imageData,
+          paths: imageData,
+        });
+        activeModal = null;
+        renderApp();
+      } catch (error) {
+        console.error("Add work failed:", error);
+        modalError = "Spremanje rada nije uspjelo.";
+        renderApp();
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+      }
     });
   }
 

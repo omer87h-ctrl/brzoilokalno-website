@@ -76,6 +76,29 @@ export function renderCreateOfferForm({ defaults = {}, error = "" }) {
     </div>`;
 }
 
+export function renderAddWorkForm({ error = "" }) {
+  return `
+    <div class="modal-overlay" id="add-work-modal">
+      <div class="modal-card">
+        <h3 class="modal-card__title">Novi rad</h3>
+        <p class="form-hint">Slika i opis su obavezni. Možete dodati najviše 3 rada.</p>
+        ${error ? `<p class="form-error">${escapeHtml(error)}</p>` : ""}
+        <form id="add-work-form" class="stack-form">
+          <textarea class="field field--area" name="description" placeholder="Opis rada *" maxlength="600" required></textarea>
+          <label class="btn btn--ghost btn--block work-image-picker">
+            Odaberi sliku
+            <input type="file" id="work-image-input" name="image" accept="image/*" hidden required />
+          </label>
+          <div id="work-image-preview" class="work-image-preview" hidden></div>
+          <div class="modal-card__actions">
+            <button type="button" class="btn btn--ghost" data-close-modal>Odustani</button>
+            <button type="submit" class="btn btn--primary" id="add-work-submit">Sačuvaj</button>
+          </div>
+        </form>
+      </div>
+    </div>`;
+}
+
 export function renderTipEditorForm({ tip = null, error = "" }) {
   return `
     <div class="modal-overlay" id="tip-editor-modal">

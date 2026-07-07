@@ -1,4 +1,14 @@
 import { displayName, escapeHtml, formatRating } from "../utils/format.js";
+import { profileAvatarUrl } from "../services/storageService.js";
+
+function renderUserAvatar(user) {
+  const avatarUrl = profileAvatarUrl(user);
+  const initial = escapeHtml(displayName(user).charAt(0).toUpperCase());
+  if (avatarUrl) {
+    return `<img class="user-card__avatar user-card__avatar--img" src="${escapeHtml(avatarUrl)}" alt="" loading="lazy" />`;
+  }
+  return `<div class="user-card__avatar">${initial}</div>`;
+}
 
 export function renderUserList(users, { emptyText = "Nema rezultata." } = {}) {
   if (!users?.length) {
@@ -13,13 +23,13 @@ export function renderUserList(users, { emptyText = "Nema rezultata." } = {}) {
       const category = escapeHtml(user.category || user.occupation || "—");
       const status = escapeHtml(user.status || "—");
       const rating = escapeHtml(formatRating(user.ratingAverage, user.ratingCount));
-      const initial = name.charAt(0).toUpperCase();
+      const verified = user.profileVerified ? `<span class="user-card__verified" title="Verifikovan">✓</span>` : "";
 
       return `
         <a class="user-card" href="#/pregled/${user.id}">
-          <div class="user-card__avatar">${initial}</div>
+          ${renderUserAvatar(user)}
           <div class="user-card__body">
-            <h3 class="user-card__name">${name}</h3>
+            <h3 class="user-card__name">${name}${verified}</h3>
             <p class="user-card__meta">${role} · ${category}</p>
             <p class="user-card__meta">${city} · ${status}</p>
             <p class="user-card__rating">${rating}</p>

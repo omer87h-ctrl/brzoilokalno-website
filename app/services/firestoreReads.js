@@ -43,12 +43,31 @@ export async function fetchPublicWorks(max = 24) {
   }
 }
 
-export async function fetchWorksByUser(uid, publicOnly = true) {
-  let q = query(collection(getDb(), "works"), where("userId", "==", uid), limit(40));
-  const snap = await getDocs(q);
-  let works = mapDocs(snap);
-  if (publicOnly) works = works.filter((w) => w.isPublic === true);
+function sortWorksByTime(works) {
   return works.sort((a, b) => timestampMs(b.timestamp) - timestampMs(a.timestamp));
+}
+
+export async function fetchWorksByUser(uid, publicOnly = true) {
+  if (publicOnly) {
+    try {
+      const q = query(
+        collection(getDb(), "works"),
+        where("userId", "==", uid),
+        where("isPublic", "==", true),
+        limit(40)
+      );
+      const snap = await getDocs(q);
+      return sortWorksByTime(mapDocs(snap));
+    } catch (_) {
+      const q = query(collection(getDb(), "works"), where("isPublic", "==", true), limit(80));
+      const snap = await getDocs(q);
+      return sortWorksByTime(mapDocs(snap).filter((w) => w.userId === uid));
+    }
+  }
+
+  const q = query(collection(getDb(), "works"), where("userId", "==", uid), limit(40));
+  const snap = await getDocs(q);
+  return sortWorksByTime(mapDocs(snap));
 }
 
 export async function fetchWork(workId) {

@@ -438,12 +438,13 @@ body.app-body {
 }
 
 .home-card {
-  padding: 0.85rem;
-  border-radius: var(--radius);
+  padding: 0.9rem;
+  border-radius: 18px;
   border: 1px solid var(--border);
   background: var(--bg-card);
-  min-height: 110px;
+  min-height: 116px;
   text-align: left;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
 }
 
 .home-card--btn {
@@ -633,32 +634,56 @@ body.app-body {
 
 .user-card {
   display: flex;
-  gap: 0.75rem;
-  padding: 0.85rem;
-  border-radius: 14px;
+  gap: 0.85rem;
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
   border: 1px solid var(--border);
-  background: var(--bg-card);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), var(--bg-card));
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.15s;
+  transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 }
 
 .user-card:hover {
-  border-color: rgba(242, 140, 40, 0.35);
+  border-color: rgba(242, 140, 40, 0.4);
+  transform: translateY(-1px);
 }
 
 .user-card__avatar,
 .profile-card__avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--accent-soft);
+  background: linear-gradient(145deg, rgba(242, 140, 40, 0.22), rgba(242, 140, 40, 0.08));
   color: var(--accent);
   font-weight: 700;
   flex-shrink: 0;
+  border: 1px solid rgba(242, 140, 40, 0.2);
+  overflow: hidden;
+}
+
+.user-card__avatar--img,
+.profile-card__avatar--img {
+  object-fit: cover;
+  background: var(--bg-elevated);
+}
+
+.user-card__verified {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.25rem;
+  border-radius: 999px;
+  background: rgba(76, 175, 80, 0.2);
+  color: #7ddf8a;
+  font-size: 0.62rem;
+  vertical-align: middle;
 }
 
 .user-card__name,
@@ -683,17 +708,20 @@ body.app-body {
 
 .job-card {
   display: block;
-  padding: 0.9rem;
-  border-radius: 14px;
+  padding: 0.95rem 1rem 0.95rem 1.1rem;
+  border-radius: 18px;
   border: 1px solid var(--border);
-  background: var(--bg-card);
+  border-left: 3px solid rgba(242, 140, 40, 0.55);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), var(--bg-card));
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.15s;
+  transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
 .job-card:hover {
-  border-color: rgba(242, 140, 40, 0.35);
+  border-color: rgba(242, 140, 40, 0.4);
+  transform: translateY(-1px);
 }
 
 .job-card__head {
@@ -732,18 +760,19 @@ body.app-body {
 }
 
 .profile-card {
-  padding: 1.1rem;
-  border-radius: 16px;
+  padding: 1.25rem;
+  border-radius: 20px;
   border: 1px solid var(--border);
-  background: var(--bg-card);
+  background: linear-gradient(160deg, rgba(242, 140, 40, 0.08), var(--bg-card));
   text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.14);
 }
 
 .profile-card__avatar {
   margin: 0 auto 0.75rem;
-  width: 56px;
-  height: 56px;
-  font-size: 1.2rem;
+  width: 72px;
+  height: 72px;
+  font-size: 1.45rem;
 }
 
 .profile-card__desc,
@@ -898,17 +927,66 @@ body.app-body {
 }
 
 @media (min-width: 768px) {
-  .app-main {
-    max-width: 480px;
+  :root {
+    --shell-max: min(100%, 720px);
+  }
+
+  .app-shell {
+    max-width: var(--shell-max);
     margin: 0 auto;
+    border-left: 1px solid rgba(255, 255, 255, 0.06);
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 0 48px rgba(0, 0, 0, 0.35);
+  }
+
+  .app-main {
     width: 100%;
   }
 
   .bottom-nav {
-    max-width: 480px;
+    width: var(--shell-max);
+    max-width: 100%;
     left: 50%;
+    right: auto;
     transform: translateX(-50%);
     border-radius: 16px 16px 0 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --shell-max: min(100%, 960px);
+  }
+
+  .user-list,
+  .job-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .home-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.85rem;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .my-works-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0.85rem;
+    overflow: visible;
+  }
+
+  .my-work-card {
+    width: auto;
   }
 }
 
@@ -1657,4 +1735,102 @@ body.app-body {
 .kalk-summary__offer {
   margin: 0.25rem 0;
   font-size: 0.85rem;
+}
+
+.my-works-section__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.my-works-empty {
+  padding: 1rem;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.my-works-row {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.35rem;
+  scroll-snap-type: x mandatory;
+}
+
+.my-work-card {
+  flex: 0 0 280px;
+  width: 280px;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.my-work-card__img {
+  width: 100%;
+  height: 168px;
+  object-fit: cover;
+  display: block;
+  background: var(--bg-elevated);
+}
+
+.my-work-card__img--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--text-muted);
+}
+
+.my-work-card__body {
+  padding: 0.75rem;
+}
+
+.my-work-card__desc {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.my-work-card__public {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.work-image-preview {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.work-image-preview img {
+  display: block;
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.work-image-picker {
+  cursor: pointer;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .modal-overlay {
+    align-items: center;
+  }
+
+  .modal-card {
+    border-radius: 20px;
+    width: min(100%, 520px);
+  }
 }

@@ -239,3 +239,34 @@ export async function clearMyUnread(appId, uid) {
     [`unreadCounts.${uid}`]: 0,
   });
 }
+
+export async function createWork({ profile, authUser, description, imageUrls, paths }) {
+  const uid = authUser.uid;
+  const payload = {
+    userId: uid,
+    ownerId: uid,
+    ownerEmail: authUser.email || "",
+    ownerDisplayName: normalizeSpaces(profile?.displayName || authUser.displayName || ""),
+    ownerRole: profile?.role || "",
+    description: normalizeSpaces(description),
+    imageUrl: imageUrls.urlFull,
+    imagePath: paths.pathFull,
+    imageUrlFull: imageUrls.urlFull,
+    imagePathFull: paths.pathFull,
+    imageUrlThumb: imageUrls.urlThumb,
+    imagePathThumb: paths.pathThumb,
+    isPublic: false,
+    timestamp: Timestamp.now(),
+  };
+
+  if (profile?.profileImageUrlThumb) {
+    payload.ownerProfileImageUrlThumb = profile.profileImageUrlThumb;
+    payload.ownerProfileImageUrlFull = profile.profileImageUrlFull || "";
+  }
+
+  return addDoc(collection(getDb(), "works"), payload);
+}
+
+export async function updateWorkPublic(workId, isPublic) {
+  await updateDoc(doc(getDb(), "works", workId), { isPublic: isPublic === true });
+}
