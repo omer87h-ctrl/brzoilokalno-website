@@ -3,7 +3,9 @@ export function parseRoute(hash) {
   const parts = raw.split("/").filter(Boolean);
   const name = parts[0] || "home";
 
-  if (name === "home") return { name: "home" };
+  if (name === "login") return { name: "login" };
+  if (name === "register") return { name: "register" };
+  if (name === "onboarding") return { name: "onboarding" };
   if (name === "kategorije") {
     return { name: "kategorije", categorySlug: parts[1] || null };
   }

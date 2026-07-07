@@ -24,7 +24,40 @@ export const KREATOR_CATEGORIES = [
   "Kreativne usluge",
 ];
 
-export const POPULAR_CITIES = ["Kladanj", "Tuzla", "Sarajevo", "Zenica"];
+export const POPULAR_CITIES = ["Kladanj", "Tuzla", "Sarajevo", "Zenica", "Mostar", "Banja Luka"];
+
+export const ALL_CITIES = [
+  "Kladanj",
+  "Tuzla",
+  "Sarajevo",
+  "Zenica",
+  "Žepče",
+  "Mostar",
+  "Banovići",
+  "Lukavac",
+  "Živinice",
+  "Kalesija",
+  "Srebrenik",
+  "Gračanica",
+  "Olovo",
+  "Tešanj",
+  "Visoko",
+  "Bugojno",
+  "Travnik",
+  "Bihać",
+  "Cazin",
+  "Banja Luka",
+  "Doboj",
+  "Gradačac",
+  "Brčko",
+  "Trebinje",
+];
+
+export const USER_ROLES = [
+  { id: "korisnik", label: "Korisnik" },
+  { id: "majstor", label: "Majstor" },
+  { id: "kreator", label: "Slobodni kreator" },
+];
 
 export function slugifyCategory(name) {
   return encodeURIComponent(name.trim());

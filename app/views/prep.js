@@ -1,7 +1,5 @@
 import { APP_LINKS } from "../firebase.js";
 
-/** Web u pripremi — adminOnly blokira obične korisnike. Admin može ući za test (Faza 1). */
-
 export function renderPrepScreen({ showAdminLogin = false, loginError = "" }) {
   return `
     <div class="screen screen--center">
@@ -35,6 +33,9 @@ export function renderPrepScreen({ showAdminLogin = false, loginError = "" }) {
           <a class="btn btn--ghost" href="${APP_LINKS.instagram}" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a class="btn btn--ghost" href="${APP_LINKS.landing}">Natrag na početnu</a>
         </div>
+        <p class="auth-switch auth-switch--prep">
+          <a href="#/login">Prijava korisnika</a> · <a href="#/register">Registracija</a>
+        </p>
       </div>
     </div>`;
 }

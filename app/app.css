@@ -710,6 +710,75 @@ body.app-body {
   text-align: center;
 }
 
+.auth-card {
+  text-align: left;
+  max-width: 420px;
+}
+
+.auth-card--wide {
+  width: min(100%, 440px);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-top: 0.75rem;
+}
+
+.field-label {
+  margin: 0.25rem 0 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.auth-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.auth-check input {
+  margin-top: 0.2rem;
+}
+
+.auth-check a {
+  color: var(--accent);
+}
+
+.auth-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.25rem;
+}
+
+.auth-radio {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+}
+
+.auth-switch {
+  margin: 0.85rem 0 0;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.auth-switch a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.auth-switch--prep {
+  margin-top: 1rem;
+}
+
 .home-phase-note {
   margin: 0.5rem 0 0;
   color: #666;

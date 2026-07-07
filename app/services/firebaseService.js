@@ -1,11 +1,13 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
 import {
+  createUserWithEmailAndPassword,
   getAuth,
   GoogleAuthProvider,
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  deleteUser,
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 import {
   doc,
@@ -72,18 +74,37 @@ export function watchAuth(callback) {
   return onAuthStateChanged(getAuthInstance(), callback);
 }
 
-export async function signInAdmin(email, password) {
+export async function signInWithEmail(email, password) {
   return signInWithEmailAndPassword(getAuthInstance(), email, password);
 }
 
-export async function signInAdminWithGoogle() {
+export async function registerWithEmail(email, password) {
+  return createUserWithEmailAndPassword(getAuthInstance(), email, password);
+}
+
+export async function signInWithGoogle() {
   const provider = new GoogleAuthProvider();
   provider.setCustomParameters({ prompt: "select_account" });
   return signInWithPopup(getAuthInstance(), provider);
 }
 
+/** @deprecated alias — koristi signInWithEmail */
+export async function signInAdmin(email, password) {
+  return signInWithEmail(email, password);
+}
+
+/** @deprecated alias — koristi signInWithGoogle */
+export async function signInAdminWithGoogle() {
+  return signInWithGoogle();
+}
+
 export async function signOutUser() {
   return signOut(getAuthInstance());
+}
+
+export async function deleteCurrentUser() {
+  const user = getAuthInstance().currentUser;
+  if (user) await deleteUser(user);
 }
 
 export function isAdminUser(user) {

@@ -1,8 +1,12 @@
 import {
+  deleteCurrentUser,
   getWebAppConfig,
   isAdminUser,
+  registerWithEmail,
   signInAdmin,
   signInAdminWithGoogle,
+  signInWithEmail,
+  signInWithGoogle,
   signOutUser,
   watchAuth,
 } from "./services/firebaseService.js";
@@ -16,10 +20,14 @@ import {
   fetchUsersInCity,
   pickFastCandidates,
 } from "./services/firestoreReads.js";
+import { createUserProfile, isProfileComplete } from "./services/userProfile.js";
 import { findCategoryBySlug } from "./data/categories.js";
 import { parseRoute } from "./utils/route.js";
 import { renderMaintenance } from "./views/maintenance.js";
 import { renderPrepScreen } from "./views/prep.js";
+import { renderLogin } from "./views/login.js";
+import { renderRegister } from "./views/register.js";
+import { renderOnboarding } from "./views/onboarding.js";
 import { renderShell } from "./views/shell.js";
 import { renderHome } from "./views/home.js";
 import { renderKategorijeGrid, renderKategorijeList } from "./views/kategorije.js";
@@ -35,6 +43,7 @@ const root = document.getElementById("app-root");
 let webConfig = null;
 let currentUser = null;
 let loginError = "";
+let authError = "";
 let booted = false;
 let selectedCity = "";
 let profileCity = "";
@@ -142,6 +151,15 @@ async function loadRouteContent(route) {
   return renderHome({ selectedCity });
 }
 
+async function afterAuthSuccess(user) {
+  const profile = await fetchUserProfile(user.uid);
+  if (!isProfileComplete(profile)) {
+    navigateTo("#/onboarding");
+    return;
+  }
+  navigateTo("#/home");
+}
+
 async function renderApp() {
   if (!webConfig) {
     showLoading();
@@ -153,27 +171,57 @@ async function renderApp() {
     return;
   }
 
-  if (webConfig.adminOnly) {
-    if (!currentUser || !isAdminUser(currentUser)) {
-      setRoot(
-        renderPrepScreen({
-          showAdminLogin: true,
-          loginError,
-        })
-      );
+  const route = parseRoute(getHashRoute());
+
+  if (!currentUser) {
+    if (route.name === "login") {
+      setRoot(renderLogin({ error: authError }));
       return;
     }
+    if (route.name === "register") {
+      setRoot(renderRegister({ error: authError }));
+      return;
+    }
+    if (webConfig.adminOnly) {
+      setRoot(renderPrepScreen({ showAdminLogin: true, loginError }));
+      return;
+    }
+    navigateTo("#/login");
+    return;
   }
 
-  const route = parseRoute(getHashRoute());
-  const requestId = ++screenRequestId;
+  const profile = await fetchUserProfile(currentUser.uid);
 
+  if (webConfig.adminOnly && !isAdminUser(currentUser)) {
+    setRoot(
+      renderPrepScreen({
+        showAdminLogin: false,
+        loginError: "",
+      })
+    );
+    return;
+  }
+
+  if (!isProfileComplete(profile)) {
+    setRoot(
+      renderOnboarding({
+        user: currentUser,
+        error: authError,
+        defaults: {
+          displayName: profile?.displayName || currentUser.displayName || "",
+          role: profile?.role || "korisnik",
+          city: profile?.city || "",
+        },
+      })
+    );
+    return;
+  }
+
+  const requestId = ++screenRequestId;
   renderShellWithContent(route, renderScreenLoading());
 
   try {
-    if (currentUser?.uid) {
-      await refreshProfileCity();
-    }
+    await refreshProfileCity();
     const contentHtml = await loadRouteContent(route);
     if (requestId !== screenRequestId) return;
     renderShellWithContent(route, contentHtml);
@@ -248,12 +296,127 @@ function bindHomeActions() {
   });
 }
 
+async function handleGoogleSignIn() {
+  authError = "";
+  try {
+    const result = await signInWithGoogle();
+    await afterAuthSuccess(result.user);
+  } catch (error) {
+    if (error?.code !== "auth/popup-closed-by-user") {
+      authError = "Google prijava nije uspjela.";
+      renderApp();
+    }
+  }
+}
+
 function bindRootEvents() {
   bindHomeActions();
 
-  const googleBtn = document.getElementById("admin-google-signin-btn");
-  if (googleBtn) {
-    googleBtn.addEventListener("click", async () => {
+  const publicGoogleBtn = document.getElementById("google-signin-btn");
+  if (publicGoogleBtn) {
+    publicGoogleBtn.addEventListener("click", handleGoogleSignIn);
+  }
+
+  const loginForm = document.getElementById("login-form");
+  if (loginForm) {
+    loginForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      authError = "";
+      const form = event.currentTarget;
+      try {
+        const result = await signInWithEmail(form.email.value.trim(), form.password.value);
+        await afterAuthSuccess(result.user);
+      } catch (error) {
+        authError = "Prijava nije uspjela. Provjerite email i lozinku.";
+        renderApp();
+      }
+    });
+  }
+
+  const registerForm = document.getElementById("register-form");
+  if (registerForm) {
+    registerForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      authError = "";
+      const form = event.currentTarget;
+      const displayName = form.displayName.value.trim();
+      const email = form.email.value.trim();
+      const password = form.password.value;
+      const confirmPassword = form.confirmPassword.value;
+      const role = form.role.value;
+      const city = form.city.value;
+
+      if (!displayName || !email || !password || !city) {
+        authError = "Sva polja su obavezna.";
+        renderApp();
+        return;
+      }
+      if (password !== confirmPassword) {
+        authError = "Lozinke se ne podudaraju.";
+        renderApp();
+        return;
+      }
+      if (!form.acceptedTerms.checked || !form.acceptedPrivacy.checked) {
+        authError = "Morate prihvatiti Pravila i Politiku privatnosti.";
+        renderApp();
+        return;
+      }
+
+      try {
+        const cred = await registerWithEmail(email, password);
+        await createUserProfile(cred.user.uid, { email, displayName, role, city });
+        navigateTo("#/home");
+      } catch (error) {
+        authError = error?.message?.includes("email")
+          ? "Email je već u upotrebi ili nije valjan."
+          : "Registracija nije uspjela.";
+        try {
+          await deleteCurrentUser();
+        } catch (_) {}
+        renderApp();
+      }
+    });
+  }
+
+  const onboardingForm = document.getElementById("onboarding-form");
+  if (onboardingForm) {
+    onboardingForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      authError = "";
+      const form = event.currentTarget;
+      const role = form.role.value;
+      const city = form.city.value;
+      const displayName = form.displayName.value.trim();
+
+      if (!displayName || !city || !role) {
+        authError = "Ime, uloga i grad su obavezni.";
+        renderApp();
+        return;
+      }
+      if (!form.acceptedTerms.checked || !form.acceptedPrivacy.checked) {
+        authError = "Morate prihvatiti Pravila i Politiku privatnosti.";
+        renderApp();
+        return;
+      }
+
+      try {
+        await createUserProfile(currentUser.uid, {
+          email: currentUser.email || "",
+          displayName,
+          role,
+          city,
+        });
+        navigateTo("#/home");
+      } catch (error) {
+        authError = "Spremanje profila nije uspjelo.";
+        renderApp();
+      }
+    });
+  }
+
+  const adminGoogleBtn = document.getElementById("admin-google-signin-btn");
+  if (adminGoogleBtn) {
+    adminGoogleBtn.addEventListener("click", async () => {
       loginError = "";
       try {
         const result = await signInAdminWithGoogle();
@@ -271,16 +434,14 @@ function bindRootEvents() {
     });
   }
 
-  const loginForm = document.getElementById("admin-login-form");
-  if (loginForm) {
-    loginForm.addEventListener("submit", async (event) => {
+  const adminLoginForm = document.getElementById("admin-login-form");
+  if (adminLoginForm) {
+    adminLoginForm.addEventListener("submit", async (event) => {
       event.preventDefault();
       loginError = "";
       const form = event.currentTarget;
-      const email = form.email.value.trim();
-      const password = form.password.value;
       try {
-        await signInAdmin(email, password);
+        await signInAdmin(form.email.value.trim(), form.password.value);
       } catch (error) {
         loginError = "Prijava nije uspjela. Provjerite email i lozinku.";
         renderApp();
