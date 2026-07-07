@@ -2,6 +2,10 @@ import { escapeHtml, formatRating, workImageUrl } from "../utils/format.js";
 import { profileAvatarUrl } from "../services/storageService.js";
 import { renderProfileWorks } from "./radovi.js";
 import { renderRatingSection } from "./rating.js";
+import { renderFollowButton, renderFollowerCount } from "./follow.js";
+import { renderMojaAktivnost } from "./aktivnost.js";
+import { renderOutdoorPlan } from "./outdoorPlan.js";
+import { renderFollowerCount } from "./follow.js";
 import { ALL_CITIES, KREATOR_CATEGORIES, MAJSTOR_CATEGORIES } from "../data/categories.js";
 
 function isWorker(role) {
@@ -87,6 +91,14 @@ export function renderProfil({
   formError = "",
   myTip = null,
   myWorks = [],
+  activityDashboard = null,
+  aktivnostExpanded = false,
+  outdoorOutlook = null,
+  outdoorLoading = false,
+  outdoorMissingKey = false,
+  outdoorExpanded = false,
+  followerCount = 0,
+  chatEnabled = false,
 }) {
   if (!user) {
     return `
@@ -119,6 +131,7 @@ export function renderProfil({
           <p class="profile-card__meta">${escapeHtml(role)} · ${escapeHtml(user.category || user.occupation || "—")}</p>
           <p class="profile-card__meta">${escapeHtml(user.city || "—")} · ${escapeHtml(user.status || "—")}</p>
           <p class="profile-card__rating">${rating}</p>
+          ${worker ? renderFollowerCount(followerCount) : ""}
           <p class="profile-card__desc">${escapeHtml(user.description || "Nema opisa.")}</p>
           <p class="profile-card__email">${escapeHtml(user.email || authEmail || "")}</p>
           ${user.contactPhone ? `<p class="profile-card__meta">Tel: ${escapeHtml(user.contactPhone)}</p>` : ""}
@@ -130,6 +143,15 @@ export function renderProfil({
           ${worker ? `<button type="button" class="btn btn--ghost btn--block" id="edit-tip-btn">${myTip ? "Uredi savjet" : "Dodaj savjet za početnu"}</button>` : ""}
           ${avatarUrl ? `<button type="button" class="btn btn--ghost btn--block btn--danger" id="delete-profile-image-btn">Ukloni sliku</button>` : ""}
         </div>
+        ${renderMojaAktivnost({ dashboard: activityDashboard, expanded: aktivnostExpanded, chatEnabled })}
+        ${user?.city
+          ? renderOutdoorPlan({
+              outlook: outdoorOutlook,
+              loading: outdoorLoading,
+              missingKey: outdoorMissingKey,
+              expanded: outdoorExpanded,
+            })
+          : ""}
         ${worker ? renderMyWorksSection({ works: myWorks, canAdd: true }) : ""}
       </div>`;
   }
@@ -186,6 +208,9 @@ export function renderPregledProfila({
   ratingsSummary = null,
   myRating = 0,
   currentUid = "",
+  isFollowing = false,
+  viewerRole = "",
+  followerCount = 0,
 }) {
   if (!user) {
     return `
@@ -214,7 +239,16 @@ export function renderPregledProfila({
         <p class="profile-card__meta">${role} · ${category}</p>
         <p class="profile-card__meta">${city} · ${status}</p>
         <p class="profile-card__rating">${escapeHtml(rating)}</p>
+        ${renderFollowerCount(followerCount)}
         <p class="profile-card__desc">${desc}</p>
+        <div class="profile-card__actions">
+          ${renderFollowButton({
+            profileUid: user.id,
+            profileRole: user.role,
+            viewerRole,
+            isFollowing,
+          })}
+        </div>
       </article>
       ${renderRatingSection({
         profileUid: user.id,

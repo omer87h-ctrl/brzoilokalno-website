@@ -39,6 +39,16 @@ export function formatApplicationStatus(status) {
   return map[status] || status || "—";
 }
 
+export function formatNotificationType(type) {
+  const map = {
+    new_application: "Nova prijava",
+    application_accepted: "Prijava prihvaćena",
+    application_rejected: "Prijava odbijena",
+    job_completed: "Posao završen",
+  };
+  return map[type] || type || "Obavijest";
+}
+
 export function formatDateTime(value) {
   if (!value) return "";
   const date =

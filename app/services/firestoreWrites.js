@@ -283,6 +283,49 @@ export async function deleteOffer(offerId) {
   await deleteDoc(doc(getDb(), "offers", offerId));
 }
 
+export async function setFollowing({ followerUid, viewerRole, profile, follow }) {
+  const viewer = String(followerUid || "").trim();
+  const targetUid = String(profile?.id || profile?.uid || "").trim();
+  if (!viewer || !targetUid || viewer === targetUid) {
+    throw new Error("invalid follow");
+  }
+  if (viewerRole !== "korisnik") {
+    throw new Error("role cannot follow");
+  }
+  const role = profile?.role === "majstor" || profile?.role === "kreator" ? profile.role : null;
+  if (!role) throw new Error("not followable");
+
+  const db = getDb();
+  const followingRef = doc(db, "users", viewer, "following", targetUid);
+  const mirrorRef = doc(db, "users", targetUid, "followers", viewer);
+
+  if (!follow) {
+    const batch = writeBatch(db);
+    batch.delete(followingRef);
+    batch.delete(mirrorRef);
+    await batch.commit();
+    return false;
+  }
+
+  const followedAtMs = Date.now();
+  const payload = {
+    targetUid,
+    targetRole: role,
+    targetDisplayName: String(profile.displayName || "").slice(0, 60),
+    targetOccupation: String(profile.occupation || "").slice(0, 48),
+    targetCategory: String(profile.category || "").slice(0, 64),
+    targetCity: String(profile.city || "").slice(0, 40),
+    targetStatus: String(profile.status || "").slice(0, 32),
+    profileImageUrlThumb: String(profile.profileImageUrlThumb || "").slice(0, 2048),
+    followedAtMs,
+  };
+  const batch = writeBatch(db);
+  batch.set(followingRef, payload, { merge: true });
+  batch.set(mirrorRef, { followedAtMs }, { merge: true });
+  await batch.commit();
+  return true;
+}
+
 export async function submitRating({ profileUid, raterUid, rating }) {
   const value = Math.max(1, Math.min(5, Math.round(Number(rating) || 0)));
   await setDoc(
@@ -322,5 +365,10 @@ export async function deleteAccountData(uid) {
   try {
     await deleteDoc(doc(db, HOME_TIPS, `author_${uid}`));
   } catch (_) {}
+  await Promise.all([
+    deleteDocsFromQuery(query(collection(db, "users", uid, "following"))),
+    deleteDocsFromQuery(query(collection(db, "users", uid, "followers"))),
+    deleteDocsFromQuery(query(collection(db, "users", uid, "ratings"))),
+  ]);
   await deleteDoc(doc(db, "users", uid));
 }

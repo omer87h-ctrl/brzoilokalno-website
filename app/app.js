@@ -33,8 +33,14 @@ import {
   fetchHomeTips,
   fetchMyHomeTip,
   fetchUnreadNotificationCount,
+  fetchNotifications,
   fetchRatingsForUser,
   fetchMyRatingForUser,
+  fetchFollowingList,
+  fetchIsFollowing,
+  fetchFollowerCount,
+  fetchPublicWorksByUserIds,
+  fetchMyJobsCount,
   pickFastCandidates,
 } from "./services/firestoreReads.js";
 import {
@@ -51,6 +57,7 @@ import {
   markNotificationsRead,
   saveHomeTip,
   sendChatMessage,
+  setFollowing,
   submitRating,
   updateApplicationStatus,
   updateUserProfile,
@@ -89,7 +96,10 @@ import { renderChat, renderChatMessages } from "./views/chat.js";
 import { renderPretraga } from "./views/pretraga.js";
 import { renderPonudaDetail } from "./views/ponude.js";
 import { renderPostavke } from "./views/postavke.js";
+import { renderObavijesti } from "./views/obavijesti.js";
 import { renderKalkulator, readKalkulatorState } from "./views/kalkulator.js";
+import { buildActivityDashboard } from "./utils/activity.js";
+import { fetchOutdoorForecast, buildOutdoorOutlook } from "./services/weatherOutlook.js";
 import { renderCreateJobForm, renderCreateOfferForm, renderTipEditorForm, renderAddWorkForm } from "./views/forms.js";
 import { renderScreenError, renderScreenLoading } from "./views/shared.js";
 
@@ -117,6 +127,9 @@ let kalkState = { module: 0 };
 let unreadNotifications = 0;
 let myTip = null;
 let postavkeDeleteError = "";
+let aktivnostExpanded = false;
+let outdoorPlanExpanded = false;
+let outdoorOutlookCache = null;
 const scrollPositions = {};
 let lastScrollRoute = null;
 
@@ -215,6 +228,7 @@ function renderShellWithContent(route, contentHtml, { restoreScroll = true } = {
       userEmail: currentUser?.email || "",
       contentHtml: contentHtml + buildModalsHtml(),
       unreadNotifications,
+      adminOnly: webConfig?.adminOnly === true,
     })
   );
   lastScrollRoute = route;
@@ -238,6 +252,14 @@ async function loadRouteContent(route) {
       currentUser?.uid ? fetchUserProfile(currentUser.uid) : Promise.resolve(null),
       fetchHomeTips(4),
     ]);
+    let following = [];
+    let followedWorks = [];
+    if (profile?.role === "korisnik" && currentUser?.uid) {
+      following = await fetchFollowingList(currentUser.uid);
+      if (following.length) {
+        followedWorks = await fetchPublicWorksByUserIds(following.map((f) => f.targetUid));
+      }
+    }
     return renderHome({
       selectedCity,
       worksPreview,
@@ -247,6 +269,8 @@ async function loadRouteContent(route) {
       userName: profile?.displayName || currentUser?.displayName || "",
       userRole: profile?.role || "",
       userCity: profile?.city || "",
+      following,
+      followedWorks,
     });
   }
 
@@ -422,7 +446,7 @@ async function loadRouteContent(route) {
     const user = uid ? await fetchUserProfile(uid) : null;
     const role = user?.role || "";
     const worker = role === "majstor" || role === "kreator";
-    const [tip, myWorks] = await Promise.all([
+    const [tip, myWorks, applications, publishedJobsCount, followerCount] = await Promise.all([
       uid ? fetchMyHomeTip(uid) : Promise.resolve(null),
       uid && worker
         ? fetchWorksByUser(uid, false).catch((error) => {
@@ -430,8 +454,43 @@ async function loadRouteContent(route) {
             return [];
           })
         : Promise.resolve([]),
+      uid ? fetchMyApplications(uid) : Promise.resolve([]),
+      uid ? fetchMyJobsCount(uid) : Promise.resolve(0),
+      uid && worker ? fetchFollowerCount(uid) : Promise.resolve(0),
     ]);
     myTip = tip;
+    const jobIds = [...new Set(applications.map((a) => a.jobId).filter(Boolean))].slice(0, 24);
+    const jobs = await Promise.all(jobIds.map((id) => fetchJob(id)));
+    const jobsById = Object.fromEntries(jobs.filter(Boolean).map((j) => [j.id, j]));
+    const activityDashboard = uid
+      ? buildActivityDashboard(
+          applications.map((app) => ({
+            ...app,
+            jobTitle: jobsById[app.jobId]?.title || "",
+          })),
+          uid,
+          publishedJobsCount
+        )
+      : null;
+
+    const weatherKey = webConfig?.weatherApiKey || "";
+    const outdoorMissingKey = !weatherKey;
+    let outdoorOutlook = outdoorOutlookCache;
+    let outdoorLoading = false;
+    if (user?.city && outdoorPlanExpanded && weatherKey) {
+      if (!outdoorOutlook) {
+        outdoorLoading = true;
+        try {
+          const forecast = await fetchOutdoorForecast(weatherKey, user.city);
+          outdoorOutlook = buildOutdoorOutlook(role, forecast);
+          outdoorOutlookCache = outdoorOutlook;
+        } catch (error) {
+          console.warn("Weather load failed:", error);
+        }
+        outdoorLoading = false;
+      }
+    }
+
     return renderProfil({
       user,
       authEmail: currentUser?.email || "",
@@ -439,6 +498,14 @@ async function loadRouteContent(route) {
       formError: profileFormError,
       myTip: tip,
       myWorks,
+      activityDashboard,
+      aktivnostExpanded,
+      outdoorOutlook,
+      outdoorLoading,
+      outdoorMissingKey,
+      outdoorExpanded: outdoorPlanExpanded,
+      followerCount,
+      chatEnabled: webConfig?.chatEnabled === true,
     });
   }
 
@@ -447,6 +514,13 @@ async function loadRouteContent(route) {
     let works = [];
     let ratingsSummary = null;
     let myRating = 0;
+    let isFollowing = false;
+    let followerCount = 0;
+    let viewerRole = "";
+    if (currentUser?.uid) {
+      const viewerProfile = await fetchUserProfile(currentUser.uid);
+      viewerRole = viewerProfile?.role || "";
+    }
     if (user) {
       try {
         works = await fetchWorksByUser(route.uid, true);
@@ -455,12 +529,20 @@ async function loadRouteContent(route) {
       }
       if (user.role === "majstor" || user.role === "kreator") {
         try {
-          [ratingsSummary, myRating] = await Promise.all([
+          [ratingsSummary, myRating, followerCount] = await Promise.all([
             fetchRatingsForUser(route.uid),
             currentUser?.uid ? fetchMyRatingForUser(route.uid, currentUser.uid) : 0,
+            fetchFollowerCount(route.uid),
           ]);
         } catch (error) {
           console.warn("Ratings load failed:", error);
+        }
+      }
+      if (currentUser?.uid && currentUser.uid !== route.uid) {
+        try {
+          isFollowing = await fetchIsFollowing(currentUser.uid, route.uid);
+        } catch (error) {
+          console.warn("Follow state load failed:", error);
         }
       }
     }
@@ -470,7 +552,19 @@ async function loadRouteContent(route) {
       ratingsSummary,
       myRating,
       currentUid: currentUser?.uid || "",
+      isFollowing,
+      viewerRole,
+      followerCount,
     });
+  }
+
+  if (route.name === "obavijesti") {
+    const notifications = await fetchNotifications(currentUser.uid, 40);
+    try {
+      await markNotificationsRead(currentUser.uid);
+      unreadNotifications = 0;
+    } catch (_) {}
+    return renderObavijesti({ notifications });
   }
 
   if (route.name === "postavke") {
@@ -556,12 +650,7 @@ async function renderApp() {
 
   try {
     await refreshProfileCity();
-    if (route.name === "poslovi" || route.name === "prijave") {
-      try {
-        await markNotificationsRead(currentUser.uid);
-        unreadNotifications = 0;
-      } catch (_) {}
-    } else {
+    if (route.name !== "obavijesti") {
       try {
         unreadNotifications = await fetchUnreadNotificationCount(currentUser.uid);
       } catch (_) {
@@ -614,14 +703,29 @@ function listaPath(filter) {
 function startChatListener(ctx) {
   stopChatListener();
   chatContext = ctx;
+  let lastClearedMsgId = "";
   chatUnsubscribe = subscribeToChatMessages({
     jobId: ctx.jobId,
     applicationId: ctx.appId,
     onMessages: (messages) => {
       const el = document.getElementById("chat-messages");
-      if (!el) return;
-      el.innerHTML = renderChatMessages(messages, ctx.currentUid);
-      el.scrollTop = el.scrollHeight;
+      if (el) {
+        el.innerHTML = renderChatMessages(messages, ctx.currentUid);
+        el.scrollTop = el.scrollHeight;
+      }
+      const last = messages[messages.length - 1];
+      const sender = last?.senderId || "";
+      const msgId = last?.id || "";
+      if (
+        last &&
+        sender &&
+        sender !== ctx.currentUid &&
+        msgId &&
+        msgId !== lastClearedMsgId
+      ) {
+        lastClearedMsgId = msgId;
+        clearMyUnread(ctx.appId, ctx.currentUid).catch(() => {});
+      }
     },
     onError: (error) => {
       const el = document.getElementById("chat-messages");
@@ -1214,6 +1318,49 @@ function bindSearchAndFilters() {
         deleteAccountBtn.disabled = false;
         renderApp();
       }
+    });
+  }
+
+  const followBtn = document.getElementById("follow-profile-btn");
+  if (followBtn) {
+    followBtn.addEventListener("click", async () => {
+      const profileUid = followBtn.dataset.profileUid;
+      const currently = followBtn.dataset.following === "1";
+      if (!profileUid || !currentUser?.uid || followBtn.disabled) return;
+      followBtn.disabled = true;
+      try {
+        const [profile, viewerProfile] = await Promise.all([
+          fetchUserProfile(profileUid),
+          fetchUserProfile(currentUser.uid),
+        ]);
+        await setFollowing({
+          followerUid: currentUser.uid,
+          viewerRole: viewerProfile?.role || "",
+          profile: { ...profile, id: profileUid },
+          follow: !currently,
+        });
+        renderApp();
+      } catch (error) {
+        console.error("Follow failed:", error);
+        followBtn.disabled = false;
+        alert("Pratnja nije uspjela.");
+      }
+    });
+  }
+
+  const aktivnostToggle = document.getElementById("aktivnost-toggle");
+  if (aktivnostToggle) {
+    aktivnostToggle.addEventListener("click", () => {
+      aktivnostExpanded = !aktivnostExpanded;
+      renderApp();
+    });
+  }
+
+  const outdoorToggle = document.getElementById("outdoor-plan-toggle");
+  if (outdoorToggle) {
+    outdoorToggle.addEventListener("click", () => {
+      outdoorPlanExpanded = !outdoorPlanExpanded;
+      renderApp();
     });
   }
 

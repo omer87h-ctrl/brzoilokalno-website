@@ -1,6 +1,7 @@
 import {
   collection,
   doc,
+  getCountFromServer,
   getDoc,
   getDocs,
   limit,
@@ -310,6 +311,74 @@ export async function fetchUnreadNotificationCount(uid) {
   );
   const snap = await getDocs(q);
   return snap.size;
+}
+
+export async function fetchNotifications(uid, max = 40) {
+  const q = query(collection(getDb(), "notifications"), where("targetUid", "==", uid), limit(60));
+  const snap = await getDocs(q);
+  return mapDocs(snap)
+    .sort((a, b) => timestampMs(b.timestamp) - timestampMs(a.timestamp))
+    .slice(0, max);
+}
+
+export async function fetchMyJobsCount(uid) {
+  const q = query(collection(getDb(), "jobs"), where("userId", "==", uid));
+  const snap = await getCountFromServer(q);
+  return snap.data().count || 0;
+}
+
+export async function fetchFollowingList(uid) {
+  const snap = await getDocs(
+    query(collection(getDb(), "users", uid, "following"), limit(48))
+  );
+  return snap.docs
+    .map((d) => {
+      const data = d.data();
+      return {
+        targetUid: data.targetUid || d.id,
+        targetRole: data.targetRole || "",
+        displayName: data.targetDisplayName || "",
+        occupation: data.targetOccupation || "",
+        category: data.targetCategory || "",
+        city: data.targetCity || "",
+        status: data.targetStatus || "",
+        profileImageUrlThumb: data.profileImageUrlThumb || "",
+        followedAtMs: Number(data.followedAtMs) || 0,
+      };
+    })
+    .sort((a, b) => b.followedAtMs - a.followedAtMs);
+}
+
+export async function fetchIsFollowing(viewerUid, targetUid) {
+  if (!viewerUid || !targetUid) return false;
+  const snap = await getDoc(doc(getDb(), "users", viewerUid, "following", targetUid));
+  return snap.exists();
+}
+
+export async function fetchFollowerCount(uid) {
+  if (!uid) return 0;
+  try {
+    const snap = await getCountFromServer(
+      query(collection(getDb(), "users", uid, "followers"))
+    );
+    return snap.data().count || 0;
+  } catch (_) {
+    const snap = await getDocs(collection(getDb(), "users", uid, "followers"));
+    return snap.size;
+  }
+}
+
+export async function fetchPublicWorksByUserIds(userIds, max = 12) {
+  const ids = [...new Set((userIds || []).filter(Boolean))].slice(0, 10);
+  if (!ids.length) return [];
+  const q = query(
+    collection(getDb(), "works"),
+    where("isPublic", "==", true),
+    where("userId", "in", ids),
+    limit(max)
+  );
+  const snap = await getDocs(q);
+  return mapDocs(snap).sort((a, b) => timestampMs(b.timestamp) - timestampMs(a.timestamp));
 }
 
 function mapTips(docs, now) {

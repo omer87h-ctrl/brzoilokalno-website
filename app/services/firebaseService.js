@@ -65,6 +65,7 @@ export async function getWebAppConfig() {
     enabled: data.enabled === true,
     adminOnly: data.adminOnly !== false,
     chatEnabled: data.chatEnabled === true,
+    weatherApiKey: typeof data.weatherApiKey === "string" ? data.weatherApiKey.trim() : "",
     maintenanceMessage: typeof data.maintenanceMessage === "string" ? data.maintenanceMessage : "",
     _missing: false,
   };

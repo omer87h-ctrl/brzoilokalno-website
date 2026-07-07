@@ -1,6 +1,7 @@
 import { POPULAR_CITIES } from "../data/categories.js";
 import { escapeHtml } from "../utils/format.js";
 import { renderRadPreview } from "./radovi.js";
+import { renderMojKrug } from "./follow.js";
 
 export function renderHomeTips({ tips = [], loading = false }) {
   if (loading) {
@@ -45,6 +46,8 @@ export function renderHome({
   userName = "",
   userRole = "",
   userCity = "",
+  following = [],
+  followedWorks = [],
 }) {
   const chips = POPULAR_CITIES.map((city) => {
     const active = selectedCity === city ? " chip--active" : "";
@@ -118,6 +121,7 @@ export function renderHome({
           <p>Brza procjena cijene usluge</p>
         </button>
       </div>
+      ${renderMojKrug({ following, followedWorks })}
       ${renderRadPreview({ works: worksPreview, slideIndex: workSlideIndex })}
       ${renderHomeTips({ tips, loading: tipsLoading })}
     </div>`;

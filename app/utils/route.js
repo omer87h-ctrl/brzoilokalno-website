@@ -37,6 +37,7 @@ export function parseRoute(hash) {
   }
   if (name === "profil") return { name: "profil" };
   if (name === "postavke") return { name: "postavke" };
+  if (name === "obavijesti") return { name: "obavijesti" };
   if (name === "pregled" && parts[1]) return { name: "pregled", uid: parts[1] };
 
   return { name: "home" };
@@ -52,7 +53,7 @@ export function routeToNav(route) {
   ) {
     return "poslovi";
   }
-  if (route.name === "profil" || route.name === "postavke") return "profil";
+  if (route.name === "profil" || route.name === "postavke" || route.name === "obavijesti") return "profil";
   if (
     route.name === "kategorije" ||
     route.name === "pregled" ||
