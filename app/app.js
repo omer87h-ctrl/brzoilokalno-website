@@ -148,7 +148,7 @@ let outdoorFetchToken = 0;
 let profilUseCache = false;
 
 function isChatEnabled() {
-  return webConfig?.enabled === true && webConfig?.chatEnabled !== false;
+  return webConfig?.chatEnabled === true;
 }
 
 function invalidateProfilCache() {
