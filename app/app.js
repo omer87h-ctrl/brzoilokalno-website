@@ -140,6 +140,7 @@ let loginError = "";
 let authError = "";
 let booted = false;
 let selectedCity = "";
+let homeShowAllCities = false;
 let profileCity = "";
 let workSlideIndex = 0;
 let posloviFilterMyCity = false;
@@ -494,6 +495,7 @@ async function loadRouteContent(route) {
     homeTipsCache = tips;
     return renderHome({
       selectedCity,
+      showAllCities: homeShowAllCities,
       worksPreview,
       workSlideIndex,
       tips,
@@ -2205,6 +2207,13 @@ function bindHomeActions() {
     chip.addEventListener("click", () => {
       const city = chip.dataset.city || "";
       selectedCity = selectedCity === city ? "" : city;
+      renderApp();
+    });
+  });
+
+  document.querySelectorAll('[data-action="toggle-cities"]').forEach((btn) => {
+    btn.addEventListener("click", () => {
+      homeShowAllCities = !homeShowAllCities;
       renderApp();
     });
   });

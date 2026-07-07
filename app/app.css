@@ -670,6 +670,11 @@ body.app-body.has-app-shell #app-root {
   color: var(--accent);
 }
 
+.chip--more-cities {
+  border-style: dashed;
+  color: var(--accent);
+}
+
 .home-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

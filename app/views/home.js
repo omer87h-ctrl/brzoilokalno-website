@@ -1,4 +1,4 @@
-import { ALL_CITIES } from "../data/categories.js";
+import { ALL_CITIES, POPULAR_CITIES } from "../data/categories.js";
 import { escapeHtml } from "../utils/format.js";
 import { renderRadPreview } from "./radovi.js";
 import { renderMojKrug } from "./follow.js";
@@ -67,6 +67,7 @@ export function renderHomeTips({ tips = [], loading = false, myHomeTip = null, u
 
 export function renderHome({
   selectedCity = "",
+  showAllCities = false,
   worksPreview = [],
   workSlideIndex = 0,
   tips = [],
@@ -79,10 +80,15 @@ export function renderHome({
   followedWorks = [],
   currentUid = "",
 }) {
-  const chips = ALL_CITIES.map((city) => {
+  const visibleCities = showAllCities ? ALL_CITIES : POPULAR_CITIES;
+  const chips = visibleCities.map((city) => {
     const active = selectedCity === city ? " chip--active" : "";
     return `<button type="button" class="chip chip--btn${active}" data-city="${escapeHtml(city)}">${escapeHtml(city)}</button>`;
   }).join("");
+  const moreCitiesBtn =
+    ALL_CITIES.length > POPULAR_CITIES.length
+      ? `<button type="button" class="chip chip--btn chip--more-cities" data-action="toggle-cities">${showAllCities ? "Manje gradova" : "Više gradova"}</button>`
+      : "";
 
   const cityHint = selectedCity
     ? `U gradu: ${escapeHtml(selectedCity)} (ocjene i broj recenzija)`
@@ -127,7 +133,7 @@ export function renderHome({
       <div class="city-chips-block">
         <p class="city-chips-label">Odaberi grad</p>
         <p class="city-chips-hint">Filtar za kartice ispod (top, slobodni, blizu mene).</p>
-        <div class="chip-row" aria-label="Odaberi grad">${chips}</div>
+        <div class="chip-row" aria-label="Odaberi grad">${chips}${moreCitiesBtn}</div>
       </div>
       <div class="home-grid">
         <button type="button" class="home-card home-card--blue home-card--btn" data-action="lista-top">
