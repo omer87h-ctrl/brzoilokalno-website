@@ -1,4 +1,4 @@
-import { POPULAR_CITIES } from "../data/categories.js";
+import { ALL_CITIES } from "../data/categories.js";
 import { escapeHtml } from "../utils/format.js";
 import { renderRadPreview } from "./radovi.js";
 import { renderMojKrug } from "./follow.js";
@@ -79,7 +79,7 @@ export function renderHome({
   followedWorks = [],
   currentUid = "",
 }) {
-  const chips = POPULAR_CITIES.map((city) => {
+  const chips = ALL_CITIES.map((city) => {
     const active = selectedCity === city ? " chip--active" : "";
     return `<button type="button" class="chip chip--btn${active}" data-city="${escapeHtml(city)}">${escapeHtml(city)}</button>`;
   }).join("");
@@ -125,9 +125,9 @@ export function renderHome({
         </button>
       </form>
       <div class="city-chips-block">
-        <p class="city-chips-label">Popularni gradovi</p>
+        <p class="city-chips-label">Odaberi grad</p>
         <p class="city-chips-hint">Filtar za kartice ispod (top, slobodni, blizu mene).</p>
-        <div class="chip-row" aria-label="Popularni gradovi">${chips}</div>
+        <div class="chip-row" aria-label="Odaberi grad">${chips}</div>
       </div>
       <div class="home-grid">
         <button type="button" class="home-card home-card--blue home-card--btn" data-action="lista-top">
