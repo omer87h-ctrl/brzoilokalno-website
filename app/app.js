@@ -42,6 +42,8 @@ import {
   createOffer,
   createWork,
   deleteHomeTip,
+  deleteJob,
+  deleteOffer,
   deleteWork,
   markNotificationsRead,
   saveHomeTip,
@@ -97,6 +99,7 @@ let selectedCity = "";
 let profileCity = "";
 let workSlideIndex = 0;
 let posloviFilterMyCity = false;
+let kategorijeFilterMyCity = false;
 let screenRequestId = 0;
 let chatUnsubscribe = null;
 let chatContext = null;
@@ -118,6 +121,7 @@ function stopChatListener() {
 
 function setRoot(html) {
   root.innerHTML = html;
+  document.body.classList.toggle("has-app-shell", !!root.querySelector(".app-shell"));
   bindRootEvents();
 }
 
@@ -195,8 +199,16 @@ async function loadRouteContent(route) {
     }
     const role = categoryRole(category);
     const tab = categoryTabForCategory(category);
-    const users = await fetchUsersByCategory(category, selectedCity || null, role);
-    return renderKategorijeList({ category, users, city: selectedCity || null, tab });
+    const city = kategorijeFilterMyCity ? profileCity : selectedCity || null;
+    const users = await fetchUsersByCategory(category, city || null, role);
+    return renderKategorijeList({
+      category,
+      users,
+      city,
+      tab,
+      filterMyCity: kategorijeFilterMyCity,
+      userCity: profileCity,
+    });
   }
 
   if (route.name === "brzo") {
@@ -254,7 +266,7 @@ async function loadRouteContent(route) {
 
   if (route.name === "ponuda") {
     const offer = await fetchOffer(route.offerId);
-    return renderPonudaDetail({ offer });
+    return renderPonudaDetail({ offer, currentUid: currentUser.uid });
   }
 
   if (route.name === "posao") {
@@ -575,6 +587,36 @@ function bindPhase3Actions() {
       }
     });
   });
+
+  const deleteJobBtn = document.getElementById("delete-job-btn");
+  if (deleteJobBtn) {
+    deleteJobBtn.addEventListener("click", async () => {
+      const jobId = deleteJobBtn.dataset.jobId;
+      if (!jobId || !confirm("Obrisati ovaj posao?")) return;
+      try {
+        await deleteJob(jobId);
+        navigateTo("#/poslovi");
+      } catch (error) {
+        console.error("Delete job failed:", error);
+        alert("Brisanje posla nije uspjelo.");
+      }
+    });
+  }
+
+  const deleteOfferBtn = document.getElementById("delete-offer-btn");
+  if (deleteOfferBtn) {
+    deleteOfferBtn.addEventListener("click", async () => {
+      const offerId = deleteOfferBtn.dataset.offerId;
+      if (!offerId || !confirm("Obrisati ovu ponudu?")) return;
+      try {
+        await deleteOffer(offerId);
+        navigateTo("#/ponude");
+      } catch (error) {
+        console.error("Delete offer failed:", error);
+        alert("Brisanje ponude nije uspjelo.");
+      }
+    });
+  }
 
   const chatForm = document.getElementById("chat-form");
   if (chatForm && chatContext) {
@@ -1021,6 +1063,14 @@ function bindSearchAndFilters() {
   if (posloviFilter) {
     posloviFilter.addEventListener("click", () => {
       posloviFilterMyCity = !posloviFilterMyCity;
+      renderApp();
+    });
+  }
+
+  const kategorijeFilter = document.getElementById("kategorije-city-filter");
+  if (kategorijeFilter) {
+    kategorijeFilter.addEventListener("click", () => {
+      kategorijeFilterMyCity = !kategorijeFilterMyCity;
       renderApp();
     });
   }

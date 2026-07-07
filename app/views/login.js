@@ -3,7 +3,7 @@ import { escapeHtml } from "../utils/format.js";
 
 export function renderLogin({ error = "", showRegisterLink = true }) {
   return `
-    <div class="screen screen--center">
+    <div class="screen screen--center screen--auth">
       <div class="status-card auth-card">
         <img class="status-card__logo" src="icons/icon-192.png" alt="" width="72" height="72">
         <h1 class="status-card__title">Prijava</h1>

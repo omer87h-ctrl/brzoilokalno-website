@@ -2,7 +2,7 @@ import { APP_LINKS } from "../firebase.js";
 
 export function renderPrepScreen({ showAdminLogin = false, loginError = "" }) {
   return `
-    <div class="screen screen--center">
+    <div class="screen screen--center screen--auth">
       <div class="status-card">
         <img class="status-card__logo" src="icons/icon-192.png" alt="" width="72" height="72">
         <h1 class="status-card__title">Brzo i Lokalno</h1>

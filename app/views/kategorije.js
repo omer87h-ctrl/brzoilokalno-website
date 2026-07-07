@@ -6,7 +6,7 @@ import {
 } from "../data/categories.js";
 import { escapeHtml } from "../utils/format.js";
 import { renderUserList } from "./shared.js";
-import { renderScreenTabs } from "./ponude.js";
+import { renderCityFilterChip, renderScreenTabs } from "./ponude.js";
 
 export function renderKategorijeTabs({ activeTab = "majstori" }) {
   return renderScreenTabs({
@@ -42,29 +42,40 @@ export function renderKategorijeGrid({ tab = "majstori" } = {}) {
   const categories = tab === "kreatori" ? KREATOR_CATEGORIES : MAJSTOR_CATEGORIES;
   const tabs = renderKategorijeTabs({ activeTab: tab });
   const cards = categories.map((cat) => categoryCard(cat, tab)).join("");
+  const roleLabel = tab === "kreatori" ? "kreatore" : "majstore";
 
   return `
     <div class="screen-scroll">
-      <article class="kategorije-header">
-        <span class="kategorije-header__accent" aria-hidden="true"></span>
-        <h2 class="screen-title">Kategorije</h2>
-        <p class="screen-subtitle">Odaberi oblast i pregledaj majstore ili kreatore po kategoriji.</p>
-        ${tabs}
-      </article>
+      ${tabs}
+      <h2 class="screen-title">Kategorije</h2>
+      <p class="screen-subtitle">Odaberi kategoriju i pregledaj ${roleLabel}</p>
       <div class="category-list">${cards}</div>
     </div>`;
 }
 
-export function renderKategorijeList({ category, users, city = null, tab = "majstori" }) {
+export function renderKategorijeList({
+  category,
+  users,
+  city = null,
+  tab = "majstori",
+  filterMyCity = false,
+  userCity = "",
+}) {
   const backHref = tab === "kreatori" ? "#/kreatori" : "#/kategorije";
   const roleLabel = tab === "kreatori" ? "kreatore" : "majstore";
-  const cityLine = city ? `Grad: ${escapeHtml(city)} · ` : "";
+  const cityChip = renderCityFilterChip({
+    active: filterMyCity,
+    city: userCity,
+    id: "kategorije-city-filter",
+  });
 
   return `
     <div class="screen-scroll">
+      ${renderKategorijeTabs({ activeTab: tab })}
+      ${cityChip ? `<div class="chip-row chip-row--filters">${cityChip}</div>` : ""}
       <a class="back-link" href="${backHref}">← Sve kategorije</a>
       <h2 class="screen-title">${escapeHtml(category)}</h2>
-      <p class="screen-subtitle">${cityLine}Dostupni ${roleLabel} u ovoj kategoriji</p>
+      <p class="screen-subtitle">${city ? `Grad: ${escapeHtml(city)} · ` : ""}Dostupni ${roleLabel}</p>
       ${renderUserList(users, { emptyText: `Nema profila u ovoj kategoriji${city ? ` za grad ${escapeHtml(city)}` : ""}.` })}
     </div>`;
 }

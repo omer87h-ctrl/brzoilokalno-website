@@ -20,7 +20,7 @@ export function renderOnboarding({ user, error = "", defaults = {} }) {
   const displayName = escapeHtml(defaults.displayName || user?.displayName || "");
 
   return `
-    <div class="screen screen--center">
+    <div class="screen screen--center screen--auth">
       <div class="status-card auth-card auth-card--wide">
         <h1 class="status-card__title">Dovrši profil</h1>
         <p class="status-card__text status-card__text--muted">Još par koraka prije korištenja aplikacije</p>

@@ -274,3 +274,11 @@ export async function updateWorkPublic(workId, isPublic) {
 export async function deleteWork(workId) {
   await deleteDoc(doc(getDb(), "works", workId));
 }
+
+export async function deleteJob(jobId) {
+  await deleteDoc(doc(getDb(), "jobs", jobId));
+}
+
+export async function deleteOffer(offerId) {
+  await deleteDoc(doc(getDb(), "offers", offerId));
+}

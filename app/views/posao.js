@@ -119,6 +119,13 @@ export function renderPosao({
         <p class="detail-card__budget">${budget}${when ? ` · ${when}` : ""}</p>
         <p class="detail-card__desc">${desc}</p>
         ${actionHtml}
+        ${
+          isOwner
+            ? `<div class="detail-actions">
+                <button type="button" class="btn btn--ghost btn--danger" id="delete-job-btn" data-job-id="${escapeHtml(job.id)}">Obriši posao</button>
+              </div>`
+            : ""
+        }
       </article>
       ${appsHtml}
     </div>`;

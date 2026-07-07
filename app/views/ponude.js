@@ -49,19 +49,19 @@ export function renderPosloviTabs({ activeTab }) {
   });
 }
 
-export function renderCityFilterChip({ active, city }) {
+export function renderCityFilterChip({ active, city, id = "poslovi-city-filter" }) {
   if (!city) return "";
   return `
     <button
       type="button"
       class="chip chip--btn chip--filter${active ? " chip--active" : ""}"
-      id="poslovi-city-filter"
+      id="${escapeHtml(id)}"
       data-active="${active ? "1" : "0"}">
       ${active ? "Samo moj grad" : "Svi gradovi"} · ${escapeHtml(city)}
     </button>`;
 }
 
-export function renderPonudaDetail({ offer }) {
+export function renderPonudaDetail({ offer, currentUid = "" }) {
   if (!offer) {
     return `
       <div class="screen-scroll">
@@ -81,6 +81,7 @@ export function renderPonudaDetail({ offer }) {
   const desc = escapeHtml(offer.description || "Nema opisa.");
   const phone = offer.contactPhone ? escapeHtml(offer.contactPhone) : "";
   const ownerUid = offer.userId;
+  const isOwner = ownerUid && ownerUid === currentUid;
 
   return `
     <div class="screen-scroll">
@@ -95,6 +96,13 @@ export function renderPonudaDetail({ offer }) {
         ${
           ownerUid
             ? `<a class="btn btn--ghost btn--block" href="#/pregled/${escapeHtml(ownerUid)}">Pogledaj profil</a>`
+            : ""
+        }
+        ${
+          isOwner
+            ? `<div class="detail-actions">
+                <button type="button" class="btn btn--ghost btn--danger" id="delete-offer-btn" data-offer-id="${escapeHtml(offer.id)}">Obriši ponudu</button>
+              </div>`
             : ""
         }
       </article>

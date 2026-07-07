@@ -35,6 +35,16 @@ body.app-body {
   overscroll-behavior: none;
 }
 
+body.app-body.has-app-shell {
+  overflow: hidden;
+  height: 100dvh;
+}
+
+body.app-body.has-app-shell #app-root {
+  height: 100dvh;
+  overflow: hidden;
+}
+
 #app-root {
   min-height: 100dvh;
 }
@@ -47,7 +57,7 @@ body.app-body {
 
 .screen--center {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   padding-top: max(1.25rem, env(safe-area-inset-top, 0px));
   padding-bottom: max(1.25rem, env(safe-area-inset-bottom, 0px));
@@ -216,10 +226,13 @@ body.app-body {
 
 /* App shell */
 .app-shell {
+  height: 100dvh;
+  max-height: 100dvh;
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
   background: var(--bg);
+  overflow: hidden;
 }
 
 .app-topbar {
@@ -286,8 +299,11 @@ body.app-body {
 
 .app-main {
   flex: 1;
+  min-height: 0;
   padding: 0.85rem 0.85rem calc(var(--bottom-nav-h) + var(--safe-bottom) + 0.5rem);
   overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 .app-admin-note {
@@ -880,7 +896,23 @@ body.app-body {
 
 .auth-card {
   text-align: left;
-  max-width: 420px;
+  width: min(100%, 420px);
+}
+
+@media (min-width: 768px) {
+  .screen--auth {
+    padding: 2rem 1.25rem;
+  }
+
+  .screen--auth .status-card {
+    width: min(100%, 520px);
+    padding: 1.75rem 1.5rem;
+  }
+
+  .screen--auth .auth-card {
+    width: min(100%, 520px);
+    max-width: none;
+  }
 }
 
 .auth-card--wide {
@@ -1212,17 +1244,20 @@ body.app-body {
 .work-card {
   display: flex;
   gap: 0.75rem;
-  padding: 0.75rem;
-  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
   border: 1px solid var(--border);
-  background: var(--bg-card);
+  border-left: 3px solid rgba(242, 140, 40, 0.45);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), var(--bg-card));
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.15s;
+  transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
 .work-card:hover {
-  border-color: rgba(242, 140, 40, 0.35);
+  border-color: rgba(242, 140, 40, 0.4);
+  transform: translateY(-1px);
 }
 
 .work-card__img {
@@ -1437,12 +1472,20 @@ body.app-body {
 
 .work-grid-card {
   display: block;
-  border-radius: 22px;
+  border-radius: 18px;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
   border: 1px solid var(--border);
-  background: var(--bg-card);
+  border-left: 3px solid rgba(242, 140, 40, 0.45);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), var(--bg-card));
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.work-grid-card:hover {
+  border-color: rgba(242, 140, 40, 0.4);
+  transform: translateY(-1px);
 }
 
 .work-grid-card__img {
