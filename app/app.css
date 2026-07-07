@@ -1711,8 +1711,27 @@ body.app-body.has-app-shell #app-root {
 }
 
 .bottom-nav__icon {
+  position: relative;
   font-size: 1.1rem;
   line-height: 1;
+}
+
+.bottom-nav__badge {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  min-width: 15px;
+  height: 15px;
+  padding: 0 3px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #1a1008;
+  font-size: 0.58rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
 }
 
 .bottom-nav__label {

@@ -3,11 +3,19 @@ import { routeToNav } from "../utils/route.js";
 import { ADMIN_EMAIL } from "../firebase.js";
 import { escapeHtml } from "../utils/format.js";
 
-export function renderShell({ route, userEmail, contentHtml, unreadNotifications = 0, adminOnly = true, loading = false }) {
+export function renderShell({
+  route,
+  userEmail,
+  contentHtml,
+  unreadBellNotifications = 0,
+  unreadPosloviNotifications = 0,
+  adminOnly = true,
+  loading = false,
+}) {
   const activeNav = routeToNav(route);
   const notifBadge =
-    unreadNotifications > 0
-      ? `<span class="app-notif-badge">${unreadNotifications > 9 ? "9+" : unreadNotifications}</span>`
+    unreadBellNotifications > 0
+      ? `<span class="app-notif-badge">${unreadBellNotifications > 9 ? "9+" : unreadBellNotifications}</span>`
       : "";
 
   return `
@@ -26,7 +34,7 @@ export function renderShell({ route, userEmail, contentHtml, unreadNotifications
       <main class="app-main" id="app-main">
         ${contentHtml}
       </main>
-      ${renderBottomNav(activeNav)}
+      ${renderBottomNav(activeNav, { unreadPoslovi: unreadPosloviNotifications })}
       ${adminOnly ? `<p class="app-admin-note">Admin: ${escapeHtml(userEmail || ADMIN_EMAIL)}</p>` : ""}
     </div>`;
 }

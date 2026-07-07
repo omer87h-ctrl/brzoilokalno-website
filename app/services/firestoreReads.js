@@ -10,6 +10,7 @@ import {
   where,
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 import { getAuthInstance, getDb } from "./firebaseService.js";
+import { isJobNotificationType } from "../constants/notifications.js";
 import { publicProfilesCollection } from "./publicProfile.js";
 
 function mapDocs(snap) {
@@ -340,14 +341,29 @@ export async function fetchMyHomeTip(uid) {
   return { id: snap.id, ...data };
 }
 
-export async function fetchUnreadNotificationCount(uid) {
+export async function fetchUnreadNotificationItems(uid) {
   const q = query(
     collection(getDb(), "notifications"),
     where("targetUid", "==", uid),
     where("isRead", "==", false)
   );
   const snap = await getDocs(q);
-  return snap.size;
+  return mapDocs(snap);
+}
+
+export async function fetchUnreadNotificationCount(uid) {
+  const items = await fetchUnreadNotificationItems(uid);
+  return items.length;
+}
+
+export async function fetchUnreadBellNotificationCount(uid) {
+  const items = await fetchUnreadNotificationItems(uid);
+  return items.filter((item) => !isJobNotificationType(item.type)).length;
+}
+
+export async function fetchUnreadPosloviNotificationCount(uid) {
+  const items = await fetchUnreadNotificationItems(uid);
+  return items.filter((item) => isJobNotificationType(item.type)).length;
 }
 
 export async function fetchNotifications(uid, max = 40) {

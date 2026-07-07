@@ -33,7 +33,8 @@ import {
   filterJobsOrOffersByCity,
   fetchHomeTips,
   fetchMyHomeTip,
-  fetchUnreadNotificationCount,
+  fetchUnreadBellNotificationCount,
+  fetchUnreadPosloviNotificationCount,
   fetchNotifications,
   fetchRatingsForUser,
   fetchMyRatingForUser,
@@ -60,7 +61,8 @@ import {
   deleteOffer,
   deleteWork,
   deleteAccountData,
-  markNotificationsRead,
+  markBellNotificationsRead,
+  markJobNotificationsRead,
   saveHomeTip,
   sendChatMessage,
   setFollowing,
@@ -99,6 +101,7 @@ import {
 import { findCategoryBySlug, categoryRole, categoryTabForCategory } from "./data/categories.js";
 import { parseRoute } from "./utils/route.js";
 import { formatFirestoreError, workOwnerName } from "./utils/format.js";
+import { canManageApplicationAction } from "./utils/applicationAuth.js";
 import { renderMaintenance } from "./views/maintenance.js";
 import { renderPrepScreen } from "./views/prep.js";
 import { renderLogin } from "./views/login.js";
@@ -167,7 +170,8 @@ let adminModerationError = "";
 let workNotesSavedLabel = "";
 let chatMessagesCache = [];
 let kalkState = { module: 0 };
-let unreadNotifications = 0;
+let unreadBellNotifications = 0;
+let unreadPosloviNotifications = 0;
 let myTip = null;
 let postavkeDeleteError = "";
 let aktivnostExpanded = false;
@@ -497,7 +501,8 @@ function renderShellWithContent(route, contentHtml, { restoreScroll = true, load
       route,
       userEmail: currentUser?.email || "",
       contentHtml: contentHtml + buildModalsHtml(),
-      unreadNotifications,
+      unreadBellNotifications,
+      unreadPosloviNotifications,
       adminOnly: webConfig?.adminOnly === true,
       loading,
     })
@@ -922,8 +927,8 @@ async function loadRouteContent(route) {
   if (route.name === "obavijesti") {
     const notifications = await fetchNotifications(currentUser.uid, 40);
     try {
-      await markNotificationsRead(currentUser.uid);
-      unreadNotifications = 0;
+      await markBellNotificationsRead(currentUser.uid);
+      unreadBellNotifications = 0;
     } catch (_) {}
     return renderObavijesti({
       notifications,
@@ -1066,11 +1071,20 @@ async function renderApp() {
   try {
     if (!softUpdate) {
       await refreshProfileCity();
+      if (route.name === "poslovi" || route.name === "posao") {
+        try {
+          await markJobNotificationsRead(currentUser.uid);
+        } catch (_) {}
+      }
       if (route.name !== "obavijesti") {
         try {
-          unreadNotifications = await fetchUnreadNotificationCount(currentUser.uid);
+          [unreadBellNotifications, unreadPosloviNotifications] = await Promise.all([
+            fetchUnreadBellNotificationCount(currentUser.uid),
+            fetchUnreadPosloviNotificationCount(currentUser.uid),
+          ]);
         } catch (_) {
-          unreadNotifications = 0;
+          unreadBellNotifications = 0;
+          unreadPosloviNotifications = 0;
         }
       }
     }
@@ -1182,7 +1196,7 @@ function bindPhase3Actions() {
       if (role !== "majstor" && role !== "kreator") {
         throw new Error("Samo majstori i kreatori mogu aplicirati na poslove.");
       }
-      if (job.userId === currentUser.uid) {
+      if (job.userId === currentUser.uid || job.ownerId === currentUser.uid || job.jobOwnerId === currentUser.uid) {
         throw new Error("Ne možete aplicirati na vlastiti oglas.");
       }
       await applyToJob({ job, profile, authUser: currentUser });
@@ -1259,9 +1273,14 @@ function bindPhase3Actions() {
       if (!status) return;
       btn.disabled = true;
       try {
-        const app = await fetchApplication(appId);
-        const job = app?.jobId ? await fetchJob(app.jobId) : null;
-        await updateApplicationStatus(appId, status, {
+      const app = await fetchApplication(appId);
+      const job = app?.jobId ? await fetchJob(app.jobId) : null;
+      if (!canManageApplicationAction(app, job, currentUser.uid, action)) {
+        alert("Nemate dozvolu za ovu radnju.");
+        btn.disabled = false;
+        return;
+      }
+      await updateApplicationStatus(appId, status, {
           workerUid: app?.workerId,
           jobOwnerUid: app?.jobOwnerId,
           jobId: app?.jobId,

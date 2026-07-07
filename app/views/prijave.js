@@ -17,6 +17,7 @@ export function renderPrijave({ applications, jobsById, currentUid, chatEnabled 
       const title = escapeHtml(job.title || "Posao");
       const st = app.status || "pending";
       const isWorker = app.workerId === currentUid;
+      const isOwner = app.jobOwnerId === currentUid;
       const roleLabel = isWorker ? "Prijavio/la si se" : "Tvoj oglas";
       const date = formatTimestamp(app.timestamp);
       const chatLink =
@@ -24,10 +25,10 @@ export function renderPrijave({ applications, jobsById, currentUid, chatEnabled 
           ? renderChatShortcut({ href: `#/chat/${escapeHtml(app.jobId)}/${escapeHtml(app.id)}` })
           : "";
 
-      const completeBtn =
-        st === "accepted"
-          ? `<button type="button" class="btn btn--ghost btn--sm" data-app-action="complete" data-app-id="${escapeHtml(app.id)}">Završeno</button>`
-          : "";
+      const canComplete = st === "accepted" && (isWorker || isOwner);
+      const completeBtn = canComplete
+        ? `<button type="button" class="btn btn--ghost btn--sm" data-app-action="complete" data-app-id="${escapeHtml(app.id)}">Završeno</button>`
+        : "";
 
       return `
         <article class="app-card">

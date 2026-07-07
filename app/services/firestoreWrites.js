@@ -15,6 +15,7 @@ import {
   writeBatch,
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 import { getDb } from "./firebaseService.js";
+import { isJobNotificationType } from "../constants/notifications.js";
 import { normalizeSpaces } from "../utils/textInputValidation.js";
 import { syncPublicProfile } from "./publicProfile.js";
 
@@ -163,6 +164,34 @@ export async function markNotificationsRead(uid) {
   await batch.commit();
 }
 
+export async function markBellNotificationsRead(uid) {
+  const q = query(
+    collection(getDb(), "notifications"),
+    where("targetUid", "==", uid),
+    where("isRead", "==", false)
+  );
+  const snap = await getDocs(q);
+  const bellDocs = snap.docs.filter((d) => !isJobNotificationType(d.data()?.type));
+  if (!bellDocs.length) return;
+  const batch = writeBatch(getDb());
+  bellDocs.forEach((d) => batch.update(d.ref, { isRead: true }));
+  await batch.commit();
+}
+
+export async function markJobNotificationsRead(uid) {
+  const q = query(
+    collection(getDb(), "notifications"),
+    where("targetUid", "==", uid),
+    where("isRead", "==", false)
+  );
+  const snap = await getDocs(q);
+  const jobDocs = snap.docs.filter((d) => isJobNotificationType(d.data()?.type));
+  if (!jobDocs.length) return;
+  const batch = writeBatch(getDb());
+  jobDocs.forEach((d) => batch.update(d.ref, { isRead: true }));
+  await batch.commit();
+}
+
 export async function applyToJob({ job, profile, authUser }) {
   const workerId = authUser.uid;
   const safeProfile = profile || {};
@@ -183,7 +212,7 @@ export async function applyToJob({ job, profile, authUser }) {
 
   const appData = {
     jobId: job.id,
-    jobOwnerId: job.userId || "",
+    jobOwnerId: job.userId || job.ownerId || job.jobOwnerId || "",
     workerId,
     workerName: safeProfile.displayName || authUser.displayName || "Korisnik",
     status: "pending",
@@ -205,7 +234,7 @@ export async function applyToJob({ job, profile, authUser }) {
   if (safeProfile.profileVerified === true) appData.workerProfileVerified = true;
 
   await setDoc(ref, appData);
-  const ownerUid = job.userId;
+  const ownerUid = job.userId || job.ownerId || job.jobOwnerId;
   if (ownerUid) {
     await createNotification({
       targetUid: ownerUid,

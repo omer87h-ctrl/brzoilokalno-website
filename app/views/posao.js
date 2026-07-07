@@ -51,7 +51,8 @@ export function renderPosao({
   const when = escapeHtml(job.whenNeeded || job.neededWhen || "");
   const date = formatTimestamp(job.timestamp);
   const desc = escapeHtml(job.description || "Nema opisa.");
-  const isOwner = job.userId === currentUid;
+  const isOwner =
+    job.userId === currentUid || job.ownerId === currentUid || job.jobOwnerId === currentUid;
   const ownerApps = isOwner ? applications : [];
 
   let actionHtml = "";
