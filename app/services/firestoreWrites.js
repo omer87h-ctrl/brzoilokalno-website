@@ -165,6 +165,7 @@ export async function markNotificationsRead(uid) {
 
 export async function applyToJob({ job, profile, authUser }) {
   const workerId = authUser.uid;
+  const safeProfile = profile || {};
   const appDocId = `${job.id}_${workerId}`;
   const ref = doc(getDb(), "applications", appDocId);
   const existing = await getDoc(ref);
@@ -178,24 +179,24 @@ export async function applyToJob({ job, profile, authUser }) {
     jobId: job.id,
     jobOwnerId: job.userId || "",
     workerId,
-    workerName: profile.displayName || authUser.displayName || "Korisnik",
+    workerName: safeProfile.displayName || authUser.displayName || "Korisnik",
     status: "pending",
     timestamp: serverTimestamp(),
   };
 
-  if (profile.role) appData.workerRole = profile.role;
-  if (profile.city) appData.workerCity = profile.city;
-  if (profile.category) appData.workerCategory = profile.category;
-  else if (profile.occupation) appData.workerOccupation = profile.occupation;
-  if (profile.status) appData.workerStatus = profile.status;
-  if (profile.description) appData.workerDescription = profile.description;
-  if (profile.contactPhone) appData.workerContactPhone = profile.contactPhone;
-  if (profile.preferInAppChat === true) appData.workerPreferInAppChat = true;
-  if (profile.allowPhoneCall === false) appData.workerAllowPhoneCall = false;
-  if (profile.allowWhatsApp === false) appData.workerAllowWhatsApp = false;
-  if (profile.profileImageUrlThumb) appData.workerProfileImageUrlThumb = profile.profileImageUrlThumb;
-  if (profile.profileImageVersionMs) appData.workerProfileImageVersionMs = profile.profileImageVersionMs;
-  if (profile.profileVerified === true) appData.workerProfileVerified = true;
+  if (safeProfile.role) appData.workerRole = safeProfile.role;
+  if (safeProfile.city) appData.workerCity = safeProfile.city;
+  if (safeProfile.category) appData.workerCategory = safeProfile.category;
+  else if (safeProfile.occupation) appData.workerOccupation = safeProfile.occupation;
+  if (safeProfile.status) appData.workerStatus = safeProfile.status;
+  if (safeProfile.description) appData.workerDescription = safeProfile.description;
+  if (safeProfile.contactPhone) appData.workerContactPhone = safeProfile.contactPhone;
+  if (safeProfile.preferInAppChat === true) appData.workerPreferInAppChat = true;
+  if (safeProfile.allowPhoneCall === false) appData.workerAllowPhoneCall = false;
+  if (safeProfile.allowWhatsApp === false) appData.workerAllowWhatsApp = false;
+  if (safeProfile.profileImageUrlThumb) appData.workerProfileImageUrlThumb = safeProfile.profileImageUrlThumb;
+  if (safeProfile.profileImageVersionMs) appData.workerProfileImageVersionMs = safeProfile.profileImageVersionMs;
+  if (safeProfile.profileVerified === true) appData.workerProfileVerified = true;
 
   await setDoc(ref, appData);
   const ownerUid = job.userId;

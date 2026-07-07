@@ -85,14 +85,10 @@ export async function fetchApplicationsForJob(jobId) {
 }
 
 export async function fetchMyApplicationForJob(jobId, workerId) {
-  const q = query(
-    collection(getDb(), "applications"),
-    where("jobId", "==", jobId),
-    where("workerId", "==", workerId),
-    limit(1)
-  );
-  const snap = await getDocs(q);
-  return snap.docs[0] ? { id: snap.docs[0].id, ...snap.docs[0].data() } : null;
+  if (!jobId || !workerId) return null;
+  const snap = await getDoc(doc(getDb(), "applications", `${jobId}_${workerId}`));
+  if (!snap.exists()) return null;
+  return { id: snap.id, ...snap.data() };
 }
 
 export async function fetchMyApplications(uid) {

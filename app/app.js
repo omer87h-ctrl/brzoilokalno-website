@@ -1174,20 +1174,32 @@ function bindPhase3Actions() {
     try {
       const [job, profile] = await Promise.all([
         fetchJob(jobId),
-        fetchUserProfile(currentUser.uid),
+        fetchUserProfile(currentUser.uid).catch(() => null),
       ]);
-      if (!job) throw new Error("missing job");
+      if (!job) throw new Error("Posao nije pronađen.");
+      if (!profile) throw new Error("Profil nije pronađen. Odjavite se i prijavite ponovo.");
+      const role = profile.role || "";
+      if (role !== "majstor" && role !== "kreator") {
+        throw new Error("Samo majstori i kreatori mogu aplicirati na poslove.");
+      }
+      if (job.userId === currentUser.uid) {
+        throw new Error("Ne možete aplicirati na vlastiti oglas.");
+      }
       await applyToJob({ job, profile, authUser: currentUser });
       invalidateProfilCache();
-      renderApp();
+      lastRenderedContentHtml = "";
+      await renderApp();
     } catch (error) {
       console.error("Apply failed:", error);
-      if (button) button.disabled = false;
       if (error?.code === "already-applied") {
+        lastRenderedContentHtml = "";
+        await renderApp();
         alert(error.message);
         return;
       }
-      alert("Prijava nije uspjela. Pokušaj ponovo.");
+      alert(formatFirestoreError(error) || error?.message || "Prijava nije uspjela. Pokušaj ponovo.");
+    } finally {
+      if (button) button.disabled = false;
     }
   }
 
