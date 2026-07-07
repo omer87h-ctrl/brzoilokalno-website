@@ -2,6 +2,7 @@ import {
   getWebAppConfig,
   isAdminUser,
   signInAdmin,
+  signInAdminWithGoogle,
   signOutUser,
   watchAuth,
 } from "./services/firebaseService.js";
@@ -92,6 +93,26 @@ async function boot() {
 }
 
 function bindRootEvents() {
+  const googleBtn = document.getElementById("admin-google-signin-btn");
+  if (googleBtn) {
+    googleBtn.addEventListener("click", async () => {
+      loginError = "";
+      try {
+        const result = await signInAdminWithGoogle();
+        if (!isAdminUser(result.user)) {
+          await signOutUser();
+          loginError = "Ovaj Google nalog nema admin pristup.";
+          renderApp();
+        }
+      } catch (error) {
+        if (error?.code !== "auth/popup-closed-by-user") {
+          loginError = "Google prijava nije uspjela. Pokušajte ponovo.";
+          renderApp();
+        }
+      }
+    });
+  }
+
   const loginForm = document.getElementById("admin-login-form");
   if (loginForm) {
     loginForm.addEventListener("submit", async (event) => {

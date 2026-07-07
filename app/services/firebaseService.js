@@ -1,8 +1,10 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
 import {
   getAuth,
+  GoogleAuthProvider,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signInWithPopup,
   signOut,
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 import {
@@ -72,6 +74,12 @@ export function watchAuth(callback) {
 
 export async function signInAdmin(email, password) {
   return signInWithEmailAndPassword(getAuthInstance(), email, password);
+}
+
+export async function signInAdminWithGoogle() {
+  const provider = new GoogleAuthProvider();
+  provider.setCustomParameters({ prompt: "select_account" });
+  return signInWithPopup(getAuthInstance(), provider);
 }
 
 export async function signOutUser() {

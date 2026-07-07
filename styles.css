@@ -49,8 +49,7 @@ a {
 }
 
 .platform-entry {
-  padding: 0.85rem 0 0;
-  background: var(--bg);
+  padding: 1.25rem 0 0;
 }
 
 .platform-entry-inner {
@@ -58,43 +57,51 @@ a {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 0.85rem 1.25rem;
-  padding: 0.9rem 1rem;
-  border-radius: 14px;
-  border: 1px solid rgba(242, 140, 40, 0.28);
-  background: linear-gradient(135deg, rgba(242, 140, 40, 0.08), rgba(255, 255, 255, 0.02));
+  gap: 1.25rem 2rem;
+  padding: 1.35rem 1.5rem;
+  border-radius: calc(var(--radius) + 4px);
+  border: 1px solid rgba(242, 140, 40, 0.22);
+  background:
+    radial-gradient(circle at top left, rgba(242, 140, 40, 0.14), transparent 55%),
+    var(--bg-card);
+  box-shadow: var(--shadow);
 }
 
 .platform-entry-title {
   margin: 0;
-  font-size: 1rem;
+  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .platform-entry-text {
-  margin: 0.2rem 0 0;
+  margin: 0.35rem 0 0;
   color: var(--text-muted);
-  font-size: 0.88rem;
+  font-size: 0.95rem;
+  max-width: 36rem;
 }
 
 .platform-entry-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.65rem 1.1rem;
-  border-radius: 999px;
-  background: var(--accent);
+  min-width: 220px;
+  padding: 0.9rem 1.4rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f49a35, var(--accent));
   color: #1a1008;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   white-space: nowrap;
-  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 28px rgba(242, 140, 40, 0.34);
+  transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
 }
 
 .platform-entry-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 22px rgba(242, 140, 40, 0.28);
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+  box-shadow: 0 16px 34px rgba(242, 140, 40, 0.42);
 }
 
 @media (max-width: 560px) {
@@ -102,10 +109,12 @@ a {
     flex-direction: column;
     align-items: stretch;
     text-align: center;
+    padding: 1.25rem 1.1rem;
   }
 
   .platform-entry-btn {
     width: 100%;
+    min-width: 0;
   }
 }
 
