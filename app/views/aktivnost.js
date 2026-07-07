@@ -1,5 +1,12 @@
 import { escapeHtml } from "../utils/format.js";
 
+function rowSubtitle(row, chatEnabled) {
+  const peer = escapeHtml(row.peerLabel || "");
+  if (row.status === "completed") return `Završeno · ${peer}`;
+  if (chatEnabled && row.jobId && row.appId) return `Pogledaj razgovor · ${peer}`;
+  return `${row.isWorker ? "Prijavio/la si se" : "Tvoj oglas"} · ${peer}`;
+}
+
 export function renderMojaAktivnost({
   dashboard,
   expanded = false,
@@ -18,37 +25,39 @@ export function renderMojaAktivnost({
     </div>`;
 
   const hidden = new Set(hiddenAppIds);
-  const visibleRows = dashboard.chatRows.filter((row) => !hidden.has(row.appId));
+  const visibleRows = dashboard.chatRows.filter((row) => !hidden.has(row.appId)).slice(0, 6);
 
   const chatRows = visibleRows
     .map((row) => {
-      const chatLink =
-        chatEnabled && row.jobId && row.appId
-          ? `<a class="btn btn--ghost btn--sm" href="#/chat/${escapeHtml(row.jobId)}/${escapeHtml(row.appId)}">Chat${row.unread > 0 ? ` · ${row.unread}` : ""}</a>`
-          : "";
+      const rowChatEnabled = chatEnabled && row.jobId && row.appId;
+      const href = rowChatEnabled ? `#/chat/${escapeHtml(row.jobId)}/${escapeHtml(row.appId)}` : `#/posao/${escapeHtml(row.jobId)}`;
+      const unreadBadge =
+        row.unread > 0 ? `<span class="aktivnost-row__badge">${row.unread > 9 ? "9+" : row.unread}</span>` : "";
+      const main = rowChatEnabled
+        ? `<a class="aktivnost-row__link" href="${href}">
+            <span class="aktivnost-row__title">${escapeHtml(row.title)}</span>
+            <p class="aktivnost-row__meta">${rowSubtitle(row, chatEnabled)}</p>
+          </a>`
+        : `<div class="aktivnost-row__link">
+            <a class="aktivnost-row__title" href="${href}">${escapeHtml(row.title)}</a>
+            <p class="aktivnost-row__meta">${rowSubtitle(row, chatEnabled)}</p>
+          </div>`;
+
       return `
         <article class="aktivnost-row">
           <div class="aktivnost-row__main">
-            <a class="aktivnost-row__title" href="#/posao/${escapeHtml(row.jobId)}">${escapeHtml(row.title)}</a>
-            <p class="aktivnost-row__meta">${row.isWorker ? "Prijavio/la si se" : "Tvoj oglas"}${row.unread > 0 ? ` · ${row.unread} nepročitano` : ""}</p>
+            ${main}
+            ${unreadBadge}
           </div>
-          <div class="aktivnost-row__actions">
-            ${chatLink}
-            <button
-              type="button"
-              class="aktivnost-row__remove"
-              data-activity-hide="${escapeHtml(row.appId)}"
-              aria-label="Ukloni s pregleda"
-              title="Ukloni s pregleda">Ukloni</button>
-          </div>
+          <button
+            type="button"
+            class="aktivnost-row__remove"
+            data-activity-hide="${escapeHtml(row.appId)}"
+            aria-label="Ukloni s pregleda"
+            title="Ukloni s pregleda">✕</button>
         </article>`;
     })
     .join("");
-
-  const unreadPreview =
-    dashboard.totalUnreadChat > 0
-      ? `<p class="form-hint">Nova poruka — provjeri chat ispod ili obavijesti.</p>`
-      : "";
 
   return `
     <section class="aktivnost-section${expandedClass}" id="aktivnost-section">
@@ -69,7 +78,6 @@ export function renderMojaAktivnost({
             ? `<p class="form-hint">Zadnja aktivnost: ${escapeHtml(dashboard.lastActivityLabel)}</p>`
             : ""
         }
-        ${unreadPreview}
         ${
           dashboard.acceptedOpen > 0
             ? `<p class="form-hint">Imaš ${dashboard.acceptedOpen} prihvaćenih poslova — označi završene kad završiš.</p>`

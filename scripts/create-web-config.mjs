@@ -19,7 +19,7 @@ const PROJECT_ID = "brzoilokalno-268a5";
 const WEB_CONFIG = {
   enabled: true,
   adminOnly: false,
-  chatEnabled: false,
+  chatEnabled: true,
   maintenanceMessage: "Brzo i Lokalno Web je trenutno u pripremi.",
   ...(process.env.WEATHER_API_KEY
     ? { weatherApiKey: String(process.env.WEATHER_API_KEY).trim() }

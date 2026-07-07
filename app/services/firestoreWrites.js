@@ -171,6 +171,13 @@ export async function applyToJob({ job, profile, authUser }) {
   else if (profile.occupation) appData.workerOccupation = profile.occupation;
   if (profile.status) appData.workerStatus = profile.status;
   if (profile.description) appData.workerDescription = profile.description;
+  if (profile.contactPhone) appData.workerContactPhone = profile.contactPhone;
+  if (profile.preferInAppChat === true) appData.workerPreferInAppChat = true;
+  if (profile.allowPhoneCall === false) appData.workerAllowPhoneCall = false;
+  if (profile.allowWhatsApp === false) appData.workerAllowWhatsApp = false;
+  if (profile.profileImageUrlThumb) appData.workerProfileImageUrlThumb = profile.profileImageUrlThumb;
+  if (profile.profileImageVersionMs) appData.workerProfileImageVersionMs = profile.profileImageVersionMs;
+  if (profile.profileVerified === true) appData.workerProfileVerified = true;
 
   const ref = await addDoc(collection(getDb(), "applications"), appData);
   const ownerUid = job.userId;
@@ -349,6 +356,102 @@ async function deleteDocsFromQuery(q) {
     snap.docs.slice(i, i + 400).forEach((d) => batch.delete(d.ref));
     await batch.commit();
   }
+}
+
+async function submitContentReport({
+  reporterUid,
+  reporterName,
+  reporterEmail,
+  contentCollection,
+  contentId,
+  ownerUid,
+  ownerName,
+  ownerEmail,
+  sourceScreen,
+  targetType,
+  reason,
+  details,
+  reportedContent,
+}) {
+  if (!contentId || !ownerUid) {
+    throw new Error("Nedostaju podaci o sadržaju.");
+  }
+  const reportData = {
+    reporterUid,
+    reporterName,
+    reporterEmail,
+    targetType,
+    targetId: ownerUid,
+    targetUserId: ownerUid,
+    targetUserName: ownerName || "Korisnik",
+    targetUserEmail: ownerEmail || "",
+    sourceScreen,
+    reason,
+    details: normalizeSpaces(details || ""),
+    reportedContent: String(reportedContent || "").slice(0, 500),
+    contentCollection,
+    contentId,
+    status: "open",
+    createdAt: serverTimestamp(),
+  };
+  if (contentCollection === "jobs") reportData.jobId = contentId;
+  await addDoc(collection(getDb(), "reports"), reportData);
+}
+
+export async function submitJobReport({ reporter, job, reason, details }) {
+  const title = job.title || "";
+  const description = job.description || "";
+  const category = job.category || "";
+  const city = job.city || "";
+  const reportedContent = [
+    title ? `Naslov: ${title}` : "",
+    description ? `Opis: ${description.slice(0, 400)}` : "",
+    category ? `Kategorija: ${category}` : "",
+    city ? `Grad: ${city}` : "",
+  ]
+    .filter(Boolean)
+    .join("\n");
+  const ownerName =
+    job.authorName ||
+    job.displayName ||
+    String(job.userEmail || "").split("@")[0] ||
+    "Korisnik";
+
+  return submitContentReport({
+    reporterUid: reporter.uid,
+    reporterName: reporter.displayName || reporter.email || "Korisnik",
+    reporterEmail: reporter.email || "",
+    contentCollection: "jobs",
+    contentId: job.id,
+    ownerUid: job.userId || "",
+    ownerName,
+    ownerEmail: job.userEmail || "",
+    sourceScreen: "job",
+    targetType: "job",
+    reason,
+    details,
+    reportedContent,
+  });
+}
+
+export async function submitWorkReport({ reporter, work, ownerName, reason, details }) {
+  const ownerUid = work.userId || work.ownerId || "";
+  const description = work.description || "";
+  return submitContentReport({
+    reporterUid: reporter.uid,
+    reporterName: reporter.displayName || reporter.email || "Korisnik",
+    reporterEmail: reporter.email || "",
+    contentCollection: "works",
+    contentId: work.id,
+    ownerUid,
+    ownerName: ownerName || "Korisnik",
+    ownerEmail: work.ownerEmail || "",
+    sourceScreen: "work",
+    targetType: "work",
+    reason,
+    details,
+    reportedContent: description.slice(0, 500),
+  });
 }
 
 export async function deleteAccountData(uid) {

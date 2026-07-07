@@ -59,6 +59,8 @@ import {
   sendChatMessage,
   setFollowing,
   submitRating,
+  submitJobReport,
+  submitWorkReport,
   updateApplicationStatus,
   updateUserProfile,
   updateWorkPublic,
@@ -77,6 +79,7 @@ import {
 } from "./utils/textInputValidation.js";
 import { findCategoryBySlug, categoryRole, categoryTabForCategory } from "./data/categories.js";
 import { parseRoute } from "./utils/route.js";
+import { workOwnerName } from "./utils/format.js";
 import { renderMaintenance } from "./views/maintenance.js";
 import { renderPrepScreen } from "./views/prep.js";
 import { renderLogin } from "./views/login.js";
@@ -101,7 +104,7 @@ import { renderKalkulator, readKalkulatorState } from "./views/kalkulator.js";
 import { buildActivityDashboard } from "./utils/activity.js";
 import { getHiddenActivityAppIds, hideActivityAppId } from "./utils/activityHide.js";
 import { fetchOutdoorForecast, buildOutdoorOutlook } from "./services/weatherOutlook.js";
-import { renderCreateJobForm, renderCreateOfferForm, renderTipEditorForm, renderAddWorkForm } from "./views/forms.js";
+import { renderCreateJobForm, renderCreateOfferForm, renderTipEditorForm, renderAddWorkForm, renderActivityHideModal, renderReportModal } from "./views/forms.js";
 import { renderScreenError, renderScreenLoading } from "./views/shared.js";
 
 const root = document.getElementById("app-root");
@@ -124,6 +127,9 @@ let profileEditing = false;
 let profileFormError = "";
 let activeModal = null;
 let modalError = "";
+let pendingActivityHideId = "";
+let reportTarget = null;
+let reportCache = { job: null, work: null };
 let kalkState = { module: 0 };
 let unreadNotifications = 0;
 let myTip = null;
@@ -220,6 +226,21 @@ function buildModalsHtml() {
   if (activeModal === "offer") return renderCreateOfferForm({ defaults: { city: profileCity }, error: modalError });
   if (activeModal === "tip") return renderTipEditorForm({ tip: myTip, error: modalError });
   if (activeModal === "work") return renderAddWorkForm({ error: modalError });
+  if (activeModal === "activity-hide") return renderActivityHideModal();
+  if (activeModal === "report" && reportTarget?.type === "job") {
+    return renderReportModal({
+      title: "Prijavi oglas",
+      subtitle: reportTarget.data?.title ? `Oglas: ${reportTarget.data.title}` : "",
+      error: modalError,
+    });
+  }
+  if (activeModal === "report" && reportTarget?.type === "work") {
+    return renderReportModal({
+      title: "Prijavi rad",
+      subtitle: reportTarget.ownerName ? `Autor: ${reportTarget.ownerName}` : "",
+      error: modalError,
+    });
+  }
   return "";
 }
 
@@ -349,6 +370,13 @@ async function loadRouteContent(route) {
       filteredJobs = filteredJobs.filter((job) => job.userId === currentUser.uid);
     }
     const filteredOffers = cityFilter ? filterJobsOrOffersByCity(offers, cityFilter) : offers;
+    let applicationsByJobId = {};
+    if (tab === "potraznja" && (role === "majstor" || role === "kreator")) {
+      const apps = await fetchMyApplications(currentUser.uid);
+      applicationsByJobId = Object.fromEntries(
+        apps.filter((app) => app.jobId).map((app) => [app.jobId, app])
+      );
+    }
     return renderPoslovi({
       jobs: filteredJobs,
       offers: filteredOffers,
@@ -358,6 +386,10 @@ async function loadRouteContent(route) {
       userCity: profileCity,
       canCreateJob: role === "korisnik",
       canCreateOffer: role === "majstor" || role === "kreator",
+      myRole: role,
+      applicationsByJobId,
+      chatEnabled: webConfig?.chatEnabled === true,
+      currentUid: currentUser.uid,
     });
   }
 
@@ -376,6 +408,11 @@ async function loadRouteContent(route) {
       job.userId === currentUser.uid ? fetchApplicationsForJob(route.jobId) : Promise.resolve([]),
       fetchMyApplicationForJob(route.jobId, currentUser.uid),
     ]);
+    const jobOwnerProfile =
+      job.userId && job.userId !== currentUser.uid
+        ? await fetchUserProfile(job.userId)
+        : null;
+    reportCache.job = job;
     return renderPosao({
       job,
       myApplication,
@@ -383,6 +420,7 @@ async function loadRouteContent(route) {
       currentUid: currentUser.uid,
       myRole: profile?.role || "",
       chatEnabled: webConfig?.chatEnabled === true,
+      jobOwnerProfile,
     });
   }
 
@@ -396,7 +434,8 @@ async function loadRouteContent(route) {
     if (!work || work.isPublic !== true) {
       return renderScreenError("Javni rad nije pronađen.");
     }
-    return renderRad({ work });
+    reportCache.work = work;
+    return renderRad({ work, currentUid: currentUser.uid });
   }
 
   if (route.name === "prijave") {
@@ -479,6 +518,10 @@ async function loadRouteContent(route) {
           applications.map((app) => ({
             ...app,
             jobTitle: jobsById[app.jobId]?.title || "",
+            peerLabel:
+              app.workerId === uid
+                ? jobsById[app.jobId]?.authorName || "Naručitelj"
+                : app.workerName || "Majstor / kreator",
           })),
           uid,
           publishedJobsCount
@@ -589,7 +632,10 @@ async function loadRouteContent(route) {
       await markNotificationsRead(currentUser.uid);
       unreadNotifications = 0;
     } catch (_) {}
-    return renderObavijesti({ notifications });
+    return renderObavijesti({
+      notifications,
+      chatEnabled: webConfig?.chatEnabled === true,
+    });
   }
 
   if (route.name === "postavke") {
@@ -770,24 +816,66 @@ function startChatListener(ctx) {
 }
 
 function bindPhase3Actions() {
+  async function applyToJobById(jobId, button) {
+    if (!jobId) return;
+    if (button) button.disabled = true;
+    try {
+      const [job, profile] = await Promise.all([
+        fetchJob(jobId),
+        fetchUserProfile(currentUser.uid),
+      ]);
+      if (!job) throw new Error("missing job");
+      await applyToJob({ job, profile, authUser: currentUser });
+      renderApp();
+    } catch (error) {
+      console.error("Apply failed:", error);
+      if (button) button.disabled = false;
+      alert("Prijava nije uspjela. Pokušaj ponovo.");
+    }
+  }
+
   const applyBtn = document.getElementById("apply-job-btn");
   if (applyBtn) {
-    applyBtn.addEventListener("click", async () => {
-      const jobId = applyBtn.dataset.jobId;
-      if (!jobId || applyBtn.disabled) return;
-      applyBtn.disabled = true;
+    applyBtn.addEventListener("click", () => applyToJobById(applyBtn.dataset.jobId, applyBtn));
+  }
+
+  document.querySelectorAll("[data-job-apply]").forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      applyToJobById(btn.dataset.jobApply, btn);
+    });
+  });
+
+  const reportJobBtn = document.getElementById("report-job-btn");
+  if (reportJobBtn) {
+    reportJobBtn.addEventListener("click", () => {
+      reportTarget = { type: "job", data: reportCache.job };
+      activeModal = "report";
+      modalError = "";
+      renderApp();
+    });
+  }
+
+  const reportWorkBtn = document.getElementById("report-work-btn");
+  if (reportWorkBtn) {
+    reportWorkBtn.addEventListener("click", async () => {
+      const workId = reportWorkBtn.dataset.workId;
+      if (!workId) return;
       try {
-        const [job, profile] = await Promise.all([
-          fetchJob(jobId),
-          fetchUserProfile(currentUser.uid),
-        ]);
-        if (!job) throw new Error("missing job");
-        await applyToJob({ job, profile, authUser: currentUser });
+        const work = reportCache.work?.id === workId ? reportCache.work : await fetchWork(workId);
+        if (!work) return;
+        reportCache.work = work;
+        reportTarget = {
+          type: "work",
+          data: work,
+          ownerName: workOwnerName(work),
+        };
+        activeModal = "report";
+        modalError = "";
         renderApp();
       } catch (error) {
-        console.error("Apply failed:", error);
-        applyBtn.disabled = false;
-        alert("Prijava nije uspjela. Pokušaj ponovo.");
+        console.error("Report work load failed:", error);
       }
     });
   }
@@ -898,6 +986,8 @@ function bindProfileAndModals() {
     btn.addEventListener("click", () => {
       activeModal = null;
       modalError = "";
+      pendingActivityHideId = "";
+      reportTarget = null;
       renderApp();
     });
   });
@@ -1402,16 +1492,69 @@ function bindSearchAndFilters() {
   }
 
   document.querySelectorAll("[data-activity-hide]").forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
       const appId = btn.dataset.activityHide;
       if (!appId || !currentUser?.uid) return;
-      if (!confirm("Ukloniti razgovor s ove kartice? (Samo skriva s pregleda, ne briše podatke.)")) {
-        return;
-      }
-      hideActivityAppId(currentUser.uid, appId);
+      pendingActivityHideId = appId;
+      activeModal = "activity-hide";
+      modalError = "";
       renderApp();
     });
   });
+
+  const confirmActivityHideBtn = document.getElementById("confirm-activity-hide-btn");
+  if (confirmActivityHideBtn && pendingActivityHideId && currentUser?.uid) {
+    confirmActivityHideBtn.addEventListener("click", () => {
+      hideActivityAppId(currentUser.uid, pendingActivityHideId);
+      pendingActivityHideId = "";
+      activeModal = null;
+      renderApp();
+    });
+  }
+
+  const reportForm = document.getElementById("report-form");
+  if (reportForm && reportTarget) {
+    reportForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      modalError = "";
+      const form = event.currentTarget;
+      const reason = form.querySelector('input[name="reportReason"]:checked')?.value || "";
+      const details = normalizeSpaces(form.details?.value || "");
+      if (!reason) {
+        modalError = "Odaberi razlog prijave.";
+        renderApp();
+        return;
+      }
+      const reporter = {
+        uid: currentUser.uid,
+        email: currentUser.email || "",
+        displayName: currentUser.displayName || currentUser.email || "Korisnik",
+      };
+      try {
+        if (reportTarget.type === "job" && reportTarget.data) {
+          await submitJobReport({ reporter, job: reportTarget.data, reason, details });
+        } else if (reportTarget.type === "work" && reportTarget.data) {
+          await submitWorkReport({
+            reporter,
+            work: reportTarget.data,
+            ownerName: reportTarget.ownerName || workOwnerName(reportTarget.data),
+            reason,
+            details,
+          });
+        }
+        reportTarget = null;
+        activeModal = null;
+        alert("Prijava je poslana. Hvala.");
+        renderApp();
+      } catch (error) {
+        console.error("Report failed:", error);
+        modalError = error?.message || "Slanje prijave nije uspjelo.";
+        renderApp();
+      }
+    });
+  }
 
   const deleteTipProfileBtn = document.getElementById("delete-tip-profile-btn");
   if (deleteTipProfileBtn && myTip?.id) {

@@ -158,7 +158,6 @@ export function renderProfil({
         </article>
         <div class="profile-actions">
           <button type="button" class="btn btn--primary btn--block" id="edit-profile-btn">Uredi profil</button>
-          <a class="btn btn--ghost btn--block" href="#/postavke">Postavke</a>
           ${worker ? `<button type="button" class="btn btn--ghost btn--block" id="edit-tip-btn">${myTip ? "Uredi savjet" : "Dodaj savjet za početnu"}</button>` : ""}
           ${worker && myTip ? `<button type="button" class="btn btn--ghost btn--block btn--danger" id="delete-tip-profile-btn">Obriši savjet</button>` : ""}
           ${avatarUrl ? `<button type="button" class="btn btn--ghost btn--block btn--danger" id="delete-profile-image-btn">Ukloni sliku</button>` : ""}

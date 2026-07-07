@@ -40,6 +40,7 @@ export function buildActivityDashboard(applications, uid, publishedJobsCount = 0
       appId: app.id,
       jobId: app.jobId,
       title: app.jobTitle || app.workerName || "Posao",
+      peerLabel: app.peerLabel || app.workerName || "Korisnik",
       unread: unreadForUser(app, uid),
       status: normStatus(app.status),
       isWorker: app.workerId === uid,

@@ -1,9 +1,4 @@
-import {
-  escapeHtml,
-  formatApplicationStatus,
-  formatDateTime,
-  formatTimestamp,
-} from "../utils/format.js";
+import { escapeHtml, formatApplicationStatus, formatTimestamp } from "../utils/format.js";
 
 function statusClass(status) {
   return `status-badge status-badge--${escapeHtml(status || "unknown")}`;
@@ -17,6 +12,18 @@ function isChatOpen(status) {
   return status === "accepted" || status === "completed";
 }
 
+function contactHint({ jobOwnerProfile, myApplication, chatEnabled }) {
+  if (!myApplication || !isChatOpen(myApplication.status)) return "";
+  if (jobOwnerProfile?.preferInAppChat && chatEnabled) {
+    return `<p class="form-hint">Vlasnik preferira dogovor preko chata u aplikaciji.</p>`;
+  }
+  const phone = jobOwnerProfile?.contactPhone || "";
+  if (phone && jobOwnerProfile?.preferInAppChat !== true) {
+    return `<p class="form-hint">Kontakt: ${escapeHtml(phone)}</p>`;
+  }
+  return "";
+}
+
 export function renderPosao({
   job,
   myApplication,
@@ -24,6 +31,7 @@ export function renderPosao({
   currentUid,
   myRole,
   chatEnabled,
+  jobOwnerProfile = null,
 }) {
   if (!job) {
     return `
@@ -61,7 +69,8 @@ export function renderPosao({
               ? `<a class="btn btn--primary" href="#/chat/${job.id}/${myApplication.id}">Otvori chat</a>`
               : ""
           }
-        </div>`;
+        </div>
+        ${contactHint({ jobOwnerProfile, myApplication, chatEnabled })}`;
     } else {
       actionHtml = `
         <div class="detail-actions">
@@ -73,6 +82,11 @@ export function renderPosao({
   } else if (!isOwner && myRole === "korisnik") {
     actionHtml = `<p class="phase-note">Samo majstori i kreatori mogu aplicirati na poslove.</p>`;
   }
+
+  const reportBtn =
+    !isOwner && currentUid
+      ? `<button type="button" class="btn btn--ghost btn--sm" id="report-job-btn" data-job-id="${escapeHtml(job.id)}">Prijavi oglas</button>`
+      : "";
 
   const appsHtml = ownerApps.length
     ? `
@@ -88,16 +102,21 @@ export function renderPosao({
                   .filter(Boolean)
                   .join(" · ")
               );
+              const profileLink = app.workerId
+                ? `<a class="btn btn--ghost btn--sm" href="#/pregled/${escapeHtml(app.workerId)}">Pogledaj profil</a>`
+                : "";
               const actions =
                 st === "pending"
                   ? `
                 <div class="app-card__actions">
+                  ${profileLink}
                   <button type="button" class="btn btn--ghost btn--sm" data-app-action="accept" data-app-id="${escapeHtml(app.id)}">Prihvati</button>
                   <button type="button" class="btn btn--ghost btn--sm btn--danger" data-app-action="reject" data-app-id="${escapeHtml(app.id)}">Odbij</button>
                 </div>`
                   : st === "accepted"
                     ? `
                 <div class="app-card__actions">
+                  ${profileLink}
                   <button type="button" class="btn btn--ghost btn--sm" data-app-action="complete" data-app-id="${escapeHtml(app.id)}">Završeno</button>
                   ${
                     chatEnabled
@@ -105,9 +124,15 @@ export function renderPosao({
                       : ""
                   }
                 </div>`
-                    : chatEnabled && isChatOpen(st)
-                    ? `<a class="btn btn--ghost btn--sm" href="#/chat/${job.id}/${app.id}">Chat</a>`
-                    : `<span class="${statusClass(st)}">${escapeHtml(formatApplicationStatus(st))}</span>`;
+                    : `
+                <div class="app-card__actions">
+                  ${profileLink}
+                  ${
+                    chatEnabled && isChatOpen(st)
+                      ? `<a class="btn btn--ghost btn--sm" href="#/chat/${job.id}/${app.id}">Chat</a>`
+                      : `<span class="${statusClass(st)}">${escapeHtml(formatApplicationStatus(st))}</span>`
+                  }
+                </div>`;
 
               return `
                 <article class="app-card">
@@ -134,13 +159,14 @@ export function renderPosao({
         <p class="detail-card__budget">${budget}${when ? ` · ${when}` : ""}</p>
         <p class="detail-card__desc">${desc}</p>
         ${actionHtml}
-        ${
-          isOwner
-            ? `<div class="detail-actions">
-                <button type="button" class="btn btn--ghost btn--danger" id="delete-job-btn" data-job-id="${escapeHtml(job.id)}">Obriši posao</button>
-              </div>`
-            : ""
-        }
+        <div class="detail-actions">
+          ${reportBtn}
+          ${
+            isOwner
+              ? `<button type="button" class="btn btn--ghost btn--danger" id="delete-job-btn" data-job-id="${escapeHtml(job.id)}">Obriši posao</button>`
+              : ""
+          }
+        </div>
       </article>
       ${appsHtml}
     </div>`;

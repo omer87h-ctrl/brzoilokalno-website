@@ -1,4 +1,5 @@
 import { ALL_CITIES, KREATOR_CATEGORIES, MAJSTOR_CATEGORIES } from "../data/categories.js";
+import { REPORT_REASONS } from "../constants/reports.js";
 import { escapeHtml } from "../utils/format.js";
 
 const ALL_CATEGORIES = [...MAJSTOR_CATEGORIES, ...KREATOR_CATEGORIES];
@@ -114,6 +115,47 @@ export function renderTipEditorForm({ tip = null, error = "" }) {
             ${tip?.id ? `<button type="button" class="btn btn--ghost btn--danger" id="delete-tip-btn">Obriši</button>` : ""}
             <button type="button" class="btn btn--ghost" data-close-modal>Odustani</button>
             <button type="submit" class="btn btn--primary">Spremi</button>
+          </div>
+        </form>
+      </div>
+    </div>`;
+}
+
+export function renderActivityHideModal() {
+  return `
+    <div class="modal-overlay" id="activity-hide-modal">
+      <div class="modal-card">
+        <h3 class="modal-card__title">Ukloniti razgovor s ove kartice?</h3>
+        <p class="form-hint">Ne briše se posao niti poruke u bazi — samo makne ovaj red iz „Moja aktivnost” na profilu. Razgovor i dalje možeš otvoriti pod Poslovi.</p>
+        <div class="modal-card__actions">
+          <button type="button" class="btn btn--ghost" data-close-modal>Odustani</button>
+          <button type="button" class="btn btn--primary" id="confirm-activity-hide-btn">Ukloni</button>
+        </div>
+      </div>
+    </div>`;
+}
+
+export function renderReportModal({ title, subtitle = "", error = "", selectedReason = REPORT_REASONS[0] }) {
+  const reasons = REPORT_REASONS.map(
+    (reason) => `
+      <label class="check-row">
+        <input type="radio" name="reportReason" value="${escapeHtml(reason)}" ${reason === selectedReason ? "checked" : ""}>
+        <span>${escapeHtml(reason)}</span>
+      </label>`
+  ).join("");
+
+  return `
+    <div class="modal-overlay" id="report-modal">
+      <div class="modal-card modal-card--wide">
+        <h3 class="modal-card__title">${escapeHtml(title)}</h3>
+        ${subtitle ? `<p class="form-hint">${escapeHtml(subtitle)}</p>` : ""}
+        ${error ? `<p class="form-error">${escapeHtml(error)}</p>` : ""}
+        <form id="report-form" class="stack-form">
+          <div class="report-reasons">${reasons}</div>
+          <textarea class="field field--area" name="details" maxlength="500" placeholder="Dodatni opis (opciono)"></textarea>
+          <div class="modal-card__actions">
+            <button type="button" class="btn btn--ghost" data-close-modal>Odustani</button>
+            <button type="submit" class="btn btn--primary">Pošalji</button>
           </div>
         </form>
       </div>

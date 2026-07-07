@@ -1,6 +1,20 @@
 import { escapeHtml, formatDateTime, formatNotificationType } from "../utils/format.js";
 
-export function renderObavijesti({ notifications = [] }) {
+function notificationHref(notif, chatEnabled) {
+  const chatTypes = new Set(["new_message", "application_accepted"]);
+  if (
+    chatEnabled &&
+    notif.jobId &&
+    notif.applicationId &&
+    (chatTypes.has(notif.type) || notif.type === "job_completed")
+  ) {
+    return `#/chat/${escapeHtml(notif.jobId)}/${escapeHtml(notif.applicationId)}`;
+  }
+  if (notif.jobId) return `#/posao/${escapeHtml(notif.jobId)}`;
+  return "#/poslovi";
+}
+
+export function renderObavijesti({ notifications = [], chatEnabled = false }) {
   if (!notifications.length) {
     return `
       <div class="screen-scroll">
@@ -16,12 +30,7 @@ export function renderObavijesti({ notifications = [] }) {
       const actor = escapeHtml(notif.actorName || "");
       const when = escapeHtml(formatDateTime(notif.timestamp));
       const unread = notif.isRead === false ? " notif-card--unread" : "";
-      const href =
-        notif.jobId && notif.applicationId
-          ? `#/posao/${escapeHtml(notif.jobId)}`
-          : notif.jobId
-            ? `#/posao/${escapeHtml(notif.jobId)}`
-            : "#/poslovi";
+      const href = notificationHref(notif, chatEnabled);
 
       return `
         <a class="notif-card${unread}" href="${href}">
@@ -38,7 +47,7 @@ export function renderObavijesti({ notifications = [] }) {
     <div class="screen-scroll">
       <a class="back-link" href="#/home">← Početna</a>
       <h2 class="screen-title">Obavijesti</h2>
-      <p class="screen-subtitle">Prijave, prihvaćanja i završetci poslova</p>
+      <p class="screen-subtitle">Prijave, poruke, prihvaćanja i završetci poslova</p>
       <div class="notif-list">${items}</div>
     </div>`;
 }

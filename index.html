@@ -26,14 +26,36 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MobileApplication",
-    "name": "Brzo i Lokalno",
-    "description": "Majstori, kreatori u tvom gradu. Objavi posao, pronađi majstora, pregledaj radove lokalno.",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Android",
-    "url": "https://brzoilokalno.com/",
-    "downloadUrl": "https://appgallery.huawei.com/app/C117382847",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BAM" }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Brzo i Lokalno",
+        "url": "https://brzoilokalno.com/",
+        "logo": "https://brzoilokalno.com/assets/app-icon.png",
+        "sameAs": [
+          "https://www.instagram.com/brzo.i.lokalno/",
+          "https://appgallery.huawei.com/app/C117382847"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "name": "Brzo i Lokalno",
+        "url": "https://brzoilokalno.com/",
+        "description": "Majstori, kreatori i usluge u tvom gradu u Bosni i Hercegovini.",
+        "publisher": { "@type": "Organization", "name": "Brzo i Lokalno" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Brzo i Lokalno",
+        "description": "Aplikacija za majstore, kreatore i korisnike — objavi posao, pronađi majstora, dogovori uslugu lokalno.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Android",
+        "url": "https://brzoilokalno.com/",
+        "installUrl": "https://appgallery.huawei.com/app/C117382847",
+        "downloadUrl": "https://appgallery.huawei.com/app/C117382847",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BAM" }
+      }
+    ]
   }
   </script>
 </head>
@@ -227,7 +249,8 @@
       <div class="container download-inner">
         <div class="download-copy">
           <h2 data-i18n="download.title">Preuzmi aplikaciju</h2>
-          <p data-i18n="download.text">Brzo i Lokalno je dostupno na Huawei AppGallery. Google Play uskoro.</p>
+          <p data-i18n="download.text">Brzo i Lokalno — preuzmi na Huawei AppGallery (Android). Google Play uskoro.</p>
+          <p class="download-appgallery-note">Traži <strong>Brzo i Lokalno</strong> u Huawei AppGallery ili otvori direktan link.</p>
         </div>
         <div class="store-buttons store-buttons--center">
           <a class="store-btn store-btn--huawei" data-store="huawei" href="#" target="_blank" rel="noopener noreferrer">

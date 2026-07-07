@@ -138,7 +138,7 @@ export function renderRadPreview({ works, slideIndex = 0 }) {
     </section>`;
 }
 
-export function renderRad({ work }) {
+export function renderRad({ work, currentUid = "" }) {
   if (!work) {
     return `
       <div class="screen-scroll">
@@ -153,6 +153,7 @@ export function renderRad({ work }) {
   const date = formatTimestamp(work.timestamp);
   const desc = escapeHtml(work.description || "Nema opisa.");
   const ownerUid = work.userId || work.ownerId;
+  const isOwner = ownerUid && ownerUid === currentUid;
   const imgHtml = img
     ? `<img class="work-detail__img" src="${escapeHtml(img)}" alt="Rad" />`
     : "";
@@ -167,6 +168,11 @@ export function renderRad({ work }) {
         ${
           ownerUid
             ? `<a class="btn btn--ghost btn--block" href="#/pregled/${escapeHtml(ownerUid)}">Pogledaj profil</a>`
+            : ""
+        }
+        ${
+          !isOwner && currentUid
+            ? `<button type="button" class="btn btn--ghost btn--block" id="report-work-btn" data-work-id="${escapeHtml(work.id)}">Prijavi rad</button>`
             : ""
         }
       </article>
