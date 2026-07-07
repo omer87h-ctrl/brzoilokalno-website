@@ -21,6 +21,24 @@ function renderAvatar(user, className = "profile-card__avatar") {
   return `<div class="${className}">${initial}</div>`;
 }
 
+function dialablePhone(phone = "") {
+  return String(phone || "").replace(/[^\d+]/g, "");
+}
+
+function renderProfileContactActions(user) {
+  const rawPhone = String(user?.contactPhone || "").trim();
+  const phone = dialablePhone(rawPhone);
+  const showPhone = Boolean(phone) && user?.allowPhoneCall !== false && user?.preferInAppChat !== true;
+  const showWhatsApp = Boolean(phone) && user?.allowWhatsApp !== false && user?.preferInAppChat !== true;
+  if (!showPhone && !showWhatsApp) return "";
+
+  return `
+    <div class="detail-actions">
+      ${showPhone ? `<a class="btn btn--primary" href="tel:${escapeHtml(phone)}">Pozovi</a>` : ""}
+      ${showWhatsApp ? `<a class="btn btn--ghost" href="https://wa.me/${escapeHtml(phone.replace(/^\+/, ""))}" target="_blank" rel="noopener noreferrer">WhatsApp</a>` : ""}
+    </div>`;
+}
+
 const ICON_NOTES = `<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>`;
 const ICON_EDIT = `<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>`;
 
@@ -291,6 +309,7 @@ export function renderPregledProfila({
         <p class="profile-card__rating">${escapeHtml(rating)}</p>
         ${renderFollowerCount(followerCount)}
         <p class="profile-card__desc">${desc}</p>
+        ${renderProfileContactActions(user)}
         <div class="profile-card__actions">
           ${renderFollowButton({
             profileUid: user.id,
