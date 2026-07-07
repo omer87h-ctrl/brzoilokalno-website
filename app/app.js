@@ -455,7 +455,12 @@ async function loadRouteContent(route) {
           })
         : Promise.resolve([]),
       uid ? fetchMyApplications(uid) : Promise.resolve([]),
-      uid ? fetchMyJobsCount(uid) : Promise.resolve(0),
+      uid
+        ? fetchMyJobsCount(uid).catch((error) => {
+            console.warn("My jobs count failed:", error);
+            return 0;
+          })
+        : Promise.resolve(0),
       uid && worker ? fetchFollowerCount(uid) : Promise.resolve(0),
     ]);
     myTip = tip;
@@ -616,7 +621,16 @@ async function renderApp() {
     return;
   }
 
-  const profile = await fetchUserProfile(currentUser.uid);
+  let profile;
+  try {
+    profile = await fetchUserProfile(currentUser.uid);
+  } catch (error) {
+    console.error("Profile load failed:", error);
+    setRoot(
+      renderScreenError("Nije moguće učitati profil. Provjerite internet i Firestore rules.")
+    );
+    return;
+  }
 
   if (webConfig.adminOnly && !isAdminUser(currentUser)) {
     setRoot(
@@ -1594,6 +1608,9 @@ boot();
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("sw.js", { scope: "./" }).catch(() => {});
+    navigator.serviceWorker
+      .register("sw.js", { scope: "./" })
+      .then((reg) => reg.update())
+      .catch(() => {});
   });
 }

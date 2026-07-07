@@ -18,6 +18,25 @@
 </head>
 <body class="app-body">
   <div id="app-root" aria-live="polite"></div>
-  <script type="module" src="app.js"></script>
+  <script type="module">
+    import("./app.js").catch((error) => {
+      console.error("App boot failed:", error);
+      const root = document.getElementById("app-root");
+      if (!root) return;
+      const message = error?.message ? String(error.message) : "Nepoznata greška";
+      root.innerHTML = `
+        <div class="screen screen--center screen--auth">
+          <div class="status-card">
+            <img class="status-card__logo" src="icons/icon-192.png" alt="" width="72" height="72">
+            <h1 class="status-card__title">Greška pri učitavanju</h1>
+            <p class="status-card__text">Aplikacija se nije mogla pokrenuti. Osvježite stranicu (Ctrl+Shift+R).</p>
+            <p class="status-card__text status-card__text--muted">${message.replace(/</g, "&lt;")}</p>
+            <div class="status-card__actions">
+              <button type="button" class="btn btn--primary" onclick="location.reload()">Osvježi</button>
+            </div>
+          </div>
+        </div>`;
+    });
+  </script>
 </body>
 </html>
