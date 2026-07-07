@@ -26,6 +26,7 @@ function dialablePhone(phone = "") {
 }
 
 function renderProfileContactActions(user) {
+  if (!isWorker(user?.role)) return "";
   const rawPhone = String(user?.contactPhone || "").trim();
   const phone = dialablePhone(rawPhone);
   const showPhone = Boolean(phone) && user?.allowPhoneCall !== false && user?.preferInAppChat !== true;

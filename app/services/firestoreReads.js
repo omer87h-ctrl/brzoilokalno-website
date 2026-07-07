@@ -196,7 +196,11 @@ export async function fetchTopRated(city = null) {
     const q = query(collection(getDb(), "users"), where("city", "==", city), limit(80));
     const snap = await getDocs(q);
     return mapDocs(snap)
-      .filter((u) => (u.ratingCount || 0) > 0 || (u.ratingAverage || 0) > 0)
+      .filter(
+        (u) =>
+          (u.role === "majstor" || u.role === "kreator") &&
+          ((u.ratingCount || 0) > 0 || (u.ratingAverage || 0) > 0)
+      )
       .sort((a, b) => {
         const diff = (b.ratingAverage || 0) - (a.ratingAverage || 0);
         if (diff !== 0) return diff;
@@ -212,7 +216,11 @@ export async function fetchTopRated(city = null) {
   );
   const snap = await getDocs(q);
   return mapDocs(snap)
-    .filter((u) => (u.ratingCount || 0) > 0 || (u.ratingAverage || 0) > 0)
+    .filter(
+      (u) =>
+        (u.role === "majstor" || u.role === "kreator") &&
+        ((u.ratingCount || 0) > 0 || (u.ratingAverage || 0) > 0)
+    )
     .sort((a, b) => {
       const diff = (b.ratingAverage || 0) - (a.ratingAverage || 0);
       if (diff !== 0) return diff;
