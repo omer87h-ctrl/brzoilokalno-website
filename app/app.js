@@ -87,6 +87,11 @@ import {
 } from "./services/firestoreWrites.js";
 import { refreshModerationFromFirestore, findContentViolation, violationMessage } from "./services/moderation.js";
 import { applyDisplaySettings, setDisplaySetting } from "./utils/displaySettings.js";
+import {
+  hasLocalPolicyConsent,
+  profileHasPolicyConsent,
+  saveLocalPolicyConsent,
+} from "./utils/policyConsent.js";
 import { loadWorkNotes, saveWorkNotes, importLegacyWorkNotes } from "./utils/workNotesLocal.js";
 import { subscribeToChatMessages } from "./services/chatService.js";
 import { uploadProfileImage, clearProfileImage, uploadWorkImage } from "./services/storageService.js";
@@ -1189,11 +1194,38 @@ async function loadRouteContent(route) {
 
 async function afterAuthSuccess(user) {
   const profile = await fetchUserProfile(user.uid);
+  if (profileHasPolicyConsent(profile)) {
+    saveLocalPolicyConsent();
+  }
   if (!isProfileComplete(profile)) {
     navigateTo("#/onboarding");
     return;
   }
   navigateTo("#/home");
+}
+
+function resetSessionStateOnLogout() {
+  stopChatListener();
+  stopAutoIzborLoading();
+  chatContext = null;
+  chatOtherMeta = null;
+  chatBlockStatus = { iBlocked: false, theyBlocked: false };
+  chatMessagesCache = [];
+  chatReplyDraft = null;
+  chatMessageActionTarget = null;
+  selectedCity = "";
+  homeShowAllCities = false;
+  profileCity = "";
+  profileEditing = false;
+  profilRouteCache = null;
+  profilUseCache = false;
+  lastRenderedContentHtml = "";
+  unreadBellNotifications = 0;
+  unreadPosloviNotifications = 0;
+  activeModal = null;
+  skipRouteLoading = false;
+  authError = "";
+  loginError = "";
 }
 
 async function renderApp() {
@@ -1212,7 +1244,7 @@ async function renderApp() {
 
   if (!currentUser) {
     if (route.name === "login") {
-      setRoot(renderLogin({ error: authError }));
+      setRoot(renderLogin({ error: authError, policyPreAccepted: hasLocalPolicyConsent() }));
       return;
     }
     if (route.name === "register") {
@@ -1250,11 +1282,13 @@ async function renderApp() {
 
   if (!isProfileComplete(profile)) {
     const isGoogleUser = currentUser.providerData?.some((p) => p.providerId === "google.com");
+    const skipPolicyConsent = hasLocalPolicyConsent() || profileHasPolicyConsent(profile);
     setRoot(
       renderOnboarding({
         user: currentUser,
         isGoogleUser,
         error: authError,
+        skipPolicyConsent,
         defaults: {
           displayName: profile?.displayName || currentUser.displayName || "",
           role: profile?.role || "korisnik",
@@ -2596,12 +2630,14 @@ async function handleGoogleSignIn() {
   authError = "";
   const terms = document.getElementById("google-accepted-terms");
   const privacy = document.getElementById("google-accepted-privacy");
-  if (!terms?.checked || !privacy?.checked) {
+  const preAccepted = hasLocalPolicyConsent();
+  if (!preAccepted && (!terms?.checked || !privacy?.checked)) {
     authError = "Morate prihvatiti Pravila i Politiku privatnosti.";
     renderApp();
     return;
   }
   try {
+    saveLocalPolicyConsent();
     const result = await signInWithGoogle();
     await afterAuthSuccess(result.user);
   } catch (error) {
@@ -2672,6 +2708,7 @@ function bindRootEvents() {
       try {
         const cred = await registerWithEmail(email, password);
         await createUserProfile(cred.user.uid, { email, displayName, role, city });
+        saveLocalPolicyConsent();
         navigateTo("#/home");
       } catch (error) {
         authError = error?.message?.includes("email")
@@ -2700,7 +2737,8 @@ function bindRootEvents() {
         renderApp();
         return;
       }
-      if (!form.acceptedTerms.checked || !form.acceptedPrivacy.checked) {
+      const policyFields = form.querySelector('[name="acceptedTerms"]');
+      if (policyFields && (!form.acceptedTerms.checked || !form.acceptedPrivacy.checked)) {
         authError = "Morate prihvatiti Pravila i Politiku privatnosti.";
         renderApp();
         return;
@@ -2713,6 +2751,7 @@ function bindRootEvents() {
           role,
           city,
         });
+        saveLocalPolicyConsent();
         navigateTo("#/home");
       } catch (error) {
         authError = "Spremanje profila nije uspjelo.";
@@ -2759,8 +2798,15 @@ function bindRootEvents() {
   const logoutBtn = document.getElementById("logout-btn");
   if (logoutBtn) {
     logoutBtn.addEventListener("click", async () => {
-      await signOutUser();
-      navigateTo("#/home");
+      try {
+        resetSessionStateOnLogout();
+        await signOutUser();
+        currentUser = null;
+        navigateTo("#/login");
+      } catch (error) {
+        console.error("Logout failed:", error);
+        alert("Odjava nije uspjela. Pokušaj ponovo.");
+      }
     });
   }
 }

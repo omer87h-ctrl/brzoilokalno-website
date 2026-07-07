@@ -2,7 +2,8 @@ import { APP_LINKS } from "../firebase.js";
 import { POLICY_LINKS } from "../constants/policy.js";
 import { escapeHtml } from "../utils/format.js";
 
-export function renderLogin({ error = "", showRegisterLink = true }) {
+export function renderLogin({ error = "", showRegisterLink = true, policyPreAccepted = false }) {
+  const policyChecked = policyPreAccepted ? " checked" : "";
   return `
     <div class="screen screen--center screen--auth">
       <div class="status-card auth-card">
@@ -12,11 +13,11 @@ export function renderLogin({ error = "", showRegisterLink = true }) {
         ${error ? `<p class="admin-login__error">${escapeHtml(error)}</p>` : ""}
         <div class="auth-consent" id="google-consent">
           <label class="auth-check">
-            <input type="checkbox" id="google-accepted-terms" name="acceptedTerms">
+            <input type="checkbox" id="google-accepted-terms" name="acceptedTerms"${policyChecked}>
             <span>Prihvatam <a href="${POLICY_LINKS.terms}" target="_blank" rel="noopener noreferrer">Pravila i uslove</a></span>
           </label>
           <label class="auth-check">
-            <input type="checkbox" id="google-accepted-privacy" name="acceptedPrivacy">
+            <input type="checkbox" id="google-accepted-privacy" name="acceptedPrivacy"${policyChecked}>
             <span>Prihvatam <a href="${POLICY_LINKS.privacy}" target="_blank" rel="noopener noreferrer">Politiku privatnosti</a></span>
           </label>
         </div>

@@ -2,7 +2,7 @@ import { ALL_CITIES, USER_ROLES } from "../data/categories.js";
 import { POLICY_LINKS } from "../constants/policy.js";
 import { escapeHtml } from "../utils/format.js";
 
-export function renderOnboarding({ user, error = "", defaults = {}, isGoogleUser = false }) {
+export function renderOnboarding({ user, error = "", defaults = {}, isGoogleUser = false, skipPolicyConsent = false }) {
   const cityOptions = ALL_CITIES.map((city) => {
     const selected = defaults.city === city ? " selected" : "";
     return `<option value="${escapeHtml(city)}"${selected}>${escapeHtml(city)}</option>`;
@@ -38,6 +38,10 @@ export function renderOnboarding({ user, error = "", defaults = {}, isGoogleUser
             <option value="">Odaberi grad</option>
             ${cityOptions}
           </select>
+          ${
+            skipPolicyConsent
+              ? ""
+              : `
           <label class="auth-check">
             <input type="checkbox" name="acceptedTerms" required>
             <span>Prihvatam <a href="${POLICY_LINKS.terms}" target="_blank" rel="noopener noreferrer">Pravila i uslove</a></span>
@@ -45,7 +49,8 @@ export function renderOnboarding({ user, error = "", defaults = {}, isGoogleUser
           <label class="auth-check">
             <input type="checkbox" name="acceptedPrivacy" required>
             <span>Prihvatam <a href="${POLICY_LINKS.privacy}" target="_blank" rel="noopener noreferrer">Politiku privatnosti</a></span>
-          </label>
+          </label>`
+          }
           <button class="btn btn--primary btn--block" type="submit">Nastavi</button>
         </form>
       </div>
