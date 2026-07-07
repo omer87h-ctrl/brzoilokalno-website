@@ -7,6 +7,7 @@ import {
 import { escapeHtml } from "../utils/format.js";
 import { renderUserList } from "./shared.js";
 import { renderCityFilterChip, renderScreenTabs } from "./ponude.js";
+import { renderScreenFeed } from "./screenFeed.js";
 
 export function renderKategorijeTabs({ activeTab = "majstori" }) {
   return renderScreenTabs({
@@ -44,13 +45,13 @@ export function renderKategorijeGrid({ tab = "majstori" } = {}) {
   const cards = categories.map((cat) => categoryCard(cat, tab)).join("");
   const roleLabel = tab === "kreatori" ? "kreatore" : "majstore";
 
-  return `
-    <div class="screen-scroll">
-      ${tabs}
-      <h2 class="screen-title">Kategorije</h2>
-      <p class="screen-subtitle">Odaberi kategoriju i pregledaj ${roleLabel}</p>
-      <div class="category-list">${cards}</div>
-    </div>`;
+  return renderScreenFeed({
+    tabs,
+    title: "Kategorije",
+    subtitleHtml: `Odaberi kategoriju i pregledaj ${roleLabel}`,
+    bodyHtml: `<div class="category-list">${cards}</div>`,
+    feedId: "kategorije-feed",
+  });
 }
 
 export function renderKategorijeList({
@@ -69,13 +70,15 @@ export function renderKategorijeList({
     id: "kategorije-city-filter",
   });
 
-  return `
-    <div class="screen-scroll">
-      ${renderKategorijeTabs({ activeTab: tab })}
-      ${cityChip ? `<div class="chip-row chip-row--filters">${cityChip}</div>` : ""}
-      <a class="back-link" href="${backHref}">← Sve kategorije</a>
-      <h2 class="screen-title">${escapeHtml(category)}</h2>
-      <p class="screen-subtitle">${city ? `Grad: ${escapeHtml(city)} · ` : ""}Dostupni ${roleLabel}</p>
-      ${renderUserList(users, { emptyText: `Nema profila u ovoj kategoriji${city ? ` za grad ${escapeHtml(city)}` : ""}.` })}
-    </div>`;
+  return renderScreenFeed({
+    tabs: renderKategorijeTabs({ activeTab: tab }),
+    cityChip,
+    backLink: `<a class="back-link" href="${backHref}">← Sve kategorije</a>`,
+    title: category,
+    subtitleHtml: `${city ? `Grad: ${escapeHtml(city)} · ` : ""}Dostupni ${roleLabel}`,
+    bodyHtml: renderUserList(users, {
+      emptyText: `Nema profila u ovoj kategoriji${city ? ` za grad ${escapeHtml(city)}` : ""}.`,
+    }),
+    feedId: "kategorije-feed",
+  });
 }

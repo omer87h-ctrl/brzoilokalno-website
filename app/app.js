@@ -110,6 +110,48 @@ let modalError = "";
 let kalkState = { module: 0 };
 let unreadNotifications = 0;
 let myTip = null;
+const scrollPositions = {};
+let lastScrollRoute = null;
+
+function scrollMemoryKey(route) {
+  if (!route) return null;
+  if (route.name === "poslovi") return `poslovi:${route.tab || "potraznja"}`;
+  if (route.name === "kategorije" && !route.categorySlug) {
+    return `kategorije:${route.tab || "majstori"}`;
+  }
+  return null;
+}
+
+function captureMainScroll(route) {
+  const key = scrollMemoryKey(route);
+  if (!key) return;
+  const main = document.getElementById("app-main");
+  if (main) scrollPositions[key] = main.scrollTop;
+}
+
+function restoreMainScroll(route) {
+  const key = scrollMemoryKey(route);
+  const main = document.getElementById("app-main");
+  if (!main || !key) return;
+  const top = scrollPositions[key] || 0;
+  requestAnimationFrame(() => {
+    main.scrollTop = top;
+    updateFeedHeadShadow(main);
+  });
+}
+
+function updateFeedHeadShadow(main) {
+  const head = main?.querySelector(".screen-feed__head");
+  if (!head) return;
+  head.classList.toggle("screen-feed__head--scrolled", main.scrollTop > 6);
+}
+
+function bindFeedScroll() {
+  const main = document.getElementById("app-main");
+  if (!main) return;
+  updateFeedHeadShadow(main);
+  main.onscroll = () => updateFeedHeadShadow(main);
+}
 
 function stopChatListener() {
   if (chatUnsubscribe) {
@@ -149,7 +191,7 @@ function buildModalsHtml() {
   return "";
 }
 
-function renderShellWithContent(route, contentHtml) {
+function renderShellWithContent(route, contentHtml, { restoreScroll = true } = {}) {
   setRoot(
     renderShell({
       route,
@@ -158,6 +200,9 @@ function renderShellWithContent(route, contentHtml) {
       unreadNotifications,
     })
   );
+  lastScrollRoute = route;
+  if (restoreScroll) restoreMainScroll(route);
+  bindFeedScroll();
 }
 
 async function refreshProfileCity() {
@@ -460,7 +505,8 @@ async function renderApp() {
 
   const requestId = ++screenRequestId;
   stopChatListener();
-  renderShellWithContent(route, renderScreenLoading());
+  captureMainScroll(lastScrollRoute);
+  renderShellWithContent(route, renderScreenLoading(), { restoreScroll: false });
 
   try {
     await refreshProfileCity();

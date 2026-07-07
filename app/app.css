@@ -306,6 +306,35 @@ body.app-body.has-app-shell #app-root {
   overflow-y: auto;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+.app-main::-webkit-scrollbar {
+  width: 8px;
+}
+
+.app-main::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.app-main::-webkit-scrollbar-thumb {
+  background: rgba(242, 140, 40, 0.28);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.app-main::-webkit-scrollbar-thumb:hover {
+  background: rgba(242, 140, 40, 0.45);
+  background-clip: padding-box;
+}
+
+@supports (scrollbar-color: auto) {
+  .app-main {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(242, 140, 40, 0.35) transparent;
+  }
 }
 
 .app-admin-note {
@@ -563,6 +592,48 @@ body.app-body.has-app-shell #app-root {
   gap: 0.75rem;
   min-height: min-content;
   padding-bottom: 0.5rem;
+}
+
+.screen-feed {
+  display: flex;
+  flex-direction: column;
+  min-height: min-content;
+}
+
+.screen-feed__head {
+  position: sticky;
+  top: 0;
+  z-index: 12;
+  margin: -0.85rem -0.85rem 0;
+  padding: 0.85rem 0.85rem 0.7rem;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.98) 0%, rgba(0, 0, 0, 0.94) 72%, rgba(0, 0, 0, 0));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.screen-feed__head--scrolled {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.screen-feed__head .poslovi-tabs {
+  margin-bottom: 0.65rem;
+}
+
+.screen-feed__head .back-link {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+}
+
+.screen-feed__body {
+  padding-top: 0.15rem;
+  padding-bottom: 5rem;
+}
+
+.screen-feed .fab {
+  position: fixed;
 }
 
 .screen-title {
@@ -1074,6 +1145,10 @@ body.app-body.has-app-shell #app-root {
     right: auto;
     transform: translateX(-50%);
     border-radius: 16px 16px 0 0;
+  }
+
+  .fab {
+    right: max(1rem, calc(50% - var(--shell-max) / 2 + 1rem));
   }
 }
 
@@ -1710,7 +1785,7 @@ body.app-body.has-app-shell #app-root {
 
 .fab {
   position: fixed;
-  right: max(1rem, calc(50% - 220px));
+  right: 1rem;
   bottom: calc(var(--bottom-nav-h) + var(--safe-bottom) + 1rem);
   width: 52px;
   height: 52px;
@@ -1722,7 +1797,13 @@ body.app-body.has-app-shell #app-root {
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 8px 24px var(--accent-glow);
-  z-index: 20;
+  z-index: 25;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px var(--accent-glow);
 }
 
 .app-notif-link {

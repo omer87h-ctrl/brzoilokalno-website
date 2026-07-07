@@ -1,5 +1,6 @@
 import { escapeHtml, formatTimestamp } from "../utils/format.js";
 import { renderCityFilterChip, renderOfferCard, renderPosloviTabs } from "./ponude.js";
+import { renderScreenFeed } from "./screenFeed.js";
 
 export function renderPoslovi({
   jobs,
@@ -19,43 +20,44 @@ export function renderPoslovi({
       : "";
 
   if (tab === "ponuda") {
-    if (!offers.length) {
-      return `
-        <div class="screen-scroll">
-          ${tabs}
-          ${cityChip ? `<div class="chip-row chip-row--filters">${cityChip}</div>` : ""}
-          <h2 class="screen-title">Ponuda</h2>
-          <p class="screen-subtitle">Ponude majstora i kreatora</p>
-        <div class="empty-state">Trenutno nema objavljenih ponuda.</div>
-        ${fab}
-      </div>`;
-    }
+    const bodyHtml = offers.length
+      ? `<div class="job-list">${offers.map((offer) => renderOfferCard(offer)).join("")}</div>`
+      : `<div class="empty-state">Trenutno nema objavljenih ponuda.</div>`;
 
-    const cards = offers.map((offer) => renderOfferCard(offer)).join("");
-    return `
-      <div class="screen-scroll">
-        ${tabs}
-        ${cityChip ? `<div class="chip-row chip-row--filters">${cityChip}</div>` : ""}
-        <h2 class="screen-title">Ponuda</h2>
-        <p class="screen-subtitle">Ponude majstora i kreatora (${offers.length})</p>
-        <div class="job-list">${cards}</div>
-        ${fab}
-      </div>`;
+    return renderScreenFeed({
+      tabs,
+      cityChip,
+      title: "Ponuda",
+      subtitleHtml: offers.length
+        ? `Ponude majstora i kreatora (${offers.length})`
+        : "Ponude majstora i kreatora",
+      bodyHtml,
+      fab,
+      feedId: "poslovi-feed",
+    });
   }
 
-  if (!jobs.length) {
-    return `
-      <div class="screen-scroll">
-        ${tabs}
-        ${cityChip ? `<div class="chip-row chip-row--filters">${cityChip}</div>` : ""}
-        <h2 class="screen-title">Potražnja</h2>
-        <p class="screen-subtitle">Oglasi korisnika · <a class="inline-link" href="#/prijave">Moje prijave</a></p>
-        <div class="empty-state">Trenutno nema objavljenih poslova.</div>
-        ${fab}
-      </div>`;
-  }
+  const bodyHtml = jobs.length
+    ? `<div class="job-list">${renderJobCards(jobs)}</div>`
+    : `<div class="empty-state">Trenutno nema objavljenih poslova.</div>`;
 
-  const cards = jobs
+  const subtitleHtml = jobs.length
+    ? `Oglasi korisnika (${jobs.length}) · <a class="inline-link" href="#/prijave">Moje prijave</a>`
+    : `Oglasi korisnika · <a class="inline-link" href="#/prijave">Moje prijave</a>`;
+
+  return renderScreenFeed({
+    tabs,
+    cityChip,
+    title: "Potražnja",
+    subtitleHtml,
+    bodyHtml,
+    fab,
+    feedId: "poslovi-feed",
+  });
+}
+
+function renderJobCards(jobs) {
+  return jobs
     .map((job) => {
       const title = escapeHtml(job.title || "Bez naslova");
       const city = escapeHtml(job.city || "—");
@@ -80,14 +82,4 @@ export function renderPoslovi({
         </a>`;
     })
     .join("");
-
-  return `
-    <div class="screen-scroll">
-      ${tabs}
-      ${cityChip ? `<div class="chip-row chip-row--filters">${cityChip}</div>` : ""}
-      <h2 class="screen-title">Potražnja</h2>
-      <p class="screen-subtitle">Oglasi korisnika (${jobs.length}) · <a class="inline-link" href="#/prijave">Moje prijave</a></p>
-      <div class="job-list">${cards}</div>
-      ${fab}
-    </div>`;
 }
