@@ -344,7 +344,13 @@ body.app-body {
   font: inherit;
   font-weight: 700;
   font-size: 0.82rem;
-  opacity: 0.85;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.brzo-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px var(--accent-glow);
 }
 
 .brzo-btn__bolt {
@@ -371,6 +377,17 @@ body.app-body {
   font-size: 0.8rem;
 }
 
+.chip--btn {
+  cursor: pointer;
+  font: inherit;
+}
+
+.chip--active {
+  border-color: rgba(242, 140, 40, 0.5);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
 .home-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -383,12 +400,82 @@ body.app-body {
   border: 1px solid var(--border);
   background: var(--bg-card);
   min-height: 110px;
+  text-align: left;
+}
+
+.home-card--btn {
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  width: 100%;
+  transition: transform 0.15s, border-color 0.15s;
+}
+
+.home-card--btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(242, 140, 40, 0.35);
 }
 
 .home-card--accent {
   border-color: rgba(242, 140, 40, 0.35);
   background: linear-gradient(145deg, rgba(242, 140, 40, 0.12), var(--bg-card));
   box-shadow: 0 0 24px rgba(242, 140, 40, 0.08);
+}
+
+.home-card--blue {
+  background: linear-gradient(145deg, rgba(66, 133, 244, 0.14), var(--bg-card));
+  border-color: rgba(66, 133, 244, 0.25);
+}
+
+.home-card--green {
+  background: linear-gradient(145deg, rgba(76, 175, 80, 0.12), var(--bg-card));
+  border-color: rgba(76, 175, 80, 0.22);
+}
+
+.home-card--purple {
+  background: linear-gradient(145deg, rgba(224, 169, 109, 0.14), var(--bg-card));
+  border-color: rgba(224, 169, 109, 0.28);
+}
+
+.home-card--neutral {
+  background: linear-gradient(145deg, rgba(200, 139, 74, 0.1), var(--bg-card));
+  border-color: rgba(200, 139, 74, 0.22);
+}
+
+.city-chips-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.city-chips-label {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.city-chips-hint {
+  margin: 0;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  opacity: 0.85;
+}
+
+.kalkulator-card {
+  padding: 1.1rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.kalkulator-card__text {
+  margin: 0 0 0.5rem;
+}
+
+.kalkulator-card__hint {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
 }
 
 .home-card__icon {
@@ -406,6 +493,221 @@ body.app-body {
   margin: 0;
   color: var(--text-muted);
   font-size: 0.78rem;
+}
+
+.screen-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.screen-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.screen-subtitle {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.section-label {
+  margin: 0.5rem 0 0;
+  font-size: 0.82rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.back-link {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+.screen-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+}
+
+.empty-state {
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1px dashed var(--border);
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.empty-state--error {
+  border-color: rgba(255, 107, 107, 0.35);
+  color: #ffb3b3;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.55rem;
+}
+
+.category-tile {
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  text-decoration: none;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.category-tile:hover {
+  border-color: rgba(242, 140, 40, 0.4);
+  transform: translateY(-1px);
+}
+
+.category-tile__name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.user-list,
+.job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.user-card {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.85rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s;
+}
+
+.user-card:hover {
+  border-color: rgba(242, 140, 40, 0.35);
+}
+
+.user-card__avatar,
+.profile-card__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.user-card__name,
+.profile-card__name {
+  margin: 0 0 0.2rem;
+  font-size: 0.95rem;
+}
+
+.user-card__meta,
+.profile-card__meta {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.user-card__rating,
+.profile-card__rating {
+  margin: 0.25rem 0 0;
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+
+.job-card {
+  padding: 0.9rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.job-card__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.job-card__title {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.job-card__date {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+.job-card__meta,
+.job-card__desc,
+.job-card__foot {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.job-card__foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  color: var(--text);
+  font-size: 0.78rem;
+}
+
+.profile-card {
+  padding: 1.1rem;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  text-align: center;
+}
+
+.profile-card__avatar {
+  margin: 0 auto 0.75rem;
+  width: 56px;
+  height: 56px;
+  font-size: 1.2rem;
+}
+
+.profile-card__desc,
+.profile-card__email {
+  margin: 0.75rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.phase-note {
+  margin: 0;
+  color: #666;
+  font-size: 0.75rem;
+  text-align: center;
 }
 
 .home-phase-note {

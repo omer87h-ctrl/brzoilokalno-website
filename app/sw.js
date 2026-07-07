@@ -2,7 +2,7 @@
  * Service worker — scope /app/
  * Cache samo statički asseti. Ne cacheuje Firestore podatke.
  */
-const CACHE_NAME = "bil-app-static-v2";
+const CACHE_NAME = "bil-app-static-v4";
 const STATIC_ASSETS = [
   "./",
   "./index.html",
@@ -12,10 +12,22 @@ const STATIC_ASSETS = [
   "./manifest.webmanifest",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
+  "./data/categories.js",
+  "./utils/format.js",
+  "./utils/route.js",
   "./services/firebaseService.js",
+  "./services/firestoreReads.js",
   "./views/maintenance.js",
   "./views/prep.js",
   "./views/shell.js",
+  "./views/home.js",
+  "./views/kategorije.js",
+  "./views/poslovi.js",
+  "./views/profil.js",
+  "./views/brzo.js",
+  "./views/majstori.js",
+  "./views/kalkulator.js",
+  "./views/shared.js",
   "./components/bottomNav.js",
 ];
 

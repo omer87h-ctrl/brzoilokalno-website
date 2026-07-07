@@ -1,11 +1,11 @@
-/** Bottom navigation — Faza 1: samo Home aktivan, ostalo uskoro */
+/** Bottom navigation — Faza 2: svi tabovi aktivni */
 
 export function renderBottomNav(activeRoute) {
   const items = [
     { id: "home", label: "Home", route: "#/home", icon: "⌂" },
-    { id: "kategorije", label: "Kategorije", route: "#/kategorije", icon: "▦", soon: true },
-    { id: "poslovi", label: "Poslovi", route: "#/poslovi", icon: "☰", soon: true },
-    { id: "profil", label: "Profil", route: "#/profil", icon: "◎", soon: true },
+    { id: "kategorije", label: "Kategorije", route: "#/kategorije", icon: "▦" },
+    { id: "poslovi", label: "Poslovi", route: "#/poslovi", icon: "☰" },
+    { id: "profil", label: "Profil", route: "#/profil", icon: "◎" },
   ];
 
   return `
@@ -13,12 +13,10 @@ export function renderBottomNav(activeRoute) {
       ${items
         .map((item) => {
           const isActive = activeRoute === item.id;
-          const soonClass = item.soon ? " bottom-nav__item--soon" : "";
           const activeClass = isActive ? " bottom-nav__item--active" : "";
           return `
-            <a href="${item.soon ? "#" : item.route}"
-               class="bottom-nav__item${activeClass}${soonClass}"
-               ${item.soon ? 'aria-disabled="true"' : ""}
+            <a href="${item.route}"
+               class="bottom-nav__item${activeClass}"
                data-nav="${item.id}">
               <span class="bottom-nav__icon" aria-hidden="true">${item.icon}</span>
               <span class="bottom-nav__label">${item.label}</span>
