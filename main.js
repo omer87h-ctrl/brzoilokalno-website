@@ -1,17 +1,12 @@
 const translations = {
   bs: {
-    "entry.title": "Probaj odmah — bez instalacije",
-    "entry.text": "Ne moraš čekati Play Store. Otvori Brzo i Lokalno u browseru i registruj se za minut.",
-    "entry.cta": "Otvori u browseru",
     "nav.features": "Kako radi",
     "nav.forWhom": "Za koga",
     "nav.download": "Preuzmi",
-    "hero.eyebrow": "Web i AppGallery — Play uskoro",
-    "hero.title1": "Pronađi majstora ili kreatora",
-    "hero.title2": "u svom gradu",
-    "hero.lead": "Tražiš uslugu lokalno? Objavi posao i pronađi nekoga iz grada. Majstor ili kreator? Predstavi radove i dobij prve klijente — odmah u browseru ili preko AppGallery.",
-    "hero.ctaWeb": "Probaj odmah u browseru",
-    "hero.playSoon": "Google Play uskoro — do tada koristi web ili AppGallery.",
+    "hero.eyebrow": "Lokalne usluge, pametna pretraga",
+    "hero.title1": "Majstori, kreatori i usluge",
+    "hero.title2": "u tvom gradu",
+    "hero.lead": "Objavi posao, pronađi majstora, pregledaj radove i uslugu lokalno.",
     "hero.pill1": "Ocjene i recenzije",
     "hero.pill2": "Slobodni sada",
     "hero.pill3": "Blizu mene",
@@ -44,14 +39,11 @@ const translations = {
     "joinEarly.badge": "Za majstore i kreatore",
     "joinEarly.title": "Pridruži se među prvima",
     "joinEarly.text": "Ako ste majstor ili kreator, možete se registrovati i predstaviti svoje usluge, radove i dostupnost. U početnoj fazi pomažemo oko boljeg opisa profila kako bi vas korisnici lakše pronašli.",
-    "joinEarly.ctaWeb": "Registruj se na webu",
-    "joinEarly.ctaApp": "Ili preuzmi AppGallery",
+    "joinEarly.cta": "Registruj se u aplikaciji",
     "joinEarly.contactLead": "Pitanja ili pomoć oko profila? Pišite nam na Instagramu:",
     "joinEarly.instagram": "@brzo.i.lokalno",
-    "download.title": "Koristi odmah ili preuzmi",
-    "download.text": "Otvori u browseru bez instalacije, ili preuzmi na Huawei AppGallery.",
-    "download.ctaWeb": "Otvori u browseru",
-    "download.note": "Traži Brzo i Lokalno u AppGallery ili koristi web verziju na telefonu.",
+    "download.title": "Preuzmi aplikaciju",
+    "download.text": "Brzo i Lokalno je dostupno na Huawei AppGallery. Google Play uskoro.",
     "download.textBoth": "Brzo i Lokalno je dostupno na Huawei AppGallery i Google Playu.",
     "footer.privacy": "Politika privatnosti",
     "footer.terms": "Uslovi korištenja",
@@ -59,18 +51,13 @@ const translations = {
     "footer.copy": "© 2026 Brzo i Lokalno. Sva prava zadržana.",
   },
   en: {
-    "entry.title": "Try now — no install",
-    "entry.text": "You do not need to wait for the Play Store. Open Brzo i Lokalno in your browser and register in a minute.",
-    "entry.cta": "Open in browser",
     "nav.features": "How it works",
     "nav.forWhom": "Who it's for",
     "nav.download": "Download",
-    "hero.eyebrow": "Web and AppGallery — Play coming soon",
-    "hero.title1": "Find a craftsman or creator",
+    "hero.eyebrow": "Local services, smart search",
+    "hero.title1": "Craftsmen, creators and services",
     "hero.title2": "in your city",
-    "hero.lead": "Looking for a local service? Post a job and find someone in your city. Craftsman or creator? Showcase your work and get your first clients — in the browser or via AppGallery.",
-    "hero.ctaWeb": "Try now in browser",
-    "hero.playSoon": "Google Play coming soon — until then use the web or AppGallery.",
+    "hero.lead": "Post a job, find a craftsman, browse work samples and local services.",
     "hero.pill1": "Ratings & reviews",
     "hero.pill2": "Available now",
     "hero.pill3": "Near me",
@@ -103,14 +90,11 @@ const translations = {
     "joinEarly.badge": "For craftsmen and creators",
     "joinEarly.title": "Join among the first",
     "joinEarly.text": "If you are a craftsman or creator, you can register and present your services, work samples and availability. In the initial phase we help with a better profile description so users can find you more easily.",
-    "joinEarly.ctaWeb": "Register on the web",
-    "joinEarly.ctaApp": "Or get AppGallery",
+    "joinEarly.cta": "Register in the app",
     "joinEarly.contactLead": "Questions or help with your profile? Message us on Instagram:",
     "joinEarly.instagram": "@brzo.i.lokalno",
-    "download.title": "Use now or download",
-    "download.text": "Open in the browser without installing, or download on Huawei AppGallery.",
-    "download.ctaWeb": "Open in browser",
-    "download.note": "Search for Brzo i Lokalno on AppGallery or use the web version on your phone.",
+    "download.title": "Download the app",
+    "download.text": "Brzo i Lokalno is available on Huawei AppGallery. Google Play coming soon.",
     "download.textBoth": "Brzo i Lokalno is available on Huawei AppGallery and Google Play.",
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Terms of Use",
@@ -135,19 +119,15 @@ function applySiteConfig() {
   document.querySelectorAll('[data-store="googlePlay"]').forEach((btn) => {
     if (googlePlayLive) {
       btn.href = config.googlePlay.trim();
-      btn.classList.remove("store-btn--soon", "is-hidden");
+      btn.classList.remove("store-btn--soon");
       btn.removeAttribute("aria-disabled");
       btn.setAttribute("target", "_blank");
       btn.setAttribute("rel", "noopener noreferrer");
     } else {
       btn.removeAttribute("href");
-      btn.classList.add("store-btn--soon", "is-hidden");
+      btn.classList.add("store-btn--soon");
       btn.setAttribute("aria-disabled", "true");
     }
-  });
-
-  document.querySelectorAll(".play-soon-note").forEach((note) => {
-    note.classList.toggle("is-hidden", googlePlayLive);
   });
 
   const instagram = config.instagram && config.instagram.trim();
