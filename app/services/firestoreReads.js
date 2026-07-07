@@ -126,6 +126,16 @@ export async function fetchUserProfile(uid) {
   return { id: snap.id, ...snap.data() };
 }
 
+/** Dohvat vlasnika oglasa (isti tick kao Android PublicProfileCache.prefetch). */
+export async function fetchOwnerProfilesForListings(items = []) {
+  const uids = [...new Set(items.map((item) => item?.userId).filter(Boolean))].slice(0, 40);
+  if (!uids.length) return {};
+  const profiles = await Promise.all(
+    uids.map((uid) => fetchUserProfile(uid).catch(() => null))
+  );
+  return Object.fromEntries(profiles.filter(Boolean).map((profile) => [profile.id, profile]));
+}
+
 export function isRateableRole(role) {
   return role === "majstor" || role === "kreator";
 }

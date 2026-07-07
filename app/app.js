@@ -21,6 +21,7 @@ import {
   fetchPublicWorks,
   fetchTopRated,
   fetchUserProfile,
+  fetchOwnerProfilesForListings,
   fetchUsersByCategory,
   fetchUsersInCity,
   fetchWork,
@@ -576,6 +577,7 @@ async function loadRouteContent(route) {
     const profile = await fetchUserProfile(currentUser.uid);
     const role = profile?.role || "";
     const [jobs, offers] = await Promise.all([fetchJobs(30), fetchOffers(30)]);
+    const ownerProfilesByUid = await fetchOwnerProfilesForListings([...jobs, ...offers]);
     const cityFilter = posloviFilterMyCity ? profileCity : "";
     let filteredJobs = cityFilter ? filterJobsOrOffersByCity(jobs, cityFilter) : jobs;
     if (posloviFilterMyJobs && tab === "potraznja") {
@@ -602,12 +604,14 @@ async function loadRouteContent(route) {
       applicationsByJobId,
       chatEnabled: isChatEnabled(),
       currentUid: currentUser.uid,
+      ownerProfilesByUid,
     });
   }
 
   if (route.name === "ponuda") {
     const offer = await fetchOffer(route.offerId);
-    return renderPonudaDetail({ offer, currentUid: currentUser.uid });
+    const ownerProfile = offer?.userId ? await fetchUserProfile(offer.userId) : null;
+    return renderPonudaDetail({ offer, currentUid: currentUser.uid, ownerProfile });
   }
 
   if (route.name === "posao") {
@@ -620,10 +624,7 @@ async function loadRouteContent(route) {
       job.userId === currentUser.uid ? fetchApplicationsForJob(route.jobId) : Promise.resolve([]),
       fetchMyApplicationForJob(route.jobId, currentUser.uid),
     ]);
-    const jobOwnerProfile =
-      job.userId && job.userId !== currentUser.uid
-        ? await fetchUserProfile(job.userId)
-        : null;
+    const jobOwnerProfile = job.userId ? await fetchUserProfile(job.userId) : null;
     reportCache.job = job;
     return renderPosao({
       job,

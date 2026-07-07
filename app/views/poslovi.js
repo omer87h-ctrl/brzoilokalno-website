@@ -2,7 +2,7 @@ import { escapeHtml, formatApplicationStatus, formatTimestamp } from "../utils/f
 import { renderCityFilterChip, renderMyJobsFilterChip, renderOfferCard, renderPosloviTabs } from "./ponude.js";
 import { renderScreenFeed } from "./screenFeed.js";
 import { chatUnreadForUser, renderChatShortcut } from "./chatShortcut.js";
-import { renderVerifiedSuffix } from "./verifiedBadge.js";
+import { renderListingAuthorHeader } from "./listingAuthor.js";
 
 function canApply(role) {
   return role === "majstor" || role === "kreator";
@@ -25,6 +25,7 @@ export function renderPoslovi({
   applicationsByJobId = {},
   chatEnabled = false,
   currentUid = "",
+  ownerProfilesByUid = {},
 }) {
   const tabs = renderPosloviTabs({ activeTab: tab });
   const myJobsChip = tab === "potraznja" ? renderMyJobsFilterChip({ active: filterMyJobs }) : "";
@@ -38,7 +39,7 @@ export function renderPoslovi({
 
   if (tab === "ponuda") {
     const bodyHtml = offers.length
-      ? `<div class="job-list">${offers.map((offer) => renderOfferCard(offer)).join("")}</div>`
+      ? `<div class="job-list">${offers.map((offer) => renderOfferCard(offer, ownerProfilesByUid[offer.userId])).join("")}</div>`
       : `<div class="empty-state">Trenutno nema objavljenih ponuda.</div>`;
 
     return renderScreenFeed({
@@ -55,7 +56,7 @@ export function renderPoslovi({
   }
 
   const bodyHtml = jobs.length
-    ? `<div class="job-list">${renderJobCards(jobs, { myRole, applicationsByJobId, chatEnabled, currentUid })}</div>`
+    ? `<div class="job-list">${renderJobCards(jobs, { myRole, applicationsByJobId, chatEnabled, currentUid, ownerProfilesByUid })}</div>`
     : `<div class="empty-state">Trenutno nema objavljenih poslova.</div>`;
 
   const subtitleHtml = jobs.length
@@ -73,19 +74,18 @@ export function renderPoslovi({
   });
 }
 
-function renderJobCards(jobs, { myRole, applicationsByJobId, chatEnabled, currentUid }) {
+function renderJobCards(jobs, { myRole, applicationsByJobId, chatEnabled, currentUid, ownerProfilesByUid }) {
   const worker = canApply(myRole);
 
   return jobs
     .map((job) => {
-      const title = escapeHtml(job.title || "Bez naslova");
-      const city = escapeHtml(job.city || "—");
+      const title = job.title || "Bez naslova";
+      const city = job.city || "—";
       const category = escapeHtml(job.category || "—");
       const budget = escapeHtml(job.budget || "Dogovor");
       const when = escapeHtml(job.whenNeeded || job.neededWhen || "");
       const date = formatTimestamp(job.timestamp);
-      const author = escapeHtml(job.authorName || "Korisnik");
-      const authorLine = `${author}${renderVerifiedSuffix(job)}`;
+      const ownerProfile = ownerProfilesByUid[job.userId] || null;
       const isOwner = job.userId === currentUid;
       const myApp = applicationsByJobId[job.id] || null;
 
@@ -112,14 +112,11 @@ function renderJobCards(jobs, { myRole, applicationsByJobId, chatEnabled, curren
       return `
         <article class="job-card job-card--with-actions">
           <a class="job-card__body" href="#/posao/${escapeHtml(job.id)}">
-            <div class="job-card__head">
-              <h3 class="job-card__title">${title}</h3>
-              <span class="job-card__date">${escapeHtml(date)}</span>
-            </div>
-            <p class="job-card__meta">${category} · ${city}</p>
+            ${renderListingAuthorHeader({ title, item: job, ownerProfile, city })}
+            <p class="job-card__meta">${category}</p>
             <p class="job-card__desc">${escapeHtml((job.description || "").slice(0, 160))}${(job.description || "").length > 160 ? "…" : ""}</p>
             <div class="job-card__foot">
-              <span>${authorLine}</span>
+              <span class="job-card__date">${escapeHtml(date)}</span>
               <span>${budget}${when ? ` · ${when}` : ""}</span>
             </div>
           </a>

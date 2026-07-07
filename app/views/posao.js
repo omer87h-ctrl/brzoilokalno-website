@@ -1,6 +1,7 @@
 import { escapeHtml, formatApplicationStatus, formatTimestamp } from "../utils/format.js";
 import { renderChatShortcut } from "./chatShortcut.js";
 import { renderVerifiedSuffix } from "./verifiedBadge.js";
+import { renderListingAuthorDetail } from "./listingAuthor.js";
 
 function statusClass(status) {
   return `status-badge status-badge--${escapeHtml(status || "unknown")}`;
@@ -49,8 +50,6 @@ export function renderPosao({
   const budget = escapeHtml(job.budget || "Dogovor");
   const when = escapeHtml(job.whenNeeded || job.neededWhen || "");
   const date = formatTimestamp(job.timestamp);
-  const author = escapeHtml(job.authorName || "Korisnik");
-  const authorLine = `${author}${renderVerifiedSuffix(job)}`;
   const desc = escapeHtml(job.description || "Nema opisa.");
   const isOwner = job.userId === currentUid;
   const ownerApps = isOwner ? applications : [];
@@ -157,8 +156,8 @@ export function renderPosao({
       <a class="back-link" href="#/poslovi">← Natrag na poslove</a>
       <article class="detail-card">
         <h2 class="detail-card__title">${title}</h2>
+        ${renderListingAuthorDetail({ item: job, ownerProfile: jobOwnerProfile })}
         <p class="detail-card__meta">${category} · ${city} · ${escapeHtml(date)}</p>
-        <p class="detail-card__meta">${authorLine}</p>
         <p class="detail-card__budget">${budget}${when ? ` · ${when}` : ""}</p>
         <p class="detail-card__desc">${desc}</p>
         ${actionHtml}

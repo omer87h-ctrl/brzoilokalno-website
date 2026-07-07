@@ -1,26 +1,21 @@
 import { escapeHtml, formatTimestamp } from "../utils/format.js";
-import { renderVerifiedSuffix } from "./verifiedBadge.js";
+import { renderListingAuthorDetail, renderListingAuthorHeader } from "./listingAuthor.js";
 
-export function renderOfferCard(offer) {
-  const title = escapeHtml(offer.title || "Ponuda");
-  const city = escapeHtml(offer.city || "—");
+export function renderOfferCard(offer, ownerProfile = null) {
+  const title = offer.title || "Ponuda";
+  const city = offer.city || "—";
   const category = escapeHtml(offer.category || "—");
   const budget = escapeHtml(offer.budget || "Dogovor");
   const when = escapeHtml(offer.availableWhen || "");
   const date = formatTimestamp(offer.timestamp);
-  const author = escapeHtml(offer.authorName || "Korisnik");
-  const authorLine = `${author}${renderVerifiedSuffix(offer)}`;
 
   return `
     <a class="job-card" href="#/ponuda/${escapeHtml(offer.id)}">
-      <div class="job-card__head">
-        <h3 class="job-card__title">${title}</h3>
-        <span class="job-card__date">${escapeHtml(date)}</span>
-      </div>
-      <p class="job-card__meta">${category} · ${city}</p>
+      ${renderListingAuthorHeader({ title, item: offer, ownerProfile, city })}
+      <p class="job-card__meta">${category}</p>
       <p class="job-card__desc">${escapeHtml((offer.description || "").slice(0, 160))}${(offer.description || "").length > 160 ? "…" : ""}</p>
       <div class="job-card__foot">
-        <span>${authorLine}</span>
+        <span class="job-card__date">${escapeHtml(date)}</span>
         <span>${budget}${when ? ` · ${when}` : ""}</span>
       </div>
     </a>`;
@@ -74,7 +69,7 @@ export function renderCityFilterChip({ active, city, id = "poslovi-city-filter" 
     </button>`;
 }
 
-export function renderPonudaDetail({ offer, currentUid = "" }) {
+export function renderPonudaDetail({ offer, currentUid = "", ownerProfile = null }) {
   if (!offer) {
     return `
       <div class="screen-scroll">
@@ -89,8 +84,6 @@ export function renderPonudaDetail({ offer, currentUid = "" }) {
   const budget = escapeHtml(offer.budget || "Dogovor");
   const when = escapeHtml(offer.availableWhen || "");
   const date = formatTimestamp(offer.timestamp);
-  const author = escapeHtml(offer.authorName || "Korisnik");
-  const role = escapeHtml(offer.authorRole || "");
   const desc = escapeHtml(offer.description || "Nema opisa.");
   const phone = offer.contactPhone ? escapeHtml(offer.contactPhone) : "";
   const ownerUid = offer.userId;
@@ -101,16 +94,11 @@ export function renderPonudaDetail({ offer, currentUid = "" }) {
       <a class="back-link" href="#/ponude">← Natrag na ponude</a>
       <article class="detail-card">
         <h2 class="detail-card__title">${title}</h2>
+        ${renderListingAuthorDetail({ item: offer, ownerProfile })}
         <p class="detail-card__meta">${category} · ${city} · ${escapeHtml(date)}</p>
-        <p class="detail-card__meta">${author}${role ? ` · ${role}` : ""}</p>
         <p class="detail-card__budget">${budget}${when ? ` · ${when}` : ""}</p>
         <p class="detail-card__desc">${desc}</p>
         ${phone ? `<p class="detail-card__meta">Kontakt: ${phone}</p>` : ""}
-        ${
-          ownerUid
-            ? `<a class="btn btn--ghost btn--block" href="#/pregled/${escapeHtml(ownerUid)}">Pogledaj profil</a>`
-            : ""
-        }
         ${
           isOwner
             ? `<div class="detail-actions">
