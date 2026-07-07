@@ -64,6 +64,8 @@
       font-weight: 700;
       cursor: pointer;
       text-decoration: none;
+      font-family: inherit;
+      font-size: 1rem;
     }
 
     .preuzmi-btn--primary {
@@ -121,6 +123,19 @@
       display: none;
     }
 
+    .preuzmi-spinner {
+      width: 28px;
+      height: 28px;
+      margin: 0.5rem auto 0;
+      border: 3px solid rgba(242, 140, 40, 0.2);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: preuzmi-spin 0.8s linear infinite;
+    }
+
+    @keyframes preuzmi-spin {
+      to { transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body>
@@ -131,23 +146,26 @@
       <p class="lead" id="lead-text">Android aplikacija na Huawei AppGallery.</p>
 
       <div class="preuzmi-mobile-only" id="mobile-view">
-        <p class="preuzmi-note">Otvaranje AppGallery…</p>
+        <div class="preuzmi-spinner" id="mobile-spinner" aria-hidden="true"></div>
+        <p class="preuzmi-note" id="mobile-note">Otvaranje Huawei AppGallery…</p>
         <div class="preuzmi-actions">
           <a class="preuzmi-btn preuzmi-btn--primary" id="store-link" href="#">Otvori u AppGallery</a>
+          <a class="preuzmi-btn preuzmi-btn--ghost" id="store-web-fallback" href="#" hidden>Preuzmi preko linka</a>
         </div>
       </div>
 
       <div class="preuzmi-desktop-only" id="desktop-view">
         <p class="preuzmi-note">
-          Skeniraj QR kod mobom ili kopiraj link i otvori na <strong>Android</strong> telefonu u Huawei AppGallery.
+          Skeniraj QR kod Android telefonom ili kopiraj link i otvori na mobitelu u <strong>Huawei AppGallery</strong>.
         </p>
         <div class="preuzmi-qr">
-          <img id="qr-img" width="200" height="200" alt="QR kod za preuzimanje">
+          <img id="qr-img" width="200" height="200" alt="QR kod za preuzimanje na mobitelu">
         </div>
         <div class="preuzmi-link-box">
-          <input id="store-url" type="text" readonly>
+          <input id="store-url" type="text" readonly aria-label="Link za preuzimanje">
           <button type="button" class="preuzmi-btn preuzmi-btn--ghost" id="copy-btn">Kopiraj</button>
         </div>
+        <p class="preuzmi-note">Na mobitelu link otvara AppGallery aplikaciju, ne browser.</p>
         <div class="preuzmi-actions">
           <a class="preuzmi-btn preuzmi-btn--ghost" href="/">Natrag na početnu</a>
         </div>
@@ -156,61 +174,122 @@
   </main>
   <script>
     (function () {
-      var STORE_URL =
-        "https://appgallery.cloud.huawei.com/appDetail?pkgName=com.brzoilokalno&channelId=website&referrer=brzoilokalno.com&detailType=0&calltype=AGDLINK";
-      var isAndroid = /Android/i.test(navigator.userAgent);
-      var isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+      var PKG = "com.brzoilokalno";
+      var STORE_WEB_URL =
+        "https://appgallery.cloud.huawei.com/appDetail?pkgName=" + PKG +
+        "&channelId=website&referrer=brzoilokalno.com&detailType=0&calltype=AGDLINK";
+      var STORE_APP_URL = "appmarket://details?id=" + PKG;
+      var STORE_MARKET_URL = "market://details?id=" + PKG;
+      var STORE_INTENT_URL =
+        "intent://details?id=" + PKG +
+        "#Intent;scheme=appmarket;package=com.huawei.appmarket;S.browser_fallback_url=" +
+        encodeURIComponent(STORE_WEB_URL) + ";end";
+      var LANDING_URL = (location.origin || "https://brzoilokalno.com") + "/preuzmi-app.html";
+
+      var ua = navigator.userAgent || "";
+      var isAndroid = /Android/i.test(ua);
+      var isIOS = /iPhone|iPad|iPod/i.test(ua);
+      var isHuawei = /Huawei|Honor|HMSCore/i.test(ua);
+      var isMobile = isAndroid || isIOS || /Mobile/i.test(ua);
 
       var mobileView = document.getElementById("mobile-view");
       var desktopView = document.getElementById("desktop-view");
       var storeLink = document.getElementById("store-link");
+      var storeWebFallback = document.getElementById("store-web-fallback");
+      var mobileNote = document.getElementById("mobile-note");
+      var mobileSpinner = document.getElementById("mobile-spinner");
       var storeUrlInput = document.getElementById("store-url");
       var qrImg = document.getElementById("qr-img");
       var copyBtn = document.getElementById("copy-btn");
+      var leadText = document.getElementById("lead-text");
 
-      storeLink.href = STORE_URL;
-      storeUrlInput.value = STORE_URL;
-      qrImg.src =
-        "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" +
-        encodeURIComponent(STORE_URL);
+      function primaryStoreUrl() {
+        if (isHuawei) return STORE_APP_URL;
+        return STORE_MARKET_URL;
+      }
+
+      function openInAppGallery() {
+        var appUrl = primaryStoreUrl();
+        storeLink.href = appUrl;
+        storeWebFallback.href = STORE_WEB_URL;
+
+        try {
+          window.location.href = appUrl;
+        } catch (_) {}
+
+        window.setTimeout(function () {
+          try {
+            window.location.href = STORE_INTENT_URL;
+          } catch (_) {}
+        }, 700);
+
+        window.setTimeout(function () {
+          if (document.visibilityState === "visible") {
+            mobileNote.textContent =
+              "Ako se AppGallery nije otvorio, dodirni dugme ispod ili instaliraj Huawei AppGallery.";
+            if (mobileSpinner) mobileSpinner.hidden = true;
+            storeWebFallback.hidden = false;
+          }
+        }, 2600);
+      }
+
+      function copyText(value, onDone) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(value).then(onDone).catch(function () {
+            legacyCopy(value, onDone);
+          });
+          return;
+        }
+        legacyCopy(value, onDone);
+      }
+
+      function legacyCopy(value, onDone) {
+        var input = document.createElement("input");
+        input.value = value;
+        document.body.appendChild(input);
+        input.select();
+        try {
+          document.execCommand("copy");
+          onDone();
+        } catch (_) {}
+        document.body.removeChild(input);
+      }
 
       if (isMobile) {
         mobileView.style.display = "block";
+
         if (isAndroid) {
-          window.setTimeout(function () {
-            window.location.href = STORE_URL;
-          }, 400);
+          storeLink.href = primaryStoreUrl();
+          storeWebFallback.href = STORE_WEB_URL;
+          storeLink.addEventListener("click", function (event) {
+            event.preventDefault();
+            openInAppGallery();
+          });
+          window.setTimeout(openInAppGallery, 350);
         } else {
-          document.getElementById("lead-text").textContent =
-            "AppGallery je dostupan na Android telefonu.";
+          if (mobileSpinner) mobileSpinner.hidden = true;
+          leadText.textContent = "AppGallery je dostupan na Android telefonu.";
+          mobileNote.textContent = "Na iPhoneu koristi web verziju u browseru.";
+          storeLink.textContent = "Otvori web verziju";
+          storeLink.href = "/app/";
+          storeLink.removeAttribute("id");
         }
       } else {
         desktopView.style.display = "block";
-      }
+        storeUrlInput.value = LANDING_URL;
+        qrImg.src =
+          "https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=8&data=" +
+          encodeURIComponent(LANDING_URL);
 
-      copyBtn.addEventListener("click", function () {
-        storeUrlInput.select();
-        storeUrlInput.setSelectionRange(0, STORE_URL.length);
-        var copied = false;
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(STORE_URL).then(function () {
-            copied = true;
+        copyBtn.addEventListener("click", function () {
+          copyText(LANDING_URL, function () {
             copyBtn.textContent = "Kopirano";
             window.setTimeout(function () {
               copyBtn.textContent = "Kopiraj";
             }, 1800);
-          }).catch(function () {});
-        }
-        if (!copied && document.execCommand) {
-          try {
-            document.execCommand("copy");
-            copyBtn.textContent = "Kopirano";
-            window.setTimeout(function () {
-              copyBtn.textContent = "Kopiraj";
-            }, 1800);
-          } catch (_) {}
-        }
-      });
+          });
+        });
+      }
     })();
   </script>
 </body>
