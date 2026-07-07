@@ -478,3 +478,52 @@ export function pickFastCandidates(users, city = null) {
 
   return picked;
 }
+
+export async function fetchVerificationRequest(uid) {
+  const snap = await getDoc(doc(getDb(), "verification_requests", uid));
+  if (!snap.exists()) return null;
+  return { id: snap.id, ...snap.data() };
+}
+
+export async function fetchBlockedUsersForUser(uid) {
+  const q = query(collection(getDb(), "blocked_users"), where("blockerUid", "==", uid), limit(50));
+  const snap = await getDocs(q);
+  return mapDocs(snap);
+}
+
+export async function fetchBlockStatus(myUid, otherUid) {
+  if (!myUid || !otherUid) return { iBlocked: false, theyBlocked: false };
+  const [mine, theirs] = await Promise.all([
+    getDoc(doc(getDb(), "blocked_users", `${myUid}_${otherUid}`)),
+    getDoc(doc(getDb(), "blocked_users", `${otherUid}_${myUid}`)),
+  ]);
+  return { iBlocked: mine.exists(), theyBlocked: theirs.exists() };
+}
+
+export async function fetchModerationConfig() {
+  const snap = await getDoc(doc(getDb(), "app_public", "moderation"));
+  if (!snap.exists()) return null;
+  const words = snap.data()?.bannedWords;
+  return Array.isArray(words) ? words : null;
+}
+
+export async function fetchOpenReports(max = 30) {
+  try {
+    const q = query(
+      collection(getDb(), "reports"),
+      where("status", "==", "open"),
+      orderBy("createdAt", "desc"),
+      limit(max)
+    );
+    const snap = await getDocs(q);
+    return mapDocs(snap);
+  } catch (_) {
+    const snap = await getDocs(query(collection(getDb(), "reports"), where("status", "==", "open"), limit(max)));
+    return mapDocs(snap).sort((a, b) => timestampMs(b.createdAt) - timestampMs(a.createdAt));
+  }
+}
+
+export async function fetchBannedUsersAdmin(max = 50) {
+  const snap = await getDocs(query(collection(getDb(), "banned_users"), limit(max)));
+  return mapDocs(snap);
+}

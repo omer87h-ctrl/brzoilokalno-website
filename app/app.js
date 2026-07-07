@@ -42,6 +42,11 @@ import {
   fetchPublicWorksByUserIds,
   fetchMyJobsCount,
   pickFastCandidates,
+  fetchVerificationRequest,
+  fetchBlockedUsersForUser,
+  fetchBlockStatus,
+  fetchOpenReports,
+  fetchBannedUsersAdmin,
 } from "./services/firestoreReads.js";
 import {
   applyToJob,
@@ -62,10 +67,22 @@ import {
   submitJobReport,
   submitWorkReport,
   submitTipReport,
+  submitVerificationRequest,
+  blockUser,
+  unblockUser,
+  submitChatUserReport,
+  submitFastMatchFeedback,
+  resolveReport,
+  adminBanUser,
+  adminUnbanUser,
+  adminDeleteReportedContent,
   updateApplicationStatus,
   updateUserProfile,
   updateWorkPublic,
 } from "./services/firestoreWrites.js";
+import { refreshModerationFromFirestore, findContentViolation, violationMessage } from "./services/moderation.js";
+import { applyDisplaySettings, setDisplaySetting } from "./utils/displaySettings.js";
+import { loadWorkNotes, saveWorkNotes, importLegacyWorkNotes } from "./utils/workNotesLocal.js";
 import { subscribeToChatMessages } from "./services/chatService.js";
 import { uploadProfileImage, clearProfileImage, uploadWorkImage } from "./services/storageService.js";
 import { createUserProfile, isProfileComplete } from "./services/userProfile.js";
@@ -100,6 +117,12 @@ import { renderChat, renderChatMessages } from "./views/chat.js";
 import { renderPretraga } from "./views/pretraga.js";
 import { renderPonudaDetail } from "./views/ponude.js";
 import { renderPostavke } from "./views/postavke.js";
+import { renderBlockedUsers } from "./views/blockedUsers.js";
+import { renderWorkNotes } from "./views/workNotes.js";
+import { renderDisplaySettings } from "./views/displaySettings.js";
+import { renderPrivacyInfo } from "./views/privacyInfo.js";
+import { renderAdminModeration } from "./views/adminModeration.js";
+import { renderSecurityCenter } from "./views/securityCenter.js";
 import { renderObavijesti } from "./views/obavijesti.js";
 import { renderKalkulator, readKalkulatorState } from "./views/kalkulator.js";
 import { buildActivityDashboard } from "./utils/activity.js";
@@ -107,7 +130,7 @@ import { getHiddenActivityAppIds, hideActivityAppId } from "./utils/activityHide
 import { fetchOutdoorForecast, buildOutdoorOutlook } from "./services/weatherOutlook.js";
 import { renderOutdoorPlanBody } from "./views/outdoorPlan.js";
 import { renderCreateJobForm, renderCreateOfferForm, renderTipEditorForm, renderAddWorkForm, renderActivityHideModal, renderReportModal } from "./views/forms.js";
-import { TIP_REPORT_REASONS } from "./constants/reports.js";
+import { TIP_REPORT_REASONS, CHAT_REPORT_REASONS } from "./constants/reports.js";
 import { renderScreenError, renderScreenLoading } from "./views/shared.js";
 
 const root = document.getElementById("app-root");
@@ -134,6 +157,13 @@ let pendingActivityHideId = "";
 let reportTarget = null;
 let reportCache = { job: null, work: null };
 let homeTipsCache = [];
+let chatBlockStatus = { iBlocked: false, theyBlocked: false };
+let chatOtherMeta = null;
+let brzoTopCandidate = null;
+let brzoFeedbackSent = false;
+let adminModerationError = "";
+let workNotesSavedLabel = "";
+let chatMessagesCache = [];
 let kalkState = { module: 0 };
 let unreadNotifications = 0;
 let myTip = null;
@@ -357,6 +387,15 @@ function buildModalsHtml() {
       selectedReason: TIP_REPORT_REASONS[0],
     });
   }
+  if (activeModal === "report" && reportTarget?.type === "chat-user") {
+    return renderReportModal({
+      title: "Prijavi korisnika",
+      subtitle: reportTarget.data?.name ? `Korisnik: ${reportTarget.data.name}` : "",
+      error: modalError,
+      reasons: CHAT_REPORT_REASONS,
+      selectedReason: CHAT_REPORT_REASONS[0],
+    });
+  }
   return "";
 }
 
@@ -447,7 +486,8 @@ async function loadRouteContent(route) {
     const city = route.city || profileCity || null;
     const pool = await fetchFastMatchPool();
     const candidates = pickFastCandidates(pool, city);
-    return renderBrzo({ candidates, city });
+    brzoTopCandidate = candidates[0] || null;
+    return renderBrzo({ candidates, city, topCandidate: brzoTopCandidate, feedbackSent: brzoFeedbackSent });
   }
 
   if (route.name === "lista") {
@@ -592,6 +632,12 @@ async function loadRouteContent(route) {
       currentUid: uid,
       displayName: currentUser.displayName || currentUser.email || "",
     };
+    chatOtherMeta = {
+      uid: otherUid,
+      name: otherName,
+      email: otherProfile?.email || "",
+    };
+    chatBlockStatus = await fetchBlockStatus(uid, otherUid);
     try {
       await clearMyUnread(route.appId, uid);
     } catch (_) {}
@@ -602,6 +648,7 @@ async function loadRouteContent(route) {
       messages: [],
       currentUid: uid,
       error: "",
+      blockStatus: chatBlockStatus,
     });
   }
 
@@ -788,10 +835,50 @@ async function loadRouteContent(route) {
   }
 
   if (route.name === "postavke") {
+    const [user, verification] = await Promise.all([
+      fetchUserProfile(currentUser.uid),
+      fetchVerificationRequest(currentUser.uid),
+    ]);
     return renderPostavke({
+      user,
       userEmail: currentUser?.email || "",
+      verification,
+      isAdmin: isAdminUser(currentUser),
       deleteError: postavkeDeleteError,
     });
+  }
+
+  if (route.name === "postavke-blokirani") {
+    const users = await fetchBlockedUsersForUser(currentUser.uid);
+    return renderBlockedUsers({ users });
+  }
+
+  if (route.name === "postavke-biljeske") {
+    const profile = await fetchUserProfile(currentUser.uid);
+    importLegacyWorkNotes(currentUser.uid, profile);
+    const notes = loadWorkNotes(currentUser.uid);
+    return renderWorkNotes({ notes, savedLabel: workNotesSavedLabel });
+  }
+
+  if (route.name === "postavke-izgled") {
+    return renderDisplaySettings();
+  }
+
+  if (route.name === "postavke-optimizacija") {
+    const dataSaver = localStorage.getItem("bil_data_saver_images") === "1";
+    return renderSecurityCenter({ dataSaver });
+  }
+
+  if (route.name === "postavke-privatnost") {
+    return renderPrivacyInfo();
+  }
+
+  if (route.name === "postavke-admin") {
+    if (!isAdminUser(currentUser)) {
+      return renderScreenError("Nemate pristup moderaciji.");
+    }
+    const [reports, banned] = await Promise.all([fetchOpenReports(30), fetchBannedUsersAdmin(50)]);
+    return renderAdminModeration({ reports, banned, error: adminModerationError });
   }
 
   return renderHome({ selectedCity });
@@ -936,7 +1023,8 @@ async function boot() {
   }
 
   booted = true;
-  renderApp();
+  applyDisplaySettings();
+  refreshModerationFromFirestore().finally(() => renderApp());
 }
 
 function listaPath(filter) {
@@ -954,6 +1042,7 @@ function startChatListener(ctx) {
     jobId: ctx.jobId,
     applicationId: ctx.appId,
     onMessages: (messages) => {
+      chatMessagesCache = messages;
       const el = document.getElementById("chat-messages");
       if (el) {
         el.innerHTML = renderChatMessages(messages, ctx.currentUid);
@@ -1109,6 +1198,10 @@ function bindPhase3Actions() {
   if (chatForm && chatContext) {
     chatForm.addEventListener("submit", async (event) => {
       event.preventDefault();
+      if (chatBlockStatus.iBlocked || chatBlockStatus.theyBlocked) {
+        alert("Poruke nisu dostupne zbog blokade.");
+        return;
+      }
       const input = chatForm.querySelector('input[name="message"]');
       const text = input?.value?.trim();
       if (!text) return;
@@ -1133,6 +1226,53 @@ function bindPhase3Actions() {
       } finally {
         if (sendBtn) sendBtn.disabled = false;
         input?.focus();
+      }
+    });
+  }
+
+  const chatMenuBtn = document.getElementById("chat-menu-btn");
+  const chatMenu = document.getElementById("chat-menu");
+  if (chatMenuBtn && chatMenu) {
+    chatMenuBtn.addEventListener("click", (event) => {
+      event.stopPropagation();
+      chatMenu.classList.toggle("chat-menu--open");
+    });
+    document.addEventListener(
+      "click",
+      () => {
+        chatMenu.classList.remove("chat-menu--open");
+      },
+      { once: true }
+    );
+  }
+
+  const chatReportBtn = document.getElementById("chat-report-user-btn");
+  if (chatReportBtn && chatOtherMeta) {
+    chatReportBtn.addEventListener("click", () => {
+      reportTarget = { type: "chat-user", data: chatOtherMeta };
+      activeModal = "report";
+      modalError = "";
+      renderApp();
+    });
+  }
+
+  const chatBlockBtn = document.getElementById("chat-block-user-btn");
+  if (chatBlockBtn && chatOtherMeta && chatContext && !chatBlockStatus.iBlocked && !chatBlockStatus.theyBlocked) {
+    chatBlockBtn.addEventListener("click", async () => {
+      if (!confirm("Blokirati ovog korisnika?")) return;
+      try {
+        await blockUser({
+          blockerUid: currentUser.uid,
+          blockedUid: chatOtherMeta.uid,
+          blockedName: chatOtherMeta.name,
+          blockedEmail: chatOtherMeta.email,
+          jobId: chatContext.jobId,
+          appId: chatContext.appId,
+        });
+        chatBlockStatus = { ...chatBlockStatus, iBlocked: true };
+        renderApp();
+      } catch (error) {
+        alert("Blokiranje nije uspjelo.");
       }
     });
   }
@@ -1419,6 +1559,12 @@ function bindProfileAndModals() {
         renderApp();
         return;
       }
+      const violation = findContentViolation(fields.title, fields.description, fields.category);
+      if (violation) {
+        modalError = violationMessage("Oglas", violation);
+        renderApp();
+        return;
+      }
       try {
         await createJob({ profile, authUser: currentUser, fields });
         activeModal = null;
@@ -1452,6 +1598,12 @@ function bindProfileAndModals() {
         renderApp();
         return;
       }
+      const violation = findContentViolation(fields.title, fields.description, fields.category);
+      if (violation) {
+        modalError = violationMessage("Ponuda", violation);
+        renderApp();
+        return;
+      }
       try {
         await createOffer({ profile, authUser: currentUser, fields });
         activeModal = null;
@@ -1475,6 +1627,12 @@ function bindProfileAndModals() {
       const body = normalizeSpaces(form.body.value);
       if (!title || !teaser || !body) {
         modalError = "Naslov, kratki i puni opis su obavezni.";
+        renderApp();
+        return;
+      }
+      const violation = findContentViolation(title, teaser, body);
+      if (violation) {
+        modalError = violationMessage("Savjet", violation);
         renderApp();
         return;
       }
@@ -1721,6 +1879,22 @@ function bindSearchAndFilters() {
           });
         } else if (reportTarget.type === "tip" && reportTarget.data) {
           await submitTipReport({ reporter, tip: reportTarget.data, reason, details });
+        } else if (reportTarget.type === "chat-user" && reportTarget.data && chatContext) {
+          const otherId = reportTarget.data.uid;
+          const reportedContent = chatMessagesCache
+            .filter((m) => m.senderId === otherId)
+            .slice(-3)
+            .map((m) => m.text || "")
+            .join("\n");
+          await submitChatUserReport({
+            reporter,
+            target: reportTarget.data,
+            jobId: chatContext.jobId,
+            appId: chatContext.appId,
+            reason,
+            details,
+            reportedContent,
+          });
         }
         reportTarget = null;
         activeModal = null;
@@ -1763,6 +1937,181 @@ function bindSearchAndFilters() {
       renderApp();
     });
   });
+
+  const requestVerificationBtn = document.getElementById("request-verification-btn");
+  if (requestVerificationBtn) {
+    requestVerificationBtn.addEventListener("click", async () => {
+      try {
+        const profile = await fetchUserProfile(currentUser.uid);
+        await submitVerificationRequest({
+          uid: currentUser.uid,
+          profile,
+          email: currentUser.email || "",
+        });
+        alert("Zahtjev za potvrđeni profil je poslan.");
+        renderApp();
+      } catch (error) {
+        alert("Slanje zahtjeva nije uspjelo.");
+      }
+    });
+  }
+
+  document.querySelectorAll("[data-unblock-uid]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const blockedUid = btn.dataset.unblockUid;
+      if (!blockedUid) return;
+      try {
+        await unblockUser(currentUser.uid, blockedUid);
+        renderApp();
+      } catch (error) {
+        alert("Odblokiranje nije uspjelo.");
+      }
+    });
+  });
+
+  const workNotesForm = document.getElementById("work-notes-form");
+  if (workNotesForm) {
+    workNotesForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      saveWorkNotes(currentUser.uid, {
+        main: form.main.value,
+        reminder: form.reminder.value,
+      });
+      workNotesSavedLabel = `Sačuvano ${new Date().toLocaleString("bs-BA")}`;
+      renderApp();
+    });
+  }
+
+  const fontScale = document.getElementById("display-font-scale");
+  if (fontScale) {
+    fontScale.addEventListener("change", () => {
+      setDisplaySetting("fontScale", Number(fontScale.value) || 1);
+      renderApp();
+    });
+  }
+  const reduceMotion = document.getElementById("display-reduce-motion");
+  if (reduceMotion) {
+    reduceMotion.addEventListener("change", () => {
+      setDisplaySetting("reduceMotion", reduceMotion.checked);
+    });
+  }
+  const rememberTab = document.getElementById("display-remember-tab");
+  if (rememberTab) {
+    rememberTab.addEventListener("change", () => {
+      setDisplaySetting("rememberLastTab", rememberTab.checked);
+    });
+  }
+
+  const dataSaver = document.getElementById("security-data-saver");
+  if (dataSaver) {
+    dataSaver.addEventListener("change", () => {
+      localStorage.setItem("bil_data_saver_images", dataSaver.checked ? "1" : "0");
+    });
+  }
+  const clearSwCacheBtn = document.getElementById("clear-sw-cache-btn");
+  if (clearSwCacheBtn) {
+    clearSwCacheBtn.addEventListener("click", async () => {
+      try {
+        if ("caches" in window) {
+          const keys = await caches.keys();
+          await Promise.all(keys.map((k) => caches.delete(k)));
+        }
+        if ("serviceWorker" in navigator) {
+          const reg = await navigator.serviceWorker.getRegistration("/app/");
+          if (reg?.active) reg.active.postMessage({ type: "SKIP_WAITING" });
+        }
+        alert("Keš je očišćen.");
+      } catch (error) {
+        alert("Čišćenje keša nije uspjelo.");
+      }
+    });
+  }
+
+  document.querySelectorAll("[data-admin-resolve]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      try {
+        await resolveReport(btn.dataset.adminResolve, currentUser.uid);
+        adminModerationError = "";
+        renderApp();
+      } catch (error) {
+        adminModerationError = "Označavanje riješeno nije uspjelo.";
+        renderApp();
+      }
+    });
+  });
+
+  document.querySelectorAll("[data-admin-ban]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const targetUid = btn.dataset.targetUid;
+      if (!targetUid || !confirm("Banovati korisnika globalno?")) return;
+      try {
+        await adminBanUser({
+          targetUid,
+          name: btn.dataset.targetName || "",
+          email: btn.dataset.targetEmail || "",
+          reason: "Admin moderacija",
+          adminUid: currentUser.uid,
+          sourceReportId: btn.dataset.adminBan || "",
+        });
+        adminModerationError = "";
+        renderApp();
+      } catch (error) {
+        adminModerationError = "Ban nije uspio (provjeri admin prava).";
+        renderApp();
+      }
+    });
+  });
+
+  document.querySelectorAll("[data-admin-unban]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      try {
+        await adminUnbanUser(btn.dataset.adminUnban);
+        renderApp();
+      } catch (error) {
+        adminModerationError = "Vraćanje korisnika nije uspjelo.";
+        renderApp();
+      }
+    });
+  });
+
+  document.querySelectorAll("[data-admin-delete-content]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      if (!confirm("Obrisati prijavljeni sadržaj?")) return;
+      try {
+        await adminDeleteReportedContent(btn.dataset.collection, btn.dataset.contentId);
+        await resolveReport(btn.dataset.adminDeleteContent, currentUser.uid);
+        adminModerationError = "";
+        renderApp();
+      } catch (error) {
+        adminModerationError = "Brisanje sadržaja nije uspjelo.";
+        renderApp();
+      }
+    });
+  });
+
+  const brzoFeedbackForm = document.getElementById("brzo-feedback-form");
+  if (brzoFeedbackForm && brzoTopCandidate) {
+    brzoFeedbackForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const choice = form.querySelector('input[name="brzoChoice"]:checked')?.value || "pomoglo";
+      const comment = normalizeSpaces(form.comment?.value || "");
+      try {
+        await submitFastMatchFeedback({
+          uid: currentUser.uid,
+          voterName: currentUser.displayName || currentUser.email || "Korisnik",
+          choice,
+          comment,
+          suggested: brzoTopCandidate,
+        });
+        brzoFeedbackSent = true;
+        renderApp();
+      } catch (error) {
+        alert("Slanje povratne informacije nije uspjelo.");
+      }
+    });
+  }
 }
 
 function bindHomeActions() {

@@ -1,5 +1,9 @@
-function wrapIcon(svg, tone) {
-  return `<span class="home-card__icon-wrap home-card__icon-wrap--${tone}">${svg}</span>`;
+function wrapIcon(svg, tone, { circleFill = "", iconColor = "" } = {}) {
+  const style =
+    circleFill || iconColor
+      ? ` style="${circleFill ? `--icon-circle-fill:${circleFill};` : ""}${iconColor ? `--icon-circle-color:${iconColor};` : ""}"`
+      : "";
+  return `<span class="home-card__icon-wrap home-card__icon-wrap--${tone}"${style}>${svg}</span>`;
 }
 
 const SVG = {
@@ -10,8 +14,8 @@ const SVG = {
 };
 
 export const HOME_CARD_ICONS = {
-  top: wrapIcon(SVG.star, "blue"),
-  slobodan: wrapIcon(SVG.build, "green"),
-  blizu: wrapIcon(SVG.place, "purple"),
-  kalkulator: wrapIcon(SVG.calculate, "amber"),
+  top: wrapIcon(SVG.star, "top"),
+  slobodan: wrapIcon(SVG.build, "slobodan", { circleFill: "#E8884A", iconColor: "#F5F1EC" }),
+  blizu: wrapIcon(SVG.place, "blizu"),
+  kalkulator: wrapIcon(SVG.calculate, "kalkulator"),
 };

@@ -36,7 +36,16 @@ export function parseRoute(hash) {
     return { name: "chat", jobId: parts[1], appId: parts[2] };
   }
   if (name === "profil") return { name: "profil" };
-  if (name === "postavke") return { name: "postavke" };
+  if (name === "postavke") {
+    const sub = parts[1] || "";
+    if (sub === "blokirani") return { name: "postavke-blokirani" };
+    if (sub === "biljeske") return { name: "postavke-biljeske" };
+    if (sub === "izgled") return { name: "postavke-izgled" };
+    if (sub === "optimizacija") return { name: "postavke-optimizacija" };
+    if (sub === "privatnost") return { name: "postavke-privatnost" };
+    if (sub === "admin") return { name: "postavke-admin" };
+    return { name: "postavke" };
+  }
   if (name === "obavijesti") return { name: "obavijesti" };
   if (name === "pregled" && parts[1]) return { name: "pregled", uid: parts[1] };
 
@@ -53,7 +62,19 @@ export function routeToNav(route) {
   ) {
     return "poslovi";
   }
-  if (route.name === "profil" || route.name === "postavke" || route.name === "obavijesti") return "profil";
+  if (
+    route.name === "profil" ||
+    route.name === "postavke" ||
+    route.name === "postavke-blokirani" ||
+    route.name === "postavke-biljeske" ||
+    route.name === "postavke-izgled" ||
+    route.name === "postavke-optimizacija" ||
+    route.name === "postavke-privatnost" ||
+    route.name === "postavke-admin" ||
+    route.name === "obavijesti"
+  ) {
+    return "profil";
+  }
   if (
     route.name === "kategorije" ||
     route.name === "pregled" ||

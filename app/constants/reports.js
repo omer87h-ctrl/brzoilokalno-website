@@ -13,3 +13,11 @@ export const TIP_REPORT_REASONS = [
   "Prevara",
   "Ostalo",
 ];
+
+export const CHAT_REPORT_REASONS = [
+  "Uznemiravanje",
+  "Spam",
+  "Neprimjeren sadržaj",
+  "Lažni profil",
+  "Ostalo",
+];

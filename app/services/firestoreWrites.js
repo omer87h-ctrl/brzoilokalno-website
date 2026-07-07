@@ -478,6 +478,125 @@ export async function submitTipReport({ reporter, tip, reason, details }) {
   });
 }
 
+export async function submitVerificationRequest({ uid, profile, email }) {
+  await setDoc(
+    doc(getDb(), "verification_requests", uid),
+    {
+      userId: uid,
+      displayName: profile?.displayName || "",
+      email: email || profile?.email || "",
+      role: profile?.role || "",
+      city: profile?.city || "",
+      status: "pending",
+      createdAt: serverTimestamp(),
+    },
+    { merge: true }
+  );
+}
+
+export async function blockUser({ blockerUid, blockedUid, blockedName, blockedEmail, jobId, appId }) {
+  await setDoc(doc(getDb(), "blocked_users", `${blockerUid}_${blockedUid}`), {
+    blockerUid,
+    blockedUid,
+    blockedUserName: String(blockedName || "").slice(0, 60),
+    blockedUserEmail: String(blockedEmail || "").slice(0, 320),
+    jobId: jobId || "",
+    appId: appId || "",
+    source: "chat",
+    createdAt: Timestamp.now(),
+  });
+}
+
+export async function unblockUser(blockerUid, blockedUid) {
+  await deleteDoc(doc(getDb(), "blocked_users", `${blockerUid}_${blockedUid}`));
+}
+
+export async function submitChatUserReport({ reporter, target, jobId, appId, reason, details, reportedContent }) {
+  await addDoc(collection(getDb(), "reports"), {
+    reporterUid: reporter.uid,
+    reporterName: reporter.displayName || reporter.email || "Korisnik",
+    reporterEmail: reporter.email || "",
+    targetType: "user",
+    targetId: target.uid,
+    targetUserId: target.uid,
+    targetUserName: target.name || "Korisnik",
+    targetUserEmail: target.email || "",
+    sourceScreen: "chat",
+    reason,
+    details: normalizeSpaces(details || ""),
+    reportedContent: String(reportedContent || "").slice(0, 500),
+    jobId: jobId || "",
+    applicationId: appId || "",
+    appId: appId || "",
+    status: "open",
+    createdAt: serverTimestamp(),
+  });
+}
+
+export async function submitFastMatchFeedback({ uid, voterName, choice, comment, suggested }) {
+  try {
+    await addDoc(collection(getDb(), "fast_match_feedback"), {
+      choice,
+      helped: choice === "pomoglo",
+      comment: String(comment || "").slice(0, 180),
+      source: "fast:mk",
+      createdAt: serverTimestamp(),
+      userId: uid,
+      suggestedUid: suggested?.id || "",
+      suggestedName: suggested?.displayName || "",
+      suggestedRatingAverage: Number(suggested?.ratingAverage) || 0,
+      suggestedRatingCount: Number(suggested?.ratingCount) || 0,
+    });
+  } catch (error) {
+    await addDoc(collection(getDb(), "reports"), {
+      reporterUid: uid,
+      reporterName: voterName || "Korisnik",
+      reporterEmail: "",
+      targetType: "fast_feedback",
+      targetId: suggested?.id || uid,
+      targetUserId: suggested?.id || "",
+      targetUserName: suggested?.displayName || "",
+      targetUserEmail: "",
+      sourceScreen: "fast:mk",
+      reason: choice,
+      details: String(comment || "").slice(0, 500),
+      reportedContent: "",
+      status: "open",
+      createdAt: serverTimestamp(),
+    });
+  }
+}
+
+export async function resolveReport(reportId, adminUid, adminNote = "") {
+  await updateDoc(doc(getDb(), "reports", reportId), {
+    status: "resolved",
+    resolvedAt: serverTimestamp(),
+    resolvedByUid: adminUid,
+    adminNote: adminNote || "",
+  });
+}
+
+export async function adminBanUser({ targetUid, name, email, reason, adminUid, sourceReportId }) {
+  await setDoc(doc(getDb(), "banned_users", targetUid), {
+    uid: targetUid,
+    name: name || "",
+    email: email || "",
+    reason: reason || "",
+    bannedByUid: adminUid,
+    sourceReportId: sourceReportId || "",
+    createdAt: serverTimestamp(),
+  });
+}
+
+export async function adminUnbanUser(targetUid) {
+  await deleteDoc(doc(getDb(), "banned_users", targetUid));
+}
+
+export async function adminDeleteReportedContent(collectionName, contentId) {
+  if (!collectionName || !contentId) throw new Error("Nedostaje sadržaj.");
+  await deleteDoc(doc(getDb(), collectionName, contentId));
+}
+
 export async function deleteAccountData(uid) {
   const db = getDb();
   await Promise.all([
