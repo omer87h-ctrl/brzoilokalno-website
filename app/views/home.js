@@ -87,7 +87,7 @@ export function renderHome({
   }).join("");
   const moreCitiesBtn =
     ALL_CITIES.length > POPULAR_CITIES.length
-      ? `<button type="button" class="chip chip--btn chip--more-cities" data-action="toggle-cities">${showAllCities ? "Manje gradova" : "Više gradova"}</button>`
+      ? `<button type="button" class="chip chip--btn chip--more-cities" data-action="toggle-cities" aria-expanded="${showAllCities}"><span class="chip--more-cities__arrow" aria-hidden="true">${showAllCities ? "▲" : "▼"}</span><span>${showAllCities ? "Manje gradova" : "Više gradova"}</span></button>`
       : "";
 
   const cityHint = selectedCity
