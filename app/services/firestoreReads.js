@@ -86,9 +86,14 @@ export async function fetchApplicationsForJob(jobId) {
 
 export async function fetchMyApplicationForJob(jobId, workerId) {
   if (!jobId || !workerId) return null;
-  const snap = await getDoc(doc(getDb(), "applications", `${jobId}_${workerId}`));
-  if (!snap.exists()) return null;
-  return { id: snap.id, ...snap.data() };
+  try {
+    const snap = await getDoc(doc(getDb(), "applications", `${jobId}_${workerId}`));
+    if (!snap.exists()) return null;
+    return { id: snap.id, ...snap.data() };
+  } catch (error) {
+    if (error?.code === "permission-denied") return null;
+    throw error;
+  }
 }
 
 export async function fetchMyApplications(uid) {

@@ -168,8 +168,14 @@ export async function applyToJob({ job, profile, authUser }) {
   const safeProfile = profile || {};
   const appDocId = `${job.id}_${workerId}`;
   const ref = doc(getDb(), "applications", appDocId);
-  const existing = await getDoc(ref);
-  if (existing.exists()) {
+  let existing = null;
+  try {
+    const existingSnap = await getDoc(ref);
+    if (existingSnap.exists()) existing = existingSnap.data();
+  } catch (error) {
+    if (error?.code !== "permission-denied") throw error;
+  }
+  if (existing) {
     const err = new Error("Već si prijavljen na ovaj posao.");
     err.code = "already-applied";
     throw err;
