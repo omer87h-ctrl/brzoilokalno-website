@@ -5,7 +5,6 @@ import { renderRatingSection } from "./rating.js";
 import { renderFollowButton, renderFollowerCount } from "./follow.js";
 import { renderMojaAktivnost } from "./aktivnost.js";
 import { renderOutdoorPlan } from "./outdoorPlan.js";
-import { renderFollowerCount } from "./follow.js";
 import { ALL_CITIES, KREATOR_CATEGORIES, MAJSTOR_CATEGORIES } from "../data/categories.js";
 
 function isWorker(role) {
