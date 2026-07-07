@@ -2,8 +2,9 @@ import { POPULAR_CITIES } from "../data/categories.js";
 import { escapeHtml } from "../utils/format.js";
 import { renderRadPreview } from "./radovi.js";
 import { renderMojKrug } from "./follow.js";
+import { HOME_CARD_ICONS } from "./homeIcons.js";
 
-export function renderHomeTips({ tips = [], loading = false, myHomeTip = null, userRole = "" }) {
+export function renderHomeTips({ tips = [], loading = false, myHomeTip = null, userRole = "", currentUid = "" }) {
   if (loading) {
     return `
       <section class="home-tips">
@@ -33,6 +34,8 @@ export function renderHomeTips({ tips = [], loading = false, myHomeTip = null, u
   const cards = tips
     .map((tip) => {
       const fresh = tip.isFresh ? `<span class="tip-card__badge">NOVO</span>` : "";
+      const canReport =
+        currentUid && tip.authorUid && tip.authorUid !== currentUid && tip.id && !tip.id.startsWith("placeholder");
       return `
         <article class="tip-card">
           <div class="tip-card__head">
@@ -42,6 +45,11 @@ export function renderHomeTips({ tips = [], loading = false, myHomeTip = null, u
           <p class="tip-card__teaser">${escapeHtml(tip.teaser)}</p>
           ${tip.authorDisplayName ? `<p class="tip-card__author">${escapeHtml(tip.authorDisplayName)}</p>` : ""}
           ${tip.body ? `<details class="tip-card__details"><summary>Pročitaj više</summary><p>${escapeHtml(tip.body)}</p></details>` : ""}
+          ${
+            canReport
+              ? `<button type="button" class="btn btn--ghost btn--sm btn--danger tip-card__report" data-report-tip="${escapeHtml(tip.id)}">Prijavi savjet</button>`
+              : ""
+          }
         </article>`;
     })
     .join("");
@@ -67,6 +75,7 @@ export function renderHome({
   userCity = "",
   following = [],
   followedWorks = [],
+  currentUid = "",
 }) {
   const chips = POPULAR_CITIES.map((city) => {
     const active = selectedCity === city ? " chip--active" : "";
@@ -120,28 +129,28 @@ export function renderHome({
       </div>
       <div class="home-grid">
         <button type="button" class="home-card home-card--blue home-card--btn" data-action="lista-top">
-          <span class="home-card__icon">★</span>
+          ${HOME_CARD_ICONS.top}
           <h3>Najbolje ocijenjeni</h3>
           <p>${cityHint}</p>
         </button>
         <button type="button" class="home-card home-card--green home-card--btn" data-action="lista-slobodan">
-          <span class="home-card__icon">🔧</span>
+          ${HOME_CARD_ICONS.slobodan}
           <h3>Slobodni sada</h3>
           <p>${slobodniSub}</p>
         </button>
         <button type="button" class="home-card home-card--purple home-card--btn" data-action="lista-blizu">
-          <span class="home-card__icon">📍</span>
+          ${HOME_CARD_ICONS.blizu}
           <h3>Blizu mene</h3>
           <p>${blizuSub}</p>
         </button>
         <button type="button" class="home-card home-card--neutral home-card--btn" data-action="kalkulator">
-          <span class="home-card__icon">🧮</span>
+          ${HOME_CARD_ICONS.kalkulator}
           <h3>Kalkulator</h3>
           <p>Brza procjena cijene usluge</p>
         </button>
       </div>
       ${renderMojKrug({ following, followedWorks })}
       ${renderRadPreview({ works: worksPreview, slideIndex: workSlideIndex })}
-      ${renderHomeTips({ tips, loading: tipsLoading, myHomeTip, userRole })}
+      ${renderHomeTips({ tips, loading: tipsLoading, myHomeTip, userRole, currentUid })}
     </div>`;
 }

@@ -1,4 +1,5 @@
 import { escapeHtml, formatTimestamp } from "../utils/format.js";
+import { renderVerifiedSuffix } from "./verifiedBadge.js";
 
 export function renderOfferCard(offer) {
   const title = escapeHtml(offer.title || "Ponuda");
@@ -8,6 +9,7 @@ export function renderOfferCard(offer) {
   const when = escapeHtml(offer.availableWhen || "");
   const date = formatTimestamp(offer.timestamp);
   const author = escapeHtml(offer.authorName || "Korisnik");
+  const authorLine = `${author}${renderVerifiedSuffix(offer)}`;
 
   return `
     <a class="job-card" href="#/ponuda/${escapeHtml(offer.id)}">
@@ -18,7 +20,7 @@ export function renderOfferCard(offer) {
       <p class="job-card__meta">${category} · ${city}</p>
       <p class="job-card__desc">${escapeHtml((offer.description || "").slice(0, 160))}${(offer.description || "").length > 160 ? "…" : ""}</p>
       <div class="job-card__foot">
-        <span>${author}</span>
+        <span>${authorLine}</span>
         <span>${budget}${when ? ` · ${when}` : ""}</span>
       </div>
     </a>`;

@@ -5,6 +5,7 @@ import { renderRatingSection } from "./rating.js";
 import { renderFollowButton, renderFollowerCount } from "./follow.js";
 import { renderMojaAktivnost } from "./aktivnost.js";
 import { renderOutdoorPlan } from "./outdoorPlan.js";
+import { renderProfileMetaBadges } from "./verifiedBadge.js";
 import { ALL_CITIES, KREATOR_CATEGORIES, MAJSTOR_CATEGORIES } from "../data/categories.js";
 
 function isWorker(role) {
@@ -140,6 +141,7 @@ export function renderProfil({
             <input type="file" id="profile-image-input" accept="image/*" hidden />
           </label>
           <h3 class="profile-card__name">${escapeHtml(user.displayName || "Korisnik")}</h3>
+          ${renderProfileMetaBadges(user)}
           <p class="profile-card__meta">${escapeHtml(role)} · ${escapeHtml(user.category || user.occupation || "—")}</p>
           <p class="profile-card__meta">${escapeHtml(user.city || "—")} · ${escapeHtml(user.status || "—")}</p>
           <p class="profile-card__rating">${rating}</p>
@@ -262,6 +264,7 @@ export function renderPregledProfila({
       <article class="profile-card">
         ${avatarHtml}
         <h3 class="profile-card__name">${name}</h3>
+        ${renderProfileMetaBadges(user)}
         <p class="profile-card__meta">${role} · ${category}</p>
         <p class="profile-card__meta">${city} · ${status}</p>
         <p class="profile-card__rating">${escapeHtml(rating)}</p>

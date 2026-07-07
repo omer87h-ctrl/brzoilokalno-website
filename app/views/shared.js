@@ -1,5 +1,6 @@
 import { displayName, escapeHtml, formatRating } from "../utils/format.js";
 import { profileAvatarUrl } from "../services/storageService.js";
+import { renderVerifiedSuffix } from "./verifiedBadge.js";
 
 function renderUserAvatar(user) {
   const avatarUrl = profileAvatarUrl(user);
@@ -23,7 +24,7 @@ export function renderUserList(users, { emptyText = "Nema rezultata." } = {}) {
       const category = escapeHtml(user.category || user.occupation || "—");
       const status = escapeHtml(user.status || "—");
       const rating = escapeHtml(formatRating(user.ratingAverage, user.ratingCount));
-      const verified = user.profileVerified ? `<span class="user-card__verified" title="Verifikovan">✓</span>` : "";
+      const verified = renderVerifiedSuffix(user);
 
       return `
         <a class="user-card" href="#/pregled/${user.id}">

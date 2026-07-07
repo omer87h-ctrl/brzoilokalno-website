@@ -135,11 +135,18 @@ export function renderActivityHideModal() {
     </div>`;
 }
 
-export function renderReportModal({ title, subtitle = "", error = "", selectedReason = REPORT_REASONS[0] }) {
-  const reasons = REPORT_REASONS.map(
+export function renderReportModal({
+  title,
+  subtitle = "",
+  error = "",
+  selectedReason,
+  reasons = REPORT_REASONS,
+}) {
+  const defaultReason = selectedReason || reasons[0];
+  const reasonRows = reasons.map(
     (reason) => `
       <label class="check-row">
-        <input type="radio" name="reportReason" value="${escapeHtml(reason)}" ${reason === selectedReason ? "checked" : ""}>
+        <input type="radio" name="reportReason" value="${escapeHtml(reason)}" ${reason === defaultReason ? "checked" : ""}>
         <span>${escapeHtml(reason)}</span>
       </label>`
   ).join("");

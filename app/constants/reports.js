@@ -5,3 +5,11 @@ export const REPORT_REASONS = [
   "Prevara",
   "Ostalo",
 ];
+
+export const TIP_REPORT_REASONS = [
+  "Neprimjereni sadržaj",
+  "Lažne informacije",
+  "Spam",
+  "Prevara",
+  "Ostalo",
+];

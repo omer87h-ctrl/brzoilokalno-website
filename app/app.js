@@ -61,6 +61,7 @@ import {
   submitRating,
   submitJobReport,
   submitWorkReport,
+  submitTipReport,
   updateApplicationStatus,
   updateUserProfile,
   updateWorkPublic,
@@ -106,6 +107,7 @@ import { getHiddenActivityAppIds, hideActivityAppId } from "./utils/activityHide
 import { fetchOutdoorForecast, buildOutdoorOutlook } from "./services/weatherOutlook.js";
 import { renderOutdoorPlanBody } from "./views/outdoorPlan.js";
 import { renderCreateJobForm, renderCreateOfferForm, renderTipEditorForm, renderAddWorkForm, renderActivityHideModal, renderReportModal } from "./views/forms.js";
+import { TIP_REPORT_REASONS } from "./constants/reports.js";
 import { renderScreenError, renderScreenLoading } from "./views/shared.js";
 
 const root = document.getElementById("app-root");
@@ -131,6 +133,7 @@ let modalError = "";
 let pendingActivityHideId = "";
 let reportTarget = null;
 let reportCache = { job: null, work: null };
+let homeTipsCache = [];
 let kalkState = { module: 0 };
 let unreadNotifications = 0;
 let myTip = null;
@@ -345,6 +348,15 @@ function buildModalsHtml() {
       error: modalError,
     });
   }
+  if (activeModal === "report" && reportTarget?.type === "tip") {
+    return renderReportModal({
+      title: "Prijavi savjet",
+      subtitle: reportTarget.data?.title ? `Savjet: ${reportTarget.data.title}` : "",
+      error: modalError,
+      reasons: TIP_REPORT_REASONS,
+      selectedReason: TIP_REPORT_REASONS[0],
+    });
+  }
   return "";
 }
 
@@ -391,6 +403,7 @@ async function loadRouteContent(route) {
     if (currentUser?.uid && (profile?.role === "majstor" || profile?.role === "kreator")) {
       myHomeTip = await fetchMyHomeTip(currentUser.uid);
     }
+    homeTipsCache = tips;
     return renderHome({
       selectedCity,
       worksPreview,
@@ -403,6 +416,7 @@ async function loadRouteContent(route) {
       userCity: profile?.city || "",
       following,
       followedWorks,
+      currentUid: currentUser?.uid || "",
     });
   }
 
@@ -1705,6 +1719,8 @@ function bindSearchAndFilters() {
             reason,
             details,
           });
+        } else if (reportTarget.type === "tip" && reportTarget.data) {
+          await submitTipReport({ reporter, tip: reportTarget.data, reason, details });
         }
         reportTarget = null;
         activeModal = null;
@@ -1773,6 +1789,20 @@ function bindHomeActions() {
 
   const kalkulatorBtn = document.querySelector('[data-action="kalkulator"]');
   if (kalkulatorBtn) kalkulatorBtn.addEventListener("click", () => navigateTo("#/kalkulator"));
+
+  document.querySelectorAll("[data-report-tip]").forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const tipId = btn.dataset.reportTip;
+      const tip = homeTipsCache.find((t) => t.id === tipId);
+      if (!tip) return;
+      reportTarget = { type: "tip", data: tip };
+      activeModal = "report";
+      modalError = "";
+      renderApp();
+    });
+  });
 
   document.querySelectorAll(".chip--btn[data-city]").forEach((chip) => {
     chip.addEventListener("click", () => {

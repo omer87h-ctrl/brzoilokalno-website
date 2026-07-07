@@ -589,6 +589,94 @@ body.app-body.has-app-shell #app-root {
   margin-bottom: 0.35rem;
 }
 
+.home-card__icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.55rem;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.home-card__icon-svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.home-card__icon-wrap--blue {
+  color: #6ea8ff;
+  border-color: rgba(110, 168, 255, 0.28);
+}
+
+.home-card__icon-wrap--green {
+  color: #7ddf8a;
+  border-color: rgba(125, 223, 138, 0.28);
+}
+
+.home-card__icon-wrap--purple {
+  color: #e0a96d;
+  border-color: rgba(224, 169, 109, 0.28);
+}
+
+.home-card__icon-wrap--amber {
+  color: #f28c28;
+  border-color: rgba(242, 140, 40, 0.32);
+}
+
+.provjereno-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid rgba(242, 140, 40, 0.45);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--accent);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.provjereno-badge__icon {
+  flex-shrink: 0;
+}
+
+.busy-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 197, 66, 0.45);
+  background: rgba(255, 255, 255, 0.04);
+  color: #f5c542;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.profile-meta-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  margin: 0.35rem 0 0.5rem;
+}
+
+.job-card__foot .provjereno-badge,
+.detail-card__meta .provjereno-badge {
+  margin-left: 0.25rem;
+}
+
+.tip-card__report {
+  margin-top: 0.5rem;
+}
+
 .home-card h3 {
   margin: 0 0 0.25rem;
   font-size: 0.88rem;

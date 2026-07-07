@@ -2,6 +2,7 @@ import { escapeHtml, formatApplicationStatus, formatTimestamp } from "../utils/f
 import { renderCityFilterChip, renderMyJobsFilterChip, renderOfferCard, renderPosloviTabs } from "./ponude.js";
 import { renderScreenFeed } from "./screenFeed.js";
 import { chatUnreadForUser, renderChatShortcut } from "./chatShortcut.js";
+import { renderVerifiedSuffix } from "./verifiedBadge.js";
 
 function canApply(role) {
   return role === "majstor" || role === "kreator";
@@ -84,6 +85,7 @@ function renderJobCards(jobs, { myRole, applicationsByJobId, chatEnabled, curren
       const when = escapeHtml(job.whenNeeded || job.neededWhen || "");
       const date = formatTimestamp(job.timestamp);
       const author = escapeHtml(job.authorName || "Korisnik");
+      const authorLine = `${author}${renderVerifiedSuffix(job)}`;
       const isOwner = job.userId === currentUid;
       const myApp = applicationsByJobId[job.id] || null;
 
@@ -117,7 +119,7 @@ function renderJobCards(jobs, { myRole, applicationsByJobId, chatEnabled, curren
             <p class="job-card__meta">${category} · ${city}</p>
             <p class="job-card__desc">${escapeHtml((job.description || "").slice(0, 160))}${(job.description || "").length > 160 ? "…" : ""}</p>
             <div class="job-card__foot">
-              <span>${author}</span>
+              <span>${authorLine}</span>
               <span>${budget}${when ? ` · ${when}` : ""}</span>
             </div>
           </a>

@@ -454,6 +454,30 @@ export async function submitWorkReport({ reporter, work, ownerName, reason, deta
   });
 }
 
+export async function submitTipReport({ reporter, tip, reason, details }) {
+  const title = tip.title || "";
+  const body = tip.body || tip.teaser || "";
+  const reportedContent = [title ? `Naslov: ${title}` : "", body ? body.slice(0, 400) : ""]
+    .filter(Boolean)
+    .join("\n");
+
+  return submitContentReport({
+    reporterUid: reporter.uid,
+    reporterName: reporter.displayName || reporter.email || "Korisnik",
+    reporterEmail: reporter.email || "",
+    contentCollection: "home_master_tips",
+    contentId: tip.id,
+    ownerUid: tip.authorUid || "",
+    ownerName: tip.authorDisplayName || "Korisnik",
+    ownerEmail: "",
+    sourceScreen: "tip",
+    targetType: "tip",
+    reason,
+    details,
+    reportedContent,
+  });
+}
+
 export async function deleteAccountData(uid) {
   const db = getDb();
   await Promise.all([

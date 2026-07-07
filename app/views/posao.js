@@ -1,5 +1,6 @@
 import { escapeHtml, formatApplicationStatus, formatTimestamp } from "../utils/format.js";
 import { renderChatShortcut } from "./chatShortcut.js";
+import { renderVerifiedSuffix } from "./verifiedBadge.js";
 
 function statusClass(status) {
   return `status-badge status-badge--${escapeHtml(status || "unknown")}`;
@@ -49,6 +50,7 @@ export function renderPosao({
   const when = escapeHtml(job.whenNeeded || job.neededWhen || "");
   const date = formatTimestamp(job.timestamp);
   const author = escapeHtml(job.authorName || "Korisnik");
+  const authorLine = `${author}${renderVerifiedSuffix(job)}`;
   const desc = escapeHtml(job.description || "Nema opisa.");
   const isOwner = job.userId === currentUid;
   const ownerApps = isOwner ? applications : [];
@@ -96,7 +98,7 @@ export function renderPosao({
         <div class="app-list">
           ${ownerApps
             .map((app) => {
-              const name = escapeHtml(app.workerName || "Korisnik");
+              const name = `${escapeHtml(app.workerName || "Korisnik")}${renderVerifiedSuffix(app)}`;
               const st = app.status || "pending";
               const meta = escapeHtml(
                 [app.workerRole, app.workerCity, app.workerCategory || app.workerOccupation]
@@ -156,7 +158,7 @@ export function renderPosao({
       <article class="detail-card">
         <h2 class="detail-card__title">${title}</h2>
         <p class="detail-card__meta">${category} · ${city} · ${escapeHtml(date)}</p>
-        <p class="detail-card__meta">${author}</p>
+        <p class="detail-card__meta">${authorLine}</p>
         <p class="detail-card__budget">${budget}${when ? ` · ${when}` : ""}</p>
         <p class="detail-card__desc">${desc}</p>
         ${actionHtml}
