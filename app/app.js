@@ -377,6 +377,23 @@ function closeActiveModal() {
   renderModalUpdate();
 }
 
+/** Zatvori modal i osvježi ekran (hashchange se ne okida ako si već na istoj ruti). */
+function finishModalAction({ navigate = null } = {}) {
+  activeModal = null;
+  modalError = "";
+  pendingActivityHideId = "";
+  reportTarget = null;
+  lastRenderedContentHtml = "";
+  if (navigate) {
+    const target = navigate.startsWith("#") ? navigate : `#${navigate}`;
+    if (getHashRoute() !== target) {
+      navigateTo(target);
+      return;
+    }
+  }
+  renderApp();
+}
+
 function getFeedScroller() {
   return getMainScroller();
 }
@@ -1518,8 +1535,8 @@ function bindProfileAndModals() {
           imageUrls: imageData,
           paths: imageData,
         });
-        activeModal = null;
-        renderApp();
+        invalidateProfilCache();
+        finishModalAction();
       } catch (error) {
         console.error("Add work failed:", error);
         modalError = "Spremanje rada nije uspjelo.";
@@ -1680,14 +1697,17 @@ function bindProfileAndModals() {
         renderModalUpdate();
         return;
       }
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
       try {
         await createJob({ profile, authUser: currentUser, fields });
-        activeModal = null;
-        navigateTo("#/poslovi");
+        finishModalAction();
       } catch (error) {
         console.error("Create job failed:", error);
         modalError = formatFirestoreError(error) || "Objava posla nije uspjela.";
         renderModalUpdate();
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
       }
     });
   }
@@ -1720,14 +1740,17 @@ function bindProfileAndModals() {
         renderModalUpdate();
         return;
       }
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
       try {
         await createOffer({ profile, authUser: currentUser, fields });
-        activeModal = null;
-        navigateTo("#/ponude");
+        finishModalAction({ navigate: "#/ponude" });
       } catch (error) {
         console.error("Create offer failed:", error);
-        modalError = "Objava ponude nije uspjela.";
+        modalError = formatFirestoreError(error) || "Objava ponude nije uspjela.";
         renderModalUpdate();
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
       }
     });
   }
@@ -1762,8 +1785,8 @@ function bindProfileAndModals() {
           body,
           existingId: myTip?.id || null,
         });
-        activeModal = null;
-        renderApp();
+        invalidateProfilCache();
+        finishModalAction();
       } catch (error) {
         modalError = "Spremanje savjeta nije uspjelo.";
         renderModalUpdate();
