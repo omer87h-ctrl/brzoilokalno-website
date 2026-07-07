@@ -3,7 +3,7 @@ import { routeToNav } from "../utils/route.js";
 import { ADMIN_EMAIL } from "../firebase.js";
 import { escapeHtml } from "../utils/format.js";
 
-export function renderShell({ route, userEmail, contentHtml, unreadNotifications = 0, adminOnly = true }) {
+export function renderShell({ route, userEmail, contentHtml, unreadNotifications = 0, adminOnly = true, loading = false }) {
   const activeNav = routeToNav(route);
   const notifBadge =
     unreadNotifications > 0
@@ -11,7 +11,7 @@ export function renderShell({ route, userEmail, contentHtml, unreadNotifications
       : "";
 
   return `
-    <div class="app-shell">
+    <div class="app-shell${loading ? " app-shell--loading" : ""}">
       <header class="app-topbar">
         <div class="app-topbar__brand">
           <img src="icons/icon-192.png" alt="" width="32" height="32">

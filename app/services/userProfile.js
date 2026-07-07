@@ -4,12 +4,10 @@ import { POLICY_VERSION } from "../constants/policy.js";
 
 export function isProfileComplete(profile) {
   if (!profile) return false;
-  if ((profile.role || "").trim()) return true;
-  return (
-    profile.acceptedTerms === true &&
-    profile.acceptedPrivacyPolicy === true &&
-    (profile.city || "").trim().length > 0
-  );
+  const role = (profile.role || "").trim();
+  const city = (profile.city || "").trim();
+  if (!role || !city) return false;
+  return profile.acceptedTerms === true && profile.acceptedPrivacyPolicy === true;
 }
 
 export async function createUserProfile(uid, data) {

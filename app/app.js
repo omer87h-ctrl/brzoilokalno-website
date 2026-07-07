@@ -397,7 +397,7 @@ function setRoot(html) {
 
 function showLoading() {
   setRoot(`
-    <div class="screen screen--center">
+    <div class="screen screen--center screen--boot-loading">
       <div class="loader" aria-label="Učitavanje"></div>
       <p class="loader-text">Učitavanje…</p>
     </div>`);
@@ -452,7 +452,7 @@ function buildModalsHtml() {
   return "";
 }
 
-function renderShellWithContent(route, contentHtml, { restoreScroll = true } = {}) {
+function renderShellWithContent(route, contentHtml, { restoreScroll = true, loading = false } = {}) {
   setRoot(
     renderShell({
       route,
@@ -460,6 +460,7 @@ function renderShellWithContent(route, contentHtml, { restoreScroll = true } = {
       contentHtml: contentHtml + buildModalsHtml(),
       unreadNotifications,
       adminOnly: webConfig?.adminOnly === true,
+      loading,
     })
   );
   lastScrollRoute = route;
@@ -998,9 +999,11 @@ async function renderApp() {
   }
 
   if (!isProfileComplete(profile)) {
+    const isGoogleUser = currentUser.providerData?.some((p) => p.providerId === "google.com");
     setRoot(
       renderOnboarding({
         user: currentUser,
+        isGoogleUser,
         error: authError,
         defaults: {
           displayName: profile?.displayName || currentUser.displayName || "",
@@ -1018,7 +1021,7 @@ async function renderApp() {
   skipRouteLoading = false;
   if (!softUpdate && !bootInitialLoad) {
     captureMainScroll(lastScrollRoute);
-    renderShellWithContent(route, renderScreenLoading(), { restoreScroll: false });
+    renderShellWithContent(route, renderScreenLoading(), { restoreScroll: false, loading: true });
   }
 
   try {
@@ -2237,6 +2240,13 @@ function bindHomeActions() {
 
 async function handleGoogleSignIn() {
   authError = "";
+  const terms = document.getElementById("google-accepted-terms");
+  const privacy = document.getElementById("google-accepted-privacy");
+  if (!terms?.checked || !privacy?.checked) {
+    authError = "Morate prihvatiti Pravila i Politiku privatnosti.";
+    renderApp();
+    return;
+  }
   try {
     const result = await signInWithGoogle();
     await afterAuthSuccess(result.user);

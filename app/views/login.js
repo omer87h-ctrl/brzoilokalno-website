@@ -1,4 +1,5 @@
 import { APP_LINKS } from "../firebase.js";
+import { POLICY_LINKS } from "../constants/policy.js";
 import { escapeHtml } from "../utils/format.js";
 
 export function renderLogin({ error = "", showRegisterLink = true }) {
@@ -9,6 +10,16 @@ export function renderLogin({ error = "", showRegisterLink = true }) {
         <h1 class="status-card__title">Prijava</h1>
         <p class="status-card__text status-card__text--muted">Prijavi se na svoj nalog</p>
         ${error ? `<p class="admin-login__error">${escapeHtml(error)}</p>` : ""}
+        <div class="auth-consent" id="google-consent">
+          <label class="auth-check">
+            <input type="checkbox" id="google-accepted-terms" name="acceptedTerms">
+            <span>Prihvatam <a href="${POLICY_LINKS.terms}" target="_blank" rel="noopener noreferrer">Pravila i uslove</a></span>
+          </label>
+          <label class="auth-check">
+            <input type="checkbox" id="google-accepted-privacy" name="acceptedPrivacy">
+            <span>Prihvatam <a href="${POLICY_LINKS.privacy}" target="_blank" rel="noopener noreferrer">Politiku privatnosti</a></span>
+          </label>
+        </div>
         <button type="button" class="btn btn--google btn--block" id="google-signin-btn">
           <span class="btn--google__icon" aria-hidden="true">${googleIconSvg()}</span>
           Prijavi se s Googleom

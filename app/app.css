@@ -111,6 +111,10 @@ body.app-body.has-app-shell #app-root {
   padding-bottom: max(1.25rem, env(safe-area-inset-bottom, 0px));
 }
 
+.screen--boot-loading {
+  overflow: hidden;
+}
+
 .loader {
   width: 40px;
   height: 40px;
@@ -310,6 +314,20 @@ body.app-body.has-app-shell #app-root {
   flex-direction: column;
   background: var(--bg);
   overflow: hidden;
+}
+
+.app-shell--loading .app-topbar__meta {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.app-shell--loading .app-main {
+  overflow: hidden;
+}
+
+.app-shell--loading .bottom-nav {
+  pointer-events: none;
+  opacity: 0.55;
 }
 
 .app-topbar {
@@ -999,7 +1017,10 @@ body.app-body.has-app-shell #app-root {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 40vh;
+  width: 100%;
+  min-height: 45vh;
+  padding: 1rem 0;
+  box-sizing: border-box;
 }
 
 .empty-state {
@@ -1587,6 +1608,18 @@ body.app-body.has-app-shell #app-root {
 
 .auth-check a {
   color: var(--accent);
+}
+
+.auth-consent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin: 0.25rem 0 0.85rem;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  text-align: left;
 }
 
 .auth-radio-group {
@@ -3262,6 +3295,18 @@ a {
 @media (max-width: 767px) {
   .app-main {
     scrollbar-gutter: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .app-main::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  .screen--center.screen--auth {
+    overflow-x: hidden;
   }
 }
 
