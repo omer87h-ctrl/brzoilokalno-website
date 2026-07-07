@@ -697,7 +697,6 @@ function renderShellWithContent(route, contentHtml, { restoreScroll = true, load
       route,
       userEmail: currentUser?.email || "",
       contentHtml: contentHtml + buildModalsHtml(),
-      unreadBellNotifications,
       unreadPosloviNotifications,
       adminOnly: webConfig?.adminOnly === true,
       loading,

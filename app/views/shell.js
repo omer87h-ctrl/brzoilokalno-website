@@ -21,7 +21,6 @@ export function renderShell({
           <span>Brzo i <em>Lokalno</em></span>
         </div>
         <div class="app-topbar__meta">
-          <a href="#/postavke" class="app-topbar__settings" title="Postavke">⚙</a>
           <button type="button" class="app-topbar__logout" id="logout-btn" title="Odjava">⎋</button>
         </div>
       </header>
