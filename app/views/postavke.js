@@ -83,7 +83,6 @@ export function renderPostavke({
         <h3 class="settings-group__title">Podrška</h3>
         <div class="settings-links">
           <a class="btn btn--ghost btn--block" href="${supportMailto}">Prijavi problem</a>
-          <a class="btn btn--ghost btn--block" href="#/obavijesti">Obavijesti</a>
         </div>
         <p class="form-hint">Brzo i Lokalno Web — ista baza kao Android aplikacija.</p>
       </section>
