@@ -162,6 +162,8 @@ let pendingActivityHideId = "";
 let reportTarget = null;
 let reportCache = { job: null, work: null };
 let homeTipsCache = [];
+let homeTipsCacheFetchedAt = 0;
+const HOME_TIPS_TTL_MS = 20 * 60 * 1000;
 let chatBlockStatus = { iBlocked: false, theyBlocked: false };
 let chatOtherMeta = null;
 let brzoTopCandidate = null;
@@ -523,10 +525,19 @@ async function refreshProfileCity() {
 
 async function loadRouteContent(route) {
   if (route.name === "home") {
+    const tipsFresh =
+      homeTipsCache.length > 0 && Date.now() - homeTipsCacheFetchedAt < HOME_TIPS_TTL_MS;
+    const tipsPromise = tipsFresh
+      ? Promise.resolve(homeTipsCache)
+      : fetchHomeTips(4).then((tips) => {
+          homeTipsCache = tips;
+          homeTipsCacheFetchedAt = Date.now();
+          return tips;
+        });
     const [worksPreview, profile, tips] = await Promise.all([
       fetchPublicWorks(3),
       currentUser?.uid ? fetchUserProfile(currentUser.uid) : Promise.resolve(null),
-      fetchHomeTips(4),
+      tipsPromise,
     ]);
     let following = [];
     let followedWorks = [];
@@ -540,7 +551,6 @@ async function loadRouteContent(route) {
     if (currentUser?.uid && (profile?.role === "majstor" || profile?.role === "kreator")) {
       myHomeTip = await fetchMyHomeTip(currentUser.uid);
     }
-    homeTipsCache = tips;
     return renderHome({
       selectedCity,
       showAllCities: homeShowAllCities,
@@ -2105,7 +2115,7 @@ function bindSearchAndFilters() {
     dot.addEventListener("click", (event) => {
       event.preventDefault();
       workSlideIndex = Number(dot.dataset.workDot) || 0;
-      renderApp();
+      softRenderApp();
     });
   });
 
@@ -2339,14 +2349,14 @@ function bindHomeActions() {
     chip.addEventListener("click", () => {
       const city = chip.dataset.city || "";
       selectedCity = selectedCity === city ? "" : city;
-      renderApp();
+      softRenderApp();
     });
   });
 
   document.querySelectorAll('[data-action="toggle-cities"]').forEach((btn) => {
     btn.addEventListener("click", () => {
       homeShowAllCities = !homeShowAllCities;
-      renderApp();
+      softRenderApp();
     });
   });
 }
