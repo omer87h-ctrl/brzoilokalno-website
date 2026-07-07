@@ -112,6 +112,8 @@ function applySiteConfig() {
   document.querySelectorAll('[data-store="huawei"]').forEach((btn) => {
     if (config.huaweiAppGallery) {
       btn.href = config.huaweiAppGallery;
+      btn.removeAttribute("target");
+      btn.removeAttribute("rel");
     }
   });
 

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Preuzmi Brzo i Lokalno — AppGallery</title>
   <meta name="robots" content="noindex">
+  <meta http-equiv="refresh" content="0;url=https://appgallery.cloud.huawei.com/appDetail?pkgName=com.brzoilokalno&channelId=website&referrer=brzoilokalno.com&detailType=0&calltype=AGDLINK">
   <link rel="icon" href="assets/app-icon.png" type="image/png">
   <style>
     body {
@@ -18,35 +19,39 @@
       color: #f2f2f2;
       text-align: center;
     }
-    a { color: #f28c28; }
-    p { max-width: 22rem; line-height: 1.5; color: #b8b8b8; }
+    a {
+      color: #f28c28;
+      font-weight: 600;
+    }
+    p {
+      max-width: 24rem;
+      line-height: 1.55;
+      color: #b8b8b8;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.85rem 1.25rem;
+      border-radius: 12px;
+      background: #f28c28;
+      color: #1a1008;
+      text-decoration: none;
+      font-weight: 700;
+    }
   </style>
 </head>
 <body>
   <div>
-    <p>Otvaranje <strong>Brzo i Lokalno</strong> u Huawei AppGallery…</p>
-    <p><a id="fallback" href="#">Klikni ovdje ako se ništa ne otvori</a></p>
+    <p>Preusmjeravanje na <strong>Brzo i Lokalno</strong> u Huawei AppGallery…</p>
+    <a class="btn" id="store-link" href="https://appgallery.cloud.huawei.com/appDetail?pkgName=com.brzoilokalno&channelId=website&referrer=brzoilokalno.com&detailType=0&calltype=AGDLINK">Otvori AppGallery</a>
+    <p>Ako link ne radi: instaliraj <strong>Huawei AppGallery</strong> i traži <strong>Brzo i Lokalno</strong>.</p>
   </div>
   <script>
     (function () {
-      var PKG = "com.brzoilokalno";
-      var WEB =
-        "https://appgallery.cloud.huawei.com/appDetail?pkgName=" +
-        PKG +
-        "&channelId=website&referrer=brzoilokalno.com&detailType=0&calltype=AGDLINK";
-      var fallback = document.getElementById("fallback");
-      fallback.href = WEB;
-
-      if (/Android/i.test(navigator.userAgent)) {
-        window.location.href = "appmarket://details?id=" + PKG;
-      } else {
-        window.location.replace(WEB);
-        return;
-      }
-
-      window.setTimeout(function () {
-        window.location.replace(WEB);
-      }, 900);
+      var url =
+        "https://appgallery.cloud.huawei.com/appDetail?pkgName=com.brzoilokalno&channelId=website&referrer=brzoilokalno.com&detailType=0&calltype=AGDLINK";
+      document.getElementById("store-link").href = url;
+      window.location.replace(url);
     })();
   </script>
 </body>
