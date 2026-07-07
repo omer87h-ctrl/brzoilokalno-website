@@ -433,6 +433,8 @@ function stopChatListener() {
     chatUnsubscribe();
     chatUnsubscribe = null;
   }
+  closeChatMessageSheet();
+  closeChatMessageDetails();
   chatContext = null;
   chatReplyDraft = null;
   chatMessageActionTarget = null;
@@ -491,34 +493,36 @@ function findChatMessageById(messageId) {
   return chatMessagesCache.find((msg) => msg.id === messageId) || null;
 }
 
+function openChatMessageSheetFromBubble(bubble) {
+  const messageId = bubble?.dataset?.msgId;
+  if (!messageId) return;
+  const msg = findChatMessageById(messageId);
+  if (msg) openChatMessageSheet(msg);
+}
+
 function bindChatMessageGestures() {
   const list = document.getElementById("chat-messages");
   if (!list || list.dataset.gesturesBound === "1") return;
   list.dataset.gesturesBound = "1";
 
   let pressTimer = null;
-  let pressTargetId = "";
+  let pressBubble = null;
+  let startX = 0;
+  let startY = 0;
 
   const clearPress = () => {
     if (pressTimer) {
       clearTimeout(pressTimer);
       pressTimer = null;
     }
-    pressTargetId = "";
-  };
-
-  const openFromBubble = (bubble) => {
-    const messageId = bubble?.dataset?.msgId;
-    if (!messageId) return;
-    const msg = findChatMessageById(messageId);
-    if (msg) openChatMessageSheet(msg);
+    pressBubble = null;
   };
 
   list.addEventListener("contextmenu", (event) => {
     const bubble = event.target.closest(".chat-bubble[data-msg-id]");
     if (!bubble) return;
     event.preventDefault();
-    openFromBubble(bubble);
+    openChatMessageSheetFromBubble(bubble);
   });
 
   list.addEventListener("dblclick", (event) => {
@@ -528,59 +532,76 @@ function bindChatMessageGestures() {
     if (msg) openChatMessageDetails(msg);
   });
 
-  list.addEventListener("touchstart", (event) => {
+  list.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "mouse" && event.button !== 0) return;
     const bubble = event.target.closest(".chat-bubble[data-msg-id]");
     if (!bubble) return;
-    pressTargetId = bubble.dataset.msgId || "";
-    clearPress();
+    pressBubble = bubble;
+    startX = event.clientX;
+    startY = event.clientY;
+    if (pressTimer) clearTimeout(pressTimer);
     pressTimer = setTimeout(() => {
-      if (pressTargetId === bubble.dataset.msgId) {
-        openFromBubble(bubble);
+      if (pressBubble === bubble) {
+        openChatMessageSheetFromBubble(bubble);
       }
       clearPress();
-    }, 480);
-  }, { passive: true });
+    }, 550);
+  });
 
-  list.addEventListener("touchend", clearPress);
-  list.addEventListener("touchmove", clearPress);
-  list.addEventListener("touchcancel", clearPress);
+  list.addEventListener("pointermove", (event) => {
+    if (!pressBubble) return;
+    if (Math.abs(event.clientX - startX) > 12 || Math.abs(event.clientY - startY) > 12) {
+      clearPress();
+    }
+  });
+
+  list.addEventListener("pointerup", clearPress);
+  list.addEventListener("pointercancel", clearPress);
+  list.addEventListener("pointerleave", clearPress);
+}
+
+function bindChatOverlays() {
+  closeChatMessageSheet();
+  closeChatMessageDetails();
 
   const sheet = document.getElementById("chat-msg-sheet");
+  if (!sheet || sheet.dataset.overlaysBound === "1") return;
+  sheet.dataset.overlaysBound = "1";
+
   const backdrop = document.getElementById("chat-msg-sheet-backdrop");
   if (backdrop) {
     backdrop.addEventListener("click", closeChatMessageSheet);
   }
-  if (sheet) {
-    sheet.addEventListener("click", (event) => {
-      const actionBtn = event.target.closest("[data-chat-action]");
-      if (!actionBtn || !chatMessageActionTarget) return;
-      const action = actionBtn.dataset.chatAction;
-      const msg = chatMessageActionTarget;
-      const text = String(msg.text || "");
-      if (action === "reply") {
-        chatReplyDraft = {
-          messageId: msg.id,
-          previewText: text,
-          authorLabel: messageAuthorLabelFromMsg(msg),
-        };
-        patchChatReplyBar();
-        closeChatMessageSheet();
-        document.querySelector(".chat-composer__input")?.focus();
-      } else if (action === "copy") {
-        navigator.clipboard?.writeText(text).catch(() => {});
-        closeChatMessageSheet();
-      } else if (action === "details") {
-        closeChatMessageSheet();
-        openChatMessageDetails(msg);
-      } else if (action === "delete") {
-        if (!confirm("Obrisati ovu poruku?")) return;
-        deleteChatMessage(msg.id).catch(() => {
-          alert("Brisanje poruke nije uspjelo.");
-        });
-        closeChatMessageSheet();
-      }
-    });
-  }
+
+  sheet.addEventListener("click", (event) => {
+    const actionBtn = event.target.closest("[data-chat-action]");
+    if (!actionBtn || !chatMessageActionTarget) return;
+    const action = actionBtn.dataset.chatAction;
+    const msg = chatMessageActionTarget;
+    const text = String(msg.text || "");
+    if (action === "reply") {
+      chatReplyDraft = {
+        messageId: msg.id,
+        previewText: text,
+        authorLabel: messageAuthorLabelFromMsg(msg),
+      };
+      patchChatReplyBar();
+      closeChatMessageSheet();
+      document.querySelector(".chat-composer__input")?.focus();
+    } else if (action === "copy") {
+      navigator.clipboard?.writeText(text).catch(() => {});
+      closeChatMessageSheet();
+    } else if (action === "details") {
+      closeChatMessageSheet();
+      openChatMessageDetails(msg);
+    } else if (action === "delete") {
+      if (!confirm("Obrisati ovu poruku?")) return;
+      deleteChatMessage(msg.id).catch(() => {
+        alert("Brisanje poruke nije uspjelo.");
+      });
+      closeChatMessageSheet();
+    }
+  });
 
   if (!chatDetailsListenerBound) {
     chatDetailsListenerBound = true;
@@ -1599,6 +1620,7 @@ function bindPhase3Actions() {
   }
 
   if (document.getElementById("chat-messages") && chatContext) {
+    bindChatOverlays();
     bindChatMessageGestures();
     const replyCancel = document.getElementById("chat-reply-cancel");
     if (replyCancel) {

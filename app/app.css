@@ -2431,9 +2431,6 @@ body.app-body.has-app-shell #app-root {
   padding: 0.55rem 0.75rem;
   border-radius: 14px;
   font-size: 0.88rem;
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
 }
 
 .chat-bubble--mine {
@@ -2541,6 +2538,12 @@ body.app-body.has-app-shell #app-root {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+}
+
+.chat-msg-sheet[hidden],
+.chat-msg-details[hidden] {
+  display: none !important;
+  pointer-events: none !important;
 }
 
 .chat-msg-sheet__backdrop {
