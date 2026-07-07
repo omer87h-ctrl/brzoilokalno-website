@@ -298,9 +298,11 @@ body.app-body.has-app-shell #app-root {
 }
 
 .app-main {
-  flex: 1;
+  flex: 1 1 auto;
   min-height: 0;
+  height: 0;
   padding: 0.85rem 0.85rem calc(var(--bottom-nav-h) + var(--safe-bottom) + 0.5rem);
+  overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
@@ -559,6 +561,8 @@ body.app-body.has-app-shell #app-root {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  min-height: min-content;
+  padding-bottom: 0.5rem;
 }
 
 .screen-title {
