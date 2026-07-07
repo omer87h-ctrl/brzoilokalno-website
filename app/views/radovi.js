@@ -26,30 +26,101 @@ export function renderWorkCard(work, { linkPrefix = "#/rad" } = {}) {
 }
 
 export function renderRadovi({ works }) {
+  const head = `
+    <a class="back-link" href="#/home">← Natrag</a>
+    <h2 class="screen-title">Svi javni radovi</h2>
+    <p class="screen-subtitle">Radovi majstora i kreatora</p>`;
+
   if (!works.length) {
     return `
       <div class="screen-scroll">
-        <a class="back-link" href="#/home">← Natrag</a>
-        <h2 class="screen-title">Radovi</h2>
-        <p class="screen-subtitle">Javni radovi majstora i kreatora</p>
-        <div class="empty-state">Trenutno nema javnih radova.</div>
+        ${head}
+        <div class="home-works__frame home-works__frame--empty">Još nema javno podijeljenih radova</div>
       </div>`;
   }
 
-  const cards = works.map((w) => renderWorkCard(w)).join("");
+  const cards = works
+    .map((work) => {
+      const img = workImageUrl(work);
+      const desc = escapeHtml((work.description || "").slice(0, 140) || "Javni rad");
+      const owner = escapeHtml(workOwnerName(work));
+      const date = formatTimestamp(work.timestamp);
+      const imgHtml = img
+        ? `<img class="work-grid-card__img" src="${escapeHtml(img)}" alt="" loading="lazy" />`
+        : `<div class="work-grid-card__img work-grid-card__img--placeholder">🖼</div>`;
+
+      return `
+        <a class="work-grid-card" href="#/rad/${escapeHtml(work.id)}">
+          ${imgHtml}
+          <div class="work-grid-card__body">
+            <p class="work-grid-card__desc">${desc}</p>
+            <p class="work-grid-card__meta">${owner} · ${escapeHtml(date)}</p>
+          </div>
+        </a>`;
+    })
+    .join("");
 
   return `
     <div class="screen-scroll">
-      <a class="back-link" href="#/home">← Natrag</a>
-      <h2 class="screen-title">Radovi</h2>
-      <p class="screen-subtitle">Javni radovi (${works.length})</p>
-      <div class="work-list">${cards}</div>
+      ${head}
+      <div class="work-grid">${cards}</div>
     </div>`;
 }
 
-export function renderRadPreview({ works }) {
-  if (!works.length) return "";
-  const cards = works.slice(0, 3).map((w) => renderWorkCard(w)).join("");
+export function renderRadPreview({ works, slideIndex = 0 }) {
+  const safeIndex = Math.max(0, Math.min(slideIndex, Math.max(works.length - 1, 0)));
+
+  if (!works.length) {
+    return `
+      <section class="home-works">
+        <div class="home-works__head">
+          <div>
+            <h3 class="home-works__title">Radovi majstora i kreatora</h3>
+            <p class="home-works__sub">Najnoviji javni radovi</p>
+          </div>
+          <a class="home-works__link" href="#/radovi">Vidi sve →</a>
+        </div>
+        <div class="home-works__frame home-works__frame--empty">
+          <p>Još nema javno podijeljenih radova</p>
+        </div>
+      </section>`;
+  }
+
+  const slides = works
+    .slice(0, 3)
+    .map((work, index) => {
+      const img = workImageUrl(work);
+      const desc = escapeHtml((work.description || "").slice(0, 120) || "Javni rad");
+      const owner = escapeHtml(workOwnerName(work));
+      const hidden = index === safeIndex ? "" : " home-works__slide--hidden";
+      const imgHtml = img
+        ? `<img class="home-works__image" src="${escapeHtml(img)}" alt="" loading="lazy" />`
+        : `<div class="home-works__image home-works__image--placeholder">🖼</div>`;
+
+      return `
+        <a class="home-works__slide${hidden}" href="#/rad/${escapeHtml(work.id)}" data-work-slide="${index}">
+          ${imgHtml}
+          <div class="home-works__overlay">
+            <p class="home-works__desc">${desc}</p>
+            <p class="home-works__owner">${owner}</p>
+          </div>
+        </a>`;
+    })
+    .join("");
+
+  const dots =
+    works.length > 1
+      ? `<div class="home-works__dots" aria-hidden="true">
+          ${works
+            .slice(0, 3)
+            .map((_, index) => {
+              const active = index === safeIndex ? " home-works__dot--active" : "";
+              return `<button type="button" class="home-works__dot${active}" data-work-dot="${index}"></button>`;
+            })
+            .join("")}
+        </div>`
+      : "";
+
   return `
     <section class="home-works">
       <div class="home-works__head">
@@ -59,7 +130,11 @@ export function renderRadPreview({ works }) {
         </div>
         <a class="home-works__link" href="#/radovi">Vidi sve →</a>
       </div>
-      <div class="work-list work-list--compact">${cards}</div>
+      <div class="home-works__frame" id="home-works-carousel">
+        ${slides}
+        ${works.length > 1 ? `<p class="home-works__hint">← prevuci / klikni tačke →</p>` : ""}
+      </div>
+      ${dots}
     </section>`;
 }
 

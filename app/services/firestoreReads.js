@@ -128,7 +128,40 @@ export async function fetchUsersByCategory(category, city = null) {
   return filtered.sort((a, b) => (b.ratingAverage || 0) - (a.ratingAverage || 0));
 }
 
+export async function fetchOffers(max = 30) {
+  const q = query(collection(getDb(), "offers"), orderBy("timestamp", "desc"), limit(max));
+  const snap = await getDocs(q);
+  return mapDocs(snap);
+}
+
+export async function fetchOffer(offerId) {
+  const snap = await getDoc(doc(getDb(), "offers", offerId));
+  if (!snap.exists()) return null;
+  return { id: snap.id, ...snap.data() };
+}
+
+function cityMatches(userCity, filterCity) {
+  return (userCity || "").trim().toLowerCase() === (filterCity || "").trim().toLowerCase();
+}
+
+function filterByCity(items, city, field = "city") {
+  if (!city) return items;
+  return items.filter((item) => cityMatches(item[field], city));
+}
+
 export async function fetchTopRated(city = null) {
+  if (city) {
+    const q = query(collection(getDb(), "users"), where("city", "==", city), limit(80));
+    const snap = await getDocs(q);
+    return mapDocs(snap)
+      .filter((u) => (u.ratingCount || 0) > 0 || (u.ratingAverage || 0) > 0)
+      .sort((a, b) => {
+        const diff = (b.ratingAverage || 0) - (a.ratingAverage || 0);
+        if (diff !== 0) return diff;
+        return (b.ratingCount || 0) - (a.ratingCount || 0);
+      });
+  }
+
   const q = query(
     collection(getDb(), "users"),
     where("ratingAverage", ">", 0),
@@ -136,18 +169,28 @@ export async function fetchTopRated(city = null) {
     limit(100)
   );
   const snap = await getDocs(q);
-  let users = mapDocs(snap).filter((u) => (u.ratingCount || 0) > 0 || (u.ratingAverage || 0) > 0);
-  if (city) {
-    users = users.filter((u) => (u.city || "").toLowerCase() === city.toLowerCase());
-  }
-  return users.sort((a, b) => {
-    const diff = (b.ratingAverage || 0) - (a.ratingAverage || 0);
-    if (diff !== 0) return diff;
-    return (b.ratingCount || 0) - (a.ratingCount || 0);
-  });
+  return mapDocs(snap)
+    .filter((u) => (u.ratingCount || 0) > 0 || (u.ratingAverage || 0) > 0)
+    .sort((a, b) => {
+      const diff = (b.ratingAverage || 0) - (a.ratingAverage || 0);
+      if (diff !== 0) return diff;
+      return (b.ratingCount || 0) - (a.ratingCount || 0);
+    });
 }
 
 export async function fetchAvailableUsers(city = null) {
+  if (city) {
+    const q = query(
+      collection(getDb(), "users"),
+      where("role", "in", ["majstor", "kreator"]),
+      where("status", "==", "slobodan"),
+      where("city", "==", city),
+      limit(50)
+    );
+    const snap = await getDocs(q);
+    return mapDocs(snap);
+  }
+
   const q = query(
     collection(getDb(), "users"),
     where("role", "in", ["majstor", "kreator"]),
@@ -155,11 +198,41 @@ export async function fetchAvailableUsers(city = null) {
     limit(50)
   );
   const snap = await getDocs(q);
-  let users = mapDocs(snap);
-  if (city) {
-    users = users.filter((u) => (u.city || "").toLowerCase() === city.toLowerCase());
+  return mapDocs(snap);
+}
+
+export async function fetchUsersForSearch(searchText = "", city = null) {
+  let users = city ? await fetchUsersInCity(city) : [];
+  if (!city) {
+    const q = query(
+      collection(getDb(), "users"),
+      where("role", "in", ["majstor", "kreator"]),
+      limit(120)
+    );
+    const snap = await getDocs(q);
+    users = mapDocs(snap);
   }
-  return users;
+
+  const q = searchText.trim().toLowerCase();
+  if (!q) return users;
+
+  return users.filter((user) => {
+    const parts = [
+      user.displayName,
+      user.occupation,
+      user.city,
+      user.category,
+      user.role,
+      user.description,
+    ]
+      .map((v) => String(v || "").toLowerCase())
+      .join(" ");
+    return parts.includes(q);
+  });
+}
+
+export function filterJobsOrOffersByCity(items, city) {
+  return filterByCity(items, city, "city");
 }
 
 export async function fetchUsersInCity(city = null) {

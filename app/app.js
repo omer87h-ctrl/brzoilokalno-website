@@ -26,6 +26,10 @@ import {
   fetchWork,
   fetchWorksByUser,
   fetchApplicationsForJob,
+  fetchOffers,
+  fetchOffer,
+  fetchUsersForSearch,
+  filterJobsOrOffersByCity,
   pickFastCandidates,
 } from "./services/firestoreReads.js";
 import { applyToJob, clearMyUnread, sendChatMessage, updateApplicationStatus } from "./services/firestoreWrites.js";
@@ -49,6 +53,8 @@ import { renderPosao } from "./views/posao.js";
 import { renderRad, renderRadovi } from "./views/radovi.js";
 import { renderPrijave } from "./views/prijave.js";
 import { renderChat, renderChatMessages } from "./views/chat.js";
+import { renderPretraga } from "./views/pretraga.js";
+import { renderPonudaDetail } from "./views/ponude.js";
 import { renderKalkulator } from "./views/kalkulator.js";
 import { renderScreenError, renderScreenLoading } from "./views/shared.js";
 
@@ -61,6 +67,8 @@ let authError = "";
 let booted = false;
 let selectedCity = "";
 let profileCity = "";
+let workSlideIndex = 0;
+let posloviFilterMyCity = false;
 let screenRequestId = 0;
 let chatUnsubscribe = null;
 let chatContext = null;
@@ -115,8 +123,18 @@ async function refreshProfileCity() {
 
 async function loadRouteContent(route) {
   if (route.name === "home") {
-    const worksPreview = await fetchPublicWorks(3);
-    return renderHome({ selectedCity, worksPreview });
+    const [worksPreview, profile] = await Promise.all([
+      fetchPublicWorks(3),
+      currentUser?.uid ? fetchUserProfile(currentUser.uid) : Promise.resolve(null),
+    ]);
+    return renderHome({
+      selectedCity,
+      worksPreview,
+      workSlideIndex,
+      userName: profile?.displayName || currentUser?.displayName || "",
+      userRole: profile?.role || "",
+      userCity: profile?.city || "",
+    });
   }
 
   if (route.name === "kategorije" && !route.categorySlug) {
@@ -147,10 +165,18 @@ async function loadRouteContent(route) {
     } else if (route.filter === "slobodan") {
       users = await fetchAvailableUsers(city);
     } else if (route.filter === "blizu") {
-      users = await fetchUsersInCity(city || profileCity || null);
+      const blizuCity = city || profileCity || null;
+      users = await fetchUsersInCity(blizuCity);
     }
     const filterKey = route.filter === "top" ? "top" : route.filter;
-    return renderMajstoriList({ filter: filterKey, users, city: city || profileCity || null });
+    const displayCity = route.filter === "blizu" ? city || profileCity || null : city;
+    return renderMajstoriList({ filter: filterKey, users, city: displayCity });
+  }
+
+  if (route.name === "pretraga") {
+    const city = route.city || selectedCity || null;
+    const users = await fetchUsersForSearch(route.query, city);
+    return renderPretraga({ query: route.query, users, city });
   }
 
   if (route.name === "kalkulator") {
@@ -158,8 +184,23 @@ async function loadRouteContent(route) {
   }
 
   if (route.name === "poslovi") {
-    const jobs = await fetchJobs(30);
-    return renderPoslovi({ jobs });
+    const tab = route.tab || "potraznja";
+    const [jobs, offers] = await Promise.all([fetchJobs(30), fetchOffers(30)]);
+    const cityFilter = posloviFilterMyCity ? profileCity : "";
+    const filteredJobs = cityFilter ? filterJobsOrOffersByCity(jobs, cityFilter) : jobs;
+    const filteredOffers = cityFilter ? filterJobsOrOffersByCity(offers, cityFilter) : offers;
+    return renderPoslovi({
+      jobs: filteredJobs,
+      offers: filteredOffers,
+      tab,
+      filterMyCity: posloviFilterMyCity,
+      userCity: profileCity,
+    });
+  }
+
+  if (route.name === "ponuda") {
+    const offer = await fetchOffer(route.offerId);
+    return renderPonudaDetail({ offer });
   }
 
   if (route.name === "posao") {
@@ -470,6 +511,50 @@ function bindPhase3Actions() {
   }
 }
 
+function navigateToPretraga(query) {
+  const q = (query || "").trim();
+  const queryPart = q ? encodeURIComponent(q) : "_";
+  if (selectedCity) {
+    navigateTo(`#/pretraga/${queryPart}/${encodeURIComponent(selectedCity)}`);
+  } else {
+    navigateTo(`#/pretraga/${queryPart}`);
+  }
+}
+
+function bindSearchAndFilters() {
+  const homeSearch = document.getElementById("home-search-form");
+  if (homeSearch) {
+    homeSearch.addEventListener("submit", (event) => {
+      event.preventDefault();
+      navigateToPretraga(homeSearch.q?.value || "");
+    });
+  }
+
+  const pretragaForm = document.getElementById("pretraga-form");
+  if (pretragaForm) {
+    pretragaForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      navigateToPretraga(pretragaForm.q?.value || "");
+    });
+  }
+
+  const posloviFilter = document.getElementById("poslovi-city-filter");
+  if (posloviFilter) {
+    posloviFilter.addEventListener("click", () => {
+      posloviFilterMyCity = !posloviFilterMyCity;
+      renderApp();
+    });
+  }
+
+  document.querySelectorAll("[data-work-dot]").forEach((dot) => {
+    dot.addEventListener("click", (event) => {
+      event.preventDefault();
+      workSlideIndex = Number(dot.dataset.workDot) || 0;
+      renderApp();
+    });
+  });
+}
+
 function bindHomeActions() {
   document.querySelectorAll('[data-action="auto-izbor"]').forEach((el) => {
     el.addEventListener("click", () => {
@@ -520,6 +605,7 @@ async function handleGoogleSignIn() {
 function bindRootEvents() {
   bindHomeActions();
   bindPhase3Actions();
+  bindSearchAndFilters();
 
   const publicGoogleBtn = document.getElementById("google-signin-btn");
   if (publicGoogleBtn) {

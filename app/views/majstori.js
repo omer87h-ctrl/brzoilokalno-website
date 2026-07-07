@@ -30,7 +30,7 @@ export function renderMajstoriList({ filter, users, city = null }) {
     <div class="screen-scroll">
       <a class="back-link" href="#/home">← Početna</a>
       <h2 class="screen-title">${escapeHtml(meta.title)}</h2>
-      <p class="screen-subtitle">${escapeHtml(meta.subtitle(city))} · read-only</p>
+      <p class="screen-subtitle">${escapeHtml(meta.subtitle(city))}</p>
       ${renderUserList(users, {
         emptyText: typeof meta.empty === "function" ? meta.empty(city) : meta.empty,
       })}

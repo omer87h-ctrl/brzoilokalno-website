@@ -1,11 +1,46 @@
 import { escapeHtml, formatTimestamp } from "../utils/format.js";
+import { renderCityFilterChip, renderOfferCard, renderPosloviTabs } from "./ponude.js";
 
-export function renderPoslovi({ jobs }) {
+export function renderPoslovi({
+  jobs,
+  offers = [],
+  tab = "potraznja",
+  filterMyCity = false,
+  userCity = "",
+}) {
+  const tabs = renderPosloviTabs({ activeTab: tab });
+  const cityChip = renderCityFilterChip({ active: filterMyCity, city: userCity });
+
+  if (tab === "ponuda") {
+    if (!offers.length) {
+      return `
+        <div class="screen-scroll">
+          ${tabs}
+          ${cityChip ? `<div class="chip-row chip-row--filters">${cityChip}</div>` : ""}
+          <h2 class="screen-title">Ponuda</h2>
+          <p class="screen-subtitle">Ponude majstora i kreatora</p>
+          <div class="empty-state">Trenutno nema objavljenih ponuda.</div>
+        </div>`;
+    }
+
+    const cards = offers.map((offer) => renderOfferCard(offer)).join("");
+    return `
+      <div class="screen-scroll">
+        ${tabs}
+        ${cityChip ? `<div class="chip-row chip-row--filters">${cityChip}</div>` : ""}
+        <h2 class="screen-title">Ponuda</h2>
+        <p class="screen-subtitle">Ponude majstora i kreatora (${offers.length})</p>
+        <div class="job-list">${cards}</div>
+      </div>`;
+  }
+
   if (!jobs.length) {
     return `
       <div class="screen-scroll">
-        <h2 class="screen-title">Poslovi</h2>
-        <p class="screen-subtitle">Potražnja — read-only pregled</p>
+        ${tabs}
+        ${cityChip ? `<div class="chip-row chip-row--filters">${cityChip}</div>` : ""}
+        <h2 class="screen-title">Potražnja</h2>
+        <p class="screen-subtitle">Oglasi korisnika · <a class="inline-link" href="#/prijave">Moje prijave</a></p>
         <div class="empty-state">Trenutno nema objavljenih poslova.</div>
       </div>`;
   }
@@ -38,8 +73,10 @@ export function renderPoslovi({ jobs }) {
 
   return `
     <div class="screen-scroll">
-      <h2 class="screen-title">Poslovi</h2>
-      <p class="screen-subtitle">Potražnja (${jobs.length}) · <a class="inline-link" href="#/prijave">Moje prijave</a></p>
+      ${tabs}
+      ${cityChip ? `<div class="chip-row chip-row--filters">${cityChip}</div>` : ""}
+      <h2 class="screen-title">Potražnja</h2>
+      <p class="screen-subtitle">Oglasi korisnika (${jobs.length}) · <a class="inline-link" href="#/prijave">Moje prijave</a></p>
       <div class="job-list">${cards}</div>
     </div>`;
 }

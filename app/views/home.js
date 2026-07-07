@@ -2,7 +2,14 @@ import { POPULAR_CITIES } from "../data/categories.js";
 import { escapeHtml } from "../utils/format.js";
 import { renderRadPreview } from "./radovi.js";
 
-export function renderHome({ selectedCity = "", worksPreview = [] }) {
+export function renderHome({
+  selectedCity = "",
+  worksPreview = [],
+  workSlideIndex = 0,
+  userName = "",
+  userRole = "",
+  userCity = "",
+}) {
   const chips = POPULAR_CITIES.map((city) => {
     const active = selectedCity === city ? " chip--active" : "";
     return `<button type="button" class="chip chip--btn${active}" data-city="${escapeHtml(city)}">${escapeHtml(city)}</button>`;
@@ -18,17 +25,36 @@ export function renderHome({ selectedCity = "", worksPreview = [] }) {
 
   const blizuSub = selectedCity ? `U: ${escapeHtml(selectedCity)}` : "U tvom gradu";
 
+  const greeting = userName
+    ? `Dobrodošli, ${escapeHtml(userName)}`
+    : "Dobrodošli u Brzo i Lokalno";
+
+  const profileLine = [userRole, userCity]
+    .filter(Boolean)
+    .map((v) => escapeHtml(v))
+    .join(" · ");
+
   return `
     <div class="home-screen">
-      <p class="home-greeting">Dobrodošli u Brzo i Lokalno</p>
-      <div class="search-bar">
-        <span class="search-bar__icon" aria-hidden="true">⌕</span>
-        <span class="search-bar__text">Pretraži majstore i kreatore</span>
+      <div class="home-hero">
+        <p class="home-greeting">${greeting}</p>
+        ${profileLine ? `<p class="home-profile-line">${profileLine}</p>` : ""}
+      </div>
+      <form class="search-form" id="home-search-form">
+        <span class="search-form__icon" aria-hidden="true">⌕</span>
+        <input
+          type="search"
+          class="search-form__input"
+          name="q"
+          placeholder="Pretraži"
+          autocomplete="off"
+        />
+        <button type="submit" class="search-form__submit" aria-label="Traži">→</button>
         <button type="button" class="brzo-btn" id="home-auto-izbor-btn" data-action="auto-izbor">
           <span class="brzo-btn__bolt" aria-hidden="true">⚡</span>
           Auto izbor
         </button>
-      </div>
+      </form>
       <div class="city-chips-block">
         <p class="city-chips-label">Popularni gradovi</p>
         <p class="city-chips-hint">Filtar za kartice ispod (top, slobodni, blizu mene).</p>
@@ -56,6 +82,6 @@ export function renderHome({ selectedCity = "", worksPreview = [] }) {
           <p>Brza procjena cijene usluge</p>
         </button>
       </div>
-      ${renderRadPreview({ works: worksPreview })}
+      ${renderRadPreview({ works: worksPreview, slideIndex: workSlideIndex })}
     </div>`;
 }
