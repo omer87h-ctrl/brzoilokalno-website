@@ -1926,6 +1926,74 @@ body.app-body.has-app-shell #app-root {
   color: var(--text-muted);
 }
 
+code {
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--text-muted);
+  background: transparent;
+  padding: 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+.chat-shortcut {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 14px;
+  background: var(--accent);
+  color: #1a1008;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.chat-shortcut:hover {
+  filter: brightness(1.05);
+}
+
+.chat-shortcut__icon {
+  display: block;
+  flex-shrink: 0;
+}
+
+.chat-shortcut__badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  min-width: 14px;
+  height: 14px;
+  padding: 0 3px;
+  border-radius: 999px;
+  background: #d46a5a;
+  color: #fff;
+  font-size: 0.55rem;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: center;
+}
+
+.job-card__strip .chat-shortcut {
+  margin-left: 0.15rem;
+}
+
+.outdoor-plan__loading {
+  min-height: 4.5rem;
+}
+
+.aktivnost-section__body {
+  min-height: 0;
+}
+
+.aktivnost-section--expanded .aktivnost-section__body {
+  min-height: 6rem;
+}
+
 .check-row {
   display: flex;
   align-items: center;

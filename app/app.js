@@ -104,6 +104,7 @@ import { renderKalkulator, readKalkulatorState } from "./views/kalkulator.js";
 import { buildActivityDashboard } from "./utils/activity.js";
 import { getHiddenActivityAppIds, hideActivityAppId } from "./utils/activityHide.js";
 import { fetchOutdoorForecast, buildOutdoorOutlook } from "./services/weatherOutlook.js";
+import { renderOutdoorPlanBody } from "./views/outdoorPlan.js";
 import { renderCreateJobForm, renderCreateOfferForm, renderTipEditorForm, renderAddWorkForm, renderActivityHideModal, renderReportModal } from "./views/forms.js";
 import { renderScreenError, renderScreenLoading } from "./views/shared.js";
 
@@ -141,6 +142,18 @@ let outdoorOutlookCacheKey = "";
 const scrollPositions = {};
 let lastScrollRoute = null;
 let skipRouteLoading = false;
+let profilRouteCache = null;
+let profilOutdoorCtx = { city: "", role: "", weatherKey: "" };
+let outdoorFetchToken = 0;
+let profilUseCache = false;
+
+function isChatEnabled() {
+  return webConfig?.enabled === true && webConfig?.chatEnabled !== false;
+}
+
+function invalidateProfilCache() {
+  profilRouteCache = null;
+}
 
 function scrollMemoryKey(route) {
   if (!route) return null;
@@ -153,7 +166,9 @@ function scrollMemoryKey(route) {
 }
 
 function getMainScroller() {
-  return document.querySelector(".screen-feed__body") || document.getElementById("app-main");
+  const feedBody = document.querySelector(".screen-feed__body");
+  if (feedBody) return feedBody;
+  return document.getElementById("app-main");
 }
 
 function captureMainScroll(route) {
@@ -168,18 +183,92 @@ function restoreMainScroll(route) {
   const el = getMainScroller();
   if (!el || !key) return;
   const top = scrollPositions[key] || 0;
-  requestAnimationFrame(() => {
+  const apply = () => {
     const prev = el.style.scrollBehavior;
     el.style.scrollBehavior = "auto";
     el.scrollTop = top;
     el.style.scrollBehavior = prev;
     updateFeedHeadShadow();
+  };
+  requestAnimationFrame(() => {
+    apply();
+    requestAnimationFrame(apply);
   });
+}
+
+function patchAktivnostExpanded(expanded) {
+  const section = document.getElementById("aktivnost-section");
+  if (!section) return false;
+  section.classList.toggle("aktivnost-section--expanded", expanded);
+  const toggle = document.getElementById("aktivnost-toggle");
+  if (toggle) toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+  const chev = section.querySelector(".aktivnost-section__chev");
+  if (chev) chev.textContent = expanded ? "▴" : "▾";
+  return true;
+}
+
+function patchOutdoorPlanExpanded(expanded) {
+  const section = document.getElementById("outdoor-plan-section");
+  if (!section) return false;
+  section.classList.toggle("outdoor-plan--expanded", expanded);
+  const toggle = document.getElementById("outdoor-plan-toggle");
+  if (toggle) toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+  const chev = section.querySelector(".outdoor-plan__chev");
+  if (chev) chev.textContent = expanded ? "▴" : "▾";
+  return true;
+}
+
+function outdoorPlanBodyState({ loading = false, outlook = null, forecastFailed = false } = {}) {
+  const { city, role, weatherKey } = profilOutdoorCtx;
+  return renderOutdoorPlanBody({
+    outlook,
+    loading,
+    missingKey: !weatherKey,
+    missingCity: !city,
+    missingRole: !["majstor", "kreator", "korisnik"].includes(role),
+    forecastFailed,
+    expanded: true,
+  });
+}
+
+function patchOutdoorPlanBody(html) {
+  const body = document.querySelector("#outdoor-plan-section .outdoor-plan__body");
+  if (body) body.innerHTML = html;
+}
+
+function scheduleOutdoorPlanLoad() {
+  const { city, role, weatherKey } = profilOutdoorCtx;
+  if (!outdoorPlanExpanded || !city || !weatherKey) return;
+  if (outdoorOutlookCache && outdoorOutlookCacheKey === `${city}|${role}`) {
+    patchOutdoorPlanBody(outdoorPlanBodyState({ outlook: outdoorOutlookCache }));
+    return;
+  }
+  patchOutdoorPlanBody(outdoorPlanBodyState({ loading: true }));
+  const token = ++outdoorFetchToken;
+  fetchOutdoorForecast(weatherKey, city)
+    .then((forecast) => {
+      if (token !== outdoorFetchToken || !outdoorPlanExpanded) return;
+      const outlook = buildOutdoorOutlook(role, forecast);
+      if (outlook) {
+        outdoorOutlookCache = outlook;
+        outdoorOutlookCacheKey = `${city}|${role}`;
+        patchOutdoorPlanBody(outdoorPlanBodyState({ outlook }));
+      } else {
+        patchOutdoorPlanBody(outdoorPlanBodyState({ forecastFailed: true }));
+      }
+    })
+    .catch((error) => {
+      console.warn("Weather load failed:", error);
+      if (token !== outdoorFetchToken || !outdoorPlanExpanded) return;
+      patchOutdoorPlanBody(outdoorPlanBodyState({ forecastFailed: true }));
+    });
 }
 
 function softRenderApp() {
   skipRouteLoading = true;
-  captureMainScroll(parseRoute(getHashRoute()));
+  const route = parseRoute(getHashRoute());
+  profilUseCache = route.name === "profil";
+  captureMainScroll(route);
   renderApp();
 }
 
@@ -403,7 +492,7 @@ async function loadRouteContent(route) {
       canCreateOffer: role === "majstor" || role === "kreator",
       myRole: role,
       applicationsByJobId,
-      chatEnabled: webConfig?.chatEnabled === true,
+      chatEnabled: isChatEnabled(),
       currentUid: currentUser.uid,
     });
   }
@@ -434,7 +523,7 @@ async function loadRouteContent(route) {
       applications,
       currentUid: currentUser.uid,
       myRole: profile?.role || "",
-      chatEnabled: webConfig?.chatEnabled === true,
+      chatEnabled: isChatEnabled(),
       jobOwnerProfile,
     });
   }
@@ -458,11 +547,11 @@ async function loadRouteContent(route) {
     const jobIds = [...new Set(applications.map((a) => a.jobId).filter(Boolean))];
     const jobs = await Promise.all(jobIds.map((id) => fetchJob(id)));
     const jobsById = Object.fromEntries(jobs.filter(Boolean).map((j) => [j.id, j]));
-    return renderPrijave({ applications, jobsById, currentUid: currentUser.uid, chatEnabled: webConfig?.chatEnabled === true });
+    return renderPrijave({ applications, jobsById, currentUid: currentUser.uid, chatEnabled: isChatEnabled() });
   }
 
   if (route.name === "chat") {
-    if (!webConfig?.chatEnabled) {
+    if (!isChatEnabled()) {
       return renderScreenError("Chat je trenutno isključen na web verziji.");
     }
     const app = await fetchApplication(route.appId);
@@ -504,48 +593,69 @@ async function loadRouteContent(route) {
 
   if (route.name === "profil") {
     const uid = currentUser?.uid;
-    const user = uid ? await fetchUserProfile(uid) : null;
-    const role = user?.role || "";
-    const worker = role === "majstor" || role === "kreator";
-    const [tip, myWorks, applications, publishedJobsCount, followerCount] = await Promise.all([
-      uid ? fetchMyHomeTip(uid) : Promise.resolve(null),
-      uid && worker
-        ? fetchWorksByUser(uid, false).catch((error) => {
-            console.warn("My works load failed:", error);
-            return [];
-          })
-        : Promise.resolve([]),
-      uid ? fetchMyApplications(uid) : Promise.resolve([]),
-      uid
-        ? fetchMyJobsCount(uid).catch((error) => {
-            console.warn("My jobs count failed:", error);
-            return 0;
-          })
-        : Promise.resolve(0),
-      uid && worker ? fetchFollowerCount(uid) : Promise.resolve(0),
-    ]);
-    myTip = tip;
-    const jobIds = [...new Set(applications.map((a) => a.jobId).filter(Boolean))].slice(0, 24);
-    const jobs = await Promise.all(jobIds.map((id) => fetchJob(id)));
-    const jobsById = Object.fromEntries(jobs.filter(Boolean).map((j) => [j.id, j]));
-    const activityDashboard = uid
-      ? buildActivityDashboard(
-          applications.map((app) => ({
-            ...app,
-            jobTitle: jobsById[app.jobId]?.title || "",
-            peerLabel:
-              app.workerId === uid
-                ? jobsById[app.jobId]?.authorName || "Naručitelj"
-                : app.workerName || "Majstor / kreator",
-          })),
-          uid,
-          publishedJobsCount
-        )
-      : null;
+    const useCache = profilUseCache && profilRouteCache?.uid === uid;
+    profilUseCache = false;
+
+    let user;
+    let role;
+    let tip;
+    let myWorks;
+    let activityDashboard;
+    let followerCount;
+
+    if (useCache && profilRouteCache) {
+      ({ user, role, tip, myWorks, activityDashboard, followerCount } = profilRouteCache);
+      myTip = tip;
+    } else {
+      user = uid ? await fetchUserProfile(uid) : null;
+      role = user?.role || "";
+      const worker = role === "majstor" || role === "kreator";
+      const [fetchedTip, fetchedWorks, applications, publishedJobsCount, fetchedFollowerCount] =
+        await Promise.all([
+          uid ? fetchMyHomeTip(uid) : Promise.resolve(null),
+          uid && worker
+            ? fetchWorksByUser(uid, false).catch((error) => {
+                console.warn("My works load failed:", error);
+                return [];
+              })
+            : Promise.resolve([]),
+          uid ? fetchMyApplications(uid) : Promise.resolve([]),
+          uid
+            ? fetchMyJobsCount(uid).catch((error) => {
+                console.warn("My jobs count failed:", error);
+                return 0;
+              })
+            : Promise.resolve(0),
+          uid && worker ? fetchFollowerCount(uid) : Promise.resolve(0),
+        ]);
+      tip = fetchedTip;
+      myWorks = fetchedWorks;
+      followerCount = fetchedFollowerCount;
+      myTip = tip;
+      const jobIds = [...new Set(applications.map((a) => a.jobId).filter(Boolean))].slice(0, 24);
+      const jobs = await Promise.all(jobIds.map((id) => fetchJob(id)));
+      const jobsById = Object.fromEntries(jobs.filter(Boolean).map((j) => [j.id, j]));
+      activityDashboard = uid
+        ? buildActivityDashboard(
+            applications.map((app) => ({
+              ...app,
+              jobTitle: jobsById[app.jobId]?.title || "",
+              peerLabel:
+                app.workerId === uid
+                  ? jobsById[app.jobId]?.authorName || "Naručitelj"
+                  : app.workerName || "Majstor / kreator",
+            })),
+            uid,
+            publishedJobsCount
+          )
+        : null;
+      profilRouteCache = { uid, user, role, tip, myWorks, activityDashboard, followerCount };
+    }
 
     const weatherKey = webConfig?.weatherApiKey || "";
     const outdoorMissingKey = !weatherKey;
     const outdoorCacheKey = `${user?.city || ""}|${role}`;
+    profilOutdoorCtx = { city: user?.city || "", role, weatherKey };
     if (outdoorCacheKey !== outdoorOutlookCacheKey) {
       outdoorOutlookCache = null;
       outdoorOutlookCacheKey = outdoorCacheKey;
@@ -559,20 +669,24 @@ async function loadRouteContent(route) {
       weatherKey &&
       ["majstor", "kreator", "korisnik"].includes(role);
     if (canFetchOutdoor && !outdoorOutlook) {
-      outdoorLoading = true;
-      try {
-        const forecast = await fetchOutdoorForecast(weatherKey, user.city);
-        outdoorOutlook = buildOutdoorOutlook(role, forecast);
-        if (!outdoorOutlook) outdoorForecastFailed = true;
-        outdoorOutlookCache = outdoorOutlook;
-      } catch (error) {
-        console.warn("Weather load failed:", error);
-        outdoorForecastFailed = true;
+      if (useCache) {
+        outdoorLoading = true;
+      } else {
+        outdoorLoading = true;
+        try {
+          const forecast = await fetchOutdoorForecast(weatherKey, user.city);
+          outdoorOutlook = buildOutdoorOutlook(role, forecast);
+          if (!outdoorOutlook) outdoorForecastFailed = true;
+          outdoorOutlookCache = outdoorOutlook;
+        } catch (error) {
+          console.warn("Weather load failed:", error);
+          outdoorForecastFailed = true;
+        }
+        outdoorLoading = false;
       }
-      outdoorLoading = false;
     }
 
-    return renderProfil({
+    const html = renderProfil({
       user,
       authEmail: currentUser?.email || "",
       editing: profileEditing,
@@ -588,8 +702,14 @@ async function loadRouteContent(route) {
       outdoorForecastFailed,
       outdoorExpanded: outdoorPlanExpanded,
       followerCount,
-      chatEnabled: webConfig?.chatEnabled === true,
+      chatEnabled: isChatEnabled(),
     });
+
+    if (useCache && outdoorLoading) {
+      queueMicrotask(() => scheduleOutdoorPlanLoad());
+    }
+
+    return html;
   }
 
   if (route.name === "pregled") {
@@ -649,7 +769,7 @@ async function loadRouteContent(route) {
     } catch (_) {}
     return renderObavijesti({
       notifications,
-      chatEnabled: webConfig?.chatEnabled === true,
+      chatEnabled: isChatEnabled(),
     });
   }
 
@@ -748,12 +868,14 @@ async function renderApp() {
   }
 
   try {
-    await refreshProfileCity();
-    if (route.name !== "obavijesti") {
-      try {
-        unreadNotifications = await fetchUnreadNotificationCount(currentUser.uid);
-      } catch (_) {
-        unreadNotifications = 0;
+    if (!softUpdate) {
+      await refreshProfileCity();
+      if (route.name !== "obavijesti") {
+        try {
+          unreadNotifications = await fetchUnreadNotificationCount(currentUser.uid);
+        } catch (_) {
+          unreadNotifications = 0;
+        }
       }
     }
     const contentHtml = await loadRouteContent(route);
@@ -856,6 +978,7 @@ function bindPhase3Actions() {
       ]);
       if (!job) throw new Error("missing job");
       await applyToJob({ job, profile, authUser: currentUser });
+      invalidateProfilCache();
       renderApp();
     } catch (error) {
       console.error("Apply failed:", error);
@@ -1249,6 +1372,8 @@ function bindProfileAndModals() {
       try {
         await updateUserProfile(currentUser.uid, payload);
         profileEditing = false;
+        invalidateProfilCache();
+        outdoorOutlookCache = null;
         await refreshProfileCity();
         renderApp();
       } catch (error) {
@@ -1506,6 +1631,7 @@ function bindSearchAndFilters() {
   if (aktivnostToggle) {
     aktivnostToggle.addEventListener("click", () => {
       aktivnostExpanded = !aktivnostExpanded;
+      if (patchAktivnostExpanded(aktivnostExpanded)) return;
       softRenderApp();
     });
   }
@@ -1514,8 +1640,13 @@ function bindSearchAndFilters() {
   if (outdoorToggle) {
     outdoorToggle.addEventListener("click", () => {
       outdoorPlanExpanded = !outdoorPlanExpanded;
-      if (outdoorPlanExpanded) {
-        outdoorOutlookCache = null;
+      if (patchOutdoorPlanExpanded(outdoorPlanExpanded)) {
+        if (outdoorPlanExpanded) {
+          scheduleOutdoorPlanLoad();
+        } else {
+          outdoorFetchToken += 1;
+        }
+        return;
       }
       softRenderApp();
     });
@@ -1540,6 +1671,7 @@ function bindSearchAndFilters() {
       hideActivityAppId(currentUser.uid, pendingActivityHideId);
       pendingActivityHideId = "";
       activeModal = null;
+      invalidateProfilCache();
       renderApp();
     });
   }

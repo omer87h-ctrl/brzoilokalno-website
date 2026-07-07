@@ -1,4 +1,5 @@
 import { escapeHtml, formatApplicationStatus, formatTimestamp } from "../utils/format.js";
+import { renderChatShortcut } from "./chatShortcut.js";
 
 export function renderPrijave({ applications, jobsById, currentUid, chatEnabled = false }) {
   if (!applications.length) {
@@ -20,7 +21,7 @@ export function renderPrijave({ applications, jobsById, currentUid, chatEnabled 
       const date = formatTimestamp(app.timestamp);
       const chatLink =
         chatEnabled && (st === "accepted" || st === "completed") && app.jobId && app.id
-          ? `<a class="btn btn--ghost btn--sm" href="#/chat/${escapeHtml(app.jobId)}/${escapeHtml(app.id)}">Chat</a>`
+          ? renderChatShortcut({ href: `#/chat/${escapeHtml(app.jobId)}/${escapeHtml(app.id)}` })
           : "";
 
       const completeBtn =

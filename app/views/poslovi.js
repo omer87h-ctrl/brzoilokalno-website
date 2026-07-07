@@ -1,6 +1,7 @@
 import { escapeHtml, formatApplicationStatus, formatTimestamp } from "../utils/format.js";
 import { renderCityFilterChip, renderMyJobsFilterChip, renderOfferCard, renderPosloviTabs } from "./ponude.js";
 import { renderScreenFeed } from "./screenFeed.js";
+import { chatUnreadForUser, renderChatShortcut } from "./chatShortcut.js";
 
 function canApply(role) {
   return role === "majstor" || role === "kreator";
@@ -97,7 +98,11 @@ function renderJobCards(jobs, { myRole, applicationsByJobId, chatEnabled, curren
             strip += `<button type="button" class="btn btn--ghost btn--sm" data-app-action="complete" data-app-id="${escapeHtml(myApp.id)}">Završeno</button>`;
           }
           if (chatEnabled && isChatOpen(st)) {
-            strip += `<a class="btn btn--ghost btn--sm" href="#/chat/${escapeHtml(job.id)}/${escapeHtml(myApp.id)}">Chat</a>`;
+            const unread = chatUnreadForUser(myApp, currentUid);
+            strip += renderChatShortcut({
+              href: `#/chat/${escapeHtml(job.id)}/${escapeHtml(myApp.id)}`,
+              unread,
+            });
           }
         }
       }

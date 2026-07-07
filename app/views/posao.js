@@ -1,4 +1,5 @@
 import { escapeHtml, formatApplicationStatus, formatTimestamp } from "../utils/format.js";
+import { renderChatShortcut } from "./chatShortcut.js";
 
 function statusClass(status) {
   return `status-badge status-badge--${escapeHtml(status || "unknown")}`;
@@ -66,7 +67,7 @@ export function renderPosao({
           }
           ${
             chatEnabled && isChatOpen(st)
-              ? `<a class="btn btn--primary" href="#/chat/${job.id}/${myApplication.id}">Otvori chat</a>`
+              ? renderChatShortcut({ href: `#/chat/${job.id}/${myApplication.id}` })
               : ""
           }
         </div>
@@ -120,7 +121,7 @@ export function renderPosao({
                   <button type="button" class="btn btn--ghost btn--sm" data-app-action="complete" data-app-id="${escapeHtml(app.id)}">Završeno</button>
                   ${
                     chatEnabled
-                      ? `<a class="btn btn--ghost btn--sm" href="#/chat/${job.id}/${app.id}">Chat</a>`
+                      ? renderChatShortcut({ href: `#/chat/${job.id}/${app.id}` })
                       : ""
                   }
                 </div>`
@@ -129,7 +130,7 @@ export function renderPosao({
                   ${profileLink}
                   ${
                     chatEnabled && isChatOpen(st)
-                      ? `<a class="btn btn--ghost btn--sm" href="#/chat/${job.id}/${app.id}">Chat</a>`
+                      ? renderChatShortcut({ href: `#/chat/${job.id}/${app.id}` })
                       : `<span class="${statusClass(st)}">${escapeHtml(formatApplicationStatus(st))}</span>`
                   }
                 </div>`;

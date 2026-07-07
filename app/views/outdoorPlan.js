@@ -8,6 +8,42 @@ function defaultTitle(role) {
   return "Plan za vani";
 }
 
+export function renderOutdoorPlanBody({
+  outlook,
+  loading = false,
+  missingKey = false,
+  missingCity = false,
+  missingRole = false,
+  forecastFailed = false,
+  expanded = false,
+}) {
+  if (!expanded) {
+    return `<p class="form-hint">Proširi za detalje prognoze.</p>`;
+  }
+  if (missingCity) {
+    return `<p class="form-hint">Dodaj grad u profilu da vidiš plan za vanjski rad.</p>`;
+  }
+  if (missingRole) {
+    return `<p class="form-hint">Plan je dostupan za uloge majstor, kreator i korisnik.</p>`;
+  }
+  if (missingKey) {
+    return `<p class="form-hint">Prognoza nije dostupna. Provjeri postavke aplikacije.</p>`;
+  }
+  if (loading) {
+    return `<p class="form-hint outdoor-plan__loading">Učitavam prognozu…</p>`;
+  }
+  if (outlook) {
+    return `
+      <p class="outdoor-plan__summary">${escapeHtml(outlook.summary)}</p>
+      <p class="outdoor-plan__detail">${escapeHtml(outlook.detail)}</p>
+      <p class="form-hint">${escapeHtml(outdoorDisclaimer)}</p>`;
+  }
+  if (forecastFailed) {
+    return `<p class="form-hint">Prognoza trenutno nije dostupna za ovaj grad. Provjeri naziv grada u profilu.</p>`;
+  }
+  return `<p class="form-hint">Nema podataka za prognozu.</p>`;
+}
+
 export function renderOutdoorPlan({
   outlook,
   loading = false,
@@ -20,28 +56,15 @@ export function renderOutdoorPlan({
 }) {
   const title = escapeHtml(outlook?.title || defaultTitle(role));
   const expandedClass = expanded ? " outdoor-plan--expanded" : "";
-
-  let body = "";
-  if (!expanded) {
-    body = `<p class="form-hint">Proširi za detalje prognoze.</p>`;
-  } else if (missingCity) {
-    body = `<p class="form-hint">Dodaj grad u profilu da vidiš plan za vanjski rad.</p>`;
-  } else if (missingRole) {
-    body = `<p class="form-hint">Plan je dostupan za uloge majstor, kreator i korisnik.</p>`;
-  } else if (missingKey) {
-    body = `<p class="form-hint">Prognoza nije dostupna. U Firebase dokumentu <code>app_public/web</code> dodaj polje <code>weatherApiKey</code> (isti ključ kao <code>WEATHER_API_KEY</code> u Android <code>local.properties</code>), ili lokalno pokreni <code>npm run sync-weather</code>.</p>`;
-  } else if (loading) {
-    body = `<p class="form-hint">Učitavam prognozu…</p>`;
-  } else if (outlook) {
-    body = `
-      <p class="outdoor-plan__summary">${escapeHtml(outlook.summary)}</p>
-      <p class="outdoor-plan__detail">${escapeHtml(outlook.detail)}</p>
-      <p class="form-hint">${escapeHtml(outdoorDisclaimer)}</p>`;
-  } else if (forecastFailed) {
-    body = `<p class="form-hint">Prognoza trenutno nije dostupna za ovaj grad. Provjeri naziv grada u profilu.</p>`;
-  } else {
-    body = `<p class="form-hint">Nema podataka za prognozu.</p>`;
-  }
+  const body = renderOutdoorPlanBody({
+    outlook,
+    loading,
+    missingKey,
+    missingCity,
+    missingRole,
+    forecastFailed,
+    expanded,
+  });
 
   return `
     <section class="outdoor-plan${expandedClass}" id="outdoor-plan-section">
