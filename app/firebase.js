@@ -12,8 +12,7 @@ export const firebaseConfig = {
 export const ADMIN_EMAIL = "omer.creating.apps87@gmail.com";
 
 export const APP_LINKS = {
-  appGallery:
-    "https://appgallery.cloud.huawei.com/appDetail?pkgName=com.brzoilokalno&channelId=website&referrer=brzoilokalno.com&detailType=0&calltype=AGDLINK",
+  appGallery: "https://brzoilokalno.com/preuzmi-app.html",
   instagram: "https://www.instagram.com/brzo.i.lokalno/",
   landing: "/",
 };

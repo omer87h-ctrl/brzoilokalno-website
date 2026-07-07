@@ -3,55 +3,217 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Preuzmi Brzo i Lokalno — AppGallery</title>
+  <title>Preuzmi Brzo i Lokalno</title>
+  <meta name="description" content="Preuzmi Brzo i Lokalno na Androidu preko Huawei AppGallery ili koristi web verziju u browseru.">
   <meta name="robots" content="noindex">
-  <meta http-equiv="refresh" content="0;url=https://appgallery.cloud.huawei.com/appDetail?pkgName=com.brzoilokalno&channelId=website&referrer=brzoilokalno.com&detailType=0&calltype=AGDLINK">
   <link rel="icon" href="assets/app-icon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <style>
-    body {
-      margin: 0;
+    .preuzmi-page {
       min-height: 100dvh;
       display: grid;
       place-items: center;
-      padding: 1.5rem;
-      font-family: system-ui, sans-serif;
-      background: #0a0a0a;
-      color: #f2f2f2;
+      padding: 2rem 1rem;
+    }
+
+    .preuzmi-card {
+      width: min(100%, 520px);
+      padding: 1.75rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      box-shadow: var(--shadow);
       text-align: center;
     }
-    a {
-      color: #f28c28;
-      font-weight: 600;
+
+    .preuzmi-card img.app-icon {
+      width: 88px;
+      height: 88px;
+      margin: 0 auto 1rem;
+      border-radius: 20px;
     }
-    p {
-      max-width: 24rem;
-      line-height: 1.55;
-      color: #b8b8b8;
+
+    .preuzmi-card h1 {
+      margin: 0 0 0.5rem;
+      font-size: 1.5rem;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.85rem 1.25rem;
+
+    .preuzmi-card .lead {
+      margin: 0 0 1.25rem;
+      color: var(--text-muted);
+    }
+
+    .preuzmi-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+    }
+
+    .preuzmi-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0.85rem 1.1rem;
       border-radius: 12px;
-      background: #f28c28;
-      color: #1a1008;
-      text-decoration: none;
+      border: 1px solid transparent;
       font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
     }
+
+    .preuzmi-btn--primary {
+      background: var(--accent);
+      color: #1a1008;
+    }
+
+    .preuzmi-btn--ghost {
+      background: transparent;
+      border-color: var(--border);
+      color: var(--text);
+    }
+
+    .preuzmi-qr {
+      margin: 1rem auto 0;
+      padding: 0.75rem;
+      border-radius: 14px;
+      background: #fff;
+      width: fit-content;
+    }
+
+    .preuzmi-qr img {
+      display: block;
+      width: 200px;
+      height: 200px;
+    }
+
+    .preuzmi-note {
+      margin: 1rem 0 0;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .preuzmi-link-box {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .preuzmi-link-box input {
+      flex: 1;
+      min-width: 0;
+      padding: 0.7rem 0.8rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg-elevated);
+      color: var(--text);
+      font: inherit;
+      font-size: 0.82rem;
+    }
+
+    .preuzmi-mobile-only,
+    .preuzmi-desktop-only {
+      display: none;
+    }
+
   </style>
 </head>
 <body>
-  <div>
-    <p>Preusmjeravanje na <strong>Brzo i Lokalno</strong> u Huawei AppGallery…</p>
-    <a class="btn" id="store-link" href="https://appgallery.cloud.huawei.com/appDetail?pkgName=com.brzoilokalno&channelId=website&referrer=brzoilokalno.com&detailType=0&calltype=AGDLINK">Otvori AppGallery</a>
-    <p>Ako link ne radi: instaliraj <strong>Huawei AppGallery</strong> i traži <strong>Brzo i Lokalno</strong>.</p>
-  </div>
+  <main class="preuzmi-page">
+    <div class="preuzmi-card">
+      <img class="app-icon" src="assets/app-icon.png" alt="" width="88" height="88">
+      <h1>Brzo i Lokalno</h1>
+      <p class="lead" id="lead-text">Android aplikacija na Huawei AppGallery.</p>
+
+      <div class="preuzmi-mobile-only" id="mobile-view">
+        <p class="preuzmi-note">Otvaranje AppGallery…</p>
+        <div class="preuzmi-actions">
+          <a class="preuzmi-btn preuzmi-btn--primary" id="store-link" href="#">Otvori u AppGallery</a>
+          <a class="preuzmi-btn preuzmi-btn--ghost" href="/app/">Koristi web verziju</a>
+        </div>
+      </div>
+
+      <div class="preuzmi-desktop-only" id="desktop-view">
+        <p class="preuzmi-note">
+          AppGallery radi na <strong>Android telefonu</strong>. Na računaru skeniraj QR kod ili kopiraj link i otvori ga na mobu.
+          Možeš odmah koristiti i <strong>web verziju</strong> u browseru.
+        </p>
+        <div class="preuzmi-qr">
+          <img id="qr-img" width="200" height="200" alt="QR kod za preuzimanje">
+        </div>
+        <div class="preuzmi-link-box">
+          <input id="store-url" type="text" readonly>
+          <button type="button" class="preuzmi-btn preuzmi-btn--ghost" id="copy-btn">Kopiraj</button>
+        </div>
+        <div class="preuzmi-actions">
+          <a class="preuzmi-btn preuzmi-btn--primary" href="/app/">Otvori web verziju</a>
+          <a class="preuzmi-btn preuzmi-btn--ghost" href="/">Natrag na početnu</a>
+        </div>
+      </div>
+    </div>
+  </main>
   <script>
     (function () {
-      var url =
+      var STORE_URL =
         "https://appgallery.cloud.huawei.com/appDetail?pkgName=com.brzoilokalno&channelId=website&referrer=brzoilokalno.com&detailType=0&calltype=AGDLINK";
-      document.getElementById("store-link").href = url;
-      window.location.replace(url);
+      var isAndroid = /Android/i.test(navigator.userAgent);
+      var isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+
+      var mobileView = document.getElementById("mobile-view");
+      var desktopView = document.getElementById("desktop-view");
+      var storeLink = document.getElementById("store-link");
+      var storeUrlInput = document.getElementById("store-url");
+      var qrImg = document.getElementById("qr-img");
+      var copyBtn = document.getElementById("copy-btn");
+
+      storeLink.href = STORE_URL;
+      storeUrlInput.value = STORE_URL;
+      qrImg.src =
+        "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" +
+        encodeURIComponent(STORE_URL);
+
+      if (isMobile) {
+        mobileView.style.display = "block";
+        if (isAndroid) {
+          window.setTimeout(function () {
+            window.location.href = STORE_URL;
+          }, 400);
+        } else {
+          document.getElementById("lead-text").textContent =
+            "Na iPhoneu koristi web verziju. Android preuzimanje je preko AppGallery.";
+        }
+      } else {
+        desktopView.style.display = "block";
+      }
+
+      copyBtn.addEventListener("click", function () {
+        storeUrlInput.select();
+        storeUrlInput.setSelectionRange(0, STORE_URL.length);
+        var copied = false;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(STORE_URL).then(function () {
+            copied = true;
+            copyBtn.textContent = "Kopirano";
+            window.setTimeout(function () {
+              copyBtn.textContent = "Kopiraj";
+            }, 1800);
+          }).catch(function () {});
+        }
+        if (!copied && document.execCommand) {
+          try {
+            document.execCommand("copy");
+            copyBtn.textContent = "Kopirano";
+            window.setTimeout(function () {
+              copyBtn.textContent = "Kopiraj";
+            }, 1800);
+          } catch (_) {}
+        }
+      });
     })();
   </script>
 </body>
