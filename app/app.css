@@ -556,6 +556,13 @@ body.app-body.has-app-shell #app-root {
   filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.14));
 }
 
+.brzo-btn__bolt-glyph {
+  display: block;
+  color: #1a1008;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
 .brzo-btn__label {
   display: inline-block;
   color: #1a1008;
@@ -1619,6 +1626,10 @@ body.app-body.has-app-shell #app-root {
     opacity: 1;
   }
 
+  .brzo-btn__bolt-glyph {
+    font-size: 1.05rem;
+  }
+
   .auto-izbor-loading {
     min-height: 34vh;
     gap: 0.7rem;
@@ -1639,11 +1650,7 @@ body.app-body.has-app-shell #app-root {
     margin: 0 auto;
     border-left: 1px solid rgba(255, 255, 255, 0.06);
     border-right: 1px solid rgba(255, 255, 255, 0.06);
-    box-shadow:
-      0 0 48px rgba(0, 0, 0, 0.35),
-      0 0 34px rgba(232, 136, 74, 0.08),
-      0 0 90px rgba(232, 136, 74, 0.06);
-    animation: shellAmbientPulse 7s ease-in-out infinite;
+    box-shadow: 0 0 48px rgba(0, 0, 0, 0.35);
   }
 
   .app-main {
@@ -1661,27 +1668,6 @@ body.app-body.has-app-shell #app-root {
 
   .fab {
     right: max(1rem, calc(50% - var(--shell-max) / 2 + 1rem));
-  }
-}
-
-@keyframes shellAmbientPulse {
-  0% {
-    box-shadow:
-      0 0 48px rgba(0, 0, 0, 0.35),
-      0 0 26px rgba(232, 136, 74, 0.06),
-      0 0 70px rgba(232, 136, 74, 0.04);
-  }
-  50% {
-    box-shadow:
-      0 0 52px rgba(0, 0, 0, 0.38),
-      0 0 38px rgba(232, 136, 74, 0.12),
-      0 0 110px rgba(232, 136, 74, 0.09);
-  }
-  100% {
-    box-shadow:
-      0 0 48px rgba(0, 0, 0, 0.35),
-      0 0 26px rgba(232, 136, 74, 0.06),
-      0 0 70px rgba(232, 136, 74, 0.04);
   }
 }
 
