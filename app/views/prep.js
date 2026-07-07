@@ -12,11 +12,6 @@ export function renderPrepScreen({ showAdminLogin = false, loginError = "" }) {
         <p class="status-card__text status-card__text--muted">
           Koristite aplikaciju na AppGallery dok ne otvorimo pristup svima.
         </p>
-        <div class="status-card__actions">
-          <a class="btn btn--primary" href="${APP_LINKS.appGallery}" target="_blank" rel="noopener noreferrer">Huawei AppGallery</a>
-          <a class="btn btn--ghost" href="${APP_LINKS.instagram}" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a class="btn btn--ghost" href="${APP_LINKS.landing}">Natrag na početnu</a>
-        </div>
         ${
           showAdminLogin
             ? `
@@ -35,6 +30,11 @@ export function renderPrepScreen({ showAdminLogin = false, loginError = "" }) {
         </div>`
             : ""
         }
+        <div class="status-card__actions">
+          <a class="btn btn--primary" href="${APP_LINKS.appGallery}" target="_blank" rel="noopener noreferrer">Huawei AppGallery</a>
+          <a class="btn btn--ghost" href="${APP_LINKS.instagram}" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a class="btn btn--ghost" href="${APP_LINKS.landing}">Natrag na početnu</a>
+        </div>
       </div>
     </div>`;
 }

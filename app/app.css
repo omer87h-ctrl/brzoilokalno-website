@@ -42,12 +42,15 @@ body.app-body {
 .screen {
   min-height: 100dvh;
   padding: 1.25rem;
+  overflow-y: auto;
 }
 
 .screen--center {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding-top: max(1.25rem, env(safe-area-inset-top, 0px));
+  padding-bottom: max(1.25rem, env(safe-area-inset-bottom, 0px));
 }
 
 .loader {
@@ -169,9 +172,11 @@ body.app-body {
 }
 
 .admin-login {
-  margin-top: 1.5rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--border);
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(242, 140, 40, 0.28);
+  background: rgba(242, 140, 40, 0.06);
   text-align: left;
 }
 
