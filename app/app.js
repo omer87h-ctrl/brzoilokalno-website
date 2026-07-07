@@ -30,11 +30,35 @@ import {
   fetchOffer,
   fetchUsersForSearch,
   filterJobsOrOffersByCity,
+  fetchHomeTips,
+  fetchMyHomeTip,
+  fetchUnreadNotificationCount,
   pickFastCandidates,
 } from "./services/firestoreReads.js";
-import { applyToJob, clearMyUnread, sendChatMessage, updateApplicationStatus } from "./services/firestoreWrites.js";
+import {
+  applyToJob,
+  clearMyUnread,
+  createJob,
+  createOffer,
+  deleteHomeTip,
+  markNotificationsRead,
+  saveHomeTip,
+  sendChatMessage,
+  updateApplicationStatus,
+  updateUserProfile,
+} from "./services/firestoreWrites.js";
 import { subscribeToChatMessages } from "./services/chatService.js";
+import { uploadProfileImage, clearProfileImage } from "./services/storageService.js";
 import { createUserProfile, isProfileComplete } from "./services/userProfile.js";
+import {
+  firstMissingJobFields,
+  firstMissingOfferFields,
+  normalizeSpaces,
+  validateCity,
+  validateOptionalDescription,
+  validatePersonName,
+  validatePhone,
+} from "./utils/textInputValidation.js";
 import { findCategoryBySlug } from "./data/categories.js";
 import { parseRoute } from "./utils/route.js";
 import { renderMaintenance } from "./views/maintenance.js";
@@ -55,7 +79,8 @@ import { renderPrijave } from "./views/prijave.js";
 import { renderChat, renderChatMessages } from "./views/chat.js";
 import { renderPretraga } from "./views/pretraga.js";
 import { renderPonudaDetail } from "./views/ponude.js";
-import { renderKalkulator } from "./views/kalkulator.js";
+import { renderKalkulator, readKalkulatorState } from "./views/kalkulator.js";
+import { renderCreateJobForm, renderCreateOfferForm, renderTipEditorForm } from "./views/forms.js";
 import { renderScreenError, renderScreenLoading } from "./views/shared.js";
 
 const root = document.getElementById("app-root");
@@ -72,6 +97,13 @@ let posloviFilterMyCity = false;
 let screenRequestId = 0;
 let chatUnsubscribe = null;
 let chatContext = null;
+let profileEditing = false;
+let profileFormError = "";
+let activeModal = null;
+let modalError = "";
+let kalkState = { module: 0 };
+let unreadNotifications = 0;
+let myTip = null;
 
 function stopChatListener() {
   if (chatUnsubscribe) {
@@ -102,12 +134,20 @@ function navigateTo(path) {
   location.hash = path.startsWith("#") ? path : `#${path}`;
 }
 
+function buildModalsHtml() {
+  if (activeModal === "job") return renderCreateJobForm({ defaults: { city: profileCity }, error: modalError });
+  if (activeModal === "offer") return renderCreateOfferForm({ defaults: { city: profileCity }, error: modalError });
+  if (activeModal === "tip") return renderTipEditorForm({ tip: myTip, error: modalError });
+  return "";
+}
+
 function renderShellWithContent(route, contentHtml) {
   setRoot(
     renderShell({
       route,
       userEmail: currentUser?.email || "",
-      contentHtml,
+      contentHtml: contentHtml + buildModalsHtml(),
+      unreadNotifications,
     })
   );
 }
@@ -123,14 +163,17 @@ async function refreshProfileCity() {
 
 async function loadRouteContent(route) {
   if (route.name === "home") {
-    const [worksPreview, profile] = await Promise.all([
+    const [worksPreview, profile, tips] = await Promise.all([
       fetchPublicWorks(3),
       currentUser?.uid ? fetchUserProfile(currentUser.uid) : Promise.resolve(null),
+      fetchHomeTips(4),
     ]);
     return renderHome({
       selectedCity,
       worksPreview,
       workSlideIndex,
+      tips,
+      tipsLoading: false,
       userName: profile?.displayName || currentUser?.displayName || "",
       userRole: profile?.role || "",
       userCity: profile?.city || "",
@@ -180,11 +223,14 @@ async function loadRouteContent(route) {
   }
 
   if (route.name === "kalkulator") {
-    return renderKalkulator();
+    const profile = await fetchUserProfile(currentUser.uid);
+    return renderKalkulator({ state: kalkState, role: profile?.role || "korisnik" });
   }
 
   if (route.name === "poslovi") {
     const tab = route.tab || "potraznja";
+    const profile = await fetchUserProfile(currentUser.uid);
+    const role = profile?.role || "";
     const [jobs, offers] = await Promise.all([fetchJobs(30), fetchOffers(30)]);
     const cityFilter = posloviFilterMyCity ? profileCity : "";
     const filteredJobs = cityFilter ? filterJobsOrOffersByCity(jobs, cityFilter) : jobs;
@@ -195,6 +241,8 @@ async function loadRouteContent(route) {
       tab,
       filterMyCity: posloviFilterMyCity,
       userCity: profileCity,
+      canCreateJob: role === "korisnik",
+      canCreateOffer: role === "majstor" || role === "kreator",
     });
   }
 
@@ -287,8 +335,18 @@ async function loadRouteContent(route) {
 
   if (route.name === "profil") {
     const uid = currentUser?.uid;
-    const user = uid ? await fetchUserProfile(uid) : null;
-    return renderProfil({ user, authEmail: currentUser?.email || "" });
+    const [user, tip] = await Promise.all([
+      uid ? fetchUserProfile(uid) : Promise.resolve(null),
+      uid ? fetchMyHomeTip(uid) : Promise.resolve(null),
+    ]);
+    myTip = tip;
+    return renderProfil({
+      user,
+      authEmail: currentUser?.email || "",
+      editing: profileEditing,
+      formError: profileFormError,
+      myTip: tip,
+    });
   }
 
   if (route.name === "pregled") {
@@ -374,6 +432,18 @@ async function renderApp() {
 
   try {
     await refreshProfileCity();
+    if (route.name === "poslovi" || route.name === "prijave") {
+      try {
+        await markNotificationsRead(currentUser.uid);
+        unreadNotifications = 0;
+      } catch (_) {}
+    } else {
+      try {
+        unreadNotifications = await fetchUnreadNotificationCount(currentUser.uid);
+      } catch (_) {
+        unreadNotifications = 0;
+      }
+    }
     const contentHtml = await loadRouteContent(route);
     if (requestId !== screenRequestId) return;
     renderShellWithContent(route, contentHtml);
@@ -468,7 +538,15 @@ function bindPhase3Actions() {
       const status = action === "accept" ? "accepted" : "rejected";
       btn.disabled = true;
       try {
-        await updateApplicationStatus(appId, status);
+        const app = await fetchApplication(appId);
+        const job = app?.jobId ? await fetchJob(app.jobId) : null;
+        await updateApplicationStatus(appId, status, {
+          workerUid: app?.workerId,
+          jobOwnerUid: app?.jobOwnerId,
+          jobId: app?.jobId,
+          jobTitle: job?.title,
+          currentUid: currentUser.uid,
+        });
         renderApp();
       } catch (error) {
         console.error("Status update failed:", error);
@@ -519,6 +597,280 @@ function navigateToPretraga(query) {
   } else {
     navigateTo(`#/pretraga/${queryPart}`);
   }
+}
+
+function bindProfileAndModals() {
+  document.querySelectorAll("[data-close-modal]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      activeModal = null;
+      modalError = "";
+      renderApp();
+    });
+  });
+
+  const fab = document.getElementById("poslovi-fab");
+  if (fab) {
+    fab.addEventListener("click", () => {
+      activeModal = fab.dataset.fabTab === "ponuda" ? "offer" : "job";
+      modalError = "";
+      renderApp();
+    });
+  }
+
+  const editProfileBtn = document.getElementById("edit-profile-btn");
+  if (editProfileBtn) {
+    editProfileBtn.addEventListener("click", () => {
+      profileEditing = true;
+      profileFormError = "";
+      renderApp();
+    });
+  }
+
+  const cancelEdit = document.getElementById("cancel-profile-edit");
+  if (cancelEdit) {
+    cancelEdit.addEventListener("click", () => {
+      profileEditing = false;
+      profileFormError = "";
+      renderApp();
+    });
+  }
+
+  const editTipBtn = document.getElementById("edit-tip-btn");
+  if (editTipBtn) {
+    editTipBtn.addEventListener("click", () => {
+      activeModal = "tip";
+      modalError = "";
+      renderApp();
+    });
+  }
+
+  const profileImageInput = document.getElementById("profile-image-input");
+  if (profileImageInput) {
+    profileImageInput.addEventListener("change", async (event) => {
+      const file = event.target.files?.[0];
+      if (!file || !currentUser?.uid) return;
+      try {
+        await uploadProfileImage(currentUser.uid, file);
+        renderApp();
+      } catch (error) {
+        console.error("Upload failed:", error);
+        alert("Upload slike nije uspio.");
+      }
+    });
+  }
+
+  const deleteImageBtn = document.getElementById("delete-profile-image-btn");
+  if (deleteImageBtn) {
+    deleteImageBtn.addEventListener("click", async () => {
+      if (!currentUser?.uid) return;
+      try {
+        await clearProfileImage(currentUser.uid);
+        renderApp();
+      } catch (error) {
+        alert("Brisanje slike nije uspjelo.");
+      }
+    });
+  }
+
+  const profileForm = document.getElementById("profile-edit-form");
+  if (profileForm) {
+    profileForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      profileFormError = "";
+      const form = event.currentTarget;
+      const profile = await fetchUserProfile(currentUser.uid);
+      const role = profile?.role || "korisnik";
+      const payload = {
+        displayName: form.displayName.value,
+        city: form.city.value,
+        description: form.description.value,
+        contactPhone: form.contactPhone.value,
+        preferInAppChat: form.preferInAppChat.checked,
+        allowPhoneCall: form.allowPhoneCall.checked,
+        allowWhatsApp: form.allowWhatsApp.checked,
+        role,
+      };
+      if (role === "majstor" || role === "kreator") {
+        payload.status = form.status.value;
+        payload.category = form.category.value;
+        payload.occupation = form.occupation.value;
+      }
+
+      const nameErr = validatePersonName(payload.displayName);
+      if (nameErr) {
+        profileFormError = nameErr;
+        renderApp();
+        return;
+      }
+      if (role === "majstor" || role === "kreator") {
+        const cityErr = validateCity(payload.city);
+        if (cityErr) {
+          profileFormError = cityErr;
+          renderApp();
+          return;
+        }
+      }
+      const descErr = validateOptionalDescription(payload.description, "Opis");
+      if (descErr) {
+        profileFormError = descErr;
+        renderApp();
+        return;
+      }
+      if (payload.contactPhone.trim()) {
+        const phoneErr = validatePhone(payload.contactPhone, true);
+        if (phoneErr) {
+          profileFormError = phoneErr;
+          renderApp();
+          return;
+        }
+      }
+
+      try {
+        await updateUserProfile(currentUser.uid, payload);
+        profileEditing = false;
+        await refreshProfileCity();
+        renderApp();
+      } catch (error) {
+        profileFormError = "Spremanje profila nije uspjelo.";
+        renderApp();
+      }
+    });
+  }
+
+  const jobForm = document.getElementById("create-job-form");
+  if (jobForm) {
+    jobForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      modalError = "";
+      const form = event.currentTarget;
+      const profile = await fetchUserProfile(currentUser.uid);
+      const fields = {
+        title: form.title.value,
+        description: form.description.value,
+        category: form.category.value,
+        city: form.city.value,
+        budget: form.budget.value,
+        whenNeeded: form.whenNeeded.value,
+        contactPhone: form.contactPhone.value,
+      };
+      const missing = firstMissingJobFields(fields, !profile?.preferInAppChat);
+      if (missing) {
+        modalError = missing;
+        renderApp();
+        return;
+      }
+      try {
+        await createJob({ profile, authUser: currentUser, fields });
+        activeModal = null;
+        navigateTo("#/poslovi");
+      } catch (error) {
+        modalError = "Objava posla nije uspjela.";
+        renderApp();
+      }
+    });
+  }
+
+  const offerForm = document.getElementById("create-offer-form");
+  if (offerForm) {
+    offerForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      modalError = "";
+      const form = event.currentTarget;
+      const profile = await fetchUserProfile(currentUser.uid);
+      const fields = {
+        title: form.title.value,
+        description: form.description.value,
+        category: form.category.value,
+        city: form.city.value,
+        budget: form.budget.value,
+        availableWhen: form.availableWhen.value,
+        contactPhone: form.contactPhone.value,
+      };
+      const missing = firstMissingOfferFields(fields, !profile?.preferInAppChat);
+      if (missing) {
+        modalError = missing;
+        renderApp();
+        return;
+      }
+      try {
+        await createOffer({ profile, authUser: currentUser, fields });
+        activeModal = null;
+        navigateTo("#/ponude");
+      } catch (error) {
+        modalError = "Objava ponude nije uspjela.";
+        renderApp();
+      }
+    });
+  }
+
+  const tipForm = document.getElementById("tip-editor-form");
+  if (tipForm) {
+    tipForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      modalError = "";
+      const form = event.currentTarget;
+      const profile = await fetchUserProfile(currentUser.uid);
+      const title = normalizeSpaces(form.title.value);
+      const teaser = normalizeSpaces(form.teaser.value);
+      const body = normalizeSpaces(form.body.value);
+      if (!title || !teaser || !body) {
+        modalError = "Naslov, kratki i puni opis su obavezni.";
+        renderApp();
+        return;
+      }
+      try {
+        await saveHomeTip({
+          uid: currentUser.uid,
+          displayName: profile?.displayName || currentUser.displayName || "",
+          title,
+          teaser,
+          body,
+          existingId: myTip?.id || null,
+        });
+        activeModal = null;
+        renderApp();
+      } catch (error) {
+        modalError = "Spremanje savjeta nije uspjelo.";
+        renderApp();
+      }
+    });
+  }
+
+  const deleteTipBtn = document.getElementById("delete-tip-btn");
+  if (deleteTipBtn && myTip?.id) {
+    deleteTipBtn.addEventListener("click", async () => {
+      try {
+        await deleteHomeTip(myTip.id);
+        myTip = null;
+        activeModal = null;
+        renderApp();
+      } catch (error) {
+        modalError = "Brisanje savjeta nije uspjelo.";
+        renderApp();
+      }
+    });
+  }
+}
+
+function bindKalkulator() {
+  let timer;
+  document.querySelectorAll("[data-kalk-module]").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      kalkState = { ...readKalkulatorState(), module: Number(chip.dataset.kalkModule) || 0 };
+      renderApp();
+    });
+  });
+  document.querySelectorAll("[data-kalk-field]").forEach((field) => {
+    const handler = () => {
+      clearTimeout(timer);
+      timer = window.setTimeout(() => {
+        kalkState = readKalkulatorState();
+        renderApp();
+      }, 250);
+    };
+    field.addEventListener("input", handler);
+    field.addEventListener("change", handler);
+  });
 }
 
 function bindSearchAndFilters() {
@@ -606,6 +958,8 @@ function bindRootEvents() {
   bindHomeActions();
   bindPhase3Actions();
   bindSearchAndFilters();
+  bindProfileAndModals();
+  bindKalkulator();
 
   const publicGoogleBtn = document.getElementById("google-signin-btn");
   if (publicGoogleBtn) {

@@ -2,10 +2,46 @@ import { POPULAR_CITIES } from "../data/categories.js";
 import { escapeHtml } from "../utils/format.js";
 import { renderRadPreview } from "./radovi.js";
 
+export function renderHomeTips({ tips = [], loading = false }) {
+  if (loading) {
+    return `
+      <section class="home-tips">
+        <h3 class="home-tips__title">Savjeti majstora i kreatora</h3>
+        <p class="home-tips__sub">učitavanje…</p>
+      </section>`;
+  }
+  if (!tips.length) return "";
+
+  const cards = tips
+    .map((tip) => {
+      const fresh = tip.isFresh ? `<span class="tip-card__badge">NOVO</span>` : "";
+      return `
+        <article class="tip-card">
+          <div class="tip-card__head">
+            <h4 class="tip-card__title">${escapeHtml(tip.title)}</h4>
+            ${fresh}
+          </div>
+          <p class="tip-card__teaser">${escapeHtml(tip.teaser)}</p>
+          ${tip.authorDisplayName ? `<p class="tip-card__author">${escapeHtml(tip.authorDisplayName)}</p>` : ""}
+          ${tip.body ? `<details class="tip-card__details"><summary>Pročitaj više</summary><p>${escapeHtml(tip.body)}</p></details>` : ""}
+        </article>`;
+    })
+    .join("");
+
+  return `
+    <section class="home-tips">
+      <h3 class="home-tips__title">Savjeti majstora i kreatora</h3>
+      <p class="home-tips__sub">Profil → ispod statusa</p>
+      <div class="tip-list">${cards}</div>
+    </section>`;
+}
+
 export function renderHome({
   selectedCity = "",
   worksPreview = [],
   workSlideIndex = 0,
+  tips = [],
+  tipsLoading = false,
   userName = "",
   userRole = "",
   userCity = "",
@@ -83,5 +119,6 @@ export function renderHome({
         </button>
       </div>
       ${renderRadPreview({ works: worksPreview, slideIndex: workSlideIndex })}
+      ${renderHomeTips({ tips, loading: tipsLoading })}
     </div>`;
 }

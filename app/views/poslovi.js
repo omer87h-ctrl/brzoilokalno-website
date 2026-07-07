@@ -7,9 +7,16 @@ export function renderPoslovi({
   tab = "potraznja",
   filterMyCity = false,
   userCity = "",
+  canCreateJob = false,
+  canCreateOffer = false,
 }) {
   const tabs = renderPosloviTabs({ activeTab: tab });
   const cityChip = renderCityFilterChip({ active: filterMyCity, city: userCity });
+
+  const fab =
+    (tab === "potraznja" && canCreateJob) || (tab === "ponuda" && canCreateOffer)
+      ? `<button type="button" class="fab" id="poslovi-fab" data-fab-tab="${escapeHtml(tab)}" aria-label="Dodaj">+</button>`
+      : "";
 
   if (tab === "ponuda") {
     if (!offers.length) {
@@ -19,8 +26,9 @@ export function renderPoslovi({
           ${cityChip ? `<div class="chip-row chip-row--filters">${cityChip}</div>` : ""}
           <h2 class="screen-title">Ponuda</h2>
           <p class="screen-subtitle">Ponude majstora i kreatora</p>
-          <div class="empty-state">Trenutno nema objavljenih ponuda.</div>
-        </div>`;
+        <div class="empty-state">Trenutno nema objavljenih ponuda.</div>
+        ${fab}
+      </div>`;
     }
 
     const cards = offers.map((offer) => renderOfferCard(offer)).join("");
@@ -31,6 +39,7 @@ export function renderPoslovi({
         <h2 class="screen-title">Ponuda</h2>
         <p class="screen-subtitle">Ponude majstora i kreatora (${offers.length})</p>
         <div class="job-list">${cards}</div>
+        ${fab}
       </div>`;
   }
 
@@ -42,6 +51,7 @@ export function renderPoslovi({
         <h2 class="screen-title">Potražnja</h2>
         <p class="screen-subtitle">Oglasi korisnika · <a class="inline-link" href="#/prijave">Moje prijave</a></p>
         <div class="empty-state">Trenutno nema objavljenih poslova.</div>
+        ${fab}
       </div>`;
   }
 
@@ -78,5 +88,6 @@ export function renderPoslovi({
       <h2 class="screen-title">Potražnja</h2>
       <p class="screen-subtitle">Oglasi korisnika (${jobs.length}) · <a class="inline-link" href="#/prijave">Moje prijave</a></p>
       <div class="job-list">${cards}</div>
+      ${fab}
     </div>`;
 }

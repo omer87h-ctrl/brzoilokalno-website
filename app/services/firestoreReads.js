@@ -235,6 +235,66 @@ export function filterJobsOrOffersByCity(items, city) {
   return filterByCity(items, city, "city");
 }
 
+export async function fetchHomeTips(max = 4) {
+  const now = Date.now();
+  try {
+    const q = query(
+      collection(getDb(), "home_master_tips"),
+      where("expiresAtMs", ">", now),
+      orderBy("expiresAtMs", "desc"),
+      limit(max)
+    );
+    const snap = await getDocs(q);
+    return mapTips(snap.docs, now);
+  } catch (_) {
+    const q = query(collection(getDb(), "home_master_tips"), limit(20));
+    const snap = await getDocs(q);
+    return mapTips(snap.docs, now).slice(0, max);
+  }
+}
+
+export async function fetchMyHomeTip(uid) {
+  const snap = await getDoc(doc(getDb(), "home_master_tips", `author_${uid}`));
+  if (!snap.exists()) return null;
+  const data = snap.data();
+  if ((data.expiresAtMs || 0) <= Date.now()) return null;
+  return { id: snap.id, ...data };
+}
+
+export async function fetchUnreadNotificationCount(uid) {
+  const q = query(
+    collection(getDb(), "notifications"),
+    where("targetUid", "==", uid),
+    where("isRead", "==", false)
+  );
+  const snap = await getDocs(q);
+  return snap.size;
+}
+
+function mapTips(docs, now) {
+  const seen = new Set();
+  const tips = [];
+  for (const d of docs) {
+    const data = d.data();
+    if ((data.expiresAtMs || 0) <= now) continue;
+    const authorUid = data.authorUid || "";
+    if (authorUid && seen.has(authorUid)) continue;
+    if (authorUid) seen.add(authorUid);
+    const createdMs = data.createdAtMs || timestampMs(data.createdAt);
+    tips.push({
+      id: d.id,
+      title: data.title || "",
+      teaser: data.teaser || "",
+      body: data.body || "",
+      authorUid,
+      authorDisplayName: data.authorDisplayName || "",
+      isFresh: now - createdMs < 48 * 60 * 60 * 1000,
+    });
+    if (tips.length >= 4) break;
+  }
+  return tips;
+}
+
 export async function fetchUsersInCity(city = null) {
   if (!city) {
     const q = query(
