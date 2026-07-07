@@ -68,3 +68,39 @@ export function findCategoryBySlug(slug) {
   const all = [...MAJSTOR_CATEGORIES, ...KREATOR_CATEGORIES];
   return all.find((c) => c === decoded) || null;
 }
+
+export function categoryRole(category) {
+  if (MAJSTOR_CATEGORIES.includes(category)) return "majstor";
+  if (KREATOR_CATEGORIES.includes(category)) return "kreator";
+  return null;
+}
+
+export function categoryTabForCategory(category) {
+  return categoryRole(category) === "kreator" ? "kreatori" : "majstori";
+}
+
+/** Emoji ikone — mapirane na Android categoryIcon. */
+export const CATEGORY_ICONS = {
+  "Građevina": "🏗",
+  "Završni radovi": "🎨",
+  "Elektrika": "⚡",
+  "Voda i grijanje": "💧",
+  "Stolarija i namještaj": "🪑",
+  "Dvorište i bašta": "🌳",
+  "Čišćenje i održavanje": "🧹",
+  "Selidbe i prevoz": "🚚",
+  "Servis i montaža": "🔧",
+  "Fotografija i video": "📷",
+  "Dizajn i print": "🎨",
+  "Dekoracije i događaji": "🎉",
+  "Torte i kolači": "🎂",
+  "Ručni radovi": "✂️",
+  "Ljepota i šminka": "💄",
+  "Muzika i zabava": "🎵",
+  "Marketing i društvene mreže": "📱",
+  "Kreativne usluge": "✨",
+};
+
+export function categoryIcon(category) {
+  return CATEGORY_ICONS[category] || "⭐";
+}

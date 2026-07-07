@@ -270,3 +270,7 @@ export async function createWork({ profile, authUser, description, imageUrls, pa
 export async function updateWorkPublic(workId, isPublic) {
   await updateDoc(doc(getDb(), "works", workId), { isPublic: isPublic === true });
 }
+
+export async function deleteWork(workId) {
+  await deleteDoc(doc(getDb(), "works", workId));
+}

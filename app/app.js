@@ -42,6 +42,7 @@ import {
   createOffer,
   createWork,
   deleteHomeTip,
+  deleteWork,
   markNotificationsRead,
   saveHomeTip,
   sendChatMessage,
@@ -61,7 +62,7 @@ import {
   validatePersonName,
   validatePhone,
 } from "./utils/textInputValidation.js";
-import { findCategoryBySlug } from "./data/categories.js";
+import { findCategoryBySlug, categoryRole, categoryTabForCategory } from "./data/categories.js";
 import { parseRoute } from "./utils/route.js";
 import { renderMaintenance } from "./views/maintenance.js";
 import { renderPrepScreen } from "./views/prep.js";
@@ -184,7 +185,7 @@ async function loadRouteContent(route) {
   }
 
   if (route.name === "kategorije" && !route.categorySlug) {
-    return renderKategorijeGrid();
+    return renderKategorijeGrid({ tab: route.tab || "majstori" });
   }
 
   if (route.name === "kategorije" && route.categorySlug) {
@@ -192,8 +193,10 @@ async function loadRouteContent(route) {
     if (!category) {
       return renderScreenError("Kategorija nije pronađena.");
     }
-    const users = await fetchUsersByCategory(category, selectedCity || null);
-    return renderKategorijeList({ category, users, city: selectedCity || null });
+    const role = categoryRole(category);
+    const tab = categoryTabForCategory(category);
+    const users = await fetchUsersByCategory(category, selectedCity || null, role);
+    return renderKategorijeList({ category, users, city: selectedCity || null, tab });
   }
 
   if (route.name === "brzo") {
@@ -681,6 +684,21 @@ function bindProfileAndModals() {
         console.error("Work visibility update failed:", error);
         event.currentTarget.checked = !checked;
         alert(checked ? "Rad nije mogao biti javan." : "Sakrivanje rada nije uspjelo.");
+      }
+    });
+  });
+
+  document.querySelectorAll(".work-delete-btn").forEach((btn) => {
+    btn.addEventListener("click", async (event) => {
+      const workId = event.currentTarget.dataset.workId;
+      if (!workId) return;
+      if (!confirm("Obrisati ovaj rad?")) return;
+      try {
+        await deleteWork(workId);
+        renderApp();
+      } catch (error) {
+        console.error("Work delete failed:", error);
+        alert("Brisanje rada nije uspjelo.");
       }
     });
   });

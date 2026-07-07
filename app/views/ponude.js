@@ -24,15 +24,29 @@ export function renderOfferCard(offer) {
     </a>`;
 }
 
-export function renderPosloviTabs({ activeTab }) {
-  const potraznjaClass = activeTab === "potraznja" ? " poslovi-tabs__btn--active" : "";
-  const ponudaClass = activeTab === "ponuda" ? " poslovi-tabs__btn--active" : "";
+export function renderScreenTabs({ tabs, activeId, ariaLabel }) {
+  const items = tabs
+    .map((tab) => {
+      const active = tab.id === activeId ? " poslovi-tabs__btn--active" : "";
+      return `<a href="${tab.href}" class="poslovi-tabs__btn${active}" role="tab">${escapeHtml(tab.label)}</a>`;
+    })
+    .join("");
 
   return `
-    <div class="poslovi-tabs" role="tablist" aria-label="Poslovi">
-      <a href="#/poslovi" class="poslovi-tabs__btn${potraznjaClass}" role="tab">Potražnja</a>
-      <a href="#/ponude" class="poslovi-tabs__btn${ponudaClass}" role="tab">Ponuda</a>
+    <div class="poslovi-tabs" role="tablist" aria-label="${escapeHtml(ariaLabel)}">
+      ${items}
     </div>`;
+}
+
+export function renderPosloviTabs({ activeTab }) {
+  return renderScreenTabs({
+    ariaLabel: "Poslovi",
+    activeId: activeTab,
+    tabs: [
+      { id: "potraznja", label: "Potražnja", href: "#/poslovi" },
+      { id: "ponuda", label: "Ponuda", href: "#/ponude" },
+    ],
+  });
 }
 
 export function renderCityFilterChip({ active, city }) {

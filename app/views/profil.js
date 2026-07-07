@@ -35,6 +35,7 @@ function renderMyWorksSection({ works = [], canAdd = false }) {
               <input type="checkbox" class="work-public-toggle" data-work-id="${escapeHtml(work.id)}" ${isPublic ? "checked" : ""}>
               <span>Javno</span>
             </label>
+            <button type="button" class="my-work-card__delete work-delete-btn" data-work-id="${escapeHtml(work.id)}" aria-label="Obriši rad">Obriši</button>
           </div>
         </article>`;
     })

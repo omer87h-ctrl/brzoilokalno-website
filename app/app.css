@@ -602,6 +602,94 @@ body.app-body {
   gap: 0.55rem;
 }
 
+.kategorije-header {
+  padding: 1.1rem 1rem 0.25rem;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  background: linear-gradient(160deg, rgba(242, 140, 40, 0.1), var(--bg-card));
+  margin-bottom: 0.85rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.kategorije-header__accent {
+  display: block;
+  width: 42px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(232, 136, 74, 0.35);
+  margin-bottom: 0.65rem;
+}
+
+.kategorije-header .screen-title {
+  margin-top: 0;
+}
+
+.kategorije-header .screen-subtitle {
+  margin-bottom: 0.85rem;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.category-card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.9rem 1rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), var(--bg-card));
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.category-card:hover {
+  border-color: rgba(242, 140, 40, 0.4);
+  transform: translateY(-1px);
+}
+
+.category-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-elevated);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.category-card__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.category-card__name {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.category-card__sub {
+  margin: 0.2rem 0 0;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
+.category-card__cta {
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
 .category-tile {
   display: flex;
   align-items: center;
@@ -1804,6 +1892,21 @@ body.app-body {
   gap: 0.4rem;
   font-size: 0.78rem;
   color: var(--text-muted);
+}
+
+.my-work-card__delete {
+  margin-top: 0.35rem;
+  border: 0;
+  background: transparent;
+  color: #ff8f8f;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.my-work-card__delete:hover {
+  text-decoration: underline;
 }
 
 .work-image-preview {

@@ -125,8 +125,8 @@ export async function fetchUserProfile(uid) {
   return { id: snap.id, ...snap.data() };
 }
 
-export async function fetchUsersByCategory(category, city = null) {
-  const roles = ["majstor", "kreator"];
+export async function fetchUsersByCategory(category, city = null, role = null) {
+  const roles = role ? [role] : ["majstor", "kreator"];
   const results = [];
 
   for (const role of roles) {

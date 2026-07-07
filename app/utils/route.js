@@ -7,7 +7,10 @@ export function parseRoute(hash) {
   if (name === "register") return { name: "register" };
   if (name === "onboarding") return { name: "onboarding" };
   if (name === "kategorije") {
-    return { name: "kategorije", categorySlug: parts[1] || null };
+    return { name: "kategorije", tab: "majstori", categorySlug: parts[1] || null };
+  }
+  if (name === "kreatori" && !parts[1]) {
+    return { name: "kategorije", tab: "kreatori", categorySlug: null };
   }
   if (name === "brzo") return { name: "brzo", city: parts[1] ? decodeURIComponent(parts[1]) : null };
   if (name === "lista" && parts[1]) {
