@@ -179,14 +179,16 @@ export async function applyToJob({ job, profile, authUser }) {
   if (profile.profileImageVersionMs) appData.workerProfileImageVersionMs = profile.profileImageVersionMs;
   if (profile.profileVerified === true) appData.workerProfileVerified = true;
 
-  const ref = await addDoc(collection(getDb(), "applications"), appData);
+  const appDocId = `${job.id}_${profile.uid}`;
+  const ref = doc(getDb(), "applications", appDocId);
+  await setDoc(ref, appData);
   const ownerUid = job.userId;
   if (ownerUid) {
     await createNotification({
       targetUid: ownerUid,
       type: "new_application",
       jobId: job.id,
-      applicationId: ref.id,
+      applicationId: appDocId,
       actorName: appData.workerName,
     });
   }

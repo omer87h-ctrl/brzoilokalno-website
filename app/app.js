@@ -2182,7 +2182,11 @@ function bindHomeActions() {
   if (blizuBtn) {
     blizuBtn.addEventListener("click", () => {
       const city = selectedCity || profileCity;
-      navigateTo(city ? `#/lista/blizu/${encodeURIComponent(city)}` : "#/lista/blizu");
+      if (!city) {
+        window.alert("Odaberi grad ili postavi grad u profilu.");
+        return;
+      }
+      navigateTo(`#/lista/blizu/${encodeURIComponent(city)}`);
     });
   }
 
