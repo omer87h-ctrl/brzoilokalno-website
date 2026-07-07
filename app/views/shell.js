@@ -19,7 +19,7 @@ export function renderShell({ route, userEmail, contentHtml, unreadNotifications
         </div>
         <div class="app-topbar__meta">
           <a href="#/postavke" class="app-topbar__settings" title="Postavke">⚙</a>
-          <a href="#/obavijesti" class="app-notif-link" title="Obavijesti">${notifBadge}🔔</a>
+          <a href="#/obavijesti" class="app-notif-link" title="Obavijesti">🔔${notifBadge}</a>
           <button type="button" class="app-topbar__logout" id="logout-btn" title="Odjava">⎋</button>
         </div>
       </header>

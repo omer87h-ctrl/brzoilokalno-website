@@ -176,6 +176,8 @@ let outdoorOutlookCacheKey = "";
 const scrollPositions = {};
 let lastScrollRoute = null;
 let skipRouteLoading = false;
+/** Prvi ulaz u shell nakon boota — bez duplog loadera (fullscreen pa opet u mainu). */
+let bootInitialLoad = true;
 let profilRouteCache = null;
 let profilOutdoorCtx = { city: "", role: "", weatherKey: "" };
 let outdoorFetchToken = 0;
@@ -1014,7 +1016,7 @@ async function renderApp() {
   stopChatListener();
   const softUpdate = skipRouteLoading;
   skipRouteLoading = false;
-  if (!softUpdate) {
+  if (!softUpdate && !bootInitialLoad) {
     captureMainScroll(lastScrollRoute);
     renderShellWithContent(route, renderScreenLoading(), { restoreScroll: false });
   }
@@ -1033,6 +1035,7 @@ async function renderApp() {
     const contentHtml = await loadRouteContent(route);
     if (requestId !== screenRequestId) return;
     renderShellWithContent(route, contentHtml, { restoreScroll: softUpdate });
+    bootInitialLoad = false;
     if (route.name === "chat" && chatContext) {
       startChatListener(chatContext);
     }
@@ -1043,6 +1046,7 @@ async function renderApp() {
       route,
       renderScreenError("Nije moguće učitati podatke. Provjerite Firestore rules.")
     );
+    bootInitialLoad = false;
   }
 }
 

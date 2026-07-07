@@ -12,7 +12,8 @@ export const firebaseConfig = {
 export const ADMIN_EMAIL = "omer.creating.apps87@gmail.com";
 
 export const APP_LINKS = {
-  appGallery: "https://appgallery.huawei.com/app/C117382847",
+  appGallery:
+    "https://appgallery.cloud.huawei.com/ag/n/app/C117382847?locale=bs_BA&source=appshare&subsource=C117382847",
   instagram: "https://www.instagram.com/brzo.i.lokalno/",
   landing: "/",
 };
