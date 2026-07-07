@@ -132,8 +132,8 @@ export function renderHome({
       </form>
       <div class="city-chips-block">
         <p class="city-chips-label">Odaberi grad</p>
-        <p class="city-chips-hint">Filtar za kartice ispod (top, slobodni, blizu mene).</p>
-        <div class="chip-row" aria-label="Odaberi grad">${chips}${moreCitiesBtn}</div>
+        <p class="city-chips-hint">${showAllCities ? "Svi gradovi (abecedno). Skrolaj listu." : "Popularni gradovi — skrolaj ustranu ili otvori sve."}</p>
+        <div class="city-chips-scroll${showAllCities ? " city-chips-scroll--expanded" : ""}" aria-label="Odaberi grad">${chips}${moreCitiesBtn}</div>
       </div>
       <div class="home-grid">
         <button type="button" class="home-card home-card--blue home-card--btn" data-action="lista-top">

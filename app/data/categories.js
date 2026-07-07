@@ -26,7 +26,7 @@ export const KREATOR_CATEGORIES = [
 
 export const POPULAR_CITIES = ["Kladanj", "Tuzla", "Sarajevo", "Zenica", "Mostar", "Banja Luka"];
 
-export const ALL_CITIES = [
+const CITIES_RAW = [
   "Kladanj",
   "Tuzla",
   "Sarajevo",
@@ -52,6 +52,9 @@ export const ALL_CITIES = [
   "Brčko",
   "Trebinje",
 ];
+
+/** Svi gradovi — abecedno (bs), za padajuće liste i „Više gradova”. */
+export const ALL_CITIES = [...CITIES_RAW].sort((a, b) => a.localeCompare(b, "bs"));
 
 export const USER_ROLES = [
   { id: "korisnik", label: "Korisnik" },
