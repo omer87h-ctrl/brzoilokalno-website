@@ -1578,6 +1578,47 @@ body.app-body.has-app-shell #app-root {
 }
 
 @media (min-width: 768px) {
+  .search-form {
+    gap: 0.65rem;
+    padding: 0.55rem 0.7rem;
+  }
+
+  .search-form__input {
+    font-size: 0.98rem;
+  }
+
+  .search-form__submit {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.45rem;
+  }
+
+  .brzo-btn {
+    gap: 0.5rem;
+    padding: 0.52rem 0.9rem 0.52rem 0.56rem;
+    border-radius: 18px;
+    font-size: 0.86rem;
+  }
+
+  .brzo-btn__bolt {
+    width: 1.95rem;
+    height: 1.95rem;
+  }
+
+  .brzo-btn__bolt-svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .auto-izbor-loading {
+    min-height: 48vh;
+    gap: 0.95rem;
+  }
+
+  .auto-izbor-loading__text {
+    max-width: 420px;
+    font-size: 0.95rem;
+  }
+
   :root {
     --shell-max: min(100%, 720px);
   }
