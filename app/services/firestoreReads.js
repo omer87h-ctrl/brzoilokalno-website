@@ -125,6 +125,28 @@ export async function fetchUserProfile(uid) {
   return { id: snap.id, ...snap.data() };
 }
 
+export function isRateableRole(role) {
+  return role === "majstor" || role === "kreator";
+}
+
+export async function fetchRatingsForUser(uid) {
+  const snap = await getDocs(collection(getDb(), "users", uid, "ratings"));
+  const ratings = snap.docs
+    .map((d) => Number(d.data().rating))
+    .filter((r) => r >= 1 && r <= 5);
+  const count = ratings.length;
+  const average = count ? ratings.reduce((sum, r) => sum + r, 0) / count : 0;
+  return { average, count };
+}
+
+export async function fetchMyRatingForUser(profileUid, raterUid) {
+  if (!profileUid || !raterUid) return 0;
+  const snap = await getDoc(doc(getDb(), "users", profileUid, "ratings", raterUid));
+  if (!snap.exists()) return 0;
+  const rating = Number(snap.data().rating);
+  return rating >= 1 && rating <= 5 ? rating : 0;
+}
+
 export async function fetchUsersByCategory(category, city = null, role = null) {
   const roles = role ? [role] : ["majstor", "kreator"];
   const results = [];

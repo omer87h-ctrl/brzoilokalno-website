@@ -282,3 +282,45 @@ export async function deleteJob(jobId) {
 export async function deleteOffer(offerId) {
   await deleteDoc(doc(getDb(), "offers", offerId));
 }
+
+export async function submitRating({ profileUid, raterUid, rating }) {
+  const value = Math.max(1, Math.min(5, Math.round(Number(rating) || 0)));
+  await setDoc(
+    doc(getDb(), "users", profileUid, "ratings", raterUid),
+    {
+      rating: value,
+      raterUid,
+      updatedAt: Date.now(),
+    },
+    { merge: true }
+  );
+  return value;
+}
+
+async function deleteDocsFromQuery(q) {
+  const snap = await getDocs(q);
+  if (!snap.docs.length) return;
+  const db = getDb();
+  for (let i = 0; i < snap.docs.length; i += 400) {
+    const batch = writeBatch(db);
+    snap.docs.slice(i, i + 400).forEach((d) => batch.delete(d.ref));
+    await batch.commit();
+  }
+}
+
+export async function deleteAccountData(uid) {
+  const db = getDb();
+  await Promise.all([
+    deleteDocsFromQuery(query(collection(db, "works"), where("userId", "==", uid))),
+    deleteDocsFromQuery(query(collection(db, "jobs"), where("userId", "==", uid))),
+    deleteDocsFromQuery(query(collection(db, "offers"), where("userId", "==", uid))),
+    deleteDocsFromQuery(query(collection(db, "applications"), where("workerId", "==", uid))),
+    deleteDocsFromQuery(query(collection(db, "applications"), where("jobOwnerId", "==", uid))),
+    deleteDocsFromQuery(query(collection(db, "notifications"), where("targetUid", "==", uid))),
+    deleteDocsFromQuery(query(collection(db, "messages"), where("senderId", "==", uid))),
+  ]);
+  try {
+    await deleteDoc(doc(db, HOME_TIPS, `author_${uid}`));
+  } catch (_) {}
+  await deleteDoc(doc(db, "users", uid));
+}

@@ -49,6 +49,17 @@ export function renderPosloviTabs({ activeTab }) {
   });
 }
 
+export function renderMyJobsFilterChip({ active = false }) {
+  return `
+    <button
+      type="button"
+      class="chip chip--btn chip--filter${active ? " chip--active" : ""}"
+      id="poslovi-my-jobs-filter"
+      data-active="${active ? "1" : "0"}">
+      ${active ? "Samo moji oglasi" : "Moji oglasi"}
+    </button>`;
+}
+
 export function renderCityFilterChip({ active, city, id = "poslovi-city-filter" }) {
   if (!city) return "";
   return `

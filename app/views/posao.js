@@ -52,6 +52,11 @@ export function renderPosao({
         <div class="detail-actions">
           <span class="${statusClass(st)}">${escapeHtml(formatApplicationStatus(st))}</span>
           ${
+            st === "accepted"
+              ? `<button type="button" class="btn btn--primary" data-app-action="complete" data-app-id="${escapeHtml(myApplication.id)}">Završeno</button>`
+              : ""
+          }
+          ${
             chatEnabled && isChatOpen(st)
               ? `<a class="btn btn--primary" href="#/chat/${job.id}/${myApplication.id}">Otvori chat</a>`
               : ""
@@ -90,7 +95,17 @@ export function renderPosao({
                   <button type="button" class="btn btn--ghost btn--sm" data-app-action="accept" data-app-id="${escapeHtml(app.id)}">Prihvati</button>
                   <button type="button" class="btn btn--ghost btn--sm btn--danger" data-app-action="reject" data-app-id="${escapeHtml(app.id)}">Odbij</button>
                 </div>`
-                  : chatEnabled && isChatOpen(st)
+                  : st === "accepted"
+                    ? `
+                <div class="app-card__actions">
+                  <button type="button" class="btn btn--ghost btn--sm" data-app-action="complete" data-app-id="${escapeHtml(app.id)}">Završeno</button>
+                  ${
+                    chatEnabled
+                      ? `<a class="btn btn--ghost btn--sm" href="#/chat/${job.id}/${app.id}">Chat</a>`
+                      : ""
+                  }
+                </div>`
+                    : chatEnabled && isChatOpen(st)
                     ? `<a class="btn btn--ghost btn--sm" href="#/chat/${job.id}/${app.id}">Chat</a>`
                     : `<span class="${statusClass(st)}">${escapeHtml(formatApplicationStatus(st))}</span>`;
 

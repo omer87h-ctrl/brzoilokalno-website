@@ -1,6 +1,7 @@
 import { escapeHtml, formatRating, workImageUrl } from "../utils/format.js";
 import { profileAvatarUrl } from "../services/storageService.js";
 import { renderProfileWorks } from "./radovi.js";
+import { renderRatingSection } from "./rating.js";
 import { ALL_CITIES, KREATOR_CATEGORIES, MAJSTOR_CATEGORIES } from "../data/categories.js";
 
 function isWorker(role) {
@@ -125,6 +126,7 @@ export function renderProfil({
         </article>
         <div class="profile-actions">
           <button type="button" class="btn btn--primary btn--block" id="edit-profile-btn">Uredi profil</button>
+          <a class="btn btn--ghost btn--block" href="#/postavke">Postavke</a>
           ${worker ? `<button type="button" class="btn btn--ghost btn--block" id="edit-tip-btn">${myTip ? "Uredi savjet" : "Dodaj savjet za početnu"}</button>` : ""}
           ${avatarUrl ? `<button type="button" class="btn btn--ghost btn--block btn--danger" id="delete-profile-image-btn">Ukloni sliku</button>` : ""}
         </div>
@@ -178,7 +180,13 @@ export function renderProfil({
     </div>`;
 }
 
-export function renderPregledProfila({ user, works = [] }) {
+export function renderPregledProfila({
+  user,
+  works = [],
+  ratingsSummary = null,
+  myRating = 0,
+  currentUid = "",
+}) {
   if (!user) {
     return `
       <div class="screen-scroll">
@@ -192,7 +200,8 @@ export function renderPregledProfila({ user, works = [] }) {
   const city = escapeHtml(user.city || "—");
   const category = escapeHtml(user.category || user.occupation || "—");
   const status = escapeHtml(user.status || "—");
-  const rating = formatRating(user.ratingAverage, user.ratingCount);
+  const summary = ratingsSummary || { average: user.ratingAverage, count: user.ratingCount };
+  const rating = formatRating(summary.average, summary.count);
   const desc = escapeHtml(user.description || "Nema opisa.");
   const avatarHtml = renderAvatar(user);
 
@@ -207,6 +216,13 @@ export function renderPregledProfila({ user, works = [] }) {
         <p class="profile-card__rating">${escapeHtml(rating)}</p>
         <p class="profile-card__desc">${desc}</p>
       </article>
+      ${renderRatingSection({
+        profileUid: user.id,
+        profileRole: user.role,
+        currentUid,
+        ratingsSummary: summary,
+        myRating,
+      })}
       ${renderProfileWorks({ works, uid: user.id })}
     </div>`;
 }

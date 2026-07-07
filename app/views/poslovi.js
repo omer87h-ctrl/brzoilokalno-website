@@ -1,5 +1,5 @@
 import { escapeHtml, formatTimestamp } from "../utils/format.js";
-import { renderCityFilterChip, renderOfferCard, renderPosloviTabs } from "./ponude.js";
+import { renderCityFilterChip, renderMyJobsFilterChip, renderOfferCard, renderPosloviTabs } from "./ponude.js";
 import { renderScreenFeed } from "./screenFeed.js";
 
 export function renderPoslovi({
@@ -7,12 +7,15 @@ export function renderPoslovi({
   offers = [],
   tab = "potraznja",
   filterMyCity = false,
+  filterMyJobs = false,
   userCity = "",
   canCreateJob = false,
   canCreateOffer = false,
 }) {
   const tabs = renderPosloviTabs({ activeTab: tab });
+  const myJobsChip = tab === "potraznja" ? renderMyJobsFilterChip({ active: filterMyJobs }) : "";
   const cityChip = renderCityFilterChip({ active: filterMyCity, city: userCity });
+  const filterChips = [myJobsChip, cityChip].filter(Boolean).join("");
 
   const fab =
     (tab === "potraznja" && canCreateJob) || (tab === "ponuda" && canCreateOffer)
@@ -26,7 +29,7 @@ export function renderPoslovi({
 
     return renderScreenFeed({
       tabs,
-      cityChip,
+      cityChip: filterChips,
       title: "Ponuda",
       subtitleHtml: offers.length
         ? `Ponude majstora i kreatora (${offers.length})`
@@ -47,7 +50,7 @@ export function renderPoslovi({
 
   return renderScreenFeed({
     tabs,
-    cityChip,
+    cityChip: filterChips,
     title: "Potražnja",
     subtitleHtml,
     bodyHtml,

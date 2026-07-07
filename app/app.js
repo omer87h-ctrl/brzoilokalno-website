@@ -33,6 +33,8 @@ import {
   fetchHomeTips,
   fetchMyHomeTip,
   fetchUnreadNotificationCount,
+  fetchRatingsForUser,
+  fetchMyRatingForUser,
   pickFastCandidates,
 } from "./services/firestoreReads.js";
 import {
@@ -45,9 +47,11 @@ import {
   deleteJob,
   deleteOffer,
   deleteWork,
+  deleteAccountData,
   markNotificationsRead,
   saveHomeTip,
   sendChatMessage,
+  submitRating,
   updateApplicationStatus,
   updateUserProfile,
   updateWorkPublic,
@@ -84,6 +88,7 @@ import { renderPrijave } from "./views/prijave.js";
 import { renderChat, renderChatMessages } from "./views/chat.js";
 import { renderPretraga } from "./views/pretraga.js";
 import { renderPonudaDetail } from "./views/ponude.js";
+import { renderPostavke } from "./views/postavke.js";
 import { renderKalkulator, readKalkulatorState } from "./views/kalkulator.js";
 import { renderCreateJobForm, renderCreateOfferForm, renderTipEditorForm, renderAddWorkForm } from "./views/forms.js";
 import { renderScreenError, renderScreenLoading } from "./views/shared.js";
@@ -99,6 +104,7 @@ let selectedCity = "";
 let profileCity = "";
 let workSlideIndex = 0;
 let posloviFilterMyCity = false;
+let posloviFilterMyJobs = false;
 let kategorijeFilterMyCity = false;
 let screenRequestId = 0;
 let chatUnsubscribe = null;
@@ -110,6 +116,7 @@ let modalError = "";
 let kalkState = { module: 0 };
 let unreadNotifications = 0;
 let myTip = null;
+let postavkeDeleteError = "";
 const scrollPositions = {};
 let lastScrollRoute = null;
 
@@ -306,13 +313,17 @@ async function loadRouteContent(route) {
     const role = profile?.role || "";
     const [jobs, offers] = await Promise.all([fetchJobs(30), fetchOffers(30)]);
     const cityFilter = posloviFilterMyCity ? profileCity : "";
-    const filteredJobs = cityFilter ? filterJobsOrOffersByCity(jobs, cityFilter) : jobs;
+    let filteredJobs = cityFilter ? filterJobsOrOffersByCity(jobs, cityFilter) : jobs;
+    if (posloviFilterMyJobs && tab === "potraznja") {
+      filteredJobs = filteredJobs.filter((job) => job.userId === currentUser.uid);
+    }
     const filteredOffers = cityFilter ? filterJobsOrOffersByCity(offers, cityFilter) : offers;
     return renderPoslovi({
       jobs: filteredJobs,
       offers: filteredOffers,
       tab,
       filterMyCity: posloviFilterMyCity,
+      filterMyJobs: posloviFilterMyJobs,
       userCity: profileCity,
       canCreateJob: role === "korisnik",
       canCreateOffer: role === "majstor" || role === "kreator",
@@ -434,14 +445,39 @@ async function loadRouteContent(route) {
   if (route.name === "pregled") {
     const user = await fetchUserProfile(route.uid);
     let works = [];
+    let ratingsSummary = null;
+    let myRating = 0;
     if (user) {
       try {
         works = await fetchWorksByUser(route.uid, true);
       } catch (error) {
         console.warn("Public works load failed:", error);
       }
+      if (user.role === "majstor" || user.role === "kreator") {
+        try {
+          [ratingsSummary, myRating] = await Promise.all([
+            fetchRatingsForUser(route.uid),
+            currentUser?.uid ? fetchMyRatingForUser(route.uid, currentUser.uid) : 0,
+          ]);
+        } catch (error) {
+          console.warn("Ratings load failed:", error);
+        }
+      }
     }
-    return renderPregledProfila({ user, works });
+    return renderPregledProfila({
+      user,
+      works,
+      ratingsSummary,
+      myRating,
+      currentUid: currentUser?.uid || "",
+    });
+  }
+
+  if (route.name === "postavke") {
+    return renderPostavke({
+      userEmail: currentUser?.email || "",
+      deleteError: postavkeDeleteError,
+    });
   }
 
   return renderHome({ selectedCity });
@@ -623,7 +659,9 @@ function bindPhase3Actions() {
       const appId = btn.dataset.appId;
       const action = btn.dataset.appAction;
       if (!appId || !action || btn.disabled) return;
-      const status = action === "accept" ? "accepted" : "rejected";
+      const status =
+        action === "accept" ? "accepted" : action === "reject" ? "rejected" : action === "complete" ? "completed" : "";
+      if (!status) return;
       btn.disabled = true;
       try {
         const app = await fetchApplication(appId);
@@ -1120,6 +1158,62 @@ function bindSearchAndFilters() {
     posloviFilter.addEventListener("click", () => {
       posloviFilterMyCity = !posloviFilterMyCity;
       renderApp();
+    });
+  }
+
+  const myJobsFilter = document.getElementById("poslovi-my-jobs-filter");
+  if (myJobsFilter) {
+    myJobsFilter.addEventListener("click", () => {
+      posloviFilterMyJobs = !posloviFilterMyJobs;
+      renderApp();
+    });
+  }
+
+  document.querySelectorAll(".rating-star").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const profileUid = btn.dataset.profileUid;
+      const value = Number(btn.dataset.ratingValue);
+      if (!profileUid || !value || !currentUser?.uid || btn.disabled) return;
+      document.querySelectorAll(".rating-star").forEach((star) => {
+        star.disabled = true;
+      });
+      try {
+        await submitRating({
+          profileUid,
+          raterUid: currentUser.uid,
+          rating: value,
+        });
+        renderApp();
+      } catch (error) {
+        console.error("Rating failed:", error);
+        document.querySelectorAll(".rating-star").forEach((star) => {
+          star.disabled = false;
+        });
+        alert("Ocjenjivanje nije uspjelo.");
+      }
+    });
+  });
+
+  const deleteAccountBtn = document.getElementById("delete-account-btn");
+  if (deleteAccountBtn) {
+    deleteAccountBtn.addEventListener("click", async () => {
+      if (!currentUser?.uid) return;
+      if (!confirm("Obrisati nalog trajno? Uklonit će se profil, oglasi, ponude i prijave.")) return;
+      const typed = prompt('Za potvrdu upišite "OBRIŠI"');
+      if (typed !== "OBRIŠI") return;
+      deleteAccountBtn.disabled = true;
+      postavkeDeleteError = "";
+      try {
+        await deleteAccountData(currentUser.uid);
+        await deleteCurrentUser();
+        currentUser = null;
+        navigateTo("#/login");
+      } catch (error) {
+        console.error("Delete account failed:", error);
+        postavkeDeleteError = "Brisanje naloga nije uspjelo. Pokušaj ponovo.";
+        deleteAccountBtn.disabled = false;
+        renderApp();
+      }
     });
   }
 

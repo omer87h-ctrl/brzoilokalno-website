@@ -23,6 +23,11 @@ export function renderPrijave({ applications, jobsById, currentUid, chatEnabled 
           ? `<a class="btn btn--ghost btn--sm" href="#/chat/${escapeHtml(app.jobId)}/${escapeHtml(app.id)}">Chat</a>`
           : "";
 
+      const completeBtn =
+        st === "accepted"
+          ? `<button type="button" class="btn btn--ghost btn--sm" data-app-action="complete" data-app-id="${escapeHtml(app.id)}">Završeno</button>`
+          : "";
+
       return `
         <article class="app-card">
           <div class="app-card__head">
@@ -34,6 +39,7 @@ export function renderPrijave({ applications, jobsById, currentUid, chatEnabled 
           <p class="app-card__meta">${escapeHtml(roleLabel)} · ${escapeHtml(date)}</p>
           <div class="app-card__actions">
             <a class="btn btn--ghost btn--sm" href="#/posao/${escapeHtml(app.jobId)}">Detalji posla</a>
+            ${completeBtn}
             ${chatLink}
           </div>
         </article>`;

@@ -297,6 +297,20 @@ body.app-body.has-app-shell #app-root {
   font-size: 1rem;
 }
 
+.app-topbar__settings {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
 .app-main {
   flex: 1 1 auto;
   min-height: 0;
@@ -1312,6 +1326,71 @@ body.app-body.has-app-shell #app-root {
 .status-badge--accepted { color: #6ee7a0; background: rgba(110, 231, 160, 0.12); }
 .status-badge--rejected { color: #ff8a8a; background: rgba(255, 138, 138, 0.12); }
 .status-badge--completed { color: #8ec5ff; background: rgba(142, 197, 255, 0.12); }
+
+.rating-section {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.rating-section__summary {
+  margin: 0 0 0.65rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.rating-section__stars {
+  display: flex;
+  gap: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.rating-star {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 1.65rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+
+.rating-star--active,
+.rating-star:hover {
+  color: #f5c542;
+}
+
+.settings-group {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.settings-group__title {
+  margin: 0 0 0.65rem;
+  font-size: 1rem;
+}
+
+.settings-text {
+  margin: 0 0 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.settings-text--muted {
+  font-size: 0.82rem;
+}
+
+.settings-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 
 .app-list {
   display: flex;

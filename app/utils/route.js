@@ -36,6 +36,7 @@ export function parseRoute(hash) {
     return { name: "chat", jobId: parts[1], appId: parts[2] };
   }
   if (name === "profil") return { name: "profil" };
+  if (name === "postavke") return { name: "postavke" };
   if (name === "pregled" && parts[1]) return { name: "pregled", uid: parts[1] };
 
   return { name: "home" };
@@ -51,7 +52,7 @@ export function routeToNav(route) {
   ) {
     return "poslovi";
   }
-  if (route.name === "profil") return "profil";
+  if (route.name === "profil" || route.name === "postavke") return "profil";
   if (
     route.name === "kategorije" ||
     route.name === "pregled" ||
