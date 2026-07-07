@@ -15,6 +15,13 @@ export function parseRoute(hash) {
   }
   if (name === "kalkulator") return { name: "kalkulator" };
   if (name === "poslovi") return { name: "poslovi" };
+  if (name === "posao" && parts[1]) return { name: "posao", jobId: parts[1] };
+  if (name === "radovi") return { name: "radovi" };
+  if (name === "rad" && parts[1]) return { name: "rad", workId: parts[1] };
+  if (name === "prijave") return { name: "prijave" };
+  if (name === "chat" && parts[1] && parts[2]) {
+    return { name: "chat", jobId: parts[1], appId: parts[2] };
+  }
   if (name === "profil") return { name: "profil" };
   if (name === "pregled" && parts[1]) return { name: "pregled", uid: parts[1] };
 
@@ -22,8 +29,12 @@ export function parseRoute(hash) {
 }
 
 export function routeToNav(route) {
-  if (route.name === "poslovi") return "poslovi";
+  if (route.name === "poslovi" || route.name === "posao" || route.name === "prijave" || route.name === "chat") {
+    return "poslovi";
+  }
   if (route.name === "profil") return "profil";
-  if (route.name === "kategorije" || route.name === "pregled") return "kategorije";
+  if (route.name === "kategorije" || route.name === "pregled" || route.name === "radovi" || route.name === "rad") {
+    return "kategorije";
+  }
   return "home";
 }

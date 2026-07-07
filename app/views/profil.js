@@ -1,4 +1,5 @@
 import { escapeHtml, formatRating } from "../utils/format.js";
+import { renderProfileWorks } from "./radovi.js";
 
 export function renderProfil({ user, authEmail }) {
   if (!user) {
@@ -35,7 +36,7 @@ export function renderProfil({ user, authEmail }) {
     </div>`;
 }
 
-export function renderPregledProfila({ user }) {
+export function renderPregledProfila({ user, works = [] }) {
   if (!user) {
     return `
       <div class="screen-scroll">
@@ -63,5 +64,6 @@ export function renderPregledProfila({ user }) {
         <p class="profile-card__rating">${escapeHtml(rating)}</p>
         <p class="profile-card__desc">${desc}</p>
       </article>
+      ${renderProfileWorks({ works, uid: user.id })}
     </div>`;
 }

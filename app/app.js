@@ -13,13 +13,23 @@ import {
 import {
   fetchAvailableUsers,
   fetchFastMatchPool,
+  fetchJob,
   fetchJobs,
+  fetchMyApplicationForJob,
+  fetchMyApplications,
+  fetchApplication,
+  fetchPublicWorks,
   fetchTopRated,
   fetchUserProfile,
   fetchUsersByCategory,
   fetchUsersInCity,
+  fetchWork,
+  fetchWorksByUser,
+  fetchApplicationsForJob,
   pickFastCandidates,
 } from "./services/firestoreReads.js";
+import { applyToJob, clearMyUnread, sendChatMessage, updateApplicationStatus } from "./services/firestoreWrites.js";
+import { subscribeToChatMessages } from "./services/chatService.js";
 import { createUserProfile, isProfileComplete } from "./services/userProfile.js";
 import { findCategoryBySlug } from "./data/categories.js";
 import { parseRoute } from "./utils/route.js";
@@ -35,6 +45,10 @@ import { renderPoslovi } from "./views/poslovi.js";
 import { renderProfil, renderPregledProfila } from "./views/profil.js";
 import { renderBrzo } from "./views/brzo.js";
 import { renderMajstoriList } from "./views/majstori.js";
+import { renderPosao } from "./views/posao.js";
+import { renderRad, renderRadovi } from "./views/radovi.js";
+import { renderPrijave } from "./views/prijave.js";
+import { renderChat, renderChatMessages } from "./views/chat.js";
 import { renderKalkulator } from "./views/kalkulator.js";
 import { renderScreenError, renderScreenLoading } from "./views/shared.js";
 
@@ -48,6 +62,16 @@ let booted = false;
 let selectedCity = "";
 let profileCity = "";
 let screenRequestId = 0;
+let chatUnsubscribe = null;
+let chatContext = null;
+
+function stopChatListener() {
+  if (chatUnsubscribe) {
+    chatUnsubscribe();
+    chatUnsubscribe = null;
+  }
+  chatContext = null;
+}
 
 function setRoot(html) {
   root.innerHTML = html;
@@ -91,7 +115,8 @@ async function refreshProfileCity() {
 
 async function loadRouteContent(route) {
   if (route.name === "home") {
-    return renderHome({ selectedCity });
+    const worksPreview = await fetchPublicWorks(3);
+    return renderHome({ selectedCity, worksPreview });
   }
 
   if (route.name === "kategorije" && !route.categorySlug) {
@@ -137,6 +162,88 @@ async function loadRouteContent(route) {
     return renderPoslovi({ jobs });
   }
 
+  if (route.name === "posao") {
+    const [job, profile] = await Promise.all([
+      fetchJob(route.jobId),
+      fetchUserProfile(currentUser.uid),
+    ]);
+    if (!job) return renderScreenError("Posao nije pronađen.");
+    const [applications, myApplication] = await Promise.all([
+      job.userId === currentUser.uid ? fetchApplicationsForJob(route.jobId) : Promise.resolve([]),
+      fetchMyApplicationForJob(route.jobId, currentUser.uid),
+    ]);
+    return renderPosao({
+      job,
+      myApplication,
+      applications,
+      currentUid: currentUser.uid,
+      myRole: profile?.role || "",
+      chatEnabled: webConfig?.chatEnabled === true,
+    });
+  }
+
+  if (route.name === "radovi") {
+    const works = await fetchPublicWorks(30);
+    return renderRadovi({ works });
+  }
+
+  if (route.name === "rad") {
+    const work = await fetchWork(route.workId);
+    if (!work || work.isPublic !== true) {
+      return renderScreenError("Javni rad nije pronađen.");
+    }
+    return renderRad({ work });
+  }
+
+  if (route.name === "prijave") {
+    const applications = await fetchMyApplications(currentUser.uid);
+    const jobIds = [...new Set(applications.map((a) => a.jobId).filter(Boolean))];
+    const jobs = await Promise.all(jobIds.map((id) => fetchJob(id)));
+    const jobsById = Object.fromEntries(jobs.filter(Boolean).map((j) => [j.id, j]));
+    return renderPrijave({ applications, jobsById, currentUid: currentUser.uid, chatEnabled: webConfig?.chatEnabled === true });
+  }
+
+  if (route.name === "chat") {
+    if (!webConfig?.chatEnabled) {
+      return renderScreenError("Chat je trenutno isključen na web verziji.");
+    }
+    const app = await fetchApplication(route.appId);
+    if (!app) return renderScreenError("Prijava nije pronađena.");
+    const uid = currentUser.uid;
+    const isParticipant = uid === app.workerId || uid === app.jobOwnerId;
+    const status = app.status || "";
+    const open = status === "accepted" || status === "completed";
+    if (!isParticipant || !open) {
+      return renderScreenError("Nemate pristup ovom chatu.");
+    }
+    const job = await fetchJob(route.jobId);
+    const otherUid = uid === app.workerId ? app.jobOwnerId : app.workerId;
+    const otherProfile = otherUid ? await fetchUserProfile(otherUid) : null;
+    const otherName =
+      uid === app.workerId
+        ? job?.authorName || otherProfile?.displayName || "Naručitelj"
+        : app.workerName || otherProfile?.displayName || "Majstor";
+    const otherRole = uid === app.workerId ? "Naručitelj posla" : "Majstor / kreator";
+    chatContext = {
+      jobId: route.jobId,
+      appId: route.appId,
+      receiverId: otherUid,
+      currentUid: uid,
+      displayName: currentUser.displayName || currentUser.email || "",
+    };
+    try {
+      await clearMyUnread(route.appId, uid);
+    } catch (_) {}
+    return renderChat({
+      jobTitle: job?.title || "Chat",
+      otherName,
+      otherRole,
+      messages: [],
+      currentUid: uid,
+      error: "",
+    });
+  }
+
   if (route.name === "profil") {
     const uid = currentUser?.uid;
     const user = uid ? await fetchUserProfile(uid) : null;
@@ -144,8 +251,11 @@ async function loadRouteContent(route) {
   }
 
   if (route.name === "pregled") {
-    const user = await fetchUserProfile(route.uid);
-    return renderPregledProfila({ user });
+    const [user, works] = await Promise.all([
+      fetchUserProfile(route.uid),
+      fetchWorksByUser(route.uid, true),
+    ]);
+    return renderPregledProfila({ user, works });
   }
 
   return renderHome({ selectedCity });
@@ -218,6 +328,7 @@ async function renderApp() {
   }
 
   const requestId = ++screenRequestId;
+  stopChatListener();
   renderShellWithContent(route, renderScreenLoading());
 
   try {
@@ -225,6 +336,9 @@ async function renderApp() {
     const contentHtml = await loadRouteContent(route);
     if (requestId !== screenRequestId) return;
     renderShellWithContent(route, contentHtml);
+    if (route.name === "chat" && chatContext) {
+      startChatListener(chatContext);
+    }
   } catch (error) {
     console.error("Screen load failed:", error);
     if (requestId !== screenRequestId) return;
@@ -260,6 +374,100 @@ function listaPath(filter) {
     return `#/lista/${filter}/${encodeURIComponent(selectedCity)}`;
   }
   return `#/lista/${filter}`;
+}
+
+function startChatListener(ctx) {
+  stopChatListener();
+  chatContext = ctx;
+  chatUnsubscribe = subscribeToChatMessages({
+    jobId: ctx.jobId,
+    applicationId: ctx.appId,
+    onMessages: (messages) => {
+      const el = document.getElementById("chat-messages");
+      if (!el) return;
+      el.innerHTML = renderChatMessages(messages, ctx.currentUid);
+      el.scrollTop = el.scrollHeight;
+    },
+    onError: (error) => {
+      const el = document.getElementById("chat-messages");
+      if (!el) return;
+      el.innerHTML = `<div class="empty-state empty-state--error">${error?.message || "Greška pri učitavanju poruka."}</div>`;
+    },
+  });
+}
+
+function bindPhase3Actions() {
+  const applyBtn = document.getElementById("apply-job-btn");
+  if (applyBtn) {
+    applyBtn.addEventListener("click", async () => {
+      const jobId = applyBtn.dataset.jobId;
+      if (!jobId || applyBtn.disabled) return;
+      applyBtn.disabled = true;
+      try {
+        const [job, profile] = await Promise.all([
+          fetchJob(jobId),
+          fetchUserProfile(currentUser.uid),
+        ]);
+        if (!job) throw new Error("missing job");
+        await applyToJob({ job, profile, authUser: currentUser });
+        renderApp();
+      } catch (error) {
+        console.error("Apply failed:", error);
+        applyBtn.disabled = false;
+        alert("Prijava nije uspjela. Pokušaj ponovo.");
+      }
+    });
+  }
+
+  document.querySelectorAll("[data-app-action]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const appId = btn.dataset.appId;
+      const action = btn.dataset.appAction;
+      if (!appId || !action || btn.disabled) return;
+      const status = action === "accept" ? "accepted" : "rejected";
+      btn.disabled = true;
+      try {
+        await updateApplicationStatus(appId, status);
+        renderApp();
+      } catch (error) {
+        console.error("Status update failed:", error);
+        btn.disabled = false;
+        alert("Ažuriranje statusa nije uspjelo.");
+      }
+    });
+  });
+
+  const chatForm = document.getElementById("chat-form");
+  if (chatForm && chatContext) {
+    chatForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const input = chatForm.querySelector('input[name="message"]');
+      const text = input?.value?.trim();
+      if (!text) return;
+      const sendBtn = chatForm.querySelector('button[type="submit"]');
+      if (sendBtn) sendBtn.disabled = true;
+      try {
+        await sendChatMessage({
+          text,
+          sender: {
+            uid: chatContext.currentUid,
+            email: currentUser.email,
+            displayName: chatContext.displayName,
+          },
+          receiverId: chatContext.receiverId,
+          jobId: chatContext.jobId,
+          applicationId: chatContext.appId,
+        });
+        if (input) input.value = "";
+      } catch (error) {
+        console.error("Send failed:", error);
+        alert("Slanje poruke nije uspjelo.");
+      } finally {
+        if (sendBtn) sendBtn.disabled = false;
+        input?.focus();
+      }
+    });
+  }
 }
 
 function bindHomeActions() {
@@ -311,6 +519,7 @@ async function handleGoogleSignIn() {
 
 function bindRootEvents() {
   bindHomeActions();
+  bindPhase3Actions();
 
   const publicGoogleBtn = document.getElementById("google-signin-btn");
   if (publicGoogleBtn) {

@@ -21,7 +21,7 @@ export function renderPoslovi({ jobs }) {
       const author = escapeHtml(job.authorName || "Korisnik");
 
       return `
-        <article class="job-card">
+        <a class="job-card" href="#/posao/${escapeHtml(job.id)}">
           <div class="job-card__head">
             <h3 class="job-card__title">${title}</h3>
             <span class="job-card__date">${escapeHtml(date)}</span>
@@ -32,14 +32,14 @@ export function renderPoslovi({ jobs }) {
             <span>${author}</span>
             <span>${budget}${when ? ` · ${when}` : ""}</span>
           </div>
-        </article>`;
+        </a>`;
     })
     .join("");
 
   return `
     <div class="screen-scroll">
       <h2 class="screen-title">Poslovi</h2>
-      <p class="screen-subtitle">Potražnja — read-only pregled (${jobs.length})</p>
+      <p class="screen-subtitle">Potražnja (${jobs.length}) · <a class="inline-link" href="#/prijave">Moje prijave</a></p>
       <div class="job-list">${cards}</div>
     </div>`;
 }

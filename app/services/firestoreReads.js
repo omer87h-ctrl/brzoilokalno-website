@@ -20,6 +20,86 @@ export async function fetchJobs(max = 30) {
   return mapDocs(snap);
 }
 
+export async function fetchJob(jobId) {
+  const snap = await getDoc(doc(getDb(), "jobs", jobId));
+  if (!snap.exists()) return null;
+  return { id: snap.id, ...snap.data() };
+}
+
+export async function fetchPublicWorks(max = 24) {
+  try {
+    const q = query(
+      collection(getDb(), "works"),
+      where("isPublic", "==", true),
+      orderBy("timestamp", "desc"),
+      limit(max)
+    );
+    const snap = await getDocs(q);
+    return mapDocs(snap);
+  } catch (_) {
+    const q = query(collection(getDb(), "works"), where("isPublic", "==", true), limit(max));
+    const snap = await getDocs(q);
+    return mapDocs(snap).sort((a, b) => timestampMs(b.timestamp) - timestampMs(a.timestamp));
+  }
+}
+
+export async function fetchWorksByUser(uid, publicOnly = true) {
+  let q = query(collection(getDb(), "works"), where("userId", "==", uid), limit(40));
+  const snap = await getDocs(q);
+  let works = mapDocs(snap);
+  if (publicOnly) works = works.filter((w) => w.isPublic === true);
+  return works.sort((a, b) => timestampMs(b.timestamp) - timestampMs(a.timestamp));
+}
+
+export async function fetchWork(workId) {
+  const snap = await getDoc(doc(getDb(), "works", workId));
+  if (!snap.exists()) return null;
+  return { id: snap.id, ...snap.data() };
+}
+
+export async function fetchApplicationsForJob(jobId) {
+  const q = query(collection(getDb(), "applications"), where("jobId", "==", jobId));
+  const snap = await getDocs(q);
+  return mapDocs(snap).sort((a, b) => timestampMs(b.timestamp) - timestampMs(a.timestamp));
+}
+
+export async function fetchMyApplicationForJob(jobId, workerId) {
+  const q = query(
+    collection(getDb(), "applications"),
+    where("jobId", "==", jobId),
+    where("workerId", "==", workerId),
+    limit(1)
+  );
+  const snap = await getDocs(q);
+  return snap.docs[0] ? { id: snap.docs[0].id, ...snap.docs[0].data() } : null;
+}
+
+export async function fetchMyApplications(uid) {
+  const [workerSnap, ownerSnap] = await Promise.all([
+    getDocs(query(collection(getDb(), "applications"), where("workerId", "==", uid))),
+    getDocs(query(collection(getDb(), "applications"), where("jobOwnerId", "==", uid))),
+  ]);
+  const merged = new Map();
+  for (const d of [...workerSnap.docs, ...ownerSnap.docs]) {
+    merged.set(d.id, { id: d.id, ...d.data() });
+  }
+  return [...merged.values()].sort((a, b) => timestampMs(b.timestamp) - timestampMs(a.timestamp));
+}
+
+export async function fetchApplication(appId) {
+  const snap = await getDoc(doc(getDb(), "applications", appId));
+  if (!snap.exists()) return null;
+  return { id: snap.id, ...snap.data() };
+}
+
+function timestampMs(value) {
+  if (!value) return 0;
+  if (typeof value?.toMillis === "function") return value.toMillis();
+  if (value?.seconds) return value.seconds * 1000;
+  const t = new Date(value).getTime();
+  return Number.isNaN(t) ? 0 : t;
+}
+
 export async function fetchUserProfile(uid) {
   const snap = await getDoc(doc(getDb(), "users", uid));
   if (!snap.exists()) return null;

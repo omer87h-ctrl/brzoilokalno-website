@@ -1,7 +1,8 @@
 import { POPULAR_CITIES } from "../data/categories.js";
 import { escapeHtml } from "../utils/format.js";
+import { renderRadPreview } from "./radovi.js";
 
-export function renderHome({ selectedCity = "" }) {
+export function renderHome({ selectedCity = "", worksPreview = [] }) {
   const chips = POPULAR_CITIES.map((city) => {
     const active = selectedCity === city ? " chip--active" : "";
     return `<button type="button" class="chip chip--btn${active}" data-city="${escapeHtml(city)}">${escapeHtml(city)}</button>`;
@@ -55,5 +56,6 @@ export function renderHome({ selectedCity = "" }) {
           <p>Brza procjena cijene usluge</p>
         </button>
       </div>
+      ${renderRadPreview({ works: worksPreview })}
     </div>`;
 }
