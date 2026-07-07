@@ -165,7 +165,7 @@
           <input id="store-url" type="text" readonly aria-label="Link za preuzimanje">
           <button type="button" class="preuzmi-btn preuzmi-btn--ghost" id="copy-btn">Kopiraj</button>
         </div>
-        <p class="preuzmi-note">Na mobitelu link otvara AppGallery aplikaciju, ne browser.</p>
+        <p class="preuzmi-note">QR i link vode direktno na stranicu aplikacije u AppGallery.</p>
         <div class="preuzmi-actions">
           <a class="preuzmi-btn preuzmi-btn--ghost" href="/">Natrag na početnu</a>
         </div>
@@ -175,14 +175,13 @@
   <script>
     (function () {
       var PKG = "com.brzoilokalno";
-      var STORE_WEB_URL =
-        "https://appgallery.cloud.huawei.com/appDetail?pkgName=" + PKG +
-        "&channelId=website&referrer=brzoilokalno.com&detailType=0&calltype=AGDLINK";
+      var APP_ID = "C117382847";
+      var STORE_WEB_URL = "https://appgallery.cloud.huawei.com/ag/n/app/" + APP_ID;
+      var STORE_APP_ID_URL = "market://com.huawei.appmarket.applink?appId=" + APP_ID;
       var STORE_APP_URL = "appmarket://details?id=" + PKG;
-      var STORE_MARKET_URL = "market://details?id=" + PKG;
       var STORE_INTENT_URL =
-        "intent://details?id=" + PKG +
-        "#Intent;scheme=appmarket;package=com.huawei.appmarket;S.browser_fallback_url=" +
+        "intent://com.huawei.appmarket.applink?appId=" + APP_ID +
+        "#Intent;scheme=market;package=com.huawei.appmarket;S.browser_fallback_url=" +
         encodeURIComponent(STORE_WEB_URL) + ";end";
       var LANDING_URL = (location.origin || "https://brzoilokalno.com") + "/preuzmi-app.html";
 
@@ -204,8 +203,8 @@
       var leadText = document.getElementById("lead-text");
 
       function primaryStoreUrl() {
-        if (isHuawei) return STORE_APP_URL;
-        return STORE_MARKET_URL;
+        if (isHuawei) return STORE_APP_ID_URL;
+        return STORE_APP_ID_URL;
       }
 
       function openInAppGallery() {
@@ -219,9 +218,15 @@
 
         window.setTimeout(function () {
           try {
-            window.location.href = STORE_INTENT_URL;
+            window.location.href = STORE_APP_URL;
           } catch (_) {}
         }, 700);
+
+        window.setTimeout(function () {
+          try {
+            window.location.href = STORE_INTENT_URL;
+          } catch (_) {}
+        }, 1400);
 
         window.setTimeout(function () {
           if (document.visibilityState === "visible") {
@@ -276,13 +281,13 @@
         }
       } else {
         desktopView.style.display = "block";
-        storeUrlInput.value = LANDING_URL;
+        storeUrlInput.value = STORE_WEB_URL;
         qrImg.src =
           "https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=8&data=" +
-          encodeURIComponent(LANDING_URL);
+          encodeURIComponent(STORE_WEB_URL);
 
         copyBtn.addEventListener("click", function () {
-          copyText(LANDING_URL, function () {
+          copyText(STORE_WEB_URL, function () {
             copyBtn.textContent = "Kopirano";
             window.setTimeout(function () {
               copyBtn.textContent = "Kopiraj";
