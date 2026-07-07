@@ -3596,8 +3596,14 @@ a {
     padding: 0 0.65rem;
   }
 
-  .app-topbar__brand span {
-    display: none;
+  .app-topbar__brand {
+    font-size: 0.82rem;
+    gap: 0.4rem;
+  }
+
+  .app-topbar__brand img {
+    width: 28px;
+    height: 28px;
   }
 
   .app-topbar__meta {
