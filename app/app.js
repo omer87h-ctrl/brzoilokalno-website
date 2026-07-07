@@ -178,6 +178,16 @@ let profilRouteCache = null;
 let profilOutdoorCtx = { city: "", role: "", weatherKey: "" };
 let outdoorFetchToken = 0;
 let profilUseCache = false;
+let autoIzborLoadingTimer = null;
+
+const AUTO_IZBOR_LOADING_STEPS = [
+  "Učitavam majstore i kreatore...",
+  "Provjera dostupnosti po kategorijama...",
+  "Računamo ocjene i recenzije...",
+  "Uključujemo majstore i kreatore...",
+  "Biramo po jednog iz svake kategorije...",
+  "Finalizujemo prikaz...",
+];
 
 function isChatEnabled() {
   return webConfig?.chatEnabled === true;
@@ -226,6 +236,46 @@ function restoreMainScroll(route) {
     apply();
     requestAnimationFrame(apply);
   });
+}
+
+function stopAutoIzborLoading() {
+  if (autoIzborLoadingTimer) {
+    window.clearInterval(autoIzborLoadingTimer);
+    autoIzborLoadingTimer = null;
+  }
+}
+
+function startAutoIzborLoading(city) {
+  stopAutoIzborLoading();
+  const cityLabel = city ? `Grad: ${city}` : "Grad iz profila";
+  const renderStep = (index) => `
+    <div class="screen-scroll">
+      <a class="back-link" href="#/home">← Početna</a>
+      <h2 class="screen-title">Auto izbor</h2>
+      <p class="screen-subtitle">${cityLabel}</p>
+      <div class="auto-izbor-loading">
+        <div class="auto-izbor-loading__ring" aria-hidden="true">
+          <div class="auto-izbor-loading__core">
+            <svg class="auto-izbor-loading__bolt" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66l.07-.12C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51l-.07.15C12.96 17.55 11 21 11 21z"/>
+            </svg>
+          </div>
+        </div>
+        <p class="auto-izbor-loading__text">${AUTO_IZBOR_LOADING_STEPS[index] || AUTO_IZBOR_LOADING_STEPS[0]}</p>
+      </div>
+    </div>`;
+  const route = parseRoute(getHashRoute());
+  let step = 0;
+  renderShellWithContent(route, renderStep(step), { restoreScroll: false });
+  autoIzborLoadingTimer = window.setInterval(() => {
+    step = (step + 1) % AUTO_IZBOR_LOADING_STEPS.length;
+    const activeRoute = parseRoute(getHashRoute());
+    if (activeRoute.name !== "home") {
+      stopAutoIzborLoading();
+      return;
+    }
+    renderShellWithContent(activeRoute, renderStep(step), { restoreScroll: false });
+  }, 560);
 }
 
 function patchAktivnostExpanded(expanded) {
@@ -888,6 +938,7 @@ async function afterAuthSuccess(user) {
 }
 
 async function renderApp() {
+  stopAutoIzborLoading();
   if (!webConfig) {
     showLoading();
     return;
@@ -2112,7 +2163,10 @@ function bindHomeActions() {
   document.querySelectorAll('[data-action="auto-izbor"]').forEach((el) => {
     el.addEventListener("click", () => {
       const city = profileCity;
-      navigateTo(city ? `#/brzo/${encodeURIComponent(city)}` : "#/brzo");
+      startAutoIzborLoading(city);
+      window.setTimeout(() => {
+        navigateTo(city ? `#/brzo/${encodeURIComponent(city)}` : "#/brzo");
+      }, 1450);
     });
   });
 

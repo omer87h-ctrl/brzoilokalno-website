@@ -4,6 +4,8 @@ import { renderRadPreview } from "./radovi.js";
 import { renderMojKrug } from "./follow.js";
 import { HOME_CARD_ICONS } from "./homeIcons.js";
 
+const AUTO_IZBOR_BOLT = `<svg class="brzo-btn__bolt-svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66l.07-.12C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51l-.07.15C12.96 17.55 11 21 11 21z"/></svg>`;
+
 export function renderHomeTips({ tips = [], loading = false, myHomeTip = null, userRole = "", currentUid = "" }) {
   if (loading) {
     return `
@@ -118,8 +120,8 @@ export function renderHome({
         />
         <button type="submit" class="search-form__submit" aria-label="Traži">→</button>
         <button type="button" class="brzo-btn" id="home-auto-izbor-btn" data-action="auto-izbor">
-          <span class="brzo-btn__bolt" aria-hidden="true">⚡</span>
-          Auto izbor
+          <span class="brzo-btn__bolt" aria-hidden="true">${AUTO_IZBOR_BOLT}</span>
+          <span class="brzo-btn__label">Auto izbor</span>
         </button>
       </form>
       <div class="city-chips-block">
