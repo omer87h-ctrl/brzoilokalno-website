@@ -2179,10 +2179,14 @@ function bindSearchAndFilters() {
 function bindHomeActions() {
   document.querySelectorAll('[data-action="auto-izbor"]').forEach((el) => {
     el.addEventListener("click", () => {
-      const city = profileCity;
+      const city = selectedCity || profileCity;
+      if (!city) {
+        window.alert("Odaberi grad na Početnoj da Auto izbor može raditi.");
+        return;
+      }
       startAutoIzborLoading(city);
       window.setTimeout(() => {
-        navigateTo(city ? `#/brzo/${encodeURIComponent(city)}` : "#/brzo");
+        navigateTo(`#/brzo/${encodeURIComponent(city)}`);
       }, 1450);
     });
   });

@@ -9,7 +9,8 @@ import {
   query,
   where,
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
-import { getDb } from "./firebaseService.js";
+import { getAuthInstance, getDb } from "./firebaseService.js";
+import { publicProfilesCollection, syncPublicProfile, toPublicProfile } from "./publicProfile.js";
 
 function mapDocs(snap) {
   return snap.docs.map((d) => ({ id: d.id, ...d.data() }));
@@ -120,10 +121,30 @@ function timestampMs(value) {
   return Number.isNaN(t) ? 0 : t;
 }
 
-export async function fetchUserProfile(uid) {
-  const snap = await getDoc(doc(getDb(), "users", uid));
-  if (!snap.exists()) return null;
-  return { id: snap.id, ...snap.data() };
+export async function fetchUserProfile(uid, { viewerUid = null } = {}) {
+  if (!uid) return null;
+  const viewer = viewerUid ?? getAuthInstance().currentUser?.uid ?? null;
+  const isOwn = Boolean(viewer && viewer === uid);
+
+  if (isOwn) {
+    const snap = await getDoc(doc(getDb(), "users", uid));
+    if (!snap.exists()) return null;
+    return { id: snap.id, ...snap.data() };
+  }
+
+  const pubSnap = await getDoc(doc(getDb(), publicProfilesCollection(), uid));
+  if (pubSnap.exists()) {
+    return { id: pubSnap.id, ...pubSnap.data() };
+  }
+
+  try {
+    const userSnap = await getDoc(doc(getDb(), "users", uid));
+    if (!userSnap.exists()) return null;
+    syncPublicProfile(uid, userSnap.data()).catch(() => {});
+    return toPublicProfile(uid, userSnap.data());
+  } catch (_) {
+    return null;
+  }
 }
 
 /** Dohvat vlasnika oglasa (isti tick kao Android PublicProfileCache.prefetch). */
@@ -158,14 +179,18 @@ export async function fetchMyRatingForUser(profileUid, raterUid) {
   return rating >= 1 && rating <= 5 ? rating : 0;
 }
 
+function publicUsersCollection() {
+  return collection(getDb(), publicProfilesCollection());
+}
+
 export async function fetchUsersByCategory(category, city = null, role = null) {
   const roles = role ? [role] : ["majstor", "kreator"];
   const results = [];
 
-  for (const role of roles) {
+  for (const roleItem of roles) {
     let q = query(
-      collection(getDb(), "users"),
-      where("role", "==", role),
+      publicUsersCollection(),
+      where("role", "==", roleItem),
       where("category", "==", category),
       limit(40)
     );
@@ -203,7 +228,7 @@ function filterByCity(items, city, field = "city") {
 
 export async function fetchTopRated(city = null) {
   if (city) {
-    const q = query(collection(getDb(), "users"), where("city", "==", city), limit(80));
+    const q = query(publicUsersCollection(), where("city", "==", city), limit(80));
     const snap = await getDocs(q);
     return mapDocs(snap)
       .filter(
@@ -219,7 +244,7 @@ export async function fetchTopRated(city = null) {
   }
 
   const q = query(
-    collection(getDb(), "users"),
+    publicUsersCollection(),
     where("ratingAverage", ">", 0),
     orderBy("ratingAverage", "desc"),
     limit(100)
@@ -241,7 +266,7 @@ export async function fetchTopRated(city = null) {
 export async function fetchAvailableUsers(city = null) {
   if (city) {
     const q = query(
-      collection(getDb(), "users"),
+      publicUsersCollection(),
       where("role", "in", ["majstor", "kreator"]),
       where("status", "==", "slobodan"),
       where("city", "==", city),
@@ -252,7 +277,7 @@ export async function fetchAvailableUsers(city = null) {
   }
 
   const q = query(
-    collection(getDb(), "users"),
+    publicUsersCollection(),
     where("role", "in", ["majstor", "kreator"]),
     where("status", "==", "slobodan"),
     limit(50)
@@ -265,7 +290,7 @@ export async function fetchUsersForSearch(searchText = "", city = null) {
   let users = city ? await fetchUsersInCity(city) : [];
   if (!city) {
     const q = query(
-      collection(getDb(), "users"),
+      publicUsersCollection(),
       where("role", "in", ["majstor", "kreator"]),
       limit(120)
     );
@@ -426,7 +451,7 @@ function mapTips(docs, now) {
 export async function fetchUsersInCity(city = null) {
   if (!city) {
     const q = query(
-      collection(getDb(), "users"),
+      publicUsersCollection(),
       where("role", "in", ["majstor", "kreator"]),
       limit(50)
     );
@@ -434,7 +459,7 @@ export async function fetchUsersInCity(city = null) {
     return mapDocs(snap);
   }
   const q = query(
-    collection(getDb(), "users"),
+    publicUsersCollection(),
     where("role", "in", ["majstor", "kreator"]),
     where("city", "==", city),
     limit(50)
@@ -444,8 +469,8 @@ export async function fetchUsersInCity(city = null) {
 }
 
 export async function fetchFastMatchPool() {
-  const majQ = query(collection(getDb(), "users"), where("role", "==", "majstor"), limit(100));
-  const kreQ = query(collection(getDb(), "users"), where("role", "==", "kreator"), limit(100));
+  const majQ = query(publicUsersCollection(), where("role", "==", "majstor"), limit(100));
+  const kreQ = query(publicUsersCollection(), where("role", "==", "kreator"), limit(100));
   const [majSnap, kreSnap] = await Promise.all([getDocs(majQ), getDocs(kreQ)]);
   return [...mapDocs(majSnap), ...mapDocs(kreSnap)];
 }

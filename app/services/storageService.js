@@ -3,6 +3,7 @@ import { getDownloadURL, getStorage, ref, uploadBytes } from "https://www.gstati
 import { firebaseConfig } from "../firebase.js";
 import { doc, updateDoc } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 import { getDb } from "./firebaseService.js";
+import { syncPublicProfile } from "./publicProfile.js";
 
 function getFirebaseApp() {
   try {
@@ -68,17 +69,20 @@ export async function uploadProfileImage(uid, file) {
     profileImageVersionMs: ts,
   };
   await updateDoc(doc(getDb(), "users", uid), payload);
+  await syncPublicProfile(uid, payload);
   return payload;
 }
 
 export async function clearProfileImage(uid) {
-  await updateDoc(doc(getDb(), "users", uid), {
+  const payload = {
     profileImageUrlFull: "",
     profileImagePathFull: "",
     profileImageUrlThumb: "",
     profileImagePathThumb: "",
     profileImageVersionMs: 0,
-  });
+  };
+  await updateDoc(doc(getDb(), "users", uid), payload);
+  await syncPublicProfile(uid, payload);
 }
 
 export async function uploadWorkImage(uid, file) {

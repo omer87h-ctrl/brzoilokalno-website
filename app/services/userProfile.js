@@ -1,6 +1,7 @@
-import { doc, serverTimestamp, setDoc } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+import { doc, getDoc, serverTimestamp, setDoc } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 import { getDb } from "./firebaseService.js";
 import { POLICY_VERSION } from "../constants/policy.js";
+import { syncPublicProfile } from "./publicProfile.js";
 
 export function isProfileComplete(profile) {
   if (!profile) return false;
@@ -32,5 +33,6 @@ export async function createUserProfile(uid, data) {
   };
 
   await setDoc(doc(getDb(), "users", uid), payload);
+  await syncPublicProfile(uid, payload);
   return payload;
 }

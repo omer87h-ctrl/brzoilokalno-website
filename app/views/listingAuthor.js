@@ -17,7 +17,6 @@ export function resolveListingAuthor(item, ownerProfile = null) {
   const name =
     String(item?.authorName || item?.displayName || item?.ownerDisplayName || "").trim() ||
     (ownerProfile ? displayName(ownerProfile) : "") ||
-    String(item?.userEmail || "").trim() ||
     "Nepoznat korisnik";
 
   const role = String(item?.authorRole || ownerProfile?.role || "").trim();

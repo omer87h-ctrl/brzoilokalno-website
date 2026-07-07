@@ -16,6 +16,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 import { getDb } from "./firebaseService.js";
 import { normalizeSpaces } from "../utils/textInputValidation.js";
+import { syncPublicProfile } from "./publicProfile.js";
 
 const HOME_TIPS = "home_master_tips";
 const TIP_TTL_MS = 24 * 60 * 60 * 1000;
@@ -68,6 +69,10 @@ export async function updateUserProfile(uid, data) {
     payload.occupation = normalizeSpaces(data.occupation);
   }
   await setDoc(doc(getDb(), "users", uid), payload, { merge: true });
+  const snap = await getDoc(doc(getDb(), "users", uid));
+  if (snap.exists()) {
+    await syncPublicProfile(uid, snap.data());
+  }
 }
 
 export async function createJob({ profile, authUser, fields }) {
@@ -84,8 +89,7 @@ export async function createJob({ profile, authUser, fields }) {
     userId: uid,
     ownerId: uid,
     jobOwnerId: uid,
-    authorName: profile.displayName || authUser.displayName || authUser.email || "",
-    userEmail: authUser.email || "",
+    authorName: profile.displayName || authUser.displayName || "Korisnik",
     timestamp: Timestamp.now(),
     ...authorMetaFromProfile(profile),
   };
@@ -104,8 +108,7 @@ export async function createOffer({ profile, authUser, fields }) {
     budget: normalizeSpaces(fields.budget),
     availableWhen: normalizeSpaces(fields.availableWhen),
     userId: uid,
-    userEmail: authUser.email || "",
-    authorName: profile.displayName || authUser.displayName || authUser.email || "",
+    authorName: profile.displayName || authUser.displayName || "Korisnik",
     authorRole: profile.role || "",
     timestamp: Timestamp.now(),
     ...authorMetaFromProfile(profile),
@@ -626,5 +629,6 @@ export async function deleteAccountData(uid) {
     deleteDocsFromQuery(query(collection(db, "users", uid, "followers"))),
     deleteDocsFromQuery(query(collection(db, "users", uid, "ratings"))),
   ]);
+  await deleteDoc(doc(db, "public_profiles", uid));
   await deleteDoc(doc(db, "users", uid));
 }
