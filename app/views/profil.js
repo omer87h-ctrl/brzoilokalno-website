@@ -21,6 +21,23 @@ function renderAvatar(user, className = "profile-card__avatar") {
   return `<div class="${className}">${initial}</div>`;
 }
 
+const ICON_NOTES = `<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>`;
+const ICON_EDIT = `<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>`;
+
+function renderProfileQuickActions() {
+  return `
+    <div class="profile-card__quick-actions">
+      <a class="profile-quick-action" href="#/biljeske">
+        <span class="profile-quick-action__icon">${ICON_NOTES}</span>
+        <span class="profile-quick-action__label">Bilješke</span>
+      </a>
+      <button type="button" class="profile-quick-action" id="edit-profile-btn">
+        <span class="profile-quick-action__icon">${ICON_EDIT}</span>
+        <span class="profile-quick-action__label">Uredi profil</span>
+      </button>
+    </div>`;
+}
+
 function renderMyWorksSection({ works = [], canAdd = false }) {
   const cards = works
     .map((work) => {
@@ -135,11 +152,16 @@ export function renderProfil({
       <div class="screen-scroll">
         <h2 class="screen-title">Profil</h2>
         <article class="profile-card">
-          ${avatarHtml}
-          <label class="btn btn--ghost btn--sm profile-upload-btn">
-            Promijeni sliku
-            <input type="file" id="profile-image-input" accept="image/*" hidden />
-          </label>
+          <div class="profile-card__head">
+            <div class="profile-card__avatar-wrap">
+              ${avatarHtml}
+              <label class="profile-avatar-upload" title="Promijeni sliku">
+                <input type="file" id="profile-image-input" accept="image/*" hidden />
+                <span aria-hidden="true">+</span>
+              </label>
+            </div>
+            ${renderProfileQuickActions()}
+          </div>
           <h3 class="profile-card__name">${escapeHtml(user.displayName || "Korisnik")}</h3>
           ${renderProfileMetaBadges(user)}
           <p class="profile-card__meta">${escapeHtml(role)} · ${escapeHtml(user.category || user.occupation || "—")}</p>
@@ -157,12 +179,11 @@ export function renderProfil({
                 ? `<p class="profile-card__tip-status profile-card__tip-status--muted">Nema aktivnog savjeta na početnoj</p>`
                 : ""
           }
+          ${avatarUrl ? `<button type="button" class="btn btn--ghost btn--sm btn--danger profile-remove-photo" id="delete-profile-image-btn">Ukloni sliku</button>` : ""}
         </article>
         <div class="profile-actions">
-          <button type="button" class="btn btn--primary btn--block" id="edit-profile-btn">Uredi profil</button>
           ${worker ? `<button type="button" class="btn btn--ghost btn--block" id="edit-tip-btn">${myTip ? "Uredi savjet" : "Dodaj savjet za početnu"}</button>` : ""}
           ${worker && myTip ? `<button type="button" class="btn btn--ghost btn--block btn--danger" id="delete-tip-profile-btn">Obriši savjet</button>` : ""}
-          ${avatarUrl ? `<button type="button" class="btn btn--ghost btn--block btn--danger" id="delete-profile-image-btn">Ukloni sliku</button>` : ""}
         </div>
         ${renderMojaAktivnost({
           dashboard: activityDashboard,

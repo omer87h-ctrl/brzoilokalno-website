@@ -894,9 +894,16 @@ body.app-body.has-app-shell #app-root {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-elevated);
-  font-size: 1.2rem;
+  background: #1c1f25;
+  color: rgba(232, 136, 74, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   flex-shrink: 0;
+}
+
+.category-card__icon-svg {
+  width: 22px;
+  height: 22px;
+  display: block;
 }
 
 .category-card__body {
@@ -1117,15 +1124,93 @@ body.app-body.has-app-shell #app-root {
   border-radius: 20px;
   border: 1px solid var(--border);
   background: linear-gradient(160deg, rgba(242, 140, 40, 0.08), var(--bg-card));
-  text-align: center;
+  text-align: left;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.14);
 }
 
-.profile-card__avatar {
-  margin: 0 auto 0.75rem;
+.profile-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.profile-card__avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.profile-card .profile-card__avatar {
+  margin: 0;
   width: 72px;
   height: 72px;
+  border-radius: 50%;
+  border: 2px solid rgba(240, 152, 88, 0.92);
   font-size: 1.45rem;
+}
+
+.profile-card__quick-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-items: flex-end;
+  margin-left: auto;
+}
+
+.profile-quick-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  background: none;
+  border: 0;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.68rem;
+  cursor: pointer;
+  padding: 0.2rem;
+  font-family: inherit;
+}
+
+.profile-quick-action__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--accent);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.profile-quick-action__label {
+  line-height: 1.2;
+  text-align: center;
+}
+
+.profile-avatar-upload {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #1a1008;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-weight: 800;
+  cursor: pointer;
+  border: 2px solid var(--bg-card);
+  line-height: 1;
+}
+
+.profile-remove-photo {
+  margin-top: 0.65rem;
 }
 
 .profile-card__desc,

@@ -3,7 +3,7 @@ import { escapeHtml } from "../utils/format.js";
 export function renderWorkNotes({ notes = { main: "", reminder: "" }, savedLabel = "" }) {
   return `
     <div class="screen-scroll">
-      <a class="back-link" href="#/postavke">← Postavke</a>
+      <a class="back-link" href="#/profil">← Profil</a>
       <h2 class="screen-title">Poslovne bilješke</h2>
       <p class="screen-subtitle">Privatno na ovom uređaju — ne ide u oblak.</p>
       <form id="work-notes-form" class="stack-form">

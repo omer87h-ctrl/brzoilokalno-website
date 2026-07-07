@@ -1,10 +1,10 @@
 import {
   KREATOR_CATEGORIES,
   MAJSTOR_CATEGORIES,
-  categoryIcon,
   slugifyCategory,
 } from "../data/categories.js";
 import { escapeHtml } from "../utils/format.js";
+import { renderCategoryIcon } from "./categoryIcons.js";
 import { renderUserList } from "./shared.js";
 import { renderCityFilterChip, renderScreenTabs } from "./ponude.js";
 import { renderScreenFeed } from "./screenFeed.js";
@@ -22,7 +22,7 @@ export function renderKategorijeTabs({ activeTab = "majstori" }) {
 
 function categoryCard(name, tab) {
   const slug = slugifyCategory(name);
-  const icon = categoryIcon(name);
+  const icon = renderCategoryIcon(name);
   const subtitle =
     tab === "majstori"
       ? "Pogledaj dostupne majstore u ovoj kategoriji"

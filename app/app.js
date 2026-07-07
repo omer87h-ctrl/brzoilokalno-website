@@ -122,7 +122,6 @@ import { renderWorkNotes } from "./views/workNotes.js";
 import { renderDisplaySettings } from "./views/displaySettings.js";
 import { renderPrivacyInfo } from "./views/privacyInfo.js";
 import { renderAdminModeration } from "./views/adminModeration.js";
-import { renderSecurityCenter } from "./views/securityCenter.js";
 import { renderObavijesti } from "./views/obavijesti.js";
 import { renderKalkulator, readKalkulatorState } from "./views/kalkulator.js";
 import { buildActivityDashboard } from "./utils/activity.js";
@@ -853,7 +852,7 @@ async function loadRouteContent(route) {
     return renderBlockedUsers({ users });
   }
 
-  if (route.name === "postavke-biljeske") {
+  if (route.name === "biljeske" || route.name === "postavke-biljeske") {
     const profile = await fetchUserProfile(currentUser.uid);
     importLegacyWorkNotes(currentUser.uid, profile);
     const notes = loadWorkNotes(currentUser.uid);
@@ -862,11 +861,6 @@ async function loadRouteContent(route) {
 
   if (route.name === "postavke-izgled") {
     return renderDisplaySettings();
-  }
-
-  if (route.name === "postavke-optimizacija") {
-    const dataSaver = localStorage.getItem("bil_data_saver_images") === "1";
-    return renderSecurityCenter({ dataSaver });
   }
 
   if (route.name === "postavke-privatnost") {

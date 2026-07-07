@@ -40,8 +40,6 @@ export function renderPostavke({
         <h3 class="settings-group__title">Prilagodba aplikacije</h3>
         <div class="settings-links">
           <a class="btn btn--ghost btn--block" href="#/postavke/izgled">Izgled i ponašanje</a>
-          <a class="btn btn--ghost btn--block" href="#/postavke/optimizacija">Optimizacija aplikacije</a>
-          <a class="btn btn--ghost btn--block" href="#/postavke/biljeske">Poslovne bilješke</a>
         </div>
       </section>
 
