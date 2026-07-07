@@ -1,46 +1,15 @@
 const translations = {
   bs: {
-    "nav.platform": "Platforma",
     "nav.features": "Kako radi",
     "nav.forWhom": "Za koga",
     "nav.download": "Preuzmi",
-    "hero.eyebrow": "Lokalna platforma — web i mobilno",
-    "hero.title1": "Više od aplikacije:",
-    "hero.title2": "platforma za tvoj grad",
-    "hero.lead": "Majstori, kreatori i korisnici na jednom mjestu — objavi posao, pronađi uslugu, pregledaj radove i dogovori se lokalno. Koristi platformu u browseru ili preko aplikacije.",
-    "hero.openWeb": "Otvori platformu u browseru",
-    "hero.seePlatform": "Pogledaj kako izgleda",
+    "hero.eyebrow": "Lokalne usluge, pametna pretraga",
+    "hero.title1": "Majstori, kreatori i usluge",
+    "hero.title2": "u tvom gradu",
+    "hero.lead": "Objavi posao, pronađi majstora, pregledaj radove i uslugu lokalno.",
     "hero.pill1": "Ocjene i recenzije",
     "hero.pill2": "Slobodni sada",
     "hero.pill3": "Blizu mene",
-    "platform.eyebrow": "Stvarna platforma",
-    "platform.title": "Nije samo obična aplikacija",
-    "platform.subtitle": "Brzo i Lokalno je živa platforma — profili, poslovi, ponude, radovi, chat i ocjene. Evo kako to izgleda u praksi (stvarni ekrani).",
-    "platform.shot1": "Početna i pametna pretraga",
-    "platform.shot2": "Pretraga majstora i kreatora",
-    "platform.shot3": "Potražnja, ponude i prijave",
-    "platform.shot4": "Aktivnost, prijave i obavijesti",
-    "platform.shot5": "Javni radovi i portfolio",
-    "platform.p1.title": "Web + Android",
-    "platform.p1.text": "Ista platforma u browseru i u aplikaciji — bez čekanja na store da probaš.",
-    "platform.p2.title": "Potražnja i ponuda",
-    "platform.p2.text": "Korisnici objavljuju poslove, majstori i kreatori se prijavljuju ili nude usluge.",
-    "platform.p3.title": "Profili i radovi",
-    "platform.p3.text": "Avatar, ocjene, javni radovi i Provjereno — vidi kome se obraćaš prije kontakta.",
-    "platform.p4.title": "Chat i aktivnost",
-    "platform.p4.text": "Prijave, poruke i obavijesti na jednom mjestu — cijeli tok posla u platformi.",
-    "platform.ctaWeb": "Pridruži se na webu",
-    "platform.ctaJoin": "Registruj se kao majstor/kreator",
-    "platform.g1.title": "Pametna pretraga",
-    "platform.g1.text": "Brzi izbor, gradovi i preporuke po ocjenama.",
-    "platform.g2.title": "Majstori i kreatori",
-    "platform.g2.text": "Pretraga po gradu, kategoriji i dostupnosti.",
-    "platform.g3.title": "Poslovi",
-    "platform.g3.text": "Potražnja, ponude i prijave s profilom autora.",
-    "platform.g4.title": "Aktivnost",
-    "platform.g4.text": "Prijave, dogovori i obavijesti na jednom ekranu.",
-    "platform.g5.title": "Javni radovi",
-    "platform.g5.text": "Portfolio majstora i kreatora prije angažmana.",
     "store.huaweiSmall": "Preuzmi na",
     "store.playSmall": "Uskoro na",
     "store.playSmallActive": "Preuzmi na",
@@ -82,47 +51,16 @@ const translations = {
     "footer.copy": "© 2026 Brzo i Lokalno. Sva prava zadržana.",
   },
   en: {
-    "nav.platform": "Platform",
     "nav.features": "How it works",
     "nav.forWhom": "Who it's for",
     "nav.download": "Download",
-    "hero.eyebrow": "Local platform — web and mobile",
-    "hero.title1": "More than an app:",
-    "hero.title2": "a platform for your city",
-    "hero.lead": "Craftsmen, creators and users in one place — post jobs, find services, browse work and agree locally. Use the platform in your browser or via the app.",
-    "hero.openWeb": "Open platform in browser",
-    "hero.seePlatform": "See how it looks",
+    "hero.eyebrow": "Local services, smart search",
+    "hero.title1": "Craftsmen, creators and services",
+    "hero.title2": "in your city",
+    "hero.lead": "Post a job, find a craftsman, browse work samples and local services.",
     "hero.pill1": "Ratings & reviews",
     "hero.pill2": "Available now",
     "hero.pill3": "Near me",
-    "platform.eyebrow": "Real platform",
-    "platform.title": "Not just another app",
-    "platform.subtitle": "Brzo i Lokalno is a live platform — profiles, jobs, offers, work samples, chat and ratings. Here is what it actually looks like (real screens).",
-    "platform.shot1": "Home and smart search",
-    "platform.shot2": "Find craftsmen and creators",
-    "platform.shot3": "Jobs, offers and applications",
-    "platform.shot4": "Activity, applications and notifications",
-    "platform.shot5": "Public work and portfolio",
-    "platform.p1.title": "Web + Android",
-    "platform.p1.text": "The same platform in the browser and in the app — no need to wait for the store to try it.",
-    "platform.p2.title": "Demand and supply",
-    "platform.p2.text": "Users post jobs; craftsmen and creators apply or publish offers.",
-    "platform.p3.title": "Profiles and work",
-    "platform.p3.text": "Avatar, ratings, public work and Verified — see who you contact before you reach out.",
-    "platform.p4.title": "Chat and activity",
-    "platform.p4.text": "Applications, messages and notifications in one place — the full job flow in the platform.",
-    "platform.ctaWeb": "Join on the web",
-    "platform.ctaJoin": "Register as craftsman/creator",
-    "platform.g1.title": "Smart search",
-    "platform.g1.text": "Quick picks, cities and rating-based suggestions.",
-    "platform.g2.title": "Craftsmen and creators",
-    "platform.g2.text": "Search by city, category and availability.",
-    "platform.g3.title": "Jobs",
-    "platform.g3.text": "Demand, offers and applications with author profile.",
-    "platform.g4.title": "Activity",
-    "platform.g4.text": "Applications, agreements and notifications on one screen.",
-    "platform.g5.title": "Public work",
-    "platform.g5.text": "Portfolio of craftsmen and creators before hiring.",
     "store.huaweiSmall": "Get it on",
     "store.playSmall": "Coming soon on",
     "store.playSmallActive": "Get it on",
@@ -201,16 +139,6 @@ function applySiteConfig() {
       link.classList.add("is-hidden");
     }
   });
-
-  const promoVideoUrl = config.promoVideoUrl && config.promoVideoUrl.trim();
-  const videoWrap = document.getElementById("promo-video-wrap");
-  const videoIframe = document.getElementById("promo-video-iframe");
-  const platformReel = document.getElementById("platform-reel");
-  if (promoVideoUrl && videoWrap && videoIframe) {
-    videoIframe.src = promoVideoUrl;
-    videoWrap.classList.remove("is-hidden");
-    if (platformReel) platformReel.classList.add("is-hidden");
-  }
 
   if (config.googleAnalyticsId && config.googleAnalyticsId.trim()) {
     const id = config.googleAnalyticsId.trim();
@@ -313,69 +241,3 @@ if (menuToggle && mainNav) {
     });
   });
 }
-
-const PLATFORM_SHOT_KEYS = [
-  "platform.shot1",
-  "platform.shot2",
-  "platform.shot3",
-  "platform.shot4",
-  "platform.shot5",
-];
-
-function initPlatformReel() {
-  const reel = document.getElementById("platform-reel");
-  const caption = document.getElementById("platform-reel-caption");
-  const dotsRoot = document.getElementById("platform-reel-dots");
-  if (!reel || reel.classList.contains("is-hidden")) return;
-
-  const shots = [...reel.querySelectorAll(".platform-reel__shot")];
-  if (!shots.length) return;
-
-  let index = 0;
-  let timer = null;
-  const lang = () => (localStorage.getItem(LANG_KEY) === "en" ? "en" : "bs");
-
-  function captionText(i) {
-    const key = PLATFORM_SHOT_KEYS[i];
-    return translations[lang()][key] || "";
-  }
-
-  function renderDots() {
-    if (!dotsRoot) return;
-    dotsRoot.innerHTML = shots
-      .map(
-        (_, i) =>
-          `<button type="button" class="platform-reel__dot${i === index ? " is-active" : ""}" data-dot="${i}" aria-label="Ekran ${i + 1}"></button>`
-      )
-      .join("");
-    dotsRoot.querySelectorAll("[data-dot]").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        showShot(Number(btn.dataset.dot));
-        restartTimer();
-      });
-    });
-  }
-
-  function showShot(next) {
-    index = (next + shots.length) % shots.length;
-    shots.forEach((shot, i) => shot.classList.toggle("is-active", i === index));
-    if (caption) {
-      caption.textContent = captionText(index);
-      caption.setAttribute("data-i18n", PLATFORM_SHOT_KEYS[index]);
-    }
-    dotsRoot?.querySelectorAll(".platform-reel__dot").forEach((dot, i) => {
-      dot.classList.toggle("is-active", i === index);
-    });
-  }
-
-  function restartTimer() {
-    if (timer) clearInterval(timer);
-    timer = setInterval(() => showShot(index + 1), 4500);
-  }
-
-  renderDots();
-  showShot(0);
-  restartTimer();
-}
-
-initPlatformReel();
