@@ -125,32 +125,42 @@ function scrollMemoryKey(route) {
 function captureMainScroll(route) {
   const key = scrollMemoryKey(route);
   if (!key) return;
-  const main = document.getElementById("app-main");
-  if (main) scrollPositions[key] = main.scrollTop;
+  const el = getFeedScroller();
+  if (el) scrollPositions[key] = el.scrollTop;
 }
 
 function restoreMainScroll(route) {
   const key = scrollMemoryKey(route);
-  const main = document.getElementById("app-main");
-  if (!main || !key) return;
+  const el = getFeedScroller();
+  if (!el || !key) return;
   const top = scrollPositions[key] || 0;
   requestAnimationFrame(() => {
-    main.scrollTop = top;
-    updateFeedHeadShadow(main);
+    el.scrollTop = top;
+    updateFeedHeadShadow();
   });
 }
 
-function updateFeedHeadShadow(main) {
-  const head = main?.querySelector(".screen-feed__head");
-  if (!head) return;
-  head.classList.toggle("screen-feed__head--scrolled", main.scrollTop > 6);
+function getFeedScroller() {
+  return document.querySelector(".screen-feed__body") || document.getElementById("app-main");
+}
+
+function updateFeedHeadShadow() {
+  const body = document.querySelector(".screen-feed__body");
+  const head = document.querySelector(".screen-feed__head");
+  if (!body || !head) return;
+  head.classList.toggle("screen-feed__head--scrolled", body.scrollTop > 6);
 }
 
 function bindFeedScroll() {
+  const body = document.querySelector(".screen-feed__body");
+  if (body) {
+    updateFeedHeadShadow();
+    body.onscroll = () => updateFeedHeadShadow();
+    return;
+  }
   const main = document.getElementById("app-main");
   if (!main) return;
-  updateFeedHeadShadow(main);
-  main.onscroll = () => updateFeedHeadShadow(main);
+  main.onscroll = null;
 }
 
 function stopChatListener() {

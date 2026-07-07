@@ -594,10 +594,22 @@ body.app-body.has-app-shell #app-root {
   padding-bottom: 0.5rem;
 }
 
+.app-main:has(.screen-feed--scroll) {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: calc(var(--bottom-nav-h) + var(--safe-bottom) + 0.35rem);
+}
+
 .screen-feed {
   display: flex;
   flex-direction: column;
   min-height: min-content;
+}
+
+.screen-feed--scroll {
+  flex: 1;
+  min-height: 0;
 }
 
 .screen-feed__head {
@@ -611,6 +623,13 @@ body.app-body.has-app-shell #app-root {
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s, box-shadow 0.2s;
+  flex-shrink: 0;
+}
+
+.screen-feed--scroll .screen-feed__head {
+  position: static;
+  margin: 0;
+  padding: 0 0 0.7rem;
 }
 
 .screen-feed__head--scrolled {
@@ -630,6 +649,44 @@ body.app-body.has-app-shell #app-root {
 .screen-feed__body {
   padding-top: 0.15rem;
   padding-bottom: 5rem;
+}
+
+.screen-feed--scroll .screen-feed__body {
+  flex: 1;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+.screen-feed--scroll .screen-feed__body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.screen-feed--scroll .screen-feed__body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.screen-feed--scroll .screen-feed__body::-webkit-scrollbar-thumb {
+  background: rgba(242, 140, 40, 0.28);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.screen-feed--scroll .screen-feed__body::-webkit-scrollbar-thumb:hover {
+  background: rgba(242, 140, 40, 0.45);
+  background-clip: padding-box;
+}
+
+@supports (scrollbar-color: auto) {
+  .screen-feed--scroll .screen-feed__body {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(242, 140, 40, 0.35) transparent;
+  }
 }
 
 .screen-feed .fab {

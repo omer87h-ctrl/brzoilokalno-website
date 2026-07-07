@@ -13,7 +13,7 @@ export function renderScreenFeed({
   const idAttr = feedId ? ` id="${escapeHtml(feedId)}"` : "";
 
   return `
-    <div class="screen-feed"${idAttr}>
+    <div class="screen-feed screen-feed--scroll"${idAttr}>
       <div class="screen-feed__head">
         ${tabs}
         ${cityChip ? `<div class="chip-row chip-row--filters">${cityChip}</div>` : ""}
