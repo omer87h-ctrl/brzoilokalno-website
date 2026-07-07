@@ -71,7 +71,11 @@ export async function updateUserProfile(uid, data) {
   await setDoc(doc(getDb(), "users", uid), payload, { merge: true });
   const snap = await getDoc(doc(getDb(), "users", uid));
   if (snap.exists()) {
-    await syncPublicProfile(uid, snap.data());
+    try {
+      await syncPublicProfile(uid, snap.data());
+    } catch (error) {
+      console.warn("public_profiles sync failed after profile update:", error);
+    }
   }
 }
 

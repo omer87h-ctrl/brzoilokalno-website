@@ -33,6 +33,10 @@ export async function createUserProfile(uid, data) {
   };
 
   await setDoc(doc(getDb(), "users", uid), payload);
-  await syncPublicProfile(uid, payload);
+  try {
+    await syncPublicProfile(uid, payload);
+  } catch (error) {
+    console.warn("public_profiles sync failed after profile create:", error);
+  }
   return payload;
 }

@@ -148,6 +148,7 @@ let posloviFilterMyCity = false;
 let posloviFilterMyJobs = false;
 let kategorijeFilterMyCity = false;
 let screenRequestId = 0;
+let lastRenderedContentHtml = "";
 let chatUnsubscribe = null;
 let chatContext = null;
 let profileEditing = false;
@@ -358,6 +359,24 @@ function softRenderApp() {
   renderApp();
 }
 
+function renderModalUpdate() {
+  skipRouteLoading = true;
+  if (lastRenderedContentHtml) {
+    const route = parseRoute(getHashRoute());
+    renderShellWithContent(route, lastRenderedContentHtml, { restoreScroll: true });
+    return;
+  }
+  renderApp();
+}
+
+function closeActiveModal() {
+  activeModal = null;
+  modalError = "";
+  pendingActivityHideId = "";
+  reportTarget = null;
+  renderModalUpdate();
+}
+
 function getFeedScroller() {
   return getMainScroller();
 }
@@ -453,6 +472,9 @@ function buildModalsHtml() {
 }
 
 function renderShellWithContent(route, contentHtml, { restoreScroll = true, loading = false } = {}) {
+  if (!loading) {
+    lastRenderedContentHtml = contentHtml;
+  }
   setRoot(
     renderShell({
       route,
@@ -1171,7 +1193,7 @@ function bindPhase3Actions() {
       reportTarget = { type: "job", data: reportCache.job };
       activeModal = "report";
       modalError = "";
-      renderApp();
+      renderModalUpdate();
     });
   }
 
@@ -1191,7 +1213,7 @@ function bindPhase3Actions() {
         };
         activeModal = "report";
         modalError = "";
-        renderApp();
+        renderModalUpdate();
       } catch (error) {
         console.error("Report work load failed:", error);
       }
@@ -1314,7 +1336,7 @@ function bindPhase3Actions() {
       reportTarget = { type: "chat-user", data: chatOtherMeta };
       activeModal = "report";
       modalError = "";
-      renderApp();
+      renderModalUpdate();
     });
   }
 
@@ -1353,11 +1375,7 @@ function navigateToPretraga(query) {
 function bindProfileAndModals() {
   document.querySelectorAll("[data-close-modal]").forEach((btn) => {
     btn.addEventListener("click", () => {
-      activeModal = null;
-      modalError = "";
-      pendingActivityHideId = "";
-      reportTarget = null;
-      renderApp();
+      closeActiveModal();
     });
   });
 
@@ -1366,7 +1384,7 @@ function bindProfileAndModals() {
     fab.addEventListener("click", () => {
       activeModal = fab.dataset.fabTab === "ponuda" ? "offer" : "job";
       modalError = "";
-      renderApp();
+      renderModalUpdate();
     });
   }
 
@@ -1375,7 +1393,7 @@ function bindProfileAndModals() {
     editProfileBtn.addEventListener("click", () => {
       profileEditing = true;
       profileFormError = "";
-      renderApp();
+      softRenderApp();
     });
   }
 
@@ -1384,7 +1402,7 @@ function bindProfileAndModals() {
     cancelEdit.addEventListener("click", () => {
       profileEditing = false;
       profileFormError = "";
-      renderApp();
+      softRenderApp();
     });
   }
 
@@ -1393,7 +1411,7 @@ function bindProfileAndModals() {
     editTipBtn.addEventListener("click", () => {
       activeModal = "tip";
       modalError = "";
-      renderApp();
+      renderModalUpdate();
     });
   }
 
@@ -1402,7 +1420,7 @@ function bindProfileAndModals() {
     addWorkBtn.addEventListener("click", () => {
       activeModal = "work";
       modalError = "";
-      renderApp();
+      renderModalUpdate();
     });
   }
 
@@ -1463,12 +1481,12 @@ function bindProfileAndModals() {
       const file = form.image?.files?.[0];
       if (!description) {
         modalError = "Opis rada je obavezan.";
-        renderApp();
+        renderModalUpdate();
         return;
       }
       if (!file) {
         modalError = "Odaberite sliku rada.";
-        renderApp();
+        renderModalUpdate();
         return;
       }
 
@@ -1476,7 +1494,7 @@ function bindProfileAndModals() {
       const existing = await fetchWorksByUser(currentUser.uid, false).catch(() => []);
       if (existing.length >= 3) {
         modalError = "Možete dodati najviše 3 rada.";
-        renderApp();
+        renderModalUpdate();
         return;
       }
 
@@ -1497,7 +1515,7 @@ function bindProfileAndModals() {
       } catch (error) {
         console.error("Add work failed:", error);
         modalError = "Spremanje rada nije uspjelo.";
-        renderApp();
+        renderModalUpdate();
       } finally {
         if (submitBtn) submitBtn.disabled = false;
       }
@@ -1559,28 +1577,28 @@ function bindProfileAndModals() {
       const nameErr = validatePersonName(payload.displayName);
       if (nameErr) {
         profileFormError = nameErr;
-        renderApp();
+        softRenderApp();
         return;
       }
       if (role === "majstor" || role === "kreator") {
         const cityErr = validateCity(payload.city);
         if (cityErr) {
           profileFormError = cityErr;
-          renderApp();
+          softRenderApp();
           return;
         }
       }
       const descErr = validateOptionalDescription(payload.description, "Opis");
       if (descErr) {
         profileFormError = descErr;
-        renderApp();
+        softRenderApp();
         return;
       }
       if (payload.contactPhone.trim()) {
         const phoneErr = validatePhone(payload.contactPhone, true);
         if (phoneErr) {
           profileFormError = phoneErr;
-          renderApp();
+          softRenderApp();
           return;
         }
       }
@@ -1593,8 +1611,9 @@ function bindProfileAndModals() {
         await refreshProfileCity();
         renderApp();
       } catch (error) {
+        console.error("Profile save failed:", error);
         profileFormError = "Spremanje profila nije uspjelo.";
-        renderApp();
+        softRenderApp();
       }
     });
   }
@@ -1618,13 +1637,13 @@ function bindProfileAndModals() {
       const missing = firstMissingJobFields(fields, !profile?.preferInAppChat);
       if (missing) {
         modalError = missing;
-        renderApp();
+        renderModalUpdate();
         return;
       }
       const violation = findContentViolation(fields.title, fields.description, fields.category);
       if (violation) {
         modalError = violationMessage("Oglas", violation);
-        renderApp();
+        renderModalUpdate();
         return;
       }
       try {
@@ -1632,8 +1651,9 @@ function bindProfileAndModals() {
         activeModal = null;
         navigateTo("#/poslovi");
       } catch (error) {
+        console.error("Create job failed:", error);
         modalError = "Objava posla nije uspjela.";
-        renderApp();
+        renderModalUpdate();
       }
     });
   }
@@ -1657,13 +1677,13 @@ function bindProfileAndModals() {
       const missing = firstMissingOfferFields(fields, !profile?.preferInAppChat);
       if (missing) {
         modalError = missing;
-        renderApp();
+        renderModalUpdate();
         return;
       }
       const violation = findContentViolation(fields.title, fields.description, fields.category);
       if (violation) {
         modalError = violationMessage("Ponuda", violation);
-        renderApp();
+        renderModalUpdate();
         return;
       }
       try {
@@ -1671,8 +1691,9 @@ function bindProfileAndModals() {
         activeModal = null;
         navigateTo("#/ponude");
       } catch (error) {
+        console.error("Create offer failed:", error);
         modalError = "Objava ponude nije uspjela.";
-        renderApp();
+        renderModalUpdate();
       }
     });
   }
@@ -1689,13 +1710,13 @@ function bindProfileAndModals() {
       const body = normalizeSpaces(form.body.value);
       if (!title || !teaser || !body) {
         modalError = "Naslov, kratki i puni opis su obavezni.";
-        renderApp();
+        renderModalUpdate();
         return;
       }
       const violation = findContentViolation(title, teaser, body);
       if (violation) {
         modalError = violationMessage("Savjet", violation);
-        renderApp();
+        renderModalUpdate();
         return;
       }
       try {
@@ -1711,7 +1732,7 @@ function bindProfileAndModals() {
         renderApp();
       } catch (error) {
         modalError = "Spremanje savjeta nije uspjelo.";
-        renderApp();
+        renderModalUpdate();
       }
     });
   }
@@ -1920,7 +1941,7 @@ function bindSearchAndFilters() {
       const details = normalizeSpaces(form.details?.value || "");
       if (!reason) {
         modalError = "Odaberi razlog prijave.";
-        renderApp();
+        renderModalUpdate();
         return;
       }
       const reporter = {
@@ -1965,7 +1986,7 @@ function bindSearchAndFilters() {
       } catch (error) {
         console.error("Report failed:", error);
         modalError = error?.message || "Slanje prijave nije uspjelo.";
-        renderApp();
+        renderModalUpdate();
       }
     });
   }
@@ -2222,7 +2243,7 @@ function bindHomeActions() {
       reportTarget = { type: "tip", data: tip };
       activeModal = "report";
       modalError = "";
-      renderApp();
+      renderModalUpdate();
     });
   });
 

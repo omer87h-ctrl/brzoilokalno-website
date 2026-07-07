@@ -2,9 +2,9 @@ import { doc, setDoc } from "https://www.gstatic.com/firebasejs/10.14.1/firebase
 import { getDb } from "./firebaseService.js";
 
 /** Javni profil — bez emaila, tokena i privatnih polja naloga. */
-export function toPublicProfile(uid, data = {}) {
+export function toPublicProfile(uid, data = {}, { forClientWrite = true } = {}) {
   const id = uid || data.id || "";
-  return {
+  const profile = {
     id,
     displayName: String(data.displayName || "").trim(),
     role: String(data.role || "").trim(),
@@ -18,18 +18,23 @@ export function toPublicProfile(uid, data = {}) {
     profileImageUrlThumb: String(data.profileImageUrlThumb || "").trim(),
     profileImageUrlFull: String(data.profileImageUrlFull || "").trim(),
     profileImageVersionMs: Number(data.profileImageVersionMs) || 0,
-    profileVerified: data.profileVerified === true,
     preferInAppChat: data.preferInAppChat === true,
     allowPhoneCall: data.allowPhoneCall !== false,
     allowWhatsApp: data.allowWhatsApp !== false,
-    ratingAverage: Number(data.ratingAverage) || 0,
-    ratingCount: Number(data.ratingCount) || 0,
   };
+
+  if (!forClientWrite) {
+    profile.profileVerified = data.profileVerified === true;
+    profile.ratingAverage = Number(data.ratingAverage) || 0;
+    profile.ratingCount = Number(data.ratingCount) || 0;
+  }
+
+  return profile;
 }
 
 export async function syncPublicProfile(uid, userData) {
   if (!uid) return;
-  const payload = toPublicProfile(uid, userData);
+  const payload = toPublicProfile(uid, userData, { forClientWrite: true });
   await setDoc(doc(getDb(), "public_profiles", uid), payload, { merge: true });
 }
 
