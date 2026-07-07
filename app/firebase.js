@@ -1,11 +1,12 @@
-/** Firebase Web config — isti projekat kao Android (brzoilokalno-268a5) */
+/** Firebase Web config — brzoilokalno-268a5 (web app, ne Android key) */
 export const firebaseConfig = {
-  apiKey: "AIzaSyBS-YMkh9J6IQKNMavmlTZI7j-sEJUHFsM",
+  apiKey: "AIzaSyA-ArtIII_IxgAo0f98xSMJJ6t_I0FozmA",
   authDomain: "brzoilokalno-268a5.firebaseapp.com",
   projectId: "brzoilokalno-268a5",
   storageBucket: "brzoilokalno-268a5.firebasestorage.app",
   messagingSenderId: "681511479620",
-  appId: "1:681511479620:web:brzoilokalno",
+  appId: "1:681511479620:web:0debdbcb1a64aa3afc4f11",
+  measurementId: "G-WVBQVMZ4GW",
 };
 
 export const ADMIN_EMAIL = "omer.creating.apps87@gmail.com";
