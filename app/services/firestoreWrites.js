@@ -172,8 +172,7 @@ export async function applyToJob({ job, profile, authUser }) {
     jobId: job.id,
     jobOwnerId: job.userId || "",
     workerId,
-    workerEmail: authUser.email || "",
-    workerName: profile.displayName || authUser.displayName || authUser.email || "",
+    workerName: profile.displayName || authUser.displayName || "Korisnik",
     status: "pending",
     timestamp: serverTimestamp(),
   };
@@ -265,7 +264,6 @@ export async function createWork({ profile, authUser, description, imageUrls, pa
   const payload = {
     userId: uid,
     ownerId: uid,
-    ownerEmail: authUser.email || "",
     ownerDisplayName: normalizeSpaces(profile?.displayName || authUser.displayName || ""),
     ownerRole: profile?.role || "",
     description: normalizeSpaces(description),

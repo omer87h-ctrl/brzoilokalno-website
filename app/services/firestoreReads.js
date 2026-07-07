@@ -10,7 +10,7 @@ import {
   where,
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 import { getAuthInstance, getDb } from "./firebaseService.js";
-import { publicProfilesCollection, syncPublicProfile, toPublicProfile } from "./publicProfile.js";
+import { publicProfilesCollection } from "./publicProfile.js";
 
 function mapDocs(snap) {
   return snap.docs.map((d) => ({ id: d.id, ...d.data() }));
@@ -137,14 +137,7 @@ export async function fetchUserProfile(uid, { viewerUid = null } = {}) {
     return { id: pubSnap.id, ...pubSnap.data() };
   }
 
-  try {
-    const userSnap = await getDoc(doc(getDb(), "users", uid));
-    if (!userSnap.exists()) return null;
-    syncPublicProfile(uid, userSnap.data()).catch(() => {});
-    return toPublicProfile(uid, userSnap.data());
-  } catch (_) {
-    return null;
-  }
+  return null;
 }
 
 /** Dohvat vlasnika oglasa (isti tick kao Android PublicProfileCache.prefetch). */
