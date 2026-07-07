@@ -1483,21 +1483,21 @@ body.app-body.has-app-shell #app-root {
 }
 
 @media (min-width: 768px) {
-  body.app-body::before,
-  body.app-body::after {
-    opacity: 0.22;
-  }
-
   :root {
     --shell-max: min(100%, 720px);
   }
 
   .app-shell {
+    position: relative;
     max-width: var(--shell-max);
     margin: 0 auto;
     border-left: 1px solid rgba(255, 255, 255, 0.06);
     border-right: 1px solid rgba(255, 255, 255, 0.06);
-    box-shadow: 0 0 48px rgba(0, 0, 0, 0.35);
+    box-shadow:
+      0 0 48px rgba(0, 0, 0, 0.35),
+      0 0 34px rgba(232, 136, 74, 0.08),
+      0 0 90px rgba(232, 136, 74, 0.06);
+    animation: shellAmbientPulse 7s ease-in-out infinite;
   }
 
   .app-main {
@@ -1515,6 +1515,27 @@ body.app-body.has-app-shell #app-root {
 
   .fab {
     right: max(1rem, calc(50% - var(--shell-max) / 2 + 1rem));
+  }
+}
+
+@keyframes shellAmbientPulse {
+  0% {
+    box-shadow:
+      0 0 48px rgba(0, 0, 0, 0.35),
+      0 0 26px rgba(232, 136, 74, 0.06),
+      0 0 70px rgba(232, 136, 74, 0.04);
+  }
+  50% {
+    box-shadow:
+      0 0 52px rgba(0, 0, 0, 0.38),
+      0 0 38px rgba(232, 136, 74, 0.12),
+      0 0 110px rgba(232, 136, 74, 0.09);
+  }
+  100% {
+    box-shadow:
+      0 0 48px rgba(0, 0, 0, 0.35),
+      0 0 26px rgba(232, 136, 74, 0.06),
+      0 0 70px rgba(232, 136, 74, 0.04);
   }
 }
 
