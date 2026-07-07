@@ -514,6 +514,7 @@ body.app-body.has-app-shell #app-root {
 .brzo-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.38rem;
   padding: 0.42rem 0.72rem 0.42rem 0.48rem;
   border: 0;
@@ -539,6 +540,7 @@ body.app-body.has-app-shell #app-root {
   height: 1.7rem;
   border-radius: 999px;
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   background: rgba(26, 16, 8, 0.14);
@@ -556,6 +558,8 @@ body.app-body.has-app-shell #app-root {
 
 .brzo-btn__label {
   display: inline-block;
+  color: #1a1008;
+  opacity: 1;
 }
 
 .auto-izbor-loading {
@@ -1594,6 +1598,7 @@ body.app-body.has-app-shell #app-root {
   }
 
   .brzo-btn {
+    min-width: 138px;
     gap: 0.5rem;
     padding: 0.52rem 0.9rem 0.52rem 0.56rem;
     border-radius: 18px;
