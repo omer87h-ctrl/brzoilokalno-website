@@ -274,7 +274,26 @@ export async function updateApplicationStatus(appId, status, context = {}) {
   }
 }
 
-export async function sendChatMessage({ text, sender, receiverId, jobId, applicationId }) {
+export async function updateUserStatus(uid, status) {
+  const next = status === "zauzet" ? "zauzet" : "slobodan";
+  await setDoc(doc(getDb(), "users", uid), { status: next }, { merge: true });
+  const snap = await getDoc(doc(getDb(), "users", uid));
+  if (snap.exists()) {
+    try {
+      await syncPublicProfile(uid, snap.data());
+    } catch (error) {
+      console.warn("public_profiles sync failed after status update:", error);
+    }
+  }
+  return next;
+}
+
+export async function deleteChatMessage(messageId) {
+  if (!messageId) throw new Error("Poruka nije pronađena.");
+  await deleteDoc(doc(getDb(), "messages", messageId));
+}
+
+export async function sendChatMessage({ text, sender, receiverId, jobId, applicationId, replyTo = null }) {
   const payload = {
     text,
     senderId: sender.uid,
@@ -287,6 +306,13 @@ export async function sendChatMessage({ text, sender, receiverId, jobId, applica
     clientCreatedAt: Date.now(),
     timestamp: serverTimestamp(),
   };
+  if (replyTo?.messageId) {
+    payload.replyToMessageId = replyTo.messageId;
+    payload.replyToText = String(replyTo.previewText || "").trim().slice(0, 400);
+    if (replyTo.authorLabel) {
+      payload.replyToSenderLabel = String(replyTo.authorLabel).trim().slice(0, 80);
+    }
+  }
 
   const ref = await addDoc(collection(getDb(), "messages"), payload);
   await updateDoc(doc(getDb(), "applications", applicationId), {

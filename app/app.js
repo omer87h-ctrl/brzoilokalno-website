@@ -61,6 +61,7 @@ import {
   deleteOffer,
   deleteWork,
   deleteAccountData,
+  deleteChatMessage,
   markBellNotificationsRead,
   markJobNotificationsRead,
   saveHomeTip,
@@ -81,6 +82,7 @@ import {
   adminDeleteReportedContent,
   updateApplicationStatus,
   updateUserProfile,
+  updateUserStatus,
   updateWorkPublic,
 } from "./services/firestoreWrites.js";
 import { refreshModerationFromFirestore, findContentViolation, violationMessage } from "./services/moderation.js";
@@ -117,7 +119,7 @@ import { renderMajstoriList } from "./views/majstori.js";
 import { renderPosao } from "./views/posao.js";
 import { renderRad, renderRadovi } from "./views/radovi.js";
 import { renderPrijave } from "./views/prijave.js";
-import { renderChat, renderChatMessages } from "./views/chat.js";
+import { renderChat, renderChatMessages, renderChatMessageSheet, renderChatMessageDetails, renderChatReplyBar } from "./views/chat.js";
 import { renderPretraga } from "./views/pretraga.js";
 import { renderPonudaDetail } from "./views/ponude.js";
 import { renderPostavke } from "./views/postavke.js";
@@ -171,6 +173,9 @@ let brzoFeedbackSent = false;
 let adminModerationError = "";
 let workNotesSavedLabel = "";
 let chatMessagesCache = [];
+let chatReplyDraft = null;
+let chatMessageActionTarget = null;
+let chatDetailsListenerBound = false;
 let kalkState = { module: 0 };
 let unreadBellNotifications = 0;
 let unreadPosloviNotifications = 0;
@@ -429,6 +434,174 @@ function stopChatListener() {
     chatUnsubscribe = null;
   }
   chatContext = null;
+  chatReplyDraft = null;
+  chatMessageActionTarget = null;
+}
+
+function closeChatMessageSheet() {
+  chatMessageActionTarget = null;
+  const sheet = document.getElementById("chat-msg-sheet");
+  const panel = document.getElementById("chat-msg-sheet-panel");
+  if (sheet) sheet.hidden = true;
+  if (panel) panel.innerHTML = "";
+}
+
+function closeChatMessageDetails() {
+  const details = document.getElementById("chat-msg-details");
+  const card = document.getElementById("chat-msg-details-card");
+  if (details) details.hidden = true;
+  if (card) card.innerHTML = "";
+}
+
+function openChatMessageSheet(msg) {
+  const sheet = document.getElementById("chat-msg-sheet");
+  const panel = document.getElementById("chat-msg-sheet-panel");
+  if (!sheet || !panel || !msg?.id) return;
+  const blocked = chatBlockStatus.iBlocked || chatBlockStatus.theyBlocked;
+  chatMessageActionTarget = msg;
+  panel.innerHTML = renderChatMessageSheet(
+    { ...msg, mine: msg.senderId === chatContext?.currentUid },
+    { communicationBlocked: blocked }
+  );
+  sheet.hidden = false;
+}
+
+function openChatMessageDetails(msg) {
+  const details = document.getElementById("chat-msg-details");
+  const card = document.getElementById("chat-msg-details-card");
+  if (!details || !card || !msg) return;
+  card.innerHTML = renderChatMessageDetails(msg, chatContext?.currentUid || "", chatOtherMeta?.name || "");
+  details.hidden = false;
+}
+
+function patchChatReplyBar() {
+  const bar = document.getElementById("chat-reply-bar");
+  if (!bar) return;
+  bar.outerHTML = renderChatReplyBar(chatReplyDraft);
+  const cancelBtn = document.getElementById("chat-reply-cancel");
+  if (cancelBtn) {
+    cancelBtn.addEventListener("click", () => {
+      chatReplyDraft = null;
+      patchChatReplyBar();
+    });
+  }
+}
+
+function findChatMessageById(messageId) {
+  return chatMessagesCache.find((msg) => msg.id === messageId) || null;
+}
+
+function bindChatMessageGestures() {
+  const list = document.getElementById("chat-messages");
+  if (!list || list.dataset.gesturesBound === "1") return;
+  list.dataset.gesturesBound = "1";
+
+  let pressTimer = null;
+  let pressTargetId = "";
+
+  const clearPress = () => {
+    if (pressTimer) {
+      clearTimeout(pressTimer);
+      pressTimer = null;
+    }
+    pressTargetId = "";
+  };
+
+  const openFromBubble = (bubble) => {
+    const messageId = bubble?.dataset?.msgId;
+    if (!messageId) return;
+    const msg = findChatMessageById(messageId);
+    if (msg) openChatMessageSheet(msg);
+  };
+
+  list.addEventListener("contextmenu", (event) => {
+    const bubble = event.target.closest(".chat-bubble[data-msg-id]");
+    if (!bubble) return;
+    event.preventDefault();
+    openFromBubble(bubble);
+  });
+
+  list.addEventListener("dblclick", (event) => {
+    const bubble = event.target.closest(".chat-bubble[data-msg-id]");
+    if (!bubble) return;
+    const msg = findChatMessageById(bubble.dataset.msgId);
+    if (msg) openChatMessageDetails(msg);
+  });
+
+  list.addEventListener("touchstart", (event) => {
+    const bubble = event.target.closest(".chat-bubble[data-msg-id]");
+    if (!bubble) return;
+    pressTargetId = bubble.dataset.msgId || "";
+    clearPress();
+    pressTimer = setTimeout(() => {
+      if (pressTargetId === bubble.dataset.msgId) {
+        openFromBubble(bubble);
+      }
+      clearPress();
+    }, 480);
+  }, { passive: true });
+
+  list.addEventListener("touchend", clearPress);
+  list.addEventListener("touchmove", clearPress);
+  list.addEventListener("touchcancel", clearPress);
+
+  const sheet = document.getElementById("chat-msg-sheet");
+  const backdrop = document.getElementById("chat-msg-sheet-backdrop");
+  if (backdrop) {
+    backdrop.addEventListener("click", closeChatMessageSheet);
+  }
+  if (sheet) {
+    sheet.addEventListener("click", (event) => {
+      const actionBtn = event.target.closest("[data-chat-action]");
+      if (!actionBtn || !chatMessageActionTarget) return;
+      const action = actionBtn.dataset.chatAction;
+      const msg = chatMessageActionTarget;
+      const text = String(msg.text || "");
+      if (action === "reply") {
+        chatReplyDraft = {
+          messageId: msg.id,
+          previewText: text,
+          authorLabel: messageAuthorLabelFromMsg(msg),
+        };
+        patchChatReplyBar();
+        closeChatMessageSheet();
+        document.querySelector(".chat-composer__input")?.focus();
+      } else if (action === "copy") {
+        navigator.clipboard?.writeText(text).catch(() => {});
+        closeChatMessageSheet();
+      } else if (action === "details") {
+        closeChatMessageSheet();
+        openChatMessageDetails(msg);
+      } else if (action === "delete") {
+        if (!confirm("Obrisati ovu poruku?")) return;
+        deleteChatMessage(msg.id).catch(() => {
+          alert("Brisanje poruke nije uspjelo.");
+        });
+        closeChatMessageSheet();
+      }
+    });
+  }
+
+  if (!chatDetailsListenerBound) {
+    chatDetailsListenerBound = true;
+    document.addEventListener("click", (event) => {
+      const closeBtn = event.target.closest("#chat-msg-details-close");
+      if (closeBtn) {
+        closeChatMessageDetails();
+        return;
+      }
+      const details = document.getElementById("chat-msg-details");
+      if (details && !details.hidden && event.target === details) {
+        closeChatMessageDetails();
+      }
+    });
+  }
+}
+
+function messageAuthorLabelFromMsg(msg) {
+  if (!msg) return "";
+  if (msg.senderId === chatContext?.currentUid) return "Ti";
+  return msg.senderName || chatOtherMeta?.name || "Korisnik";
 }
 
 function setRoot(html) {
@@ -743,6 +916,7 @@ async function loadRouteContent(route) {
       receiverId: otherUid,
       currentUid: uid,
       displayName: currentUser.displayName || currentUser.email || "",
+      otherName,
     };
     chatOtherMeta = {
       uid: otherUid,
@@ -761,6 +935,7 @@ async function loadRouteContent(route) {
       currentUid: uid,
       error: "",
       blockStatus: chatBlockStatus,
+      replyDraft: chatReplyDraft,
     });
   }
 
@@ -876,6 +1051,7 @@ async function loadRouteContent(route) {
       outdoorExpanded: outdoorPlanExpanded,
       followerCount,
       chatEnabled: isChatEnabled(),
+      unreadBellNotifications,
     });
 
     if (useCache && outdoorLoading) {
@@ -1166,7 +1342,7 @@ function startChatListener(ctx) {
       chatMessagesCache = messages;
       const el = document.getElementById("chat-messages");
       if (el) {
-        el.innerHTML = renderChatMessages(messages, ctx.currentUid);
+        el.innerHTML = renderChatMessages(messages, ctx.currentUid, ctx.otherName || chatOtherMeta?.name || "");
         el.scrollTop = el.scrollHeight;
       }
       const last = messages[messages.length - 1];
@@ -1360,8 +1536,11 @@ function bindPhase3Actions() {
           receiverId: chatContext.receiverId,
           jobId: chatContext.jobId,
           applicationId: chatContext.appId,
+          replyTo: chatReplyDraft,
         });
         if (input) input.value = "";
+        chatReplyDraft = null;
+        patchChatReplyBar();
       } catch (error) {
         console.error("Send failed:", error);
         alert("Slanje poruke nije uspjelo.");
@@ -1418,6 +1597,17 @@ function bindPhase3Actions() {
       }
     });
   }
+
+  if (document.getElementById("chat-messages") && chatContext) {
+    bindChatMessageGestures();
+    const replyCancel = document.getElementById("chat-reply-cancel");
+    if (replyCancel) {
+      replyCancel.addEventListener("click", () => {
+        chatReplyDraft = null;
+        patchChatReplyBar();
+      });
+    }
+  }
 }
 
 function navigateToPretraga(query) {
@@ -1460,6 +1650,26 @@ function bindProfileAndModals() {
       profileEditing = true;
       profileFormError = "";
       softRenderApp();
+    });
+  }
+
+  const statusToggleBtn = document.getElementById("profile-status-toggle");
+  if (statusToggleBtn && currentUser?.uid) {
+    statusToggleBtn.addEventListener("click", async () => {
+      const current = statusToggleBtn.dataset.status === "zauzet" ? "zauzet" : "slobodan";
+      const next = current === "slobodan" ? "zauzet" : "slobodan";
+      statusToggleBtn.disabled = true;
+      try {
+        await updateUserStatus(currentUser.uid, next);
+        if (profilRouteCache?.uid === currentUser.uid && profilRouteCache.user) {
+          profilRouteCache.user = { ...profilRouteCache.user, status: next };
+        }
+        softRenderApp();
+      } catch (error) {
+        console.error("Status update failed:", error);
+        alert("Promjena statusa nije uspjela.");
+        statusToggleBtn.disabled = false;
+      }
     });
   }
 

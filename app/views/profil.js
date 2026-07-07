@@ -42,19 +42,54 @@ function renderProfileContactActions(user) {
 
 const ICON_NOTES = `<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>`;
 const ICON_EDIT = `<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>`;
+const ICON_BELL = `<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 22c1.1 0 2-.9 2-2h-4a2 2 0 0 0 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>`;
+const ICON_SETTINGS = `<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.14 12.94c.04-.31.06-.63.06-.94 0-.31-.02-.63-.06-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6A3.6 3.6 0 1 1 12 8.4a3.6 3.6 0 0 1 0 7.2z"/></svg>`;
 
-function renderProfileQuickActions() {
+function normalizedStatus(status) {
+  return status === "zauzet" ? "zauzet" : "slobodan";
+}
+
+function renderProfileQuickActions(unreadBellNotifications = 0) {
+  const badge =
+    unreadBellNotifications > 0
+      ? `<span class="profile-quick-action__badge">${unreadBellNotifications > 9 ? "9+" : unreadBellNotifications}</span>`
+      : "";
   return `
     <div class="profile-card__quick-actions">
       <a class="profile-quick-action" href="#/biljeske">
         <span class="profile-quick-action__icon">${ICON_NOTES}</span>
         <span class="profile-quick-action__label">Bilješke</span>
       </a>
+      <a class="profile-quick-action" href="#/obavijesti" title="Obavijesti">
+        <span class="profile-quick-action__icon">${ICON_BELL}${badge}</span>
+        <span class="profile-quick-action__label">Obavijesti</span>
+      </a>
+      <a class="profile-quick-action" href="#/postavke">
+        <span class="profile-quick-action__icon">${ICON_SETTINGS}</span>
+        <span class="profile-quick-action__label">Postavke</span>
+      </a>
       <button type="button" class="profile-quick-action" id="edit-profile-btn">
         <span class="profile-quick-action__icon">${ICON_EDIT}</span>
         <span class="profile-quick-action__label">Uredi profil</span>
       </button>
     </div>`;
+}
+
+function renderProfileStatusToggle(user) {
+  if (!isWorker(user?.role)) return "";
+  const status = normalizedStatus(user?.status);
+  const isFree = status === "slobodan";
+  return `
+    <button
+      type="button"
+      class="profile-status-toggle${isFree ? " profile-status-toggle--free" : " profile-status-toggle--busy"}"
+      id="profile-status-toggle"
+      data-status="${status}"
+      title="Dodirni za promjenu statusa"
+    >
+      <span class="profile-status-toggle__dot" aria-hidden="true"></span>
+      <span class="profile-status-toggle__label">${isFree ? "SLOBODAN" : "ZAUZET"}</span>
+    </button>`;
 }
 
 function renderMyWorksSection({ works = [], canAdd = false }) {
@@ -148,6 +183,7 @@ export function renderProfil({
   outdoorExpanded = false,
   followerCount = 0,
   chatEnabled = false,
+  unreadBellNotifications = 0,
 }) {
   if (!user) {
     return `
@@ -179,12 +215,13 @@ export function renderProfil({
                 <span aria-hidden="true">+</span>
               </label>
             </div>
-            ${renderProfileQuickActions()}
+            ${renderProfileQuickActions(unreadBellNotifications)}
           </div>
           <h3 class="profile-card__name">${escapeHtml(user.displayName || "Korisnik")}</h3>
           ${renderProfileMetaBadges(user)}
+          ${renderProfileStatusToggle(user)}
           <p class="profile-card__meta">${escapeHtml(role)} · ${escapeHtml(user.category || user.occupation || "—")}</p>
-          <p class="profile-card__meta">${escapeHtml(user.city || "—")} · ${escapeHtml(user.status || "—")}</p>
+          <p class="profile-card__meta">${escapeHtml(user.city || "—")}</p>
           <p class="profile-card__rating">${rating}</p>
           ${worker ? renderFollowerCount(followerCount) : ""}
           <p class="profile-card__desc">${escapeHtml(user.description || "Nema opisa.")}</p>
