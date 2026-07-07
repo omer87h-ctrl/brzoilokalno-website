@@ -193,6 +193,38 @@ const savedLang = localStorage.getItem(LANG_KEY);
 applySiteConfig();
 setLanguage(savedLang === "en" ? "en" : "bs");
 
+function getShareUrl() {
+  const cfg = window.SITE_CONFIG || {};
+  return cfg.siteUrl || `${window.location.origin}/`;
+}
+
+async function shareSite() {
+  const url = getShareUrl();
+  const title = "Brzo i Lokalno";
+  const text = "Majstori i kreatori u tvom gradu — objavi posao ili pronađi uslugu lokalno.";
+  if (navigator.share) {
+    try {
+      await navigator.share({ title, text, url });
+      return;
+    } catch (error) {
+      if (error?.name === "AbortError") return;
+    }
+  }
+  try {
+    await navigator.clipboard.writeText(url);
+    alert(`Link kopiran:\n${url}`);
+  } catch (_) {
+    window.prompt("Kopiraj link:", url);
+  }
+}
+
+const shareSiteBtn = document.getElementById("share-site-btn");
+if (shareSiteBtn) {
+  shareSiteBtn.addEventListener("click", () => {
+    shareSite();
+  });
+}
+
 const menuToggle = document.getElementById("menu-toggle");
 const mainNav = document.getElementById("main-nav");
 

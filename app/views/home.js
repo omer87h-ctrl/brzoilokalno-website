@@ -3,7 +3,7 @@ import { escapeHtml } from "../utils/format.js";
 import { renderRadPreview } from "./radovi.js";
 import { renderMojKrug } from "./follow.js";
 
-export function renderHomeTips({ tips = [], loading = false }) {
+export function renderHomeTips({ tips = [], loading = false, myHomeTip = null, userRole = "" }) {
   if (loading) {
     return `
       <section class="home-tips">
@@ -11,7 +11,24 @@ export function renderHomeTips({ tips = [], loading = false }) {
         <p class="home-tips__sub">učitavanje…</p>
       </section>`;
   }
-  if (!tips.length) return "";
+
+  const worker = userRole === "majstor" || userRole === "kreator";
+  const ownTipBanner =
+    worker && myHomeTip
+      ? `<p class="home-tips__own">✓ Tvoj savjet je aktivan na početnoj. Uredi ga na Profilu.</p>`
+      : worker
+        ? `<p class="home-tips__own home-tips__own--muted">Dodaj savjet na Profilu — prikazuje se ovdje 24 sata.</p>`
+        : "";
+
+  if (!tips.length) {
+    return `
+      <section class="home-tips">
+        <h3 class="home-tips__title">Savjeti majstora i kreatora</h3>
+        <p class="home-tips__sub">Profil → savjet za početnu</p>
+        ${ownTipBanner}
+        <p class="home-tips__empty">Trenutno nema aktivnih savjeta.</p>
+      </section>`;
+  }
 
   const cards = tips
     .map((tip) => {
@@ -32,7 +49,8 @@ export function renderHomeTips({ tips = [], loading = false }) {
   return `
     <section class="home-tips">
       <h3 class="home-tips__title">Savjeti majstora i kreatora</h3>
-      <p class="home-tips__sub">Profil → ispod statusa</p>
+      <p class="home-tips__sub">Profil → savjet za početnu</p>
+      ${ownTipBanner}
       <div class="tip-list">${cards}</div>
     </section>`;
 }
@@ -43,6 +61,7 @@ export function renderHome({
   workSlideIndex = 0,
   tips = [],
   tipsLoading = false,
+  myHomeTip = null,
   userName = "",
   userRole = "",
   userCity = "",
@@ -123,6 +142,6 @@ export function renderHome({
       </div>
       ${renderMojKrug({ following, followedWorks })}
       ${renderRadPreview({ works: worksPreview, slideIndex: workSlideIndex })}
-      ${renderHomeTips({ tips, loading: tipsLoading })}
+      ${renderHomeTips({ tips, loading: tipsLoading, myHomeTip, userRole })}
     </div>`;
 }

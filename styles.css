@@ -104,6 +104,34 @@ a {
   box-shadow: 0 16px 34px rgba(242, 140, 40, 0.42);
 }
 
+.platform-entry-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.platform-entry-share {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  padding: 0.9rem 1.1rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.platform-entry-share:hover {
+  border-color: rgba(242, 140, 40, 0.45);
+  color: var(--accent);
+}
+
 @media (max-width: 560px) {
   .platform-entry-inner {
     flex-direction: column;
@@ -112,7 +140,13 @@ a {
     padding: 1.25rem 1.1rem;
   }
 
-  .platform-entry-btn {
+  .platform-entry-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .platform-entry-btn,
+  .platform-entry-share {
     width: 100%;
     min-width: 0;
   }

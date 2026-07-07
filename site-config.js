@@ -3,6 +3,8 @@
 // =============================================================================
 
 window.SITE_CONFIG = {
+  siteUrl: "https://brzoilokalno.com/",
+  appUrl: "https://brzoilokalno.com/app/",
   // Huawei AppGallery (već aktivno)
   huaweiAppGallery: "https://appgallery.huawei.com/app/C117382847",
 

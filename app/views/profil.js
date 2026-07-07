@@ -83,6 +83,17 @@ function categoryOptions(role, selected = "") {
   }).join("");
 }
 
+function tipExpiryLabel(myTip) {
+  const ms = Number(myTip?.expiresAtMs) || 0;
+  if (!ms) return "";
+  return new Date(ms).toLocaleString("bs-BA", {
+    day: "numeric",
+    month: "short",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
+
 export function renderProfil({
   user,
   authEmail,
@@ -92,9 +103,11 @@ export function renderProfil({
   myWorks = [],
   activityDashboard = null,
   aktivnostExpanded = false,
+  hiddenActivityAppIds = [],
   outdoorOutlook = null,
   outdoorLoading = false,
   outdoorMissingKey = false,
+  outdoorForecastFailed = false,
   outdoorExpanded = false,
   followerCount = 0,
   chatEnabled = false,
@@ -135,23 +148,38 @@ export function renderProfil({
           <p class="profile-card__email">${escapeHtml(user.email || authEmail || "")}</p>
           ${user.contactPhone ? `<p class="profile-card__meta">Tel: ${escapeHtml(user.contactPhone)}</p>` : ""}
           ${user.preferInAppChat ? `<p class="profile-card__meta">Samo chat u aplikaciji</p>` : ""}
+          ${
+            worker && myTip
+              ? `<p class="profile-card__tip-status">✓ Savjet aktivan na početnoj · ističe ${escapeHtml(tipExpiryLabel(myTip))}</p>`
+              : worker
+                ? `<p class="profile-card__tip-status profile-card__tip-status--muted">Nema aktivnog savjeta na početnoj</p>`
+                : ""
+          }
         </article>
         <div class="profile-actions">
           <button type="button" class="btn btn--primary btn--block" id="edit-profile-btn">Uredi profil</button>
           <a class="btn btn--ghost btn--block" href="#/postavke">Postavke</a>
           ${worker ? `<button type="button" class="btn btn--ghost btn--block" id="edit-tip-btn">${myTip ? "Uredi savjet" : "Dodaj savjet za početnu"}</button>` : ""}
+          ${worker && myTip ? `<button type="button" class="btn btn--ghost btn--block btn--danger" id="delete-tip-profile-btn">Obriši savjet</button>` : ""}
           ${avatarUrl ? `<button type="button" class="btn btn--ghost btn--block btn--danger" id="delete-profile-image-btn">Ukloni sliku</button>` : ""}
         </div>
-        ${renderMojaAktivnost({ dashboard: activityDashboard, expanded: aktivnostExpanded, chatEnabled })}
-        ${user?.city
-          ? renderOutdoorPlan({
-              outlook: outdoorOutlook,
-              loading: outdoorLoading,
-              missingKey: outdoorMissingKey,
-              expanded: outdoorExpanded,
-            })
-          : ""}
+        ${renderMojaAktivnost({
+          dashboard: activityDashboard,
+          expanded: aktivnostExpanded,
+          chatEnabled,
+          hiddenAppIds: hiddenActivityAppIds,
+        })}
         ${worker ? renderMyWorksSection({ works: myWorks, canAdd: true }) : ""}
+        ${renderOutdoorPlan({
+          outlook: outdoorOutlook,
+          loading: outdoorLoading,
+          missingKey: outdoorMissingKey,
+          missingCity: !user?.city,
+          missingRole: !["majstor", "kreator", "korisnik"].includes(role),
+          forecastFailed: outdoorForecastFailed,
+          role,
+          expanded: outdoorExpanded,
+        })}
       </div>`;
   }
 

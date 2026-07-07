@@ -99,6 +99,7 @@ import { renderPostavke } from "./views/postavke.js";
 import { renderObavijesti } from "./views/obavijesti.js";
 import { renderKalkulator, readKalkulatorState } from "./views/kalkulator.js";
 import { buildActivityDashboard } from "./utils/activity.js";
+import { getHiddenActivityAppIds, hideActivityAppId } from "./utils/activityHide.js";
 import { fetchOutdoorForecast, buildOutdoorOutlook } from "./services/weatherOutlook.js";
 import { renderCreateJobForm, renderCreateOfferForm, renderTipEditorForm, renderAddWorkForm } from "./views/forms.js";
 import { renderScreenError, renderScreenLoading } from "./views/shared.js";
@@ -130,6 +131,7 @@ let postavkeDeleteError = "";
 let aktivnostExpanded = false;
 let outdoorPlanExpanded = false;
 let outdoorOutlookCache = null;
+let outdoorOutlookCacheKey = "";
 const scrollPositions = {};
 let lastScrollRoute = null;
 
@@ -254,11 +256,15 @@ async function loadRouteContent(route) {
     ]);
     let following = [];
     let followedWorks = [];
+    let myHomeTip = null;
     if (profile?.role === "korisnik" && currentUser?.uid) {
       following = await fetchFollowingList(currentUser.uid);
       if (following.length) {
         followedWorks = await fetchPublicWorksByUserIds(following.map((f) => f.targetUid));
       }
+    }
+    if (currentUser?.uid && (profile?.role === "majstor" || profile?.role === "kreator")) {
+      myHomeTip = await fetchMyHomeTip(currentUser.uid);
     }
     return renderHome({
       selectedCity,
@@ -266,6 +272,7 @@ async function loadRouteContent(route) {
       workSlideIndex,
       tips,
       tipsLoading: false,
+      myHomeTip,
       userName: profile?.displayName || currentUser?.displayName || "",
       userRole: profile?.role || "",
       userCity: profile?.city || "",
@@ -480,20 +487,31 @@ async function loadRouteContent(route) {
 
     const weatherKey = webConfig?.weatherApiKey || "";
     const outdoorMissingKey = !weatherKey;
+    const outdoorCacheKey = `${user?.city || ""}|${role}`;
+    if (outdoorCacheKey !== outdoorOutlookCacheKey) {
+      outdoorOutlookCache = null;
+      outdoorOutlookCacheKey = outdoorCacheKey;
+    }
     let outdoorOutlook = outdoorOutlookCache;
     let outdoorLoading = false;
-    if (user?.city && outdoorPlanExpanded && weatherKey) {
-      if (!outdoorOutlook) {
-        outdoorLoading = true;
-        try {
-          const forecast = await fetchOutdoorForecast(weatherKey, user.city);
-          outdoorOutlook = buildOutdoorOutlook(role, forecast);
-          outdoorOutlookCache = outdoorOutlook;
-        } catch (error) {
-          console.warn("Weather load failed:", error);
-        }
-        outdoorLoading = false;
+    let outdoorForecastFailed = false;
+    const canFetchOutdoor =
+      outdoorPlanExpanded &&
+      user?.city &&
+      weatherKey &&
+      ["majstor", "kreator", "korisnik"].includes(role);
+    if (canFetchOutdoor && !outdoorOutlook) {
+      outdoorLoading = true;
+      try {
+        const forecast = await fetchOutdoorForecast(weatherKey, user.city);
+        outdoorOutlook = buildOutdoorOutlook(role, forecast);
+        if (!outdoorOutlook) outdoorForecastFailed = true;
+        outdoorOutlookCache = outdoorOutlook;
+      } catch (error) {
+        console.warn("Weather load failed:", error);
+        outdoorForecastFailed = true;
       }
+      outdoorLoading = false;
     }
 
     return renderProfil({
@@ -505,9 +523,11 @@ async function loadRouteContent(route) {
       myWorks,
       activityDashboard,
       aktivnostExpanded,
+      hiddenActivityAppIds: uid ? getHiddenActivityAppIds(uid) : [],
       outdoorOutlook,
       outdoorLoading,
       outdoorMissingKey,
+      outdoorForecastFailed,
       outdoorExpanded: outdoorPlanExpanded,
       followerCount,
       chatEnabled: webConfig?.chatEnabled === true,
@@ -1374,7 +1394,36 @@ function bindSearchAndFilters() {
   if (outdoorToggle) {
     outdoorToggle.addEventListener("click", () => {
       outdoorPlanExpanded = !outdoorPlanExpanded;
+      if (outdoorPlanExpanded) {
+        outdoorOutlookCache = null;
+      }
       renderApp();
+    });
+  }
+
+  document.querySelectorAll("[data-activity-hide]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const appId = btn.dataset.activityHide;
+      if (!appId || !currentUser?.uid) return;
+      if (!confirm("Ukloniti razgovor s ove kartice? (Samo skriva s pregleda, ne briše podatke.)")) {
+        return;
+      }
+      hideActivityAppId(currentUser.uid, appId);
+      renderApp();
+    });
+  });
+
+  const deleteTipProfileBtn = document.getElementById("delete-tip-profile-btn");
+  if (deleteTipProfileBtn && myTip?.id) {
+    deleteTipProfileBtn.addEventListener("click", async () => {
+      if (!confirm("Obrisati savjet s početne?")) return;
+      try {
+        await deleteHomeTip(myTip.id);
+        myTip = null;
+        renderApp();
+      } catch (error) {
+        alert("Brisanje savjeta nije uspjelo.");
+      }
     });
   }
 
