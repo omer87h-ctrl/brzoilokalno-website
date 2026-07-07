@@ -5,9 +5,8 @@
 window.SITE_CONFIG = {
   siteUrl: "https://brzoilokalno.com/",
   appUrl: "https://brzoilokalno.com/app/",
-  // Huawei AppGallery — direktan link (otvara listing na telefonu i u browseru)
-  huaweiAppGallery:
-    "https://appgallery.cloud.huawei.com/ag/n/app/C117382847?locale=bs_BA&source=appshare&subsource=C117382847",
+  // Huawei AppGallery — stranica koja otvara store po package name (pouzdanije od C-ID linka)
+  huaweiAppGallery: "https://brzoilokalno.com/preuzmi-app.html",
 
   // Google Play — kad app izađe, zalijepi puni link ovdje.
   // Dok nema linka, ostavi prazan string ""  →  na stranici piše "Uskoro".

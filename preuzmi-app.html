@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preuzmi Brzo i Lokalno — AppGallery</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/app-icon.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      padding: 1.5rem;
+      font-family: system-ui, sans-serif;
+      background: #0a0a0a;
+      color: #f2f2f2;
+      text-align: center;
+    }
+    a { color: #f28c28; }
+    p { max-width: 22rem; line-height: 1.5; color: #b8b8b8; }
+  </style>
+</head>
+<body>
+  <div>
+    <p>Otvaranje <strong>Brzo i Lokalno</strong> u Huawei AppGallery…</p>
+    <p><a id="fallback" href="#">Klikni ovdje ako se ništa ne otvori</a></p>
+  </div>
+  <script>
+    (function () {
+      var PKG = "com.brzoilokalno";
+      var WEB =
+        "https://appgallery.cloud.huawei.com/appDetail?pkgName=" +
+        PKG +
+        "&channelId=website&referrer=brzoilokalno.com&detailType=0&calltype=AGDLINK";
+      var fallback = document.getElementById("fallback");
+      fallback.href = WEB;
+
+      if (/Android/i.test(navigator.userAgent)) {
+        window.location.href = "appmarket://details?id=" + PKG;
+      } else {
+        window.location.replace(WEB);
+        return;
+      }
+
+      window.setTimeout(function () {
+        window.location.replace(WEB);
+      }, 900);
+    })();
+  </script>
+</body>
+</html>
