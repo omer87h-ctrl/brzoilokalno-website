@@ -1,9 +1,11 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app-check.js";
 import {
   createUserWithEmailAndPassword,
   getAuth,
   GoogleAuthProvider,
   onAuthStateChanged,
+  sendEmailVerification,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
@@ -19,10 +21,29 @@ import { firebaseConfig, ADMIN_EMAIL } from "../firebase.js";
 let appInstance = null;
 let authInstance = null;
 let dbInstance = null;
+let appCheckInitialized = false;
+
+function initAppCheckIfConfigured() {
+  if (appCheckInitialized) return;
+  const siteKey = firebaseConfig.recaptchaAppCheckSiteKey?.trim();
+  if (!siteKey) return;
+
+  const host = globalThis.location?.hostname || "";
+  if (["localhost", "127.0.0.1"].includes(host) && globalThis.FIREBASE_APPCHECK_DEBUG_TOKEN == null) {
+    globalThis.FIREBASE_APPCHECK_DEBUG_TOKEN = true;
+  }
+
+  initializeAppCheck(getApp(), {
+    provider: new ReCaptchaV3Provider(siteKey),
+    isTokenAutoRefreshEnabled: true,
+  });
+  appCheckInitialized = true;
+}
 
 function getApp() {
   if (!appInstance) {
     appInstance = initializeApp(firebaseConfig);
+    initAppCheckIfConfigured();
   }
   return appInstance;
 }
@@ -73,6 +94,24 @@ export async function getWebAppConfig() {
 
 export function watchAuth(callback) {
   return onAuthStateChanged(getAuthInstance(), callback);
+}
+
+export function needsEmailVerification(user) {
+  if (!user || user.emailVerified) return false;
+  return user.providerData?.some((p) => p.providerId === "password") ?? false;
+}
+
+export async function sendEmailVerificationIfNeeded(user) {
+  if (needsEmailVerification(user)) {
+    await sendEmailVerification(user);
+  }
+}
+
+export async function reloadCurrentUser() {
+  const user = getAuthInstance().currentUser;
+  if (!user) return null;
+  await user.reload();
+  return getAuthInstance().currentUser;
 }
 
 export async function signInWithEmail(email, password) {

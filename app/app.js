@@ -2,7 +2,10 @@ import {
   deleteCurrentUser,
   getWebAppConfig,
   isAdminUser,
+  needsEmailVerification,
   registerWithEmail,
+  reloadCurrentUser,
+  sendEmailVerificationIfNeeded,
   signInAdmin,
   signInAdminWithGoogle,
   signInWithEmail,
@@ -95,7 +98,7 @@ import {
 import { loadWorkNotes, saveWorkNotes, importLegacyWorkNotes } from "./utils/workNotesLocal.js";
 import { subscribeToChatMessages } from "./services/chatService.js";
 import { uploadProfileImage, clearProfileImage, uploadWorkImage } from "./services/storageService.js";
-import { createUserProfile, isProfileComplete } from "./services/userProfile.js";
+import { createUserProfile, isGmailEmail, isProfileComplete } from "./services/userProfile.js";
 import {
   firstMissingJobFields,
   firstMissingOfferFields,
@@ -113,6 +116,7 @@ import { renderMaintenance } from "./views/maintenance.js";
 import { renderPrepScreen } from "./views/prep.js";
 import { renderLogin } from "./views/login.js";
 import { renderRegister } from "./views/register.js";
+import { renderVerifyEmail } from "./views/verifyEmail.js";
 import { renderOnboarding } from "./views/onboarding.js";
 import { renderShell } from "./views/shell.js";
 import { renderHome } from "./views/home.js";
@@ -149,6 +153,7 @@ let webConfig = null;
 let currentUser = null;
 let loginError = "";
 let authError = "";
+let verifyEmailStatus = "";
 let booted = false;
 let selectedCity = "";
 let homeShowAllCities = false;
@@ -1201,6 +1206,10 @@ async function afterAuthSuccess(user) {
     navigateTo("#/onboarding");
     return;
   }
+  if (needsEmailVerification(user)) {
+    navigateTo("#/verify-email");
+    return;
+  }
   navigateTo("#/home");
 }
 
@@ -1294,6 +1303,21 @@ async function renderApp() {
           role: profile?.role || "korisnik",
           city: profile?.city || "",
         },
+      })
+    );
+    return;
+  }
+
+  if (needsEmailVerification(currentUser)) {
+    if (route.name !== "verify-email") {
+      navigateTo("#/verify-email");
+      return;
+    }
+    setRoot(
+      renderVerifyEmail({
+        email: currentUser.email || "",
+        error: authError,
+        status: verifyEmailStatus,
       })
     );
     return;
@@ -2704,21 +2728,81 @@ function bindRootEvents() {
         renderApp();
         return;
       }
+      if (isGmailEmail(email)) {
+        authError = "Za @gmail.com koristi Prijava → Prijavi se s Googleom (ne registraciju lozinkom).";
+        renderApp();
+        return;
+      }
 
       try {
         const cred = await registerWithEmail(email, password);
         await createUserProfile(cred.user.uid, { email, displayName, role, city });
         saveLocalPolicyConsent();
-        navigateTo("#/home");
+        await sendEmailVerificationIfNeeded(cred.user);
+        await afterAuthSuccess(cred.user);
       } catch (error) {
         authError = error?.message?.includes("email")
           ? "Email je već u upotrebi ili nije valjan."
-          : "Registracija nije uspjela.";
-        try {
-          await deleteCurrentUser();
-        } catch (_) {}
+          : (error?.message || "Registracija nije uspjela.");
+        const keepAuthUser = /nije potvrđen na serveru/i.test(authError);
+        if (!keepAuthUser) {
+          try {
+            await deleteCurrentUser();
+          } catch (_) {}
+        }
         renderApp();
       }
+    });
+  }
+
+  const verifyCheckBtn = document.getElementById("verify-email-check-btn");
+  if (verifyCheckBtn) {
+    verifyCheckBtn.addEventListener("click", async () => {
+      authError = "";
+      verifyEmailStatus = "";
+      try {
+        const user = await reloadCurrentUser();
+        if (!user) {
+          navigateTo("#/login");
+          return;
+        }
+        if (needsEmailVerification(user)) {
+          verifyEmailStatus = "Email još nije potvrđen. Otvori inbox (i spam) pa klikni link.";
+        } else {
+          currentUser = user;
+          verifyEmailStatus = "";
+          await afterAuthSuccess(user);
+          return;
+        }
+      } catch (error) {
+        authError = error?.message || "Provjera nije uspjela.";
+      }
+      renderApp();
+    });
+  }
+
+  const verifyResendBtn = document.getElementById("verify-email-resend-btn");
+  if (verifyResendBtn) {
+    verifyResendBtn.addEventListener("click", async () => {
+      authError = "";
+      verifyEmailStatus = "";
+      try {
+        if (!currentUser) return;
+        await sendEmailVerificationIfNeeded(currentUser);
+        verifyEmailStatus = "Novi link je poslan. Provjeri inbox i spam.";
+      } catch (error) {
+        authError = error?.message || "Slanje linka nije uspjelo.";
+      }
+      renderApp();
+    });
+  }
+
+  const verifyLogoutBtn = document.getElementById("verify-email-logout-btn");
+  if (verifyLogoutBtn) {
+    verifyLogoutBtn.addEventListener("click", async () => {
+      await signOutUser();
+      resetSessionStateOnLogout();
+      navigateTo("#/login");
     });
   }
 

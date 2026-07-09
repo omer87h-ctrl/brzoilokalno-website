@@ -14,13 +14,22 @@ import {
   where,
   writeBatch,
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
-import { getDb } from "./firebaseService.js";
+import { getDb, getAuthInstance, needsEmailVerification } from "./firebaseService.js";
 import { isJobNotificationType } from "../constants/notifications.js";
 import { normalizeSpaces } from "../utils/textInputValidation.js";
 import { syncPublicProfile } from "./publicProfile.js";
 
 const HOME_TIPS = "home_master_tips";
 const TIP_TTL_MS = 24 * 60 * 60 * 1000;
+
+function assertEmailVerified(authUser) {
+  const user = authUser || getAuthInstance().currentUser;
+  if (needsEmailVerification(user)) {
+    throw new Error(
+      "Potvrdi email prije ove radnje. Otvori poštu, klikni link za verifikaciju, pa «Provjeri potvrdu»."
+    );
+  }
+}
 
 function authorMetaFromProfile(profile) {
   const meta = {};
@@ -81,6 +90,7 @@ export async function updateUserProfile(uid, data) {
 }
 
 export async function createJob({ profile, authUser, fields }) {
+  assertEmailVerified(authUser);
   const uid = authUser.uid;
   const safeProfile = profile || {};
   const when = normalizeSpaces(fields.whenNeeded);
@@ -105,6 +115,7 @@ export async function createJob({ profile, authUser, fields }) {
 }
 
 export async function createOffer({ profile, authUser, fields }) {
+  assertEmailVerified(authUser);
   const uid = authUser.uid;
   const safeProfile = profile || {};
   const payload = {
@@ -193,6 +204,7 @@ export async function markJobNotificationsRead(uid) {
 }
 
 export async function applyToJob({ job, profile, authUser }) {
+  assertEmailVerified(authUser);
   const workerId = authUser.uid;
   const safeProfile = profile || {};
   const appDocId = `${job.id}_${workerId}`;
@@ -248,6 +260,7 @@ export async function applyToJob({ job, profile, authUser }) {
 }
 
 export async function updateApplicationStatus(appId, status, context = {}) {
+  assertEmailVerified();
   await updateDoc(doc(getDb(), "applications", appId), { status });
   const { workerUid, jobOwnerUid, jobId, jobTitle, currentUid } = context;
   if (status === "accepted" || status === "rejected") {
@@ -294,6 +307,7 @@ export async function deleteChatMessage(messageId) {
 }
 
 export async function sendChatMessage({ text, sender, receiverId, jobId, applicationId, replyTo = null }) {
+  assertEmailVerified();
   const payload = {
     text,
     senderId: sender.uid,
@@ -328,6 +342,7 @@ export async function clearMyUnread(appId, uid) {
 }
 
 export async function createWork({ profile, authUser, description, imageUrls, paths }) {
+  assertEmailVerified(authUser);
   const uid = authUser.uid;
   const payload = {
     userId: uid,

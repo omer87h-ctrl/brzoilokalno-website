@@ -18,7 +18,8 @@ export function renderRegister({ error = "" }) {
         ${error ? `<p class="admin-login__error">${escapeHtml(error)}</p>` : ""}
         <form class="auth-form" id="register-form">
           <input class="field" type="text" name="displayName" placeholder="Ime / naziv profila" maxlength="60" required>
-          <input class="field" type="email" name="email" placeholder="Email" autocomplete="username" required>
+          <input class="field" type="email" name="email" placeholder="Email (ne @gmail.com)" autocomplete="username" required>
+          <p class="auth-hint">Za Gmail koristi <a href="#/login">Google prijavu</a>, ne registraciju lozinkom.</p>
           <input class="field" type="password" name="password" placeholder="Lozinka (min. 6)" minlength="6" required>
           <input class="field" type="password" name="confirmPassword" placeholder="Potvrdi lozinku" minlength="6" required>
           <label class="field-label">Uloga</label>

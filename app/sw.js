@@ -69,6 +69,7 @@ const STATIC_ASSETS = [
   "./views/rating.js",
   "./views/login.js",
   "./views/register.js",
+  "./views/verifyEmail.js",
   "./views/onboarding.js",
   "./views/brzo.js",
   "./views/majstori.js",

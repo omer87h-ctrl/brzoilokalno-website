@@ -6,6 +6,7 @@ export function parseRoute(hash) {
   if (name === "login") return { name: "login" };
   if (name === "register") return { name: "register" };
   if (name === "onboarding") return { name: "onboarding" };
+  if (name === "verify-email") return { name: "verify-email" };
   if (name === "kategorije") {
     return { name: "kategorije", tab: "majstori", categorySlug: parts[1] || null };
   }

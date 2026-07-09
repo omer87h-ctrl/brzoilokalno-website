@@ -7,6 +7,8 @@ export const firebaseConfig = {
   messagingSenderId: "681511479620",
   appId: "1:681511479620:web:0debdbcb1a64aa3afc4f11",
   measurementId: "G-WVBQVMZ4GW",
+  /** App Check reCAPTCHA v3 site key (Firebase Console → App Check → Web app). */
+  recaptchaAppCheckSiteKey: "",
 };
 
 export const ADMIN_EMAIL = "omer.creating.apps87@gmail.com";
