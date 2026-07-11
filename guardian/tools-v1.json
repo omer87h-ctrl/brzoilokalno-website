@@ -1,15 +1,7 @@
 {
-  "version": 1,
+  "version": 2,
   "updatedAt": "2026-07-11",
   "tools": [
-    {
-      "id": "brief",
-      "title": "Brief kartica",
-      "subtitle": "6 polja prije kontakta",
-      "kind": "wizard",
-      "wizard": "brief",
-      "hint": "Vodi te kroz brief — gotov dokument u chatu."
-    },
     {
       "id": "red_flag",
       "title": "Crvena zastava",
@@ -25,25 +17,18 @@
       "hint": "Zalijepi situaciju — verdikt: ide / oprez / ne."
     },
     {
+      "id": "deep_scan",
+      "title": "Dubinski sken",
+      "subtitle": "Sken oglasa / poruke",
+      "kind": "scan",
+      "hint": "Zalijepi tekst — crvene zastavice i preporuka."
+    },
+    {
       "id": "scope_split",
       "title": "Uključeno / nije",
       "subtitle": "Zaštita od scope creepa",
       "kind": "form",
       "hint": "Napiši šta JE i šta NIJE u cijeni — složim liste."
-    },
-    {
-      "id": "scenario_abc",
-      "title": "Scenario A/B/C",
-      "subtitle": "Tri cijene, jedan izbor",
-      "kind": "form",
-      "hint": "Opiši posao — predložim A (min), B (fer), C (premium)."
-    },
-    {
-      "id": "floor_rate",
-      "title": "Pod cijene",
-      "subtitle": "Minimalna satnica",
-      "kind": "form",
-      "hint": "Unesi satnicu / sati / put — provjera poda za tvoj grad."
     },
     {
       "id": "scope_lock",
@@ -53,60 +38,11 @@
       "hint": "Opiši dodatni zahtjev klijenta — dam fer odgovor."
     },
     {
-      "id": "visibility",
-      "title": "Vidljivost",
-      "subtitle": "Šta fali na profilu",
-      "kind": "info",
-      "hint": "Checklist profila: slika, grad, kategorija, opis, radovi."
-    },
-    {
-      "id": "dry_spell",
-      "title": "Suho razdoblje",
-      "subtitle": "Jedan korak danas",
-      "kind": "info",
-      "hint": "Konkretan korak kad nema poslova."
-    },
-    {
-      "id": "fair_rules",
-      "title": "Fer-pravilo",
-      "subtitle": "Pravila platforme",
-      "kind": "info",
-      "hint": "Fer igra, spam, blokada, chat gate."
-    },
-    {
-      "id": "category_expect",
-      "title": "Očekivanja",
-      "subtitle": "Po kategoriji",
+      "id": "floor_rate",
+      "title": "Pod cijene",
+      "subtitle": "Minimalna satnica",
       "kind": "form",
-      "hint": "Napiši kategoriju — šta klijent obično očekuje."
-    },
-    {
-      "id": "city_map",
-      "title": "Mapa aktivnosti",
-      "subtitle": "Gdje si u igri",
-      "kind": "info",
-      "hint": "Kako se lokalno vežeš: Poslovi, Kategorije, Profil."
-    },
-    {
-      "id": "job_trail",
-      "title": "Trag posla",
-      "subtitle": "Od oglasa do ocjene",
-      "kind": "info",
-      "hint": "Oglas → prijava → prihvatanje → chat → rad → ocjena."
-    },
-    {
-      "id": "platform_pulse",
-      "title": "Puls platforme",
-      "subtitle": "Lokalni fokus",
-      "kind": "info",
-      "hint": "Šta raditi danas u svom gradu."
-    },
-    {
-      "id": "rule_engine",
-      "title": "Pravila bez nagađanja",
-      "subtitle": "Logika appa",
-      "kind": "info",
-      "hint": "Uloge, prijave, chat gate, fer-pravila."
+      "hint": "Unesi satnicu / sati / put — provjera poda."
     },
     {
       "id": "pdf_brief",
@@ -120,7 +56,7 @@
       "title": "PDF Ponuda",
       "subtitle": "Okvirna ponuda",
       "kind": "pdf",
-      "hint": "Opis posla — PDF ponuda/predračun."
+      "hint": "Opis posla — PDF ponuda."
     },
     {
       "id": "pdf_dogovor",
@@ -135,13 +71,6 @@
       "subtitle": "Prije posla",
       "kind": "pdf",
       "hint": "Checklist prije rada — PDF."
-    },
-    {
-      "id": "deep_scan",
-      "title": "Dubinski sken",
-      "subtitle": "Sken oglasa / poruke",
-      "kind": "scan",
-      "hint": "Zalijepi tekst — crvene zastavice i preporuka."
     }
   ]
 }
