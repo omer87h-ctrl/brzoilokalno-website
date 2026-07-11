@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 8,
   "updatedAt": "2026-07-11",
   "securityTips": [
     "Avans bez adrese i scopea = crvena. Traži brief prije novca.",
@@ -160,6 +160,7 @@
     "Glas (TTS) samo uz dozvolu korisnika — ne snima mikrofon.",
     "Ne čita privatni chat. Javni pregled = javna polja oglasa.",
     "Alati: sken rizika + PDF + scope (za majstora). Nema igara.",
+    "Instagram platforme: @brzo.i.lokalno — https://www.instagram.com/brzo.i.lokalno/ (novosti, pomoć profila).",
     "Ponekad AI nije dostupan (limit) — sačekaj i probaj ponovo.",
     "Ne nudi 100% tačne podatke uvijek — verzija u razvoju."
   ],
@@ -180,7 +181,8 @@
     "Q: Čitaš li moj chat? A: Ne privatni. Samo javna polja / što zalijepiš.",
     "Q: Zašto glas ne radi? A: Moraš dati dozvolu: Otključaj → Glas.",
     "Q: Možeš li me blokirati nekoga? A: Ne. Ti: Postavke → blokirani.",
-    "Q: Gdje su PDF? A: Alati → PDF Brief / Ponuda / Dogovor / Checklist."
+    "Q: Gdje su PDF? A: Alati → PDF Brief / Ponuda / Dogovor / Checklist.",
+    "Q: Koji je Instagram? A: @brzo.i.lokalno — https://www.instagram.com/brzo.i.lokalno/"
   ],
   "cityTips": [
     "Sarajevo: napiši naselje (Ilidža, Centar, Novo Sarajevo) — „Sarajevo“ samo je magla za dolazak.",
@@ -596,6 +598,7 @@
     "Gdje kalkulator? Početna ili Guardian → Kreiraj.",
     "Gdje blokirati? Profil → Postavke → blokirani.",
     "Gdje PDF? Guardian → Alati.",
+    "Instagram? @brzo.i.lokalno — instagram.com/brzo.i.lokalno",
     "Zašto nema odgovora AI? Free limit — sačekaj minutu pa opet.",
     "Avans? Samo uz scope, adresu/zonu i trag uplate.",
     "Hitno!!! bez detalja? Pitaj šta/gdje/rok prije novca."
