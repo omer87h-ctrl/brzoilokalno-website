@@ -1,49 +1,7 @@
 {
-  "version": 2,
+  "version": 3,
   "updatedAt": "2026-07-11",
   "tools": [
-    {
-      "id": "red_flag",
-      "title": "Crvena zastava",
-      "subtitle": "Rizik u oglasu",
-      "kind": "scan",
-      "hint": "Zalijepi oglas ili poruku — lokalni sken rizika."
-    },
-    {
-      "id": "verdict",
-      "title": "Verdikt",
-      "subtitle": "Skor + zašto",
-      "kind": "scan",
-      "hint": "Zalijepi situaciju — verdikt: ide / oprez / ne."
-    },
-    {
-      "id": "deep_scan",
-      "title": "Dubinski sken",
-      "subtitle": "Sken oglasa / poruke",
-      "kind": "scan",
-      "hint": "Zalijepi tekst — crvene zastavice i preporuka."
-    },
-    {
-      "id": "scope_split",
-      "title": "Uključeno / nije",
-      "subtitle": "Zaštita od scope creepa",
-      "kind": "form",
-      "hint": "Napiši šta JE i šta NIJE u cijeni — složim liste."
-    },
-    {
-      "id": "scope_lock",
-      "title": "Scope lock",
-      "subtitle": "Granice posla",
-      "kind": "form",
-      "hint": "Opiši dodatni zahtjev klijenta — dam fer odgovor."
-    },
-    {
-      "id": "floor_rate",
-      "title": "Pod cijene",
-      "subtitle": "Minimalna satnica",
-      "kind": "form",
-      "hint": "Unesi satnicu / sati / put — provjera poda."
-    },
     {
       "id": "pdf_brief",
       "title": "PDF Brief",

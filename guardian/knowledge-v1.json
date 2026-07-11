@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "updatedAt": "2026-07-11",
   "securityTips": [
     "Avans bez adrese i scopea = crvena. Traži brief prije novca.",
@@ -151,7 +151,8 @@
     "Prognoza/vanjski rad je na Profilu, nije zaseban tab.",
     "Blokirani: Postavke → blokirani. Guardian ne blokira.",
     "Guardian UI: Kreiraj | Otključaj | Alati.",
-    "Model AI: Otključaj → GPT-OSS 120B ili Llama 70B (Groq free).",
+    "Kreiraj: brief, prijava, bilješka, cijena, skica. Otključaj: glas, mapa, javna polja, podrška. Alati: samo PDF.",
+    "Model AI: Otključaj nije model picker — Groq free (GPT-OSS 120B default).",
     "Glas: Otključaj → Glas (TTS). Ne snima mikrofon.",
     "Poslovi: Potražnja / Ponuda; filteri Moj grad, Moje objave, Moje prijave.",
     "Profil: uredi ime/grad/ulogu, Bilješke, Guardian, Postavke, Moji radovi.",
@@ -159,7 +160,7 @@
     "Guardian = lokalni pomoćnik (beta/test), ne izvršava umjesto korisnika.",
     "Glas (TTS) samo uz dozvolu korisnika — ne snima mikrofon.",
     "Ne čita privatni chat. Javni pregled = javna polja oglasa.",
-    "Alati: sken rizika + PDF + scope (za majstora). Nema igara.",
+    "Alati: samo PDF (Brief/Ponuda/Dogovor/Checklist). Rizik: zalijepi oglas u chat.",
     "Instagram platforme: @brzo.i.lokalno — https://www.instagram.com/brzo.i.lokalno/ (novosti, pomoć profila).",
     "Ponekad AI nije dostupan (limit) — sačekaj i probaj ponovo.",
     "Ne nudi 100% tačne podatke uvijek — verzija u razvoju."
