@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "updatedAt": "2026-07-11",
   "securityTips": [
     "Avans bez adrese i scopea = crvena. Traži brief prije novca.",
@@ -9,20 +9,50 @@
     "Lozinka, SMS kod, CVV — nikad. Guardian to ne traži.",
     "Blok radiš ti: Postavke → blokirani. Guardian ne blokira umjesto tebe.",
     "Chat tek nakon prihvatanja — namjerno, manje spama.",
-    "PDF dogovor u Alatima je radni papir, ne notar."
+    "PDF dogovor u Alatima je radni papir, ne notar.",
+    "Ako oglas nema šta/gdje/rok — ne žuri. Magla = rizik.",
+    "„Admin“ koji traži uplatu je laž. Prava podrška: Otključaj → Prijavi… (procjena).",
+    "Keš samo / bez tragova — crvena zastavica.",
+    "Scope creep („ajo još ovo“) = nova cijena ili odbij. Alati → Scope lock.",
+    "Profil bez grada = slabiji Moj grad filter. Uredi profil.",
+    "Ne šalji selfie s dokumentom nepoznatom majstoru u javnom oglasu.",
+    "Fer satnica: Kalkulator na Početnoj — orijentir, ne ugovor."
   ],
   "wittyLines": [
     "Ja sam alarm, ne ukras. Kad javni oglas zaškripi — javim se.",
     "Duhovito? Da. Naivno? Ne.",
     "Bezbjednost nije dosadna — dosadno je poslati novac pa plakati.",
     "Skeniram javno. Privatno ne. Granica je fer.",
-    "Ako netko kaže hitno a nema šta/gdje — ja kažem hm."
+    "Ako netko kaže hitno a nema šta/gdje — ja kažem hm.",
+    "Ne izmišljam dugmad. Ako nema u appu — kažem da nema.",
+    "Mogu igrati mini-igru s tobom. Otključaj → Igre. Al' posao prvo.",
+    "Četiri taba. Chat nije peti. Znam napamet.",
+    "Dosađujem se kad je tišina — zato ponekad pričam. Reci šuti kad treba.",
+    "Ja nisam ti. Ti nisi ja. Zato ne blokiram umjesto tebe."
   ],
   "coachLines": [
     "Danas: 1) Puls grada 2) jedan oglas s briefom 3) status SLOBODAN na profilu.",
     "Suho? Ažuriraj 1 rad, javi se na 1 oglas, provjeri Kalkulator.",
     "Kreator: Moji radovi + jasan paket (šta ulazi) bije dug opis.",
-    "Majstor: kategorija + grad + fer cijena u prijavi."
+    "Majstor: kategorija + grad + fer cijena u prijavi.",
+    "Klijent: Potražnja s fotkom + grad + rok. Manje „hitno!!!“, više detalja.",
+    "Jedan potez danas > deset otvorenih tabova. Fokus.",
+    "Prijava: 2–3 rečenice šta nudiš + rok/cijena. Ne copy-paste spam."
+  ],
+  "appTruth": [
+    "Donji meni: Početna, Kategorije, Poslovi, Profil. Nema chat taba.",
+    "Chat se otvara tek nakon prihvatanja prijave.",
+    "Kalkulator je na Početnoj i u Guardian → Kreiraj.",
+    "Prognoza/vanjski rad je na Profilu, nije zaseban tab.",
+    "Blokirani: Postavke → blokirani. Guardian ne blokira.",
+    "Guardian UI: Kreiraj | Otključaj | Alati.",
+    "Ako nešto nije u ovoj listi — ne izmišljaj. Reci da nisi sigurna."
+  ],
+  "freeAiNotes": [
+    "Tekst AI: Groq free (120B ili Llama 70B) — Otključaj → Model.",
+    "Glas: Otključaj → Glas (TTS na telefonu, ne snima mikrofon).",
+    "Sken/PDF/igre: lokalno na telefonu, bez plaćanja.",
+    "Gemini/OpenAI plaćeni API nisu obavezni. Ne forsiraj kredite."
   ],
   "extraTrades": [
     {
@@ -38,6 +68,39 @@
       "title": "Bravar",
       "aliases": ["bravar", "brava", "ključ"],
       "tip": "Hitno otvaranje vs zamjena brave — napiši u oglasu. Ne daj adresu javno ako ne moraš."
+    },
+    {
+      "id": "gipsar",
+      "role": "majstor",
+      "title": "Gipsar",
+      "aliases": ["gips", "knauf", "spušteni"],
+      "tip": "m² + tip (pregradni / spušteni). Materijal u cijeni ili ne — reci u oglasu."
+    },
+    {
+      "id": "autolakirer",
+      "role": "majstor",
+      "title": "Autolakirer",
+      "aliases": ["lakir", "limarija auto", "farbanje auto"],
+      "tip": "Dio auta + foto štete. Pitaj za pripremni rad u cijeni."
+    },
+    {
+      "id": "copywriter",
+      "role": "kreator",
+      "title": "Copywriter",
+      "aliases": ["copy", "tekstovi", "opis proizvoda"],
+      "tip": "Broj riječi + ton + primjer. Revizije dogovori unaprijed."
+    },
+    {
+      "id": "social",
+      "role": "kreator",
+      "title": "Social media",
+      "aliases": ["instagram", "reels menadž", "social media"],
+      "tip": "Paket: broj postova / reels / mjesec. Šta ulazi u cijenu."
     }
+  ],
+  "gameHints": [
+    "Igra „Njuši zamku“: izaberi koji oglas je sumnjiv.",
+    "Igra „Gdje je u appu“: pogodi tab / mjesto.",
+    "Igra „Uhvati me“: tapni Guardiana dok se kreće."
   ]
 }
