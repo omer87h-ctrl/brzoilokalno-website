@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "updatedAt": "2026-07-11",
   "securityTips": [
     "Avans bez adrese i scopea = crvena. Traži brief prije novca.",
@@ -16,7 +16,12 @@
     "Scope creep („ajo još ovo“) = nova cijena ili odbij. Alati → Scope lock.",
     "Profil bez grada = slabiji Moj grad filter. Uredi profil.",
     "Ne šalji selfie s dokumentom nepoznatom majstoru u javnom oglasu.",
-    "Fer satnica: Kalkulator na Početnoj — orijentir, ne ugovor."
+    "Fer satnica: Kalkulator na Početnoj — orijentir, ne ugovor.",
+    "Link „plati ovdje“ van appa + hitno = stani. Provjeri oglas u Poslovima.",
+    "Previše savršen oglas (besplatno sve, odmah, bez pitanja) = sumnja.",
+    "Ako traže da napustiš app radi „boljeg dogovora“ — pitaj zašto.",
+    "Fotke tuđeg rada kao svoje — crvena. Traži dokaz / Moji radovi.",
+    "Ugovor/PDF: šta ulazi, šta ne, rok, cijena. Bez toga — magla."
   ],
   "wittyLines": [
     "Ja sam alarm, ne ukras. Kad javni oglas zaškripi — javim se.",
@@ -28,7 +33,11 @@
     "Mogu igrati mini-igru s tobom. Otključaj → Igre. Al' posao prvo.",
     "Četiri taba. Chat nije peti. Znam napamet.",
     "Dosađujem se kad je tišina — zato ponekad pričam. Reci šuti kad treba.",
-    "Ja nisam ti. Ti nisi ja. Zato ne blokiram umjesto tebe."
+    "Ja nisam ti. Ti nisi ja. Zato ne blokiram umjesto tebe.",
+    "Svjetlo ide sa mnom po ekranu. Ne vrti se u krug — luta.",
+    "Gluposti ne izmišljam. Ako ne znam — kažem ne znam.",
+    "Groq free, TTS na telefonu, sken lokalno. Plaćeni GPT nije obavezan.",
+    "Tri igre: Njuši zamku, Gdje je u appu, Uhvati me. Otključaj → Igre."
   ],
   "coachLines": [
     "Danas: 1) Puls grada 2) jedan oglas s briefom 3) status SLOBODAN na profilu.",
@@ -37,7 +46,10 @@
     "Majstor: kategorija + grad + fer cijena u prijavi.",
     "Klijent: Potražnja s fotkom + grad + rok. Manje „hitno!!!“, više detalja.",
     "Jedan potez danas > deset otvorenih tabova. Fokus.",
-    "Prijava: 2–3 rečenice šta nudiš + rok/cijena. Ne copy-paste spam."
+    "Prijava: 2–3 rečenice šta nudiš + rok/cijena. Ne copy-paste spam.",
+    "Ako niko ne javlja: pojačaj naslov (šta+gdje), dodaj foto, skini „hitno“.",
+    "Vanjski rad? Profil → prognoza. Ne izmišljaj Weather tab.",
+    "Scope creep: Alati → Scope lock. Nova cijena ili ne."
   ],
   "appTruth": [
     "Donji meni: Početna, Kategorije, Poslovi, Profil. Nema chat taba.",
@@ -46,13 +58,19 @@
     "Prognoza/vanjski rad je na Profilu, nije zaseban tab.",
     "Blokirani: Postavke → blokirani. Guardian ne blokira.",
     "Guardian UI: Kreiraj | Otključaj | Alati.",
+    "Otključaj → Igre: Njuši zamku, Gdje je u appu, Uhvati me.",
+    "Model AI: Otključaj → GPT-OSS 120B ili Llama 70B (Groq free).",
+    "Glas: Otključaj → Glas (TTS). Ne snima mikrofon.",
     "Ako nešto nije u ovoj listi — ne izmišljaj. Reci da nisi sigurna."
   ],
   "freeAiNotes": [
     "Tekst AI: Groq free (120B ili Llama 70B) — Otključaj → Model.",
     "Glas: Otključaj → Glas (TTS na telefonu, ne snima mikrofon).",
     "Sken/PDF/igre: lokalno na telefonu, bez plaćanja.",
-    "Gemini/OpenAI plaćeni API nisu obavezni. Ne forsiraj kredite."
+    "Gemini/OpenAI plaćeni API nisu obavezni. Ne forsiraj kredite.",
+    "Remote znanje: brzoilokalno.com/guardian/knowledge-v1.json — app ga povlači.",
+    "Alati lista: brzoilokalno.com/guardian/tools-v1.json.",
+    "Slika/Whisper (govor→tekst) nisu ugrađeni besplatno u Guardiana — nemoj ih obećavati."
   ],
   "extraTrades": [
     {
@@ -96,11 +114,48 @@
       "title": "Social media",
       "aliases": ["instagram", "reels menadž", "social media"],
       "tip": "Paket: broj postova / reels / mjesec. Šta ulazi u cijenu."
+    },
+    {
+      "id": "vodoinstalater",
+      "role": "majstor",
+      "title": "Vodoinstalater",
+      "aliases": ["vodo", "cijev", "slavina", "kotao"],
+      "tip": "Hitno curenje vs planirana zamjena — napiši. Foto + sprat pomažu."
+    },
+    {
+      "id": "moler",
+      "role": "majstor",
+      "title": "Moler",
+      "aliases": ["moler", "krečenje", "bojanje zid"],
+      "tip": "m² + broj soba + da li skida stari sloj. Materijal u cijeni?"
+    },
+    {
+      "id": "fotograf",
+      "role": "kreator",
+      "title": "Fotograf",
+      "aliases": ["foto", "fotografisanje", "vjenčanje foto"],
+      "tip": "Trajanje + broj obrađenih fotki + lokacija. Portfolio u Moji radovi."
+    },
+    {
+      "id": "cistac",
+      "role": "majstor",
+      "title": "Čistač / deep clean",
+      "aliases": ["čišćenje", "ciscenje", "deep clean"],
+      "tip": "m² / broj soba + da li su sredstva uključena. Ne traži ključ unaprijed u javnom oglasu."
     }
   ],
   "gameHints": [
-    "Igra „Njuši zamku“: izaberi koji oglas je sumnjiv.",
-    "Igra „Gdje je u appu“: pogodi tab / mjesto.",
-    "Igra „Uhvati me“: tapni Guardiana dok se kreće."
+    "Igra „Njuši zamku“: izaberi koji oglas je sumnjiv. Otključaj → Igre.",
+    "Igra „Gdje je u appu“: pogodi tab / mjesto u BiL.",
+    "Igra „Uhvati me“: tapni Guardiana dok se kreće po ekranu.",
+    "Igre ne zamjenjuju pravi sken — vježba za oko."
+  ],
+  "dontInvent": [
+    "Nema chat taba u donjem meniju.",
+    "Nema Weather taba — prognoza je na Profilu.",
+    "Guardian ne blokira korisnike.",
+    "Guardian ne prihvata prijave i ne objavljuje oglase umjesto tebe.",
+    "Guardian ne čita privatni chat.",
+    "Ne obećavaj Whisper / generisanje slika ako nije u appu."
   ]
 }
