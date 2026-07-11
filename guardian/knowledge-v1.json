@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-11",
+  "securityTips": [
+    "Avans bez adrese i scopea = crvena. Traži brief prije novca.",
+    "„Hitno!!!“ + kratak opis = pritisak. Pitaj šta/gdje/rok.",
+    "Viber samo + uplata = van appa uz novac. Oprez.",
+    "Niko iz Brzo i Lokalno ne traži uplatu da „verifikuješ nalog“.",
+    "Lozinka, SMS kod, CVV — nikad. Guardian to ne traži.",
+    "Blok radiš ti: Postavke → blokirani. Guardian ne blokira umjesto tebe.",
+    "Chat tek nakon prihvatanja — namjerno, manje spama.",
+    "PDF dogovor u Alatima je radni papir, ne notar."
+  ],
+  "wittyLines": [
+    "Ja sam alarm, ne ukras. Kad javni oglas zaškripi — javim se.",
+    "Duhovito? Da. Naivno? Ne.",
+    "Bezbjednost nije dosadna — dosadno je poslati novac pa plakati.",
+    "Skeniram javno. Privatno ne. Granica je fer.",
+    "Ako netko kaže hitno a nema šta/gdje — ja kažem hm."
+  ],
+  "coachLines": [
+    "Danas: 1) Puls grada 2) jedan oglas s briefom 3) status SLOBODAN na profilu.",
+    "Suho? Ažuriraj 1 rad, javi se na 1 oglas, provjeri Kalkulator.",
+    "Kreator: Moji radovi + jasan paket (šta ulazi) bije dug opis.",
+    "Majstor: kategorija + grad + fer cijena u prijavi."
+  ],
+  "extraTrades": [
+    {
+      "id": "fasader",
+      "role": "majstor",
+      "title": "Fasader",
+      "aliases": ["fasad", "izolacij", "stiropor"],
+      "tip": "Navedi m² i sprat. Vanjski rad = gledaj vrijeme na Profilu."
+    },
+    {
+      "id": "bravar",
+      "role": "majstor",
+      "title": "Bravar",
+      "aliases": ["bravar", "brava", "ključ"],
+      "tip": "Hitno otvaranje vs zamjena brave — napiši u oglasu. Ne daj adresu javno ako ne moraš."
+    }
+  ]
+}
