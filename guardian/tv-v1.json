@@ -1,14 +1,8 @@
 {
   "version": 1,
   "headline": "Brzo i Lokalno TV",
-  "legalNote": "Radio: streamovi koje stanice same objavljuju (Radio Browser). Brzo i Lokalno nije vlasnik tih programa — vidi stranicu stanice. Ostalo: naš kanal + javni podaci appa. Bez piratskog TV-a.",
+  "legalNote": "Radio: streamovi koje stanice same objavljuju (Radio Browser). Brzo i Lokalno nije vlasnik tih programa. Profili/oglasi: javni podaci appa. Bez piratskog TV-a.",
   "blocks": [
-    {
-      "channel": "Emisija",
-      "title": "Dobrodošli na BiL TV",
-      "body": "Ovdje: puls grada, savjeti, Instagram, web i lokalni radio. Tapni emisiju, pitaj Guardiana, ili pusti radio.",
-      "askPrompt": "Objasni mi šta je BiL TV i šta tu mogu raditi"
-    },
     {
       "channel": "Web",
       "title": "brzoilokalno.com",
