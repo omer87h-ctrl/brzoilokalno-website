@@ -164,7 +164,7 @@
     "Blokirani: Postavke → blokirani. Guardian ne blokira.",
     "Guardian UI: Kreiraj | Otključaj | Alati.",
     "Kreiraj: brief, prijava, bilješka, cijena, skica. Otključaj: glas, mapa, javna polja, podrška. Alati: samo PDF.",
-    "Model AI: automatski Groq free lanac — ne biraš ručno. Red: Llama 70B → GPT-OSS 120B → Llama 4 Scout → GPT-OSS 20B → Llama 8B → Qwen 3.6 → Qwen 32 → Allam. Qwen/Allam = zadnja mreža da ne padne skroz (engleski se filtrira). Kad limit padne, veći modeli pauziraju pa se sami vrate.",
+    "Model AI: automatski Groq free: 70B → 120B → Scout → 20B → 8B → Allam. Qwen van (engleski). Historija chata ide sa svakim modelom. Dugoročno učenje samo ako Otključaj → Učenje ON.",
     "Glas: Otključaj → Glas (TTS). Ne snima mikrofon.",
     "Poslovi: Potražnja / Ponuda; filteri Moj grad, Moje objave, Moje prijave.",
     "Profil: uredi ime/grad/ulogu, Bilješke, Guardian, Postavke, Moji radovi.",
@@ -187,7 +187,7 @@
     "Q: Šta je Moj grad? A: Filter na Poslovima — trebaš grad na profilu.",
     "Q: Guardian čita moj chat? A: Ne. Samo javna polja oglasa / tekst koji zalijepiš.",
     "Q: Je li PDF ugovor? A: Ne — radni papir iz Alata, ne notar.",
-    "Q: Koji AI model? A: Automatski: 70B → 120B → Scout → 20B → 8B → Qwen 3.6 → Qwen 32 → Allam. Zadnji su mreža da ne padne skroz. Kad veliki spavaju = free limit, vraćaju se sami.",
+    "Q: Koji AI model? A: 70B→120B→Scout→20B→8B→Allam. Qwen van. Chat historija prati razgovor; dugoročno učenje samo uz Otključaj → Učenje.",
     "Q: Zašto nema petog taba? A: Namjerno 4: Početna, Kategorije, Poslovi, Profil.",
     "Q: Kako prijavim problem? A: Otključaj → Prijavi Brzo i Lokalno podršci (procjena prvo).",
     "Q: Jesi li beta? A: Da — Guardian pomoćnik se testira. Ponekad se prekine; nije 100%.",
@@ -226,7 +226,7 @@
     "Odjava: „Ne odgovara mi uslov. Sretno s drugim majstorom/klijentom.“"
   ],
   "freeAiNotes": [
-    "Tekst AI: automatski Groq free lanac 70B→120B→Scout→20B→8B→Qwen→Allam.",
+    "Tekst AI: automatski Groq free lanac 70B→120B→Scout→20B→8B→Allam (Qwen van).",
     "Glas: Otključaj → Glas (TTS na telefonu, ne snima mikrofon).",
     "Sken/PDF: lokalno na telefonu.",
     "Remote znanje: brzoilokalno.com/guardian/knowledge-v1.json",
