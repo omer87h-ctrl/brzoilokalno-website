@@ -1,6 +1,6 @@
 {
-  "version": 9,
-  "updatedAt": "2026-07-11",
+  "version": 10,
+  "updatedAt": "2026-07-12",
   "securityTips": [
     "Avans bez adrese i scopea = crvena. Traži brief prije novca.",
     "„Hitno!!!“ + kratak opis = pritisak. Pitaj šta/gdje/rok.",
@@ -51,7 +51,19 @@
     "ne mogu se vidjeti uživo",
     "plati pa šaljem adresu",
     "osiguranje alata unaprijed",
-    "link za uplatu van appa"
+    "link za uplatu van appa",
+    "teamviewer za pomoc",
+    "anydesk pa dogovor",
+    "qr kod za uplatu",
+    "plati osiguranje alata",
+    "gift card amazon",
+    "iban u javnom komentaru",
+    "sud trazi uplatu",
+    "carina trazi uplatu",
+    "selfie s licnom",
+    "kod iz banke",
+    "remote desktop",
+    "investicija 100 posto sigurna"
   ],
   "wittyLines": [
     "Ja sam alarm, ne ukras. Kad javni oglas zaškripi — javim se.",
@@ -183,7 +195,12 @@
     "Q: Zašto glas ne radi? A: Moraš dati dozvolu: Otključaj → Glas.",
     "Q: Možeš li me blokirati nekoga? A: Ne. Ti: Postavke → blokirani.",
     "Q: Gdje su PDF? A: Guardian → Alati → PDF Brief / Ponuda / Dogovor / Checklist.",
-    "Q: Koji je Instagram? A: @brzo.i.lokalno — https://www.instagram.com/brzo.i.lokalno/"
+    "Q: Koji je Instagram? A: @brzo.i.lokalno — https://www.instagram.com/brzo.i.lokalno/",
+    "Guardian je zenska AI partnerica u Brzo i Lokalno — ne Omer.",
+    "Ucenje je iskljuceno dok ga ne ukljucis u Otkljucaj.",
+    "Sigurnost chip skenira javne oglase; nije antivirus.",
+    "Chat s Guardianom ostaje na telefonu; AI upit ide na server kad pitas.",
+    "App nije platni posrednik — dogovor placanja je izmedju vas."
   ],
   "cityTips": [
     "Sarajevo: napiši naselje (Ilidža, Centar, Novo Sarajevo) — „Sarajevo“ samo je magla za dolazak.",
@@ -192,7 +209,13 @@
     "Tuzla: lokalni majstori vole jasan m² + foto. Manje „hitno“, više detalja.",
     "Zenica: putarina/dolazak u cijeni ili ne — reci u oglasu.",
     "Bihać / Unsko-sanski: manje oglasa = jasniji naslov pobjeđuje. Šta+gdje+rok.",
-    "Hercegovina općenito: sezona i vrijeme bitni za fasadu/krov — Profil → prognoza."
+    "Hercegovina općenito: sezona i vrijeme bitni za fasadu/krov — Profil → prognoza.",
+    "Sarajevo: lokalno prvo — Moj grad filter + profil grad isti",
+    "Banja Luka: isto — grad na profilu = bolji match",
+    "Mostar: ljeto = vise outdoor/usluga; brief mora imati zonu",
+    "Tuzla: industrija + lokalne usluge — fer satnica u Kalkulatoru",
+    "Zagreb/Beograd: app radi regionalno; lokalni dogovor i dalje kljuc",
+    "Manji grad: manje oglasa — Kategorije + dobar brief = vise prijava"
   ],
   "replyTemplates": [
     "Scope creep: „To nije bilo u dogovoru. Mogu dodati kao posebnu stavku — evo cijene / roka.“",
@@ -603,5 +626,42 @@
     "Zašto nema odgovora AI? Free limit — sačekaj minutu pa opet.",
     "Avans? Samo uz scope, adresu/zonu i trag uplate.",
     "Hitno!!! bez detalja? Pitaj šta/gdje/rok prije novca."
+  ],
+  "phishingDomains": [
+    "bit.ly",
+    "tinyurl.com",
+    "cutt.ly",
+    "rb.gy",
+    "t.co",
+    "login-verify",
+    "secure-pay",
+    "verify-account",
+    "account-update",
+    "brzo-lokalno-pay",
+    "brzoilokalno-pay",
+    "anydesk.com",
+    "teamviewer.com"
+  ],
+  "toolsCatalog": [
+    "Chat Groq Llama70/GPT120/Compound — pametan razgovor",
+    "Sigurnost chip — sken do 20+20 javnih oglasa + link check",
+    "Kreiraj — brief/prijava/biljeska/kalkulator/skica",
+    "Alati PDF — Brief Ponuda Dogovor Checklist",
+    "OCR ML Kit — dugi pritisak mic = tekst sa slike",
+    "Whisper — govor u tekst",
+    "TTS — zenski glas uz dozvolu",
+    "BiL TV — profili radio ticker",
+    "Tavily+Jina — live web",
+    "Wikipedia — opca znanja",
+    "Frankfurter FX — kurs valuta",
+    "Nominatim OSM — lokalne lokacije",
+    "Context7 — developer docs",
+    "Ucenje opt-in — Otkljucaj → Ucenje"
+  ],
+  "briefTemplates": [
+    "Usluga: Sta | Gdje (grad/zona) | Rok | Budzet | Materijal | Ocekivanje klijenta",
+    "Majstor: Problem | Adresa zona | Hitnost | Budzet | Pristup objektu | Preferirani termin",
+    "Kreator: Deliverable | Platforma (IG/TikTok/web) | Ton | Rok | Budzet | Referenca",
+    "Ponuda: Scope | Cijena | Sta ulazi | Sta ne ulazi | Rok | Nacin dogovora"
   ]
 }
