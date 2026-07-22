@@ -4,6 +4,12 @@ function reportLabel(report) {
   if (report.targetType === "fast_feedback" || String(report.sourceScreen || "").startsWith("fast")) {
     return "Povratna informacija — Auto izbor";
   }
+  if (report.targetType === "asistentica_auto" || report.sourceScreen === "asistentica_threat") {
+    return "Asistentica ALARM";
+  }
+  if (report.targetType === "asistentica_ai") {
+    return "Prijava AI odgovora";
+  }
   return report.targetType || report.sourceScreen || "Prijava";
 }
 
@@ -21,11 +27,15 @@ export function renderAdminModeration({ reports = [], banned = [], error = "" })
             r.contentCollection && r.contentId && r.contentCollection !== "users"
               ? `<button type="button" class="btn btn--ghost btn--sm btn--danger" data-admin-delete-content="${escapeHtml(r.id)}" data-collection="${escapeHtml(r.contentCollection)}" data-content-id="${escapeHtml(r.contentId)}">Obriši sadržaj</button>`
               : "";
+          const autoBadge =
+            r.targetType === "asistentica_auto" || r.autoAlert
+              ? `<span class="status-badge" style="background:#5c1a1a;color:#ffb4b4">Asistentica auto</span>`
+              : `<span class="status-badge status-badge--pending">Otvoreno</span>`;
           return `
         <article class="app-card" data-report-id="${escapeHtml(r.id)}">
           <div class="app-card__head">
             <h3 class="app-card__name">${title}</h3>
-            <span class="status-badge status-badge--pending">Otvoreno</span>
+            ${autoBadge}
           </div>
           <p class="app-card__meta">${reason} · ${when}</p>
           <p class="app-card__meta">Prijavio: ${reporter} · Cilj: ${target}</p>
