@@ -9,30 +9,74 @@
   <link rel="canonical" href="https://brzoilokalno.com/ponuda.html">
   <link rel="icon" href="assets/app-icon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    .offer-page { min-height: 100dvh; padding: 1.5rem 1rem 3rem; }
+    :root {
+      --offer-ink: #1a1612;
+      --offer-muted: #4a433c;
+      --offer-line: #d8cfc4;
+      --offer-bg: #f7f2eb;
+      --offer-card: #fffdf9;
+      --offer-accent: #c45c26;
+    }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(196, 92, 38, 0.12), transparent 55%),
+        radial-gradient(ellipse 60% 40% at 100% 0%, rgba(60, 90, 70, 0.08), transparent 50%),
+        var(--offer-bg);
+      color: var(--offer-ink);
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+    }
+    .offer-page { min-height: 100dvh; padding: 1.75rem 1.1rem 3.5rem; }
     .offer-card {
-      width: min(100%, 640px); margin: 0 auto; padding: 1.5rem 1.35rem;
-      border-radius: var(--radius, 16px); border: 1px solid var(--border, #ddd);
-      background: var(--bg-card, #fff); box-shadow: var(--shadow, 0 8px 28px rgba(0,0,0,.08));
+      width: min(100%, 680px);
+      margin: 0 auto;
+      padding: 1.75rem 1.5rem 1.6rem;
+      border-radius: 18px;
+      border: 1px solid var(--offer-line);
+      background: var(--offer-card);
+      box-shadow: 0 12px 36px rgba(26, 22, 18, 0.08);
     }
-    .offer-card .brand { display:flex; gap:.75rem; align-items:center; margin-bottom:1rem; }
-    .offer-card h1 { margin: 0 0 .35rem; font-size: 1.35rem; }
-    .offer-meta { color: #777; font-size: .9rem; margin: 0 0 1rem; }
+    .offer-card .brand { display: flex; gap: 0.85rem; align-items: center; margin-bottom: 1.15rem; }
+    .offer-card .brand strong {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .offer-card h1 {
+      margin: 0 0 0.45rem;
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: clamp(1.45rem, 4vw, 1.85rem);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: var(--offer-ink);
+    }
+    .offer-meta { color: var(--offer-muted); font-size: 0.92rem; margin: 0 0 1.1rem; }
     .offer-body {
-      white-space: pre-wrap; line-height: 1.55; color: #1a1410;
-      font-size: .98rem; border-top: 1px solid #eee; padding-top: 1rem;
+      white-space: pre-wrap;
+      line-height: 1.65;
+      color: var(--offer-ink);
+      font-size: 1.05rem;
+      border-top: 1px solid var(--offer-line);
+      padding-top: 1.15rem;
+      letter-spacing: 0.01em;
     }
-    .offer-actions { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1.25rem; }
+    .offer-body.empty-hint { color: var(--offer-muted); font-size: 1rem; }
+    .offer-actions { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1.4rem; }
     .offer-actions a {
       display: inline-flex; align-items: center; justify-content: center;
-      padding: .65rem 1rem; border-radius: 999px; font-weight: 600; text-decoration: none;
-      font-size: .92rem;
+      padding: 0.7rem 1.1rem; border-radius: 10px; font-weight: 600; text-decoration: none;
+      font-size: 0.94rem;
     }
-    .btn-primary { background: #e8884a; color: #141210; }
-    .btn-ghost { background: #f3ebe3; color: #141210; }
-    .offer-note { margin-top: 1.1rem; font-size: .82rem; color: #777; line-height: 1.4; }
-    .empty-hint { color: #555; line-height: 1.5; }
+    .btn-primary { background: var(--offer-accent); color: #fffdf9; }
+    .btn-ghost { background: #efe6dc; color: var(--offer-ink); }
+    .offer-note { margin-top: 1.2rem; font-size: 0.84rem; color: var(--offer-muted); line-height: 1.45; }
+    .offer-status { font-size: 0.9rem; color: var(--offer-muted); margin: 0 0 0.75rem; }
   </style>
 </head>
 <body>
@@ -45,6 +89,7 @@
           <div class="offer-meta" id="city-line">Ponuda iz Asistentice</div>
         </div>
       </div>
+      <p class="offer-status" id="offer-status" hidden></p>
       <h1 id="offer-title">Ponuda</h1>
       <div id="offer-body" class="offer-body empty-hint">
         Učitavam…
@@ -54,66 +99,118 @@
         <a class="btn-primary" href="https://brzoilokalno.com/preuzmi-app.html">App (opcionalno)</a>
       </div>
       <p class="offer-note" id="offer-note">
-        Ako imaš PDF iz chata / WhatsAppa — to je pun dokument. Ova stranica pokazuje tekst ponude iz linka.
+        PDF iz chata / WhatsAppa je pun dokument. Ova stranica pokazuje tekst ponude iz kratkog linka.
       </p>
     </article>
   </main>
-  <script>
-    (function () {
-      var titleEl = document.getElementById("offer-title");
-      var bodyEl = document.getElementById("offer-body");
-      var cityEl = document.getElementById("city-line");
-      var noteEl = document.getElementById("offer-note");
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 
-      function b64urlDecode(s) {
-        s = (s || "").replace(/-/g, "+").replace(/_/g, "/");
-        while (s.length % 4) s += "=";
-        var bin = atob(s);
-        try {
-          return decodeURIComponent(
-            Array.prototype.map.call(bin, function (c) {
-              return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
-            }).join("")
-          );
-        } catch (e) {
-          return bin;
-        }
+    const firebaseConfig = {
+      apiKey: "AIzaSyA-ArtIII_IxgAo0f98xSMJJ6t_I0FozmA",
+      authDomain: "brzoilokalno-268a5.firebaseapp.com",
+      projectId: "brzoilokalno-268a5",
+      storageBucket: "brzoilokalno-268a5.firebasestorage.app",
+      messagingSenderId: "681511479620",
+      appId: "1:681511479620:web:0debdbcb1a64aa3afc4f11",
+    };
+
+    const titleEl = document.getElementById("offer-title");
+    const bodyEl = document.getElementById("offer-body");
+    const cityEl = document.getElementById("city-line");
+    const noteEl = document.getElementById("offer-note");
+    const statusEl = document.getElementById("offer-status");
+
+    function b64urlDecode(s) {
+      s = (s || "").replace(/-/g, "+").replace(/_/g, "/");
+      while (s.length % 4) s += "=";
+      const bin = atob(s);
+      try {
+        return decodeURIComponent(
+          Array.prototype.map.call(bin, (c) =>
+            "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2)
+          ).join("")
+        );
+      } catch (e) {
+        return bin;
       }
+    }
 
-      function showEmpty() {
-        titleEl.textContent = "Ponuda iz aplikacije";
-        bodyEl.className = "offer-body empty-hint";
-        bodyEl.textContent =
-          "Otvori link koji ti je Asistentica poslala iz chata (sadrži #d=…). " +
-          "Ili otvori PDF prilog iz poruke — tu je cijela specifikacija.\n\n" +
-          "Ova stranica nije zamjena za PDF; prikazuje tekst kad je ugrađen u link.";
-        noteEl.textContent =
-          "PDF iz chata / WhatsAppa = pun dokument. App dugme je samo ulaz u Brzo i Lokalno.";
-      }
+    function showEmpty(msg) {
+      titleEl.textContent = "Ponuda iz aplikacije";
+      bodyEl.className = "offer-body empty-hint";
+      bodyEl.textContent = msg ||
+        "Otvori kratki link iz Asistentice (npr. ponuda.html?o=…) ili PDF prilog iz poruke.";
+      noteEl.textContent =
+        "PDF iz chata / WhatsAppa = pun dokument. App dugme je samo ulaz u Brzo i Lokalno.";
+    }
 
-      var hash = (location.hash || "").replace(/^#/, "");
+    function showOffer(t, b, c) {
+      document.title = (t || "Ponuda") + " · Brzo i Lokalno";
+      titleEl.textContent = t || "Ponuda";
+      if (c) cityEl.textContent = "Zona: " + c + " · Asistentica";
+      else cityEl.textContent = "Ponuda iz Asistentice";
+      bodyEl.className = "offer-body";
+      bodyEl.textContent = b || "(Nema teksta — otvori PDF prilog.)";
+    }
+
+    function tryHashPayload() {
+      let hash = (location.hash || "").replace(/^#/, "");
       if (!hash) {
-        var q = new URLSearchParams(location.search);
+        const q = new URLSearchParams(location.search);
         hash = q.get("d") || "";
       }
       if (hash.indexOf("d=") === 0) hash = hash.slice(2);
-      if (!hash) {
-        showEmpty();
+      if (!hash) return false;
+      try {
+        const data = JSON.parse(b64urlDecode(hash));
+        showOffer(data.t, data.b, data.c);
+        return true;
+      } catch (e) {
+        return false;
+      }
+    }
+
+    async function loadShort() {
+      const q = new URLSearchParams(location.search);
+      const o = (q.get("o") || "").trim();
+      if (!o || !/^[a-zA-Z0-9_-]{6,32}$/.test(o)) return false;
+      statusEl.hidden = false;
+      statusEl.textContent = "Učitavam ponudu…";
+      try {
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const snap = await getDoc(doc(db, "asistentica_offers", o));
+        if (!snap.exists()) {
+          statusEl.textContent = "Link nije pronađen.";
+          return false;
+        }
+        const d = snap.data() || {};
+        const exp = Number(d.exp || 0);
+        if (exp > 0 && Date.now() > exp) {
+          statusEl.textContent = "Link je istekao — PDF iz chata i dalje vrijedi.";
+        } else {
+          statusEl.hidden = true;
+        }
+        showOffer(d.t, d.b, d.c);
+        noteEl.textContent =
+          "Kratki link · Brzo i Lokalno. PDF iz poruke je i dalje pun dokument.";
+        return true;
+      } catch (e) {
+        statusEl.textContent = "Ne mogu učitati link.";
+        console.warn(e);
+        return false;
+      }
+    }
+
+    (async function () {
+      if (await loadShort()) return;
+      if (tryHashPayload()) {
+        statusEl.hidden = true;
         return;
       }
-      try {
-        var data = JSON.parse(b64urlDecode(hash));
-        var t = (data.t || "Ponuda").toString();
-        var b = (data.b || "").toString();
-        var c = (data.c || "").toString();
-        document.title = t + " · Brzo i Lokalno";
-        titleEl.textContent = t;
-        if (c) cityEl.textContent = "Zona: " + c + " · Asistentica";
-        bodyEl.className = "offer-body";
-        bodyEl.textContent = b || "(Nema teksta u linku — otvori PDF prilog.)";
-      } catch (e) {
-        showEmpty();
-      }
+      showEmpty();
     })();
   </script>
 </body>
