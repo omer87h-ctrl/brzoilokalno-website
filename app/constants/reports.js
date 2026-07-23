@@ -19,5 +19,6 @@ export const CHAT_REPORT_REASONS = [
   "Spam",
   "Neprimjeren sadržaj",
   "Lažni profil",
+  "Prevara",
   "Ostalo",
 ];

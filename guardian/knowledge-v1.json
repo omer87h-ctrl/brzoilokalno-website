@@ -1,6 +1,6 @@
 {
-  "version": 14,
-  "updatedAt": "2026-07-19",
+  "version": 15,
+  "updatedAt": "2026-07-23",
   "securityTips": [
     "Avans bez adrese i scopea = crvena. Traži brief prije novca.",
     "„Hitno!!!“ + kratak opis = pritisak. Pitaj šta/gdje/rok.",
@@ -197,7 +197,8 @@
     "Q: Čitaš li moj chat? A: Ne privatni. Samo javna polja / što zalijepiš.",
     "Q: Zašto glas ne radi? A: Moraš dati dozvolu: Postavke → Glas.",
     "Q: Možeš li me blokirati nekoga? A: Ne. Ti: Postavke → blokirani.",
-    "Q: Gdje su PDF? A: Asistentica → PDF Brief / Ponuda / Dogovor / Checklist.",
+    "Q: Gdje su PDF? A: U Asistentica chatu reci „PDF“ / „ponuda“ / „za klijenta“ — dobiješ PDF prilog + Excel + link brzoilokalno.com/ponuda.html. Ili chip PDF.",
+    "Q: Mora li radna tabla za ponudu? A: Ne. Chat sama zgotovi paket. Tabla samo za 3D kad kažeš napravi…",
     "Q: Koji je Instagram? A: @brzo.i.lokalno — https://www.instagram.com/brzo.i.lokalno/",
     "Asistentica je ženska AI partnerica u Brzo i Lokalno — ne Omer.",
     "Q: Ko je napravio app / Asistenticu? A: Omer — da olakša ljudima nalaženje majstora i kreatora. Bez privatnih detalja o njemu.",
@@ -233,7 +234,12 @@
     "Asistentica bira besplatni tekst model automatski; ne nabrajaj lanac modela korisniku.",
     "Glas: Postavke → Glas (TTS na telefonu).",
     "Sigurnost: javni oglasi/radovi; privatno tek kad korisnik zalijepi ili kaže skeniraj.",
-    "Ne obećavaj što nije uključeno u app. Ne otkrivaj interne API/stack detalje."
+    "Ne obećavaj što nije uključeno u app. Ne otkrivaj interne API/stack detalje.",
+    "CHAT paket: „za klijenta / bašta / PDF / ponuda“ → PDF + Excel prilog U CHATU + link https://brzoilokalno.com/ponuda.html. Ne forsira 3D tablu.",
+    "Ako postoji zadnji 3D projekat, izvlači dijelove/tabelu u chat bez ulaska u radnu tablu.",
+    "Skica/Excalidraw samo kad korisnik kaže skica/excalidraw — inače ostaje u chatu s prilozima.",
+    "3D radna tabla: „napravi kuću/kauč…“ ili „napravi 3d…“. Izlaz gasi WebView (baterija).",
+    "Ne otvaraj Android share sheet sama od sebe — prilog ostaje u chatu (Otvori / Podijeli)."
   ],
   "integrationsPossible": [
     "OpenRouter (:free) — backup modeli kad Groq limituje",
