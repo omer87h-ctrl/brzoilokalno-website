@@ -11,7 +11,7 @@ window.SITE_CONFIG = {
 
   // Google Play — kad app izađe, zalijepi puni link ovdje.
   // Dok nema linka, ostavi prazan string ""  →  na stranici piše "Uskoro".
-  googlePlay: "",
+  googlePlay: "https://play.google.com/store/apps/details?id=com.brzoilokalno",
 
   // Google Analytics (opcionalno) — Measurement ID tipa "G-XXXXXXXXXX".
   // Ostavi "" ako ne koristiš statistiku posjeta.
