@@ -1744,6 +1744,41 @@ body.app-body.has-app-shell #app-root {
   font-size: 0.88rem;
 }
 
+.business-fields {
+  margin: 0.5rem 0 0.75rem;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  text-align: left;
+}
+
+.profile-representation {
+  margin: 0.35rem 0 0;
+  padding: 0;
+}
+
+.profile-representation__title {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.profile-representation__name,
+.profile-representation__meta {
+  margin: 0.15rem 0 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.profile-representation__note {
+  margin: 0.2rem 0 0;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  opacity: 0.9;
+}
+
 .auth-switch {
   margin: 0.85rem 0 0;
   text-align: center;
