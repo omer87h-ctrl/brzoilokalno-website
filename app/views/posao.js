@@ -157,7 +157,13 @@ export function renderPosao({
       <a class="back-link" href="#/poslovi">← Natrag na poslove</a>
       <article class="detail-card">
         <h2 class="detail-card__title">${title}</h2>
-        ${renderListingAuthorDetail({ item: job, ownerProfile: jobOwnerProfile })}
+        ${renderListingAuthorDetail({
+          item: job,
+          ownerProfile: jobOwnerProfile,
+          currentUid,
+          viewerRole: myRole,
+          context: "job",
+        })}
         <p class="detail-card__meta">${category} · ${city} · ${escapeHtml(date)}</p>
         <p class="detail-card__budget">${budget}${when ? ` · ${when}` : ""}</p>
         <p class="detail-card__desc">${desc}</p>

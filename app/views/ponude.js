@@ -69,7 +69,7 @@ export function renderCityFilterChip({ active, city, id = "poslovi-city-filter" 
     </button>`;
 }
 
-export function renderPonudaDetail({ offer, currentUid = "", ownerProfile = null }) {
+export function renderPonudaDetail({ offer, currentUid = "", ownerProfile = null, myRole = "" }) {
   if (!offer) {
     return `
       <div class="screen-scroll">
@@ -94,7 +94,13 @@ export function renderPonudaDetail({ offer, currentUid = "", ownerProfile = null
       <a class="back-link" href="#/ponude">← Natrag na ponude</a>
       <article class="detail-card">
         <h2 class="detail-card__title">${title}</h2>
-        ${renderListingAuthorDetail({ item: offer, ownerProfile })}
+        ${renderListingAuthorDetail({
+          item: offer,
+          ownerProfile,
+          currentUid,
+          viewerRole: myRole,
+          context: "offer",
+        })}
         <p class="detail-card__meta">${category} · ${city} · ${escapeHtml(date)}</p>
         <p class="detail-card__budget">${budget}${when ? ` · ${when}` : ""}</p>
         <p class="detail-card__desc">${desc}</p>

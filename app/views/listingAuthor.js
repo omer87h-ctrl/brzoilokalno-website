@@ -1,6 +1,7 @@
 import { escapeHtml, displayName } from "../utils/format.js";
 import { profileAvatarUrl } from "../services/storageService.js";
 import { isProfileVerified } from "../utils/verified.js";
+import { resolveFollowableRole } from "../utils/follow.js";
 import { renderVerifiedSuffix } from "./verifiedBadge.js";
 
 function formatRoleLabel(role) {
@@ -14,12 +15,15 @@ function formatRoleLabel(role) {
 
 /** Ista logika kao Android listingOwnerAvatarUrl / resolveJobOwnerAvatarUrl. */
 export function resolveListingAuthor(item, ownerProfile = null) {
+  // Preferiraj živo ime s public_profiles (kao Android PublicProfileCache).
+  const liveName = ownerProfile ? displayName(ownerProfile) : "";
   const name =
+    (liveName && liveName !== "Korisnik" ? liveName : "") ||
     String(item?.authorName || item?.displayName || item?.ownerDisplayName || "").trim() ||
-    (ownerProfile ? displayName(ownerProfile) : "") ||
+    liveName ||
     "Nepoznat korisnik";
 
-  const role = String(item?.authorRole || ownerProfile?.role || "").trim();
+  const role = String(ownerProfile?.role || item?.authorRole || item?.ownerRole || "").trim();
 
   const avatarSource = {
     profileImageUrlThumb:
@@ -89,16 +93,69 @@ export function renderListingAuthorHeader({ title, item, ownerProfile = null, ci
     </div>`;
 }
 
+/**
+ * Ko smije otvoriti profil autora oglasa — ista logika kao Android JobCard:
+ * - majstor/kreator vlasnik → "Pogledaj profil" (svima)
+ * - korisnik vlasnik → "Profil korisnika" samo majstoru/kreatoru
+ * - korisnik → korisnik → bez dugmeta
+ * - vlastiti oglas → bez dugmeta
+ */
+export function listingOwnerProfileCta({
+  item = null,
+  ownerProfile = null,
+  currentUid = "",
+  viewerRole = "",
+  context = "job",
+} = {}) {
+  const ownerUid = String(item?.userId || item?.ownerId || item?.authorUid || "").trim();
+  if (!ownerUid) return "";
+  if (currentUid && ownerUid === currentUid) return "";
+
+  const ownerRoleSource = ownerProfile || {
+    role: item?.authorRole || item?.ownerRole || item?.role || "",
+  };
+  const ownerFollowable = resolveFollowableRole(ownerRoleSource);
+  const viewerIsWorker =
+    String(viewerRole || "").trim().toLowerCase() === "majstor" ||
+    String(viewerRole || "").trim().toLowerCase() === "kreator";
+
+  // Ponude su showcase majstora/kreatora — uvijek profil (kao Android).
+  if (context === "offer") {
+    return `<a class="btn btn--ghost btn--block" href="#/pregled/${escapeHtml(ownerUid)}">Pogledaj profil</a>`;
+  }
+
+  if (ownerFollowable) {
+    return `<a class="btn btn--ghost btn--block" href="#/pregled/${escapeHtml(ownerUid)}">Pogledaj profil</a>`;
+  }
+
+  // Vlasnik je korisnik (nije majstor/kreator).
+  if (viewerIsWorker) {
+    return `<a class="btn btn--ghost btn--block" href="#/pregled/${escapeHtml(ownerUid)}">Profil korisnika</a>`;
+  }
+
+  // Korisnik ne gleda profil drugog korisnika s posla.
+  return "";
+}
+
 /** Detalj ekran — avatar + objavio blok. */
-export function renderListingAuthorDetail({ item, ownerProfile = null }) {
+export function renderListingAuthorDetail({
+  item,
+  ownerProfile = null,
+  currentUid = "",
+  viewerRole = "",
+  context = "job",
+} = {}) {
   const { name, roleLabel, avatarUrl, verifiedEntity } = resolveListingAuthor(item, ownerProfile);
   const roleLine = roleLabel
     ? `<p class="listing-author__role">${escapeHtml(roleLabel)}</p>`
     : "";
-  const ownerUid = item?.userId || "";
-  const profileLink = ownerUid
-    ? `<a class="btn btn--ghost btn--block" href="#/pregled/${escapeHtml(ownerUid)}">Pogledaj profil</a>`
-    : "";
+  const profileLink = listingOwnerProfileCta({
+    item,
+    ownerProfile,
+    currentUid,
+    viewerRole,
+    context,
+  });
 
   return `
     <div class="listing-author-detail">
@@ -109,4 +166,18 @@ export function renderListingAuthorDetail({ item, ownerProfile = null }) {
         ${profileLink}
       </div>
     </div>`;
+}
+
+/** Soft gate za direktan #/pregled — korisnik ne otvara tuđi korisnički profil. */
+export function canOpenPublicProfile({ viewerUid = "", viewerRole = "", targetProfile = null } = {}) {
+  if (!targetProfile) return false;
+  const targetUid = String(targetProfile.id || targetProfile.uid || "").trim();
+  if (!targetUid) return false;
+  if (viewerUid && targetUid === viewerUid) return true;
+  const followable = resolveFollowableRole(targetProfile);
+  if (followable) return true;
+  const viewerIsWorker =
+    String(viewerRole || "").trim().toLowerCase() === "majstor" ||
+    String(viewerRole || "").trim().toLowerCase() === "kreator";
+  return viewerIsWorker;
 }

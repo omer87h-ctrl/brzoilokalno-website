@@ -137,6 +137,7 @@ import { renderPrijave } from "./views/prijave.js";
 import { renderChat, renderChatMessages, renderChatMessageSheet, renderChatMessageDetails, renderChatReplyBar } from "./views/chat.js";
 import { renderPretraga } from "./views/pretraga.js";
 import { renderPonudaDetail } from "./views/ponude.js";
+import { canOpenPublicProfile } from "./views/listingAuthor.js";
 import { renderPostavke } from "./views/postavke.js";
 import { renderBlockedUsers } from "./views/blockedUsers.js";
 import { renderWorkNotes } from "./views/workNotes.js";
@@ -878,9 +879,17 @@ async function loadRouteContent(route) {
   }
 
   if (route.name === "ponuda") {
-    const offer = await fetchOffer(route.offerId);
+    const [offer, profile] = await Promise.all([
+      fetchOffer(route.offerId),
+      fetchUserProfile(currentUser.uid),
+    ]);
     const ownerProfile = offer?.userId ? await fetchUserProfile(offer.userId) : null;
-    return renderPonudaDetail({ offer, currentUid: currentUser.uid, ownerProfile });
+    return renderPonudaDetail({
+      offer,
+      currentUid: currentUser.uid,
+      ownerProfile,
+      myRole: profile?.role || "",
+    });
   }
 
   if (route.name === "posao") {
@@ -1111,6 +1120,17 @@ async function loadRouteContent(route) {
     if (currentUser?.uid) {
       const viewerProfile = await fetchUserProfile(currentUser.uid);
       viewerRole = viewerProfile?.role || "";
+    }
+    // Ista namjera kao Android JobCard: korisnik ne gleda tuđi korisnički profil.
+    if (
+      user &&
+      !canOpenPublicProfile({
+        viewerUid: currentUser?.uid || "",
+        viewerRole,
+        targetProfile: user,
+      })
+    ) {
+      return renderScreenError("Ovaj profil nije dostupan s tvoje uloge.");
     }
     if (user) {
       try {
