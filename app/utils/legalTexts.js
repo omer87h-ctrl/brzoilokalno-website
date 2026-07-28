@@ -115,13 +115,17 @@ Brzo i Lokalno obrađuje podatke potrebne za rad aplikacije.
 
 Podatke naloga (korisnički ID, email, uloga na platformi, grad) kroz Firebase Authentication i, kada se koristi, Google Sign-In.
 
-Podatke profila koje korisnik sam unese: ime prikaza, opis, kontakt preferencije, način predstavljanja (fizičko lice ili u ime poslovnog subjekta), vrstu poslovnog subjekta, puni poslovni naziv, grad ili općinu sjedišta, verziju i vrijeme prihvatanja poslovne izjave kada je to primjenjivo, te sadržaj koji korisnik objavi (objave, oglasi, ponude, poruke, slike).
+Podatke profila koje korisnik sam unese: ime prikaza, opis, kontakt telefon (ako ga unese), kontakt preferencije (chat, poziv, WhatsApp), način predstavljanja (fizičko lice ili u ime poslovnog subjekta), vrstu poslovnog subjekta, puni poslovni naziv, grad ili općinu sjedišta, verziju i vrijeme prihvatanja poslovne izjave kada je to primjenjivo, te sadržaj koji korisnik objavi (objave, oglasi, ponude, poruke, slike).
 
-Podatke prijava i blokiranja radi sigurnosti i moderacije.
+Ocjene i broj ocjena, te podatke o praćenju profila (pratitelji / praćeni) kada korisnik koristi te funkcije.
+
+Podatke prijava i blokiranja radi sigurnosti i moderacije. Ako je nalog ograničen ili uklonjen od strane administratora, može se čuvati i zapis o toj mjeri (npr. razlog i trajanje).
 
 Podatke zahtjeva za oznaku PROVJERENO: ime prikaza, email, uloga i grad, radi pregleda zahtjeva. Taj zapis nije javno čitljiv i email se ne prikazuje drugim korisnicima.
 
-Tehničke podatke potrebne za rad usluga koje aplikacija koristi (npr. Firebase Firestore, Cloud Storage, Cloud Messaging / push notifikacije, App Check, crash/analitičke usluge ako su uključene).
+Tehničke podatke potrebne za rad usluga koje aplikacija koristi (npr. Firebase Firestore, Cloud Storage, Cloud Messaging / push notifikacije i token uređaja na Androidu kada su obavijesti omogućene, App Check, crash/analitičke usluge ako su uključene).
+
+Na Androidu, ako korisnik koristi povezani Huawei sat (Wear Engine), mogu se razmjenjivati ograničeni operativni podaci potrebni za prikaz obavijesti ili administratorske pomoćne funkcije na satu. Ti podaci ne služe za oglašavanje.
 
 Aplikacija ovom funkcijom ne prikuplja JMBG, kopije ličnih dokumenata, JIB, poslovna rješenja ni bankovne podatke.
 
@@ -149,7 +153,7 @@ Podaci se ne prodaju oglašivačima.
 
 Ono što korisnik javno objavi, uključujući način predstavljanja i navedene poslovne podatke, može biti vidljivo drugim korisnicima.
 
-Podaci se obrađuju kroz tehničke servise koje aplikacija koristi (npr. Google Firebase Authentication, Firestore, Storage, Cloud Messaging, App Check i WeatherAPI). To znači da se određeni podaci šalju tim pružaocima radi rada aplikacije i mogu biti obrađeni izvan Bosne i Hercegovine.
+Podaci se obrađuju kroz tehničke servise koje aplikacija koristi (npr. Google Firebase Authentication, Firestore, Storage, Cloud Messaging, App Check, WeatherAPI i, na Androidu kada je sat povezan, Huawei Wear Engine). To znači da se određeni podaci šalju tim pružaocima radi rada aplikacije i mogu biti obrađeni izvan Bosne i Hercegovine.
 
 6. Čuvanje podataka
 
@@ -158,6 +162,8 @@ Podaci se čuvaju samo dok je to potrebno za rad aplikacije i za svrhu za koju s
 Kad svrha prestane i kad nema zakonske obaveze da se podatak zadrži, podatak se briše ili se čuva bez veze s nalogom.
 
 Kod brisanja naloga, aplikacija pokušava obrisati povezane podatke naloga i sadržaja. Dio podataka može se zadržati samo ako je to potrebno radi sigurnosti, rješavanja prijave ili zakonske obaveze, i samo za vrijeme koje zakon dopušta.
+
+Nakon brisanja može ostati kratka arhiva naloga odvojena od stvarnih korisnika (npr. ime, email, uloga, grad, način predstavljanja, poslovni naziv ako je bio naveden, broj otvorenih prijava u trenutku brisanja i vrijeme brisanja). Prijave u kojima je obrisani nalog bio meta, te zapisi o zabrani, mogu ostati radi sigurnosti platforme.
 
 7. Prava korisnika
 
@@ -206,9 +212,9 @@ Nakon važećeg zahtjeva pokušavamo obrisati ili ukloniti: profil, radove i sli
 
 Dio podataka može se zadržati, smanjiti ili anonimizirati samo ako je to potrebno radi sigurnosti, rješavanja prijave, zakonske obaveze ili integriteta evidencije — i samo za vrijeme koje zakon dopušta.
 
-Na primjer, neke ocjene mogu ostati anonimizirane umjesto vezane za obrisani nalog.
+Kratka arhiva obrisanog naloga (ime, email, uloga, grad, način predstavljanja, poslovni naziv ako je postojao, broj otvorenih prijava u trenutku brisanja i vrijeme brisanja) može se čuvati odvojeno od stvarnih korisnika radi zakonskih i sigurnosnih provjera, a briše se kad prestane potreba.
 
-Kratka arhiva obrisanog naloga (ime, email, uloga, vrijeme brisanja) može se čuvati odvojeno od stvarnih korisnika radi zakonskih provjera, a briše se kad prestane potreba.
+Prijave u kojima je obrisani nalog bio meta i zapisi o zabrani mogu ostati radi zaštite drugih korisnika. Ocjene se pri brisanju u aplikaciji uklanjaju gdje je to tehnički moguće.
 
 5. Vrijeme obrade
 

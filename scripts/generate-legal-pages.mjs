@@ -82,7 +82,7 @@ writeFileSync(
   page(
     "Pravila i uslovi",
     "terms",
-    `<h1>Pravila i uslovi</h1><p class="meta">Aplikacija Brzo i Lokalno · Važi od 28. 7. 2026. · Verzija ${POLICY_VERSION}</p><div class="legal">${paras(terms)}</div>`,
+    `<h1>Pravila i uslovi</h1><p class="meta">Aplikacija Brzo i Lokalno · Važi od 29. 7. 2026. · Verzija ${POLICY_VERSION}</p><div class="legal">${paras(terms)}</div>`,
   ),
   "utf8",
 );
@@ -91,7 +91,7 @@ writeFileSync(
   page(
     "Politika privatnosti",
     "privacy",
-    `<h1>Politika privatnosti</h1><p class="meta">Aplikacija Brzo i Lokalno · Važi od 28. 7. 2026. · Verzija ${POLICY_VERSION}</p><div class="legal">${paras(privacy)}</div>`,
+    `<h1>Politika privatnosti</h1><p class="meta">Aplikacija Brzo i Lokalno · Važi od 29. 7. 2026. · Verzija ${POLICY_VERSION}</p><div class="legal">${paras(privacy)}</div>`,
   ),
   "utf8",
 );

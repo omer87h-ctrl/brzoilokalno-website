@@ -45,6 +45,9 @@ export function parseRoute(hash) {
     if (sub === "izgled") return { name: "postavke-izgled" };
     if (sub === "privatnost") return { name: "postavke-privatnost" };
     if (sub === "admin") return { name: "postavke-admin" };
+    if (sub === "privatnost-centar") {
+      return { name: "postavke-privacy-center", caseId: parts[2] || null };
+    }
     return { name: "postavke" };
   }
   if (name === "obavijesti") return { name: "obavijesti" };
@@ -71,6 +74,7 @@ export function routeToNav(route) {
     route.name === "postavke-izgled" ||
     route.name === "postavke-privatnost" ||
     route.name === "postavke-admin" ||
+    route.name === "postavke-privacy-center" ||
     route.name === "obavijesti"
   ) {
     return "profil";

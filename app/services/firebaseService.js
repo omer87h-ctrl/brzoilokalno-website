@@ -16,11 +16,13 @@ import {
   getDoc,
   getFirestore,
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-functions.js";
 import { firebaseConfig, ADMIN_EMAIL } from "../firebase.js";
 
 let appInstance = null;
 let authInstance = null;
 let dbInstance = null;
+let functionsInstance = null;
 let appCheckInitialized = false;
 
 function initAppCheckIfConfigured() {
@@ -60,6 +62,20 @@ export function getDb() {
     dbInstance = getFirestore(getApp());
   }
   return dbInstance;
+}
+
+export function getFunctionsInstance() {
+  if (!functionsInstance) {
+    functionsInstance = getFunctions(getApp(), "europe-west10");
+  }
+  return functionsInstance;
+}
+
+/** Centar privatnosti — server-side admin only. */
+export async function callPrivacyAdmin(payload) {
+  const fn = httpsCallable(getFunctionsInstance(), "privacyAdminAction");
+  const result = await fn(payload || {});
+  return result.data;
 }
 
 const DEFAULT_WEB_CONFIG = {

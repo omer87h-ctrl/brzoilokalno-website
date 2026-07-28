@@ -1,4 +1,4 @@
-export const POLICY_VERSION = "2026-07-28";
+export const POLICY_VERSION = "2026-07-29";
 
 export const POLICY_LINKS = {
   terms: "https://brzoilokalno.com/terms.html",

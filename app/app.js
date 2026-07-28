@@ -3,6 +3,7 @@ import {
   getWebAppConfig,
   isAdminUser,
   needsEmailVerification,
+  callPrivacyAdmin,
   registerWithEmail,
   reloadCurrentUser,
   sendEmailVerificationIfNeeded,
@@ -137,6 +138,7 @@ import { renderWorkNotes } from "./views/workNotes.js";
 import { renderDisplaySettings } from "./views/displaySettings.js";
 import { renderPrivacyInfo } from "./views/privacyInfo.js";
 import { renderAdminModeration } from "./views/adminModeration.js";
+import { renderPrivacyCenterHome, renderPrivacyCaseDetail } from "./views/adminPrivacyCenter.js";
 import { renderObavijesti } from "./views/obavijesti.js";
 import { renderKalkulator, readKalkulatorState } from "./views/kalkulator.js";
 import { buildActivityDashboard } from "./utils/activity.js";
@@ -181,6 +183,8 @@ let chatOtherMeta = null;
 let brzoTopCandidate = null;
 let brzoFeedbackSent = false;
 let adminModerationError = "";
+let privacyCenterError = "";
+let privacyCenterBusy = false;
 let workNotesSavedLabel = "";
 let chatMessagesCache = [];
 let chatReplyDraft = null;
@@ -1192,6 +1196,39 @@ async function loadRouteContent(route) {
     }
     const [reports, banned] = await Promise.all([fetchOpenReports(30), fetchBannedUsersAdmin(50)]);
     return renderAdminModeration({ reports, banned, error: adminModerationError });
+  }
+
+  if (route.name === "postavke-privacy-center") {
+    if (!isAdminUser(currentUser)) {
+      return renderScreenError("Nemate pristup Centru privatnosti.");
+    }
+    if (route.caseId) {
+      try {
+        const caseData = await callPrivacyAdmin({ action: "get_case", caseId: route.caseId });
+        return renderPrivacyCaseDetail({
+          caseData,
+          error: privacyCenterError,
+          busy: privacyCenterBusy,
+        });
+      } catch (error) {
+        return renderPrivacyCaseDetail({
+          caseData: null,
+          error: formatFirestoreError(error) || privacyCenterError || "Greška učitavanja.",
+        });
+      }
+    }
+    try {
+      const listed = await callPrivacyAdmin({ action: "list_cases", limit: 40 });
+      return renderPrivacyCenterHome({
+        cases: listed?.cases || [],
+        error: privacyCenterError,
+      });
+    } catch (error) {
+      return renderPrivacyCenterHome({
+        cases: [],
+        error: formatFirestoreError(error) || privacyCenterError || "Centar privatnosti nije dostupan (deploy funkcije?).",
+      });
+    }
   }
 
   return renderHome({ selectedCity });
@@ -2556,6 +2593,90 @@ function bindSearchAndFilters() {
       } catch (error) {
         adminModerationError = "Brisanje sadržaja nije uspjelo.";
         renderApp();
+      }
+    });
+  });
+
+  document.querySelectorAll("[data-privacy-new]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      privacyCenterBusy = true;
+      privacyCenterError = "";
+      try {
+        const created = await callPrivacyAdmin({
+          action: "create_case",
+          caseType: btn.dataset.privacyNew,
+          payload: {},
+        });
+        navigateTo(`#/postavke/privatnost-centar/${created.caseId}`);
+      } catch (error) {
+        privacyCenterError = formatFirestoreError(error) || "Kreiranje slučaja nije uspjelo.";
+        renderApp();
+      } finally {
+        privacyCenterBusy = false;
+      }
+    });
+  });
+
+  document.querySelectorAll("[data-privacy-action]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const action = btn.dataset.privacyAction;
+      const route = parseRoute(window.location.hash);
+      const caseId = route.caseId;
+      if (!caseId) return;
+      privacyCenterBusy = true;
+      privacyCenterError = "";
+      try {
+        if (action === "prepare") {
+          const uid = document.getElementById("privacy-uid")?.value?.trim() || "";
+          const email = document.getElementById("privacy-email")?.value?.trim() || "";
+          await callPrivacyAdmin({ action: "prepare", caseId, payload: { uid, email } });
+        } else if (action === "save_manual") {
+          const confirmedManual = {};
+          document.querySelectorAll("[data-privacy-confirm]").forEach((el) => {
+            confirmedManual[el.dataset.privacyConfirm] = el.checked === true;
+          });
+          const manualFields = {
+            uid: document.getElementById("privacy-uid")?.value?.trim() || "",
+            email: document.getElementById("privacy-email")?.value?.trim() || "",
+            opisDogadjaja: document.getElementById("privacy-incident-desc")?.value?.trim() || "",
+          };
+          await callPrivacyAdmin({
+            action: "save_manual_fields",
+            caseId,
+            manualFields,
+            confirmedManual,
+          });
+        } else if (action === "generate_draft") {
+          const result = await callPrivacyAdmin({ action: "generate_draft", caseId });
+          if (result?.downloadUrl) window.open(result.downloadUrl, "_blank", "noopener");
+        } else if (action === "finalize") {
+          if (!confirm("Zaključiti dokument? Finalna verzija se ne prepisuje.")) return;
+          const result = await callPrivacyAdmin({ action: "finalize", caseId });
+          if (result?.downloadUrl) window.open(result.downloadUrl, "_blank", "noopener");
+        } else if (action === "mark_sent") {
+          const method = prompt("Način slanja (email / pošta / lična predaja / odgovor korisniku):", "email");
+          if (method == null) return;
+          const recipient = prompt("Primalac:", "") || "";
+          await callPrivacyAdmin({
+            action: "mark_as_sent",
+            caseId,
+            delivery: {
+              method,
+              recipient,
+              sentAt: new Date().toISOString(),
+              confirmedReceipt: false,
+            },
+          });
+        } else if (action === "close") {
+          await callPrivacyAdmin({ action: "close_case", caseId });
+        }
+        privacyCenterError = "";
+        renderApp();
+      } catch (error) {
+        privacyCenterError = formatFirestoreError(error) || "Akcija nije uspjela.";
+        renderApp();
+      } finally {
+        privacyCenterBusy = false;
       }
     });
   });

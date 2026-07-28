@@ -65,6 +65,7 @@ export function renderPostavke({
       <section class="settings-group">
         <h3 class="settings-group__title">Admin</h3>
         <a class="btn btn--ghost btn--block" href="#/postavke/admin">Moderacija prijava</a>
+        <a class="btn btn--ghost btn--block" href="#/postavke/privatnost-centar">Centar privatnosti</a>
       </section>`
           : ""
       }
