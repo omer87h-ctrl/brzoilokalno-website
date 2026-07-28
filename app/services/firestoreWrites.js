@@ -17,7 +17,7 @@ import {
   where,
   writeBatch,
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
-import { deleteObject, getStorage, ref as storageRef, refFromURL } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-storage.js";
+import { deleteObject, getStorage, ref as storageRef } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-storage.js";
 import { initializeApp, getApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
 import { firebaseConfig } from "../firebase.js";
 import { getDb, getAuthInstance, needsEmailVerification } from "./firebaseService.js";
@@ -767,9 +767,10 @@ async function deleteStorageBestEffort(paths = [], urls = []) {
   const storage = getStorageInstance();
   await Promise.allSettled([
     ...[...new Set(paths.filter(Boolean))].map((path) => deleteObject(storageRef(storage, path))),
+    // Modular SDK: ref(storage, httpsDownloadUrl) resolves URL (no separate refFromURL export).
     ...[...new Set(urls.filter(Boolean))].map((url) => {
       try {
-        return deleteObject(refFromURL(storage, url));
+        return deleteObject(storageRef(storage, url));
       } catch (_) {
         return Promise.resolve();
       }
