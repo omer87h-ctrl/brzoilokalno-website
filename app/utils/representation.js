@@ -23,6 +23,22 @@ export function businessTypeLabel(type) {
   return REPRESENTATION.TYPES.find((t) => t.id === type)?.label || "";
 }
 
+/** Kratka oznaka na profilu — bez „npr. d.o.o.” (to ostaje samo u pickeru). */
+export function businessTypeLabelPublic(type) {
+  switch (String(type || "").trim()) {
+    case "craft_related":
+      return "Obrt ili srodna djelatnost";
+    case "sole_entrepreneur":
+      return "Samostalni preduzetnik";
+    case "company":
+      return "Privredno društvo";
+    case "other":
+      return "Registrovani poslovni subjekt";
+    default:
+      return "";
+  }
+}
+
 /** Validate draft before save. Returns user-facing error or "". */
 export function validateRepresentation(data) {
   const type = String(data.representationType || "").trim();
