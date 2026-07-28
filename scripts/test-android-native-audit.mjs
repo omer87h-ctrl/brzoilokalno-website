@@ -70,9 +70,12 @@ async function main() {
 
   pass("Vanjski linkovi idu u sistemski browser (ACTION_VIEW)", [...actionViewUrls].slice(0, 5).join(" | "));
 
-  const policyUrls = [...actionViewUrls].filter((u) => u.includes("brzoilokalno-policy"));
+  const policyUrls = [...actionViewUrls].filter((u) =>
+    u.includes("brzoilokalno.com/") &&
+    (u.includes("privacy-policy") || u.includes("terms.html") || u.includes("delete-account"))
+  );
   if (policyUrls.length >= 2) {
-    pass("Privacy/Terms/Delete-account na GitHub Pages", policyUrls.join(", "));
+    pass("Privacy/Terms/Delete-account na brzoilokalno.com", policyUrls.join(", "));
   } else {
     fail("Policy URL-ovi nedostaju", policyUrls.join(", "));
   }
