@@ -1,11 +1,13 @@
 import {
   addDoc,
   collection,
+  collectionGroup,
   deleteDoc,
   doc,
   getDoc,
   getDocs,
   increment,
+  limit,
   query,
   serverTimestamp,
   setDoc,
@@ -14,6 +16,9 @@ import {
   where,
   writeBatch,
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+import { deleteObject, getStorage, ref as storageRef, refFromURL } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-storage.js";
+import { initializeApp, getApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import { firebaseConfig } from "../firebase.js";
 import { getDb, getAuthInstance, needsEmailVerification } from "./firebaseService.js";
 import { isJobNotificationType } from "../constants/notifications.js";
 import { normalizeSpaces } from "../utils/textInputValidation.js";
@@ -87,6 +92,23 @@ export async function updateUserProfile(uid, data) {
       console.warn("public_profiles sync failed after profile update:", error);
     }
   }
+  // Ime na postojećim poslovima, ponudama i radovima — inače kartice ostaju stare.
+  const newName = payload.displayName;
+  if (newName) {
+    await Promise.allSettled([
+      rewriteOwnedListingNames(uid, "jobs", { authorName: newName, displayName: newName }),
+      rewriteOwnedListingNames(uid, "offers", { authorName: newName, displayName: newName }),
+      rewriteOwnedListingNames(uid, "works", { ownerDisplayName: newName }),
+    ]);
+  }
+}
+
+/** Ažurira denormalizovana imena na dokumentima koje je korisnik objavio. */
+async function rewriteOwnedListingNames(uid, collectionName, fields) {
+  const snap = await getDocs(
+    query(collection(getDb(), collectionName), where("userId", "==", uid), limit(100)),
+  );
+  await Promise.all(snap.docs.map((d) => updateDoc(d.ref, fields).catch(() => null)));
 }
 
 export async function createJob({ profile, authUser, fields }) {
@@ -670,6 +692,15 @@ export async function resolveReport(reportId, adminUid, adminNote = "") {
   });
 }
 
+export async function dismissReport(reportId, adminUid) {
+  await updateDoc(doc(getDb(), "reports", reportId), {
+    status: "dismissed",
+    resolvedAt: serverTimestamp(),
+    resolvedByUid: adminUid,
+    adminNote: "dismissed",
+  });
+}
+
 export async function adminBanUser({ targetUid, name, email, reason, adminUid, sourceReportId }) {
   await setDoc(doc(getDb(), "banned_users", targetUid), {
     uid: targetUid,
@@ -682,6 +713,29 @@ export async function adminBanUser({ targetUid, name, email, reason, adminUid, s
   });
 }
 
+/** Privremeno ograničenje — isti zapis kao ban, plus until (pravila + PWA sesija poštuju). */
+export async function adminRestrictUser({
+  targetUid,
+  name,
+  email,
+  reason,
+  adminUid,
+  sourceReportId,
+  days = 7,
+}) {
+  const untilMs = Date.now() + Math.max(1, Number(days) || 7) * 24 * 60 * 60 * 1000;
+  await setDoc(doc(getDb(), "banned_users", targetUid), {
+    uid: targetUid,
+    name: name || "",
+    email: email || "",
+    reason: reason || "",
+    bannedByUid: adminUid,
+    sourceReportId: sourceReportId || "",
+    createdAt: serverTimestamp(),
+    until: Timestamp.fromMillis(untilMs),
+  });
+}
+
 export async function adminUnbanUser(targetUid) {
   await deleteDoc(doc(getDb(), "banned_users", targetUid));
 }
@@ -691,25 +745,108 @@ export async function adminDeleteReportedContent(collectionName, contentId) {
   await deleteDoc(doc(getDb(), collectionName, contentId));
 }
 
+function getStorageInstance() {
+  try {
+    return getStorage(getApp(), firebaseConfig.storageBucket);
+  } catch (_) {
+    return getStorage(initializeApp(firebaseConfig), firebaseConfig.storageBucket);
+  }
+}
+
+async function deleteStorageBestEffort(paths = [], urls = []) {
+  const storage = getStorageInstance();
+  await Promise.allSettled([
+    ...[...new Set(paths.filter(Boolean))].map((path) => deleteObject(storageRef(storage, path))),
+    ...[...new Set(urls.filter(Boolean))].map((url) => {
+      try {
+        return deleteObject(refFromURL(storage, url));
+      } catch (_) {
+        return Promise.resolve();
+      }
+    }),
+  ]);
+}
+
+async function deleteDocsBestEffort(q) {
+  try {
+    await deleteDocsFromQuery(q);
+  } catch (error) {
+    console.warn("Account deletion query failed (best-effort):", error);
+  }
+}
+
 export async function deleteAccountData(uid) {
   const db = getDb();
+  const userSnap = await getDoc(doc(db, "users", uid));
+  const userData = userSnap.exists() ? userSnap.data() : {};
+  const profilePaths = [
+    userData.profileImagePathThumb,
+    userData.profileImagePathFull,
+  ].filter(Boolean);
+  const profileUrls = [
+    userData.profileImageUrlThumb,
+    userData.profileImageUrlFull,
+    userData.photoUrl,
+  ].filter(Boolean);
+
+  const worksSnap = await getDocs(query(collection(db, "works"), where("userId", "==", uid)));
+  const workPaths = worksSnap.docs.flatMap((d) => {
+    const data = d.data() || {};
+    return [data.imagePathThumb, data.imagePathFull, data.imagePath].filter(Boolean);
+  });
+  const workUrls = worksSnap.docs.flatMap((d) => {
+    const data = d.data() || {};
+    return [data.imageUrlThumb, data.imageUrlFull, data.imageUrl].filter(Boolean);
+  });
+
+  const jobsSnap = await getDocs(query(collection(db, "jobs"), where("userId", "==", uid)));
+  const jobIds = jobsSnap.docs.map((d) => d.id);
+
+  await deleteStorageBestEffort([...profilePaths, ...workPaths], [...profileUrls, ...workUrls]);
+
   await Promise.all([
-    deleteDocsFromQuery(query(collection(db, "works"), where("userId", "==", uid))),
-    deleteDocsFromQuery(query(collection(db, "jobs"), where("userId", "==", uid))),
-    deleteDocsFromQuery(query(collection(db, "offers"), where("userId", "==", uid))),
-    deleteDocsFromQuery(query(collection(db, "applications"), where("workerId", "==", uid))),
-    deleteDocsFromQuery(query(collection(db, "applications"), where("jobOwnerId", "==", uid))),
-    deleteDocsFromQuery(query(collection(db, "notifications"), where("targetUid", "==", uid))),
-    deleteDocsFromQuery(query(collection(db, "messages"), where("senderId", "==", uid))),
+    deleteDocsBestEffort(query(collection(db, "works"), where("userId", "==", uid))),
+    deleteDocsBestEffort(query(collection(db, "jobs"), where("userId", "==", uid))),
+    deleteDocsBestEffort(query(collection(db, "offers"), where("userId", "==", uid))),
+    deleteDocsBestEffort(query(collection(db, "applications"), where("workerId", "==", uid))),
+    deleteDocsBestEffort(query(collection(db, "applications"), where("jobOwnerId", "==", uid))),
+    deleteDocsBestEffort(query(collection(db, "notifications"), where("targetUid", "==", uid))),
+    deleteDocsBestEffort(query(collection(db, "messages"), where("senderId", "==", uid))),
+    deleteDocsBestEffort(query(collection(db, "messages"), where("receiverId", "==", uid))),
+    deleteDocsBestEffort(query(collection(db, "blocked_users"), where("blockerUid", "==", uid))),
+    deleteDocsBestEffort(query(collection(db, "blocked_users"), where("blockedUid", "==", uid))),
+    deleteDocsBestEffort(query(collection(db, "reports"), where("reporterUid", "==", uid))),
+    deleteDocsBestEffort(query(collection(db, HOME_TIPS), where("authorUid", "==", uid))),
   ]);
+
+  await Promise.all(
+    jobIds.map((jobId) =>
+      deleteDocsBestEffort(query(collection(db, "applications"), where("jobId", "==", jobId))),
+    ),
+  );
+
+  try {
+    await deleteDocsFromQuery(
+      query(collectionGroup(db, "ratings"), where("raterUid", "==", uid), limit(200)),
+    );
+  } catch (error) {
+    console.warn("Outgoing ratings deletion skipped:", error);
+  }
+
+  try {
+    await deleteDoc(doc(db, "verification_requests", uid));
+  } catch (_) {}
   try {
     await deleteDoc(doc(db, HOME_TIPS, `author_${uid}`));
   } catch (_) {}
+
   await Promise.all([
-    deleteDocsFromQuery(query(collection(db, "users", uid, "following"))),
-    deleteDocsFromQuery(query(collection(db, "users", uid, "followers"))),
-    deleteDocsFromQuery(query(collection(db, "users", uid, "ratings"))),
+    deleteDocsBestEffort(query(collection(db, "users", uid, "following"))),
+    deleteDocsBestEffort(query(collection(db, "users", uid, "followers"))),
+    deleteDocsBestEffort(query(collection(db, "users", uid, "ratings"))),
   ]);
-  await deleteDoc(doc(db, "public_profiles", uid));
+  try {
+    await deleteDoc(doc(db, "public_profiles", uid));
+  } catch (_) {}
   await deleteDoc(doc(db, "users", uid));
 }

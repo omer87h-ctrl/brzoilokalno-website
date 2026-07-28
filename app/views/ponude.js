@@ -85,7 +85,8 @@ export function renderPonudaDetail({ offer, currentUid = "", ownerProfile = null
   const when = escapeHtml(offer.availableWhen || "");
   const date = formatTimestamp(offer.timestamp);
   const desc = escapeHtml(offer.description || "Nema opisa.");
-  const phone = offer.contactPhone ? escapeHtml(offer.contactPhone) : "";
+  const preferChat = offer.preferInAppChat === true;
+  const phone = !preferChat && offer.contactPhone ? escapeHtml(offer.contactPhone) : "";
   const ownerUid = offer.userId;
   const isOwner = ownerUid && ownerUid === currentUid;
 
@@ -104,7 +105,13 @@ export function renderPonudaDetail({ offer, currentUid = "", ownerProfile = null
         <p class="detail-card__meta">${category} · ${city} · ${escapeHtml(date)}</p>
         <p class="detail-card__budget">${budget}${when ? ` · ${when}` : ""}</p>
         <p class="detail-card__desc">${desc}</p>
-        ${phone ? `<p class="detail-card__meta">Kontakt: ${phone}</p>` : ""}
+        ${
+          preferChat
+            ? `<p class="detail-card__meta">Dogovor preko Chata u aplikaciji — javni telefon nije objavljen.</p>`
+            : phone
+              ? `<p class="detail-card__meta">Kontakt: ${phone}</p>`
+              : ""
+        }
         ${
           isOwner
             ? `<div class="detail-actions">

@@ -43,6 +43,8 @@ export function renderAdminModeration({ reports = [], banned = [], error = "" })
           <div class="app-card__actions">
             ${canDelete}
             <button type="button" class="btn btn--ghost btn--sm" data-admin-ban="${escapeHtml(r.id)}" data-target-uid="${escapeHtml(r.targetUserId || r.targetId || "")}" data-target-name="${escapeHtml(r.targetUserName || "")}" data-target-email="${escapeHtml(r.targetUserEmail || "")}">Ban korisnika</button>
+            <button type="button" class="btn btn--ghost btn--sm" data-admin-restrict="${escapeHtml(r.id)}" data-target-uid="${escapeHtml(r.targetUserId || r.targetId || "")}" data-target-name="${escapeHtml(r.targetUserName || "")}" data-target-email="${escapeHtml(r.targetUserEmail || "")}" data-days="7">Ograniči 7 dana</button>
+            <button type="button" class="btn btn--ghost btn--sm" data-admin-dismiss="${escapeHtml(r.id)}">Odbaci prijavu</button>
             <button type="button" class="btn btn--primary btn--sm" data-admin-resolve="${escapeHtml(r.id)}">Riješeno</button>
           </div>
         </article>`;
@@ -52,16 +54,20 @@ export function renderAdminModeration({ reports = [], banned = [], error = "" })
 
   const bannedCards = banned.length
     ? banned
-        .map(
-          (b) => `
+        .map((b) => {
+          const untilMs = b.until?.toMillis ? b.until.toMillis() : null;
+          const untilLabel = untilMs
+            ? ` · do ${new Date(untilMs).toLocaleDateString("bs-BA")}`
+            : " · trajno";
+          return `
         <article class="app-card">
           <div class="app-card__head">
             <h3 class="app-card__name">${escapeHtml(b.name || b.uid || "Korisnik")}</h3>
           </div>
-          <p class="app-card__meta">${escapeHtml(b.email || "")}</p>
+          <p class="app-card__meta">${escapeHtml(b.email || "")}${escapeHtml(untilLabel)}</p>
           <button type="button" class="btn btn--ghost btn--sm" data-admin-unban="${escapeHtml(b.uid || b.id)}">Vrati korisnika</button>
-        </article>`
-        )
+        </article>`;
+        })
         .join("")
     : `<div class="empty-state">Nema globalno banovanih.</div>`;
 

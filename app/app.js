@@ -53,6 +53,7 @@ import {
   fetchBlockStatus,
   fetchOpenReports,
   fetchBannedUsersAdmin,
+  fetchOwnBanRecord,
 } from "./services/firestoreReads.js";
 import {
   applyToJob,
@@ -81,7 +82,9 @@ import {
   submitChatUserReport,
   submitFastMatchFeedback,
   resolveReport,
+  dismissReport,
   adminBanUser,
+  adminRestrictUser,
   adminUnbanUser,
   adminDeleteReportedContent,
   updateApplicationStatus,
@@ -1259,7 +1262,29 @@ async function loadRouteContent(route) {
   return renderHome({ selectedCity });
 }
 
+/**
+ * Ban mora vrijediti i na obnovljenu sesiju (refresh / ponovno otvaranje PWA).
+ * Privremeni ban (until) koji je istekao ostaje u evidenciji ali više ne važi —
+ * isto pravilo kao isBanStillActive u firestore.rules.
+ */
+async function enforceBanOnSignIn(user) {
+  const banRecord = await fetchOwnBanRecord(user.uid);
+  if (!banRecord) return false;
+
+  const until = banRecord.until;
+  const untilMs = until?.toMillis ? until.toMillis() : null;
+  if (untilMs !== null && untilMs <= Date.now()) return false;
+
+  await signOutUser();
+  authError = untilMs
+    ? `Nalog je privremeno ograničen do ${new Date(untilMs).toLocaleDateString("bs-BA")}.`
+    : "Vaš nalog je uklonjen.";
+  navigateTo("#/login");
+  return true;
+}
+
 async function afterAuthSuccess(user) {
+  if (await enforceBanOnSignIn(user)) return;
   const profile = await fetchUserProfile(user.uid);
   if (profileHasPolicyConsent(profile)) {
     saveLocalPolicyConsent();
@@ -2586,10 +2611,53 @@ function bindSearchAndFilters() {
           adminUid: currentUser.uid,
           sourceReportId: btn.dataset.adminBan || "",
         });
+        // Ban zatvara i prijavu, isto kao na Androidu.
+        const reportId = btn.dataset.adminBan || "";
+        if (reportId) await resolveReport(reportId, currentUser.uid, "banned");
         adminModerationError = "";
         renderApp();
       } catch (error) {
         adminModerationError = "Ban nije uspio (provjeri admin prava).";
+        renderApp();
+      }
+    });
+  });
+
+  document.querySelectorAll("[data-admin-restrict]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const targetUid = btn.dataset.targetUid;
+      const days = Number(btn.dataset.days) || 7;
+      if (!targetUid || !confirm(`Ograniči na ${days} dana?`)) return;
+      try {
+        await adminRestrictUser({
+          targetUid,
+          name: btn.dataset.targetName || "",
+          email: btn.dataset.targetEmail || "",
+          reason: "Admin moderacija",
+          adminUid: currentUser.uid,
+          sourceReportId: btn.dataset.adminRestrict || "",
+          days,
+        });
+        const reportId = btn.dataset.adminRestrict || "";
+        if (reportId) await resolveReport(reportId, currentUser.uid, `restricted_${days}d`);
+        adminModerationError = "";
+        renderApp();
+      } catch (error) {
+        adminModerationError = "Privremeno ograničenje nije uspjelo.";
+        renderApp();
+      }
+    });
+  });
+
+  document.querySelectorAll("[data-admin-dismiss]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      if (!confirm("Odbaciti prijavu kao neosnovanu?")) return;
+      try {
+        await dismissReport(btn.dataset.adminDismiss, currentUser.uid);
+        adminModerationError = "";
+        renderApp();
+      } catch (error) {
+        adminModerationError = "Odbacivanje prijave nije uspjelo.";
         renderApp();
       }
     });
@@ -3063,7 +3131,16 @@ window.addEventListener("hashchange", () => {
 
 watchAuth((user) => {
   currentUser = user;
-  if (booted) renderApp();
+  if (!booted) return;
+  if (user) {
+    // Ban mora važiti i na obnovljenu sesiju (refresh / ponovno otvaranje PWA),
+    // ne samo na svježu prijavu kroz afterAuthSuccess.
+    enforceBanOnSignIn(user).then((banned) => {
+      if (!banned) renderApp();
+    });
+  } else {
+    renderApp();
+  }
 });
 
 boot();

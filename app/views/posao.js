@@ -15,13 +15,15 @@ function isChatOpen(status) {
   return status === "accepted" || status === "completed";
 }
 
-function contactHint({ jobOwnerProfile, myApplication, chatEnabled }) {
+function contactHint({ job, jobOwnerProfile, myApplication, chatEnabled }) {
   if (!myApplication || !isChatOpen(myApplication.status)) return "";
-  if (jobOwnerProfile?.preferInAppChat && chatEnabled) {
+  const preferChat =
+    job?.preferInAppChat === true || jobOwnerProfile?.preferInAppChat === true;
+  if (preferChat && chatEnabled) {
     return `<p class="form-hint">Vlasnik preferira dogovor preko chata u aplikaciji.</p>`;
   }
-  const phone = jobOwnerProfile?.contactPhone || "";
-  if (phone && jobOwnerProfile?.preferInAppChat !== true) {
+  const phone = jobOwnerProfile?.contactPhone || job?.contactPhone || "";
+  if (phone && !preferChat) {
     return `<p class="form-hint">Kontakt: ${escapeHtml(phone)}</p>`;
   }
   return "";
@@ -73,7 +75,7 @@ export function renderPosao({
               : ""
           }
         </div>
-        ${contactHint({ jobOwnerProfile, myApplication, chatEnabled })}`;
+        ${contactHint({ job, jobOwnerProfile, myApplication, chatEnabled })}`;
     } else {
       actionHtml = `
         <div class="detail-actions">

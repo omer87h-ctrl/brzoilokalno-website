@@ -576,6 +576,16 @@ export async function fetchOpenReports(max = 30) {
   }
 }
 
+export async function fetchOwnBanRecord(uid) {
+  if (!uid) return null;
+  try {
+    const snap = await getDoc(doc(getDb(), "banned_users", uid));
+    return snap.exists() ? { id: snap.id, ...snap.data() } : null;
+  } catch {
+    return null;
+  }
+}
+
 export async function fetchBannedUsersAdmin(max = 50) {
   const snap = await getDocs(query(collection(getDb(), "banned_users"), limit(max)));
   return mapDocs(snap);
