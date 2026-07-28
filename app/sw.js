@@ -1,8 +1,8 @@
 /**
- * Service worker — scope /app/
- * Cache samo statički asseti. Ne cacheuje Firestore podatke.
+ * Service worker - scope /app/
+ * Cache only static assets. Never cache Firestore data.
  */
-const CACHE_NAME = "bil-app-static-v59";
+const CACHE_NAME = "bil-app-static-v60";
 const STATIC_ASSETS = [
   "./",
   "./index.html",
@@ -24,6 +24,7 @@ const STATIC_ASSETS = [
   "./utils/verified.js",
   "./utils/follow.js",
   "./utils/plurals.js",
+  "./utils/contactPreferences.js",
   "./services/firebaseService.js",
   "./services/firestoreReads.js",
   "./services/firestoreWrites.js",

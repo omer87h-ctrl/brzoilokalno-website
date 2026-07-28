@@ -1633,6 +1633,29 @@ body.app-body.has-app-shell #app-root {
 }
 
 .profile-card__desc,
+.profile-contact-box {
+  margin: 0.55rem 0 0;
+  padding: 0.55rem 0.7rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  text-align: left;
+}
+
+.profile-contact-box__title {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 650;
+  color: var(--accent);
+}
+
+.profile-contact-box__summary {
+  margin: 0.2rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: var(--text-muted);
+}
+
 .profile-card__email {
   margin: 0.75rem 0 0;
   color: var(--text-muted);

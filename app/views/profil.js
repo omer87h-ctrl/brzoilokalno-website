@@ -10,6 +10,13 @@ import {
   renderRepresentationFields,
   renderRepresentationSummary,
 } from "../utils/representation.js";
+import {
+  dialablePhone,
+  normalizeForWhatsApp,
+  ownProfileContactSummary,
+  publicContactVisible,
+  resolveContactPrefs,
+} from "../utils/contactPreferences.js";
 import { ALL_CITIES, KREATOR_CATEGORIES, MAJSTOR_CATEGORIES } from "../data/categories.js";
 
 function isWorker(role) {
@@ -25,22 +32,52 @@ function renderAvatar(user, className = "profile-card__avatar") {
   return `<div class="${className}">${initial}</div>`;
 }
 
-function dialablePhone(phone = "") {
-  return String(phone || "").replace(/[^\d+]/g, "");
+/** Own profile — Android „Kontakt na profilu“ (no email; phone only if !preferInAppChat). */
+function renderOwnContactBlock(user) {
+  const prefs = resolveContactPrefs(user);
+  const summary = escapeHtml(ownProfileContactSummary(prefs));
+  const phoneLine =
+    prefs.hasPhone && !prefs.preferInAppChat
+      ? `<p class="profile-card__meta">${escapeHtml(prefs.phone)}</p>`
+      : "";
+  return `
+    <div class="profile-contact-box">
+      <p class="profile-contact-box__title">Kontakt na profilu</p>
+      ${phoneLine}
+      <p class="profile-contact-box__summary">${summary}</p>
+    </div>`;
 }
 
-function renderProfileContactActions(user) {
+/** Public profile — Pozovi/WhatsApp buttons only; never print email or raw number as card text. */
+function renderProfileContactActions(user, { viewerRole = "", appStatus = "" } = {}) {
   if (!isWorker(user?.role)) return "";
-  const rawPhone = String(user?.contactPhone || "").trim();
-  const phone = dialablePhone(rawPhone);
-  const showPhone = Boolean(phone) && user?.allowPhoneCall !== false && user?.preferInAppChat !== true;
-  const showWhatsApp = Boolean(phone) && user?.allowWhatsApp !== false && user?.preferInAppChat !== true;
+  const prefs = resolveContactPrefs(user);
+  if (
+    !publicContactVisible(prefs, {
+      viewerRole,
+      targetRole: user?.role || "",
+      appStatus,
+    })
+  ) {
+    if (prefs.preferInAppChat) {
+      return `<p class="profile-card__meta">Preferira chat — javni telefon nije ponuđen.</p>`;
+    }
+    return "";
+  }
+  const phone = dialablePhone(prefs.phone);
+  const wa = normalizeForWhatsApp(prefs.phone);
+  const showPhone = prefs.allowPhoneCall && phone;
+  const showWhatsApp = prefs.allowWhatsApp && wa.length >= 10;
   if (!showPhone && !showWhatsApp) return "";
 
   return `
     <div class="detail-actions">
       ${showPhone ? `<a class="btn btn--primary" href="tel:${escapeHtml(phone)}">Pozovi</a>` : ""}
-      ${showWhatsApp ? `<a class="btn btn--ghost" href="https://wa.me/${escapeHtml(phone.replace(/^\+/, ""))}" target="_blank" rel="noopener noreferrer">WhatsApp</a>` : ""}
+      ${
+        showWhatsApp
+          ? `<a class="btn btn--ghost" href="https://wa.me/${escapeHtml(wa)}" target="_blank" rel="noopener noreferrer">WhatsApp</a>`
+          : ""
+      }
     </div>`;
 }
 
@@ -194,7 +231,7 @@ export function renderProfil({
       <div class="screen-scroll">
         <h2 class="screen-title">Profil</h2>
         <div class="empty-state">Profil nije pronađen u bazi za ovaj nalog.</div>
-        <p class="screen-subtitle">Prijavljen: ${escapeHtml(authEmail || "")}</p>
+        <p class="screen-subtitle">Otvori Postavke za podatke naloga. Email se ne prikazuje na profilu.</p>
       </div>`;
   }
 
@@ -230,9 +267,7 @@ export function renderProfil({
           <p class="profile-card__rating">${rating}</p>
           ${worker ? renderFollowerCount(followerCount) : ""}
           <p class="profile-card__desc">${escapeHtml(user.description || "Nema opisa.")}</p>
-          <p class="profile-card__email">${escapeHtml(user.email || authEmail || "")}</p>
-          ${user.contactPhone ? `<p class="profile-card__meta">Tel: ${escapeHtml(user.contactPhone)}</p>` : ""}
-          ${user.preferInAppChat ? `<p class="profile-card__meta">Samo chat u aplikaciji</p>` : ""}
+          ${renderOwnContactBlock(user)}
           ${
             worker && myTip
               ? `<p class="profile-card__tip-status">✓ Savjet aktivan na početnoj · ističe ${escapeHtml(tipExpiryLabel(myTip))}</p>`
@@ -327,6 +362,7 @@ export function renderPregledProfila({
   isFollowing = false,
   viewerRole = "",
   followerCount = 0,
+  appStatus = "",
 }) {
   if (!user) {
     return `
@@ -336,6 +372,7 @@ export function renderPregledProfila({
       </div>`;
   }
 
+  // Never show email on public/own cards — email lives in Postavke only (Android parity + rules).
   const name = escapeHtml(user.displayName || "Korisnik");
   const role = escapeHtml(user.role || "—");
   const city = escapeHtml(user.city || "—");
@@ -359,7 +396,7 @@ export function renderPregledProfila({
         <p class="profile-card__rating">${escapeHtml(rating)}</p>
         ${renderFollowerCount(followerCount)}
         <p class="profile-card__desc">${desc}</p>
-        ${renderProfileContactActions(user)}
+        ${renderProfileContactActions(user, { viewerRole, appStatus })}
         <div class="profile-card__actions">
           ${renderFollowButton({
             profileUid: user.id,

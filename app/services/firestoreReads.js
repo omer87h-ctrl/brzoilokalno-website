@@ -136,7 +136,11 @@ export async function fetchUserProfile(uid, { viewerUid = null } = {}) {
 
   const pubSnap = await getDoc(doc(getDb(), publicProfilesCollection(), uid));
   if (pubSnap.exists()) {
-    return { id: pubSnap.id, ...pubSnap.data() };
+    const data = { id: pubSnap.id, ...pubSnap.data() };
+    // Defense: public_profiles must never expose email (rules + PublicProfileSync).
+    delete data.email;
+    delete data.fcmToken;
+    return data;
   }
 
   return null;
