@@ -495,7 +495,7 @@ body.app-body.has-app-shell #app-root {
   background: transparent;
   color: var(--text);
   font: inherit;
-  font-size: 0.92rem;
+  font-size: 16px; /* ≥16px — inače iOS Safari zumira polje pri fokusu */
   outline: none;
 }
 

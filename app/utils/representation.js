@@ -46,28 +46,36 @@ export function validateRepresentation(data) {
   return "";
 }
 
-/** Fields to merge into users/{uid} on registration. */
-export function representationPayload(data, { serverTimestamp }) {
+/**
+ * Fields to merge into users/{uid} on registration / profile edit.
+ * @param {{ deleteField?: () => unknown, serverTimestamp?: () => unknown }} helpers
+ *   On create, omit delete helpers (nulls are skipped). On update, pass deleteField.
+ */
+export function representationPayload(data, { serverTimestamp, deleteField } = {}) {
   const type = String(data.representationType || "").trim();
   if (type === REPRESENTATION.INDIVIDUAL) {
+    const clear = deleteField ? deleteField() : null;
     return {
       representationType: REPRESENTATION.INDIVIDUAL,
-      businessType: null,
-      businessName: null,
-      businessMunicipality: null,
-      businessDeclarationVersion: null,
-      businessDeclarationAcceptedAt: null,
+      businessType: clear,
+      businessName: clear,
+      businessMunicipality: clear,
+      businessDeclarationVersion: clear,
+      businessDeclarationAcceptedAt: clear,
     };
   }
   if (type === REPRESENTATION.BUSINESS) {
-    return {
+    const payload = {
       representationType: REPRESENTATION.BUSINESS,
       businessType: String(data.businessType || "").trim(),
       businessName: normalizeSpaces(data.businessName).slice(0, 150),
       businessMunicipality: normalizeSpaces(data.businessMunicipality).slice(0, 100),
       businessDeclarationVersion: REPRESENTATION.DECLARATION_VERSION,
-      businessDeclarationAcceptedAt: serverTimestamp(),
     };
+    if (data.businessDeclarationAccepted && serverTimestamp) {
+      payload.businessDeclarationAcceptedAt = serverTimestamp();
+    }
+    return payload;
   }
   return {};
 }

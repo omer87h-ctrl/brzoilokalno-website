@@ -1,5 +1,6 @@
 import { escapeHtml, workImageUrl } from "../utils/format.js";
 import { resolveFollowableRole, viewerCanFollow } from "../utils/follow.js";
+import { pratilac } from "../utils/plurals.js";
 
 export function renderFollowButton({ profileUid, profileRole, viewerRole, isFollowing }) {
   if (!profileUid || !viewerCanFollow(viewerRole) || !resolveFollowableRole({ role: profileRole })) {
@@ -68,6 +69,7 @@ export function renderMojKrug({ following = [], followedWorks = [] }) {
 }
 
 export function renderFollowerCount(count) {
-  if (!count) return "";
-  return `<p class="profile-card__meta">Pratioci · ${count}</p>`;
+  const n = Number(count) || 0;
+  if (n <= 0) return "";
+  return `<p class="profile-card__meta">${escapeHtml(pratilac(n))}</p>`;
 }

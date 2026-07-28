@@ -3,6 +3,7 @@ import {
   collection,
   collectionGroup,
   deleteDoc,
+  deleteField,
   doc,
   getDoc,
   getDocs,
@@ -22,6 +23,7 @@ import { firebaseConfig } from "../firebase.js";
 import { getDb, getAuthInstance, needsEmailVerification } from "./firebaseService.js";
 import { isJobNotificationType } from "../constants/notifications.js";
 import { normalizeSpaces } from "../utils/textInputValidation.js";
+import { representationPayload, validateRepresentation } from "../utils/representation.js";
 import { syncPublicProfile } from "./publicProfile.js";
 
 const HOME_TIPS = "home_master_tips";
@@ -82,6 +84,14 @@ export async function updateUserProfile(uid, data) {
     payload.status = data.status === "zauzet" ? "zauzet" : "slobodan";
     payload.category = normalizeSpaces(data.category);
     payload.occupation = normalizeSpaces(data.occupation);
+  }
+  if (data.representationType) {
+    const repErr = validateRepresentation(data);
+    if (repErr) throw new Error(repErr);
+    Object.assign(
+      payload,
+      representationPayload(data, { serverTimestamp, deleteField }),
+    );
   }
   await setDoc(doc(getDb(), "users", uid), payload, { merge: true });
   const snap = await getDoc(doc(getDb(), "users", uid));

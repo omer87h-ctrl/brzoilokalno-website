@@ -42,7 +42,7 @@ export function renderChat({
   blockStatus = { iBlocked: false, theyBlocked: false },
   replyDraft = null,
 }) {
-  const title = escapeHtml(jobTitle || "Chat");
+  const title = escapeHtml(jobTitle || "Poruke");
   const subtitle = escapeHtml([otherName, otherRole].filter(Boolean).join(" · ") || "Učitavanje…");
   const blocked = blockStatus.iBlocked || blockStatus.theyBlocked;
   const blockHint = blockStatus.theyBlocked

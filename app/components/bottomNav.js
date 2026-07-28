@@ -2,7 +2,7 @@
 
 export function renderBottomNav(activeRoute, { unreadPoslovi = 0 } = {}) {
   const items = [
-    { id: "home", label: "Home", route: "#/home", icon: "⌂" },
+    { id: "home", label: "Početna", route: "#/home", icon: "⌂" },
     { id: "kategorije", label: "Kategorije", route: "#/kategorije", icon: "▦" },
     { id: "poslovi", label: "Poslovi", route: "#/poslovi", icon: "☰" },
     { id: "profil", label: "Profil", route: "#/profil", icon: "◎" },

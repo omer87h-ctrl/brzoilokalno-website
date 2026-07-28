@@ -92,7 +92,11 @@ export function buildRegistrationPayload(uid, data) {
   if (repErr) {
     throw new Error(repErr);
   }
-  const rep = representationPayload(data, { serverTimestamp });
+  // Nakon validateRepresentation deklaracija je potvrđena — timestamp mora ući u create.
+  const rep = representationPayload(
+    { ...data, businessDeclarationAccepted: true },
+    { serverTimestamp },
+  );
   // Firestore create: omit null business fields for individual (deleteField not needed on create).
   if (rep.representationType === "individual") {
     base.representationType = "individual";

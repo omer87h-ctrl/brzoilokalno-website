@@ -44,15 +44,17 @@ export function formatFirestoreError(error) {
   const code = String(error?.code || "");
   const message = String(error?.message || "");
   if (code.includes("permission-denied") || message.includes("permission-denied")) {
-    return "Nemate dozvolu za ovu radnju (Firestore rules).";
+    return "Trenutno nemate dozvolu za ovu radnju. Pokušajte ponovo.";
   }
   if (code.includes("unavailable") || message.includes("unavailable")) {
-    return "Firebase trenutno nije dostupan. Provjerite internet.";
+    return "Provjerite internet vezu i pokušajte ponovo.";
   }
   if (code.includes("failed-precondition")) {
     return "Podaci nisu u ispravnom stanju. Osvježite stranicu i pokušajte ponovo.";
   }
-  if (message) return message.slice(0, 180);
+  if (message) {
+    return "Trenutno nije moguće završiti ovu radnju. Pokušajte ponovo.";
+  }
   return "";
 }
 

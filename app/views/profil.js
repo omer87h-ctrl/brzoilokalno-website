@@ -6,7 +6,10 @@ import { renderFollowButton, renderFollowerCount } from "./follow.js";
 import { renderMojaAktivnost } from "./aktivnost.js";
 import { renderOutdoorPlan } from "./outdoorPlan.js";
 import { renderProfileMetaBadges } from "./verifiedBadge.js";
-import { renderRepresentationSummary } from "../utils/representation.js";
+import {
+  renderRepresentationFields,
+  renderRepresentationSummary,
+} from "../utils/representation.js";
 import { ALL_CITIES, KREATOR_CATEGORIES, MAJSTOR_CATEGORIES } from "../data/categories.js";
 
 function isWorker(role) {
@@ -301,6 +304,12 @@ export function renderProfil({
           <input class="field" name="occupation" value="${escapeHtml(user.occupation || "")}" maxlength="48" placeholder="Zanimanje / usluga">`
             : ""
         }
+        ${renderRepresentationFields({
+          representationType: user.representationType || "",
+          businessType: user.businessType || "",
+          businessName: user.businessName || "",
+          businessMunicipality: user.businessMunicipality || "",
+        })}
         <div class="modal-card__actions">
           <button type="button" class="btn btn--ghost" id="cancel-profile-edit">Odustani</button>
           <button type="submit" class="btn btn--primary">Sačuvaj</button>

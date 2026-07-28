@@ -2053,6 +2053,32 @@ function bindProfileAndModals() {
         }
       }
 
+      const representation = readRepresentationFromForm(form);
+      if (representation.representationType) {
+        const needDecl =
+          representation.representationType === "business" &&
+          (profile?.representationType !== "business" ||
+            profile?.businessType !== representation.businessType ||
+            normalizeSpaces(profile?.businessName || "") !== normalizeSpaces(representation.businessName) ||
+            normalizeSpaces(profile?.businessMunicipality || "") !==
+              normalizeSpaces(representation.businessMunicipality));
+        const repErr = validateRepresentation({
+          ...representation,
+          businessDeclarationAccepted: needDecl
+            ? representation.businessDeclarationAccepted
+            : true,
+        });
+        if (repErr) {
+          profileFormError = repErr;
+          softRenderApp();
+          return;
+        }
+        Object.assign(payload, representation);
+        if (needDecl) {
+          payload.businessDeclarationAccepted = representation.businessDeclarationAccepted;
+        }
+      }
+
       try {
         await updateUserProfile(currentUser.uid, payload);
         invalidateProfilCache();
