@@ -101,6 +101,11 @@ import { subscribeToChatMessages } from "./services/chatService.js";
 import { uploadProfileImage, clearProfileImage, uploadWorkImage } from "./services/storageService.js";
 import { createUserProfile, isGmailEmail, isProfileComplete } from "./services/userProfile.js";
 import {
+  bindRepresentationFields,
+  readRepresentationFromForm,
+  validateRepresentation,
+} from "./utils/representation.js";
+import {
   firstMissingJobFields,
   firstMissingOfferFields,
   normalizeSpaces,
@@ -2795,6 +2800,7 @@ async function handleGoogleSignIn() {
 
 function bindRootEvents() {
   bindHomeActions();
+  bindRepresentationFields(document);
   bindPhase3Actions();
   bindSearchAndFilters();
   bindProfileAndModals();
@@ -2854,10 +2860,17 @@ function bindRootEvents() {
         renderApp();
         return;
       }
+      const representation = readRepresentationFromForm(form);
+      const repErr = validateRepresentation(representation);
+      if (repErr) {
+        authError = repErr;
+        renderApp();
+        return;
+      }
 
       try {
         const cred = await registerWithEmail(email, password);
-        await createUserProfile(cred.user.uid, { email, displayName, role, city });
+        await createUserProfile(cred.user.uid, { email, displayName, role, city, ...representation });
         saveLocalPolicyConsent();
         await sendEmailVerificationIfNeeded(cred.user);
         await afterAuthSuccess(cred.user);
@@ -2865,7 +2878,7 @@ function bindRootEvents() {
         authError = error?.message?.includes("email")
           ? "Email je već u upotrebi ili nije valjan."
           : (error?.message || "Registracija nije uspjela.");
-        const keepAuthUser = /nije potvrđen na serveru/i.test(authError);
+        const keepAuthUser = /nije potvrđen na serveru|Podaci nisu sačuvani/i.test(authError);
         if (!keepAuthUser) {
           try {
             await deleteCurrentUser();
@@ -2948,6 +2961,13 @@ function bindRootEvents() {
         renderApp();
         return;
       }
+      const representation = readRepresentationFromForm(form);
+      const repErr = validateRepresentation(representation);
+      if (repErr) {
+        authError = repErr;
+        renderApp();
+        return;
+      }
 
       try {
         await createUserProfile(currentUser.uid, {
@@ -2955,11 +2975,12 @@ function bindRootEvents() {
           displayName,
           role,
           city,
+          ...representation,
         });
         saveLocalPolicyConsent();
         navigateTo("#/home");
       } catch (error) {
-        authError = "Spremanje profila nije uspjelo.";
+        authError = error?.message || "Podaci nisu sačuvani. Provjerite internet vezu i pokušajte ponovo.";
         renderApp();
       }
     });

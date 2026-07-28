@@ -2,6 +2,7 @@ import { doc, getDoc, serverTimestamp, setDoc, deleteDoc } from "https://www.gst
 import { getAuthInstance, getDb } from "./firebaseService.js";
 import { POLICY_VERSION } from "../constants/policy.js";
 import { syncPublicProfile } from "./publicProfile.js";
+import { representationPayload, validateRepresentation } from "../utils/representation.js";
 
 const FIELD_LIMITS = {
   id: 128,
@@ -35,6 +36,12 @@ export function isProfileComplete(profile) {
   return profile.acceptedTerms === true && profile.acceptedPrivacyPolicy === true;
 }
 
+/** Novi nalozi moraju imati representationType; legacy bez polja ne forsira se na individual. */
+export function hasRepresentationType(profile) {
+  const t = String(profile?.representationType || "").trim();
+  return t === "individual" || t === "business";
+}
+
 function isTransientFirestoreError(error) {
   const msg = String(error?.message || error?.code || "");
   return /permission|credential|insufficient|unauthenticated|network|unavailable/i.test(msg);
@@ -48,19 +55,21 @@ function formatProfileSaveError(error) {
     );
   }
   if (/permission/i.test(msg)) {
-    return new Error("Server je odbio profil (Firestore pravila). Pokušaj ponovo.");
+    return new Error("Trenutno nije moguće sačuvati profil. Pokušajte ponovo.");
   }
   if (/credential|insufficient|unauthenticated/i.test(msg)) {
     return new Error(
       "Sesija nije spremna. Osvježi stranicu i pokušaj ponovo. Za @gmail.com koristi «Prijavi se s Googleom»."
     );
   }
-  return error instanceof Error ? error : new Error(msg || "Spremanje profila nije uspjelo.");
+  return error instanceof Error
+    ? error
+    : new Error(msg || "Podaci nisu sačuvani. Provjerite internet vezu i pokušajte ponovo.");
 }
 
 export function buildRegistrationPayload(uid, data) {
   const role = data.role || "korisnik";
-  return {
+  const base = {
     id: truncate(uid, FIELD_LIMITS.id),
     email: truncate(data.email, FIELD_LIMITS.email),
     displayName: truncate(data.displayName, FIELD_LIMITS.displayName),
@@ -79,7 +88,21 @@ export function buildRegistrationPayload(uid, data) {
     ratingCount: 0,
     consentAcceptedAt: serverTimestamp(),
   };
+  const repErr = validateRepresentation(data);
+  if (repErr) {
+    throw new Error(repErr);
+  }
+  const rep = representationPayload(data, { serverTimestamp });
+  // Firestore create: omit null business fields for individual (deleteField not needed on create).
+  if (rep.representationType === "individual") {
+    base.representationType = "individual";
+  } else {
+    Object.assign(base, rep);
+  }
+  return base;
 }
+
+export { validateRepresentation };
 
 async function verifyProfileOnServer(uid, maxAttempts = 10) {
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
@@ -87,9 +110,10 @@ async function verifyProfileOnServer(uid, maxAttempts = 10) {
       await new Promise((resolve) => setTimeout(resolve, 600 * attempt));
     }
     const snap = await getDoc(doc(getDb(), "users", uid));
-    if (isProfileComplete(snap.data())) return snap.data();
+    const data = snap.data();
+    if (isProfileComplete(data) && hasRepresentationType(data)) return data;
   }
-  throw new Error("Profil nije potvrđen na serveru. Provjeri internet i pokušaj ponovo.");
+  throw new Error("Podaci nisu sačuvani. Provjerite internet vezu i pokušajte ponovo.");
 }
 
 export async function createUserProfile(uid, data) {

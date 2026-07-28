@@ -1,6 +1,7 @@
 import { ALL_CITIES, USER_ROLES } from "../data/categories.js";
 import { POLICY_LINKS } from "../constants/policy.js";
 import { escapeHtml } from "../utils/format.js";
+import { renderRepresentationFields } from "../utils/representation.js";
 
 export function renderRegister({ error = "" }) {
   const cityOptions = ALL_CITIES.map(
@@ -29,6 +30,7 @@ export function renderRegister({ error = "" }) {
             <option value="">Odaberi grad</option>
             ${cityOptions}
           </select>
+          ${renderRepresentationFields()}
           <label class="auth-check">
             <input type="checkbox" name="acceptedTerms" required>
             <span>Prihvatam <a href="${POLICY_LINKS.terms}" target="_blank" rel="noopener noreferrer">Pravila i uslove</a></span>

@@ -6,6 +6,7 @@ import { renderFollowButton, renderFollowerCount } from "./follow.js";
 import { renderMojaAktivnost } from "./aktivnost.js";
 import { renderOutdoorPlan } from "./outdoorPlan.js";
 import { renderProfileMetaBadges } from "./verifiedBadge.js";
+import { renderRepresentationSummary } from "../utils/representation.js";
 import { ALL_CITIES, KREATOR_CATEGORIES, MAJSTOR_CATEGORIES } from "../data/categories.js";
 
 function isWorker(role) {
@@ -222,6 +223,7 @@ export function renderProfil({
           ${renderProfileStatusToggle(user)}
           <p class="profile-card__meta">${escapeHtml(role)} · ${escapeHtml(user.category || user.occupation || "—")}</p>
           <p class="profile-card__meta">${escapeHtml(user.city || "—")}</p>
+          ${renderRepresentationSummary(user)}
           <p class="profile-card__rating">${rating}</p>
           ${worker ? renderFollowerCount(followerCount) : ""}
           <p class="profile-card__desc">${escapeHtml(user.description || "Nema opisa.")}</p>
@@ -344,6 +346,7 @@ export function renderPregledProfila({
         ${renderProfileMetaBadges(user)}
         <p class="profile-card__meta">${role} · ${category}</p>
         <p class="profile-card__meta">${city} · ${status}</p>
+        ${renderRepresentationSummary(user)}
         <p class="profile-card__rating">${escapeHtml(rating)}</p>
         ${renderFollowerCount(followerCount)}
         <p class="profile-card__desc">${desc}</p>

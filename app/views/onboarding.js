@@ -1,6 +1,7 @@
 import { ALL_CITIES, USER_ROLES } from "../data/categories.js";
 import { POLICY_LINKS } from "../constants/policy.js";
 import { escapeHtml } from "../utils/format.js";
+import { renderRepresentationFields } from "../utils/representation.js";
 
 export function renderOnboarding({ user, error = "", defaults = {}, isGoogleUser = false, skipPolicyConsent = false }) {
   const cityOptions = ALL_CITIES.map((city) => {
@@ -25,7 +26,7 @@ export function renderOnboarding({ user, error = "", defaults = {}, isGoogleUser
         <h1 class="status-card__title">${isGoogleUser ? "Dovrši Google prijavu" : "Dovrši profil"}</h1>
         <p class="status-card__text status-card__text--muted">${
           isGoogleUser
-            ? "Unesi podatke kao pri registraciji (ime, grad, uloga) i prihvati pravila:"
+            ? "Unesi ime, grad, ulogu i način predstavljanja, zatim prihvati pravila."
             : "Još par koraka prije korištenja aplikacije"
         }</p>
         ${error ? `<p class="admin-login__error">${escapeHtml(error)}</p>` : ""}
@@ -38,6 +39,7 @@ export function renderOnboarding({ user, error = "", defaults = {}, isGoogleUser
             <option value="">Odaberi grad</option>
             ${cityOptions}
           </select>
+          ${renderRepresentationFields(defaults)}
           ${
             skipPolicyConsent
               ? ""

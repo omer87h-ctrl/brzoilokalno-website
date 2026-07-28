@@ -12,6 +12,9 @@ const FORBIDDEN_PUBLIC_PROFILE_FIELDS = [
   "acceptedTerms",
   "acceptedPrivacyPolicy",
   "policyVersion",
+  "businessDeclarationVersion",
+  "businessDeclarationAcceptedAt",
+  "consentAcceptedAt",
 ];
 
 /** Javni profil — bez emaila, tokena i privatnih polja naloga. */
@@ -35,6 +38,21 @@ export function toPublicProfile(uid, data = {}, { forClientWrite = true } = {}) 
     allowPhoneCall: data.allowPhoneCall !== false,
     allowWhatsApp: data.allowWhatsApp !== false,
   };
+
+  const representationType = String(data.representationType || "").trim();
+  if (representationType === "individual") {
+    profile.representationType = "individual";
+    if (forClientWrite) {
+      profile.businessType = deleteField();
+      profile.businessName = deleteField();
+      profile.businessMunicipality = deleteField();
+    }
+  } else if (representationType === "business") {
+    profile.representationType = "business";
+    profile.businessType = String(data.businessType || "").trim();
+    profile.businessName = String(data.businessName || "").trim();
+    profile.businessMunicipality = String(data.businessMunicipality || "").trim();
+  }
 
   if (!forClientWrite) {
     profile.profileVerified = data.profileVerified === true;
