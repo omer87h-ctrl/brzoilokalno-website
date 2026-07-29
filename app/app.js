@@ -1361,7 +1361,7 @@ async function renderApp() {
   } catch (error) {
     console.error("Profile load failed:", error);
     setRoot(
-      renderScreenError("Nije moguće učitati profil. Provjerite internet i Firestore rules.")
+      renderScreenError("Nije moguće učitati profil. Provjerite internet vezu i pokušajte ponovo.")
     );
     return;
   }
@@ -1451,7 +1451,7 @@ async function renderApp() {
     if (requestId !== screenRequestId) return;
     renderShellWithContent(
       route,
-      renderScreenError("Nije moguće učitati podatke. Provjerite Firestore rules.")
+      renderScreenError("Nije moguće učitati podatke. Provjerite internet vezu i pokušajte ponovo.")
     );
     bootInitialLoad = false;
   }
@@ -1468,7 +1468,7 @@ async function boot() {
       adminOnly: true,
       chatEnabled: false,
       maintenanceMessage:
-        "Nije moguće učitati konfiguraciju. Provjerite Firestore rules za app_public/web.",
+        "Nije moguće učitati konfiguraciju. Provjerite internet vezu i pokušajte ponovo.",
       _missing: true,
       _error: true,
     };

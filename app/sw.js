@@ -2,7 +2,7 @@
  * Service worker - scope /app/
  * Cache only static assets. Never cache Firestore data.
  */
-const CACHE_NAME = "bil-app-static-v63";
+const CACHE_NAME = "bil-app-static-v64";
 const STATIC_ASSETS = [
   "./",
   "./index.html",
@@ -25,6 +25,7 @@ const STATIC_ASSETS = [
   "./utils/follow.js",
   "./utils/plurals.js",
   "./utils/contactPreferences.js",
+  "./utils/profileProgress.js",
   "./services/firebaseService.js",
   "./services/firestoreReads.js",
   "./services/firestoreWrites.js",

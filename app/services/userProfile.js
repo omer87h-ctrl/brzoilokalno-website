@@ -51,7 +51,7 @@ function formatProfileSaveError(error) {
   const msg = String(error?.message || "");
   if (/app attestation|app check/i.test(msg)) {
     return new Error(
-      "App Check nije podešen za web. U Firebase Console dodaj reCAPTCHA site key i debug token (localhost)."
+      "Trenutno nije moguće sačuvati profil. Provjerite internet vezu i pokušajte ponovo."
     );
   }
   if (/permission/i.test(msg)) {

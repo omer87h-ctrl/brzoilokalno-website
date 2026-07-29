@@ -17,6 +17,7 @@ import {
   publicContactVisible,
   resolveContactPrefs,
 } from "../utils/contactPreferences.js";
+import { buildOwnProfileProgress } from "../utils/profileProgress.js";
 import { ALL_CITIES, KREATOR_CATEGORIES, MAJSTOR_CATEGORIES } from "../data/categories.js";
 
 function isWorker(role) {
@@ -30,6 +31,29 @@ function renderAvatar(user, className = "profile-card__avatar") {
     return `<img class="${className} ${className}--img" src="${escapeHtml(avatarUrl)}" alt="" />`;
   }
   return `<div class="${className}">${initial}</div>`;
+}
+
+/** Own profile — Android „Napredak profila“ (what is still missing). */
+function renderOwnProfileProgress(user, { dashboard = null, works = [] } = {}) {
+  const p = buildOwnProfileProgress(user, { dashboard, works });
+  const missingList =
+    !p.verified && p.missing.length > 0
+      ? `<ul class="profile-progress__list">${p.missing
+          .map((item) => `<li>${escapeHtml(item)}</li>`)
+          .join("")}</ul>`
+      : "";
+  const bar = p.showProgress
+    ? `<div class="profile-progress__bar" role="progressbar" aria-valuenow="${p.points}" aria-valuemin="0" aria-valuemax="100">
+        <span class="profile-progress__bar-fill" style="width:${Math.round(p.progress * 100)}%"></span>
+      </div>`
+    : "";
+  return `
+    <div class="profile-progress">
+      <p class="profile-progress__title">${escapeHtml(p.headline)}</p>
+      <p class="profile-progress__hint">${escapeHtml(p.hint)}</p>
+      ${bar}
+      ${missingList}
+    </div>`;
 }
 
 /** Own profile — Android „Kontakt na profilu“ (no email; phone only if !preferInAppChat). */
@@ -261,6 +285,7 @@ export function renderProfil({
           <h3 class="profile-card__name">${escapeHtml(user.displayName || "Korisnik")}</h3>
           ${renderProfileMetaBadges(user)}
           ${renderProfileStatusToggle(user)}
+          ${renderOwnProfileProgress(user, { dashboard: activityDashboard, works: myWorks })}
           <p class="profile-card__meta">${escapeHtml(role)} · ${escapeHtml(user.category || user.occupation || "—")}</p>
           <p class="profile-card__meta">${escapeHtml(user.city || "—")}</p>
           ${renderRepresentationSummary(user)}

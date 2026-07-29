@@ -1632,6 +1632,58 @@ body.app-body.has-app-shell #app-root {
   margin-top: 0.65rem;
 }
 
+.profile-progress {
+  margin: 0.55rem 0 0;
+  padding: 0.65rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  text-align: left;
+}
+
+.profile-progress__title {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.profile-progress__hint {
+  margin: 0.25rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: var(--text-muted);
+}
+
+.profile-progress__bar {
+  margin-top: 0.55rem;
+  height: 6px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--border) 80%, transparent);
+  overflow: hidden;
+}
+
+.profile-progress__bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+
+.profile-progress__list {
+  margin: 0.5rem 0 0;
+  padding: 0 0 0 1.1rem;
+  list-style: disc;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.profile-progress__list li {
+  margin: 0.15rem 0;
+}
+
 .profile-card__desc,
 .profile-contact-box {
   margin: 0.55rem 0 0;
