@@ -1,6 +1,5 @@
 /**
- * Own-profile „Napredak profila“ — same checks as Android ProfilScreen
- * (OtherScreens.kt missingForVerification / verificationPoints).
+ * Profile completeness UI helpers — Android ProfilScreen / PregledProfilaScreen.
  */
 import { profileAvatarUrl } from "../services/storageService.js";
 import { hasDialablePhone, resolveContactPrefs } from "./contactPreferences.js";
@@ -8,6 +7,78 @@ import { isProfileVerified } from "./verified.js";
 
 function isWorker(role) {
   return role === "majstor" || role === "kreator";
+}
+
+/**
+ * Public profile „Na profilu nije navedeno“ — Android profilePublicMissingHints.
+ * @returns {{ title: string, hints: string[] }}
+ */
+export function buildPublicProfileMissingHints(
+  profile,
+  { viewerRole = "", works = [], appStatus = "" } = {},
+) {
+  const viewerIsProvider = viewerRole === "majstor" || viewerRole === "kreator";
+  const viewerIsKorisnik = viewerRole === "korisnik";
+  if (!viewerIsProvider && !viewerIsKorisnik) {
+    return { title: "", hints: [] };
+  }
+
+  const followable = isWorker(profile?.role) ? String(profile.role) : null;
+  const title = followable
+    ? "Na profilu nije navedeno"
+    : "Na profilu korisnika nije navedeno";
+
+  const city = String(profile?.city || "").trim();
+  const contact = String(profile?.contactPhone || "").trim();
+  const prefs = resolveContactPrefs(profile || {});
+  const occupation = String(profile?.occupation || "").trim();
+  const category = String(profile?.category || "").trim();
+  const desc = String(profile?.description || "").trim();
+  const hasAvatar = Boolean(profileAvatarUrl(profile));
+  const worksPreview = Array.isArray(works) ? works : [];
+
+  let contactAllowed = false;
+  if (followable) {
+    if (appStatus) {
+      const st = String(appStatus).toLowerCase();
+      contactAllowed = st === "accepted" || st === "completed";
+    } else {
+      contactAllowed = true;
+    }
+  }
+
+  const hints = [];
+  if (!followable && (viewerIsProvider || viewerIsKorisnik)) {
+    if (!desc) hints.push("Nije upisana kratka napomena na profilu.");
+    if (!city) hints.push("Grad nije naveden na profilu.");
+    if (!contact) {
+      hints.push("Telefon nije na profilu — dogovor preko Chata na Poslovima.");
+    } else if (prefs.preferInAppChat) {
+      hints.push("Ne objavljuje javni telefon — preferira chat u aplikaciji.");
+    } else if (!contactAllowed) {
+      hints.push("Kontakt na profilu tek nakon prihvaćene prijave.");
+    } else if (!hasDialablePhone(contact)) {
+      hints.push("Broj na profilu nije valjan za poziv ili WhatsApp.");
+    } else if (!prefs.allowPhoneCall && !prefs.allowWhatsApp) {
+      hints.push("Telefon je upisan, ali poziv i WhatsApp su isključeni.");
+    }
+    if (!hasAvatar) hints.push("Nema profilne slike.");
+  } else if (followable) {
+    if (!occupation && !category) {
+      hints.push("Zanimanje / kategorija nisu navedeni.");
+    }
+    if (!desc) hints.push("Nema opisa (O meni).");
+    if (!contact) hints.push("Kontakt telefon nije javan.");
+    else if (prefs.preferInAppChat) {
+      hints.push("Preferira chat — javni telefon nije ponuđen.");
+    } else if (!prefs.allowPhoneCall && !prefs.allowWhatsApp) {
+      hints.push("Telefon postoji, ali poziv i WhatsApp su isključeni.");
+    }
+    if (worksPreview.length === 0) hints.push("Nema javnih radova na profilu.");
+    if (!hasAvatar) hints.push("Nema profilne slike.");
+  }
+
+  return { title, hints };
 }
 
 export function buildOwnProfileProgress(user, { dashboard = null, works = [] } = {}) {

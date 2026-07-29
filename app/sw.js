@@ -2,7 +2,7 @@
  * Service worker - scope /app/
  * Cache only static assets. Never cache Firestore data.
  */
-const CACHE_NAME = "bil-app-static-v64";
+const CACHE_NAME = "bil-app-static-v65";
 const STATIC_ASSETS = [
   "./",
   "./index.html",

@@ -17,7 +17,10 @@ import {
   publicContactVisible,
   resolveContactPrefs,
 } from "../utils/contactPreferences.js";
-import { buildOwnProfileProgress } from "../utils/profileProgress.js";
+import {
+  buildOwnProfileProgress,
+  buildPublicProfileMissingHints,
+} from "../utils/profileProgress.js";
 import { ALL_CITIES, KREATOR_CATEGORIES, MAJSTOR_CATEGORIES } from "../data/categories.js";
 
 function isWorker(role) {
@@ -31,6 +34,23 @@ function renderAvatar(user, className = "profile-card__avatar") {
     return `<img class="${className} ${className}--img" src="${escapeHtml(avatarUrl)}" alt="" />`;
   }
   return `<div class="${className}">${initial}</div>`;
+}
+
+/** Public profile — Android „Na profilu nije navedeno“. */
+function renderPublicMissingHints(user, { viewerRole = "", works = [], appStatus = "" } = {}) {
+  const { title, hints } = buildPublicProfileMissingHints(user, {
+    viewerRole,
+    works,
+    appStatus,
+  });
+  if (!hints.length) return "";
+  return `
+    <div class="profile-missing-hints">
+      <p class="profile-missing-hints__title">${escapeHtml(title)}</p>
+      <ul class="profile-missing-hints__list">
+        ${hints.map((h) => `<li>${escapeHtml(h)}</li>`).join("")}
+      </ul>
+    </div>`;
 }
 
 /** Own profile — Android „Napredak profila“ (what is still missing). */
@@ -421,6 +441,7 @@ export function renderPregledProfila({
         <p class="profile-card__rating">${escapeHtml(rating)}</p>
         ${renderFollowerCount(followerCount)}
         <p class="profile-card__desc">${desc}</p>
+        ${renderPublicMissingHints(user, { viewerRole, works, appStatus })}
         ${renderProfileContactActions(user, { viewerRole, appStatus })}
         <div class="profile-card__actions">
           ${renderFollowButton({
