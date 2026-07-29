@@ -101,7 +101,7 @@ export function renderRepresentationSummary(profile) {
   const type = String(profile?.representationType || "").trim();
   if (type === REPRESENTATION.BUSINESS) {
     const name = escapeLite(normalizeSpaces(profile.businessName));
-    const meta = [businessTypeLabel(profile.businessType), normalizeSpaces(profile.businessMunicipality)]
+    const meta = [businessTypeLabelPublic(profile.businessType), normalizeSpaces(profile.businessMunicipality)]
       .filter(Boolean)
       .map(escapeLite)
       .join(" · ");
