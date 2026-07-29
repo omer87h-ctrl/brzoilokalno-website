@@ -25,7 +25,14 @@ export function toPublicProfile(uid, data = {}, { forClientWrite = true } = {}) 
     displayName: String(data.displayName || "").trim(),
     role: String(data.role || "").trim(),
     city: String(data.city || "").trim(),
-    status: String(data.status || "").trim(),
+    status: (() => {
+      const role = String(data.role || "").trim();
+      const raw = String(data.status || "").trim().toLowerCase();
+      if (role === "majstor" || role === "kreator") {
+        return raw === "zauzet" ? "zauzet" : "slobodan";
+      }
+      return raw;
+    })(),
     category: String(data.category || "").trim(),
     occupation: String(data.occupation || "").trim(),
     description: String(data.description || "").trim(),

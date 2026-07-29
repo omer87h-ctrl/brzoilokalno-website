@@ -1604,6 +1604,37 @@ body.app-body.has-app-shell #app-root {
   cursor: wait;
 }
 
+.profile-card__meta--row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.profile-status-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+}
+
+.profile-status-chip--free {
+  color: #1f7a45;
+  background: rgba(110, 231, 160, 0.16);
+  border-color: rgba(110, 231, 160, 0.45);
+}
+
+.profile-status-chip--busy {
+  color: #b33a2a;
+  background: rgba(255, 138, 120, 0.14);
+  border-color: rgba(255, 138, 120, 0.45);
+}
+
 .profile-quick-action__label {
   line-height: 1.2;
   text-align: center;

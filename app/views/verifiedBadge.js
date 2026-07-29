@@ -10,9 +10,10 @@ export function renderBusyBadge() {
   return `<span class="busy-badge">ZAUZETO</span>`;
 }
 
-export function renderProfileMetaBadges(entity) {
+/** Own profile: verified + ZAUZETO. Public profile: verified only (status chip separate). */
+export function renderProfileMetaBadges(entity, { showBusyBadge = true } = {}) {
   const verified = isProfileVerified(entity);
-  const busy = entity?.status === "zauzet";
+  const busy = showBusyBadge && entity?.status === "zauzet";
   if (!verified && !busy) return "";
   const parts = [];
   if (verified) parts.push(renderProvjerenoBadge());
