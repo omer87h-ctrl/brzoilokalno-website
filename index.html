@@ -34,34 +34,56 @@
         "logo": "https://brzoilokalno.com/assets/app-icon.png",
         "sameAs": [
           "https://www.instagram.com/brzo.i.lokalno/",
+          "https://play.google.com/store/apps/details?id=com.brzoilokalno",
           "https://appgallery.cloud.huawei.com/ag/n/app/C117382847"
-        ]
+        ],
+        "@id": "https://brzoilokalno.com/#organization"
       },
       {
         "@type": "WebSite",
         "name": "Brzo i Lokalno",
         "url": "https://brzoilokalno.com/",
         "description": "Majstori, kreatori i usluge u tvom gradu u Bosni i Hercegovini.",
-        "publisher": { "@type": "Organization", "name": "Brzo i Lokalno" }
+        "publisher": {
+          "@id": "https://brzoilokalno.com/#organization"
+        },
+        "@id": "https://brzoilokalno.com/#website"
       },
-     {
-  "@type": "SoftwareApplication",
-  "name": "Brzo i Lokalno",
-  "description": "Aplikacija za majstore, kreatore i korisnike — objavi posao, pronađi majstora i pregledaj radove.",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Android",
-  "url": "https://brzoilokalno.com/",
-  "installUrl": "https://play.google.com/store/apps/details?id=com.brzoilokalno",
-  "downloadUrl": [
-    "https://play.google.com/store/apps/details?id=com.brzoilokalno",
-    "https://appgallery.cloud.huawei.com/ag/n/app/C117382847"
-  ],
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "BAM"
-  }
-}
+      {
+        "@type": "SoftwareApplication",
+        "name": "Brzo i Lokalno",
+        "description": "Aplikacija za majstore, kreatore i korisnike — objavi posao, pronađi majstora i pregledaj radove.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Android",
+        "url": "https://brzoilokalno.com/",
+        "installUrl": "https://play.google.com/store/apps/details?id=com.brzoilokalno",
+        "downloadUrl": [
+          "https://play.google.com/store/apps/details?id=com.brzoilokalno",
+          "https://appgallery.cloud.huawei.com/ag/n/app/C117382847"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "BAM"
+        },
+        "@id": "https://brzoilokalno.com/#app",
+        "creator": {
+          "@id": "https://brzoilokalno.com/#creator"
+        },
+        "publisher": {
+          "@id": "https://brzoilokalno.com/#organization"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://brzoilokalno.com/#creator",
+        "name": "Omer Hotović",
+        "sameAs": [
+          "https://medium.com/@omerhotovic87h",
+          "https://github.com/omer87h-ctrl",
+          "https://himalayas.app/@omerh"
+        ]
+      }
     ]
   }
   </script>
@@ -279,6 +301,13 @@
             </span>
           </a>
         </div>
+      </div>
+    </section>
+    <section class="about-platform" aria-labelledby="about-platform-title" style="padding: 2rem 0;">
+      <div class="container" style="max-width: 48rem;">
+        <h2 id="about-platform-title" style="font-size: 1.125rem;">O platformi</h2>
+        <p><strong>Brzo i Lokalno, napravljeno u Bosni i Hercegovini</strong></p>
+        <p>Brzo i Lokalno je nezavisna platforma koja na jednom mjestu povezuje lokalne majstore, kreatore i korisnike. Platformu je kreirao Omer Hotović — od prve ideje i Android aplikacije do web/PWA verzije i objave na trgovinama aplikacija.</p>
       </div>
     </section>
   </main>
