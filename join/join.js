@@ -1,10 +1,6 @@
-import { firebaseConfig } from "../app/firebase.js";
-import { initializeApp, getApps } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
-import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
-import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
-const app = getApps()[0] || initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
+// Only point this at a deployed, validated, rate-limited, App-Check-protected HTTPS endpoint.
+// Do not place secret keys or service-account credentials in this public file.
+const JOIN_ENDPOINT = "";
 const form = document.getElementById("join-form");
 const output = document.getElementById("form-status");
 const button = document.getElementById("submit-button");
@@ -35,13 +31,13 @@ form.addEventListener("submit",async event=>{
   if(Date.now()-last<60000){status("slow","error");return;}
   button.disabled=true;status("sending");
   try {
-    // The Firestore rules in join/firestore-rules.snippet.txt must be deployed by the owner first.
-    // Do not show a success message until addDoc confirms persistence.
-    await signInAnonymously(auth);
-    await addDoc(collection(db,"collaboration_applications"),{
-      fullName,email,role,portfolio,about,availability,
-      consent:true,source:"website",status:"new",createdAt:serverTimestamp()
+    if (!JOIN_ENDPOINT) throw new Error("Application endpoint not configured");
+    const response = await fetch(JOIN_ENDPOINT,{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({fullName,email,role,portfolio,about,availability,consent:true,source:"website"})
     });
+    if(!response.ok)throw new Error("Application submission failed");
     localStorage.setItem("join-last-sent",String(Date.now()));
     form.reset();status("success","success");
   }catch(error){console.error("Join application failed:",error?.code||"unknown");status("error","error");}
