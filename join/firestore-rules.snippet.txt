@@ -1,0 +1,24 @@
+// REVIEW AND MERGE into the EXISTING firestore.rules file in the Firebase source repo.
+// Do NOT replace existing rules. Deploy manually only after review.
+// The submitter uses Firebase Anonymous Authentication. Firebase Auth anonymous provider
+// must be enabled. WARNING: anonymous sign-in is not CAPTCHA or effective spam protection.
+// BEFORE OPENING TO THE PUBLIC, add Firebase App Check enforcement and server-side
+// anti-abuse (rate limits / CAPTCHA verification via Cloud Function).
+// This conservative draft intentionally denies public submissions until those controls exist.
+// Use verified admin email in addition to administrator identity; a dedicated custom admin claim
+// would be stronger. Add to existing match /databases/{database}/documents:
+match /collaboration_applications/{applicationId} {
+  // Admin list/read. Do not make this collection publicly readable.
+  allow get, list: if request.auth != null
+                   && request.auth.token.email == "omer.creating.apps87@gmail.com"
+                   && request.auth.token.email_verified == true;
+  allow update, delete: if request.auth != null
+                   && request.auth.token.email == "omer.creating.apps87@gmail.com"
+                   && request.auth.token.email_verified == true;
+  allow create: if false; // NOT LIVE: need server-side anti-spam, validation & privacy approval.
+}
+// Recommended final architecture: HTTPS Callable Cloud Function /joinApplication using App Check,
+// CAPTCHA token verification, per-IP and per-email throttling, body size/field allowlist validation,
+// normalized emails, server-generated timestamps, and server-only Firestore writes. Use Admin SDK
+// for writes; keep public client write denied. Frontend should call the deployed function instead
+// of writing directly before launch.
