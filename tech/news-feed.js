@@ -25,7 +25,7 @@ window.BL_TECH_PULSE=[
     "date": "2026-09-24",
     "category": "ALATI",
     "kind": "vanjski",
-    "url": "https://android-developers.googleblog.com/2026/09/build-your-way-use-any-ai-agent-in-android-studio.html",
+    "url": "https://developer.android.com/blog/posts/build-your-way-use-any-ai-agent-of-your-choice-in-android-studio",
     "description": "Objava proizvođača o podršci za vlastiti izbor razvojnih agenata."
   },
   {
