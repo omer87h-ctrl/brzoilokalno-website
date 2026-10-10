@@ -43,3 +43,20 @@ Postojeća Android/PWA aplikacija nije mijenjana i ima svoje pravilo privatnosti
 
 ## Objavljivanje
 Promjene se pripremaju na grani feature/tech-editorial-redesign. Glavna domena i aplikacija ne trebaju biti modificirane osim preciznog sitemap.xml za indeksiranje TECH stranica.
+
+## Guardian Core (lokalno, bez Firebasea)
+- /tech/guardian.html: prepoznavanje osnovnih zadataka i izbor korisnih koraka.
+- /tech/telefoni.html: poređenje nekoliko modela s proizvođačkim izvorima, ručni unos cijena, bez lažnih recenzija.
+- /tech/alati.html: kalkulator pločica, boje i jednostavne ponude, te katalog besplatnih alata sa zvaničnim linkovima.
+- /tech/guardian-core.js: lokalni proračuni i namjere, ništa se ne šalje u cloud.
+- /tech/guardian-data.js: urednički kontrolisani podaci o uređajima, alatima i izvorima.
+- /tech/experience.js: mali kontekstualni Guardian na TECH stranicama na osnovu URL-a bez praćenja.
+
+### Kako dodati telefon
+Potvrdi model, tačnu tržišnu varijantu, izvor proizvođača i datum. Uredi jedino pouzdano dostupna polja u guardian-data.js; ne pretpostavljaj masu, kapacitet ili IP. Cijene se trenutno ne prikupljaju niti prikazuju kao javne ponude. Zaključak ne predstavlja praktični test ili ocjenu.
+
+### Kako dodati softver
+Koristi samo zvaničnu stranicu autora, provjeri besplatni režim i licencu, napiši neutralan opis. Ne hostuj izvršne datoteke ni tuđe slike/logotipe bez dozvole.
+
+### Kako dodati vijesti
+Portal nema automatizovani prikupljač vijesti; ažuriranje naslova i RSS-a je uredničko. Ne postoji sistem koji samostalno provjerava i objavljuje vijesti, niti to treba obećavati.

@@ -50,8 +50,8 @@ window.BL_GUARDIAN_DATA={
       "weight": 170,
       "ip": 68,
       "video": 22,
-      "source": "https://www.apple.com/hr/iphone-16/specs/",
-      "note": "Apple Hrvatska: OLED 6,1 inča, 170 g, do 22 h video reprodukcije prema proizvođaču. Nije direktno uporedivo s mAh Androida.",
+      "source": "https://www.apple.com/iphone-16/specs/",
+      "note": "Apple iPhone 16: 6,1 inča, 170 g, IP68, do 22 h video reprodukcije prema proizvođaču. Nije direktno uporedivo s Android mAh podacima.",
       "type": "iOS"
     }
   ],
@@ -130,6 +130,30 @@ window.BL_GUARDIAN_DATA={
       "kind": "Kreatori",
       "description": "Obrada slika i grafike.",
       "href": "https://www.gimp.org/",
+      "unit": "externo"
+    },
+    {
+      "id": "librecad",
+      "name": "LibreCAD",
+      "kind": "Majstori",
+      "description": "Besplatan 2D CAD za tehničke crteže i skice. Zvanični otvoreni softver.",
+      "href": "https://librecad.org/",
+      "unit": "externo"
+    },
+    {
+      "id": "freecad",
+      "name": "FreeCAD",
+      "kind": "Majstori",
+      "description": "Otvoreni parametarski 3D CAD za projektovanje objekata i dijelova.",
+      "href": "https://www.freecad.org/",
+      "unit": "externo"
+    },
+    {
+      "id": "qelectrotech",
+      "name": "QElectroTech",
+      "kind": "Majstori",
+      "description": "Besplatan program za električne i druge tehničke šeme. Nije simulator niti zamjena za stručni projekat.",
+      "href": "https://qelectrotech.org/",
       "unit": "externo"
     }
   ]
