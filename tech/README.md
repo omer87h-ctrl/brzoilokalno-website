@@ -1,24 +1,45 @@
-# Brzo i Lokalno / Tech portal
+# Brzo i Lokalno TECH — portal i vodič za održavanje
 
-Preview branch: preview/brzoilokalno-tech-portal. This folder is independent of existing /app and root landing page.
+## Struktura
+- /tech/ — početna urednička TECH stranica, originalni vizuali, BL Pulse
+- /tech/biblioteka.html — originalni resursi s vizuelnim naslovnicama, lokalna pretraga i kategorije
+- /tech/free-store.html — besplatni digitalni resursi (bez naplate ili plaćenog poslovanja)
+- /tech/lab.html — predloži projekat putem e-pošte, bez baze projekata ili automatskih objava
+- /tech/majstori-kreatori.html — veza tech sadržaja i glavne aplikacije
+- /tech/clanci/*.html — šest postojećih originalnih članaka
+- /tech/citaj.html?resurs=<filename> — pregled whitelistovanih resursa
+- /tech/experience.css — zajednički izgled svih novih stranica
+- /tech/experience.js — pretraga, mobilni meni, filteri biblioteke i storea
+- /tech/assets/*.svg — originalne ilustracije izrađene za ovaj portal; bez tuđih fotografija i proizvoda
+- /tech/pravila.html i /tech/privatnost.html — urednička pravila i obavijest o privatnosti
 
-## Sections
-Portal (six original guides), Biblioteka (four local files), BL Free Store (same free digital assets), Lab and Radar (email submission), Podcast (clearly marked preparation).
+## Kako dodati članak
+1. Napiši originalni tekst i provjeri činjenice, datume i izvore.
+2. Napravi /tech/clanci/slug.html koristeći postojeće članke kao obrazac.
+3. Dodaj njegov naslov, kategoriju i stvarnu putanju u /tech/data.js.
+4. Ažuriraj /tech/feed.xml i sitemap.xml.
+5. Dodaj vlastitu/licenciranu fotografiju ili novu originalnu ilustraciju. Navedi licencu/izvor gdje je potrebno.
+6. Nikada ne predstavljaj imaginarne intervjue, recenzije, ocjene, citate i broj korisnika kao činjenice.
 
-## How to add an article
-1. Create tech/clanci/slug.html using existing article HTML as a structural template.
-2. Add metadata entry in tech/data.js under articles. Category should match filter chips or be added to the navigation filters.
-3. Add the new URL to tech/feed.xml and to the site's sitemap when publishing publicly.
-4. Provide source links and rights for images/other content. Never invent ratings, dates, interviews, reviews, or user counts.
+## Kako dodati knjigu ili datoteku
+1. Pisano provjeri autorstvo, dozvolu za distribuciju i eventualna prava trećih osoba.
+2. Sačuvaj resurs pod /tech/resursi/ — samo provjerene, neizvršne statičke datoteke (npr. TXT, CSV, PDF).
+3. Dodaj odgovarajući unos u polje materials u /tech/data.js. Za svaki resurs potrebno je pravo objave.
+4. Provjeri "Čitaj" i "Preuzmi" na telefonu i računaru. Ako je tip nepoznat čitaču, koristi direktno preuzimanje.
+5. Uvijek jasno označi vrstu: mini-knjiga, vodič, lista, predložak. Ne prikazuj vodiče kao nepostojeće knjige.
 
-## Add a free item
-1. Confirm authorship or appropriate license.
-2. Place static file in tech/resursi/ (keep within GitHub Pages limits).
-3. Add an entry in tech/data.js under materials with filename, description and license.
-4. Verify download on mobile and desktop.
+## Privatnost
+Nema prijave na portal, korisničkih naloga, vanjskog analitičkog trackinga, naplate, korpe ili prijema fajlova putem javnog obrasca.
+E-mail prijedlozi ne objavljuju se automatski. Uredništvo potvrđuje dozvole.
+Postojeća Android/PWA aplikacija nije mijenjana i ima svoje pravilo privatnosti.
 
-## No backend
-No Firebase, login, personal data forms, file uploads, shopping cart, payment, live stream or automated external news feed. Emails use mailto and require a local mail client. Podcast section is not an active player without episodes. No new domain or paid hosting needed to preview code.
+## Ograničenja i kvalitet
+- GitHub Pages ima ograničenja i nije hosting za primarno komercijalnu trgovinu ili osjetljive transakcije.
+- Sadržaj mora poštovati autorska prava i važeće propise. Dokumenti nisu zamjena za pravnu provjeru.
+- CSS animacije poštuju prefers-reduced-motion.
+- Fontovi koriste lokalni sistemski fallback, bez eksternog Google Fonts učitavanja na novim TECH stranicama.
+- Redovno testirati navigaciju, filtere, RSS, sitemap i mobilni prikaz.
+- Nove plaćene funkcije, korisničke prijave ili backend zahtijevaju novu tehničku i pravnu analizu.
 
-## Deployment review
-Keep the preview branch isolated until approved. Publish by merging to main, then update the main navigation and sitemap *only with explicit approval*.
+## Objavljivanje
+Promjene se pripremaju na grani feature/tech-editorial-redesign. Glavna domena i aplikacija ne trebaju biti modificirane osim preciznog sitemap.xml za indeksiranje TECH stranica.
