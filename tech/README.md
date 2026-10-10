@@ -84,3 +84,10 @@ Portal nema automatizovani prikupljač vijesti; ažuriranje naslova i RSS-a je u
 - CSS u premium.css zadržava mobilni prikaz i reduced-motion.
 - Privatnost: AI se pokreće samo na korisnički zahtjev; vanjski CDN može dobiti standardne tehničke podatke prilikom preuzimanja modela.
 - Ne objavljivati na main bez posebne potvrde korisnika. Ne dirati Android/PWA/root app.
+
+## Model i biblioteka - reference licence
+- WebLLM runtime: @mlc-ai/web-llm v0.2.85 (Apache-2.0), npm: https://www.npmjs.com/package/@mlc-ai/web-llm.
+- SmolLM2-360M-Instruct: HuggingFaceTB, Apache-2.0, https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct.
+- WebLLM je opcionalan i zahtijeva WebGPU; q4f32_1 ~580 MB VRAM i q4f16_1 ~376 MB VRAM po službenom WebLLM katalogu; internet preuzimanja i predmemorija nisu besplatni po pitanju korisničkog protoka.
+- SmolLM2 je primarno treniran na engleskom. Ne garantirati kvalitet bosanskog, niti prikazivati neprovjeren zaključak kao recenziju ili vijest.
+- TECH Pulse: do posebnog urednički odobrenog izvora koristi samo prethodno objavljene interne naslove. Ne smije se nazivati automatskom vanjskom agencijom.
