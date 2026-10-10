@@ -113,9 +113,9 @@ if(current.startsWith("/tech/")&&!/\/tech\/(privatnost|pravila)\.html$/.test(cur
   if(current.endsWith("/alati.html"))return {msg:"Ovo su praktični kalkulatori. Provjeri mjere, normative i konačnu ponudu prije rada.",links:[["Asistent","/tech/asistent.html"],["Majstori & Kreatori","/tech/majstori-kreatori.html"]]};
   if(current.endsWith("/biblioteka.html"))return {msg:"U Biblioteci možeš čitati i preuzeti postojeće originalne materijale. Ne prikazujemo nepostojeće knjige.",links:[["Pročitaj mini-knjigu","/tech/citaj.html?resurs=od-ideje-do-proizvoda.txt"],["Asistent","/tech/asistent.html"]]};
   if(current.endsWith("/free-store.html"))return {msg:"BL Free Store nudi samo stvarne, besplatne digitalne resurse bez korpe i prijave.",links:[["Pogledaj alate","/tech/alati.html"],["Asistent","/tech/asistent.html"]]};
-  if(current.includes("/clanci/"))return {msg:"Čitaš autorski članak. Guardian te može odvesti do povezanih alata i besplatnih vodiča.",links:[["Alati i softver","/tech/alati.html"],["Biblioteka","/tech/biblioteka.html"]]};
+  if(current.includes("/clanci/"))return {msg:"Čitaš autorski članak. Asistent ti može odvesti do povezanih alata i besplatnih vodiča.",links:[["Alati i softver","/tech/alati.html"],["Biblioteka","/tech/biblioteka.html"]]};
   if(current.endsWith("/majstori-kreatori.html"))return {msg:"Ovo je veza s glavnom platformom. Za praktičan proračun otvori kalkulatore.",links:[["Majstorski kalkulatori","/tech/alati.html"],["Glavna platforma","/"]]};
-  return {msg:"Guardian prepoznaje gdje si na portalu i pokazuje korisne sljedeće korake. Ne prati korisnike između stranica.",links:[["Kompas telefona","/tech/telefoni.html"],["Alati i softver","/tech/alati.html"],["Otvori Asistent","/tech/asistent.html"]]};
+  return {msg:"Asistent prepoznaje gdje si na portalu i pokazuje korisne sljedeće korake. Ne prati korisnike između stranica.",links:[["Kompas telefona","/tech/telefoni.html"],["Alati i softver","/tech/alati.html"],["Otvori Asistent","/tech/asistent.html"]]};
  })();
  p.textContent=candidates.msg;
  for(const [title,url] of candidates.links){const a=document.createElement("a");a.href=url;a.textContent=title+" ↗";links.append(a);}

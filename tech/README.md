@@ -60,3 +60,19 @@ Koristi samo zvaničnu stranicu autora, provjeri besplatni režim i licencu, nap
 
 ### Kako dodati vijesti
 Portal nema automatizovani prikupljač vijesti; ažuriranje naslova i RSS-a je uredničko. Ne postoji sistem koji samostalno provjerava i objavljuje vijesti, niti to treba obećavati.
+
+## Premium medijski portal, urednički prijem i Asistent
+- /tech/ — jasna medijska početna s postojećim stvarnim člancima.
+- /tech/tech-zona.html — filtrirana arhiva iz postojećeg data.js, bez automatskog izmišljanja vijesti.
+- /tech/studio.html — lokalni editor: download TXT; opcionalno localStorage samo klikom na Sačuvaj.
+- /tech/objavi.html — formular za pripremu e-pošte za članak, knjigu, oglas ili projekat. Korisnik MORA sam otvoriti i poslati mail.
+- /tech/oglasi.html — javna lista isključivo urednički odobrenih sadržaja.
+- /tech/approved-posts.js — prazan niz za urednički odobrene oglase. Primljena pošta se NE dodaje automatski.
+- /tech/asistent.html — jedinstveni centralni ulaz. Postojeći /tech/guardian.html i alati ostaju funkcionalni uz novo javno ime Asistent.
+
+### Postupak odobravanja iz e-pošte
+1. Pošiljalac popuni /tech/objavi.html i sam pošalje e-poštu na uredničku adresu.
+2. Vlasnik provjeri autorstvo, kontakt, istinitost i pravnu prihvatljivost sadržaja i posebno odobri konkretnu verziju.
+3. Tek nakon odobrenja urednik ručno doda tačno odobrenu javnu objavu na /tech/approved-posts.js ili objavi novi članak.
+4. GitHub Pages objava slijedi tek nakon mergea na main. Odgovor na email SAM PO SEBI ne objavljuje ništa. Bez dodatne automatizacije nije moguće vjerodostojno tvrditi da mail automatski objavljuje na GitHub Pages.
+5. Izbjegavati javno izlaganje privatnih e-mailova, telefona i tuđih podataka bez dozvole. Urednički postupak ostaje ljudski.
