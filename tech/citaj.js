@@ -28,6 +28,6 @@ try{
  if(!response.ok)throw new Error("Unavailable");
  const text=await response.text();
  if(material.format==="CSV")renderCsv(text);else renderTxt(text);
- status.hidden=true;content.hidden=false;
+ status.hidden=true;content.hidden=false;window.dispatchEvent(new CustomEvent("bl-reader-ready",{detail:{file:material.file}}));
 }catch(_){status.textContent="Pregled trenutno nije dostupan. Možeš pokušati direktno preuzimanje datoteke.";}
 })();

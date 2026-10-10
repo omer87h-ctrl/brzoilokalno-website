@@ -76,3 +76,39 @@ Portal nema automatizovani prikupljač vijesti; ažuriranje naslova i RSS-a je u
 3. Tek nakon odobrenja urednik ručno doda tačno odobrenu javnu objavu na /tech/approved-posts.js ili objavi novi članak.
 4. GitHub Pages objava slijedi tek nakon mergea na main. Odgovor na email SAM PO SEBI ne objavljuje ništa. Bez dodatne automatizacije nije moguće vjerodostojno tvrditi da mail automatski objavljuje na GitHub Pages.
 5. Izbjegavati javno izlaganje privatnih e-mailova, telefona i tuđih podataka bez dozvole. Urednički postupak ostaje ljudski.
+
+## Asistent razgovor i TECH Pulse (razvojna grana)
+- assistant-chain.js: lokalni lanac namjera, pretrage stvarnih članaka/knjiga/telefona/alata, provjerljivih linkova i sljedeće radnje.
+- local-ai.js: korisnik po želji uključuje WebLLM; koristi se SmolLM2 360M q4f32 (ili f16), WebGPU i javni CDN za JS + model. Na slabijem uređaju radi Lite režim; nema automatskog slanja upita na server.
+- tech-pulse.js i news-feed.js: pristupačan pomični panel s postojećim autorskim objavama. Nema automatskog RSS prikupljanja ni lažnih live vijesti u ovoj verziji; za stvarne vanjske vijesti potreban je poseban provjereni periodični izvor i urednička pravila.
+- CSS u premium.css zadržava mobilni prikaz i reduced-motion.
+- Privatnost: AI se pokreće samo na korisnički zahtjev; vanjski CDN može dobiti standardne tehničke podatke prilikom preuzimanja modela.
+- Ne objavljivati na main bez posebne potvrde korisnika. Ne dirati Android/PWA/root app.
+
+## Model i biblioteka - reference licence
+- WebLLM runtime: @mlc-ai/web-llm v0.2.85 (Apache-2.0), npm: https://www.npmjs.com/package/@mlc-ai/web-llm.
+- SmolLM2-360M-Instruct: HuggingFaceTB, Apache-2.0, https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct.
+- WebLLM je opcionalan i zahtijeva WebGPU; q4f32_1 ~580 MB VRAM i q4f16_1 ~376 MB VRAM po službenom WebLLM katalogu; internet preuzimanja i predmemorija nisu besplatni po pitanju korisničkog protoka.
+- SmolLM2 je primarno treniran na engleskom. Ne garantirati kvalitet bosanskog, niti prikazivati neprovjeren zaključak kao recenziju ili vijest.
+- TECH Pulse: do posebnog urednički odobrenog izvora koristi samo prethodno objavljene interne naslove. Ne smije se nazivati automatskom vanjskom agencijom.
+
+## Asistent OS 2.0 (Guardian architecture translated for web)
+- `assistant-chain.js` indexes *only actual* verified portal records; `assistant-os.js` adds interpreter, session context, scenario engine, reliable math and safe tool routing.
+- Client processing only. No Firebase, no paid API, no persistence. It is not the recovered original Kotlin source; the code in the app repo could not be retrieved (only README in its default branch).
+- User can say 'telefon do 500 KM' then 'baterija': budget and intent survive. 'Pločice za 4x3 m' then '60x60 cm' gives 37 pieces with a default clearly labeled 10% reserve.
+- The separately opt-in WebLLM model enhances phrasing, not the math or unverified claims. Client-side model performance depends on user device.
+
+## Portal-only mode (2026-10-10)
+Asistent and AI interface removed from navigation, homepage and scripts on development branch. Legacy asistent.html / guardian.html redirect to TECH homepage. Calculator and phone comparator still run locally. No public deploy authorized.
+
+## TECH Ambient — izvorno sintetizirani zvuk
+- Web Audio oscilatori bez tuđih snimaka, javnog audio hostinga, download datoteka i autorskih uzoraka.
+- Zvuk je po otvaranju stranice isključen; pokreće se isključivo klikom na dugme.
+- Zvuk pauzira kada korisnik napusti tab i ne pamti se bez pristanka.
+- Dostupan samo na preglednicima s AudioContext podrškom.
+
+## Izvori i vijesti — urednički pregled
+- `tech/izvori.html`: direktni linkovi na provjerene izvore i datume; nema kopiranja cijelih članaka.
+- `tech/news-feed.js` trenutno je ručno odabrani set objava. Nije automatski ažuriran; ne predstavljati ga kao real-time feed.
+- `tech/update-news.py` je neaktivni razvojni pomoćni skript, a nema instaliranog workflowa za automatsko objavljivanje.
+- Izbjegavati dijeljenje tuđih zaštićenih fotografija i tekstova bez dozvole.
