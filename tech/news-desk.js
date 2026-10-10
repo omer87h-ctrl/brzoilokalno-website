@@ -2,19 +2,19 @@
 (()=>{
  const target=document.getElementById("desk-stories");
  if(!target)return;
- const entries=Array.isArray(window.BL_TECH_PULSE)?window.BL_TECH_PULSE:[];
+ 
  const status=document.getElementById("desk-updated");
  const updated=window.BL_TECH_PULSE_UPDATED;
  if(status&&/^\d{4}-\d{2}-\d{2}$/.test(updated||"")){status.textContent="UREDNIČKI PROVJERENO: "+updated.split("-").reverse().join(".")+" · Ručni izbor vijesti";}
  const categories=[["SVE","all"],["VIJESTI","vanjski"],["NAŠI TEKSTOVI","autorski"]];
  let active="all";
  const valid=item=>item&&typeof item.title==="string"&&typeof item.source==="string"&&typeof item.description==="string"&&typeof item.url==="string"&&(/^https:\/\//.test(item.url)||item.url.startsWith("./"));
- const approved=entries.filter(valid);
+ 
  const tabs=document.getElementById("desk-filter");
  const make=(tag,cls,txt)=>{const el=document.createElement(tag);if(cls)el.className=cls;if(txt!=null)el.textContent=txt;return el;};
  const draw=()=>{
   target.replaceChildren();
-  const entries=approved.filter(x=>active==="all"||x.kind===active).sort((a,b)=>String(b.date||"").localeCompare(String(a.date||"")));
+  const entries=(window.BL_TECH_PULSE||[]).filter(valid).filter(x=>active==="all"||x.kind===active).sort((a,b)=>String(b.date||"").localeCompare(String(a.date||"")));
   for(const item of entries){
    const a=make("a","desk-story"),tag=make("span","p-label",item.category+" / "+(item.kind==="vanjski"?"VANJSKI IZVOR":"AUTORSKI TEKST"));
    const title=make("h3","",item.title),desc=make("p","",item.description);
@@ -30,4 +30,5 @@
   tabs.append(button);
  }
  draw();
+ window.addEventListener("bl-news-updated",()=>{if(status){status.textContent="AUTOMATSKI RSS · POSLJEDNJA PROVJERA: "+String(window.BL_TECH_PULSE_UPDATED).split("-").reverse().join(".")+" · Naslovi vode na izvore";}draw();});
 })();
