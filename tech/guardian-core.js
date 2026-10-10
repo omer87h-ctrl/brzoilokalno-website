@@ -64,9 +64,9 @@ if($("tool-form")){
  $("tool-form").addEventListener("submit",e=>{e.preventDefault();calcTool(activeTool);});
 }
 const sw=$("software-list");if(sw){
- for(const t of D.tools.filter(x=>x.href)){
+ for(const t of D.tools.filter(x=>x.href).sort((a,b)=>(a.kind==="Majstori"?0:1)-(b.kind==="Majstori"?0:1))){
   const card=el("article",undefined,"g-software-card");
-  card.append(el("span","SLUŽBENI LINK / BESPLATAN ALAT","eyebrow"),heading(t.name),para(t.description));
+  card.append(el("span",t.kind.toUpperCase()+" / SLUŽBENI LINK","eyebrow"),heading(t.name),para(t.description));
   const a=go(t.href,"OTVORI SLUŽBENU STRANICU ↗");a.target="_blank";a.rel="noopener noreferrer";card.append(a);sw.append(card);
  }
 }
@@ -111,6 +111,9 @@ function comparePhones(){
   if(selKey==="price"){
    out.append(heading("Cijena je prioritet",3));
    out.append(para(p1!==null&&p2!==null?(p1===p2?"Unesene cijene su jednake.":(p1<p2?first.name:second.name)+" ima nižu unesenu cijenu za "+fmt(Math.abs(p1-p2))+" KM."):"Upiši obje cijene za smisleno poređenje cijene."));
+  }else if(priority==="camera"){
+   out.append(heading("Kamere — važna ograničenja",3));
+   out.append(para("Ne rangiramo kameru prema broju megapiksela. Bez nezavisnih testnih fotografija i jednakih uslova snimanja ne možemo pošteno zaključiti koji telefon ima bolju kameru. Pogledaj specifikacije kod proizvođača."));
   }else if(selKey){
    out.append(heading("Šta pokazuje tvoj prioritet?",3));out.append(para(deltaDescription(first,second,selKey,priority)));
   }else{
