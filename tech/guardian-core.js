@@ -1,6 +1,6 @@
 "use strict";
 (function(){
-const D=window.BL_GUARDIAN_DATA||{models:[],tools:[]};
+const D=window.BL_ASISTENT_DATA||{models:[],tools:[]};
 const $=id=>document.getElementById(id);
 const el=(tag,text,cls)=>{const x=document.createElement(tag);if(text!==undefined)x.textContent=String(text);if(cls)x.className=cls;return x;};
 const txt=s=>String(s??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("bs");
@@ -43,10 +43,10 @@ function calcTool(kind){
    steps=["Rad: "+fmt(hours)+" × "+fmt(rate)+" KM = "+fmt(labour)+" KM","Materijal: "+fmt(materials)+" KM","Ostalo: "+fmt(other)+" KM"];
    note="Ovo nije formalna faktura, ponuda sa zakonski obaveznim elementima ni poreski obračun. Porez, PDV i propisane obaveze nisu uključeni.";
   }else throw Error("Nepoznati alat.");
-  resultStart(body,"GUARDIAN / PROVJERLJIV RAČUN",title);
+  resultStart(body,"ASISTENT / PROVJERLJIV RAČUN",title);
   body.append(para(summary));
   const list=el("ul");steps.forEach(s=>list.append(el("li",s)));body.append(list,para(note));
- }catch(e){resultStart(body,"GUARDIAN / PROVJERI PODATKE","Nije moguće izračunati.");body.append(para(e.message));}
+ }catch(e){resultStart(body,"ASISTENT / PROVJERI PODATKE","Nije moguće izračunati.");body.append(para(e.message));}
 }
 const tabs=document.querySelectorAll("[data-tool]");
 let activeTool="tiles";
@@ -55,7 +55,7 @@ function setTool(kind){
  activeTool=kind;
  for(const b of tabs)b.setAttribute("aria-pressed",String(b.dataset.tool===kind));
  for(const x of ["tiles","paint","offer"]){const n=$("fields-"+x);if(n)n.hidden=x!==kind;}
- const out=$("tool-result");if(out){resultStart(out,"GUARDIAN / KALKULATOR","Izračun za "+({tiles:"pločice",paint:"boju",offer:"jednostavnu ponudu"}[kind]));out.append(para("Provjeri mjere i pokreni izračun. Sve se računa na ovom uređaju."));}
+ const out=$("tool-result");if(out){resultStart(out,"ASISTENT / KALKULATOR","Izračun za "+({tiles:"pločice",paint:"boju",offer:"jednostavnu ponudu"}[kind]));out.append(para("Provjeri mjere i pokreni izračun. Sve se računa na ovom uređaju."));}
 }
 for(const b of tabs)b.addEventListener("click",()=>setTool(b.dataset.tool));
 if($("tool-form")){
@@ -90,12 +90,12 @@ function deltaDescription(first,second,key,priority){
 function comparePhones(){
  const out=$("phone-result");if(!out)return;
  const first=models.find(m=>m.id===aSelect.value),second=models.find(m=>m.id===bSelect.value);
- if(!first||!second){resultStart(out,"GUARDIAN / NEMA MODELA","Izaberi dva poznata modela.");return;}
- if(first.id===second.id){resultStart(out,"GUARDIAN / UPIT","Izaberi dva različita modela.");return;}
+ if(!first||!second){resultStart(out,"ASISTENT / NEMA MODELA","Izaberi dva poznata modela.");return;}
+ if(first.id===second.id){resultStart(out,"ASISTENT / UPIT","Izaberi dva različita modela.");return;}
  try{
   const p1=validPrice("phone-price-a"),p2=validPrice("phone-price-b"),budget=validPrice("phone-budget");
   const priority=$("phone-priority").value;
-  resultStart(out,"GUARDIAN / FAKTI I OGRANIČENJA",first.name+" / "+second.name);
+  resultStart(out,"ASISTENT / FAKTI I OGRANIČENJA",first.name+" / "+second.name);
   out.append(para("Prikazani podaci potiču sa stranica proizvođača. Cijene su tvoji unosi, ne naše ponude."));
   const tbl=el("table");const thead=el("tr");thead.append(el("th","Osobina"),el("th",first.name),el("th",second.name));tbl.append(thead);
   for(const [key,label] of [["display","Ekran"],["refresh","Osvježavanje"],["battery","Nominalni kapacitet"],["weight","Težina"],["ip","Zaštita"]])row(tbl,label,specValue(first,key),specValue(second,key));
@@ -124,7 +124,7 @@ function comparePhones(){
   appendLink(out,first.name+" — zvanične specifikacije ↗",first.source,true);
   appendLink(out,second.name+" — zvanične specifikacije ↗",second.source,true);
   out.append(para("Provjeri tržišnu varijantu i datum. IP zaštita vremenom može oslabiti. mAh i reklamirani sati videa nisu međusobno uporedivi pokazatelji trajanja baterije. Ovo nije praktična recenzija niti test.").cloneNode(true));
- }catch(e){resultStart(out,"GUARDIAN / PROVJERI UNOS","Neki podaci nisu ispravni.");out.append(para(e.message));}
+ }catch(e){resultStart(out,"ASISTENT / PROVJERI UNOS","Neki podaci nisu ispravni.");out.append(para(e.message));}
 }
 if($("phone-form"))$("phone-form").addEventListener("submit",e=>{e.preventDefault();comparePhones();});
 const answer=$("guardian-answer"),form=$("guardian-form"),query=$("guardian-query");
@@ -147,7 +147,7 @@ function intent(text){
 function answerQuery(s){
  const v=s.trim();
  if(!answer||!v)return;
- const result=intent(v);resultStart(answer,"GUARDIAN / PREPOZNAT ZADATAK",result.title);
+ const result=intent(v);resultStart(answer,"ASISTENT / PREPOZNAT ZADATAK",result.title);
  answer.append(para(result.desc),appendLinkTo(result.label,result.url));
  const budget=v.match(/\b(\d{2,6})\s*KM\b/i);
  if(budget&&/telefon|mobitel/i.test(v))answer.append(para("Prepoznao sam budžet "+budget[1]+" KM. Unesi ga u poređenju uz cijene modela koje pronađeš."));
