@@ -100,3 +100,15 @@ Portal nema automatizovani prikupljač vijesti; ažuriranje naslova i RSS-a je u
 
 ## Portal-only mode (2026-10-10)
 Asistent and AI interface removed from navigation, homepage and scripts on development branch. Legacy asistent.html / guardian.html redirect to TECH homepage. Calculator and phone comparator still run locally. No public deploy authorized.
+
+## TECH Ambient — izvorno sintetizirani zvuk
+- Web Audio oscilatori bez tuđih snimaka, javnog audio hostinga, download datoteka i autorskih uzoraka.
+- Zvuk je po otvaranju stranice isključen; pokreće se isključivo klikom na dugme.
+- Zvuk pauzira kada korisnik napusti tab i ne pamti se bez pristanka.
+- Dostupan samo na preglednicima s AudioContext podrškom.
+
+## Izvori i vijesti — urednički pregled
+- `tech/izvori.html`: direktni linkovi na provjerene izvore i datume; nema kopiranja cijelih članaka.
+- `tech/news-feed.js` trenutno je ručno odabrani set objava. Nije automatski ažuriran; ne predstavljati ga kao real-time feed.
+- `tech/update-news.py` je neaktivni razvojni pomoćni skript, a nema instaliranog workflowa za automatsko objavljivanje.
+- Izbjegavati dijeljenje tuđih zaštićenih fotografija i tekstova bez dozvole.
