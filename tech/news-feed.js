@@ -1,0 +1,2 @@
+// Headlines supplied from the site's verified, authored content until the first successful scheduled feed refresh.
+window.BL_TECH_PULSE=[{title:"AI alat nije automatski dobar proizvod.",source:"Brzo i Lokalno TECH",date:"",url:"./clanci/ai-alat-ili-proizvod.html"},{title:"PWA ili Android: šta korisniku stvarno treba?",source:"Brzo i Lokalno TECH",date:"",url:"./clanci/pwa-ili-android.html"},{title:"Telefon bez marketinške buke.",source:"Brzo i Lokalno TECH",date:"",url:"./clanci/kako-birati-telefon.html"}];
