@@ -15,54 +15,6 @@ function resultStart(node,kind,title){clear(node);node.append(el("span",kind,"ey
 function appendLink(node,label,href,external=false){const a=go(href,label);a.className="source";if(external){a.target="_blank";a.rel="noopener noreferrer";}node.append(a);}
 function row(table,name,a,b){const tr=el("tr");tr.append(el("th",name),el("td",a),el("td",b));table.append(tr);}
 function validPrice(id){const v=$(id)?.value??"";return v.trim()?required(id,0,50000):null;}
-function calcTool(kind){
- const body=$("tool-result");if(!body)return;
- try{
-  let title,note,summary,steps=[];
-  if(kind==="tiles"){
-   const length=required("floor-length",.01,1000),width=required("floor-width",.01,1000),tl=required("tile-length",1,300),tw=required("tile-width",1,300),waste=required("tile-waste",0,50);
-   const area=length*width,unit=(tl/100)*(tw/100),withWaste=area*(1+waste/100);
-   const quantity=Math.ceil(withWaste/unit);
-   if(!Number.isSafeInteger(quantity)||quantity>1e8)throw Error("Unos je izvan podržanog raspona.");
-   title=fmt(quantity,0)+" pločica";
-   summary="Za "+fmt(area)+" m², uz rezervu "+fmt(waste,0)+"%, orijentaciono treba "+fmt(quantity,0)+" komada dimenzija "+fmt(tl)+" × "+fmt(tw)+" cm.";
-   steps=["Površina: "+fmt(area)+" m²","Sa rezervom: "+fmt(withWaste)+" m²","Površina jedne pločice: "+fmt(unit,4)+" m²"];
-   note="Procjena po površini. Ne uračunava geometriju polaganja, fuge, otvore, lom i pakovanja. Provjeri raspored i kutije prije kupovine.";
-  }else if(kind==="paint"){
-   const area=required("paint-area",.01,100000),cover=required("paint-cover",.1,100),coats=required("paint-coats",1,10),waste=required("paint-waste",0,50);
-   const base=area*coats/cover,requiredLitres=base*(1+waste/100);
-   title=fmt(requiredLitres)+" litara";
-   summary="Za "+fmt(area)+" m² i "+fmt(coats,0)+" sloja, pri pokrivnosti "+fmt(cover)+" m²/L po sloju.";
-   steps=["Osnovni izračun: "+fmt(base)+" L","Sa rezervom "+fmt(waste,0)+"%: "+fmt(requiredLitres)+" L"];
-   note="Pokrivnost je okvirna; proizvođač, upojnost podloge i način nanošenja mijenjaju potrošnju. Zaokruži prema stvarnim pakovanjima.";
-  }else if(kind==="offer"){
-   const hours=required("offer-hours",0,100000),rate=required("offer-rate",0,100000),materials=required("offer-material",0,10000000),other=required("offer-other",0,10000000);
-   const labour=hours*rate,total=labour+materials+other;
-   title=fmt(total)+" KM";
-   summary="Okvirni zbir rada, materijala i drugih troškova na osnovu unesenih vrijednosti.";
-   steps=["Rad: "+fmt(hours)+" × "+fmt(rate)+" KM = "+fmt(labour)+" KM","Materijal: "+fmt(materials)+" KM","Ostalo: "+fmt(other)+" KM"];
-   note="Ovo nije formalna faktura, ponuda sa zakonski obaveznim elementima ni poreski obračun. Porez, PDV i propisane obaveze nisu uključeni.";
-  }else throw Error("Nepoznati alat.");
-  resultStart(body,"KALKULATOR / REZULTAT",title);
-  body.append(para(summary));
-  const list=el("ul");steps.forEach(s=>list.append(el("li",s)));body.append(list,para(note));
- }catch(e){resultStart(body,"KALKULATOR / PROVJERA","Nije moguće izračunati.");body.append(para(e.message));}
-}
-const tabs=document.querySelectorAll("[data-tool]");
-let activeTool="tiles";
-function setTool(kind){
- if(!["tiles","paint","offer"].includes(kind))kind="tiles";
- activeTool=kind;
- for(const b of tabs)b.setAttribute("aria-pressed",String(b.dataset.tool===kind));
- for(const x of ["tiles","paint","offer"]){const n=$("fields-"+x);if(n)n.hidden=x!==kind;}
- const out=$("tool-result");if(out){resultStart(out,"ASISTENT / KALKULATOR","Izračun za "+({tiles:"pločice",paint:"boju",offer:"jednostavnu ponudu"}[kind]));out.append(para("Provjeri mjere i pokreni izračun. Sve se računa na ovom uređaju."));}
-}
-for(const b of tabs)b.addEventListener("click",()=>setTool(b.dataset.tool));
-if($("tool-form")){
- const q=new URLSearchParams(location.search).get("alat");
- setTool(["tiles","paint","offer"].includes(q)?q:"tiles");
- $("tool-form").addEventListener("submit",e=>{e.preventDefault();calcTool(activeTool);});
-}
 const sw=$("software-list");if(sw){
  for(const t of D.tools.filter(x=>x.href).sort((a,b)=>(a.kind==="Majstori"?0:1)-(b.kind==="Majstori"?0:1))){
   const card=el("article",undefined,"g-software-card");
