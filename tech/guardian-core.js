@@ -1,6 +1,6 @@
 "use strict";
 (function(){
-const D=window.BL_ASISTENT_DATA||{models:[],tools:[]};
+const D=window.BL_GUARDIAN_DATA||window.BL_ASISTENT_DATA||{models:[],tools:[]};
 const $=id=>document.getElementById(id);
 const el=(tag,text,cls)=>{const x=document.createElement(tag);if(text!==undefined)x.textContent=String(text);if(cls)x.className=cls;return x;};
 const txt=s=>String(s??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("bs");

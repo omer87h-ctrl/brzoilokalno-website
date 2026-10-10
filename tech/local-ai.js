@@ -61,7 +61,7 @@ async function loadModel(){
  loading=true;load.disabled=true;model.disabled=true;state.textContent="UČITAVANJE";
  status.textContent="Preuzimam AI model…";progress.hidden=false;
  try{
-  const webllm=await import("https://esm.run/@mlc-ai/web-llm@0.2.80");
+  const webllm=await import("https://esm.run/@mlc-ai/web-llm");
   const id=model.value;
   const listed=webllm.prebuiltAppConfig.model_list.some(m=>m.model_id===id);
   if(!listed)throw new Error("Odabrani model nije u dostupnom katalogu biblioteke.");

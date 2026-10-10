@@ -76,3 +76,11 @@ Portal nema automatizovani prikupljač vijesti; ažuriranje naslova i RSS-a je u
 3. Tek nakon odobrenja urednik ručno doda tačno odobrenu javnu objavu na /tech/approved-posts.js ili objavi novi članak.
 4. GitHub Pages objava slijedi tek nakon mergea na main. Odgovor na email SAM PO SEBI ne objavljuje ništa. Bez dodatne automatizacije nije moguće vjerodostojno tvrditi da mail automatski objavljuje na GitHub Pages.
 5. Izbjegavati javno izlaganje privatnih e-mailova, telefona i tuđih podataka bez dozvole. Urednički postupak ostaje ljudski.
+
+## Asistent razgovor i TECH Pulse (razvojna grana)
+- assistant-chain.js: lokalni lanac namjera, pretrage stvarnih članaka/knjiga/telefona/alata, provjerljivih linkova i sljedeće radnje.
+- local-ai.js: korisnik po želji uključuje WebLLM; koristi se SmolLM2 360M q4f32 (ili f16), WebGPU i javni CDN za JS + model. Na slabijem uređaju radi Lite režim; nema automatskog slanja upita na server.
+- tech-pulse.js i news-feed.js: pristupačan pomični panel s postojećim autorskim objavama. Nema automatskog RSS prikupljanja ni lažnih live vijesti u ovoj verziji; za stvarne vanjske vijesti potreban je poseban provjereni periodični izvor i urednička pravila.
+- CSS u premium.css zadržava mobilni prikaz i reduced-motion.
+- Privatnost: AI se pokreće samo na korisnički zahtjev; vanjski CDN može dobiti standardne tehničke podatke prilikom preuzimanja modela.
+- Ne objavljivati na main bez posebne potvrde korisnika. Ne dirati Android/PWA/root app.
