@@ -32,8 +32,8 @@ async function answer(query){
  busy=true;submit.disabled=true;input.disabled=true;
  bubble("user",query);
  const result=summaryFromChain(query);
- if(!engine){
-  bubble("bot",result.answer+"\n\n"+result.next,result.sources);
+ if(!engine||result.intent==="greeting"){
+  bubble("bot",result.answer+(result.next?"\n\n"+result.next:""),result.sources);
  }else{
   const thinking=bubble("bot","Razmišljam uz sadržaj portala…");
   try{
@@ -46,12 +46,17 @@ async function answer(query){
    shortHistory.push({role:"user",content:query},{role:"assistant",content:output});
    shortHistory=shortHistory.slice(-8);
   }catch(err){
-   thinking.remove();bubble("bot","Lokalni AI nije dovršio odgovor. Evo onoga što je dostupno na portalu:\n"+result.answer,result.sources);
+   thinking.remove();
+   engine=null;
    state.textContent="LITE AKTIVAN";
+   status.textContent="AI model je prekinuo odgovor. Prebačeno na Lite; možeš ponovo pokušati uključiti AI.";
+   load.disabled=false;model.disabled=false;load.textContent="PONOVO UKLJUČI AI ↗";
+   bubble("bot",result.intent==="general"?"Tu sam. Možeš me pitati za uređaje, knjige, softver ili alat koji ti treba.":result.answer+(result.next?"\n\n"+result.next:""),result.intent==="general"?[]:result.sources);
    console.warn("Local AI generation failed",err);
   }
  }
- busy=false;submit.disabled=false;input.disabled=false;input.focus();
+ busy=false;submit.disabled=false;input.disabled=false;
+ // Do not force the Android keyboard open again after responding.
 }
 form.addEventListener("submit",event=>{event.preventDefault();const q=input.value.trim();if(!q)return;input.value="";void answer(q);});
 document.querySelectorAll("[data-assistant-prompt]").forEach(b=>b.addEventListener("click",()=>{input.value=b.dataset.assistantPrompt;void answer(input.value);input.value="";}));
