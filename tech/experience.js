@@ -95,4 +95,62 @@ if("IntersectionObserver" in window&&!matchMedia("(prefers-reduced-motion: reduc
  nodes.forEach(node=>{node.classList.add("reveal");obs.observe(node);});
 }
 
+
+/* Optional original synthesized ambient sound: no samples, CDN, analytics or autoplay. */
+(function(){
+ if(!document.body||document.getElementById("bl-sound-switch"))return;
+ const button=document.createElement("button");
+ button.id="bl-sound-switch";button.type="button";button.className="bl-sound-switch";
+ button.setAttribute("aria-pressed","false");button.setAttribute("aria-label","Uključi originalni ambijentalni zvuk portala");
+ button.textContent="♪  ZVUK: ISKLJUČEN";
+ document.body.append(button);
+ const AudioEngine=window.AudioContext||window.webkitAudioContext;
+ if(!AudioEngine){button.hidden=true;return;}
+ let ctx=null,master=null,ticker=null,on=false,nextBeat=0,step=0;
+ const notes=[ // Original small pentatonic sequence, not a copied recording.
+  [220,261.63,329.63],[174.61,220,261.63],[196,261.63,329.63],[196,246.94,293.66]
+ ];
+ function playNote(freq,when,length,volume,shape="sine"){
+  if(!ctx||!master)return;
+  const oscillator=ctx.createOscillator(),level=ctx.createGain();
+  oscillator.type=shape;oscillator.frequency.setValueAtTime(freq,when);
+  level.gain.setValueAtTime(.00001,when);
+  level.gain.exponentialRampToValueAtTime(Math.max(.00002,volume),when+.12);
+  level.gain.exponentialRampToValueAtTime(.00001,when+length);
+  oscillator.connect(level);level.connect(master);
+  oscillator.start(when);oscillator.stop(when+length+.08);
+ }
+ function tick(){
+  if(!on||!ctx)return;
+  while(nextBeat<ctx.currentTime+1.2){
+   const chord=notes[Math.floor(step/8)%notes.length];
+   if(step%8===0){
+    chord.forEach((freq,i)=>playNote(freq/2,nextBeat,3.95,i===0?.024:.01,"sine"));
+   }
+   if(step%2===0)playNote(chord[(step/2)%3]*2,nextBeat,.7,.018,"sine");
+   nextBeat+=.52;step++;
+  }
+ }
+ async function begin(){
+  try{
+   if(!ctx){
+    ctx=new AudioEngine();master=ctx.createGain();master.gain.value=.21;master.connect(ctx.destination);
+   }
+   await ctx.resume();on=true;step=0;nextBeat=ctx.currentTime+.08;tick();
+   ticker=setInterval(tick,700);
+   button.textContent="♪  ZVUK: UKLJUČEN";button.setAttribute("aria-pressed","true");button.setAttribute("aria-label","Isključi zvuk portala");
+  }catch{
+   on=false;button.textContent="♪  ZVUK NIJE DOSTUPAN";button.setAttribute("aria-pressed","false");
+  }
+ }
+ function end(){
+  on=false;if(ticker){clearInterval(ticker);ticker=null;}
+  if(ctx&&ctx.state==="running")ctx.suspend().catch(()=>{});
+  button.textContent="♪  ZVUK: ISKLJUČEN";button.setAttribute("aria-pressed","false");button.setAttribute("aria-label","Uključi originalni ambijentalni zvuk portala");
+ }
+ button.addEventListener("click",()=>{if(on)end();else void begin();});
+ document.addEventListener("visibilitychange",()=>{if(!ctx||!on)return;if(document.hidden){if(ticker)clearInterval(ticker);ticker=null;ctx.suspend().catch(()=>{});}else{ctx.resume().then(()=>{nextBeat=ctx.currentTime+.12;tick();ticker=setInterval(tick,700);}).catch(()=>end());}});
+ window.addEventListener("pagehide",()=>{end();if(ctx)void ctx.close().catch(()=>{});},{once:true});
+})();
+
 })();
