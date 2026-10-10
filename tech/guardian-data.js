@@ -48,7 +48,7 @@ window.BL_GUARDIAN_DATA={
       "display": 6.1,
       "refresh": null,
       "weight": 170,
-      "ip": null,
+      "ip": 68,
       "video": 22,
       "source": "https://www.apple.com/hr/iphone-16/specs/",
       "note": "Apple Hrvatska: OLED 6,1 inča, 170 g, do 22 h video reprodukcije prema proizvođaču. Nije direktno uporedivo s mAh Androida.",
