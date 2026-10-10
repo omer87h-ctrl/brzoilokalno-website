@@ -40,8 +40,10 @@
     {id:"news",re:/novost|vijest|aktueln|analiz|tehnolog|artificial|android|web|ai\b/,title:"TECH zona",url:"./tech-zona.html",text:"Pronađi objavljene članke i najnovije linkove prema vanjskim izvorima. Vanjske naslove označavamo izvorom."},
     {id:"maker",re:/majstor|kreator|zanat|obrt|uslug|radovi|lokaln/,title:"Majstori i kreatori",url:"./majstori-kreatori.html",text:"Pogledaj tehnologiju i alate za stvarne poslove, zanate i kreativne projekte."}
   ];
+  const greetings=/^(?:(?:alo|hej|ej|hello|hi|cao|ćao|ćao|pozdrav|zdravo|dobar dan|dobro jutro|dobro vece|dobro veče|tu si|ima li koga)[!?., ]*)+$/i;
   function route(query,previous){
-    const q=fold(query);
+    const q=fold(query).trim();
+    if(greetings.test(q))return {id:"greeting",title:"Asistent",url:null,text:"Tu sam. Šta te zanima — tehnologija, telefoni, knjige, alati ili nešto što želiš napraviti?"};
     const found=routes.find(r=>r.re.test(q));
     if(found)return found;
     if(tokens(q).length<4 && previous)return routes.find(r=>r.id===previous)||routes[7];
@@ -59,8 +61,9 @@
   function respond(question,state={}){
     const text=String(question??"").slice(0,600).trim();
     const intent=route(text,state.lastIntent);
+    if(intent.id==="greeting")return {intent:"greeting",title:"Asistent",answer:intent.text,sources:[],grounding:[],next:"",updatedState:{lastIntent:state.lastIntent||null}};
     const matches=search(text,5).filter(x=>x.url!==intent.url);
-    const sources=[{type:"FUNKCIJA",title:intent.title,url:intent.url,description:intent.text},...matches.slice(0,3)];
+    const sources=[{type:"FUNKCIJA",title:intent.title,url:intent.url,description:intent.text},...matches.slice(0,intent.id==="general"?1:3)];
     const budget=/\b(\d{2,6})\s*km\b/i.exec(text);
     const addition=budget&&intent.id==="phone"?" Budžet koji si spomenuo: "+budget[1]+" KM. Cijene unosiš prema ponudama koje si sam provjerio.":"";
     const next={
