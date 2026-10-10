@@ -5,6 +5,8 @@ const create=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.class
 const fold=v=>String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("bs");
 const terms=v=>fold(v).trim().split(/\s+/).filter(Boolean);
 const matches=(item,q)=>q.every(t=>fold(item).includes(t));
+const legacyRoutes={"#biblioteka":"./biblioteka.html","#store":"./free-store.html","#lab":"./lab.html","#ljudi":"./majstori-kreatori.html","#radar":"./lab.html","#podcast":"./podcast.html"};
+if((location.pathname.endsWith("/tech/")||location.pathname.endsWith("/tech/index.html"))&&Object.prototype.hasOwnProperty.call(legacyRoutes,location.hash))location.replace(legacyRoutes[location.hash]);
 const menu=$("nav-toggle"),mob=$("mobile-nav");
 menu?.addEventListener("click",()=>{const open=mob.hidden;mob.hidden=!open;menu.setAttribute("aria-expanded",String(open));});
 mob?.addEventListener("click",e=>{if(e.target.closest("a")){mob.hidden=true;menu.setAttribute("aria-expanded","false");}});
@@ -55,6 +57,7 @@ const pages=[
  {cat:"RUBRIKA",title:"Biblioteka",description:"Knjige, vodiči, besplatno čitanje",url:"./biblioteka.html"},
  {cat:"RUBRIKA",title:"BL Free Store",description:"Besplatni digitalni resursi",url:"./free-store.html"},
  {cat:"RUBRIKA",title:"BL Lab",description:"Projekti i ideje za razmjenu",url:"./lab.html"},
+ {cat:"RUBRIKA",title:"Podcast",description:"Razgovori i predlaganje tema; epizode su u pripremi.",url:"./podcast.html"},
  {cat:"RUBRIKA",title:"Majstori & Kreatori",description:"Tehnologija, zanati, kreativci i Brzo i Lokalno",url:"./majstori-kreatori.html"}
 ];
 const all=[
