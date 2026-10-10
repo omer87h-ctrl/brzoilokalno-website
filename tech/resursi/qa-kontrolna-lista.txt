@@ -1,0 +1,29 @@
+BRZO I LOKALNO | QA KONTROLNA LISTA ZA WEB
+Originalni materijal © 2026 Brzo i Lokalno. Besplatna lična upotreba.
+
+FUNKCIONALNOST
+[ ] Svi vidljivi linkovi otvaraju ispravnu destinaciju.
+[ ] Pretraga vraća odgovarajuće rezultate i prazno stanje.
+[ ] Svako dugme ima stvarnu funkciju.
+[ ] Obrasci prikazuju razumljive greške.
+
+MOBILNI PRIKAZ
+[ ] Navigacija se može otvoriti i zatvoriti.
+[ ] Tekst ne izlazi iz ekrana.
+[ ] Dugmad i linkovi se mogu aktivirati prstom.
+
+PRISTUPAČNOST
+[ ] Elementi se mogu koristiti tastaturom.
+[ ] Fokus je vidljiv.
+[ ] Naslovi prate logičan redoslijed.
+[ ] Kontrast i veličina teksta omogućavaju čitanje.
+
+SIGURNOST I PRIVATNOST
+[ ] Nema pristupnih ključeva ili privatnih tokena u javnom kodu.
+[ ] Vanjski linkovi imaju jasnu svrhu.
+[ ] Nema nepotrebnog prikupljanja podataka.
+
+OBJAVA
+[ ] Testirano na najmanje jednom telefonu i računaru.
+[ ] 404 greške i putanje su provjerene.
+[ ] Izvršena je provjera licence sadržaja.
