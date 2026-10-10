@@ -60,7 +60,6 @@ const pages=[
  {cat:"RUBRIKA",title:"Tech zona",description:"Objavljeni članci",url:"./tech-zona.html"},
  {cat:"RUBRIKA",title:"Studio",description:"Pisanje tekstova",url:"./studio.html"},
  {cat:"RUBRIKA",title:"Pošalji oglas ili članak",description:"Urednički pregled e-poštom",url:"./objavi.html"},
- {cat:"RUBRIKA",title:"Asistent",description:"Pomoć i kalkulatori",url:"./asistent.html"},
  {cat:"RUBRIKA",title:"Podcast",description:"Razgovori i predlaganje tema; epizode su u pripremi.",url:"./podcast.html"},
  {cat:"RUBRIKA",title:"Majstori & Kreatori",description:"Tehnologija, zanati, kreativci i Brzo i Lokalno",url:"./majstori-kreatori.html"}
 ];
@@ -96,34 +95,4 @@ if("IntersectionObserver" in window&&!matchMedia("(prefers-reduced-motion: reduc
  nodes.forEach(node=>{node.classList.add("reveal");obs.observe(node);});
 }
 
-// Contextual Guardian — reads current page only, no telemetry, storage or background network.
-const current=location.pathname;
-if(current.startsWith("/tech/")&&!/\/tech\/(privatnost|pravila)\.html$/.test(current)){
- const module=document.createElement("div");module.className="guardian-dock";
- const button=document.createElement("button");button.type="button";button.className="guardian-launch";button.setAttribute("aria-controls","guardian-context");button.setAttribute("aria-expanded","false");button.setAttribute("aria-label","Otvori Asistent pomoć");
- const mark=document.createElement("span");mark.className="guardian-mark";mark.textContent="✳";mark.setAttribute("aria-hidden","true");
- const title=document.createElement("span");title.textContent="Asistent";button.append(mark,title);
- const card=document.createElement("aside");card.id="guardian-context";card.className="guardian-context";card.hidden=true;
- const label=document.createElement("span");label.className="eyebrow";label.textContent="ASISTENT / KONTEKSTUALNA POMOĆ";
- const h=document.createElement("h2");h.textContent="Šta želiš uraditi?";
- const p=document.createElement("p");
- const links=document.createElement("div");links.className="guardian-dock-links";
- const candidates=(()=>{
-  if(current.endsWith("/telefoni.html"))return {msg:"Upoređuješ telefone. Unesi cijene koje si pronašao; mogu pokazati poznate razlike, i objašnjenja iz poznatih izvora.",links:[["Asistent","/tech/asistent.html"],["Vodič o telefonima","/tech/clanci/kako-birati-telefon.html"]]};
-  if(current.endsWith("/alati.html"))return {msg:"Ovo su praktični kalkulatori. Provjeri mjere, normative i konačnu ponudu prije rada.",links:[["Asistent","/tech/asistent.html"],["Majstori & Kreatori","/tech/majstori-kreatori.html"]]};
-  if(current.endsWith("/biblioteka.html"))return {msg:"U Biblioteci možeš čitati i preuzeti postojeće originalne materijale. Pregledaj naslove ili nastavi tamo gdje te zanima.",links:[["Pročitaj mini-knjigu","/tech/citaj.html?resurs=od-ideje-do-proizvoda.txt"],["Asistent","/tech/asistent.html"]]};
-  if(current.endsWith("/free-store.html"))return {msg:"BL Free Store nudi samo stvarne, besplatne digitalne resurse za direktno preuzimanje.",links:[["Pogledaj alate","/tech/alati.html"],["Asistent","/tech/asistent.html"]]};
-  if(current.includes("/clanci/"))return {msg:"Čitaš autorski članak. Asistent ti može odvesti do povezanih alata i besplatnih vodiča.",links:[["Alati i softver","/tech/alati.html"],["Biblioteka","/tech/biblioteka.html"]]};
-  if(current.endsWith("/majstori-kreatori.html"))return {msg:"Ovo je veza s glavnom platformom. Za praktičan proračun otvori kalkulatore.",links:[["Majstorski kalkulatori","/tech/alati.html"],["Glavna platforma","/"]]};
-  return {msg:"Asistent prepoznaje gdje si na portalu i pokazuje korisne sljedeće korake. Uz tebe je dok istražuješ sadržaj.",links:[["Kompas telefona","/tech/telefoni.html"],["Alati i softver","/tech/alati.html"],["Otvori Asistent","/tech/asistent.html"]]};
- })();
- p.textContent=candidates.msg;
- for(const [title,url] of candidates.links){const a=document.createElement("a");a.href=url;a.textContent=title+" ↗";links.append(a);}
- const close=document.createElement("button");close.type="button";close.className="guardian-close";close.textContent="Zatvori";close.setAttribute("aria-label","Zatvori Asistent pomoć");
- card.append(label,h,p,links,close);module.append(card,button);document.body.append(module);
- const hide=()=>{card.hidden=true;button.setAttribute("aria-expanded","false");};
- button.addEventListener("click",()=>{const next=card.hidden;card.hidden=!next;button.setAttribute("aria-expanded",String(next));if(next)close.focus();});
- close.addEventListener("click",()=>{hide();button.focus();});
- document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!card.hidden){hide();button.focus();}});
-}
 })();
