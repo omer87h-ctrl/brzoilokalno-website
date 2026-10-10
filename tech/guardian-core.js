@@ -43,10 +43,10 @@ function calcTool(kind){
    steps=["Rad: "+fmt(hours)+" × "+fmt(rate)+" KM = "+fmt(labour)+" KM","Materijal: "+fmt(materials)+" KM","Ostalo: "+fmt(other)+" KM"];
    note="Ovo nije formalna faktura, ponuda sa zakonski obaveznim elementima ni poreski obračun. Porez, PDV i propisane obaveze nisu uključeni.";
   }else throw Error("Nepoznati alat.");
-  resultStart(body,"ASISTENT / PROVJERLJIV RAČUN",title);
+  resultStart(body,"KALKULATOR / REZULTAT",title);
   body.append(para(summary));
   const list=el("ul");steps.forEach(s=>list.append(el("li",s)));body.append(list,para(note));
- }catch(e){resultStart(body,"ASISTENT / PROVJERI PODATKE","Nije moguće izračunati.");body.append(para(e.message));}
+ }catch(e){resultStart(body,"KALKULATOR / PROVJERA","Nije moguće izračunati.");body.append(para(e.message));}
 }
 const tabs=document.querySelectorAll("[data-tool]");
 let activeTool="tiles";
@@ -90,12 +90,12 @@ function deltaDescription(first,second,key,priority){
 function comparePhones(){
  const out=$("phone-result");if(!out)return;
  const first=models.find(m=>m.id===aSelect.value),second=models.find(m=>m.id===bSelect.value);
- if(!first||!second){resultStart(out,"ASISTENT / NEMA MODELA","Izaberi dva poznata modela.");return;}
+ if(!first||!second){resultStart(out,"POREĐENJE / NEMA MODELA","Izaberi dva poznata modela.");return;}
  if(first.id===second.id){resultStart(out,"ASISTENT / UPIT","Izaberi dva različita modela.");return;}
  try{
   const p1=validPrice("phone-price-a"),p2=validPrice("phone-price-b"),budget=validPrice("phone-budget");
   const priority=$("phone-priority").value;
-  resultStart(out,"ASISTENT / FAKTI I OGRANIČENJA",first.name+" / "+second.name);
+  resultStart(out,"POREĐENJE / PODACI I OGRANIČENJA",first.name+" / "+second.name);
   out.append(para("Prikazani podaci potiču sa stranica proizvođača. Cijene su tvoji unosi, ne naše ponude."));
   const tbl=el("table");const thead=el("tr");thead.append(el("th","Osobina"),el("th",first.name),el("th",second.name));tbl.append(thead);
   for(const [key,label] of [["display","Ekran"],["refresh","Osvježavanje"],["battery","Nominalni kapacitet"],["weight","Težina"],["ip","Zaštita"]])row(tbl,label,specValue(first,key),specValue(second,key));
@@ -124,7 +124,7 @@ function comparePhones(){
   appendLink(out,first.name+" — zvanične specifikacije ↗",first.source,true);
   appendLink(out,second.name+" — zvanične specifikacije ↗",second.source,true);
   out.append(para("Provjeri tržišnu varijantu i datum. IP zaštita vremenom može oslabiti. mAh i reklamirani sati videa nisu međusobno uporedivi pokazatelji trajanja baterije. Ovo nije praktična recenzija niti test.").cloneNode(true));
- }catch(e){resultStart(out,"ASISTENT / PROVJERI UNOS","Neki podaci nisu ispravni.");out.append(para(e.message));}
+ }catch(e){resultStart(out,"POREĐENJE / PROVJERA UNOSA","Neki podaci nisu ispravni.");out.append(para(e.message));}
 }
 if($("phone-form"))$("phone-form").addEventListener("submit",e=>{e.preventDefault();comparePhones();});
 })();
