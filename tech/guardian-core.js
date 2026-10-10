@@ -133,16 +133,16 @@ function intent(text){
  const known=D.tools.filter(t=>t.href).find(t=>q.includes(txt(t.name)));
  if(known)return {title:known.name,desc:known.description+" Zvanična stranica autora; program nije smješten na ovom portalu.",url:known.href,label:"OTVORI ZVANIČNU STRANICU ↗"};
  const rules=[
-  {test:/plocic|keramik|podov|fug|kupatil/,title:"Kalkulator pločica",desc:"Prvo unesi mjere površine i pločica. Guardian izračuna broj komada uz rezervu, a raspored i pakovanja se provjeravaju na licu mjesta.",url:"./alati.html?alat=tiles",label:"OTVORI KALKULATOR PLOČICA ↗"},
+  {test:/plocic|keramik|podov|fug|kupatil/,title:"Kalkulator pločica",desc:"Prvo unesi mjere površine i pločica. Asistent izračuna broj komada uz rezervu, a raspored i pakovanja se provjeravaju na licu mjesta.",url:"./alati.html?alat=tiles",label:"OTVORI KALKULATOR PLOČICA ↗"},
   {test:/farb|krec|boj[aue]|bojom|zidov|litara|molersk/,title:"Kalkulator boje",desc:"Za broj litara trebaju površina, pokrivnost proizvođača i broj slojeva.",url:"./alati.html?alat=paint",label:"OTVORI KALKULATOR BOJE ↗"},
   {test:/ponud|predracun|racun|satnic|troskov|koliko\s+kosta\s+rad/,title:"Proračun ponude",desc:"Izračunaj zbir rada i materijala. Ovo nije poreski obračun ni formalna faktura.",url:"./alati.html?alat=offer",label:"OTVORI PONUDU ↗"},
-  {test:/telefon|mobitel|iphone|samsung|redmi|xiaomi|kamera|baterij|500\s*km|kupiti uredaj/,title:"Kompas za telefone",desc:"Uporedi poznate specifikacije i svoj budžet. Cijene unosiš sam; Guardian ne izmišlja recenzije ili testove.",url:"./telefoni.html",label:"OTVORI POREĐENJE TELEFONA ↗"},
+  {test:/telefon|mobitel|iphone|samsung|redmi|xiaomi|kamera|baterij|500\s*km|kupiti uredaj/,title:"Kompas za telefone",desc:"Uporedi poznate specifikacije i svoj budžet. Za poređenje dodaj cijene koje si pronašao.",url:"./telefoni.html",label:"OTVORI POREĐENJE TELEFONA ↗"},
   {test:/krita|inkscape|blender|gimp|audacity|libreoffice|dizajn|softver|besplatn|grafik|audio|video/,title:"Besplatan softver i alati",desc:"Pronađi stvarne programe uz direktne linkove njihovih autora. Nema neovlaštenih kopija.",url:"./alati.html#kreatori",label:"OTVORI KATALOG SOFTVERA ↗"},
   {test:/knjig|bibliotek|procitat|vodic|prirucnik|pdf/,title:"Biblioteka znanja",desc:"Čitaj originalne vodiče i preuzimaj samo stvarno dostupne resurse.",url:"./biblioteka.html",label:"OTVORI BIBLIOTEKU ↗"},
   {test:/vijest|novost|clanak|tehnolog|ai\b|android|web/,title:"TECH portal",desc:"Čitaj samo stvarno objavljene članke i provjerene izvore. Nema automatski izmišljenih vijesti.",url:"./",label:"ISTRAŽI TECH PORTAL ↗"},
   {test:/majstor|kreator|obrt|radovi|posao/,title:"Majstori & Kreatori",desc:"Poveži praktična znanja i alate s postojećom platformom Brzo i Lokalno.",url:"./majstori-kreatori.html",label:"OTVORI RUBRIKU ↗"}
  ];
- return rules.find(r=>r.test.test(q))||{title:"Otkrij šta ti treba",desc:"Za sada razumijem telefone, pločice, boju, ponudu, besplatni softver, Biblioteku i TECH članke. Neću izmišljati odgovor na pitanje koje ne mogu obraditi.",url:"./alati.html",label:"POGLEDAJ DOSTUPNE ALATE ↗"};
+ return rules.find(r=>r.test.test(q))||{title:"Otkrij šta ti treba",desc:"Za sada razumijem telefone, pločice, boju, ponudu, besplatni softver, Biblioteku i TECH članke. Pokušaj pitati za telefon, građevinske materijale, softver ili sadržaj iz Biblioteke.",url:"./alati.html",label:"POGLEDAJ DOSTUPNE ALATE ↗"};
 }
 function answerQuery(s){
  const v=s.trim();
