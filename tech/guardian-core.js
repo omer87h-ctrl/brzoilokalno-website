@@ -128,9 +128,9 @@ const answer=$("guardian-answer"),form=$("guardian-form"),query=$("guardian-quer
 function intent(text){
  const q=txt(text);
  const rules=[
-  {test:/plocic|keramik|podov|fug|kupatil|kvadrat|m2|m²/,title:"Kalkulator pločica",desc:"Prvo unesi mjere površine i pločica. Guardian izračuna broj komada uz rezervu, a raspored i pakovanja se provjeravaju na licu mjesta.",url:"./alati.html?alat=tiles",label:"OTVORI KALKULATOR PLOČICA ↗"},
+  {test:/plocic|keramik|podov|fug|kupatil/,title:"Kalkulator pločica",desc:"Prvo unesi mjere površine i pločica. Guardian izračuna broj komada uz rezervu, a raspored i pakovanja se provjeravaju na licu mjesta.",url:"./alati.html?alat=tiles",label:"OTVORI KALKULATOR PLOČICA ↗"},
   {test:/farb|krec|boja|zidov|litara|molersk/,title:"Kalkulator boje",desc:"Za broj litara trebaju površina, pokrivnost proizvođača i broj slojeva.",url:"./alati.html?alat=paint",label:"OTVORI KALKULATOR BOJE ↗"},
-  {test:/ponud|predracun|racun|cijen[aeu]|satnic|materijal|troskov/,title:"Proračun ponude",desc:"Izračunaj zbir rada i materijala. Ovo nije poreski obračun ni formalna faktura.",url:"./alati.html?alat=offer",label:"OTVORI PONUDU ↗"},
+  {test:/ponud|predracun|racun|satnic|troskov|koliko\s+kosta\s+rad/,title:"Proračun ponude",desc:"Izračunaj zbir rada i materijala. Ovo nije poreski obračun ni formalna faktura.",url:"./alati.html?alat=offer",label:"OTVORI PONUDU ↗"},
   {test:/telefon|mobitel|iphone|samsung|redmi|xiaomi|kamera|baterij|500\s*km|kupiti uredaj/,title:"Kompas za telefone",desc:"Uporedi poznate specifikacije i svoj budžet. Cijene unosiš sam; Guardian ne izmišlja recenzije ili testove.",url:"./telefoni.html",label:"OTVORI POREĐENJE TELEFONA ↗"},
   {test:/krita|inkscape|blender|gimp|audacity|libreoffice|dizajn|softver|besplatn|grafik|audio|video/,title:"Besplatan softver i alati",desc:"Pronađi stvarne programe uz direktne linkove njihovih autora. Nema neovlaštenih kopija.",url:"./alati.html#kreatori",label:"OTVORI KATALOG SOFTVERA ↗"},
   {test:/knjig|bibliotek|procitat|vodic|prirucnik|pdf/,title:"Biblioteka znanja",desc:"Čitaj originalne vodiče i preuzimaj samo stvarno dostupne resurse.",url:"./biblioteka.html",label:"OTVORI BIBLIOTEKU ↗"},
