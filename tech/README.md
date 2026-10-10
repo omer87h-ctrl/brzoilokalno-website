@@ -97,3 +97,6 @@ Portal nema automatizovani prikupljač vijesti; ažuriranje naslova i RSS-a je u
 - Client processing only. No Firebase, no paid API, no persistence. It is not the recovered original Kotlin source; the code in the app repo could not be retrieved (only README in its default branch).
 - User can say 'telefon do 500 KM' then 'baterija': budget and intent survive. 'Pločice za 4x3 m' then '60x60 cm' gives 37 pieces with a default clearly labeled 10% reserve.
 - The separately opt-in WebLLM model enhances phrasing, not the math or unverified claims. Client-side model performance depends on user device.
+
+## Portal-only mode (2026-10-10)
+Asistent and AI interface removed from navigation, homepage and scripts on development branch. Legacy asistent.html / guardian.html redirect to TECH homepage. Calculator and phone comparator still run locally. No public deploy authorized.
