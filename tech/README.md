@@ -91,3 +91,9 @@ Portal nema automatizovani prikupljač vijesti; ažuriranje naslova i RSS-a je u
 - WebLLM je opcionalan i zahtijeva WebGPU; q4f32_1 ~580 MB VRAM i q4f16_1 ~376 MB VRAM po službenom WebLLM katalogu; internet preuzimanja i predmemorija nisu besplatni po pitanju korisničkog protoka.
 - SmolLM2 je primarno treniran na engleskom. Ne garantirati kvalitet bosanskog, niti prikazivati neprovjeren zaključak kao recenziju ili vijest.
 - TECH Pulse: do posebnog urednički odobrenog izvora koristi samo prethodno objavljene interne naslove. Ne smije se nazivati automatskom vanjskom agencijom.
+
+## Asistent OS 2.0 (Guardian architecture translated for web)
+- `assistant-chain.js` indexes *only actual* verified portal records; `assistant-os.js` adds interpreter, session context, scenario engine, reliable math and safe tool routing.
+- Client processing only. No Firebase, no paid API, no persistence. It is not the recovered original Kotlin source; the code in the app repo could not be retrieved (only README in its default branch).
+- User can say 'telefon do 500 KM' then 'baterija': budget and intent survive. 'Pločice za 4x3 m' then '60x60 cm' gives 37 pieces with a default clearly labeled 10% reserve.
+- The separately opt-in WebLLM model enhances phrasing, not the math or unverified claims. Client-side model performance depends on user device.
