@@ -24,16 +24,37 @@ const facts=[
 ];let factIndex=Math.floor(Date.now()/86400000)%facts.length;
 function fact(){const x=facts[factIndex];$("fact-index").textContent="PROVJERENA ČINJENICA / "+String(factIndex+1).padStart(2,"0");$("fact-title").textContent=x.title;$("fact-description").textContent=x.description;$("fact-source").href=x.url;$("fact-source").textContent=x.source+" ↗";}
 $("fact-next").addEventListener("click",()=>{factIndex=(factIndex+1)%facts.length;fact();});fact();
-const tools=[
-{id:"units",title:"Pretvarač jedinica",desc:"Pretvori metre u centimetre, kilometre u metre ili kilograme u grame.",fields:[["value","Vrijednost",1],["unit","Odaberi pretvaranje",null,[["mcm","m → cm"],["kmm","km → m"],["kgg","kg → g"],["cmbm","cm → m"]]]],calc:v=>{const k={mcm:100,kmm:1000,kgg:1000,cmbm:.01},unit=v.unit;return {result:nf(v.value*k[unit])+" "+({mcm:"cm",kmm:"m",kgg:"g",cmbm:"m"}[unit]),note:"Pretvaranje bez zaokruživanja ulaznih vrijednosti."};}},
-{id:"area",title:"Površina prostora",desc:"Izračunaj površinu pravougaonog poda ili zida u kvadratnim metrima.",fields:[["length","Dužina (m)",4],["width","Širina (m)",3]],calc:v=>({result:nf(v.length*v.width)+" m²",note:"Površina pravougaonika. Za složene oblike računaj dijelove odvojeno."})},
-{id:"time",title:"Trajanje zadatka",desc:"Pretvori sate i minute rada u ukupan broj minuta.",fields:[["hours","Sati",2],["minutes","Minute",30]],calc:v=>({result:nf(Math.round(v.hours*60+v.minutes),0)+" minuta",note:"Zbroj sati i minuta; za naplatu je potreban dogovor o satnici."})},
-{id:"price",title:"Kalkulator ponude",desc:"Izračunaj cijenu rada i materijala, prije poreza i drugih troškova.",fields:[["hours","Sati rada",5],["rate","Satnica (KM)",20],["materials","Materijal (KM)",45]],calc:v=>({result:nf(v.hours*v.rate+v.materials)+" KM",note:"Osnovni zbir rada i materijala. Ne uključuje porez, prevoz ni ostale troškove."})},
-{id:"size",title:"Veličina datoteke",desc:"Pretvori megabajte (MB) u kilobajte (KB) koristeći decimalne SI jedinice.",fields:[["megabytes","Veličina (MB)",12.5]],calc:v=>({result:nf(v.megabytes*1000)+" KB",note:"Decimalno: 1 MB = 1000 KB. Za binarne jedinice koriste se MiB i KiB."})}
+const journeys=[
+{id:"start",label:"RAZVOJ PROIZVODA",title:"Od ideje do prvog proizvoda",description:"Počni s konkretnim problemom, istraži kako nastaje prototip i preuzmi predložak za planiranje.",items:[
+["Pročitaj: Od ideje do prvog digitalnog proizvoda","Osnovni koraci od problema do prototipa.","./clanci/od-ideje-do-proizvoda.html"],
+["Otvori mini-knjigu","Besplatan materijal za detaljnije čitanje.","./citaj.html?resurs=od-ideje-do-proizvoda.txt"],
+["Preuzmi plan projekta","Predložak koji možeš dopuniti vlastitim zadacima.","./resursi/plan-projekta.csv"]]},
+{id:"privacy",label:"DIGITALNA SIGURNOST",title:"Sigurniji računi i uređaji",description:"Provjeri dozvole aplikacija, postavke naloga i osnovne sigurnosne navike.",items:[
+["Pročitaj: Digitalna privatnost","Kratak vodič o dozvolama, lozinkama i sigurnosti.","./clanci/digitalna-privatnost.html"],
+["Otvori kontrolnu listu","Pregled navika koje vrijedi provjeriti.","./citaj.html?resurs=kontrolna-lista-privatnosti.txt"],
+["Provjeri smjernice CISA-e","Zvanične informacije o digitalnoj zaštiti.","https://www.cisa.gov/secure-our-world"]]},
+{id:"devices",label:"TELEFONI I AUDIO",title:"Bolje razumij uređaje",description:"Razlikuj reklamne tvrdnje od provjerljivih specifikacija. Biraj prema vlastitim potrebama.",items:[
+["Kako odabrati telefon","Vodič za razumijevanje specifikacija.","./clanci/kako-birati-telefon.html"],
+["Uporedi specifikacije telefona","Provjeri podatke proizvođača za modele u katalogu.","./telefoni.html"],
+["Šta je važno pri izboru slušalica","Udobnost, povezivanje, baterija i zvuk.","./clanci/kako-birati-slusalice.html"]]},
+{id:"publish",label:"PISANJE I OBJAVA",title:"Napiši i predloži svoj tekst",description:"Istraži teme, napravi nacrt i pošalji prijedlog redakciji kada budeš spreman.",items:[
+["Istraži postojeće članke","Pročitaj objavljene autorske tekstove.","./tech-zona.html"],
+["Piši u Studiju","Nacrt ostaje na tvom uređaju dok ga sam ne pošalješ.","./studio.html"],
+["Pročitaj pravila objavljivanja","Provjeri uslove autorstva i uredničkog pregleda.","./pravila.html"]]}
 ];
-const fmt=new Intl.NumberFormat("bs-BA",{maximumFractionDigits:3});const nf=(x,d)=>new Intl.NumberFormat("bs-BA",{maximumFractionDigits:d===undefined?3:d}).format(x);
-let selected=tools[0],fields=$("lab-fields");
-function renderLab(){const t=selected;$("lab-title").textContent=t.title;$("lab-description").textContent=t.desc;$("lab-output").textContent="—";$("lab-explanation").textContent="Unesi vrijednosti i izračunaj.";fields.replaceChildren();for(const [id,label,value,options] of t.fields){const box=make("label","lab-field"),caption=make("span","",label);let input;if(options){input=document.createElement("select");for(const [val,name] of options){const opt=document.createElement("option");opt.value=val;opt.textContent=name;input.append(opt);}}else{input=document.createElement("input");input.type="number";input.inputMode="decimal";input.step="any";input.min="0";input.max="10000000";input.required=true;input.value=String(value);}input.name=id;box.append(caption,input);fields.append(box);}}
-for(const t of tools){const b=make("button","lab-tab",t.title);b.type="button";b.setAttribute("aria-pressed",String(t===selected));b.addEventListener("click",()=>{selected=t;for(const el of $("lab-tabs").children)el.setAttribute("aria-pressed",String(el===b));renderLab();});$("lab-tabs").append(b);}renderLab();
-$("lab-form").addEventListener("submit",event=>{event.preventDefault();const values={};for(const field of fields.querySelectorAll("input,select")){if(field.tagName==="SELECT"){values[field.name]=field.value;continue;}const n=Number(field.value);if(!field.value.trim()||!Number.isFinite(n)||n<0||n>10000000){$("lab-output").textContent="Provjeri unos";$("lab-explanation").textContent="Unesi brojeve od 0 do 10.000.000 u sva obavezna polja.";return;}values[field.name]=n;}const result=selected.calc(values);$("lab-output").textContent=result.result;$("lab-explanation").textContent=result.note;});
+const tabs=$("learning-tabs"),list=$("learning-results");
+if(tabs&&list){
+ let chosen=journeys[0];
+ function drawJourney(){
+  $("learning-title").textContent=chosen.title;$("learning-description").textContent=chosen.description;
+  list.replaceChildren();
+  chosen.items.forEach(([title,description,url],index)=>{
+   const a=make("a","learning-link"),number=make("span","learning-step",String(index+1).padStart(2,"0")),words=make("span","learning-link-copy");
+   a.href=url;if(url.startsWith("https://")){a.target="_blank";a.rel="noopener noreferrer";}
+   words.append(make("strong","",title),make("small","",description));a.append(number,words,make("span","learning-arrow","↗"));list.append(a);
+  });
+ }
+ journeys.forEach((journey,i)=>{const button=make("button","learning-tab",journey.label);button.type="button";button.setAttribute("aria-pressed",String(i===0));button.addEventListener("click",()=>{chosen=journey;for(const b of tabs.children)b.setAttribute("aria-pressed",String(b===button));drawJourney();});tabs.append(button);});
+ drawJourney();
+}
 })();
