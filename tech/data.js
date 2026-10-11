@@ -65,6 +65,12 @@ window.BL_PORTAL_CONTENT={
     }
   ],
   "materials": [
+    {"name":"Pristupačan digitalni sadržaj","cat":"Dizajn","kind":"ORIGINALNI PRAKTIČNI VODIČ","symbol":"◉","file":"vodic-digitalna-pristupacnost.txt","desc":"Tastatura, kontrast, semantika i pristupačni obrasci uz kontrolnu listu.","format":"TXT","href":"./resursi/vodic-digitalna-pristupacnost.txt"},
+    {"name":"Predložak za TECH događaj","cat":"Predlošci","kind":"ORIGINALNI ORGANIZATORSKI PREDLOŽAK","symbol":"▦","file":"predlozak-tech-dogadjaj.txt","desc":"Najava konferencije ili webinara: izvori, datumi, rokovi, prava i dozvole.","format":"TXT","href":"./resursi/predlozak-tech-dogadjaj.txt"},
+    {"name":"Urednički predložak za članak","cat":"Predlošci","kind":"ORIGINALNI PREDLOŽAK ZA PISANJE","symbol":"✎","file":"predlozak-tech-clanak.txt","desc":"Jasna struktura teksta, dokazi, izvori, autorstvo i kontrola prije slanja.","format":"TXT","href":"./resursi/predlozak-tech-clanak.txt"},
+    {"name":"Provjera AI tvrdnji","cat":"AI","kind":"ORIGINALNA KONTROLNA LISTA","symbol":"◎","file":"kontrolna-lista-ai-tvrdnje.txt","desc":"Sedam koraka za provjeru generativnih odgovora i tehnoloških navoda.","format":"TXT","href":"./resursi/kontrolna-lista-ai-tvrdnje.txt"},
+    {"name":"Besplatni softver i licence","cat":"Softver","kind":"ORIGINALNI VODIČ","symbol":"⌘","file":"vodic-open-source-licence.txt","desc":"Razlika između besplatnog softvera, otvorenog koda i pravila distribucije.","format":"TXT","href":"./resursi/vodic-open-source-licence.txt"},
+    {"name":"Sedam dana digitalne sigurnosti","cat":"Sigurnost","kind":"ORIGINALNI RADNI LIST","symbol":"◇","file":"radni-list-cyber-higijena.txt","desc":"Sedmodnevni praktični plan za naloge, lozinke, dozvole i oporavak.","format":"TXT","href":"./resursi/radni-list-cyber-higijena.txt"},
     {
       "name": "Mini-knjiga: Od ideje do proizvoda",
       "cat": "Knjige",
