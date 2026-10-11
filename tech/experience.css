@@ -78,3 +78,12 @@
 
 /* Sound is ALWAYS initially off. Original WebAudio tones run only after user action. */
 .bl-sound-switch{position:fixed;left:max(14px,env(safe-area-inset-left));bottom:max(14px,env(safe-area-inset-bottom));z-index:90;padding:10px 13px;background:#141a22ed;color:#e8bc96;border:1px solid #855435;border-radius:999px;font:850 10px system-ui;letter-spacing:.05em;box-shadow:0 3px 20px #0007;cursor:pointer;min-height:40px;backdrop-filter:blur(10px)}.bl-sound-switch:hover{background:#2b211d;border-color:#f49b5d}.bl-sound-switch[aria-pressed=true]{color:#ffcfaa;background:#39231c;border-color:#da925e}.bl-sound-switch:focus-visible{outline:2px solid #ffe1ba;outline-offset:4px}@media(max-width:740px){.bl-sound-switch{bottom:max(10px,env(safe-area-inset-bottom));left:max(10px,env(safe-area-inset-left));font-size:9px;padding:9px 11px}}@media print{.bl-sound-switch{display:none}}
+
+/* Article reading enhancements. Purely local, accessibility aware. */
+.bl-reading-progress{position:fixed;top:0;left:0;right:0;height:4px;z-index:200;pointer-events:none;background:transparent}
+.bl-reading-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#ffb26b,#fc7c35);box-shadow:0 0 12px #e68a5f5c;transition:width .16s linear}
+.reader-save-button[aria-pressed=true]{background:#292e28!important;color:#bfe8c8!important;border-color:#699a76!important}
+.reader-save-feedback{font:700 11px/1.45 system-ui;color:#e8bc9c;align-self:center}
+.reader-actions .button.ghost{display:inline-flex;align-items:center}
+@media(prefers-reduced-motion:reduce){.bl-reading-progress span{transition:none}}
+@media print{.bl-reading-progress,.reader-save-feedback{display:none!important}}

@@ -85,11 +85,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
-  <url>
-    <loc>https://brzoilokalno.com/tech/guardian.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
   <url>
     <loc>https://brzoilokalno.com/tech/telefoni.html</loc>
     <changefreq>monthly</changefreq>
@@ -103,6 +99,10 @@
   <url><loc>https://brzoilokalno.com/tech/tech-zona.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://brzoilokalno.com/tech/studio.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://brzoilokalno.com/tech/objavi.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://brzoilokalno.com/tech/asistent.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
   <url><loc>https://brzoilokalno.com/tech/oglasi.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://brzoilokalno.com/tech/discovery.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brzoilokalno.com/tech/izvori.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brzoilokalno.com/tech/pravila.html</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://brzoilokalno.com/tech/privatnost.html</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
 </urlset>

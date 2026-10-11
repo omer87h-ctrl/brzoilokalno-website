@@ -8,6 +8,14 @@ const matches=(item,q)=>q.every(t=>fold(item).includes(t));
 const legacyRoutes={"#biblioteka":"./biblioteka.html","#store":"./free-store.html","#lab":"./lab.html","#ljudi":"./majstori-kreatori.html","#radar":"./lab.html","#podcast":"./podcast.html"};
 if((location.pathname.endsWith("/tech/")||location.pathname.endsWith("/tech/index.html"))&&Object.prototype.hasOwnProperty.call(legacyRoutes,location.hash))location.replace(legacyRoutes[location.hash]);
 const menu=$("nav-toggle"),mob=$("mobile-nav");
+// Keep Discovery visible throughout TECH, including older mobile menus.
+function addDiscovery(nav){
+ if(!nav||nav.querySelector('a[href="./discovery.html"]'))return;
+ const link=create("a","","Discovery");link.href="./discovery.html";
+ const after=nav.querySelector('a[href="./tech-zona.html"]');
+ if(after)after.insertAdjacentElement("afterend",link);else nav.prepend(link);
+}
+addDiscovery(document.querySelector(".nav-main"));addDiscovery(mob);
 menu?.addEventListener("click",()=>{const open=mob.hidden;mob.hidden=!open;menu.setAttribute("aria-expanded",String(open));});
 mob?.addEventListener("click",e=>{if(e.target.closest("a")){mob.hidden=true;menu.setAttribute("aria-expanded","false");}});
 const readerLink=m=>"./citaj.html?resurs="+encodeURIComponent(m.file);
@@ -55,6 +63,10 @@ const modal=$("site-search"),search=$("universal-input"),results=$("universal-re
 const pages=[
  {cat:"RUBRIKA",title:"Tech portal",description:"AI, uređaji, softver i originalne analize",url:"./"},
  {cat:"RUBRIKA",title:"Biblioteka",description:"Knjige, vodiči, besplatno čitanje",url:"./biblioteka.html"},
+ {cat:"RUBRIKA",title:"TECH Discovery",description:"Radar autorskih članaka, teme, provjerene činjenice i vodiči",url:"./discovery.html"},
+ {cat:"VODIČI",title:"Preporučeno čitanje",description:"Povezani vodiči kroz razvoj, privatnost, uređaje i pisanje",url:"./discovery.html#putanje"},
+ {cat:"MOJA KOLEKCIJA",title:"Sačuvani članci",description:"Članci koje si sačuvao na ovom uređaju",url:"./discovery.html#sacuvano"},
+ {cat:"RUBRIKA",title:"Vijesti i izvori",description:"Izvorni linkovi, datumi i tehnološke novosti",url:"./izvori.html"},
  {cat:"RUBRIKA",title:"BL Free Store",description:"Besplatni digitalni resursi",url:"./free-store.html"},
  {cat:"RUBRIKA",title:"BL Lab",description:"Projekti i ideje za razmjenu",url:"./lab.html"},
  {cat:"RUBRIKA",title:"Tech zona",description:"Objavljeni članci",url:"./tech-zona.html"},
@@ -69,7 +81,8 @@ const all=[
 ];
 function drawSearch(){
  if(!results||!search)return;
- const q=terms(search.value);
+ const aliases={mobitel:"telefon",mobiteli:"telefon",mobitela:"telefon",smartfon:"telefon",smartphone:"telefon",telefoni:"telefon",slusalice:"slušalice",vijest:"vijesti",knjige:"knjig",knjigu:"knjig",knjiga:"knjig"};
+ const q=terms(search.value).map(t=>aliases[t]||t);
  const found=all.filter(x=>matches([x.title,x.description,x.cat].join(" "),q));
  results.replaceChildren(create("div","search-count",found.length+" REZULTATA · POSTOJEĆI SADRŽAJ"));
  if(!found.length){results.append(create("p","empty","Nema rezultata. Pokušaj drugačiji pojam."));return;}

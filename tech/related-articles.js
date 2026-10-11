@@ -11,6 +11,67 @@
  "od-ideje-do-proizvoda":[["Mini-knjiga o proizvodu","Nastavi čitanje u Biblioteci.","/tech/citaj.html?resurs=od-ideje-do-proizvoda.txt"],["Plan projekta","Preuzmi i popuni predložak za svoj projekat.","/tech/citaj.html?resurs=plan-projekta.csv"],["Autorski studio","Napiši vlastitu priču o projektu.","/tech/studio.html"]]
  };
  const list=entries[slug]||[],article=document.querySelector(".article-layout");
+ // Save an article directly from its reader view; shares Discovery's local collection.
+ // Reading progress is calculated locally; no history or analytics sent anywhere.
+ if(article){
+  const progress=document.createElement("div");
+  progress.className="bl-reading-progress";
+  progress.setAttribute("role","progressbar");
+  progress.setAttribute("aria-label","Napredak čitanja članka");
+  progress.setAttribute("aria-valuemin","0");progress.setAttribute("aria-valuemax","100");
+  const bar=document.createElement("span");progress.append(bar);document.body.prepend(progress);
+  let queued=false,last=-1;
+  const update=()=>{
+   queued=false;
+   const top=article.getBoundingClientRect().top+window.scrollY;
+   const bottom=top+article.offsetHeight;
+   const space=Math.max(1,bottom-top-window.innerHeight*.55);
+   const percent=Math.round(Math.min(100,Math.max(0,((window.scrollY-top)/space)*100)));
+   if(percent===last)return;last=percent;
+   bar.style.width=percent+"%";
+   progress.setAttribute("aria-valuenow",String(percent));
+  };
+  const schedule=()=>{if(queued)return;queued=true;requestAnimationFrame(update);};
+  window.addEventListener("scroll",schedule,{passive:true});
+  window.addEventListener("resize",schedule,{passive:true});
+  update();
+ }
+ const actions=article?.querySelector(".reader-actions");
+ if(actions&&slug&&list.length){
+  const storageKey="bl-tech-saved-v1";
+  const getSaved=()=>{
+   try{
+    const stored=JSON.parse(localStorage.getItem(storageKey)||"[]");
+    return Array.isArray(stored)?stored.filter(id=>typeof id==="string"):[];
+   }catch{return [];}
+  };
+  const button=document.createElement("button");
+  button.type="button";button.className="reader-save-button";
+  const collection=document.createElement("a");
+  collection.href="/tech/discovery.html#sacuvano";
+  collection.className="button ghost";
+  collection.textContent="MOJI SAČUVANI ↗";
+  const feedback=document.createElement("span");
+  feedback.className="reader-save-feedback";
+  feedback.setAttribute("role","status");feedback.setAttribute("aria-live","polite");
+  function sync(){
+   const has=getSaved().includes(slug);
+   button.textContent=has?"SAČUVANO ✓":"SAČUVAJ ČLANAK +";
+   button.setAttribute("aria-pressed",String(has));
+  }
+  button.addEventListener("click",()=>{
+   const current=getSaved(),has=current.includes(slug);
+   const next=has?current.filter(id=>id!==slug):[...current,slug];
+   try{
+    localStorage.setItem(storageKey,JSON.stringify(next));
+    sync();
+    feedback.textContent=has?"Članak je uklonjen iz tvoje kolekcije.":"Članak je sačuvan na ovom uređaju.";
+   }catch{
+    feedback.textContent="Čuvanje nije dostupno u ovom pregledniku.";
+   }
+  });
+  sync();actions.prepend(button,collection,feedback);
+ }
  if(!article||!list.length)return;
  const section=document.createElement("section");section.className="related-editorial";section.setAttribute("aria-labelledby","related-heading");
  const over=document.createElement("span");over.className="eyebrow";over.textContent="NASTAVI ISTRAŽIVATI";

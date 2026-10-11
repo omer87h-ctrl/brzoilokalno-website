@@ -11,12 +11,37 @@ function save(){try{localStorage.setItem(storeKey,JSON.stringify(saved));}catch{
 function btnArticle(a){const button=make("button","radar-save",saved.includes(a.id)?"SAČUVANO ✓":"SAČUVAJ +");button.type="button";button.setAttribute("aria-pressed",String(saved.includes(a.id)));button.addEventListener("click",()=>{saved=saved.includes(a.id)?saved.filter(id=>id!==a.id):[...saved,a.id];save();renderRadar();renderSaved();});return button;}
 function story(a){const card=make("article","radar-card");const label=make("span","p-label",a.category+" / AUTORSKI VODIČ");const h=make("h3","",a.title),p=make("p","",a.summary),link=make("a","radar-card-link","PROČITAJ ↗");link.href=a.href;card.append(label,h,p,link,btnArticle(a));return card;}
 let active="all";
+const fold=s=>String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("bs");
+const radarSearch=$("radar-search"),radarCount=$("radar-search-count");
+function matchesQuery(values){const q=fold(radarSearch?.value).trim().split(/\s+/).filter(Boolean);return q.every(t=>fold(values).includes(t));}
 const news=()=>Array.isArray(window.BL_TECH_PULSE)?window.BL_TECH_PULSE.filter(x=>x.kind==="vanjski"&&typeof x.title==="string"&&typeof x.url==="string"&&/^https:\/\//.test(x.url)).slice(0,6):[];
-function renderRadar(){out.replaceChildren();let current=active==="all"?articles:articles.filter(a=>(keys[active]||[]).includes(a.category));if(active==="news"){const items=news();for(const item of items){const a=make("a","radar-card radar-news");a.href=item.url;a.target="_blank";a.rel="noopener noreferrer";a.append(make("span","p-label",item.source+" / VANJSKI IZVOR"),make("h3","",item.title),make("p","",item.date||"Datum nije naveden"),make("span","radar-card-link","IZVOR ↗"));out.append(a);}if(!items.length)out.append(make("p","dim","Nema dostupnih vijesti. Pogledaj listu izvora u TECH zoni."));return;}for(const a of current)out.append(story(a));if(!current.length)out.append(make("p","dim","Za ovu temu trenutno nema objavljenih autorskih tekstova."));}
-categories.forEach(([label,id])=>{const b=make("button","radar-filter",label);b.type="button";b.setAttribute("aria-pressed",String(id===active));b.addEventListener("click",()=>{active=id;for(const c of filters.children)c.setAttribute("aria-pressed",String(c===b));renderRadar();});filters.append(b);});renderRadar();
+function renderRadar(){
+ out.replaceChildren();
+ const current=(active==="all"?articles:articles.filter(a=>(keys[active]||[]).includes(a.category)))
+  .filter(a=>matchesQuery([a.title,a.summary,a.category,a.kind].join(" ")));
+ if(active==="news"){
+  const items=news().filter(item=>matchesQuery([item.title,item.source,item.category,item.description].join(" ")));
+  for(const item of items){
+   const a=make("a","radar-card radar-news");a.href=item.url;a.target="_blank";a.rel="noopener noreferrer";
+   a.append(make("span","p-label",item.source+" / VANJSKI IZVOR"),make("h3","",item.title),make("p","",item.date||"Datum nije naveden"),make("span","radar-card-link","IZVOR ↗"));out.append(a);
+  }
+  if(radarCount)radarCount.textContent=items.length+" DOSTUPNIH NASLOVA";
+  if(!items.length)out.append(make("p","dim","Nema naslova za ovaj pojam. Pokušaj drugu riječ ili pogledaj listu izvora."));
+  return;
+ }
+ for(const a of current)out.append(story(a));
+ if(radarCount)radarCount.textContent=current.length+" DOSTUPNIH TEKSTOVA";
+ if(!current.length)out.append(make("p","dim","Nema rezultata. Promijeni pojam ili odaberi drugu temu."));
+}
+categories.forEach(([label,id])=>{const b=make("button","radar-filter",label);b.type="button";b.setAttribute("aria-pressed",String(id===active));b.addEventListener("click",()=>{active=id;for(const c of filters.children)c.setAttribute("aria-pressed",String(c===b));renderRadar();});filters.append(b);});radarSearch?.addEventListener("input",renderRadar);renderRadar();
 function renderSaved(){const target=$("saved-list");target.replaceChildren();const found=articles.filter(a=>saved.includes(a.id));if(!found.length)target.append(make("p","dim","Još nisi sačuvao članak. Izaberi temu na Radaru i pritisni SAČUVAJ +."));for(const a of found)target.append(story(a));}
 $("saved-clear").addEventListener("click",()=>{saved=[];save();renderRadar();renderSaved();});renderSaved();
 window.addEventListener("bl-news-updated",()=>{if(active==="news")renderRadar();});
+window.addEventListener("storage",event=>{
+ if(event.key!==storeKey)return;
+ try{const items=JSON.parse(event.newValue||"[]");saved=Array.isArray(items)?items.filter(id=>articles.some(a=>a.id===id)):[];}catch{saved=[];}
+ renderRadar();renderSaved();
+});
 const facts=[
 {title:"Web je nastao u CERN-u",description:"Tim Berners-Lee predložio je World Wide Web 1989. godine tokom rada u CERN-u.",source:"CERN",url:"https://home.cern/science/computing/birth-web"},
 {title:"QR kod je razvijen 1994.",description:"DENSO WAVE je 1994. razvio QR kod kako bi se informacije brže očitavale.",source:"DENSO WAVE",url:"https://www.qrcode.com/en/history/"},
