@@ -131,3 +131,11 @@
 @media(max-width:1000px){.official-software-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.official-software-grid{grid-template-columns:1fr}.store-original-head{padding:14px}.store-original-head img{width:54px;height:54px}.official-product{padding:18px}.official-product-mark{width:55px;height:55px}}
 @media print{.official-product-link,.store-chip{display:none!important}}
+
+.our-app-product{display:flex;align-items:center;gap:27px;padding:27px;border:1px solid #a36541;border-radius:16px;background:radial-gradient(ellipse at 90% 45%,#8a4c2942,transparent 66%),linear-gradient(115deg,#23212b,#151f2c)}
+.our-app-product img{width:116px;height:116px;object-fit:contain;border-radius:24px;flex-shrink:0}
+.our-app-product h3{font:900 clamp(24px,3vw,36px)/1.12 system-ui;letter-spacing:-.045em;margin:8px 0 10px;color:#fff3e9}
+.our-app-product p{font:400 13px/1.7 system-ui;color:#d5c4b6;max-width:650px}.our-app-small{font-size:11px!important;color:#b7b1b0!important}
+.our-app-product .button{display:inline-flex;margin-top:7px}
+.store-our-apps{padding-bottom:26px}
+@media(max-width:600px){.our-app-product{display:block;padding:20px}.our-app-product img{width:82px;height:82px;margin-bottom:15px;border-radius:16px}}
