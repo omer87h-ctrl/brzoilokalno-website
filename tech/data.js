@@ -1,5 +1,8 @@
 window.BL_PORTAL_CONTENT={
   "articles": [
+    {"id":"kako-provjeriti-tech-vijest","title":"Kako prepoznati tehnološku vijest kojoj možeš vjerovati?","summary":"Od originalne objave i datuma do granice između činjenice, marketinga i pretpostavke.","category":"Sigurnost","kind":"MEDIJI / PROVJERA","art":"CHECK","artClass":"art-safe","href":"./clanci/kako-provjeriti-tech-vijest.html"},
+    {"id":"digitalni-proizvod-bez-tima","title":"Može li jedna osoba napraviti ozbiljan digitalni proizvod?","summary":"Opseg, testiranje, održavanje i odgovornost ostaju stvarni.","category":"Projekti","kind":"STVARALAŠTVO / PROIZVOD","art":"BUILD","artClass":"art-app","href":"./clanci/digitalni-proizvod-bez-tima.html"},
+    {"id":"sta-zaista-znaci-besplatan-softver","title":"Besplatan program, otvoreni kod i slobodna licenca nisu isto.","summary":"Šta provjeriti prije preuzimanja, korištenja u poslu ili daljnjeg dijeljenja softvera.","category":"Softver","kind":"SOFTVER / LICENCE","art":"FREE?","artClass":"art-app","href":"./clanci/sta-zaista-znaci-besplatan-softver.html"},
     {
       "id": "pwa-ili-android",
       "title": "PWA ili Android: šta korisniku stvarno treba?",

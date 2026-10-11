@@ -112,3 +112,14 @@ Asistent and AI interface removed from navigation, homepage and scripts on devel
 - `tech/news-feed.js` trenutno je ručno odabrani set objava. Nije automatski ažuriran; ne predstavljati ga kao real-time feed.
 - `tech/update-news.py` je neaktivni razvojni pomoćni skript, a nema instaliranog workflowa za automatsko objavljivanje.
 - Izbjegavati dijeljenje tuđih zaštićenih fotografija i tekstova bez dozvole.
+
+## Izdanje 2026-10-11: potpuno povezani TECH portal
+- Početna /tech/ je naslovnica cijelog TECH portala, a ne dodatak zasebnoj aplikaciji.
+- /tech/discovery.html#learning-academy: 5 obrazovnih oblasti sa 15 autorskih lekcija. Svaka sadrži objašnjenje, konkretan primjer, mali zadatak i provjeru znanja. Lokalno se pamte završene lekcije i bilješke; korisnik ih može obrisati. Nema računa ni slanja odgovora.
+- /tech/tech-zona.html: urednička arhiva iz /tech/data.js. Nove tekstove ažurirati i u /tech/feed.xml i sitemap.xml.
+- /tech/clanci/: javno objavljene članke moguće je podijeliti kao link na LinkedInu ili kopirati adresu. Dijeljenje se pokreće korisničkim klikom, ne daje dozvolu za preuzimanje tuđeg sadržaja.
+- /tech/studio.html i /tech/objavi.html: privatni nacrt i urednički pregled odvojeni su od javne objave. E-mail nije automatsko odobrenje za javnu objavu; provjeriti prava i eksplicitnu dozvolu autora.
+- /tech/biblioteka.html i /tech/free-store.html koriste zajednički skup digitalnih resursa: biblioteka je za čitanje, a Free Store za preuzimanje. Ne dodavati iste fajlove drugi put.
+- /tech/news-live.json: isključivo naslovi iz dozvoljenih RSS feedova s direktnim linkom; bez kopiranja tuđih tekstova, fotografija ili automatskog generisanja vijesti. /tech/update-news.py podržava RSS 2.0 i Atom; ne zamjenjuje uspješno objavljene podatke praznim feedom. GitHub Actions schedule može kasniti, biti onemogućen ili nemati dozvolu za zapis; provjeravati dnevne runs i stanje datoteke. Datum ažuriranja prikazuje se samo iz uspješnog preuzimanja.
+- Stare bilješke o razvojnom AI asistentu i ranijem stanju u ovom README-u su historija razvoja, ne trenutna funkcija portala.
+- Promjene objaviti tek nakon provjere i odobrenja vlasnika. Nikada ne mijenjati /app/ ili odvojenu Android aplikaciju pri radu na TECH portalu.

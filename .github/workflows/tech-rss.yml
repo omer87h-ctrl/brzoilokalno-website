@@ -1,7 +1,7 @@
 name: Refresh TECH RSS
 on:
   schedule:
-    - cron: '37 5 * * *'
+    - cron: '17 6 * * *'
   workflow_dispatch:
 permissions:
   contents: write

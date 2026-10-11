@@ -13,7 +13,7 @@
  const focus=[
   {id:"learn",label:"ŽELIM NAUČITI",number:"01",title:"Od pitanja do znanja.",description:"Originalni vodiči, objašnjenja i praktični materijali. Bez suvišnih riječi.",links:[
    ["Otvori autorske analize","./tech-zona.html"],
-   ["Otkrij povezane vodiče","./discovery.html#putanje"],
+   ["Počni učiti u TECH Akademiji","./discovery.html#learning-academy"],
    ["Pregledaj biblioteku","./biblioteka.html"]]},
   {id:"tech",label:"ZANIMAJU ME UREĐAJI",number:"02",title:"Izaberi na osnovu činjenica.",description:"Provjeri podatke o telefonima, pročitaj vodiče i saznaj šta specifikacije zaista znače.",links:[
    ["Poređenja telefona","./telefoni.html"],
