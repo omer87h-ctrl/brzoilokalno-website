@@ -23,7 +23,7 @@
    ["Vodič kroz digitalnu privatnost","./clanci/digitalna-privatnost.html"],
    ["Kontrolna lista privatnosti","./citaj.html?resurs=kontrolna-lista-privatnosti.txt"],
    ["Provjeri svoje znanje","./#tech-provjera"]]},
-  {id:"create",label:"ŽELIM NEŠTO STVORITI",number:"04",title:"Ideja je početak. Rad je sljedeći korak.",description:"Od prototipa i besplatnih programa do vlastitog autorskog teksta.",links:[
+  {id:"create",label:"ŽELIM RAZVIJATI IDEJU",number:"04",title:"Ideja je početak. Rad je sljedeći korak.",description:"Od prototipa i besplatnih programa do vlastitog autorskog teksta.",links:[
    ["Od ideje do proizvoda","./clanci/od-ideje-do-proizvoda.html"],
    ["Istraži besplatan softver","./alati.html"],
    ["Piši u autorskom studiju","./studio.html"]]},

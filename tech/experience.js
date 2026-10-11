@@ -9,7 +9,7 @@ const legacyRoutes={"#biblioteka":"./biblioteka.html","#store":"./free-store.htm
 if((location.pathname.endsWith("/tech/")||location.pathname.endsWith("/tech/index.html"))&&Object.prototype.hasOwnProperty.call(legacyRoutes,location.hash))location.replace(legacyRoutes[location.hash]);
 const menu=$("nav-toggle"),mob=$("mobile-nav");
 // One information architecture for standard TECH pages. All existing sections stay reachable.
-const portalMain=[["Naslovna","/tech/"],["Istraži","/tech/svijet.html"],["Čitaj","/tech/tech-zona.html"],["Uči","/tech/discovery.html#learning-academy"],["Stvori","/tech/studio.html"]];
+const portalMain=[["Naslovna","/tech/"],["Istraži","/tech/svijet.html"],["Čitaj","/tech/tech-zona.html"],["Uči","/tech/discovery.html#learning-academy"],["Studio","/tech/studio.html"]];
 const portalMore=[["TECH Radar BiH","/tech/radar-bih.html"],["Arhiva vijesti","/tech/arhiva.html"],["Izvori i redakcija","/tech/izvori.html"],["Discovery / teme","/tech/discovery.html"],["Telefoni","/tech/telefoni.html"],["Alati","/tech/alati.html"],["Biblioteka","/tech/biblioteka.html"],["Besplatni resursi","/tech/free-store.html"],["Lab i projekti","/tech/lab.html"],["Saradnja i oglasi","/tech/oglasi.html"],["Podcast / prijava","/tech/podcast.html"],["Glavna platforma ↗","/"]];
 function portalLink(label,url){
  const link=create("a","",label);link.href=url;
@@ -78,7 +78,7 @@ const pages=[
  {cat:"GLAVNO",title:"Istraži",description:"Nauka, AI, uređaji i nove ideje u TECH Svijetu",url:"./svijet.html"},
  {cat:"GLAVNO",title:"Čitaj",description:"Originalne tehnološke analize, izvori i vodiči",url:"./tech-zona.html"},
  {cat:"GLAVNO",title:"Uči",description:"Interaktivne lekcije i zadaci TECH Akademije",url:"./discovery.html#learning-academy"},
- {cat:"GLAVNO",title:"Stvori",description:"Pisanje i spremanje vlastitog autorskog teksta",url:"./studio.html"},
+ {cat:"GLAVNO",title:"Studio",description:"Pisanje i spremanje vlastitog autorskog teksta",url:"./studio.html"},
  {cat:"RUBRIKA",title:"Tech portal",description:"AI, uređaji, softver i originalne analize",url:"./"},
  {cat:"RUBRIKA",title:"Biblioteka",description:"Knjige, vodiči, besplatno čitanje",url:"./biblioteka.html"},
  {cat:"RUBRIKA",title:"TECH Discovery",description:"Radar autorskih članaka, teme, provjerene činjenice i vodiči",url:"./discovery.html"},
