@@ -60,31 +60,5 @@
  $("universe-clear-saved").addEventListener("click",()=>{if(!saved.length)return;if(!confirm("Obrisati listu sačuvanih tema na ovom uređaju?"))return;const old=[...saved];saved=[];if(!keep()){saved=old;alert("Lokalna pohrana nije dostupna.")}render()});
  window.addEventListener("storage",e=>{if(e.key!==key)return;try{const v=JSON.parse(e.newValue||"[]");saved=Array.isArray(v)?v.filter(id=>topics.some(t=>t.id===id)):[];}catch{saved=[]}render()});
  render();
- const allowed={"github.blog":"SOFTVER","hacks.mozilla.org":"WEB","www.nasa.gov":"NAUKA","science.nasa.gov":"NAUKA","blog.google":"AI","blog.mozilla.org":"WEB","www.microsoft.com":"SOFTVER","www.cisa.gov":"SIGURNOST","www.android.com":"UREĐAJI","developer.android.com":"UREĐAJI","www.reuters.com":"AI","www.theverge.com":"TEHNOLOGIJA","www.bleepingcomputer.com":"SIGURNOST","www.sciencedaily.com":"NAUKA","developer.android.com":"UREĐAJI"};
- const parseNews=payload=>{if(!payload||!Array.isArray(payload.stories))return [];return payload.stories.filter(item=>{
-  if(typeof item.title!=="string"||item.title.length<9||item.title.length>180||typeof item.source!=="string"||typeof item.date!=="string"||!/^20\d\d-\d\d-\d\d$/.test(item.date))return false;
-  try{const u=new URL(item.url);return u.protocol==="https:"&&Object.hasOwn(allowed,u.hostname)&&item.kind==="vanjski"}catch{return false}
- }).slice(0,90)};
- const output=$("universe-news-grid"),status=$("universe-news-status"),selector=$("universe-news-filter");
- let allNews=[];
- function paint(){
-  const category=selector.value;
-  const items=allNews.filter(x=>category==="Sve"||x.category===category).slice(0,36);
-  output.replaceChildren();
-  if(!items.length){output.append(create("p","universe-meta","Trenutno nema objavljenih naslova u ovoj oblasti. Istraži tematske vodiče iznad ili posjeti izvore."));return;}
-  for(const item of items){
-   const a=create("a","news-card");a.href=item.url;a.target="_blank";a.rel="noopener noreferrer";
-   a.append(create("small","",item.source+" · "+item.date),create("strong","",item.titleBs||item.title),create("p","",item.summaryBs||"Izvorna objava na stranici izdavača ↗"));
-   output.append(a);
-  }
- }
- selector.addEventListener("change",paint);
- try{
-  const response=await fetch("./news-archive.json",{cache:"no-store"});if(!response.ok)throw Error("Arhiva nije dostupna");
-  const archive=await response.json();
-  allNews=parseNews(archive);
-  const updated=archive.updated||"";
-  status.textContent=allNews.length?allNews.length+" ARHIVIRANIH NASLOVA · POSLJEDNJE AŽURIRANJE "+updated:"AUTOMATSKA ARHIVA JOŠ NIJE POPUNJENA";
- }catch{status.textContent="ARHIVA TRENUTNO NIJE DOSTUPNA · OTVORI IZVORE";}
- paint();
+ // Vijesti su objedinjene u TECH Arhivi; nema drugog feeda na ovoj stranici.
 })();
