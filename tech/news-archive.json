@@ -10,7 +10,10 @@
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Naučnici razvili nuklearni sat koji bi mogao nadmašiti atomske satove",
+      "summaryBs": "Istraživači predstavljaju razvoj nuklearnog mjerenja vremena; detalji i ograničenja su u izvornom članku.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "NASA to Conduct Flyover, Engage NFL Fans at MetLife Stadium",
@@ -20,7 +23,10 @@
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "NASA najavila prelet aviona iznad stadiona MetLife",
+      "summaryBs": "NASA je objavila najavu preleta i aktivnosti s navijačima; termin provjeri u izvornoj objavi.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "Satya Nadella says we should assume all AI models are ‘compromised’",
@@ -30,7 +36,10 @@
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Satya Nadella: treba pretpostaviti da su svi AI modeli kompromitovani",
+      "summaryBs": "Izjava o sigurnosti i pouzdanosti AI modela; puni kontekst nalazi se kod izdavača.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "DistroKid has been quietly taking down songs in response to UMG lawsuit",
@@ -40,7 +49,10 @@
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "DistroKid uklanja pjesme nakon tužbe Universal Music Groupa",
+      "summaryBs": "Vijest o distribuciji muzike i autorskim pravima; provjeri pojedinosti u originalu.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "Anthropic is cutting off its internal evaluations from the internet",
@@ -50,7 +62,10 @@
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Anthropic ograničava internetski pristup svojim internim AI evaluacijama",
+      "summaryBs": "Tema je sigurnost postupaka interne provjere AI sistema.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "AI agent makers are promising privacy — will they deliver?",
@@ -60,7 +75,10 @@
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Proizvođači AI agenata obećavaju privatnost — mogu li to ispuniti?",
+      "summaryBs": "Pregled pitanja zaštite podataka u sistemima koji autonomno koriste alate.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "Ledger wallet tampering suspected after reports of crypto thefts",
@@ -70,7 +88,10 @@
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Sumnja na prepravke Ledger novčanika nakon izvještaja o krađama kriptovaluta",
+      "summaryBs": "Sigurnosne tvrdnje i rizike treba procijeniti na osnovu izvorne objave.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "K-pop star Sunmi loves Notion and ear cleaning videos",
@@ -80,7 +101,10 @@
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Muzička zvijezda Sunmi govori o Notionu i internetskim navikama",
+      "summaryBs": "Intervju o digitalnim alatima i sadržajima koje koristi umjetnica.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "Will Warner Bros. kill Skydance — or will David Ellison kill Warner Bros?",
@@ -90,7 +114,10 @@
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Šta će biti s Warner Brosom i Skydanceom?",
+      "summaryBs": "Medijska industrija i vlasnički odnosi u fokusu su vanjskog izvještaja.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "LG’s RGB LED TV is good for certain situations, but an OLED is better",
@@ -100,7 +127,10 @@
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "LG-ov RGB LED televizor: u nekim uslovima dobar, OLED ima prednost",
+      "summaryBs": "Utisci izdavača o tehnologijama televizijskih ekrana; ovo nije naše nezavisno testiranje.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "Cyber exec arrested in case allegedly tied to ShinyHunters hackers",
@@ -110,7 +140,10 @@
       "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Uhapšen rukovodilac za kibernetičku sigurnost u predmetu povezivanom s hakerskom grupom",
+      "summaryBs": "Izvještaj o istrazi; navodi su prema izvornom mediju i ne predstavljaju pravosnažnu presudu.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "ARTEX AI, Claude agents used in cyberattacks on South Korean banks",
@@ -120,7 +153,10 @@
       "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "AI agenti korišteni u kibernetičkim napadima na banke u Južnoj Koreji",
+      "summaryBs": "Sigurnosni izvještaj o navodnim metodama napada.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "Criminal IP Introduces AITEM as the Next Evolution of Attack Surface Management",
@@ -130,7 +166,10 @@
       "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Criminal IP predstavio AITEM za upravljanje napadnom površinom",
+      "summaryBs": "Najava komercijalne sigurnosne tehnologije, a ne nezavisna preporuka portala.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "Scientists may have found a shortcut to fusion energy",
@@ -140,7 +179,10 @@
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Naučnici istražuju mogući prečac do fuzijske energije",
+      "summaryBs": "Istraživački pristup fuziji i njegova ograničenja opisani su u vanjskom izvoru.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "MIT astronomers catch a star in a feast that could last billions of years",
@@ -150,7 +192,10 @@
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Astronomi MIT-a posmatraju zvijezdu tokom dugotrajnog kosmičkog procesa",
+      "summaryBs": "Astronomsko opažanje koje bi, prema izvještaju, moglo trajati milijardama godina.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "NASA Seeks US Industry Plans for Commercial Space Stations",
@@ -160,7 +205,10 @@
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "NASA traži planove industrije za komercijalne svemirske stanice",
+      "summaryBs": "Agencijska najava o razvoju buduće orbitalne infrastrukture.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "NASA Demonstrates Next-Generation Heat Shield Technologies",
@@ -170,7 +218,10 @@
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "NASA predstavila tehnologije nove generacije za toplotne štitove",
+      "summaryBs": "Tehnologije zaštite svemirskih letjelica pri prolasku kroz atmosferu.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "Cosmic House of Mirrors",
@@ -180,7 +231,10 @@
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Kosmička kuća ogledala",
+      "summaryBs": "NASA-in astronomski sadržaj; objašnjenje i fotografije nalaze se na izvornoj stranici.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "Anthropic’s AI gave Philadelphia police a fake tip about an unsolved homicide",
@@ -190,7 +244,10 @@
       "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "AI sistem Anthropic navodno dao policiji lažnu dojavu u neriješenom slučaju",
+      "summaryBs": "Medijski izvještaj o mogućoj grešci AI sistema u osjetljivom kontekstu.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "&#8216;Pure insanity&#8217;: Mathematicians will need years to make sense of OpenAI&#8217;s latest drop",
@@ -200,7 +257,10 @@
       "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Matematičari će godinama analizirati najnoviju OpenAI objavu, navodi izvještaj",
+      "summaryBs": "Reakcije istraživača na objavljene matematičke rezultate; provjeri opseg tvrdnje u originalu.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "Nikon microscopic video competition winner disqualified for using generative AI",
@@ -210,7 +270,10 @@
       "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Pobjednik takmičenja mikroskopskih videa diskvalifikovan zbog generativnog AI-ja",
+      "summaryBs": "Primjer autorskih i takmičarskih pravila pri upotrebi generativne tehnologije.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "Trump’s attempt to rename AI is looking awfully artificial",
@@ -220,7 +283,10 @@
       "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Polemika o pokušaju novog naziva za umjetnu inteligenciju",
+      "summaryBs": "Analiza političke komunikacije o AI tehnologiji iz vanjskog izvora.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "Hackers abuse Google Ads, Bing redirects to push Claude ClickFix attacks",
@@ -230,7 +296,10 @@
       "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Hakeri koriste Google Ads i preusmjeravanja na Bingu za širenje napada",
+      "summaryBs": "Upozorenje o manipulaciji oglasima i tehnikama socijalnog inženjeringa.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "Unpatched AhsayCBS flaws exploited to deploy webshells, mine crypto",
@@ -240,7 +309,10 @@
       "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Nezakrpljeni propusti u AhsayCBS-u korišteni za napade",
+      "summaryBs": "Sigurnosno upozorenje za korisnike pogođenog proizvoda.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "FBI arrests another suspected ShinyHunters hacker after agency breach",
@@ -250,7 +322,10 @@
       "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "FBI uhapsio još jednog osumnjičenog povezanog s grupom ShinyHunters",
+      "summaryBs": "Navodi o istrazi i hapšenju; osumnjičeni nije isto što i osuđeni.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "Germany arrests alleged core Qilin ransomware member after extradition",
@@ -260,7 +335,10 @@
       "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Njemačka uhapsila osumnjičenog člana ransomware grupe Qilin",
+      "summaryBs": "Izvještaj o istrazi poslije izručenja.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "How to keep AI agents within their permissions",
@@ -270,7 +348,10 @@
       "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Kako ograničiti dozvole AI agenata",
+      "summaryBs": "Sigurnosni vodič o kontrolama pristupa u agentnim sistemima.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "NASA astronauts splash down after 100 million miles in space",
@@ -280,7 +361,10 @@
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "NASA-ini astronauti sletjeli u more nakon duge svemirske misije",
+      "summaryBs": "Pregled završetka svemirske misije i povratka posade.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "October’s night sky is full of cosmic tricks and treats",
@@ -290,7 +374,10 @@
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Oktobarsko noćno nebo donosi zanimljive astronomske pojave",
+      "summaryBs": "Savjeti za posmatranje noćnog neba i kosmičkih objekata.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "Scientists create a lightsaber-like laser antenna that transmits radio waves",
@@ -300,7 +387,10 @@
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Naučnici napravili lasersku antenu koja prenosi radiovalove",
+      "summaryBs": "Istraživački rezultat iz oblasti optike i komunikacija.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "Scientists find hidden materials that could improve batteries and solar fuels",
@@ -310,7 +400,10 @@
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "Pronađeni materijali koji bi mogli poboljšati baterije i solarna goriva",
+      "summaryBs": "Naučni rad o svojstvima novih materijala.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "Google Cloud predstavio Gemini agenta za radne zadatke",
@@ -320,7 +413,10 @@
       "category": "AI",
       "kind": "vanjski",
       "origin": "urednicki-odabrano",
-      "description": "Originalni izvor; provjeri naslov i datum na stranici izdavača."
+      "description": "Originalni izvor; provjeri naslov i datum na stranici izdavača.",
+      "titleBs": "Google Cloud predstavio Gemini agenta za radne zadatke",
+      "summaryBs": "Poslovna AI rješenja, prema izvornom medijskom izvještaju.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "NASA Briefing to Highlight Contributions to Martian Moons Mission",
@@ -330,7 +426,10 @@
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "NASA najavila informacije o misiji koja istražuje Marsove mjesece",
+      "summaryBs": "Zvanična agencijska najava; termin i ciljevi su u originalu.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "NASA Announces Bold Science Initiatives for America’s Golden Age Summit",
@@ -340,7 +439,10 @@
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "NASA predstavila nove naučne inicijative na samitu",
+      "summaryBs": "Pojedinosti o inicijativama su u agencijskom izvještaju.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "NASA is searching for hidden caves to build its first Moon base",
@@ -350,7 +452,10 @@
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
+      "titleBs": "NASA istražuje skrivene mjesečeve pećine kao moguća buduća skloništa",
+      "summaryBs": "Naučna ideja o potencijalnoj infrastrukturi na Mjesecu; ne znači da baza već postoji.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "Android CLI dobio streaming fizičkih uređaja i nove razvojne vještine",
@@ -360,7 +465,10 @@
       "category": "UREĐAJI",
       "kind": "vanjski",
       "origin": "urednicki-odabrano",
-      "description": "Originalna službena objava izdavača."
+      "description": "Originalna službena objava izdavača.",
+      "titleBs": "Android CLI donosi pristup udaljenim fizičkim uređajima",
+      "summaryBs": "Službena objava o alatima za razvoj i testiranje.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "Instagram Direct: razvoj interfejsa pomoću Jetpack Compose arhitekture",
@@ -370,7 +478,10 @@
       "category": "SOFTVER",
       "kind": "vanjski",
       "origin": "urednicki-odabrano",
-      "description": "Studija slučaja sa službenog bloga."
+      "description": "Studija slučaja sa službenog bloga.",
+      "titleBs": "Instagram Direct koristi pristup zasnovan na Jetpack Composeu",
+      "summaryBs": "Studija o arhitekturi korisničkog interfejsa na Androidu.",
+      "translationStatus": "urednicki-naslov"
     },
     {
       "title": "Google otvorio Android Studio za izbor različitih AI agenata",
@@ -380,7 +491,10 @@
       "category": "SOFTVER",
       "kind": "vanjski",
       "origin": "urednicki-odabrano",
-      "description": "Objava izdavača o razvojnim alatima."
+      "description": "Objava izdavača o razvojnim alatima.",
+      "titleBs": "Android Studio podržava veći izbor AI agenata",
+      "summaryBs": "Najava mogućnosti u službenim Android alatima.",
+      "translationStatus": "urednicki-naslov"
     }
   ]
 }

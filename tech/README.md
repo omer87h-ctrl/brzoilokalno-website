@@ -144,3 +144,11 @@ Asistent and AI interface removed from navigation, homepage and scripts on devel
 - Podcast pozivi i teme idu kroz isti kontrolisani formular. Prihvaćena tema nije automatsko snimanje; prije javnog audio sadržaja potreban je zaseban dogovor o dozvolama i pravima na snimak, muziku, vizuale i podatke učesnika.
 - Automatizacija globalnih TECH vijesti u `update-news.py` je **poseban** proces. TECH Radar događaji i poslovi se ne osvježavaju automatskim kopiranjem trećih stranica. Za redovno punjenje ovog dijela potrebna je urednička obrada pristiglih prijedloga i provjera službenih kalendara.
 - Četiri smjera za čitaoca: **Istraži / Čitaj / Uči / Stvori**, a ostali alati i TECH Radar su dostupni kroz grupisanu navigaciju. Nema dupliranja podataka i sekcija koje više služe kao meni nego kao stvarna funkcija.
+
+## TECH Arhiva (2026-10-11)
+- `/tech/arhiva.html` je jedina puna novinska arhiva, s filterima, izvorom, datumom i lokalnim čuvanjem; TECH Svijet i Izvori samo je upućuju, ne dupliciraju katalog.
+- `news-archive.json` čuva originalni `title` i obaveznu `url`; opciona polja `titleBs`, `summaryBs` i `translationStatus` su **isključivo kratke autorske uredničke parafraze**; ne unositi puni prijevod tuđeg članka.
+- `update-news.py` pri osvježavanju čuva ova tri polja za iste URL-ove. Nove RSS vijesti nemaju automatsku bosansku verziju; dok urednik ne obradi naslov, prikazuje se izvorni jezik s jasnom oznakom.
+- Za svaku bosansku uredničku bilješku provjeri original i ispravi moguće terminološke/činjenične greške; izbjegni povezivanje optužbi s presudama bez dokaza. Sve naknadne uredničke bilješke dopuniti bez kopiranja tuđeg sadržaja.
+- Dupli pozivi na objavljivanje uklonjeni su s naslovnice i TECH zone. Autorski tekstovi idu preko Studija, prijave preko postojećeg uredničkog obrasca, tech događaji i podcasti preko TECH Radara.
+- Banneri TECH Radara i TECH Svijeta prilagođeni su bosanskim nazivima i manjim ekranima. Potreban je stvarni vizuelni QA na telefonima prije garancije potpunog mobilnog prikaza.

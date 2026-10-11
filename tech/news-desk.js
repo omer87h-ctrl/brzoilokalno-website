@@ -17,7 +17,7 @@
   const entries=(window.BL_TECH_PULSE||[]).filter(valid).filter(x=>active==="all"||x.kind===active).sort((a,b)=>String(b.date||"").localeCompare(String(a.date||"")));
   for(const item of entries){
    const a=make("a","desk-story"),tag=make("span","p-label",item.category+" / "+(item.kind==="vanjski"?"VANJSKI IZVOR":"AUTORSKI TEKST"));
-   const title=make("h3","",item.title),desc=make("p","",item.description);
+   const title=make("h3","",item.titleBs||item.title),desc=make("p","",item.summaryBs||item.description);
    const meta=make("small","",item.source+(item.date?" · "+item.date.split("-").reverse().join("."):"")+" · OTVORI IZVOR ↗");
    a.href=item.url;if(item.kind==="vanjski"){a.target="_blank";a.rel="noopener noreferrer";}
    a.append(tag,title,desc,meta);target.append(a);
