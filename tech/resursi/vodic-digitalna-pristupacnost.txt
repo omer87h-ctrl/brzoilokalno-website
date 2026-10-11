@@ -1,3 +1,39 @@
-BRZO I LOKALNO TECH — BESPLATNI ORIGINALNI MATERIJAL
+BRZO I LOKALNO TECH · ORIGINALNI BESPLATNI MATERIJAL
+PRISTUPAČAN DIGITALNI SADRŽAJ
+Izdanje: 11.10.2026.
+Autor: uredništvo Brzo i Lokalno TECH
+Dozvoljeno besplatno čitanje i preuzimanje. Ostala prava zadržana.
 
-Pristupačan digitalni sadržaj: praktični vodič
+ZAŠTO JE OVO VAŽNO?
+Dobra stranica mora raditi kada osoba koristi čitač ekrana, tastaturu, uvećanje teksta ili spor uređaj. Pristupačnost je dio kvaliteta, ne dekoracija. Ovaj vodič ne potvrđuje da je pojedina stranica usklađena sa WCAG standardom; za to je potrebno odvojeno testiranje.
+
+1. STRUKTURA I NASLOVI
+Svaka stranica treba jedan razumljiv glavni naslov i logičan redoslijed podnaslova. Koristi semantičke elemente: main, nav, article, section i button. Naziv linka neka opisuje odredište, a ne samo 'klikni ovdje'.
+
+2. TASTATURA I VIDLJIV FOKUS
+Pritisni Tab i Shift+Tab te obiđi svaku interaktivnu kontrolu. Fokus mora biti vidljiv. Meni, dijaloški okvir i kartice moraju biti upotrebljivi bez miša. Ako se dijalog otvara, provjeri može li se zatvoriti tipkom Escape. Ne dopusti da fiksna traka sakrije fokusirani element.
+
+3. KONTRAST, TEKST I MOBILNI EKRAN
+Provjeri kontrast teksta, naročito sitnih oznaka. Ne koristi samu boju kao jedinu informaciju. Testiraj veći font i širinu od 320 px; ne postavljaj fiksnu visinu na karticu koja sadrži promjenjivu količinu teksta.
+
+4. SLIKE, AUDIO I VIDEO
+Informativnim slikama napiši kratak alternativni opis. Ukrasne slike mogu imati prazan alt atribut. Audio mora imati odgovarajući tekstualni opis, a video s govorom titlove. Ne dodaj brzo treperenje i poštuj postavku smanjenih animacija.
+
+5. OBRASCI I GREŠKE
+Svaki unos mora imati povezanu oznaku i jasne upute. Greška treba reći šta nije u redu i kako je popraviti. Ne zahtijevaj lične podatke koji nisu potrebni za funkciju. Nakon slanja pokaži stvarno stanje: pripremljeno, poslano ili neuspješno.
+
+6. KRATKI TEST
+Otvori svoju stranicu na telefonu i računaru. Prođi meni tastaturom; povećaj tekst; isključi slike; pokušaj otvoriti i zatvoriti dijalog; provjeri da li je važan tekst razumljiv bez boje i ikone.
+
+KONTROLNA LISTA
+[ ] Logični naslovi i semantička struktura
+[ ] Dostupna navigacija tastaturom
+[ ] Fokus je vidljiv i nije skriven
+[ ] Tekst se može uvećati bez preklapanja
+[ ] Kontrast je čitljiv
+[ ] Slike imaju odgovarajući alt
+[ ] Obrasci imaju razumljive oznake
+[ ] Smanjene animacije su podržane
+
+IZVOR ZA DODATNO ČITANJE
+W3C Web Accessibility Initiative: https://www.w3.org/WAI/fundamentals/accessibility-intro/
