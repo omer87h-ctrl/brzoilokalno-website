@@ -1,3 +1,34 @@
-BRZO I LOKALNO TECH — BESPLATNI ORIGINALNI MATERIJAL
+BRZO I LOKALNO TECH · ORIGINALNI BESPLATNI MATERIJAL
+BESPLATAN SOFTVER, OTVORENI KOD I LICENCE
+Izdanje: 11.10.2026.
+Autor: uredništvo Brzo i Lokalno TECH
+Dozvoljeno besplatno čitanje i preuzimanje. Ostala prava zadržana.
 
-Vodič kroz besplatni softver i licence
+TRI RAZLIČITA POJMA
+Besplatno za preuzimanje znači da se u određenim uslovima ne plaća cijena. Otvoreni kod znači da program nosi licencu koja daje konkretne slobode i obaveze. Javno dostupan kod bez odgovarajuće licence nije automatski slobodan za ponovnu distribuciju.
+
+SLUŽBENA LOKACIJA ZA PREUZIMANJE
+Program preuzimaj od autora ili organizacije koja ga razvija. Provjeri domen, verziju, podržani operativni sistem i upozorenja o sigurnosti. Izbjegavaj nepoznate stranice koje nude 'prepakovani' instalacijski program.
+
+GPL I SLIČNE LICENCE
+Licence iz porodice GPL daju slobode upotrebe i izmjene, ali distribucija izmijenjenog softvera može nositi obaveze u vezi s kodom i obavijestima o autorstvu. Obaveze zavise od licence i načina korištenja.
+
+MIT I DRUGE PERMISIVNE LICENCE
+Permisivne licence obično dopuštaju širu ponovnu upotrebu uz određene uslove, poput zadržavanja obavijesti o autorskom pravu i licence. Ne postoji univerzalno pravilo za sve projekte.
+
+PROGRAM I GRAFIKA NEMAJU NUŽNO ISTA PRAVA
+Čak i ako je kod pod otvorenom licencom, službeni logo, zaštitni znak, zvuk, fotografija ili font mogu imati druga pravila. Zato naš Store za tuđe programe koristi naziv i link na izdavača, ali ne preuzima njihove ikone ili instalacijske datoteke.
+
+KONTROLNA LISTA PRIJE UPOTREBE
+[ ] Poznat je stvarni izdavač
+[ ] Preuzimanje vodi na službenu stranicu
+[ ] Poznata je konkretna licenca
+[ ] Provjerena je komercijalna upotreba
+[ ] Provjerene su obaveze kod distribucije
+[ ] Nisu preuzeti logo i fotografije bez prava
+[ ] Jasno je ko pruža podršku
+
+DALJNJI IZVORI
+Open Source Initiative: https://opensource.org/licenses
+Choose a License: https://choosealicense.com/
+Ovaj vodič je edukativan i nije individualni pravni savjet.
