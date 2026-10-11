@@ -1,0 +1,34 @@
+BRZO I LOKALNO TECH — ORIGINALNI PREDLOŽAK
+TEHNOLOŠKO OBEĆANJE: PROVJERI IZVOR
+
+Autor: Brzo i Lokalno TECH
+Svrha: besplatan obrazovni predložak za lični rad
+
+NAJAVA
+
+Naziv proizvoda ili tehnologije:
+Ko je iznio tvrdnju:
+Tačan datum:
+Primarni javni izvor (link):
+Izvorni citat ili sažetak VLASTITIM RIJEČIMA:
+Šta je tačno obećano:
+Da li je ovo plan, prototip ili javno dostupna funkcija:
+
+KASNIJA PROVJERA
+
+Datum ponovne provjere:
+Novi primarni izvor:
+Nezavisni izvor (ako postoji):
+Šta je potvrđeno:
+Šta nije potvrđeno:
+Šta je odgođeno:
+Šta je promijenjeno u odnosu na najavu:
+
+ZAKLJUČAK
+
+[ ] Odvojio/la sam činjenicu od tumačenja.
+[ ] Sačuvao/la sam izvor i datum.
+[ ] Ne predstavljam izostanak dokaza kao dokaz da nešto nije napravljeno.
+[ ] Navodim ograničenja dostupnih informacija.
+
+Napomena: najava nije rezultat, a odsustvo javne potvrde ne znači nužno da se događaj nije desio. Ovaj obrazac se može ispuniti i u TECH X dnevniku izvora.
