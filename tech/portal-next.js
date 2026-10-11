@@ -93,7 +93,7 @@
    const link=create("a","blnext-pulse-item");
    link.href=item.url;link.target="_blank";link.rel="noopener noreferrer";
    const meta=create("span","blnext-pulse-meta",item.source+" · "+(item.date||"datum nije naveden"));
-   const title=create("strong","",item.title);
+   const title=create("strong","",item.titleBs||item.title);
    link.append(meta,title,create("span","blnext-pulse-arrow","↗"));
    pulse.append(link);
   }
