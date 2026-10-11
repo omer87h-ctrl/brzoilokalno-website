@@ -29,7 +29,7 @@
    ["Kreiraj autorski tekst","./studio.html"]]},
   {id:"follow",label:"PRATIM TEHNOLOGIJU",number:"05",title:"Naslov je početak. Izvor je obavezan.",description:"Urednički odabrane vijesti i povezane teme, s direktnim linkovima na originalne objave.",links:[
    ["Najnoviji dostupni izvori","./izvori.html"],
-   ["TECH Discovery radar","./discovery.html#radar"],
+   ["Istraži 32 TECH teme","./svijet.html#otkrij"],
    ["Sve objavljene analize","./tech-zona.html"]]}
  ];
  const focusTabs=$("blnext-focus-tabs"),focusContent=$("blnext-focus-content");

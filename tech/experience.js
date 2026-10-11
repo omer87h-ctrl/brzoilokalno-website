@@ -10,7 +10,7 @@ if((location.pathname.endsWith("/tech/")||location.pathname.endsWith("/tech/inde
 const menu=$("nav-toggle"),mob=$("mobile-nav");
 // One information architecture for standard TECH pages. All existing sections stay reachable.
 const portalMain=[["Naslovna","/tech/"],["Istraži","/tech/svijet.html"],["Čitaj","/tech/tech-zona.html"],["Uči","/tech/discovery.html#learning-academy"],["Kreiraj","/tech/studio.html"]];
-const portalMore=[["TECH Radar BiH","/tech/radar-bih.html"],["Arhiva vijesti","/tech/arhiva.html"],["Izvori i redakcija","/tech/izvori.html"],["Discovery / teme","/tech/discovery.html"],["Telefoni","/tech/telefoni.html"],["Alati","/tech/alati.html"],["Biblioteka","/tech/biblioteka.html"],["Besplatni resursi","/tech/free-store.html"],["Lab i projekti","/tech/lab.html"],["Saradnja i oglasi","/tech/oglasi.html"],["Podcast / prijava","/tech/podcast.html"],["Glavna platforma ↗","/"]];
+const portalMore=[["TECH Radar BiH","/tech/radar-bih.html"],["Arhiva vijesti","/tech/arhiva.html"],["Izvori i redakcija","/tech/izvori.html"],["TECH Akademija","/tech/discovery.html#learning-academy"],["Telefoni","/tech/telefoni.html"],["Alati","/tech/alati.html"],["Biblioteka","/tech/biblioteka.html"],["Besplatni resursi","/tech/free-store.html"],["Lab i projekti","/tech/lab.html"],["Saradnja i oglasi","/tech/oglasi.html"],["Podcast / prijava","/tech/podcast.html"],["Glavna platforma ↗","/"]];
 function portalLink(label,url){
  const link=create("a","",label);link.href=url;
  const page=url.split("#")[0];
@@ -81,9 +81,9 @@ const pages=[
  {cat:"GLAVNO",title:"Kreiraj",description:"Napiši, sačuvaj i predloži autorski tekst",url:"./studio.html"},
  {cat:"RUBRIKA",title:"Tech portal",description:"AI, uređaji, softver i originalne analize",url:"./"},
  {cat:"RUBRIKA",title:"Biblioteka",description:"Knjige, vodiči, besplatno čitanje",url:"./biblioteka.html"},
- {cat:"RUBRIKA",title:"TECH Discovery",description:"Radar autorskih članaka, teme, provjerene činjenice i vodiči",url:"./discovery.html"},
- {cat:"VODIČI",title:"Preporučeno čitanje",description:"Povezani vodiči kroz razvoj, privatnost, uređaje i pisanje",url:"./discovery.html#putanje"},
- {cat:"MOJA KOLEKCIJA",title:"Sačuvani članci",description:"Članci koje si sačuvao na ovom uređaju",url:"./discovery.html#sacuvano"},
+ {cat:"RUBRIKA",title:"TECH Akademija",description:"15 lekcija, zadaci, kvizovi i vlastiti napredak",url:"./discovery.html#learning-academy"},
+ {cat:"VODIČI",title:"Autorski članci",description:"Čitaj originalne tehnološke analize i vodiče",url:"./tech-zona.html"},
+ {cat:"MOJA KOLEKCIJA",title:"Sačuvani članci",description:"Članci koje si sačuvao na ovom uređaju",url:"./tech-zona.html#sacuvano"},
  {cat:"RUBRIKA",title:"Vijesti i izvori",description:"Izvorni linkovi, datumi i tehnološke novosti",url:"./izvori.html"},
  {cat:"RUBRIKA",title:"BL Free Store",description:"Originalni besplatni materijali, aplikacija Brzo i Lokalno i službeni izvori otvorenog softvera",url:"./free-store.html"},
  {cat:"RUBRIKA",title:"BL Lab",description:"Projekti i ideje za razmjenu",url:"./lab.html"},

@@ -56,3 +56,11 @@
 @media(max-width:650px){.academy-progress-group{min-width:0;margin-top:14px}.academy-tracks,.academy-lessons{grid-template-columns:1fr}.academy-sidebar,.academy-content{padding:15px}.academy-example,.academy-task,.academy-check{padding:15px}.academy-lesson{grid-template-columns:28px 1fr auto}.academy-lesson-state{grid-column:auto}.academy-content-heading h3{font-size:30px}}
 @media(prefers-reduced-motion:reduce){.academy-progress>span{transition:none}}
 @media print{.academy-sidebar,.academy-choices,.academy-note-actions,.academy-progress-group{display:none}.academy-shell{display:block}.academy-content{border:0}}
+
+/* Academy-only orientation after separating article catalog and news. */
+.academy-related-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.academy-related-links a{display:grid;gap:12px;border:1px solid #78523b;border-radius:14px;background:#17202a;padding:22px;color:#f8e6d7;text-decoration:none}
+.academy-related-links a strong{font:850 15px system-ui;color:#ffae73}
+.academy-related-links a span{font:500 13px/1.6 system-ui;color:#d0beb0}
+.academy-related-links a:focus-visible{outline:2px solid #ffb57a;outline-offset:3px}
+@media(max-width:650px){.academy-related-links{grid-template-columns:1fr}.discovery-hero h1{font-size:clamp(46px,10vw,74px)}}
