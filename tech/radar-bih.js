@@ -2,7 +2,7 @@
 (()=> {
  const $=id=>document.getElementById(id);
  const sources=Array.isArray(window.BL_TECH_RADAR_SOURCES)?window.BL_TECH_RADAR_SOURCES:[];
- const featured=Array.isArray(window.BL_TECH_RADAR_FEATURED)?window.BL_TECH_RADAR_FEATURED.filter(x=>x&&x.editorialApproved===true&&typeof x.title==="string"&&typeof x.url==="string"&&/^https:\\/\\//.test(x.url)):[];
+ const featured=Array.isArray(window.BL_TECH_RADAR_FEATURED)?window.BL_TECH_RADAR_FEATURED.filter(x=>x&&x.editorialApproved===true&&typeof x.title==="string"&&typeof x.url==="string"&&x.url.startsWith("https://")):[];
  const approved=Array.isArray(window.BL_TECH_RADAR_APPROVED)?window.BL_TECH_RADAR_APPROVED.filter(x=>x&&x.editorialApproved===true&&typeof x.title==="string"&&typeof x.kind==="string"&&typeof x.city==="string"&&typeof x.description==="string"&&/^https:\/\//.test(x.url||"")&&/^\d{4}-\d{2}-\d{2}$/.test(x.approvedDate||"")&&typeof x.organizer==="string"):[];
  const make=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e};
  const fold=s=>String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("bs");
