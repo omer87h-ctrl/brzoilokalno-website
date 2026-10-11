@@ -60,7 +60,7 @@
  $("universe-clear-saved").addEventListener("click",()=>{if(!saved.length)return;if(!confirm("Obrisati listu sačuvanih tema na ovom uređaju?"))return;const old=[...saved];saved=[];if(!keep()){saved=old;alert("Lokalna pohrana nije dostupna.")}render()});
  window.addEventListener("storage",e=>{if(e.key!==key)return;try{const v=JSON.parse(e.newValue||"[]");saved=Array.isArray(v)?v.filter(id=>topics.some(t=>t.id===id)):[];}catch{saved=[]}render()});
  render();
- const allowed={"github.blog":"SOFTVER","hacks.mozilla.org":"WEB","www.nasa.gov":"NAUKA","science.nasa.gov":"NAUKA","blog.google":"AI","blog.mozilla.org":"WEB","www.microsoft.com":"SOFTVER","www.cisa.gov":"SIGURNOST","www.android.com":"UREĐAJI","developer.android.com":"UREĐAJI","www.reuters.com":"AI","developer.android.com":"UREĐAJI"};
+ const allowed={"github.blog":"SOFTVER","hacks.mozilla.org":"WEB","www.nasa.gov":"NAUKA","science.nasa.gov":"NAUKA","blog.google":"AI","blog.mozilla.org":"WEB","www.microsoft.com":"SOFTVER","www.cisa.gov":"SIGURNOST","www.android.com":"UREĐAJI","developer.android.com":"UREĐAJI","www.reuters.com":"AI","www.theverge.com":"TEHNOLOGIJA","www.bleepingcomputer.com":"SIGURNOST","www.sciencedaily.com":"NAUKA","developer.android.com":"UREĐAJI"};
  const parseNews=payload=>{if(!payload||!Array.isArray(payload.stories))return [];return payload.stories.filter(item=>{
   if(typeof item.title!=="string"||item.title.length<9||item.title.length>180||typeof item.source!=="string"||typeof item.date!=="string"||!/^20\d\d-\d\d-\d\d$/.test(item.date))return false;
   try{const u=new URL(item.url);return u.protocol==="https:"&&Object.hasOwn(allowed,u.hostname)&&item.kind==="vanjski"}catch{return false}
