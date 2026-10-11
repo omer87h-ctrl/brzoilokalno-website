@@ -36,8 +36,35 @@
   window.addEventListener("resize",schedule,{passive:true});
   update();
  }
+ // Share only the canonical URL of a publicly available article. No automatic post.
+ if(article&&location.pathname.startsWith("/tech/clanci/")){
+  const controls=article.querySelector(".reader-actions");
+  if(controls){
+   const title=article.querySelector("h1")?.textContent?.trim()||document.title;
+   const canonical=document.querySelector('link[rel="canonical"]')?.href||location.href.split("#")[0];
+   const share= document.createElement("a");
+   share.className="article-share-link";
+   share.href="https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent(canonical);
+   share.target="_blank";share.rel="noopener noreferrer nofollow";
+   share.textContent="PODIJELI NA LINKEDINU ↗";
+   share.setAttribute("aria-label","Otvori LinkedIn i podijeli link na članak");
+   const copy=document.createElement("button");
+   copy.type="button";copy.textContent="KOPIRAJ LINK";
+   const result=document.createElement("span");result.className="article-share-status";
+   result.setAttribute("role","status");result.setAttribute("aria-live","polite");
+   copy.addEventListener("click",async()=>{
+    try{
+     await navigator.clipboard.writeText(canonical);
+     result.textContent="Link je kopiran. Možeš ga podijeliti gdje želiš.";
+    }catch{
+     result.textContent="Kopiranje nije dostupno. Označi adresu stranice u pregledniku.";
+    }
+   });
+   controls.append(share,copy,result);
+  }
+ }
  const actions=article?.querySelector(".reader-actions");
- if(actions&&slug&&list.length){
+ if(actions&&slug){
   const storageKey="bl-tech-saved-v1";
   const getSaved=()=>{
    try{
