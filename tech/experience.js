@@ -8,21 +8,26 @@ const matches=(item,q)=>q.every(t=>fold(item).includes(t));
 const legacyRoutes={"#biblioteka":"./biblioteka.html","#store":"./free-store.html","#lab":"./lab.html","#ljudi":"./majstori-kreatori.html","#radar":"./lab.html","#podcast":"./podcast.html"};
 if((location.pathname.endsWith("/tech/")||location.pathname.endsWith("/tech/index.html"))&&Object.prototype.hasOwnProperty.call(legacyRoutes,location.hash))location.replace(legacyRoutes[location.hash]);
 const menu=$("nav-toggle"),mob=$("mobile-nav");
-// Keep Discovery visible throughout TECH, including older mobile menus.
-function addDiscovery(nav){
- if(!nav||nav.querySelector('a[href="./discovery.html"]'))return;
- const link=create("a","","Discovery");link.href="./discovery.html";
- const after=nav.querySelector('a[href="./tech-zona.html"]');
- if(after)after.insertAdjacentElement("afterend",link);else nav.prepend(link);
+// One information architecture for standard TECH pages. All existing sections stay reachable.
+const portalMain=[["Naslovna","/tech/"],["Istraži","/tech/svijet.html"],["Čitaj","/tech/tech-zona.html"],["Uči","/tech/discovery.html#learning-academy"],["Stvori","/tech/studio.html"]];
+const portalMore=[["TECH Radar BiH","/tech/radar-bih.html"],["Vijesti i izvori","/tech/izvori.html"],["Discovery / teme","/tech/discovery.html"],["Telefoni","/tech/telefoni.html"],["Alati","/tech/alati.html"],["Biblioteka","/tech/biblioteka.html"],["Besplatni resursi","/tech/free-store.html"],["Lab i projekti","/tech/lab.html"],["Saradnja i oglasi","/tech/oglasi.html"],["Glavna platforma ↗","/"]];
+function portalLink(label,url){
+ const link=create("a","",label);link.href=url;
+ const page=url.split("#")[0];
+ if(location.pathname===page||(page==="/tech/"&&location.pathname==="/tech/index.html")){link.classList.add("active");link.setAttribute("aria-current","page");}
+ return link;
 }
-addDiscovery(document.querySelector(".nav-main"));addDiscovery(mob);
-function addTechWorld(nav){
- if(!nav||nav.querySelector('a[href="./svijet.html"]')||nav.querySelector('a[href="/tech/svijet.html"]'))return;
- const link=create("a","","TECH Svijet");link.href="./svijet.html";
- const spot=nav.querySelector('a[href="./tech-zona.html"]');
- if(spot)spot.insertAdjacentElement("afterend",link);else nav.prepend(link);
+function buildPortalNavigation(nav,mobile=false){
+ if(!nav)return;nav.replaceChildren();
+ for(const [label,url] of portalMain)nav.append(portalLink(label,url));
+ const more=create("details","tech-nav-more"+(mobile?" tech-nav-mobile-more":""));
+ more.append(create("summary","","Više"));
+ const extra=create("div","tech-nav-extra");
+ for(const [label,url] of portalMore)extra.append(portalLink(label,url));
+ more.append(extra);nav.append(more);
 }
-addTechWorld(document.querySelector(".nav-main"));addTechWorld(mob);
+buildPortalNavigation(document.querySelector(".nav-main"));
+buildPortalNavigation(mob,true);
 menu?.addEventListener("click",()=>{const open=mob.hidden;mob.hidden=!open;menu.setAttribute("aria-expanded",String(open));});
 mob?.addEventListener("click",e=>{if(e.target.closest("a")){mob.hidden=true;menu.setAttribute("aria-expanded","false");}});
 const readerLink=m=>"./citaj.html?resurs="+encodeURIComponent(m.file);
@@ -68,6 +73,11 @@ function drawStore(){
 $("store-filter-search")?.addEventListener("input",drawStore);drawStore();
 const modal=$("site-search"),search=$("universal-input"),results=$("universal-results");
 const pages=[
+ {cat:"RUBRIKA",title:"TECH Radar BiH",description:"IT poslovi, tech događaji, online predavanja, konferencije i podcast pozivi po gradovima",url:"./radar-bih.html"},
+ {cat:"GLAVNO",title:"Istraži",description:"Nauka, AI, uređaji i nove ideje u TECH Svijetu",url:"./svijet.html"},
+ {cat:"GLAVNO",title:"Čitaj",description:"Originalne tehnološke analize, izvori i vodiči",url:"./tech-zona.html"},
+ {cat:"GLAVNO",title:"Uči",description:"Interaktivne lekcije i zadaci TECH Akademije",url:"./discovery.html#learning-academy"},
+ {cat:"GLAVNO",title:"Stvori",description:"Pisanje i spremanje vlastitog autorskog teksta",url:"./studio.html"},
  {cat:"RUBRIKA",title:"Tech portal",description:"AI, uređaji, softver i originalne analize",url:"./"},
  {cat:"RUBRIKA",title:"Biblioteka",description:"Knjige, vodiči, besplatno čitanje",url:"./biblioteka.html"},
  {cat:"RUBRIKA",title:"TECH Svijet",description:"AI, nauka, svemir, telefoni, uređaji, historija interneta, web, sigurnost i stalna arhiva vijesti",url:"./svijet.html"},
