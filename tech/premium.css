@@ -125,3 +125,9 @@
 .premium-intro h1.tech-vision-title{font-size:clamp(39px,5.8vw,78px);line-height:1.02;letter-spacing:-.055em;overflow-wrap:normal;word-break:normal}
 @media(max-width:740px){.premium-intro h1.tech-vision-title{font-size:clamp(34px,9.3vw,58px);letter-spacing:-.055em}}
 @media(max-width:380px){.premium-intro h1.tech-vision-title{font-size:clamp(30px,9vw,37px);letter-spacing:-.06em}}
+
+/* TECH Zona bookmarks: local only, shared with the previous Discovery collection */
+.zone-save,.zone-remove-saved{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;margin:11px 0 0 12px;border:1px solid #bd7749;border-radius:9px;padding:10px 13px;color:#ffb989;background:#171d25;font:800 11px system-ui}
+.zone-save[aria-pressed=true]{color:#17111a;background:#ffb989}
+.zone-remove-saved:focus-visible,.zone-save:focus-visible{outline:2px solid #ffb989;outline-offset:2px}
+#sacuvano .p-head{align-items:center}#sacuvano .p-head p{color:#c6b1a1}#sacuvano .empty{display:block}
