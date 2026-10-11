@@ -1,3 +1,45 @@
-BRZO I LOKALNO TECH — BESPLATNI ORIGINALNI MATERIJAL
+BRZO I LOKALNO TECH · ORIGINALNI BESPLATNI MATERIJAL
+UREĐNIČKI PREDLOŽAK ZA ORIGINALNI TECH ČLANAK
+Izdanje: 11.10.2026.
+Autor: uredništvo Brzo i Lokalno TECH
+Dozvoljeno besplatno čitanje i preuzimanje. Ostala prava zadržana.
 
-Urednički predložak za tehnološki članak
+PRIPREMA
+Radni naslov: __________________
+Autor (naziv za objavu): __________________
+Tehnološka oblast: __________________
+Datum provjere: __________________
+Za koga pišem: __________________
+Pitanje na koje tekst odgovara: __________________
+
+UVOD
+U dvije ili tri rečenice objasni šta čitalac može naučiti. Nemoj obećavati senzaciju ili konačan odgovor ako ga nemaš.
+
+STRUKTURA
+1. Kontekst problema: zašto je tema važna?
+2. Glavna činjenica: navedeni izvor i datum.
+3. Druga važna činjenica: izvor i ograničenja.
+4. Stvarni primjer ili jasno označena ilustracija.
+5. Šta nije poznato ili još nije testirano?
+6. Korisna preporuka ili zaključak za čitaoca.
+
+IZVORI I PROVJERA
+Za svaku promjenjivu tehničku specifikaciju, rok ili tvrdnju pronađi primarni izvor. Razlikuj navode proizvođača, nezavisna mjerenja, vlastito iskustvo i mišljenje. Ako test nije proveden, ne piši kao da jeste. Link nije automatska garancija tačnosti.
+
+AUTORSKA PRAVA
+Ne kopiraj tuđe članke, slike, ilustracije, fotografije ili muzičke zapise samo zato što su dostupni na internetu. Izvorno napiši objašnjenje. Kratke citate koristi kada su potrebni i uz pravilno navođenje izvora i pravnog osnova.
+
+PRIVATNOST
+Ne otkrivaj lične podatke osoba koje nisu pristale na objavu. Ne šalji lozinke, privatnu prepisku, neobjavljene dokumente ili druge osjetljive sadržaje kroz obrazac za članak.
+
+ZAVRŠNA KONTROLA
+[ ] Naslov odgovara sadržaju
+[ ] Činjenice imaju izvore
+[ ] Datumi su provjereni
+[ ] Jasno su razdvojene činjenice i mišljenja
+[ ] Imam prava na sav priloženi materijal
+[ ] Tekst je razumljiv na telefonu
+[ ] Nema nepotrebnih ličnih podataka
+
+UREDNIČKI POSTUPAK
+Nacrt možeš pripremiti u TECH Studiju. Slanje na provjeru nije automatsko objavljivanje niti samo po sebi prenosi autorska prava. O konkretnoj objavi i pravima dogovara se zasebno.
