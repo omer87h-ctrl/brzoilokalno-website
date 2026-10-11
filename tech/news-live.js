@@ -17,5 +17,18 @@
   window.BL_TECH_PULSE_UPDATED=payload.updated;
   window.BL_TECH_PULSE_METHOD="automatski-rss";
   window.dispatchEvent(new Event("bl-news-updated"));
+  // Apply ONLY manually written and archived Bosnian editorial headlines.
+  // Newly fetched headlines without a review remain visibly attributed to their publisher.
+  try{
+   const archiveResponse=await fetch("./news-archive.json",{cache:"no-store"});
+   if(archiveResponse.ok){
+    const archive=await archiveResponse.json();
+    const translations=new Map((Array.isArray(archive.stories)?archive.stories:[])
+     .filter(x=>x&&typeof x.url==="string"&&typeof x.titleBs==="string"&&x.titleBs.trim())
+     .map(x=>[x.url,{titleBs:x.titleBs,summaryBs:typeof x.summaryBs==="string"?x.summaryBs:""}]));
+    window.BL_TECH_PULSE=window.BL_TECH_PULSE.map(x=>Object.assign({},x,translations.get(x.url)||{}));
+    window.dispatchEvent(new Event("bl-news-updated"));
+   }
+  }catch{ /* Original attributed headlines remain readable if archive fails. */ }
  }catch(error){console.info("Retaining previously verified TECH headlines");}
 })();
