@@ -16,3 +16,8 @@
 .hero-console-foot{padding-top:12px;border-top:1px solid #35637a}
 .hero-console-foot span:last-child{color:#92dfc7}
 @media(max-width:720px){.hero-art{max-width:100%;min-height:0;height:auto}.hero-console-title{margin:26px 0 20px}.hero-console{padding:18px}}
+
+.software-gateway{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(220px,.8fr);gap:20px;align-items:center;margin-top:29px;padding-top:30px;padding-bottom:30px;border:1px solid #3a728b;border-radius:16px;background:radial-gradient(circle at 85% 40%,#1e82963d,transparent 48%),#122a39}
+.software-gateway h2{font:950 clamp(29px,4vw,46px)/1.1 system-ui;letter-spacing:-.06em;margin:13px 0}.software-gateway h2 em{font-style:normal;color:#89e4f1}.software-gateway p{color:#bfd7e4;font-size:13px;max-width:650px}
+.software-gateway-actions{display:grid;gap:10px}.software-gateway-actions a{width:100%}
+@media(max-width:760px){.software-gateway{grid-template-columns:1fr;gap:10px}}
