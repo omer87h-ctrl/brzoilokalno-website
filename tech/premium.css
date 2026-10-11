@@ -113,3 +113,10 @@
 .tech-universe-circle{position:absolute;inset:17%;border:1px solid #efab6a88;border-radius:50%;box-shadow:0 0 38px #ed99504c,0 0 0 30px #f4a05b13,0 0 0 64px #ef93510b}
 .tech-universe-visual strong{position:relative;font:950 clamp(35px,4.3vw,60px)/.98 system-ui;color:#ffddbf;letter-spacing:-.07em;text-align:center}.tech-universe-visual small{position:relative;font:850 10px system-ui;color:#ffb47c;letter-spacing:.09em}
 @media(max-width:750px){.tech-universe-door-inner{grid-template-columns:1fr;gap:22px;padding-block:36px}.tech-universe-door h2{font-size:clamp(33px,8vw,50px)}.tech-universe-visual{height:230px}.tech-universe-visual strong{font-size:44px}}
+
+/* TECH Radar callout: meaningful Bosnia/online opportunities without another oversized hero. */
+.tech-radar-entry{margin-block:26px 30px;display:flex;justify-content:space-between;align-items:center;gap:26px;background:radial-gradient(ellipse at 88% 50%,#e8753433,transparent 58%),linear-gradient(120deg,#1b222e,#161720);border:1px solid #86563e;border-radius:17px;padding:clamp(21px,3vw,37px)!important}
+.tech-radar-entry-copy{max-width:760px}.tech-radar-entry h2{font:900 clamp(25px,3.1vw,41px)/1.09 system-ui;letter-spacing:-.055em;margin:12px 0;color:#fff1e5}.tech-radar-entry h2 em{font-style:normal;color:#ffa568}
+.tech-radar-entry p{font:400 13px/1.75 system-ui;color:#ccbeb3;margin:0}.tech-radar-entry-actions{display:flex;flex-direction:column;gap:12px;flex-shrink:0}.tech-radar-entry-actions a{text-align:center;white-space:nowrap}
+@media(max-width:850px){.tech-radar-entry{display:block}.tech-radar-entry-actions{margin-top:22px;flex-direction:row;flex-wrap:wrap}.tech-radar-entry-actions a{white-space:normal}}
+@media(max-width:560px){.tech-radar-entry-actions{flex-direction:column}.tech-radar-entry h2{font-size:30px}}
