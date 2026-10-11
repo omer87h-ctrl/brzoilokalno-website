@@ -88,7 +88,7 @@ def load_feed(source, url, hostname):
             continue
         category = {
             "NASA": "NAUKA", "ScienceDaily": "NAUKA",
-            "The Verge AI": "AI", "The Verge": "UREĐAJI",
+            "The Verge AI": "AI", "The Verge": "TEHNOLOGIJA",
             "BleepingComputer": "SIGURNOST", "Mozilla Hacks": "WEB",
         }.get(source, "SOFTVER")
         result.append({
