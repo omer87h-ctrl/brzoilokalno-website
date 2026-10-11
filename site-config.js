@@ -9,8 +9,7 @@ window.SITE_CONFIG = {
   huaweiAppGallery: "https://brzoilokalno.com/preuzmi-app.html",
   huaweiAppGalleryStore: "https://appgallery.cloud.huawei.com/ag/n/app/C117382847",
 
-  // Google Play — kad app izađe, zalijepi puni link ovdje.
-  // Dok nema linka, ostavi prazan string ""  →  na stranici piše "Uskoro".
+  // Direktan Google Play link za objavljenu Brzo i Lokalno aplikaciju.
   googlePlay: "https://play.google.com/store/apps/details?id=com.brzoilokalno",
 
   // Google Analytics (opcionalno) — Measurement ID tipa "G-XXXXXXXXXX".
