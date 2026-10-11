@@ -81,7 +81,7 @@ const all=[
 ];
 function drawSearch(){
  if(!results||!search)return;
- const aliases={mobitel:"telefon",mobiteli:"telefon",mobitela:"telefon",smartfon:"telefon",smartphone:"telefon",telefoni:"telefon",slusalice:"slušalice",vijest:"vijesti",knjige:"knjiga",knjigu:"knjiga"};
+ const aliases={mobitel:"telefon",mobiteli:"telefon",mobitela:"telefon",smartfon:"telefon",smartphone:"telefon",telefoni:"telefon",slusalice:"slušalice",vijest:"vijesti",knjige:"knjig",knjigu:"knjig",knjiga:"knjig"};
  const q=terms(search.value).map(t=>aliases[t]||t);
  const found=all.filter(x=>matches([x.title,x.description,x.cat].join(" "),q));
  results.replaceChildren(create("div","search-count",found.length+" REZULTATA · POSTOJEĆI SADRŽAJ"));
