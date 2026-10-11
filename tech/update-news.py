@@ -11,8 +11,10 @@ from pathlib import Path
 SOURCES = [
     ("GitHub Blog", "https://github.blog/feed/", "github.blog"),
     ("Mozilla Hacks", "https://hacks.mozilla.org/feed/", "hacks.mozilla.org"),
+    ("NASA", "https://www.nasa.gov/feed/", "www.nasa.gov"),
 ]
 OUTPUT = Path(__file__).with_name("news-live.json")
+ARCHIVE = Path(__file__).with_name("news-archive.json")
 TODAY = dt.datetime.now(dt.timezone.utc).date()
 MAX_AGE = 30
 MAX_ITEMS = 12
@@ -80,9 +82,10 @@ def load_feed(source, url, hostname):
             continue
         if not TODAY - dt.timedelta(days=MAX_AGE) <= date <= TODAY:
             continue
+        category = "NAUKA" if source == "NASA" else ("WEB" if source == "Mozilla Hacks" else "SOFTVER")
         result.append({
             "title": title, "source": source, "date": date.isoformat(),
-            "url": link, "category": "RAZVOJ", "kind": "vanjski",
+            "url": link, "category": category, "kind": "vanjski",
             "origin": "automatski-rss",
             "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
         })
@@ -108,5 +111,40 @@ def main():
     print(f"Published {len(items)} attributed outbound links")
 
 
+
+def refresh_archive():
+    try:
+        latest = json.loads(OUTPUT.read_text(encoding="utf-8"))
+        if latest.get("updated") != TODAY.isoformat():
+            return
+        fresh = latest.get("stories", [])
+        previous = json.loads(ARCHIVE.read_text(encoding="utf-8"))
+        older = previous.get("stories", [])
+        valid = {"github.blog", "hacks.mozilla.org", "www.nasa.gov",
+                 "developer.android.com", "www.reuters.com"}
+        merged = {}
+        for story in older + fresh:
+            if not isinstance(story, dict) or story.get("kind") != "vanjski":
+                continue
+            url = story.get("url", "")
+            try:
+                parts = urllib.parse.urlsplit(url)
+                if parts.scheme != "https" or parts.hostname not in valid:
+                    continue
+            except (ValueError, TypeError):
+                continue
+            if not isinstance(story.get("title"), str) or not isinstance(story.get("date"), str):
+                continue
+            merged[url] = story
+        stories = sorted(merged.values(), key=lambda x: x.get("date", ""), reverse=True)[:180]
+        ARCHIVE.write_text(json.dumps(
+            {"updated": TODAY.isoformat(), "method": "RSS i urednicki odabrani linkovi", "stories": stories},
+            ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print("Archive contains", len(stories), "outbound links")
+    except (OSError, ValueError, TypeError) as exc:
+        print("Archive preserved:", type(exc).__name__)
+
+
 if __name__ == "__main__":
     main()
+    refresh_archive()
