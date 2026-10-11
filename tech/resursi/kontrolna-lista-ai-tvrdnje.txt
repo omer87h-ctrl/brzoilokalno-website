@@ -1,3 +1,42 @@
-BRZO I LOKALNO TECH — BESPLATNI ORIGINALNI MATERIJAL
+BRZO I LOKALNO TECH · ORIGINALNI BESPLATNI MATERIJAL
+PROVJERI AI ODGOVOR PRIJE NEGO ŠTO GA PODIJELIŠ
+Izdanje: 11.10.2026.
+Autor: uredništvo Brzo i Lokalno TECH
+Dozvoljeno besplatno čitanje i preuzimanje. Ostala prava zadržana.
 
-Provjera AI tvrdnji i odgovora
+ŠTA OVA LISTA RADI
+Pomaže razdvojiti činjenicu, procjenu i neprovjerenu tvrdnju u generativnim odgovorima. Nije automatski detektor istine i ne zamjenjuje stručnu provjeru u osjetljivim područjima.
+
+1. IZDVOJI POJEDINAČNE TVRDNJE
+Dugačak odgovor podijeli na rečenice koje je moguće provjeriti. Posebno označi brojke, zakone, datume, citate, specifikacije uređaja i tvrdnje o stvarnim osobama.
+
+2. PRONAĐI PRIMARNI IZVOR
+Traži službenu dokumentaciju, izvještaj, javni registar ili originalnu objavu. Ne oslanjaj se samo na drugi AI tekst ili preneseni naslov. Ako izvora nema, označi tvrdnju kao nepotvrđenu.
+
+3. PROVJERI VRIJEME I KONTEKST
+Je li događaj već održan ili tek najavljen? Odgovara li datum objave datumu na koji se tvrdnja odnosi? Promjene softvera i zakona zahtijevaju svježe podatke.
+
+4. RAZDVOJI TVRDNJE OD MARKETINGA
+'Proizvođač navodi' nije isto što i 'nezavisno smo testirali'. Reklama, simulacija i preliminarni rezultati nisu konačan dokaz o kvalitetu.
+
+5. ZAŠTITI PRIVATNOST
+Ne šalji modelima ili javnim servisima tuđe privatne podatke, lozinke i povjerljivu dokumentaciju bez odgovarajućih prava i pravne osnove.
+
+6. ZABILJEŽI ZAKLJUČAK
+Tvrdnja: __________________
+Primarni izvor: __________________
+Datum izvora: __________________
+Šta je stvarno potvrđeno: __________________
+Šta nije potvrđeno: __________________
+Objava: može / ne može / potrebna provjera
+
+PRIMJER
+AI odgovor: 'Ovaj telefon traje dvostruko duže od svih drugih.' Traži metodologiju, konkretan model, uslove testa i uporediva mjerenja. Bez toga koristi formulaciju 'nije potvrđeno'.
+
+KONTROLNI PREGLED
+[ ] Datumi provjereni
+[ ] Izvori postoje
+[ ] Citati su stvarni
+[ ] Brojevi su uporedivi
+[ ] Objašnjena su ograničenja
+[ ] Nema izloženih privatnih podataka

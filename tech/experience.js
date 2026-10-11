@@ -81,16 +81,12 @@ const pages=[
  {cat:"GLAVNO",title:"Stvori",description:"Pisanje i spremanje vlastitog autorskog teksta",url:"./studio.html"},
  {cat:"RUBRIKA",title:"Tech portal",description:"AI, uređaji, softver i originalne analize",url:"./"},
  {cat:"RUBRIKA",title:"Biblioteka",description:"Knjige, vodiči, besplatno čitanje",url:"./biblioteka.html"},
- {cat:"RUBRIKA",title:"TECH Svijet",description:"AI, nauka, svemir, telefoni, uređaji, historija interneta, web, sigurnost i stalna arhiva vijesti",url:"./svijet.html"},
  {cat:"RUBRIKA",title:"TECH Discovery",description:"Radar autorskih članaka, teme, provjerene činjenice i vodiči",url:"./discovery.html"},
  {cat:"VODIČI",title:"Preporučeno čitanje",description:"Povezani vodiči kroz razvoj, privatnost, uređaje i pisanje",url:"./discovery.html#putanje"},
  {cat:"MOJA KOLEKCIJA",title:"Sačuvani članci",description:"Članci koje si sačuvao na ovom uređaju",url:"./discovery.html#sacuvano"},
  {cat:"RUBRIKA",title:"Vijesti i izvori",description:"Izvorni linkovi, datumi i tehnološke novosti",url:"./izvori.html"},
- {cat:"RUBRIKA",title:"BL Free Store",description:"Besplatni digitalni resursi",url:"./free-store.html"},
+ {cat:"RUBRIKA",title:"BL Free Store",description:"Originalni besplatni materijali, aplikacija Brzo i Lokalno i službeni izvori otvorenog softvera",url:"./free-store.html"},
  {cat:"RUBRIKA",title:"BL Lab",description:"Projekti i ideje za razmjenu",url:"./lab.html"},
- {cat:"RUBRIKA",title:"Tech zona",description:"Objavljeni članci",url:"./tech-zona.html"},
- {cat:"RUBRIKA",title:"Studio",description:"Pisanje tekstova",url:"./studio.html"},
- {cat:"RUBRIKA",title:"Pošalji oglas ili članak",description:"Urednički pregled e-poštom",url:"./objavi.html"},
  {cat:"RUBRIKA",title:"Podcast",description:"Razgovori i predlaganje tema; epizode su u pripremi.",url:"./podcast.html"},
  {cat:"RUBRIKA",title:"Majstori & Kreatori",description:"Tehnologija, zanati, kreativci i Brzo i Lokalno",url:"./majstori-kreatori.html"}
 ];

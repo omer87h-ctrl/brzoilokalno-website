@@ -1,3 +1,46 @@
-BRZO I LOKALNO TECH — BESPLATNI ORIGINALNI MATERIJAL
+BRZO I LOKALNO TECH · ORIGINALNI BESPLATNI MATERIJAL
+PREDLOŽAK ZA TEHNOLOŠKI DOGAĐAJ I WEBINAR
+Izdanje: 11.10.2026.
+Autor: uredništvo Brzo i Lokalno TECH
+Dozvoljeno besplatno čitanje i preuzimanje. Ostala prava zadržana.
 
-Predložak za TECH događaj i webinar
+SVRHA
+Ovaj predložak služi organizatoru koji želi pripremiti provjerljivu najavu. Ne garantuje objavu na TECH Radaru. Privatne podatke učesnika ne uključuj u najavu.
+
+1. OSNOVNI PODACI
+Naziv događaja: __________________
+Organizator (javni naziv): __________________
+Tip: konferencija / meetup / radionica / webinar
+Tehnološka oblast: __________________
+Kratka rečenica: __________________
+
+2. DATUM I DOSTUPNOST
+Datum početka: __________________
+Vrijeme i vremenska zona: __________________
+Datum završetka (ako postoji): __________________
+Grad i javna lokacija ili ONLINE: __________________
+Rok za prijavu: __________________
+Naknada: besplatno / plaćeno / nije navedeno
+Provjeren službeni link: __________________
+
+3. KORISNE INFORMACIJE
+Ko može učestvovati? __________________
+Je li potrebno predznanje? __________________
+Na kojem jeziku se održava? __________________
+Hoće li biti snimak? Samo ako to organizator potvrđuje.
+Postoje li titlovi ili druge prilagodbe pristupačnosti? __________________
+
+4. ORIGINALNA NAJAVA
+[NAZIV] je [VRSTA DOGAĐAJA] posvećen [OBLASTI]. Održava se [DATUM, VRIJEME I ZONA] u [MJESTO / ONLINE], u organizaciji [ORGANIZATOR]. Učešće je [USLOVI]. Dodatne informacije i prijava: [SLUŽBENI URL].
+
+5. UREDNIČKA PROVJERA
+[ ] Događaj zaista postoji
+[ ] Organizator je provjerljiv
+[ ] Datum i rok nisu istekli
+[ ] Izvor vodi na službenu stranicu
+[ ] Cijena i uslovi nisu izmišljeni
+[ ] Fotografije i logotipi imaju dozvolu
+[ ] Nisu objavljene tuđe privatne adrese, telefoni ili e-mailovi
+
+ŠTA SE DOGAĐA NAKON SLANJA?
+Predloženu objavu pregledava uredništvo. Slanje e-maila ne znači da je objava prihvaćena. Prije javne objave potrebno je provjeriti tačnost, prava i relevantnost za tehnologiju.
