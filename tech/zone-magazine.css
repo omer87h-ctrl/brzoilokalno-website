@@ -1,0 +1,26 @@
+/* TECH Zona je urednički magazin, ne mreža jednakih kataloških kartica. */
+.zone-editorial-layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(260px,.65fr);gap:18px;margin-top:26px}
+.zone-lead{min-height:420px;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(25px,4vw,53px);background:radial-gradient(ellipse at 95% 6%,#bd64254d,transparent 58%),linear-gradient(145deg,#261e23,#111a25 70%);border:1px solid #765038;border-radius:16px}
+.zone-lead h2{font:950 clamp(37px,4.5vw,65px)/1.03 system-ui;letter-spacing:-.07em;max-width:760px;margin:14px 0}
+.zone-lead p{font-size:15px;line-height:1.75;color:#d8c2b4;max-width:620px}
+.zone-lead a,.zone-side a{color:#ffbf8c;font-weight:850;text-decoration:none}
+.zone-lead a{align-self:start;padding:14px 20px;background:#ff9e5d;border-radius:8px;color:#211308;margin-top:15px}
+.zone-side{display:grid;grid-template-rows:repeat(2,1fr);gap:14px}
+.zone-side article{display:flex;flex-direction:column;justify-content:space-between;padding:25px;border:1px solid #5c4b43;border-radius:13px;background:#171d27}
+.zone-side h3{font:850 clamp(21px,2.2vw,32px)/1.14 system-ui;letter-spacing:-.055em;margin:15px 0}
+.zone-side p{color:#bdb3ac;font-size:12px;line-height:1.6}
+.zone-editorial-label{font:850 10px system-ui;color:#f5a66f;letter-spacing:.12em}
+.zone-editorial-strip{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:22px;color:#aa9a90;font:800 11px system-ui}
+.zone-editorial-strip a{border:1px solid #71533e;border-radius:7px;padding:10px 13px;color:#ffd0a9}
+.zone-magazine .p-zone-list{display:block;border-top:1px solid #765039}
+.zone-magazine .p-zone-list .zone-story{min-height:0;display:grid;grid-template-columns:58px minmax(0,1fr) auto;column-gap:25px;align-items:start;padding:26px 0;background:transparent;border:0;border-bottom:1px solid #514238;border-radius:0;box-shadow:none;position:relative}
+.zone-magazine .p-zone-list .zone-story:before{content:attr(data-issue);grid-row:1 / span 5;grid-column:1;font:900 27px system-ui;color:#e99055}
+.zone-magazine .p-zone-list .zone-story .p-label,.zone-magazine .p-zone-list .zone-story h3,.zone-magazine .p-zone-list .zone-story p{grid-column:2}
+.zone-magazine .p-zone-list .zone-story h3{font:900 clamp(22px,2.5vw,34px)/1.2 system-ui;letter-spacing:-.055em;margin:9px 0}
+.zone-magazine .p-zone-list .zone-story p{font-size:13px;line-height:1.75;margin:0;max-width:650px}
+.zone-magazine .p-zone-list .zone-story>a,.zone-magazine .p-zone-list .zone-story>button{grid-column:3;margin:0;align-self:center;min-width:105px}
+.zone-magazine .p-zone-list .zone-story>a{color:#fbb47f}
+.zone-magazine .p-zone-list .zone-story>button{background:#29242a;border:1px solid #655044;border-radius:7px;color:#fbd1b2;padding:8px 10px;font:850 10px system-ui;cursor:pointer}
+.zone-magazine .p-zone-list .zone-story:hover{background:#ffffff04}
+@media(max-width:830px){.zone-editorial-layout{grid-template-columns:1fr}.zone-lead{min-height:350px}.zone-side{grid-template-columns:1fr 1fr;grid-template-rows:auto}.zone-magazine .p-zone-list .zone-story{grid-template-columns:42px minmax(0,1fr)}.zone-magazine .p-zone-list .zone-story>a,.zone-magazine .p-zone-list .zone-story>button{grid-column:2;justify-self:start;margin-top:9px}}
+@media(max-width:530px){.zone-lead{min-height:370px;padding:25px}.zone-lead h2{font-size:38px}.zone-side{grid-template-columns:1fr}.zone-magazine .p-zone-list .zone-story{grid-template-columns:31px minmax(0,1fr);column-gap:13px}.zone-magazine .p-zone-list .zone-story:before{font-size:17px}.zone-magazine .p-zone-list .zone-story h3{font-size:23px}.zone-magazine .p-zone-list .zone-story p{font-size:12px}}
