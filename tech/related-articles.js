@@ -12,6 +12,30 @@
  };
  const list=entries[slug]||[],article=document.querySelector(".article-layout");
  // Save an article directly from its reader view; shares Discovery's local collection.
+ // Reading progress is calculated locally; no history or analytics sent anywhere.
+ if(article){
+  const progress=document.createElement("div");
+  progress.className="bl-reading-progress";
+  progress.setAttribute("role","progressbar");
+  progress.setAttribute("aria-label","Napredak čitanja članka");
+  progress.setAttribute("aria-valuemin","0");progress.setAttribute("aria-valuemax","100");
+  const bar=document.createElement("span");progress.append(bar);document.body.prepend(progress);
+  let queued=false,last=-1;
+  const update=()=>{
+   queued=false;
+   const top=article.getBoundingClientRect().top+window.scrollY;
+   const bottom=top+article.offsetHeight;
+   const space=Math.max(1,bottom-top-window.innerHeight*.55);
+   const percent=Math.round(Math.min(100,Math.max(0,((window.scrollY-top)/space)*100)));
+   if(percent===last)return;last=percent;
+   bar.style.width=percent+"%";
+   progress.setAttribute("aria-valuenow",String(percent));
+  };
+  const schedule=()=>{if(queued)return;queued=true;requestAnimationFrame(update);};
+  window.addEventListener("scroll",schedule,{passive:true});
+  window.addEventListener("resize",schedule,{passive:true});
+  update();
+ }
  const actions=article?.querySelector(".reader-actions");
  if(actions&&slug&&list.length){
   const storageKey="bl-tech-saved-v1";
