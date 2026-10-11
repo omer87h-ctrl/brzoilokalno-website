@@ -26,7 +26,7 @@
   {id:"create",label:"ŽELIM RAZVIJATI IDEJU",number:"04",title:"Ideja je početak. Rad je sljedeći korak.",description:"Od prototipa i besplatnih programa do vlastitog autorskog teksta.",links:[
    ["Od ideje do proizvoda","./clanci/od-ideje-do-proizvoda.html"],
    ["Istraži besplatan softver","./alati.html"],
-   ["Piši u autorskom studiju","./studio.html"]]},
+   ["Kreiraj autorski tekst","./studio.html"]]},
   {id:"follow",label:"PRATIM TEHNOLOGIJU",number:"05",title:"Naslov je početak. Izvor je obavezan.",description:"Urednički odabrane vijesti i povezane teme, s direktnim linkovima na originalne objave.",links:[
    ["Najnoviji dostupni izvori","./izvori.html"],
    ["TECH Discovery radar","./discovery.html#radar"],
