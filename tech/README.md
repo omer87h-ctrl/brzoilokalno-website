@@ -123,3 +123,14 @@ Asistent and AI interface removed from navigation, homepage and scripts on devel
 - /tech/news-live.json: isključivo naslovi iz dozvoljenih RSS feedova s direktnim linkom; bez kopiranja tuđih tekstova, fotografija ili automatskog generisanja vijesti. /tech/update-news.py podržava RSS 2.0 i Atom; ne zamjenjuje uspješno objavljene podatke praznim feedom. GitHub Actions schedule može kasniti, biti onemogućen ili nemati dozvolu za zapis; provjeravati dnevne runs i stanje datoteke. Datum ažuriranja prikazuje se samo iz uspješnog preuzimanja.
 - Stare bilješke o razvojnom AI asistentu i ranijem stanju u ovom README-u su historija razvoja, ne trenutna funkcija portala.
 - Promjene objaviti tek nakon provjere i odobrenja vlasnika. Nikada ne mijenjati /app/ ili odvojenu Android aplikaciju pri radu na TECH portalu.
+
+## TECH Svijet / zaseban magazinski sloj — 2026-10-11
+- `/tech/svijet.html` je samostalna rubrika za tehnologiju općenito, ne prezentacija Android aplikacije.
+- 8 oblasti, 32 originalna urednička sažetka i 32 objašnjenja koja se čitaju na samoj stranici. Podaci u `universe-data.js` i `universe-explainers.js`, interakcije u `universe.js`, izgled `universe.css`.
+- Vanjski izvori su povezani linkovima. Tekstovi i fotografije trećih strana nisu preuzeti ili ugrađeni; tekstovi objašnjenja su zasebno napisani.
+- Spisak sačuvanih tema čuva samo lokalne ID-eve u pregledniku; može se izbrisati u čitaonici. Na vanjskoj stranici vrijede pravila tog izvora.
+- `/tech/news-archive.json` čuva istoriju do 180 izlaznih naslova. Početni skup je jasno označen kao ranije urednički odabrani naslovi; ne tvrditi da su automatski prikupljeni. Script `update-news.py` redovno dopunjava arhivu samo ako su feedovi stvarno dostupni i validni.
+- Workflow `tech-rss.yml` je zakazan dva puta dnevno po UTC-u i pri ažuriranju workflowa/skripta na glavnoj grani. GitHub Actions može kasniti, biti isključen ili odbiti izvršavanje. Provjeri Action run i novu vrijednost `updated` prije bilo kakve tvrdnje da feed radi automatski.
+- Ni automatska arhiva ni urednički naslov nisu potpuni kopirani novinski tekst. Svaka kartica vodi na izvornog izdavača. Ne predstavljati datum arhive kao datum same vijesti.
+- Nakon dodavanja novih izvora: provjeri feed URL, dozvoljeni host, pravila upotrebe, eventualno preusmjeravanje i primjere naslova. Ne dodavati neprovjerene treće strane u allowlist.
+- Ažuriraj popis tema i originalna objašnjenja zajedno, te testiraj mobilni prikaz, tastaturu, dialog i vanjske veze.

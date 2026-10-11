@@ -1,0 +1,46 @@
+{
+  "updated": "2026-10-10",
+  "method": "urednicki-odabrano",
+  "stories": [
+    {
+      "title": "Google Cloud predstavio Gemini agenta za radne zadatke",
+      "source": "Reuters",
+      "date": "2026-10-08",
+      "url": "https://www.reuters.com/business/google-cloud-introduces-gemini-agent-work-ai-race-heats-up-2026-10-08/",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "urednicki-odabrano",
+      "description": "Originalni izvor; provjeri naslov i datum na stranici izdavača."
+    },
+    {
+      "title": "Android CLI dobio streaming fizičkih uređaja i nove razvojne vještine",
+      "source": "Android Developers",
+      "date": "2026-10-02",
+      "url": "https://developer.android.com/blog/posts/android-cli-device-streaming-and-skills",
+      "category": "UREĐAJI",
+      "kind": "vanjski",
+      "origin": "urednicki-odabrano",
+      "description": "Originalna službena objava izdavača."
+    },
+    {
+      "title": "Instagram Direct: razvoj interfejsa pomoću Jetpack Compose arhitekture",
+      "source": "Android Developers",
+      "date": "2026-09-30",
+      "url": "https://developer.android.com/blog/posts/jetpack-compose-ai-native-ui-instagram-direct",
+      "category": "SOFTVER",
+      "kind": "vanjski",
+      "origin": "urednicki-odabrano",
+      "description": "Studija slučaja sa službenog bloga."
+    },
+    {
+      "title": "Google otvorio Android Studio za izbor različitih AI agenata",
+      "source": "Android Developers",
+      "date": "2026-09-24",
+      "url": "https://developer.android.com/blog/posts/build-your-way-use-any-ai-agent-of-your-choice-in-android-studio",
+      "category": "SOFTVER",
+      "kind": "vanjski",
+      "origin": "urednicki-odabrano",
+      "description": "Objava izdavača o razvojnim alatima."
+    }
+  ]
+}

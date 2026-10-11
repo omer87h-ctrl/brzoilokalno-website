@@ -1,7 +1,12 @@
 name: Refresh TECH RSS
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'tech/update-news.py'
+      - '.github/workflows/tech-rss.yml'
   schedule:
-    - cron: '17 6 * * *'
+    - cron: '17 6,18 * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -14,9 +19,9 @@ jobs:
         run: python3 tech/update-news.py
       - name: Commit new headlines if changed
         run: |
-          if git diff --quiet -- tech/news-live.json; then exit 0; fi
+          if git diff --quiet -- tech/news-live.json tech/news-archive.json; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tech/news-live.json
+          git add tech/news-live.json tech/news-archive.json
           git commit -m "Update sourced TECH headlines"
           git push
