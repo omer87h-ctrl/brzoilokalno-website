@@ -44,7 +44,7 @@
   "category": "UREĐAJI",
   "title": "Bluetooth: povezivanje različitih uređaja",
   "description": "Zvuk, dodatna oprema i različite verzije povezivanja.",
-  "url": "https://www.bluetooth.com/learn-about-bluetooth/",
+  "url": "https://www.bluetooth.com/bluetooth-technology/",
   "source": "Bluetooth SIG"
  },
  {
@@ -52,7 +52,7 @@
   "category": "UREĐAJI",
   "title": "USB-C nije obećanje iste brzine",
   "description": "Isti oblik priključka ne znači iste mogućnosti prijenosa i punjenja.",
-  "url": "https://www.usb.org/usb-type-cr",
+  "url": "https://www.usb.org/document-library/usb-type-cr-cable-and-connector-specification-release-25",
   "source": "USB-IF"
  },
  {
