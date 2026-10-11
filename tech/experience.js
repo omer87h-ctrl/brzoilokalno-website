@@ -10,7 +10,7 @@ if((location.pathname.endsWith("/tech/")||location.pathname.endsWith("/tech/inde
 const menu=$("nav-toggle"),mob=$("mobile-nav");
 // One information architecture for standard TECH pages. All existing sections stay reachable.
 const portalMain=[["Naslovna","/tech/"],["Istraži","/tech/svijet.html"],["Čitaj","/tech/tech-zona.html"],["Uči","/tech/discovery.html#learning-academy"],["Stvori","/tech/studio.html"]];
-const portalMore=[["TECH Radar BiH","/tech/radar-bih.html"],["Vijesti i izvori","/tech/izvori.html"],["Discovery / teme","/tech/discovery.html"],["Telefoni","/tech/telefoni.html"],["Alati","/tech/alati.html"],["Biblioteka","/tech/biblioteka.html"],["Besplatni resursi","/tech/free-store.html"],["Lab i projekti","/tech/lab.html"],["Saradnja i oglasi","/tech/oglasi.html"],["Podcast / prijava","/tech/podcast.html"],["Glavna platforma ↗","/"]];
+const portalMore=[["TECH Radar BiH","/tech/radar-bih.html"],["Arhiva vijesti","/tech/arhiva.html"],["Izvori i redakcija","/tech/izvori.html"],["Discovery / teme","/tech/discovery.html"],["Telefoni","/tech/telefoni.html"],["Alati","/tech/alati.html"],["Biblioteka","/tech/biblioteka.html"],["Besplatni resursi","/tech/free-store.html"],["Lab i projekti","/tech/lab.html"],["Saradnja i oglasi","/tech/oglasi.html"],["Podcast / prijava","/tech/podcast.html"],["Glavna platforma ↗","/"]];
 function portalLink(label,url){
  const link=create("a","",label);link.href=url;
  const page=url.split("#")[0];
@@ -73,6 +73,7 @@ function drawStore(){
 $("store-filter-search")?.addEventListener("input",drawStore);drawStore();
 const modal=$("site-search"),search=$("universal-input"),results=$("universal-results");
 const pages=[
+ {cat:"MEDIJSKA ARHIVA",title:"Arhiva tehnoloških vijesti",description:"Sve vijesti po izvoru, datumu i temi, s pregledom na bosanskom i vezom prema originalu",url:"./arhiva.html"},
  {cat:"RUBRIKA",title:"TECH Radar BiH",description:"IT poslovi, tech događaji, online predavanja, konferencije i podcast pozivi po gradovima",url:"./radar-bih.html"},
  {cat:"GLAVNO",title:"Istraži",description:"Nauka, AI, uređaji i nove ideje u TECH Svijetu",url:"./svijet.html"},
  {cat:"GLAVNO",title:"Čitaj",description:"Originalne tehnološke analize, izvori i vodiči",url:"./tech-zona.html"},
