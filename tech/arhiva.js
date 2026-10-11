@@ -18,8 +18,8 @@
   el.append(make("span","archive-kicker",item.category+" · "+item.source),make("h3","",item.titleBs||item.title));
   const english=item.titleBs&&item.titleBs!==item.title;
   if(english)el.append(make("p","archive-original","Originalni naslov: "+item.title));
-  else el.append(make("p","archive-original","Naslov izvora je na engleskom; provjeri original."));
-  const desc=item.summaryBs||("Kratka urednička oznaka: "+String(item.category||"TEHNOLOGIJA").toLowerCase()+". Cijeli članak dostupno je čitati kod izdavača.");
+  else el.append(make("p","archive-original","Izvorni naslov / originalni jezik: "+item.title));
+  const desc=item.summaryBs||("Tema: "+String(item.category||"tehnologija").toLowerCase()+". Za kontekst i detalje pročitaj originalnu objavu kod izdavača.");
   el.append(make("p","archive-summary",desc));
   const meta=make("div","archive-meta",item.date+" · "+(item.titleBs?"BOSANSKI PREGLED":"ORIGINALNI NASLOV"));
   const actions=make("div","archive-actions"),link=make("a","archive-read","OTVORI IZVOR ↗"),save=make("button","archive-save",saved.includes(item.url)?"SAČUVANO ✓":"SAČUVAJ");
