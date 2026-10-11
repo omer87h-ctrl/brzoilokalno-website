@@ -74,7 +74,7 @@
   if(!items.length){output.append(create("p","universe-meta","Trenutno nema objavljenih naslova u ovoj oblasti. Istraži tematske vodiče iznad ili posjeti izvore."));return;}
   for(const item of items){
    const a=create("a","news-card");a.href=item.url;a.target="_blank";a.rel="noopener noreferrer";
-   a.append(create("small","",item.source+" · "+item.date),create("strong","",item.title),create("p","","OTVORI IZVORNU OBJAVU ↗"));
+   a.append(create("small","",item.source+" · "+item.date),create("strong","",item.titleBs||item.title),create("p","",item.summaryBs||"Izvorna objava na stranici izdavača ↗"));
    output.append(a);
   }
  }
