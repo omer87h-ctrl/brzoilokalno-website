@@ -111,5 +111,9 @@ window.BL_PORTAL_CONTENT={
       "format": "TXT",
       "href": "./resursi/qa-kontrolna-lista.txt"
     }
+,
+    {"name":"Kako radi web: od zahtjeva do stranice","cat":"Web","kind":"ORIGINALNI PRAKTIČNI VODIČ","symbol":"▤","file":"vodic-web-od-zahtjeva-do-stranice.txt","desc":"DNS, TLS, HTTP i greške u mreži kroz razumljive scenarije.","format":"TXT","href":"./resursi/vodic-web-od-zahtjeva-do-stranice.txt"},
+    {"name":"Koje dozvole su stvarno potrebne?","cat":"Sigurnost","kind":"ORIGINALNI RADNI LIST","symbol":"▤","file":"radni-list-tech-dozvole.txt","desc":"Razlikuj funkciju od pristupa podacima, uz pitanja za zaštitu privatnosti.","format":"TXT","href":"./resursi/radni-list-tech-dozvole.txt"},
+    {"name":"Tehnološko obećanje: provjeri izvor","cat":"Predlošci","kind":"ORIGINALNI UREDNIČKI PREDLOŽAK","symbol":"▤","file":"predlozak-izvor-i-obecanje.txt","desc":"Zapiši ko je šta najavio, kada, gdje i šta je kasnije stvarno potvrđeno.","format":"TXT","href":"./resursi/predlozak-izvor-i-obecanje.txt"}
   ]
 };
