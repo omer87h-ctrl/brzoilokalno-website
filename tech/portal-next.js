@@ -12,7 +12,7 @@
  };
  const focus=[
   {id:"learn",label:"ŽELIM NAUČITI",number:"01",title:"Od pitanja do znanja.",description:"Originalni vodiči, objašnjenja i praktični materijali. Bez suvišnih riječi.",links:[
-   ["Otvori autorske analize","./tech-zona.html"],
+   ["Otvori autorske analize","https://tech.brzoilokalno.com/tech-zona.html?r=20261011-navfix"],
    ["Počni učiti u TECH Akademiji","./discovery.html#learning-academy"],
    ["Pregledaj biblioteku","./biblioteka.html"]]},
   {id:"tech",label:"ZANIMAJU ME UREĐAJI",number:"02",title:"Izaberi na osnovu činjenica.",description:"Provjeri podatke o telefonima, pročitaj vodiče i saznaj šta specifikacije zaista znače.",links:[
@@ -29,8 +29,8 @@
    ["Kreiraj autorski tekst","./studio.html"]]},
   {id:"follow",label:"PRATIM TEHNOLOGIJU",number:"05",title:"Naslov je početak. Izvor je obavezan.",description:"Urednički odabrane vijesti i povezane teme, s direktnim linkovima na originalne objave.",links:[
    ["Najnoviji dostupni izvori","./izvori.html"],
-   ["Istraži 32 TECH teme","./svijet.html#otkrij"],
-   ["Sve objavljene analize","./tech-zona.html"]]}
+   ["Istraži 32 TECH teme","https://tech.brzoilokalno.com/svijet.html?r=20261011-navfix#otkrij"],
+   ["Sve objavljene analize","https://tech.brzoilokalno.com/tech-zona.html?r=20261011-navfix"]]}
  ];
  const focusTabs=$("blnext-focus-tabs"),focusContent=$("blnext-focus-content");
  function renderFocus(item){
