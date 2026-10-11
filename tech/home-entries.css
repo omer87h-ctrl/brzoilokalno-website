@@ -1,0 +1,20 @@
+/* Početna: magazin i atlas su dvije različite ulazne tačke. */
+.premium-desk-visual{position:relative;display:flex;flex-direction:column;align-items:stretch;justify-content:space-between;gap:15px;min-height:330px;padding:29px 27px;border:1px solid #966449;border-radius:15px;color:#fff0e1;background:linear-gradient(155deg,#53352211,#152029 45%,#251a1c);box-shadow:0 15px 70px #0005;overflow:hidden}
+.premium-desk-visual::before{content:"BL / TECH MAGAZIN";position:absolute;top:0;right:0;color:#1e1008;background:#ffa463;padding:8px 12px;font:950 9px system-ui;letter-spacing:.1em}
+.premium-desk-visual .desk-ring{display:none}
+.premium-desk-visual .zone-edition{align-self:start;font:950 10px system-ui;letter-spacing:.13em;color:#fcb486;margin-top:13px}
+.premium-desk-visual strong{display:block;text-align:left;font:950 clamp(38px,3.7vw,58px)/.98 system-ui;letter-spacing:-.08em;text-shadow:none;margin-top:35px}
+.premium-desk-visual .zone-cover-headline{font:850 18px/1.35 system-ui;max-width:300px;color:#f6e6d7}
+.premium-desk-visual small{font:850 11px system-ui;color:#ffd0a9;letter-spacing:.02em}
+.premium-desk-visual:hover{border-color:#fac397;transform:translateY(-3px)}
+.tech-universe-door{border-color:#315e70;background:radial-gradient(ellipse at 80% 50%,#1c829644,transparent 54%),linear-gradient(110deg,#0b1825,#091722 70%)}
+.tech-universe-door h2 em{color:#91e1ec}
+.tech-universe-door .tech-universe-visual{border:1px solid #3b9aae;background:radial-gradient(circle,#1b667a6a 1%,#153346 35%,#0a1420 74%)}
+.tech-universe-door .tech-universe-circle{border-color:#8ad6e1a6;box-shadow:0 0 38px #3ab4d04c,0 0 0 30px #72cadd13,0 0 0 64px #5fb3dd0b}
+.tech-universe-door .tech-universe-visual strong{color:#d2f8ff}
+.tech-universe-door .tech-universe-visual small{color:#9bddf0}
+.tech-universe-door .button.primary{background:#85dfef;color:#082130}
+.tech-contrast-label{display:inline-flex;align-items:center;gap:8px;border:1px solid #416477;border-radius:6px;padding:8px 11px;margin-top:10px;color:#aeeafa;font:850 10px system-ui;letter-spacing:.08em}
+.premium-page .premium-doors>a:first-child{background:linear-gradient(140deg,#261d1c,#141920 85%);border-left:3px solid #ffa463}
+@media(max-width:740px){.premium-desk-visual{display:flex;min-height:220px;margin:10px 0 24px;padding:20px 19px;gap:8px}.premium-desk-visual strong{font-size:39px;margin:13px 0 3px}.premium-desk-visual .zone-cover-headline{font-size:15px}.premium-desk-visual .zone-edition{margin-top:10px}.premium-desk-visual small{font-size:10px}.tech-universe-door .tech-universe-visual{height:220px}}
+@media(prefers-reduced-motion:reduce){.premium-desk-visual:hover{transform:none}}
