@@ -16,6 +16,13 @@ function addDiscovery(nav){
  if(after)after.insertAdjacentElement("afterend",link);else nav.prepend(link);
 }
 addDiscovery(document.querySelector(".nav-main"));addDiscovery(mob);
+function addTechWorld(nav){
+ if(!nav||nav.querySelector('a[href="./svijet.html"]')||nav.querySelector('a[href="/tech/svijet.html"]'))return;
+ const link=create("a","","TECH Svijet");link.href="./svijet.html";
+ const spot=nav.querySelector('a[href="./tech-zona.html"]');
+ if(spot)spot.insertAdjacentElement("afterend",link);else nav.prepend(link);
+}
+addTechWorld(document.querySelector(".nav-main"));addTechWorld(mob);
 menu?.addEventListener("click",()=>{const open=mob.hidden;mob.hidden=!open;menu.setAttribute("aria-expanded",String(open));});
 mob?.addEventListener("click",e=>{if(e.target.closest("a")){mob.hidden=true;menu.setAttribute("aria-expanded","false");}});
 const readerLink=m=>"./citaj.html?resurs="+encodeURIComponent(m.file);
@@ -63,6 +70,7 @@ const modal=$("site-search"),search=$("universal-input"),results=$("universal-re
 const pages=[
  {cat:"RUBRIKA",title:"Tech portal",description:"AI, uređaji, softver i originalne analize",url:"./"},
  {cat:"RUBRIKA",title:"Biblioteka",description:"Knjige, vodiči, besplatno čitanje",url:"./biblioteka.html"},
+ {cat:"RUBRIKA",title:"TECH Svijet",description:"AI, nauka, svemir, telefoni, uređaji, historija interneta, web, sigurnost i stalna arhiva vijesti",url:"./svijet.html"},
  {cat:"RUBRIKA",title:"TECH Discovery",description:"Radar autorskih članaka, teme, provjerene činjenice i vodiči",url:"./discovery.html"},
  {cat:"VODIČI",title:"Preporučeno čitanje",description:"Povezani vodiči kroz razvoj, privatnost, uređaje i pisanje",url:"./discovery.html#putanje"},
  {cat:"MOJA KOLEKCIJA",title:"Sačuvani članci",description:"Članci koje si sačuvao na ovom uređaju",url:"./discovery.html#sacuvano"},
