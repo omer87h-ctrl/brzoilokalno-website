@@ -2,6 +2,7 @@
 (()=> {
  const $=id=>document.getElementById(id);
  const sources=Array.isArray(window.BL_TECH_RADAR_SOURCES)?window.BL_TECH_RADAR_SOURCES:[];
+ const featured=Array.isArray(window.BL_TECH_RADAR_FEATURED)?window.BL_TECH_RADAR_FEATURED.filter(x=>x&&x.editorialApproved===true&&typeof x.title==="string"&&typeof x.url==="string"&&/^https:\\/\\//.test(x.url)):[];
  const approved=Array.isArray(window.BL_TECH_RADAR_APPROVED)?window.BL_TECH_RADAR_APPROVED.filter(x=>x&&x.editorialApproved===true&&typeof x.title==="string"&&typeof x.kind==="string"&&typeof x.city==="string"&&typeof x.description==="string"&&/^https:\/\//.test(x.url||"")&&/^\d{4}-\d{2}-\d{2}$/.test(x.approvedDate||"")&&typeof x.organizer==="string"):[];
  const make=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e};
  const fold=s=>String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("bs");
@@ -18,7 +19,7 @@
   const node=make("article","radar-card");
   const meta=make("span","radar-card-meta",item.kind+" / "+item.city);
   const title=make("h3","",item.title),text=make("p","",item.description);
-  const origin=make("span","radar-card-source",isPost?"ODOBRENO "+item.approvedDate+" / "+item.organizer:"IZVOR / "+item.source);
+  const origin=make("span","radar-card-source",isPost?(item.source?"IZVOR: "+item.source+" · PROVJERENO "+item.approvedDate:"ODOBRENO "+item.approvedDate+" / "+item.organizer):"IZVOR / "+item.source);
   const a=make("a","radar-card-link",isPost?"ORIGINALNA OBJAVA ↗":"PROVJERI NA IZVORU ↗");
   a.href=item.url;a.target="_blank";a.rel="noopener noreferrer nofollow";
   node.append(meta,title,text,origin,a);return node;
@@ -30,10 +31,10 @@
   if(!relevantSources.length)list.append(make("p","radar-empty","Za ovaj grad i oblast još nemamo odabranu instituciju ili izvor. To ne znači da prilike ne postoje. Predloži provjerljiv izvor uredništvu."));
   $("radar-results-count").textContent=relevantSources.length+" IZVORA / "+sources.length+" U KATALOGU";
   posts.replaceChildren();
-  const active=approved.filter(x=>(!x.expires||x.expires>=current)&&(!x.date||x.date>=current||x.kind==="PODCAST")).filter(matches);
+  const active=[...featured,...approved].filter(x=>(!x.expires||x.expires>=current)&&(!x.date||x.date>=current||x.kind==="PODCAST")).filter(matches);
   for(const item of active)posts.append(refCard(item,true));
   if(!active.length)posts.append(make("p","radar-empty","Za odabrane kriterije trenutno nema urednički odobrenih javnih objava. Ispod su provjerljivi izvori, a novi organizatori mogu poslati prijedlog."));
-  $("radar-approved-status").textContent=active.length+" ODOBRENIH AKTUELNIH OBJAVA";
+  $("radar-approved-status").textContent=active.length+" JAVNIH, DATUMSKI PROVJERENIH OBJAVA";
  }
  for(const input of [kind,city,query])input.addEventListener(input===query?"input":"change",draw);
  draw();
