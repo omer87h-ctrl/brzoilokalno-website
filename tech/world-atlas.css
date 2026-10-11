@@ -1,0 +1,40 @@
+/* TECH Svijet: samostalna interaktivna karta, različita od magazina TECH Zona. */
+.universe-page .universe-hero{background:radial-gradient(ellipse at 74% 40%,#166c8d36,transparent 46%),linear-gradient(135deg,#08101c,#0b1522 73%);border-color:#365972}
+.universe-page .universe-hero h1 em,.universe-page .universe-section h2 em{color:#86ddf2}
+.universe-page .universe-orbit{background:radial-gradient(circle,#1c9fb137 0%,#13445b22 42%,transparent 68%)}
+.universe-page .universe-orbit .orbit-loop{border-color:#64cce177;box-shadow:0 0 36px #2198b524}
+.universe-page .universe-orbit strong span{color:#91e4ec}
+.universe-page .universe-orbit .dot{border-color:#3b94ae;background:#152e41}
+.universe-page .universe-actions a:first-child{background:linear-gradient(115deg,#a2edfa,#5dc5e4);color:#071725}
+.universe-atlas{padding-top:72px;padding-bottom:85px}
+.universe-atlas .section-heading{margin-bottom:28px}
+.atlas-intro{color:#b4cad7;max-width:670px}
+.atlas-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:22px;align-items:stretch}
+.atlas-map{position:relative;isolation:isolate;aspect-ratio:1;max-width:620px;width:100%;margin:auto;border:1px solid #24536b;border-radius:22px;background:radial-gradient(circle at 50% 51%,#09435a8f 0%,#0b263d 35%,#071523 66%,#070e18);box-shadow:inset 0 0 90px #0a6b8a1c;overflow:hidden}
+.atlas-map:before,.atlas-map:after{content:"";position:absolute;inset:13%;border:1px dashed #3e9ab444;border-radius:50%;pointer-events:none}
+.atlas-map:after{inset:30%;border-style:solid;border-color:#377c9555}
+.atlas-core{position:absolute;z-index:1;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;display:grid;gap:3px;width:44%;pointer-events:none}
+.atlas-core strong{font:950 clamp(42px,5vw,77px)/.95 system-ui;color:#d7f7ff;letter-spacing:-.09em}
+.atlas-core span{font:800 10px/1.6 system-ui;letter-spacing:.1em;color:#90cbd9}
+#atlas-planets{position:absolute;inset:0;z-index:2}
+.atlas-planet{position:absolute;transform:translate(-50%,-50%);border:1px solid #397b97;background:#12354b;color:#d9f7ff;padding:12px 13px;border-radius:999px;font:850 clamp(9px,.9vw,12px) system-ui;min-width:102px;min-height:44px;box-shadow:0 6px 20px #0006;cursor:pointer;transition:transform .2s,border-color .2s,background .2s}
+.atlas-planet:hover{transform:translate(-50%,-50%) scale(1.07);border-color:#acf5ff}
+.atlas-planet[aria-pressed="true"]{background:#a7ecf5;color:#062335;border-color:#dbf8ff;box-shadow:0 0 32px #37cbeb45}
+.atlas-planet:nth-child(1){left:50%;top:10%}.atlas-planet:nth-child(2){left:77%;top:23%}.atlas-planet:nth-child(3){left:84%;top:52%}.atlas-planet:nth-child(4){left:74%;top:78%}
+.atlas-planet:nth-child(5){left:50%;top:89%}.atlas-planet:nth-child(6){left:24%;top:78%}.atlas-planet:nth-child(7){left:16%;top:52%}.atlas-planet:nth-child(8){left:23%;top:23%}
+.atlas-panel{display:flex;flex-direction:column;border:1px solid #316078;background:linear-gradient(152deg,#142938,#0d1724 77%);border-radius:22px;padding:clamp(23px,3vw,42px);min-width:0}
+.atlas-index{display:flex;justify-content:space-between;gap:12px;align-items:center;font:900 10px system-ui;color:#8de1f6;letter-spacing:.1em}
+.atlas-panel h3{font:950 clamp(43px,5vw,76px)/.98 system-ui;letter-spacing:-.075em;color:#f5fdff;margin:22px 0 13px;overflow-wrap:anywhere}
+.atlas-panel>p{color:#bfd1dc;line-height:1.7;font-size:14px;max-width:430px;margin:0 0 22px}
+.atlas-paths{display:grid;gap:8px;margin-top:auto}
+.atlas-paths button{display:flex;gap:16px;align-items:center;width:100%;text-align:left;padding:13px 14px;border:1px solid #32576b;border-radius:10px;background:#102637;color:#e4f9ff;cursor:pointer;font:760 13px/1.35 system-ui}
+.atlas-paths button>span{color:#72c9df;letter-spacing:.07em;font:900 10px system-ui}
+.atlas-paths button:hover{background:#18394b;border-color:#92e6f3}
+.atlas-panel-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:25px}
+.atlas-panel-actions button,.atlas-panel-actions a{padding:12px 17px;border:1px solid #4d8ba1;border-radius:8px;font:850 10px/1.4 system-ui;letter-spacing:.02em}
+.atlas-panel-actions button{color:#071925;background:#9ae9f5;cursor:pointer}
+.atlas-panel-actions a{color:#d6f5ff;background:#142d3d}
+.atlas-help{margin-top:17px;color:#99b3c4;font-size:11px;line-height:1.6}
+@media(max-width:1000px){.atlas-layout{grid-template-columns:1fr}.atlas-map{width:min(100%,610px)}}
+@media(max-width:610px){.universe-atlas{padding-top:47px;padding-bottom:54px}.atlas-map{aspect-ratio:auto;max-width:none;min-height:0;padding:22px 15px;border-radius:16px}.atlas-map:before,.atlas-map:after,.atlas-core{display:none}#atlas-planets{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.atlas-planet,.atlas-planet:nth-child(n){position:static;transform:none;width:100%;min-width:0;min-height:52px;font-size:11px;padding:11px 8px;border-radius:10px}.atlas-planet:hover{transform:none}.atlas-panel{padding:23px 19px}.atlas-panel h3{font-size:clamp(38px,11vw,60px)}.atlas-paths button{font-size:12px}.atlas-panel-actions a,.atlas-panel-actions button{flex:1;text-align:center}.universe-atlas .section-heading h2{font-size:clamp(32px,9vw,45px)}}
+@media(prefers-reduced-motion:reduce){.atlas-planet{transition:none}}
