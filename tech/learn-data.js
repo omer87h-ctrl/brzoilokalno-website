@@ -3,15 +3,15 @@
 window.BL_TECH_LEARNING=[
  {id:"proizvod",label:"OD IDEJE DO PROIZVODA",title:"Napravi prvi jasan plan proizvoda",description:"Od stvarnog problema do prototipa koji se može provjeriti.",result:"Na kraju znaš napisati problem, odabrati osnovnu funkciju i pripremiti test.",lessons:[
   {id:"problem",title:"Prvo problem, zatim funkcija",goal:"Razlikovati korisnikov problem od vlastite ideje.",sections:[
-   ["Šta zapravo rješavaš?","Rečenica 'Napravit ću aplikaciju za majstore' opisuje rješenje, ne problem. Korisniji početak je: 'Ljudi teško pronalaze jasne informacije o dostupnosti lokalnih usluga.' Tek nakon toga možemo istražiti da li je aplikacija dobar odgovor."],
+   ["Šta zapravo rješavaš?","Rečenica 'Napravit ću aplikaciju za posmatranje neba' opisuje rješenje, ne problem. Korisniji početak je: 'Početnici ne znaju kada i gdje mogu vidjeti planete bez skupe opreme.' Tek nakon toga istražujemo da li su bolji vodič, interaktivna mapa ili neki drugi pristup."],
    ["Provjeri pretpostavku","Zapiši ko ima problem, kada se javlja i kako ga sada pokušava riješiti. Razgovor s nekoliko stvarnih ljudi može osporiti početnu ideju. Nemoj tvrditi da si potvrdio potražnju ako još nemaš takve dokaze."]],
-   example:"Pretpostavka: 'Svi žele chat.' Provjerljivo pitanje: 'Šta ti trenutno otežava dogovor oko termina i cijene?'",
+   example:"Pretpostavka: 'Svima treba nova aplikacija za astronomiju.' Provjerljivo pitanje: 'Šta ti najviše otežava pronalaženje planete na noćnom nebu?'",
    task:"Napiši problem koji bi želio riješiti u jednoj rečenici, bez spominjanja aplikacije ili tehnologije.",
-   question:"Koja rečenica bolje opisuje korisnikov problem?",choices:["Treba mi moderna aplikacija s mnogo opcija.","Ljudi teško upoređuju osnovne informacije prije nego što zatraže uslugu."],correct:1,explanation:"Druga rečenica opisuje teškoću korisnika. Tek poslije se odlučuje koje rješenje ima smisla.",link:"./clanci/od-ideje-do-proizvoda.html",linkText:"Pročitaj originalni vodič o razvoju"},
+   question:"Koja rečenica bolje opisuje korisnikov problem?",choices:["Treba mi moderna aplikacija s mnogo opcija.","Početnici teško nalaze pouzdane informacije o tome kada su planete vidljive."],correct:1,explanation:"Druga rečenica opisuje teškoću korisnika. Tek poslije se odlučuje koje rješenje ima smisla.",link:"./clanci/od-ideje-do-proizvoda.html",linkText:"Pročitaj originalni vodič o razvoju"},
   {id:"opseg",title:"Izaberi najmanji koristan opseg",goal:"Odvojiti neophodno od onoga što samo lijepo izgleda.",sections:[
    ["Jedan jasan zadatak","Prva verzija ne mora pokazati sve što možeš programirati. Mora omogućiti jednu smislenu radnju od početka do kraja. Svaka nova funkcija uvodi dodatna stanja, greške i održavanje."],
-   ["Definiši tri stvari","Napiši ulaz, radnju i rezultat. Primjer: korisnik odabere temu, pročita objašnjenje i sačuva naučeno. Tek kada to radi pouzdano, dodaj naprednije mogućnosti."]],
-   example:"Slab plan: 'Portal ima 20 sekcija.' Bolji plan: 'Posjetilac pronađe temu i završi jednu lekciju bez registracije.'",
+   ["Definiši tri stvari","Napiši ulaz, radnju i rezultat. Primjer: učenik odabere planetu, vidi kada je vidljiva i razumije kako je prepoznati. Tek kada to radi pouzdano, dodaj naprednije mogućnosti."]],
+   example:"Slab plan: 'Aplikacija ima 20 funkcija.' Bolji plan: 'Posjetilac muzeja pronađe izložbu i razumije kako do nje doći.'",
    task:"Odaberi jednu ključnu radnju u svom proizvodu. Napiši šta korisnik vidi prije i poslije te radnje.",
    question:"Kako znaš da je mala početna verzija korisna?",choices:["Ima mnogo animacija i navigacijskih opcija.","Korisnik može završiti važan zadatak i razumije rezultat."],correct:1,explanation:"Korisnost se testira završenim zadatkom, ne brojem opcija.",link:"./citaj.html?resurs=od-ideje-do-proizvoda.txt",linkText:"Otvori mini-knjigu"},
   {id:"test",title:"Provjeri prototip prije širenja",goal:"Napraviti osnovni test bez skupih alata.",sections:[
@@ -73,8 +73,8 @@ window.BL_TECH_LEARNING=[
    question:"Koji je sigurniji primjer za opći AI upit?",choices:["Anonimizovan opis problema bez tuđih podataka.","Puni privatni dokument s adresama i potpisima."],correct:0,explanation:"Smanjenje količine osjetljivih podataka umanjuje nepotrebno izlaganje.",link:"./clanci/digitalna-privatnost.html",linkText:"Digitalna privatnost"},
   {id:"vrijednost",title:"AI opcija nije isto što i dobar proizvod",goal:"Procijeniti kada AI stvarno dodaje vrijednost.",sections:[
    ["Postavi kriterij uspjeha","AI funkcija ima smisla ako pomaže korisniku završiti konkretan zadatak bolje nego jednostavniji pristup. Uvedi mjerljive kriterije: razumljivost, tačnost, cijenu, brzinu i mogućnost ispravke."],
-   ["Prvo pouzdanost, onda sjaj","Ako je zadatak obična pretraga šest postojećih članaka, lokalni indeks može biti brži, pregledniji i privatniji od udaljenog modela. Nove mogućnosti dodaj samo kada im je korist jasna."]],
-   example:"Pretraga 'privatnost' koja pokazuje stvarne članke daje provjerljiv rezultat. Izmišljeni AI odgovor može biti manje pouzdan.",
+   ["Prvo pouzdanost, onda sjaj","Ako neko samo treba pronaći termin i mjesto tehničkog predavanja, jednostavan filter po datumu i gradu može biti korisniji od složenog AI sistema. Nove mogućnosti dodaj kada imaju jasnu vrijednost."]],
+   example:"Pretraga naučnih predavanja koja prikazuje službene termine i izvore daje provjerljiv rezultat. Izmišljeni AI odgovor može biti manje pouzdan.",
    task:"Odaberi jednu 'pametnu' funkciju i napiši kako bi dokazao da korisniku pomaže više od obične navigacije.",
    question:"Kada je složenija AI funkcija opravdana?",choices:["Kad izgleda tehnološki napredno.","Kad dokazivo poboljšava važan zadatak i ima prihvatljiva ograničenja."],correct:1,explanation:"Tehnologija je sredstvo. Vrijednost zavisi od rezultata za korisnika.",link:"./clanci/ai-alat-ili-proizvod.html",linkText:"Pročitaj analizu o AI alatima"}]},
  {id:"pisanje",label:"PISANJE I OBJAVLJIVANJE",title:"Od teme do korisnog autorskog članka",description:"Napiši smislen tekst, potvrdi izvore i pripremi ga za urednički pregled.",result:"Na kraju imaš strukturu nacrta koji možeš završiti u TECH Studiju.",lessons:[

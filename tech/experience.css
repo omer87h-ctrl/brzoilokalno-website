@@ -91,3 +91,19 @@
 .article-share-link{display:inline-flex;align-items:center;padding:11px 16px;border-radius:8px;background:#ff8d42;color:#1d1008;border:1px solid #ff8d42;font:800 11px system-ui}
 .article-share-link:hover{background:#ffbc88;color:#21130b}
 .article-share-status{font:600 11px/1.5 system-ui;color:#e4c09d;align-self:center}
+
+/* Unified TECH navigation, preserving the existing premium visual identity. */
+.nav-main .tech-nav-more{position:relative;align-self:center;color:#e3d4c5;font:800 11px system-ui}
+.tech-nav-more summary{cursor:pointer;list-style:none;white-space:nowrap;display:flex;align-items:center;gap:6px;padding:10px 7px;color:#ffd0ac}
+.tech-nav-more summary::after{content:"⌄";font-size:14px}
+.tech-nav-more summary::-webkit-details-marker{display:none}
+.tech-nav-extra{position:absolute;top:100%;right:0;z-index:85;width:min(310px,calc(100vw - 28px));display:grid;grid-template-columns:1fr 1fr;gap:5px;background:#171d27;border:1px solid #9b6344;border-radius:12px;padding:13px;box-shadow:0 17px 42px #000b}
+.tech-nav-extra a{white-space:normal!important;line-height:1.4;padding:11px 10px;border-radius:7px;color:#ddcbbb;background:#242631;font:750 11px system-ui}
+.tech-nav-extra a:hover,.tech-nav-extra a[aria-current=page]{color:#1d130c;background:#ffaa6c}
+.nav-main>a[aria-current=page]{color:#ffac71}
+.mobile-nav>.tech-nav-more{grid-column:1/-1;position:relative;min-width:0}
+.mobile-nav>.tech-nav-more>summary{font-size:12px;background:#1e252c;border-radius:8px;padding:13px 14px}
+.mobile-nav .tech-nav-extra{position:static;width:100%;margin-top:7px;box-shadow:none;background:#171e28}
+.mobile-nav .tech-nav-extra a{font-size:11px;padding:12px 9px}
+@media(max-width:1070px){.nav-main .tech-nav-more{display:none}}
+@media print{.tech-nav-more{display:none!important}}
