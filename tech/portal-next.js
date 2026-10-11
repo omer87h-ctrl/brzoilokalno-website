@@ -22,7 +22,7 @@
   {id:"security",label:"ŽELIM SIGURNIJE KORISTITI WEB",number:"03",title:"Privatnost nije sporedna tema.",description:"Nauči prepoznati rizike i provjeri postavke koje su važne za tvoje naloge.",links:[
    ["Vodič kroz digitalnu privatnost","./clanci/digitalna-privatnost.html"],
    ["Kontrolna lista privatnosti","./citaj.html?resurs=kontrolna-lista-privatnosti.txt"],
-   ["Istraži pitanja i odgovore","./discovery.html#tech-provjera"]]},
+   ["Provjeri svoje znanje","./#tech-provjera"]]},
   {id:"create",label:"ŽELIM NEŠTO STVORITI",number:"04",title:"Ideja je početak. Rad je sljedeći korak.",description:"Od prototipa i besplatnih programa do vlastitog autorskog teksta.",links:[
    ["Od ideje do proizvoda","./clanci/od-ideje-do-proizvoda.html"],
    ["Istraži besplatan softver","./alati.html"],
