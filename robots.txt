@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://brzoilokalno.com/sitemap.xml
+Sitemap: https://brzoilokalno.com/tech/sitemap.xml
