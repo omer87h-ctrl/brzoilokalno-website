@@ -10,3 +10,9 @@
 .universe-card .actions .read-topic{background:#ffa45e;color:#22130b;border-color:#ffb777}
 .universe-card .actions{flex-wrap:wrap}.universe-card .actions a{min-width:85px}
 @media(max-width:530px){.universe-dialog{padding:20px 17px}.universe-explainer p{font-size:14px}.universe-dialog h2{font-size:31px}}
+
+/* Jasno čitljiv bosanski naziv unutar kružnog prikaza i na manjim ekranima. */
+.universe-orbit strong{overflow-wrap:normal;word-break:normal;font-size:clamp(27px,3.6vw,46px);max-width:80%;z-index:2}
+.universe-orbit .dot{pointer-events:none}
+@media(max-width:780px){.universe-orbit strong{font-size:31px}.universe-orbit .dot{font-size:9px;padding:6px 8px}}
+@media(max-width:530px){.universe-orbit strong{font-size:28px}}
