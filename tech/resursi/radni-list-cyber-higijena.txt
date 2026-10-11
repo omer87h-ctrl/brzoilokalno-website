@@ -1,3 +1,41 @@
-BRZO I LOKALNO TECH — BESPLATNI ORIGINALNI MATERIJAL
+BRZO I LOKALNO TECH · ORIGINALNI BESPLATNI MATERIJAL
+SEDAM DANA DIGITALNE SIGURNOSTI
+Izdanje: 11.10.2026.
+Autor: uredništvo Brzo i Lokalno TECH
+Dozvoljeno besplatno čitanje i preuzimanje. Ostala prava zadržana.
 
-Sedmodnevna digitalna sigurnosna rutina
+KAKO KORISTITI PLAN
+Svaki dan odvoji deset do dvadeset minuta za jednu grupu navika. Ne upisuj lozinke ili rezervne kodove u ovaj javni predložak. Plan je edukativan i ne zamjenjuje sigurnosnu procjenu.
+
+DAN 1 — VAŽNI NALOZI
+Napravi privatnu listu važnih naloga bez zapisivanja lozinki. Provjeri prijavu i kontakt za oporavak. Uključi višefaktorsku autentifikaciju gdje postoji.
+
+DAN 2 — LOZINKE
+Provjeri koristiš li iste lozinke na više servisa. Razmotri pouzdan upravitelj lozinki. Ako sumnjaš da je lozinka kompromitovana, promijeni je kroz službenu stranicu.
+
+DAN 3 — AŽURIRANJA
+Provjeri sistem i aplikacije. Ažuriraj kroz službene kanale i ukloni programe koje više ne koristiš. Za važne poslove provjeri kompatibilnost prije velikih nadogradnji.
+
+DAN 4 — DOZVOLE
+Pregledaj pristup lokaciji, kameri i mikrofonu. Dopusti samo ono što funkcija zaista koristi. Na zajedničkim uređajima posebno provjeri prijavljene naloge.
+
+DAN 5 — REZERVNA KOPIJA
+Zapiši gdje su važni dokumenti i postoji li njihova rezervna kopija. Provjeri možeš li vratiti jednu nestratešku probnu datoteku. Kopija koju nikada nisi testirao može zakazati.
+
+DAN 6 — SUMNJIVE PORUKE
+Prepoznaj hitnost, prijetnje zaključavanjem računa i zahtjeve za jednokratnim kodom. Posjeti poznatu službenu aplikaciju umjesto neočekivanog linka.
+
+DAN 7 — PLAN OPORAVKA
+Provjeri koje metode oporavka imaš za važne naloge i da su ažurne. Rezervne kodove čuvaj privatno i sigurno. Razmisli šta radiš ako izgubiš telefon.
+
+ZAVRŠNA LISTA
+[ ] MFA aktivna
+[ ] Lozinke nisu ponovljene na važnim servisima
+[ ] Uređaji ažurirani
+[ ] Nepotrebne dozvole uklonjene
+[ ] Rezervna kopija testirana
+[ ] Opasni linkovi se provjeravaju
+[ ] Oporavak naloga je moguć
+
+DALJNJE ČITANJE
+CISA: https://www.cisa.gov/secure-our-world
