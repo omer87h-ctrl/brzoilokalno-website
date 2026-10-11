@@ -1,0 +1,40 @@
+BRZO I LOKALNO TECH — ORIGINALNI VODIČ
+KAKO RADI WEB: OD ZAHTJEVA DO STRANICE
+
+Autor: Brzo i Lokalno TECH
+Svrha: besplatno učenje i lična upotreba
+Ovaj materijal je originalno napisan za TECH portal. Ne preuzima tuđe fotografije ili tekstove.
+
+1. UNESENA ADRESA NIJE CIJELA PRIČA
+
+Kada uneseš web adresu, preglednik treba saznati kojem sistemu da se obrati. Može koristiti podatke koji su već zapamćeni ili zatražiti novu provjeru. Nije svaka posjeta potpuno ista: predmemorija i ranije uspostavljene veze mogu skratiti proces.
+
+2. DNS — IME I ADRESA
+
+DNS sistem pomaže prevesti naziv domena u mrežnu adresu. To ne znači da se sve svodi na jedan centralni server: odgovor može doći kroz više slojeva predmemorije i DNS infrastrukture. Ako razrješavanje naziva ne uspije, preglednik često ne može uspostaviti vezu s traženim serverom.
+
+3. ŠTA RADI HTTPS?
+
+Kod HTTPS veze koristi se TLS radi zaštite komunikacije. Certifikat može pomoći pregledniku provjeriti identitet servera za određeni domen. Međutim, certifikat sam po sebi ne dokazuje da su informacije na stranici tačne ili da je prodavač pošten.
+
+4. HTTP ZAHTJEV I ODGOVOR
+
+Preglednik šalje HTTP zahtjev. Server vraća odgovor koji može uključivati HTML dokument, oznaku uspjeha, preusmjeravanje ili poruku o grešci. Da bi stranica izgledala i radila kako je zamišljeno, preglednik često pribavlja i CSS, JavaScript, fontove ili slike.
+
+5. ŠTA ZNAČI OFFLINE?
+
+Web stranica može imati lokalno sačuvane resurse. Međutim, obična web stranica nije automatski dostupna bez interneta. Potreban je odgovarajući mehanizam za keširanje, a ponašanje zavisi od preglednika, prostora, pravila pohrane i implementacije.
+
+6. ZADATAK ZA PROVJERU
+
+[ ] Otvori TECH X i pokreni scenarij normalne veze.
+[ ] Promijeni scenario na DNS grešku.
+[ ] Objasni zašto TLS upozorenje ne znači da je sadržaj stranice istinit.
+[ ] Napravi malu HTML stranicu u TECH X i preuzmi je.
+[ ] Isključi internet i otvori svoju preuzetu datoteku; ovo se razlikuje od rada web aplikacije preko servera.
+
+7. GDJE NASTAVITI?
+
+Izvorna dokumentacija za čitanje i provjeru: https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+
+Ovaj izvor je vanjska stranica. Naš tekst je vlastiti obrazovni prikaz i nije kopija MDN dokumentacije.
