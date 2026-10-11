@@ -87,3 +87,7 @@
 .reader-actions .button.ghost{display:inline-flex;align-items:center}
 @media(prefers-reduced-motion:reduce){.bl-reading-progress span{transition:none}}
 @media print{.bl-reading-progress,.reader-save-feedback{display:none!important}}
+
+.article-share-link{display:inline-flex;align-items:center;padding:11px 16px;border-radius:8px;background:#ff8d42;color:#1d1008;border:1px solid #ff8d42;font:800 11px system-ui}
+.article-share-link:hover{background:#ffbc88;color:#21130b}
+.article-share-status{font:600 11px/1.5 system-ui;color:#e4c09d;align-self:center}
