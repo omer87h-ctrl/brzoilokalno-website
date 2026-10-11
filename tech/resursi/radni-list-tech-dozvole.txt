@@ -1,0 +1,36 @@
+BRZO I LOKALNO TECH — ORIGINALNI RADNI LIST
+KOJE DOZVOLE SU STVARNO POTREBNE?
+
+Autor: Brzo i Lokalno TECH
+Svrha: obrazovni materijal za besplatnu ličnu upotrebu
+
+1. DOZVOLA NIJE CILJ
+
+Pravo pitanje nije koliko dozvola aplikacija traži, nego koje od njih mora imati za zadatak koji si odlučio uraditi. Za razgovor kamerom potrebna je kamera, ali za čitanje običnog članka obično nije.
+
+2. TRI PRIMJERA
+
+Navigacija: lokacija može biti korisna za prikaz trenutnog položaja. Neke funkcije i dalje mogu raditi s ručno unesenom adresom.
+
+Fotografisanje: kamera je potrebna za snimanje slike. Pregled postojećih fotografija može koristiti drugi način pristupa, zavisno od platforme.
+
+Snimanje glasa: mikrofon je potreban za snimanje zvuka. Čitanje teksta ne zahtijeva pristup mikrofonu.
+
+3. RAZLIKA IZMEĐU DOZVOLE I KORIŠTENJA
+
+To što je dozvola odobrena ne znači da aplikacija neprestano koristi podatke. Ipak, nepotreban pristup povećava rizik. Pregledaj postavke, verziju sistema i dostupne indikatore korištenja resursa.
+
+4. TVOJ PLAN
+
+[ ] Odaberi jednu aplikaciju na svom uređaju.
+[ ] Zapiši njenu glavnu funkciju.
+[ ] Popiši dozvole koje traži ili ima.
+[ ] Za svaku dozvolu objasni zašto je potrebna.
+[ ] Provjeri može li se nepotrebna dozvola isključiti.
+[ ] Ako se funkcija promijeni, zabilježi stvarnu posljedicu.
+
+5. PROVJERI U TECH X
+
+Simulacija na TECH X ne uključuje stvarne dozvole. Može pomoći razumjeti načelo minimalnih prava, ali ne može pregledati tvoj telefon niti zamijeniti postavke sistema.
+
+Vanjska dokumentacija: https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API
