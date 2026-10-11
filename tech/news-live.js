@@ -10,7 +10,7 @@
   const current=Date.now();
   const updated=Date.parse(String(payload.updated||"")+"T00:00:00Z");
   if(!Array.isArray(payload.stories)||!Number.isFinite(updated)||updated>current+86400000||current-updated>8*86400000)return;
-  const valid=payload.stories.filter(x=>x&&x.kind==="vanjski"&&x.origin==="automatski-rss"&&typeof x.title==="string"&&x.title.length>8&&x.title.length<181&&typeof x.source==="string"&&typeof x.description==="string"&&/^\d{4}-\d{2}-\d{2}$/.test(x.date||"")&&typeof x.url==="string"&&/^https:\/\/(github\.blog|hacks\.mozilla\.org)\//i.test(x.url)).slice(0,10);
+  const valid=payload.stories.filter(x=>x&&x.kind==="vanjski"&&x.origin==="automatski-rss"&&typeof x.title==="string"&&x.title.length>8&&x.title.length<181&&typeof x.source==="string"&&typeof x.description==="string"&&/^\d{4}-\d{2}-\d{2}$/.test(x.date||"")&&typeof x.url==="string"&&/^https:\/\/(github\.blog|hacks\.mozilla\.org|www\.nasa\.gov|www\.theverge\.com|www\.bleepingcomputer\.com|www\.sciencedaily\.com)\//i.test(x.url)).slice(0,30);
   if(valid.length<1)return;
   const editor=(window.BL_TECH_PULSE||[]).filter(x=>x.kind==="autorski");
   window.BL_TECH_PULSE=[...valid,...editor];
