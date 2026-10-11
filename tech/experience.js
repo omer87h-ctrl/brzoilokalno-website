@@ -9,11 +9,11 @@ const legacyRoutes={"#biblioteka":"./biblioteka.html","#store":"./free-store.htm
 if((location.pathname.endsWith("/tech/")||location.pathname.endsWith("/tech/index.html"))&&Object.prototype.hasOwnProperty.call(legacyRoutes,location.hash))location.replace(legacyRoutes[location.hash]);
 const menu=$("nav-toggle"),mob=$("mobile-nav");
 // One information architecture for standard TECH pages. All existing sections stay reachable.
-const portalMain=[["Naslovna","/tech/"],["Istraži","/tech/svijet.html"],["Čitaj","/tech/tech-zona.html"],["Uči","/tech/discovery.html#learning-academy"],["Kreiraj","/tech/studio.html"]];
+const portalMain=[["Naslovna","/tech/"],["TECH Svijet","https://tech.brzoilokalno.com/svijet.html?r=20261011-navfix"],["TECH Zona","https://tech.brzoilokalno.com/tech-zona.html?r=20261011-navfix"],["TECH Akademija","/tech/discovery.html#learning-academy"],["Kreiraj","/tech/studio.html"]];
 const portalMore=[["TECH Radar BiH","/tech/radar-bih.html"],["Arhiva vijesti","/tech/arhiva.html"],["Izvori i redakcija","/tech/izvori.html"],["TECH Akademija","/tech/discovery.html#learning-academy"],["Telefoni","/tech/telefoni.html"],["Alati","/tech/alati.html"],["Biblioteka","/tech/biblioteka.html"],["Besplatni resursi","/tech/free-store.html"],["Lab i projekti","/tech/lab.html"],["Saradnja i oglasi","/tech/oglasi.html"],["Podcast / prijava","/tech/podcast.html"],["Glavna platforma ↗","/"]];
 function portalLink(label,url){
  const link=create("a","",label);link.href=url;
- const page=url.split("#")[0];
+ const page=new URL(url,location.origin).pathname;
  if(location.pathname===page||(page==="/tech/"&&location.pathname==="/tech/index.html")){link.classList.add("active");link.setAttribute("aria-current","page");}
  return link;
 }
