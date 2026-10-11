@@ -5,6 +5,22 @@
  const fold=s=>String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
  const key="bl-tech-universe-saved-v1";
  let saved=[];try{let ids=JSON.parse(localStorage.getItem(key)||"[]");if(Array.isArray(ids))saved=ids.filter(id=>topics.some(t=>t.id===id));}catch{}
+ const explainers=new Map((window.BL_UNIVERSE_EXPLAINERS||[]).map(item=>[item.id,item.sections]));
+ const detail=$("universe-detail"),title=$("universe-detail-title"),body=$("universe-detail-text"),foot=$("universe-detail-foot");
+ $("universe-close")?.addEventListener("click",()=>detail?.close());
+ detail?.addEventListener("click",e=>{if(e.target===detail)detail.close()});
+ function readTopic(topic){
+  title.textContent=topic.title;$("universe-detail-category").textContent=topic.category+" / ORIGINALNO OBJAŠNJENJE";
+  body.replaceChildren();foot.replaceChildren();
+  const parts=explainers.get(topic.id)||[];
+  for(const [i,part] of parts.entries()){
+   const section=create("section","universe-explainer");
+   section.append(create("span","",["RAZUMIJ","ZAŠTO JE VAŽNO","PROVJERI SAM"][i]||"SAZNAJ"),create("p","",part));body.append(section);
+  }
+  const link=create("a","universe-detail-source","ISTRAŽI ORIGINALNI IZVOR: "+topic.source+" ↗");
+  link.href=topic.url;if(topic.url.startsWith("https://")){link.target="_blank";link.rel="noopener noreferrer";}
+  foot.append(link);detail.showModal();
+ }
  const keep=()=>{try{localStorage.setItem(key,JSON.stringify(saved));return true}catch{return false}};
  let category="SVE",query=$("universe-query").value;
  const cats=["SVE",...new Set(topics.map(t=>t.category))];
@@ -26,7 +42,8 @@
    if(!keep()){saved=saved.includes(t.id)?saved.filter(id=>id!==t.id):[...saved,t.id];alert("Lokalna pohrana nije dostupna.");return;}
    render();
   });
-  actions.append(a,b);article.append(actions);return article;
+  const read=create("button","read-topic","ČITAJ");read.type="button";read.addEventListener("click",()=>readTopic(t));
+  actions.prepend(read);actions.append(a,b);article.append(actions);return article;
  }
  function render(){
   const words=fold(query).trim().split(/\s+/).filter(Boolean);
