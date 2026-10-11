@@ -144,7 +144,11 @@ def refresh_archive():
                 continue
             if not isinstance(story.get("title"), str) or not isinstance(story.get("date"), str):
                 continue
-            if url in merged:\n                for field in ("titleBs", "summaryBs", "translationStatus"):\n                    if isinstance(merged[url].get(field), str) and merged[url][field]:\n                        story[field] = merged[url][field]\n            merged[url] = story
+            if url in merged:
+                for field in ("titleBs", "summaryBs", "translationStatus"):
+                    if isinstance(merged[url].get(field), str) and merged[url][field]:
+                        story[field] = merged[url][field]
+            merged[url] = story
         stories = sorted(merged.values(), key=lambda x: x.get("date", ""), reverse=True)[:180]
         ARCHIVE.write_text(json.dumps(
             {"updated": TODAY.isoformat(), "method": "RSS i urednicki odabrani linkovi", "stories": stories},
