@@ -120,3 +120,8 @@
 .tech-radar-entry p{font:400 13px/1.75 system-ui;color:#ccbeb3;margin:0}.tech-radar-entry-actions{display:flex;flex-direction:column;gap:12px;flex-shrink:0}.tech-radar-entry-actions a{text-align:center;white-space:nowrap}
 @media(max-width:850px){.tech-radar-entry{display:block}.tech-radar-entry-actions{margin-top:22px;flex-direction:row;flex-wrap:wrap}.tech-radar-entry-actions a{white-space:normal}}
 @media(max-width:560px){.tech-radar-entry-actions{flex-direction:column}.tech-radar-entry h2{font-size:30px}}
+
+/* TECH portal — responsive three-line editorial identity */
+.premium-intro h1.tech-vision-title{font-size:clamp(39px,5.8vw,78px);line-height:1.02;letter-spacing:-.055em;overflow-wrap:normal;word-break:normal}
+@media(max-width:740px){.premium-intro h1.tech-vision-title{font-size:clamp(34px,9.3vw,58px);letter-spacing:-.055em}}
+@media(max-width:380px){.premium-intro h1.tech-vision-title{font-size:clamp(30px,9vw,37px);letter-spacing:-.06em}}
