@@ -5,7 +5,7 @@ const content=window.BL_PORTAL_CONTENT||{articles:[],materials:[]},$=id=>documen
 const create=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=String(text);return e;};
 const fold=v=>String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("bs");
 const terms=v=>fold(v).trim().split(/\s+/).filter(Boolean);
-const matches=(item,q)=>q.every(t=>fold(item).includes(t));
+const matches=(item,q)=>{const hay=fold(item),words=hay.split(/[^\p{L}\p{N}]+/u);return q.every(t=>["cv","ai"].includes(t)?words.includes(t):hay.includes(t));};
 const legacyRoutes={"#biblioteka":"./biblioteka.html","#store":"./free-store.html","#lab":"./lab.html","#ljudi":"./majstori-kreatori.html","#radar":"./lab.html","#podcast":"./podcast.html"};
 if((location.pathname.endsWith("/tech/")||location.pathname.endsWith("/tech/index.html"))&&Object.prototype.hasOwnProperty.call(legacyRoutes,location.hash))location.replace(legacyRoutes[location.hash]);
 const menu=$("nav-toggle"),mob=$("mobile-nav");
