@@ -153,3 +153,9 @@ Asistent and AI interface removed from navigation, homepage and scripts on devel
 - Dupli pozivi na objavljivanje uklonjeni su s naslovnice i TECH zone. Autorski tekstovi idu preko Studija, prijave preko postojećeg uredničkog obrasca, tech događaji i podcasti preko TECH Radara.
 - Banneri TECH Radara i TECH Svijeta prilagođeni su bosanskim nazivima i manjim ekranima. Potreban je stvarni vizuelni QA na telefonima prije garancije potpunog mobilnog prikaza.
 
+
+## Whole-portal quality pass
+
+The original creator metadata is in `application-data.js`. Global search loads existing local catalog scripts only when first opened, searches their real data and uses the actual source-script base URL on both source and subdomain builds. Worksheet links use `resources.html?stavka=work-N`; lessons use `discovery.html?tema=...&lekcija=...`; topic links use `svijet.html?tema=...`. Invalid deep-link IDs are ignored safely. No search input is sent to an external search API.
+
+`Piši tekst` means the original editorial draft editor; `Besplatan softver` means the external software catalog; `JSON · CSV · SVG` labels technical utilities. Phone specifications remain sourced as before; original guides are expanded without fabricated reviews or new unverified devices/events.

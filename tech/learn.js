@@ -7,7 +7,7 @@ const all=tracks.flatMap(t=>t.lessons.map(l=>t.id+":"+l.id));
 let completed=[],notes={};
 try{const x=JSON.parse(localStorage.getItem(key)||"[]");if(Array.isArray(x))completed=x.filter(id=>all.includes(id));}catch{}
 try{const x=JSON.parse(localStorage.getItem(notesKey)||"{}");if(x&&typeof x==="object"&&!Array.isArray(x))notes=x;}catch{}
-let currentTrack=tracks[0],currentLesson=0,answered=false;
+const incoming=new URLSearchParams(location.search);let currentTrack=tracks.find(t=>t.id===incoming.get("tema"))||tracks[0],currentLesson=Math.max(0,currentTrack.lessons.findIndex(l=>l.id===incoming.get("lekcija"))),answered=false;
 const save=()=>{try{localStorage.setItem(key,JSON.stringify(completed));return true;}catch{return false;}};
 const saveNotes=()=>{try{localStorage.setItem(notesKey,JSON.stringify(notes));return true;}catch{return false;}};
 const buttons=document.getElementById("academy-tracks"),lessonList=document.getElementById("academy-lessons"),content=document.getElementById("academy-content"),progress=document.getElementById("academy-progress"),total=document.getElementById("academy-total"),message=document.getElementById("academy-status");
@@ -48,7 +48,7 @@ function drawContent(){
  const task=el("section","academy-task");
  task.append(el("span","p-label","PROBAJ SAM"),el("h4","",lesson.task));
  const textarea=el("textarea","academy-notes");
- textarea.rows=3;textarea.maxLength=1600;textarea.placeholder="Ovdje možeš zapisati svoje razmišljanje. Ostaje na ovom uređaju.";
+ textarea.rows=3;textarea.maxLength=1600;textarea.id="academy-note-"+currentTrack.id+"-"+lesson.id;const noteLabel=el("label","academy-notes-label","TVOJA BILJEŠKA · ČUVA SE NA UREĐAJU");noteLabel.htmlFor=textarea.id;textarea.placeholder="Ovdje možeš zapisati svoje razmišljanje. Ostaje na ovom uređaju.";
  textarea.value=typeof notes[id]==="string"?notes[id]:"";
  const noteBar=el("div","academy-note-actions");
  const saveBtn=el("button","","SAČUVAJ BILJEŠKU");
@@ -57,7 +57,7 @@ function drawContent(){
  saveBtn.addEventListener("click",()=>{
   notes[id]=textarea.value;noteStatus.textContent=saveNotes()?"Bilješka je sačuvana samo na ovom uređaju.":"Lokalna pohrana nije dostupna. Kopiraj tekst.";
  });
- noteBar.append(saveBtn,noteStatus);task.append(textarea,noteBar);content.append(task);
+ noteStatus.setAttribute("role","status");noteBar.append(saveBtn,noteStatus);task.append(noteLabel,textarea,noteBar);content.append(task);
  const quiz=el("section","academy-check");
  quiz.append(el("span","p-label","PROVJERI RAZUMIJEVANJE"),el("h4","",lesson.question));
  const opts=el("div","academy-choices"),feedback=el("div","academy-feedback");

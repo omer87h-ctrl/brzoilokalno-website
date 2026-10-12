@@ -1,5 +1,6 @@
 "use strict";
 (()=>{
+const techBase=new URL(".",document.currentScript?.src||location.href);
 const content=window.BL_PORTAL_CONTENT||{articles:[],materials:[]},$=id=>document.getElementById(id);
 const create=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=String(text);return e;};
 const fold=v=>String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("bs");
@@ -9,8 +10,8 @@ const legacyRoutes={"#biblioteka":"./biblioteka.html","#store":"./free-store.htm
 if((location.pathname.endsWith("/tech/")||location.pathname.endsWith("/tech/index.html"))&&Object.prototype.hasOwnProperty.call(legacyRoutes,location.hash))location.replace(legacyRoutes[location.hash]);
 const menu=$("nav-toggle"),mob=$("mobile-nav");
 // One information architecture for standard TECH pages. All existing sections stay reachable.
-const portalMain=[["Naslovna","/tech/"],["TECH Svijet","/tech/svijet.html"],["TECH Zona","/tech/tech-zona.html"],["TECH Akademija","/tech/discovery.html#learning-academy"],["Tech Environment Zero to One","/tech/tech-x/"],["Kreiraj","/tech/studio.html"]];
-const portalMore=[["TECH Radar BiH","/tech/radar-bih.html"],["Arhiva vijesti","/tech/arhiva.html"],["Izvori i redakcija","/tech/izvori.html"],["Telefoni","/tech/telefoni.html"],["Alati","/tech/alati.html"],["Biblioteka","/tech/biblioteka.html"],["Besplatni resursi","/tech/free-store.html"],["Lab i projekti","/tech/lab.html"],["Saradnja i oglasi","/tech/oglasi.html"],["Podcast / prijava","/tech/podcast.html"],["Glavna platforma ↗","/"]];
+const portalMain=[["Naslovna","/tech/"],["TECH Svijet","/tech/svijet.html"],["TECH Zona","/tech/tech-zona.html"],["TECH Akademija","/tech/discovery.html#learning-academy"],["Tech Environment Zero to One","/tech/tech-x/"],["Piši tekst","/tech/studio.html"]];
+const portalMore=[["TECH Radar BiH","/tech/radar-bih.html"],["Arhiva vijesti","/tech/arhiva.html"],["Izvori i redakcija","/tech/izvori.html"],["Telefoni","/tech/telefoni.html"],["Besplatan softver","/tech/alati.html"],["Biblioteka","/tech/biblioteka.html"],["Besplatni resursi","/tech/free-store.html"],["Lab i projekti","/tech/lab.html"],["Saradnja i oglasi","/tech/oglasi.html"],["Podcast / prijava","/tech/podcast.html"],["Glavna platforma ↗","/"]];
 function portalLink(label,url){
  const link=create("a","",label);link.href=url;
  const page=new URL(url,location.origin).pathname;
@@ -79,7 +80,7 @@ const pages=[
  {cat:"GLAVNO",title:"Čitaj",description:"Originalne tehnološke analize, izvori i vodiči",url:"./tech-zona.html"},
  {cat:"GLAVNO",title:"Uči",description:"Interaktivne lekcije i zadaci TECH Akademije",url:"./discovery.html#learning-academy"},
  {cat:"GLAVNO",title:"Tech Environment Zero to One",description:"Interaktivni eksperimenti, mreža, dozvole, web stranice i dnevnik tvrdnji",url:"./tech-x/"},
- {cat:"GLAVNO",title:"Kreiraj",description:"Napiši, sačuvaj i predloži autorski tekst",url:"./studio.html"},
+ {cat:"GLAVNO",title:"Piši tekst",description:"Napiši, sačuvaj i predloži autorski tekst",url:"./studio.html"},
  {cat:"RUBRIKA",title:"Tech portal",description:"AI, uređaji, softver i originalne analize",url:"./"},
  {cat:"RUBRIKA",title:"Biblioteka",description:"Knjige, vodiči, besplatno čitanje",url:"./biblioteka.html"},
  {cat:"RUBRIKA",title:"TECH Akademija",description:"15 lekcija, zadaci, kvizovi i vlastiti napredak",url:"./discovery.html#learning-academy"},
@@ -91,22 +92,41 @@ const pages=[
  {cat:"RUBRIKA",title:"Podcast",description:"Razgovori i predlaganje tema; epizode su u pripremi.",url:"./podcast.html"},
  {cat:"RUBRIKA",title:"Majstori & Kreatori",description:"Tehnologija, zanati, kreativci i Brzo i Lokalno",url:"./majstori-kreatori.html"}
 ];
-const all=[
- ...content.articles.map(a=>({cat:"ČLANAK / "+a.category,title:a.title,description:a.summary,url:a.href})),
- ...content.materials.map(m=>({cat:"BIBLIOTEKA / BL FREE STORE",title:m.name,description:m.desc,url:readerLink(m)})),...pages
-];
+function searchItems(){
+ const data=window.BL_PORTAL_CONTENT||content,items=[
+  ...(window.BL_TECH_APPLICATIONS||[]).map(x=>({...x,cat:"APLIKACIJA"})),
+  ...data.articles.map(a=>({cat:"ČLANAK / "+a.category,title:a.title,description:a.summary,url:a.href})),
+  ...data.materials.map(m=>({cat:"BIBLIOTEKA",title:m.name,description:m.desc,url:readerLink(m)})),...pages,
+  ...(window.TEZ_WORKSHEETS||[]).map((r,i)=>({cat:"RADNI LIST / "+r[1],title:r[0],description:r[2],url:"./tech-x/resources.html?stavka="+encodeURIComponent("work-"+i)})),
+  ...(window.BL_TECH_SOFTWARE_CATALOG||[]).map(x=>({cat:"SLUŽBENI SOFTVER",title:x.name,description:x.description+" · "+x.license,url:x.url})),
+  ...(window.BL_TECH_EXTERNAL_LIBRARY||[]).map(x=>({cat:"VANJSKA DOKUMENTACIJA",title:x.name,description:x.description,url:x.url})),
+  ...(window.BL_UNIVERSE_TOPICS||[]).map(x=>({cat:"TECH TEMA",title:x.title,description:x.description,url:"./svijet.html?tema="+encodeURIComponent(x.id)+"#otkrij"})),
+  ...(window.BL_TECH_LEARNING||[]).flatMap(t=>t.lessons.map(x=>({cat:"AKADEMIJA",title:x.title,description:x.goal,url:"./discovery.html?tema="+encodeURIComponent(t.id)+"&lekcija="+encodeURIComponent(x.id)+"#learning-academy"})))
+ ];
+ const seen=new Set();return items.filter(x=>{if(typeof x.title!=="string"||typeof x.url!=="string")return false;try{const u=new URL(x.url,techBase);if(u.username||u.password||(u.origin!==techBase.origin&&u.protocol!=="https:"))return false;const id=u.href+"|"+x.title;if(seen.has(id))return false;seen.add(id);return true;}catch{return false;}});
+}
+const catalogFiles=[["BL_PORTAL_CONTENT","data.js"],["BL_TECH_APPLICATIONS","application-data.js"],["TEZ_WORKSHEETS","tech-x/resources-data.js"],["BL_TECH_SOFTWARE_CATALOG","store-software.js"],["BL_TECH_EXTERNAL_LIBRARY","library-external-data.js"],["BL_UNIVERSE_TOPICS","universe-data.js"],["BL_TECH_LEARNING","learn-data.js"]];
+let catalogPromise,catalogStatus;
+function loadCatalogs(){
+ if(catalogPromise)return catalogPromise;
+ catalogStatus.textContent="Učitavanje lokalnog kataloga…";
+ catalogPromise=Promise.allSettled(catalogFiles.map(([key,file])=>window[key]?Promise.resolve():new Promise((resolve,reject)=>{const script=document.createElement("script");script.src=new URL(file,techBase).href;const timer=setTimeout(()=>{script.remove();reject(Error("timeout"));},10000);script.onload=()=>{clearTimeout(timer);resolve();};script.onerror=()=>{clearTimeout(timer);script.remove();reject(Error("load"));};document.head.append(script);}))).then(states=>{
+  const failed=states.some(x=>x.status==="rejected");catalogStatus.textContent=failed?"Dio kataloga nije učitan. Dostupni rezultati ostaju; ponovo otvori pretragu za novi pokušaj.":"Pretraga sadržaja, aplikacija, radnih listova i službenih izvora. Upit ostaje u pregledniku.";if(failed)catalogPromise=null;drawSearch();
+ });return catalogPromise;
+}
+if(modal){catalogStatus=create("p","search-catalog-status");catalogStatus.setAttribute("role","status");results.before(catalogStatus);}
 function drawSearch(){
  if(!results||!search)return;
  const aliases={mobitel:"telefon",mobiteli:"telefon",mobitela:"telefon",smartfon:"telefon",smartphone:"telefon",telefoni:"telefon",slusalice:"slušalice",vijest:"vijesti",knjige:"knjig",knjigu:"knjig",knjiga:"knjig"};
  const q=terms(search.value).map(t=>aliases[t]||t);
- const found=all.filter(x=>matches([x.title,x.description,x.cat].join(" "),q));
+ const found=searchItems().filter(x=>matches([x.title,x.description,x.cat,x.keywords||""].join(" "),q));
  results.replaceChildren(create("div","search-count",found.length+" REZULTATA · POSTOJEĆI SADRŽAJ"));
  if(!found.length){results.append(create("p","empty","Nema rezultata. Pokušaj drugačiji pojam."));return;}
  for(const item of found){
-  const a=create("a","search-hit");a.href=item.url;a.append(create("span","category",item.cat),create("strong","",item.title),create("small","",item.description));results.append(a);
+  const a=create("a","search-hit");a.href=new URL(item.url,techBase).href;a.append(create("span","category",item.cat),create("strong","",item.title),create("small","",item.description));results.append(a);
  }
 }
-function openSearch(){if(!modal)return;drawSearch();modal.showModal();search?.focus();}
+function openSearch(){if(!modal)return;drawSearch();if(!modal.open)modal.showModal();search?.focus();void loadCatalogs();}
 $("open-search")?.addEventListener("click",openSearch);
 $("close-search")?.addEventListener("click",()=>modal?.close());
 search?.addEventListener("input",drawSearch);

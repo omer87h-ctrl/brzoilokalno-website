@@ -60,5 +60,7 @@
  $("universe-clear-saved").addEventListener("click",()=>{if(!saved.length)return;if(!confirm("Obrisati listu sačuvanih tema na ovom uređaju?"))return;const old=[...saved];saved=[];if(!keep()){saved=old;alert("Lokalna pohrana nije dostupna.")}render()});
  window.addEventListener("storage",e=>{if(e.key!==key)return;try{const v=JSON.parse(e.newValue||"[]");saved=Array.isArray(v)?v.filter(id=>topics.some(t=>t.id===id)):[];}catch{saved=[]}render()});
  render();
+ const requested=topics.find(t=>t.id===new URLSearchParams(location.search).get("tema"));if(requested)readTopic(requested);
  // Vijesti su objedinjene u TECH Arhivi; nema drugog feeda na ovoj stranici.
 })();
+
