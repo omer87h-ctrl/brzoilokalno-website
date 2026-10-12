@@ -1,6 +1,8 @@
 'use strict';
 // Original metadata for real applications. No inferred or fabricated features.
 window.BL_TECH_APPLICATIONS=[
+ {title:'Moji radovi',description:'Pregled lokalnih projekata svih aplikacija, nastavak rada i privatne JSON/ZIP rezervne kopije.',keywords:'moji radovi projekti sačuvano lokalno kopija backup zip',url:'./tech-x/moji-radovi.html'},
+ {title:'Projektni vodiči',description:'Tri praktična puta: web stranica, CV te ponuda i prezentacija, s alatima i preuzimljivim planom.',keywords:'projekt vodič početnik web cv ponuda prezentacija',url:'./tech-x/projekti.html'},
  {title:'Web stranica bez kodiranja',description:'Vizuelni Studio: predlošci, uređivanje sekcija, mobilni pregled i samostalni HTML izvoz.',keywords:'website web stranica no code no-code sajt portfolio početnik',url:'./tech-x/vizuelni-studio.html'},
  {title:'CV, dokument i poslovna ponuda',description:'Uredi životopis, dokument ili ponudu sa stavkama i preuzmi HTML ili štampaj.',keywords:'cv biografija životopis resume dokument prijava posao ponuda cijena',url:'./tech-x/dokumenti.html'},
  {title:'Plakat i grafička objava',description:'Originalna geometrija, uređivi tekst, pregled, SVG i PNG izvoz.',keywords:'poster plakat grafika dizajn objava',url:'./tech-x/plakati.html'},

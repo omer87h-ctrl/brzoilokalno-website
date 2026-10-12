@@ -11,3 +11,7 @@ User content stays in the browser unless the user explicitly exports, publishes 
 ## Aggregate page-opening counter
 
 Original visits.js / visits.css integrate the free Hits SVG badge service (https://hits.sh/; https://github.com/silentsoft/hits, MIT source). No provider code, fonts or templates are copied, and no third-party script is loaded. Privacy policy: https://hits.sh/privacy/; terms: https://hits.sh/terms/. Constant namespace, referrer suppressed, DNT/GPC and local opt-out supported. Counts page openings from 2026-10-12, not unique people; bots/cache/blockers and service availability affect accuracy. Provider infrastructure is not independently audited.
+
+## Connected local workspace and project paths
+
+Moji radovi, project guides, onboarding and template previews are original HTML/CSS/JavaScript. The uncompressed ZIP writer uses standard ZIP records and an original CRC32 implementation; no runtime libraries, stock assets, uploads, accounts, Firebase or external content APIs added. Existing six original templates have visible live HTML previews and distinct preset palettes/compositions. Guide checkboxes are user-confirmed progress, not certification. Backups contain private editable data and must not be published.
