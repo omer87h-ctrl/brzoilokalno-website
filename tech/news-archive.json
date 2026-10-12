@@ -1,7 +1,147 @@
 {
-  "updated": "2026-10-11",
+  "updated": "2026-10-12",
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
+    {
+      "title": "Microsoft’s new AI chip makes it less reliant on Nvidia’s GPUs",
+      "source": "The Verge",
+      "date": "2026-10-12",
+      "url": "https://www.theverge.com/news/1009465/microsoft-maia-300-chip-improvements-rollout",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Mechanism&#8217;s first Switch 2 case is as awesome as I hoped it would be",
+      "source": "The Verge",
+      "date": "2026-10-12",
+      "url": "https://www.theverge.com/tech/1008161/mechanism-basecase-switch-2-case-hands-on",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Android is the best and worst thing about Googlebooks",
+      "source": "The Verge",
+      "date": "2026-10-12",
+      "url": "https://www.theverge.com/tech/1008750/googlebooks-android-best-worst-notifications-app-cast-file-sharing",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "No Man’s Sky is coming to the iPhone and iPad",
+      "source": "The Verge",
+      "date": "2026-10-12",
+      "url": "https://www.theverge.com/entertainment/1009541/no-mans-sky-iphone-ipad-launch-date",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The OnePlus 16 is the company’s most interesting phone in years",
+      "source": "The Verge",
+      "date": "2026-10-12",
+      "url": "https://www.theverge.com/tech/1009570/oneplus-16-specs-features-china",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "CMF’s first wireless speakers look like musical milk cartons",
+      "source": "The Verge",
+      "date": "2026-10-12",
+      "url": "https://www.theverge.com/tech/1008191/nothing-cmf-speaker-m-s-series-bluetooth-design-customize",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The Fitbit Edge is for folks who don’t want to go totally screenless",
+      "source": "The Verge",
+      "date": "2026-10-12",
+      "url": "https://www.theverge.com/gadgets/1008410/fitbit-edge-price-battery-specs-fitness-tracker",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "How Apple can win the smart home",
+      "source": "The Verge",
+      "date": "2026-10-12",
+      "url": "https://www.theverge.com/tech/1009324/how-apple-can-win-the-smart-home",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Cyberattack shuts down refrigerators at French supermarkets",
+      "source": "BleepingComputer",
+      "date": "2026-10-12",
+      "url": "https://www.bleepingcomputer.com/news/security/cyberattack-shuts-down-refrigerators-at-french-supermarkets/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Inside AvisLoader: A Windows Malware Loader Built to Resist Disruption",
+      "source": "BleepingComputer",
+      "date": "2026-10-12",
+      "url": "https://www.bleepingcomputer.com/news/security/inside-avisloader-a-windows-malware-loader-built-to-resist-disruption/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Retail giant Ahold Delhaize takes systems offline after cyberattack",
+      "source": "BleepingComputer",
+      "date": "2026-10-12",
+      "url": "https://www.bleepingcomputer.com/news/security/retail-giant-ahold-delhaize-takes-systems-offline-after-cyberattack/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "GitLab warns of max severity code execution vulnerability",
+      "source": "BleepingComputer",
+      "date": "2026-10-12",
+      "url": "https://www.bleepingcomputer.com/news/security/gitlab-warns-of-max-severity-rce-flaw-in-regex-compiler-engine/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft: Windows 11 23H2 reaches end of support in 30 days",
+      "source": "BleepingComputer",
+      "date": "2026-10-12",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-11-23h2-reaches-end-of-support-in-30-days/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists discover a hidden factor that can make or break chemical reactions",
+      "source": "ScienceDaily",
+      "date": "2026-10-12",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261008005244.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "Scientists build a nuclear clock that could make atomic clocks obsolete",
       "source": "ScienceDaily",
@@ -17,10 +157,10 @@
     },
     {
       "title": "Silicon Valley is falling in line with Trump’s attempt to rename AI",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-11",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1009406/silicon-valley-is-falling-in-line-with-trumps-attempt-to-rename-ai",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -111,6 +251,36 @@
       "date": "2026-10-11",
       "url": "https://www.bleepingcomputer.com/news/security/nippon-columbia-malware-incident-exposes-86-million-karaoke-fan-records/",
       "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists make stunning discovery that could help explain why life exists",
+      "source": "ScienceDaily",
+      "date": "2026-10-11",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261009025602.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The hidden math of Alzheimer's could point to new treatments",
+      "source": "ScienceDaily",
+      "date": "2026-10-11",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261008102714.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA spots a giant patch of Moon-like rock on Earth",
+      "source": "ScienceDaily",
+      "date": "2026-10-11",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261008102707.htm",
+      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."

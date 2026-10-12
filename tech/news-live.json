@@ -1,13 +1,153 @@
 {
-  "updated": "2026-10-11",
+  "updated": "2026-10-12",
   "method": "automatski-rss",
   "stories": [
     {
-      "title": "Silicon Valley is falling in line with Trump’s attempt to rename AI",
+      "title": "Microsoft’s new AI chip makes it less reliant on Nvidia’s GPUs",
       "source": "The Verge",
+      "date": "2026-10-12",
+      "url": "https://www.theverge.com/news/1009465/microsoft-maia-300-chip-improvements-rollout",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Mechanism&#8217;s first Switch 2 case is as awesome as I hoped it would be",
+      "source": "The Verge",
+      "date": "2026-10-12",
+      "url": "https://www.theverge.com/tech/1008161/mechanism-basecase-switch-2-case-hands-on",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Android is the best and worst thing about Googlebooks",
+      "source": "The Verge",
+      "date": "2026-10-12",
+      "url": "https://www.theverge.com/tech/1008750/googlebooks-android-best-worst-notifications-app-cast-file-sharing",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "No Man’s Sky is coming to the iPhone and iPad",
+      "source": "The Verge",
+      "date": "2026-10-12",
+      "url": "https://www.theverge.com/entertainment/1009541/no-mans-sky-iphone-ipad-launch-date",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The OnePlus 16 is the company’s most interesting phone in years",
+      "source": "The Verge",
+      "date": "2026-10-12",
+      "url": "https://www.theverge.com/tech/1009570/oneplus-16-specs-features-china",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "CMF’s first wireless speakers look like musical milk cartons",
+      "source": "The Verge",
+      "date": "2026-10-12",
+      "url": "https://www.theverge.com/tech/1008191/nothing-cmf-speaker-m-s-series-bluetooth-design-customize",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The Fitbit Edge is for folks who don’t want to go totally screenless",
+      "source": "The Verge",
+      "date": "2026-10-12",
+      "url": "https://www.theverge.com/gadgets/1008410/fitbit-edge-price-battery-specs-fitness-tracker",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "How Apple can win the smart home",
+      "source": "The Verge",
+      "date": "2026-10-12",
+      "url": "https://www.theverge.com/tech/1009324/how-apple-can-win-the-smart-home",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Cyberattack shuts down refrigerators at French supermarkets",
+      "source": "BleepingComputer",
+      "date": "2026-10-12",
+      "url": "https://www.bleepingcomputer.com/news/security/cyberattack-shuts-down-refrigerators-at-french-supermarkets/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Inside AvisLoader: A Windows Malware Loader Built to Resist Disruption",
+      "source": "BleepingComputer",
+      "date": "2026-10-12",
+      "url": "https://www.bleepingcomputer.com/news/security/inside-avisloader-a-windows-malware-loader-built-to-resist-disruption/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Retail giant Ahold Delhaize takes systems offline after cyberattack",
+      "source": "BleepingComputer",
+      "date": "2026-10-12",
+      "url": "https://www.bleepingcomputer.com/news/security/retail-giant-ahold-delhaize-takes-systems-offline-after-cyberattack/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "GitLab warns of max severity code execution vulnerability",
+      "source": "BleepingComputer",
+      "date": "2026-10-12",
+      "url": "https://www.bleepingcomputer.com/news/security/gitlab-warns-of-max-severity-rce-flaw-in-regex-compiler-engine/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft: Windows 11 23H2 reaches end of support in 30 days",
+      "source": "BleepingComputer",
+      "date": "2026-10-12",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-11-23h2-reaches-end-of-support-in-30-days/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists discover a hidden factor that can make or break chemical reactions",
+      "source": "ScienceDaily",
+      "date": "2026-10-12",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261008005244.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Silicon Valley is falling in line with Trump’s attempt to rename AI",
+      "source": "The Verge AI",
       "date": "2026-10-11",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1009406/silicon-valley-is-falling-in-line-with-trumps-attempt-to-rename-ai",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -23,81 +163,41 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "A college in Illinois tried to cancel its Flock contact and it refused",
-      "source": "The Verge",
-      "date": "2026-10-11",
-      "url": "https://www.theverge.com/tech/1009411/elgin-community-college-flock-safety-cameras",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The new Apple TV could have a built-in mic and a remote with a speaker",
-      "source": "The Verge",
-      "date": "2026-10-11",
-      "url": "https://www.theverge.com/tech/1009397/apple-tv-refresh-built-in-mic-remote-speaker",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA dumped over 800GB of Artemis II data online",
-      "source": "The Verge",
-      "date": "2026-10-11",
-      "url": "https://www.theverge.com/science/1009379/nasa-800gb-artemis-ii-data",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "George A. Romero’s Season of the Witch is a slow-burn feminist occult drama",
-      "source": "The Verge",
-      "date": "2026-10-11",
-      "url": "https://www.theverge.com/entertainment/1009346/george-a-romero-season-of-the-witch-feminist-horror-review",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Vurt wants you to look at vertical videos as a genre of their own",
-      "source": "The Verge",
-      "date": "2026-10-11",
-      "url": "https://www.theverge.com/entertainment/1008720/vurt-microdramas-verticals-interview-hilmon-sorey",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "What to expect from Apple’s ‘Welcome Home’ event",
-      "source": "The Verge",
-      "date": "2026-10-11",
-      "url": "https://www.theverge.com/tech/1009317/apple-what-to-expect-welcome-home",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Horror is big business",
-      "source": "The Verge",
-      "date": "2026-10-11",
-      "url": "https://www.theverge.com/column/1008432/horror-popular-widows-bay-resident-evil",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Nippon Columbia malware incident exposes 8.6 million karaoke fan records",
       "source": "BleepingComputer",
       "date": "2026-10-11",
       "url": "https://www.bleepingcomputer.com/news/security/nippon-columbia-malware-incident-exposes-86-million-karaoke-fan-records/",
       "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists make stunning discovery that could help explain why life exists",
+      "source": "ScienceDaily",
+      "date": "2026-10-11",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261009025602.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The hidden math of Alzheimer's could point to new treatments",
+      "source": "ScienceDaily",
+      "date": "2026-10-11",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261008102714.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA spots a giant patch of Moon-like rock on Earth",
+      "source": "ScienceDaily",
+      "date": "2026-10-11",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261008102707.htm",
+      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -183,36 +283,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Criminal IP Introduces AITEM as the Next Evolution of Attack Surface Management",
-      "source": "BleepingComputer",
-      "date": "2026-10-10",
-      "url": "https://www.bleepingcomputer.com/news/security/criminal-ip-introduces-aitem-as-the-next-evolution-of-attack-surface-management/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Scientists may have found a shortcut to fusion energy",
-      "source": "ScienceDaily",
-      "date": "2026-10-10",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261008005242.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "MIT astronomers catch a star in a feast that could last billions of years",
-      "source": "ScienceDaily",
-      "date": "2026-10-10",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261008005240.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "NASA Seeks US Industry Plans for Commercial Space Stations",
       "source": "NASA",
       "date": "2026-10-09",
@@ -253,56 +323,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "&#8216;Pure insanity&#8217;: Mathematicians will need years to make sense of OpenAI&#8217;s latest drop",
-      "source": "The Verge AI",
-      "date": "2026-10-09",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1008726/openai-mathematics-solutions-chaos",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Hackers abuse Google Ads, Bing redirects to push Claude ClickFix attacks",
-      "source": "BleepingComputer",
-      "date": "2026-10-09",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-abuse-google-ads-bing-redirects-to-push-claude-clickfix-attacks/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Unpatched AhsayCBS flaws exploited to deploy webshells, mine crypto",
-      "source": "BleepingComputer",
-      "date": "2026-10-09",
-      "url": "https://www.bleepingcomputer.com/news/security/unpatched-ahsaycbs-flaws-exploited-to-deploy-webshells-mine-crypto/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "FBI arrests another suspected ShinyHunters hacker after agency breach",
-      "source": "BleepingComputer",
-      "date": "2026-10-09",
-      "url": "https://www.bleepingcomputer.com/news/security/fbi-arrests-another-suspected-shinyhunters-hacker-after-agency-breach/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Germany arrests alleged core Qilin ransomware member after extradition",
-      "source": "BleepingComputer",
-      "date": "2026-10-09",
-      "url": "https://www.bleepingcomputer.com/news/security/germany-arrests-alleged-core-qilin-ransomware-member-after-extradition/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "NASA astronauts splash down after 100 million miles in space",
       "source": "ScienceDaily",
       "date": "2026-10-09",
@@ -317,46 +337,6 @@
       "source": "ScienceDaily",
       "date": "2026-10-09",
       "url": "https://www.sciencedaily.com/releases/2026/10/261008102704.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Scientists create a lightsaber-like laser antenna that transmits radio waves",
-      "source": "ScienceDaily",
-      "date": "2026-10-09",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261008005239.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Scientists find hidden materials that could improve batteries and solar fuels",
-      "source": "ScienceDaily",
-      "date": "2026-10-09",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261007042118.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA Briefing to Highlight Contributions to Martian Moons Mission",
-      "source": "NASA",
-      "date": "2026-10-08",
-      "url": "https://www.nasa.gov/news-release/nasa-briefing-to-highlight-contributions-to-martian-moons-mission/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA Announces Bold Science Initiatives for America’s Golden Age Summit",
-      "source": "NASA",
-      "date": "2026-10-08",
-      "url": "https://www.nasa.gov/news-release/nasa-announces-bold-science-initiatives-for-americas-golden-age-summit/",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
