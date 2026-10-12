@@ -4,7 +4,7 @@ const $=id=>document.getElementById(id),list=window.BL_PORTAL_CONTENT?.materials
 const file=new URLSearchParams(location.search).get("resurs");
 const material=list.find(m=>m.file===file),status=$("read-status"),content=$("read-content"),download=$("read-download");
 if(!material){$("read-title").textContent="Sadržaj nije pronađen";status.textContent="Odabrana datoteka nije dostupna u Biblioteci.";download.hidden=true;return;}
-$("read-kind").textContent=material.kind+" / "+material.format;$("read-title").textContent=material.name;$("read-summary").textContent=material.desc;
+$("read-kind").textContent=material.kind+" / "+material.format+(material.reviewed?" · Izdanje "+material.reviewed:"")+(material.readingMinutes?" · "+material.readingMinutes+" min čitanja":"");$("read-title").textContent=material.name;$("read-summary").textContent=material.desc;
 download.href=material.href;download.download=material.file;
 document.title=material.name+" — Brzo i Lokalno";$("print-reader").addEventListener("click",()=>window.print());
 const el=(tag,value)=>{const e=document.createElement(tag);e.textContent=value;return e};
@@ -31,3 +31,4 @@ try{
  status.hidden=true;content.hidden=false;window.dispatchEvent(new CustomEvent("bl-reader-ready",{detail:{file:material.file}}));
 }catch(_){status.textContent="Pregled trenutno nije dostupan. Možeš pokušati direktno preuzimanje datoteke.";}
 })();
+

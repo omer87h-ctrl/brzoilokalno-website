@@ -1,0 +1,29 @@
+Test stranice na telefonu i tastaturom
+BRZO I LOKALNO TECH / ORIGINALNI PRAKTIČNI MATERIJAL
+Izdanje: 12. oktobar 2026.
+
+UVOD
+Mobilni izgled nije dovoljan dokaz upotrebljivosti. Stranica može stati u ekran, a ipak imati dugme koje ne radi ili tekst koji se ne može povećati. Ovaj postupak pretvara utisak „izgleda dobro” u zapis provjerenih radnji. Probaj vlastitu objavljenu stranicu i preuzeti HTML kada je to smisleno.
+
+1. ODABERI TOK
+Zapiši šta osoba želi uraditi: pronaći uslugu, pročitati uslove, poslati e-mail ili preuzeti dokument. Zatim prođi taj tok od početka bez preskakanja koraka. Za svaki problem zabilježi adresu, preglednik, uređaj, očekivanje i ono što se desilo. Kratak opis „Dugme Kontakt otvara pogrešan broj” korisniji je od „Ne valja stranica”.
+
+2. PROVJERI TELEFON
+Na stvarnom Android uređaju otvori stranicu u pregledniku koji koristiš. Testiraj uspravni i vodoravni položaj, povećanje teksta i duži naslov. Pokušaj pritisnuti dugmad palcem bez neželjenog susjednog klika. Otvori meni, zatvori ga i vrati se nazad. Provjeri da tastatura na ekranu ne prekriva radnju koju trebaš potvrditi. Testiraj preuzimanje i pronalazak datoteke u folderu Downloads, a zatim otvaranje te datoteke.
+
+3. PROVJERI TASTATURU
+Na računaru koristi Tab i Shift+Tab, bez miša. Fokus treba biti vidljiv i pratiti razumljiv redoslijed. Enter aktivira link ili odgovarajuće dugme, a dijalog mora imati razumljiv način zatvaranja. Probaj Escape kada je podržan. Ako ne možeš izaći iz dijela stranice ili pronaći fokus, zabilježi to kao problem. Ne mijenjaj redoslijed fokusa nasumičnim pozitivnim tabindex vrijednostima.
+
+4. PROVJERI ZNAČENJE
+Naslov stranice i glavni naslov moraju objasniti sadržaj. Polja trebaju imati nazive, ne samo tekst koji nestaje čim počneš pisati. Poruka o grešci treba reći šta treba ispraviti. Informaciju nemoj prenositi isključivo bojom. Za detaljniji test koristi čitač ekrana koji poznaješ ili uključi osobu koja ga svakodnevno koristi. Automatska provjera ne zamjenjuje stvarno korištenje čitača ekrana.
+
+5. PONOVI NAKON POPRAVKE
+Ponovi isti tok i upiši rezultat. Razlikuj „provjereno na ovom uređaju”, „automatski provjereno” i „nije provjereno”. Simulacija veličine ekrana u desktop pregledniku nije dokaz testiranja na stvarnom Androidu. Ne označavaj cijeli portal pristupačnim na osnovu jednog uspješnog klika.
+
+REZULTAT
+Imaš listu radnji, uređaja, pronađenih prepreka i potvrđenih popravki. Prioritet daj problemima koji sprečavaju izvršavanje osnovnog zadatka.
+
+BILJEŠKA ZA TVOJ RAD
+Datum: __________
+Šta je provjereno: __________
+Šta ostaje otvoreno: __________

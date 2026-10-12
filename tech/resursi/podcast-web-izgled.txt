@@ -1,0 +1,26 @@
+Web stranica nije samo izgled
+BRZO I LOKALNO TECH / ORIGINALNI PRAKTIČNI MATERIJAL
+Izdanje: 12. oktobar 2026.
+
+UVOD
+Prvi pogled na stranicu govori mnogo o njenom stilu, ali malo o tome može li osoba završiti posao. Veliki naslov, elegantan gradijent i animirano dugme mogu ostaviti snažan utisak. Kada klik ne vodi nikuda, korisnik ostaje bez odgovora. Zato je osnovno pitanje web projekta: šta osoba može uraditi nakon dolaska?
+
+1. KORISNOST I OBEĆANJE
+Za lokalnu uslugu korisnost može biti jednostavna: saznati šta se radi, kada je dostupno i kako kontaktirati. Za browser aplikaciju potrebni su unos, obrada i rezultat koji osoba može koristiti. Editor koji nacrta kartice, a ne sprema projekt i ne izvozi ispravan rezultat, ne ispunjava obećanje koje njegov izgled stvara.
+
+2. PRIMJER ZA RAZGOVOR
+Zamisli originalnu stranicu male radionice. Naslov objašnjava uslugu. Sekcije opisuju način rada. Dugme otvara ispravan broj ili e-mail. Mobilni prikaz omogućava čitanje, a osnovne informacije postoje i bez dekorativnih efekata. Vlasnik može izmijeniti tekst i preuzeti rezultat. To je manji, ali stvaran proizvod. Izmišljene ocjene i lažni broj klijenata ne bi ga učinili boljim.
+
+3. PITANJA KOJA MIJENJAJU RAD
+Koju radnju posjetilac najčešće traži? Koja informacija mu nedostaje? Šta se desi ako dugme pritisne tastaturom? Može li pronaći preuzetu datoteku na telefonu? Ako izbriše podatke preglednika, ima li kopiju projekta? Ova pitanja usmjeravaju razvoj prema završetku zadatka, a ne prema broju efekata.
+
+4. GRANICA DEMONSTRACIJE
+Demo je koristan kada je jasno označen. Problem nastaje kada demonstracija izgleda kao stvarna usluga koja nije izgrađena. Kontaktna forma bez servera treba objasniti da priprema e-mail. Edukativna simulacija dozvola treba objasniti da ne mijenja stvarne postavke uređaja. Publika zaslužuje da zna šta je moguće odmah, a šta zahtijeva zaseban proces.
+
+ZAVRŠNA MISAO
+Profesionalan izgled i stvarna funkcija podržavaju jedno drugo. Počni od jedne korisne radnje, provjeri je i tek onda povećavaj opseg. Ovo je originalni pisani materijal za čitanje i pripremu razgovora; nije snimljena epizoda.
+
+BILJEŠKA ZA TVOJ RAD
+Datum: __________
+Šta je provjereno: __________
+Šta ostaje otvoreno: __________

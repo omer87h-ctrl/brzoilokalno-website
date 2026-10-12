@@ -1,0 +1,19 @@
+Projekti i iskustva iz stvarnog rada
+BRZO I LOKALNO TECH / UREDNIČKI POZIV ZA PRIJEDLOGE
+Izdanje: 2026-10-12
+
+CILJ
+Predloži vlastiti browser projekt ili korisnu bilješku o testiranju TECH alata.
+
+ŠTA PRIPREMITI
+Opis stvarne funkcije; šta si napravio; šta je testirano; preglednik i uređaj; koraci za ponavljanje problema; prava na prikaz.
+
+GRANICE
+Koristi primjerene javne ili izmišljene testne podatke. Ne šalji lozinke, CV drugih osoba ili povjerljive projekte.
+
+POSTUPAK
+1. Pripremi vlastiti prijedlog.
+2. Pošalji ga na urednički pregled preko obrasca Objavi.
+3. Dogovori konačnu verziju, autorstvo i prava prije moguće objave.
+
+Ovo je dobrovoljan urednički poziv. Ne predstavlja konkurs za zaposlenje, obećanje naknade, certifikata, partnerstva ili garantovane objave. Slanje nije automatska javna objava.

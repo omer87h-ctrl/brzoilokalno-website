@@ -1,82 +1,34 @@
 "use strict";
 (()=> {
- const $=id=>document.getElementById(id);
- const sources=Array.isArray(window.BL_TECH_RADAR_SOURCES)?window.BL_TECH_RADAR_SOURCES:[];
- const featured=Array.isArray(window.BL_TECH_RADAR_FEATURED)?window.BL_TECH_RADAR_FEATURED.filter(x=>x&&x.editorialApproved===true&&typeof x.title==="string"&&typeof x.url==="string"&&x.url.startsWith("https://")):[];
- const approved=Array.isArray(window.BL_TECH_RADAR_APPROVED)?window.BL_TECH_RADAR_APPROVED.filter(x=>x&&x.editorialApproved===true&&typeof x.title==="string"&&typeof x.kind==="string"&&typeof x.city==="string"&&typeof x.description==="string"&&/^https:\/\//.test(x.url||"")&&/^\d{4}-\d{2}-\d{2}$/.test(x.approvedDate||"")&&typeof x.organizer==="string"):[];
+ const $=id=>document.getElementById(id),kinds=["DOGAĐAJI","POSLOVI","EDUKACIJE","PODCAST"];
  const make=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e};
  const fold=s=>String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("bs");
- const cleanCity=s=>fold(s).trim();
- const kind=$("radar-kind"),city=$("radar-city"),query=$("radar-query"),list=$("radar-sources"),posts=$("radar-approved");
- const current=new Date().toISOString().slice(0,10);
- function matches(item){
-  const currentKind=kind.value,currentCity=city.value,term=fold(query.value.trim());
-  const ci=cleanCity(item.city);
-  const cityMatch=currentCity==="SVE"||ci===cleanCity(currentCity)||currentCity==="Cijela BiH"&&ci==="cijela bih"||currentCity==="Online"&&ci==="online"||ci==="cijela bih"&&currentCity!=="Online"&&currentCity!=="Drugi grad"||currentCity==="Drugi grad"&&!["online","cijela bih","sarajevo","tuzla","mostar","zenica","banja luka","bihać","brčko","bijeljina","doboj","prijedor","trebinje","travnik","goražde","kladanj"].some(x=>ci===fold(x));
-  return (currentKind==="SVE"||item.kind===currentKind)&&cityMatch&&(!term||fold([item.title,item.description,item.city,item.kind,item.source||item.organizer].join(" ")).includes(term));
- }
- function refCard(item,isPost){
-  const node=make("article","radar-card");
-  const meta=make("span","radar-card-meta",item.kind+" / "+item.city);
-  const title=make("h3","",item.title),text=make("p","",item.description);
-  const origin=make("span","radar-card-source",isPost?(item.source?"IZVOR: "+item.source+" · PROVJERENO "+item.approvedDate:"ODOBRENO "+item.approvedDate+" / "+item.organizer):"IZVOR / "+item.source);
-  const a=make("a","radar-card-link",isPost?"ORIGINALNA OBJAVA ↗":"PROVJERI NA IZVORU ↗");
-  a.href=item.url;a.target="_blank";a.rel="noopener noreferrer nofollow";
-  node.append(meta,title,text,origin,a);return node;
- }
- function draw(){
-  list.replaceChildren();
-  const relevantSources=sources.filter(matches);
-  for(const item of relevantSources)list.append(refCard(item,false));
-  if(!relevantSources.length)list.append(make("p","radar-empty","Za ovaj grad i oblast još nemamo odabranu instituciju ili izvor. To ne znači da prilike ne postoje. Predloži provjerljiv izvor uredništvu."));
-  $("radar-results-count").textContent=relevantSources.length+" IZVORA / "+sources.length+" U KATALOGU";
-  posts.replaceChildren();
-  const active=[...featured,...approved].filter(x=>(!x.expires||x.expires>=current)&&(!x.date||x.date>=current||x.kind==="PODCAST")).filter(matches);
-  for(const item of active)posts.append(refCard(item,true));
-  if(!active.length)posts.append(make("p","radar-empty","Za odabrane kriterije trenutno nema urednički odobrenih javnih objava. Ispod su provjerljivi izvori, a novi organizatori mogu poslati prijedlog."));
-  $("radar-approved-status").textContent=active.length+" JAVNIH, DATUMSKI PROVJERENIH OBJAVA";
- }
- for(const input of [kind,city,query])input.addEventListener(input===query?"input":"change",draw);
- draw();
- const form=$("radar-submit"),status=$("radar-submit-status"),sKind=$("radar-submit-kind"),date=$("radar-submit-date");
- date.min=current;
- const urlValid=value=>{
-  try{const parsed=new URL(value);return parsed.protocol==="https:"&&!!parsed.hostname&&!parsed.username&&!parsed.password}
-  catch{return false}
- };
- form.addEventListener("submit",event=>{
-  event.preventDefault();if(!form.reportValidity())return;
-  const type=sKind.value;
-  const link=$("radar-submit-link").value.trim();
-  if(type!=="PODCAST"&&!urlValid(link)){status.textContent="Za događaj, posao ili edukaciju potreban je službeni HTTPS link. Unesi provjerljivu adresu.";return}
-  if(link&&!urlValid(link)){status.textContent="Koristi ispravan HTTPS link, bez korisničkih podataka u adresi.";return}
-  const when=date.value;
-  if(when&&when<current){status.textContent="Odabrani datum je u prošlosti. Provjeri datum i pokušaj ponovo.";return}
-  const rows=[
-   "BRZO I LOKALNO TECH RADAR / PRIJEDLOG NA UREDNIČKI PREGLED","",
-   "Vrsta: "+type,"Naziv: "+$("radar-submit-title").value.trim(),
-   "Grad/format: "+$("radar-submit-city").value.trim(),
-   "Organizator/autor: "+$("radar-submit-name").value.trim(),
-   "Kontakt za uredništvo: "+$("radar-submit-email").value.trim(),
-   "Datum (ako postoji): "+(when||"Nije naveden"),
-   "Provjerljivi javni link: "+(link||"Nije naveden (podcast prijedlog)"),
-   "","Opis:",$("radar-submit-description").value.trim(),"",
-   "Izjava podnosioca: Imam pravo poslati sadržaj i nisam uključio tuđe privatne podatke bez ovlaštenja.",
-   "Ovo je prijedlog za uredničku provjeru, ne odobrenje za automatsku objavu."
-  ];
-  const subject="TECH RADAR BiH / "+type+" / "+$("radar-submit-title").value.trim();
-  const href="mailto:omer.creating.apps87@gmail.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(rows.join("\n"));
-  if(href.length>6500){status.textContent="Prijedlog je predugačak za otvaranje e-mailom. Kopiraj opis i pošalji ga direktno uredništvu.";return}
-  status.textContent="Otvara se tvoj e-mail program. Poruka nije poslana dok sam ne klikneš Pošalji.";
-  location.href=href;
- });
- function changeIntent(){
-  sKind.value="PODCAST";
-  $("radar-submit-title").placeholder="Predložena tema ili gost";
-  $("predlozi").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
-  $("radar-submit-title").focus({preventScroll:true});
- }
- $("radar-podcast-intent")?.addEventListener("click",changeIntent);
- const params=new URLSearchParams(location.search);
- if(params.get("vrsta")==="podcast")sKind.value="PODCAST";
+ function validDate(value){if(typeof value!=="string"||!/^\d{4}-\d{2}-\d{2}$/.test(value))return false;const date=new Date(value+"T00:00:00Z");return Number.isFinite(date.getTime())&&date.toISOString().slice(0,10)===value;}
+ function validURL(value){try{if(typeof value!=="string"||/[\x00-\x20\x7f]/.test(value))return false;const u=new URL(value);return u.protocol==="https:"&&!!u.hostname&&!u.username&&!u.password;}catch{return false;}}
+ function validate(x,isPost){if(!x||!["title","city","description"].every(k=>typeof x[k]==="string"&&x[k].trim()&&x[k].length<=2000)||!kinds.includes(x.kind)||!validURL(x.url))return false;if(x.cities&&(!Array.isArray(x.cities)||!x.cities.every(c=>typeof c==="string"&&c.length<=90)))return false;for(const key of ["date","expires","deadline","approvedDate","checked"])if(x[key]!==undefined&&!validDate(x[key]))return false;if(x.date&&x.expires&&x.expires<x.date)return false;return !isPost||(x.editorialApproved===true&&validDate(x.approvedDate)&&typeof x.organizer==="string"&&x.organizer.trim());}
+ function state(item,today){if(item.cancelled===true)return "closed";if(item.deadline&&item.deadline<today)return "closed";const end=item.expires||item.date;if(end&&end<today)return "closed";if(item.date&&item.date<=today&&end>=today)return "ongoing";if(item.date&&item.date>today)return "upcoming";const check=item.approvedDate||item.checked;if(!check||Math.floor((new Date(today+"T00:00:00Z")-new Date(check+"T00:00:00Z"))/86400000)>14)return "review";return "active";}
+ const parts=new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Sarajevo",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
+ const value=k=>parts.find(p=>p.type===k).value,current=value("year")+"-"+value("month")+"-"+value("day");
+ const rawSources=Array.isArray(window.BL_TECH_RADAR_SOURCES)?window.BL_TECH_RADAR_SOURCES:[],rawPosts=[...(window.BL_TECH_RADAR_FEATURED||[]),...(window.BL_TECH_RADAR_APPROVED||[])];
+ const sources=rawSources.filter(x=>validate(x,false)),seen=new Set(),postsData=rawPosts.filter(x=>{if(!validate(x,true)||seen.has(x.id||x.url))return false;seen.add(x.id||x.url);return true;});
+ const skipped=rawSources.length+rawPosts.length-sources.length-postsData.length;
+ const kind=$("radar-kind"),city=$("radar-city"),query=$("radar-query"),statusFilter=$("radar-state"),list=$("radar-sources"),posts=$("radar-approved");
+ const knownCities=["Online","Cijela BiH","Sarajevo","Tuzla","Mostar","Zenica","Banja Luka","Bihać","Brčko","Bijeljina","Doboj","Prijedor","Trebinje","Travnik","Goražde","Kladanj","Neum"].map(fold);
+ function matches(item){const term=fold(query.value.trim()),cities=(item.cities||item.city.split("/")).map(x=>fold(x).trim()),selected=fold(city.value);const cityMatch=city.value==="SVE"||cities.includes(selected)||cities.includes("cijela bih")&&!["online","drugi grad"].includes(selected)||city.value==="Drugi grad"&&cities.some(x=>!knownCities.includes(x));return(kind.value==="SVE"||item.kind===kind.value)&&cityMatch&&(!term||fold([item.title,item.description,item.city,item.kind,item.source||item.organizer,item.audience].join(" ")).includes(term));}
+ const labels={active:"Aktuelni zapis — provjeri dostupnost na izvoru",upcoming:"Predstoji",ongoing:"U toku",closed:"Završeno, otkazano ili rok istekao",review:"Potrebna nova provjera"};
+ const formatDate=iso=>new Intl.DateTimeFormat("bs-BA",{dateStyle:"medium",timeZone:"Europe/Sarajevo"}).format(new Date(iso+"T12:00:00Z"));
+ function nextDay(iso){const d=new Date(iso+"T00:00:00Z");d.setUTCDate(d.getUTCDate()+1);return d.toISOString().slice(0,10);}
+ const escapeICS=text=>String(text).replace(/\\/g,"\\\\").replace(/\r\n|\r|\n/g,"\\n").replace(/;/g,"\\;").replace(/,/g,"\\,");
+ function foldLine(line){const encoder=new TextEncoder(),lines=[];let part="",size=0;for(const char of line){const bytes=encoder.encode(char).length;if(size+bytes>75){lines.push(part);part=" ";size=1;}part+=char;size+=bytes;}lines.push(part);return lines.join("\r\n");}
+ function calendar(item){if(!validate(item,true)||!item.date)throw Error("Najava nema ispravan datum i izvor.");const id=String(item.id||"event").replace(/[^a-zA-Z0-9_-]/g,"-");const lines=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Brzo i Lokalno TECH//Radar BiH//BS","CALSCALE:GREGORIAN","BEGIN:VEVENT","UID:"+id+"@tech.brzoilokalno.com","DTSTAMP:"+item.approvedDate.replaceAll("-","")+"T000000Z","DTSTART;VALUE=DATE:"+item.date.replaceAll("-",""),"DTEND;VALUE=DATE:"+nextDay(item.expires||item.date).replaceAll("-",""),"SUMMARY:"+escapeICS(item.title),"LOCATION:"+escapeICS(item.city),"DESCRIPTION:"+escapeICS(item.description+"\nProvjereno: "+item.approvedDate+". Prije učešća provjeri originalnu objavu. Kalendar se ne ažurira automatski."),"URL:"+item.url,"END:VEVENT","END:VCALENDAR"];return lines.map(foldLine).join("\r\n")+"\r\n";}
+ function downloadCalendar(item){try{const text=calendar(item),url=URL.createObjectURL(new Blob([text],{type:"text/calendar;charset=utf-8"})),a=document.createElement("a");a.href=url;a.download="tech-radar-"+String(item.id||"dogadjaj").replace(/[^a-zA-Z0-9_-]/g,"-")+".ics";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);$("radar-approved-status").textContent="Preuzet je javni termin. Provjeri datum na izvoru prije učešća; kalendar se ne ažurira automatski.";}catch(error){$("radar-approved-status").textContent="Kalendar nije dostupan: "+error.message;}}
+ function refCard(item,isPost){const node=make("article","radar-card");if(isPost)node.dataset.radarId=item.id||"";node.append(make("span","radar-card-meta",item.kind+" / "+item.city),make("h3","",item.title));if(isPost){const s=state(item,current);node.dataset.radarState=s;node.append(make("span","radar-state-badge radar-state-"+s,labels[s]));}node.append(make("p","",item.description));if(isPost){const facts=make("dl","radar-facts");const fact=(key,text)=>{facts.append(make("dt","",key),make("dd","",text));};if(item.date)fact("Termin",formatDate(item.date)+(item.expires&&item.expires!==item.date?" – "+formatDate(item.expires):""));if(item.deadline)fact("Rok prijave",formatDate(item.deadline));else if(item.kind==="POSLOVI")fact("Rok prijave","Nije naveden u pregledanoj objavi");if(item.audience)fact("Namijenjeno",item.audience);if(item.fee)fact("Učešće",item.fee);node.append(facts);}
+ const checked=isPost?item.approvedDate:item.checked;node.append(make("span","radar-card-source","IZVOR / "+(item.source||item.organizer)+(checked?" · PREGLEDANO "+formatDate(checked):" · datum posljednje provjere nije naveden")));
+ const a=make("a","radar-card-link",isPost?"ORIGINALNA OBJAVA ↗":"PROVJERI NA IZVORU ↗");a.href=item.url;a.target="_blank";a.rel="noopener noreferrer nofollow";node.append(a);if(isPost&&item.date&&state(item,current)!=="closed"){const b=make("button","radar-calendar","PREUZMI KALENDAR · ICS ↓");b.type="button";b.addEventListener("click",()=>downloadCalendar(item));node.append(b);}return node;}
+ function draw(){list.replaceChildren();const relevant=sources.filter(matches);relevant.forEach(x=>list.append(refCard(x,false)));if(!relevant.length)list.append(make("p","radar-empty","Za ovaj izbor nema izvora u katalogu. To ne znači da prilike ne postoje."));$("radar-results-count").textContent=relevant.length+" IZVORA / "+sources.length+" U KATALOGU";posts.replaceChildren();const choice=statusFilter.value,result=postsData.filter(matches).filter(x=>choice==="all"||(choice==="current"?state(x,current)!=="closed":state(x,current)===choice)).sort((a,b)=>(a.date||"9999").localeCompare(b.date||"9999")||a.title.localeCompare(b.title,"bs"));result.forEach(x=>posts.append(refCard(x,true)));if(!result.length)posts.append(make("p","radar-empty","Nema objava za ovaj izbor. Promijeni status, grad ili vrstu prilike. Izvori ispod služe za daljnju provjeru."));$("radar-approved-status").textContent=result.length+" JAVNIH OBJAVA · prikaz prema datumima, dostupnost provjeri na izvoru"+(skipped?" · "+skipped+" neispravnih ili ponovljenih zapisa nije prikazano":"");}
+ for(const input of [kind,city,query,statusFilter])input.addEventListener(input===query?"input":"change",draw);draw();
+ window.TEZRadar={validDate,validURL,validate,state,calendar,posts:postsData,sources,today:current};
+ const form=$("radar-submit"),status=$("radar-submit-status"),sKind=$("radar-submit-kind"),date=$("radar-submit-date");date.min=current;
+ form.addEventListener("submit",event=>{event.preventDefault();if(!form.reportValidity())return;const type=sKind.value,link=$("radar-submit-link").value.trim();if(type!=="PODCAST"&&!validURL(link)){status.textContent="Za događaj, posao ili edukaciju potreban je službeni HTTPS link, bez korisničkih podataka u adresi.";return;}if(link&&!validURL(link)){status.textContent="Koristi ispravan HTTPS link, bez korisničkih podataka u adresi.";return;}const when=date.value;if(when&&(!validDate(when)||when<current)){status.textContent="Provjeri datum: treba biti ispravan i ne smije biti u prošlosti.";return;}const rows=["BRZO I LOKALNO TECH RADAR / PRIJEDLOG NA UREDNIČKI PREGLED","","Vrsta: "+type,"Naziv: "+$("radar-submit-title").value.trim(),"Grad/format: "+$("radar-submit-city").value.trim(),"Organizator/autor: "+$("radar-submit-name").value.trim(),"Kontakt za uredništvo: "+$("radar-submit-email").value.trim(),"Datum: "+(when||"Nije naveden"),"Provjerljivi javni link: "+(link||"Nije naveden (podcast prijedlog)"),"","Opis:",$("radar-submit-description").value.trim(),"","Podnosilac potvrđuje pravo slanja i da nije uključio tuđe privatne podatke bez ovlaštenja.","Ovo je prijedlog za uredničku provjeru, ne automatska javna objava."],subject="TECH RADAR BiH / "+type+" / "+$("radar-submit-title").value.trim(),href="mailto:omer.creating.apps87@gmail.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(rows.join("\n"));if(href.length>6500){status.textContent="Prijedlog je predugačak za e-mail link. Kopiraj opis i pošalji ga direktno uredništvu.";return;}status.textContent="Otvara se tvoj e-mail program. Poruka nije poslana dok sam ne klikneš Pošalji.";location.href=href;});
+ function changeIntent(){sKind.value="PODCAST";$("radar-submit-title").placeholder="Predložena tema ili gost";$("predlozi").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});$("radar-submit-title").focus({preventScroll:true});}$("radar-podcast-intent")?.addEventListener("click",changeIntent);if(new URLSearchParams(location.search).get("vrsta")==="podcast")sKind.value="PODCAST";
 })();

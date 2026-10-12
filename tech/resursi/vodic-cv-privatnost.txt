@@ -1,0 +1,29 @@
+CV koji je jasan i čuva privatnost
+BRZO I LOKALNO TECH / ORIGINALNI PRAKTIČNI MATERIJAL
+Izdanje: 12. oktobar 2026.
+
+UVOD
+CV je dokument za konkretnu prijavu, ne potpuna zbirka ličnih podataka. Započni od zahtjeva u stvarnom oglasu poslodavca. Ako oglas traži web vještine, izdvoji projekt koji pokazuje upravo te vještine. Nemoj generisati iskustvo, diplomu ili certifikat koji nemaš. Primjer u editoru je polazna struktura i mora se zamijeniti vlastitim podacima.
+
+1. ODABERI ŠTA JE POTREBNO
+Unesi ime, kontakt koji želiš dijeliti, grad ako je relevantan i kratki profesionalni opis. Obično nema razloga uključivati matični broj, broj dokumenta, bankovne podatke ili punu privatnu adresu. Ne objavljuj telefon preporučioca bez dogovora. Ako poslodavac traži dodatnu dokumentaciju, prvo provjeri njegovo porijeklo i svrhu zahtjeva.
+
+2. PIŠI PROVJERLJIVO
+Za svako iskustvo navedi period, stvarnu ulogu i doprinos. Ako si samostalno napravio web stranicu, opiši šta ona radi, koji si dio uradio i šta je zaista testirano. Izraz „rad u timu” treba odgovarati stvarnoj saradnji. Vještine poveži s dokazom: projekt, radni zadatak ili završena edukacija. Izbjegavaj procentualne skale znanja bez objašnjenja; „HTML 95%” ne govori kako rješavaš problem.
+
+3. UREDI DOKUMENT
+U kreatoru dokumenata izaberi CV, zamijeni početni tekst i provjeri raspored. Koristi jasne podnaslove i kratke odlomke. Kontrast mora omogućiti čitanje i u crno-bijeloj štampi. Ako sadržaj prelazi stranicu, prilagodi tekst prije smanjivanja svih slova. Ne treba svako iskustvo stati na jednu stranicu ako bi time postalo nečitljivo.
+
+4. TESTIRAJ IZVOZ
+Preuzmi HTML i otvori ga iz foldera. Za PDF koristi opciju ispisa u pregledniku i odaberi „Sačuvaj kao PDF” ako je preglednik podržava. Pregledaj sve stranice, prelome, kontaktne podatke i tekst koji se može označiti. Opcija ispisa ne garantuje identičan izgled u svakom pregledniku ili na svakom Android uređaju. Ne šalji PDF koji nisi otvorio nakon spremanja.
+
+5. POŠALJI NA PRAVO MJESTO
+Provjeri službenu domenu poslodavca i kanal prijave. TECH Radar daje izvore, ne prima CV niti posreduje u zapošljavanju. Dokument čuvaj privatno dok odlučuješ kome ga šalješ. Naziv datoteke neka bude jednostavan i profesionalan; izbjegni datum rođenja ili druge nepotrebne identifikatore u samom nazivu.
+
+REZULTAT
+Imaš tačan, čitljiv dokument i provjeren kontakt primaoca. Prije svake nove prijave napravi prilagođenu verziju i sačuvaj originalni projekt za buduće uređivanje.
+
+BILJEŠKA ZA TVOJ RAD
+Datum: __________
+Šta je provjereno: __________
+Šta ostaje otvoreno: __________

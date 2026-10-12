@@ -1,5 +1,6 @@
 "use strict";
 (()=>{
+const catalogVersion=new URL(document.currentScript?.src||location.href).searchParams.get("v");
 const techBase=new URL(".",document.currentScript?.src||location.href);
 const content=window.BL_PORTAL_CONTENT||{articles:[],materials:[]},$=id=>document.getElementById(id);
 const create=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=String(text);return e;};
@@ -39,6 +40,7 @@ function libraryCard(m){
  cov.append(create("span","book-owner","BRZO I LOKALNO"),create("strong","book-name",m.name.replace("Mini-knjiga: ","")),create("span","book-symbol",symbol));
  const info=create("div","shelf-meta");
  info.append(create("span","eyebrow",label+" / "+m.format),create("h3","",m.name),create("p","",m.desc));
+ if(m.reviewed)info.append(create("p","material-review","Izdanje "+m.reviewed+" · "+(m.readingMinutes?m.readingMinutes+" min čitanja · ":"")+m.level));
  const acts=create("div","shelf-actions"),read=create("a","","ČITAJ ↗"),download=create("a","","PREUZMI ↓");
  read.href=readerLink(m);read.setAttribute("aria-label","Čitaj ili pregledaj "+m.name);
  download.href=m.href;download.download=m.file;download.setAttribute("aria-label","Preuzmi "+m.name);
@@ -64,6 +66,7 @@ $("library-filters")?.addEventListener("click",e=>{
  for(const b of $("library-filters").querySelectorAll("button"))b.setAttribute("aria-pressed",String(b===btn));
  drawLibrary();
 });
+const libraryFilters=$("library-filters");if(libraryFilters){for(const category of [...new Set(content.materials.map(m=>m.cat))]){if([...libraryFilters.querySelectorAll("[data-filter]")].some(b=>b.dataset.filter===category))continue;const b=create("button","",category.toLocaleUpperCase("bs"));b.type="button";b.dataset.filter=category;b.setAttribute("aria-pressed","false");libraryFilters.append(b);}}
 $("library-filter-search")?.addEventListener("input",drawLibrary);drawLibrary();
 function drawStore(){
  if(!$("store-list"))return;
@@ -110,7 +113,7 @@ let catalogPromise,catalogStatus;
 function loadCatalogs(){
  if(catalogPromise)return catalogPromise;
  catalogStatus.textContent="Učitavanje lokalnog kataloga…";
- catalogPromise=Promise.allSettled(catalogFiles.map(([key,file])=>window[key]?Promise.resolve():new Promise((resolve,reject)=>{const script=document.createElement("script");script.src=new URL(file,techBase).href;const timer=setTimeout(()=>{script.remove();reject(Error("timeout"));},10000);script.onload=()=>{clearTimeout(timer);resolve();};script.onerror=()=>{clearTimeout(timer);script.remove();reject(Error("load"));};document.head.append(script);}))).then(states=>{
+ catalogPromise=Promise.allSettled(catalogFiles.map(([key,file])=>window[key]?Promise.resolve():new Promise((resolve,reject)=>{const script=document.createElement("script");const address=new URL(file,techBase);if(catalogVersion)address.searchParams.set("v",catalogVersion);script.src=address.href;const timer=setTimeout(()=>{script.remove();reject(Error("timeout"));},10000);script.onload=()=>{clearTimeout(timer);resolve();};script.onerror=()=>{clearTimeout(timer);script.remove();reject(Error("load"));};document.head.append(script);}))).then(states=>{
   const failed=states.some(x=>x.status==="rejected");catalogStatus.textContent=failed?"Dio kataloga nije učitan. Dostupni rezultati ostaju; ponovo otvori pretragu za novi pokušaj.":"Pretraga sadržaja, aplikacija, radnih listova i službenih izvora. Upit ostaje u pregledniku.";if(failed)catalogPromise=null;drawSearch();
  });return catalogPromise;
 }

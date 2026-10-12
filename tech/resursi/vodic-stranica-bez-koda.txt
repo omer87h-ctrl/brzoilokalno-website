@@ -1,0 +1,29 @@
+Web stranica bez koda: od ideje do objave
+BRZO I LOKALNO TECH / ORIGINALNI PRAKTIČNI MATERIJAL
+Izdanje: 12. oktobar 2026.
+
+UVOD
+Profesionalna stranica treba jasno odgovoriti šta nudiš, kome pomažeš i kako te osoba može kontaktirati. Zamisli ilustrativni projekt male radionice koja popravlja bicikle. Posjetilac mora pronaći usluge, mjesto rada i kontakt. Nije potrebno izmišljati recenzije ili prikazivati tuđe fotografije. Dobar rezultat može nastati od jasnog teksta, tipografije, boja i originalnih CSS oblika.
+
+1. PRIPREMI SADRŽAJ
+Zapiši naziv, jednu rečenicu o usluzi, tri stvarne prednosti i javni kontakt. Umjesto obećanja „najbolji u gradu” napiši ono što možeš potvrditi, primjerice vrste popravki koje stvarno radiš. Nemoj objaviti kućnu adresu ako nije poslovna lokacija koju želiš učiniti javnom. Ako još nemaš cijene ili radno vrijeme, izostavi ih dok ih ne potvrdiš.
+
+2. IZABERI I UREDI PREDLOŽAK
+Otvori Vizuelni Website Builder iz centra Tech Environment Zero to One. Vodič za početak pomaže unijeti osnovne informacije. Izaberi originalni predložak prema sadržaju, zatim promijeni naslov, opis, poziv na akciju i boje. Sekcije trebaju slijediti redoslijed odluke posjetioca: ponuda, detalji, način rada, kontakt. Dodaj sekciju kada donosi korisnu informaciju; ukloni prazne dijelove. Pomjeri sekcije dostupnim kontrolama i nakon svake veće izmjene pogledaj rezultat.
+
+3. PROVJERI FUNKCIJE
+Isprobaj desktop i mobilni pregled. Provjeri svaki kontaktni link i dugme. Ako odabereš e-mail kontakt, dugme otvara korisnikov e-mail program; nije server koji automatski prima poruke. Telefonski link treba imati pravi broj u međunarodnom formatu. Izbjegavaj dugme „Kupi” ako iza njega nema stvarnog procesa kupovine. Provjeri tekst, kontrast i vidljivost fokusa pomoću tastature. Mobilni pregled u editoru pomaže, ali konačni HTML otvori i u pregledniku na telefonu.
+
+4. SAČUVAJ I PREUZMI
+Sačuvaj imenovani projekt, a zatim preuzmi projektnu JSON kopiju. HTML preuzimanje služi za korištenje stranice, JSON za nastavak uređivanja. Otvori preuzeti HTML u novoj kartici i ponovi provjeru linkova. Potvrdi da nema praznih sekcija ili početnih primjera koje nisi zamijenio. Sačuvaj obje datoteke u folder označen datumom. Ako primijetiš pogrešnu izmjenu, koristi poništi ili vrati; ne zatvaraj karticu prije spremanja potrebne kopije.
+
+5. OBJAVA JE POSEBAN KORAK
+Za GitHub Pages ili drugi odabrani statički hosting potrebno je zasebno otvoriti račun kod tog pružaoca i slijediti njegove upute. Editor ništa ne objavljuje automatski. Javno objavljen HTML vidljiv je svakome; lozinke, privatne bilješke i tajni ključevi ne pripadaju u njega. Nakon objave provjeri stvarnu javnu adresu preko mobilne mreže, uključujući kontakt i HTTPS. Prije promjene domene napravi mapu starih i novih adresa.
+
+REZULTAT
+Imaš samostalni HTML, projektnu kopiju i listu stvarno provjerenih funkcija. Tuđe materijale dodaj samo kada imaš potrebna prava; ovaj workflow ne zahtijeva fotografije.
+
+BILJEŠKA ZA TVOJ RAD
+Datum: __________
+Šta je provjereno: __________
+Šta ostaje otvoreno: __________

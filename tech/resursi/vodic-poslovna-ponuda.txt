@@ -1,0 +1,29 @@
+Poslovna ponuda: opseg, cijena i prihvatanje
+BRZO I LOKALNO TECH / ORIGINALNI PRAKTIČNI MATERIJAL
+Izdanje: 12. oktobar 2026.
+
+UVOD
+Dobra ponuda omogućava objema stranama da razumiju šta se dobija i kako se provjerava završetak. Naslov „Izrada stranice” nije dovoljan opseg. Korisniji opis je „Jedna statička stranica s pet sekcija, javnim kontaktom i mobilnim rasporedom”. U ovom vodiču iznosi su izmišljeni primjeri za računanje, a ne cjenovnik portala.
+
+1. OPIŠI ISPORUKU
+Zapiši rezultat, format i kriterije prihvatanja. Za web projekt navedi koji sadržaj priprema naručilac, koliko izmjena uključuje ponuda i koje uređaje provjeravaš. Ako hosting, domena ili održavanje nisu uključeni, reci to prije prihvatanja. Ne koristi neograničene obaveze poput „sve što zatreba” jer otežavaju planiranje i provjeru.
+
+2. IZRAČUNAJ STAVKE
+Primjer: dvije stavke po 45 KM daju 90 KM, a tri stavke po 30 KM također daju 90 KM. Zbir je 180 KM. Količina, jedinična cijena i ukupna vrijednost moraju biti međusobno usklađene. Ako unosiš konačne iznose u tekst, promjena količine ih ne preračunava automatski; provjeri ih zasebno. Valutu navedi uz obračun i nemoj miješati više valuta bez jasno dogovorenog postupka.
+
+3. ODVOJI USLOVE
+Navedi do kada ponuda važi, kako se plaća i kada počinje rad. Rok može zavisiti od toga kada naručilac dostavi sadržaj ili odobri skicu; tu zavisnost napiši. Poreski tretman, PDV, račun i obaveze zavise od stvarnog statusa učesnika i važećih pravila. Editor nije računovodstveni niti pravni sistem. Ne prikazuj automatski porez koji nije izračunat i potvrđen.
+
+4. DOGOVORI PRAVA I PRIVATNOST
+Napiši koje originalne datoteke naručilac dobija i za koju upotrebu. Tuđi font, ilustracija ili tekst zahtijevaju provjeru licence i kada je projekt besplatan. Za povjerljive projekte dogovorite način razmjene i pristup. Ako planiraš rad pokazati u vlastitom portfoliju, traži dogovor prije javnog predstavljanja, posebno kada sadrži privatne podatke.
+
+5. PROVJERI DOKUMENT
+U kreatoru dokumenata izaberi ponudu, unesi stvarne stavke i pregledaj preuzeti HTML ili PDF iz ispisa. Provjeri zbir, rokove, naziv klijenta i nedovršene primjere. Traži da druga strana potvrdi tačno označenu verziju i datum. Sačuvaj prihvaćenu verziju odvojeno od kasnijih izmjena.
+
+REZULTAT
+Ponuda jasno navodi isporuku, cijenu, uslove i način prihvatanja. Za ugovorne ili poreske nedoumice potreban je odgovarajući stručnjak, a ne uvjerljiv izgled predloška.
+
+BILJEŠKA ZA TVOJ RAD
+Datum: __________
+Šta je provjereno: __________
+Šta ostaje otvoreno: __________

@@ -1,0 +1,29 @@
+Projektne kopije bez gubitka rada
+BRZO I LOKALNO TECH / ORIGINALNI PRAKTIČNI MATERIJAL
+Izdanje: 12. oktobar 2026.
+
+UVOD
+Rad sačuvan u pregledniku nije isto što i datoteka na disku. Podaci pripadaju konkretnom pregledniku i njegovom profilu. Drugi uređaj, drugi preglednik i druga domena neće automatski prikazati iste projekte. Promjena s glavne domene na TECH subdomenu također mijenja prostor za lokalne podatke. Zato napravi kopiju dok još imaš pristup izvornom editoru.
+
+1. IMENUJ VERZIJE
+Imenovani projekt sačuvaj u aplikaciji u kojoj ga uređuješ. Upotrijebi razumljivo ime poput „Radionica — kontakt provjeren — 12. oktobar”. Nemoj više različitih radova držati pod nazivom „Test”. Spremanje lokalno ne prenosi sadržaj na portal. U privatnom režimu ili uz blokirano skladištenje preglednik može odbiti spremanje; poruka o grešci znači da se ne smiješ osloniti na tu kopiju.
+
+2. PREUZMI PROJEKTNU DATOTEKU
+Preuzmi JSON kopiju iz editora. Ona čuva podatke potrebne za daljnje uređivanje. Izvoz HTML, SVG ili PNG daje upotrebljiv rezultat, ali nije zamjena za originalne podatke projekta. Za više imenovanih projekata koristi Moji radovi i ZIP sigurnosnu kopiju. ZIP je paket projektnih datoteka, nije aplikacija niti samostalna web stranica. Ne pretpostavljaj da uključuje nespremljene skice ili sadržaje drugih preglednika.
+
+3. PROVJERI OPORAVAK
+Napravi probni projekt s tekstom koji prepoznaješ. Sačuvaj ga i preuzmi njegov JSON. U editoru promijeni tekst, zatim uvezi prethodnu datoteku. Provjeri naslov, sekcije i odabrani stil. Prije oporavka vrijednog rada napravi kopiju trenutne verzije. Poruka da datoteka nije važeća traži provjeru aplikacije i formata, a ne nasumično preimenovanje ekstenzije. Nemoj uvoziti projektnu datoteku nepoznatog porijekla samo zato što ima nastavak JSON.
+
+4. DRŽI DVIJE KOPIJE
+Jednu kopiju čuvaj na svom uređaju, drugu na mediju koji sam biraš i kontrolišeš. Ako koristiš cloud folder, to je tvoja zasebna odluka o vanjskoj usluzi; TECH ne šalje projekt tamo. Nakon velikih promjena sačuvaj novu verziju i ostavi prethodnu dok ne provjeriš rezultat. Zabilježi datum posljednjeg stvarnog oporavka, ne samo datum preuzimanja.
+
+5. KADA NEŠTO NEDOSTAJE
+Provjeri tačnu domenu, profil preglednika i izabranu aplikaciju. Nemoj odmah brisati podatke preglednika ili pokretati alat za čišćenje. Ako imaš kopiju, vrati je kroz odgovarajući editor. Ako lokalni podaci više ne postoje i nemaš kopiju, portal ih ne može rekonstruisati iz servera. Automatski oporavak pomaže samo dok odgovarajući lokalni podaci postoje.
+
+REZULTAT
+Zapiši ime projekta, lokaciju JSON kopije i datum provjerenog oporavka. Tek tada imaš dokaz da je sigurnosna kopija upotrebljiva.
+
+BILJEŠKA ZA TVOJ RAD
+Datum: __________
+Šta je provjereno: __________
+Šta ostaje otvoreno: __________

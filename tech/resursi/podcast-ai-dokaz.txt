@@ -1,0 +1,26 @@
+AI tvrdnja traži dokaz
+BRZO I LOKALNO TECH / ORIGINALNI PRAKTIČNI MATERIJAL
+Izdanje: 12. oktobar 2026.
+
+UVOD
+Uvjerljiv odgovor lako djeluje kao rezultat provjere. AI može povezati pojmove, predložiti strukturu i napisati razumljiv tekst, ali forma odgovora nije dokaz tačnosti. Kada odluka utiče na novac, privatnost ili objavljivanje informacije o drugoj osobi, potrebno je više od uvjerljive rečenice.
+
+1. RAZDVOJI ZADATAK I IZVOR
+Pitanje „predloži strukturu vodiča” razlikuje se od pitanja „koji je važeći rok konkursa”. Prvi zadatak može imati više dobrih odgovora. Drugi zahtijeva konkretan izvor i datum. Ako AI navede link, otvori ga i provjeri da zaista sadrži navedenu informaciju. Postojanje domene samo po sebi nije potvrda tvrdnje.
+
+2. PRIMJER PROVJERE
+Zamisli odgovor koji navodi edukaciju kao otvorenu za sve. Originalna stranica može pokazati da je namijenjena zaposlenicima određene institucije i da traži saglasnost rukovodioca. Naslov je možda tačan, ali zaključak o dostupnosti nije. Ispravka nije dodavanje još jedne samouvjerene rečenice; potrebno je precizno opisati publiku i uslove.
+
+3. PODACI KOJE NE TREBA SLATI
+Za pomoć u oblikovanju CV-a često je dovoljan izmišljeni primjer ili uklonjeni identifikatori. Nema razloga automatski slati kompletan privatni dokument vanjskoj usluzi. Provjeri koju uslugu koristiš i njene postavke. TECH alati ne zahtijevaju vanjski AI API i ne šalju projektne datoteke takvoj usluzi.
+
+4. PITANJA ZA RAZGOVOR
+Koja je konkretna tvrdnja? Ko ju je prvi objavio? Je li izvor primaran i aktuelan? Šta je provjereno ručno? Šta ostaje nepoznato? Kako bi izgledala odluka ako je tvrdnja pogrešna? Odgovori pomažu odrediti koliko dodatne provjere treba prije stvarne primjene.
+
+ZAVRŠNA MISAO
+AI prijedlog može ubrzati početak rada. Odgovornost za objavljenu tvrdnju i konačnu odluku ostaje kod osobe koja ih koristi. Sačuvaj izvor i rezultat provjere umjesto da čuvaš samo odgovor. Ovo je originalni pisani materijal, bez pripisivanja izjava nepostojećem gostu i bez objavljenog audio snimka.
+
+BILJEŠKA ZA TVOJ RAD
+Datum: __________
+Šta je provjereno: __________
+Šta ostaje otvoreno: __________
