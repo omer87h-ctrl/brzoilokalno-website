@@ -9,7 +9,7 @@ const legacyRoutes={"#biblioteka":"./biblioteka.html","#store":"./free-store.htm
 if((location.pathname.endsWith("/tech/")||location.pathname.endsWith("/tech/index.html"))&&Object.prototype.hasOwnProperty.call(legacyRoutes,location.hash))location.replace(legacyRoutes[location.hash]);
 const menu=$("nav-toggle"),mob=$("mobile-nav");
 // One information architecture for standard TECH pages. All existing sections stay reachable.
-const portalMain=[["Naslovna","/tech/"],["TECH Svijet","/tech/svijet.html"],["TECH Zona","/tech/tech-zona.html"],["TECH Akademija","/tech/discovery.html#learning-academy"],["TECH X","/tech/tech-x/"],["Kreiraj","/tech/studio.html"]];
+const portalMain=[["Naslovna","/tech/"],["TECH Svijet","/tech/svijet.html"],["TECH Zona","/tech/tech-zona.html"],["TECH Akademija","/tech/discovery.html#learning-academy"],["Tech Environment Zero to One","/tech/tech-x/"],["Kreiraj","/tech/studio.html"]];
 const portalMore=[["TECH Radar BiH","/tech/radar-bih.html"],["Arhiva vijesti","/tech/arhiva.html"],["Izvori i redakcija","/tech/izvori.html"],["Telefoni","/tech/telefoni.html"],["Alati","/tech/alati.html"],["Biblioteka","/tech/biblioteka.html"],["Besplatni resursi","/tech/free-store.html"],["Lab i projekti","/tech/lab.html"],["Saradnja i oglasi","/tech/oglasi.html"],["Podcast / prijava","/tech/podcast.html"],["Glavna platforma ↗","/"]];
 function portalLink(label,url){
  const link=create("a","",label);link.href=url;
@@ -78,7 +78,7 @@ const pages=[
  {cat:"GLAVNO",title:"Istraži",description:"Nauka, AI, uređaji i nove ideje u TECH Svijetu",url:"./svijet.html"},
  {cat:"GLAVNO",title:"Čitaj",description:"Originalne tehnološke analize, izvori i vodiči",url:"./tech-zona.html"},
  {cat:"GLAVNO",title:"Uči",description:"Interaktivne lekcije i zadaci TECH Akademije",url:"./discovery.html#learning-academy"},
- {cat:"GLAVNO",title:"TECH X",description:"Interaktivni eksperimenti, mreža, dozvole, web stranice i dnevnik tvrdnji",url:"./tech-x/"},
+ {cat:"GLAVNO",title:"Tech Environment Zero to One",description:"Interaktivni eksperimenti, mreža, dozvole, web stranice i dnevnik tvrdnji",url:"./tech-x/"},
  {cat:"GLAVNO",title:"Kreiraj",description:"Napiši, sačuvaj i predloži autorski tekst",url:"./studio.html"},
  {cat:"RUBRIKA",title:"Tech portal",description:"AI, uređaji, softver i originalne analize",url:"./"},
  {cat:"RUBRIKA",title:"Biblioteka",description:"Knjige, vodiči, besplatno čitanje",url:"./biblioteka.html"},
@@ -183,3 +183,4 @@ if("IntersectionObserver" in window&&!matchMedia("(prefers-reduced-motion: reduc
 })();
 
 })();
+

@@ -27,10 +27,10 @@ Web stranica može imati lokalno sačuvane resurse. Međutim, obična web strani
 
 6. ZADATAK ZA PROVJERU
 
-[ ] Otvori TECH X i pokreni scenarij normalne veze.
+[ ] Otvori Tech Environment Zero to One i pokreni scenarij normalne veze.
 [ ] Promijeni scenario na DNS grešku.
 [ ] Objasni zašto TLS upozorenje ne znači da je sadržaj stranice istinit.
-[ ] Napravi malu HTML stranicu u TECH X i preuzmi je.
+[ ] Napravi malu HTML stranicu u Tech Environment Zero to One i preuzmi je.
 [ ] Isključi internet i otvori svoju preuzetu datoteku; ovo se razlikuje od rada web aplikacije preko servera.
 
 7. GDJE NASTAVITI?

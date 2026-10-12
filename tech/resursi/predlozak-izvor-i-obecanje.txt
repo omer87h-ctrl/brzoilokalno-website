@@ -31,4 +31,4 @@ ZAKLJUČAK
 [ ] Ne predstavljam izostanak dokaza kao dokaz da nešto nije napravljeno.
 [ ] Navodim ograničenja dostupnih informacija.
 
-Napomena: najava nije rezultat, a odsustvo javne potvrde ne znači nužno da se događaj nije desio. Ovaj obrazac se može ispuniti i u TECH X dnevniku izvora.
+Napomena: najava nije rezultat, a odsustvo javne potvrde ne znači nužno da se događaj nije desio. Ovaj obrazac se može ispuniti i u Tech Environment Zero to One dnevniku izvora.

@@ -20,7 +20,7 @@
       card.append(title,desc,link,remove);root.append(card);
     }
   }
-  function write(){try{localStorage.setItem(key,JSON.stringify(ids))}catch{}render();window.dispatchEvent(new Event("bl-tech-bookmarks-changed"))}
+  function write(){try{localStorage.setItem(key,JSON.stringify(ids))}catch{ids=read();alert("Pohrana nije dostupna. Izmjena nije sačuvana.");}render();window.dispatchEvent(new Event("bl-tech-bookmarks-changed"))}
   clear?.addEventListener("click",()=>{ids=[];write()});
   window.addEventListener("storage",event=>{if(event.key===key){ids=read();render()}});
   window.addEventListener("bl-tech-bookmarks-changed",()=>{const next=read();if(JSON.stringify(next)!==JSON.stringify(ids)){ids=next;render()}});

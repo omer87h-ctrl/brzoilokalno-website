@@ -18,7 +18,7 @@
 2. Napravi /tech/clanci/slug.html koristeći postojeće članke kao obrazac.
 3. Dodaj njegov naslov, kategoriju i stvarnu putanju u /tech/data.js.
 4. Ažuriraj /tech/feed.xml i sitemap.xml.
-5. Dodaj vlastitu/licenciranu fotografiju ili novu originalnu ilustraciju. Navedi licencu/izvor gdje je potrebno.
+5. Koristi originalnu SVG ilustraciju, CSS grafiku ili tipografiju. Ne dodaj fotografske uploade ili stock zavisnosti.
 6. Nikada ne predstavljaj imaginarne intervjue, recenzije, ocjene, citate i broj korisnika kao činjenice.
 
 ## Kako dodati knjigu ili datoteku
@@ -152,3 +152,4 @@ Asistent and AI interface removed from navigation, homepage and scripts on devel
 - Za svaku bosansku uredničku bilješku provjeri original i ispravi moguće terminološke/činjenične greške; izbjegni povezivanje optužbi s presudama bez dokaza. Sve naknadne uredničke bilješke dopuniti bez kopiranja tuđeg sadržaja.
 - Dupli pozivi na objavljivanje uklonjeni su s naslovnice i TECH zone. Autorski tekstovi idu preko Studija, prijave preko postojećeg uredničkog obrasca, tech događaji i podcasti preko TECH Radara.
 - Banneri TECH Radara i TECH Svijeta prilagođeni su bosanskim nazivima i manjim ekranima. Potreban je stvarni vizuelni QA na telefonima prije garancije potpunog mobilnog prikaza.
+

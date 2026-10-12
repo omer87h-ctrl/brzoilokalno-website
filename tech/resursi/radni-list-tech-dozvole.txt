@@ -29,8 +29,8 @@ To što je dozvola odobrena ne znači da aplikacija neprestano koristi podatke. 
 [ ] Provjeri može li se nepotrebna dozvola isključiti.
 [ ] Ako se funkcija promijeni, zabilježi stvarnu posljedicu.
 
-5. PROVJERI U TECH X
+5. PROVJERI U Tech Environment Zero to One
 
-Simulacija na TECH X ne uključuje stvarne dozvole. Može pomoći razumjeti načelo minimalnih prava, ali ne može pregledati tvoj telefon niti zamijeniti postavke sistema.
+Simulacija na Tech Environment Zero to One ne uključuje stvarne dozvole. Može pomoći razumjeti načelo minimalnih prava, ali ne može pregledati tvoj telefon niti zamijeniti postavke sistema.
 
 Vanjska dokumentacija: https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API

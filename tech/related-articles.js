@@ -75,7 +75,7 @@
   const button=document.createElement("button");
   button.type="button";button.className="reader-save-button";
   const collection=document.createElement("a");
-  collection.href="/tech/discovery.html#sacuvano";
+  collection.href="/tech/tech-zona.html#sacuvano";
   collection.className="button ghost";
   collection.textContent="MOJI SAČUVANI ↗";
   const feedback=document.createElement("span");
