@@ -7,3 +7,7 @@ The 40 new worksheets and generated user documents/websites may be reused in per
 GitHub deployment uses official actions/checkout v4, configure-pages v5, upload-pages-artifact v3 and deploy-pages v4. These are build dependencies, not scripts receiving creator content. Python standard library builds the static TECH copy. No paid APIs or remote AI are included.
 
 User content stays in the browser unless the user explicitly exports, publishes independently, clicks an external link, or uses an existing email-submission flow. Generated projects cannot promise compliance on the user's behalf. Hosting access logs, consent/legal notices, trademark registration and applicable local law need owner review before publication. No legal clearance or trademark search is claimed.
+
+## Aggregate page-opening counter
+
+Original visits.js / visits.css integrate the free Hits SVG badge service (https://hits.sh/; https://github.com/silentsoft/hits, MIT source). No provider code, fonts or templates are copied, and no third-party script is loaded. Privacy policy: https://hits.sh/privacy/; terms: https://hits.sh/terms/. Constant namespace, referrer suppressed, DNT/GPC and local opt-out supported. Counts page openings from 2026-10-12, not unique people; bots/cache/blockers and service availability affect accuracy. Provider infrastructure is not independently audited.
