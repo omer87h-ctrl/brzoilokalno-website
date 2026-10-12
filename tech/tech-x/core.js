@@ -41,7 +41,7 @@
   function sync(){undo.disabled=cursor===0;redo.disabled=cursor===history.length-1;}
   function record(){if(restoring)return;const state=validate(clone(read()));if(JSON.stringify(state)===JSON.stringify(history[cursor]))return;history=history.slice(0,cursor+1);history.push(state);if(history.length>60)history.shift();cursor=history.length-1;sync();if(auto.checked){clearTimeout(autoTimer);autoTimer=setTimeout(()=>{try{localStorage.setItem(key+"-recovery",JSON.stringify({app,version:2,data:validate(clone(read()))}));say("Lokalni oporavak ažuriran. Nije poslano na server.");}catch{say("Oporavak nije sačuvan. Izvezi rezervni JSON.");}},650);}}
   function travel(delta){clearTimeout(timer);try{record();}catch(e){say("Prvo ispravi neispravne vrijednosti: "+e.message);return;}const next=cursor+delta;if(next<0||next>=history.length)return;cursor=next;restoring=true;apply(clone(history[cursor]));restoring=false;sync();say("Promjena "+(delta<0?"poništena.":"ponovljena."));}
-  function restore(value){const safe=validate(clone(value));restoring=true;try{apply(safe);}finally{restoring=false;}record();say("Projekat vraćen. Promjenu možeš poništiti.");}
+  function restore(value){const safe=validate(clone(value));clearTimeout(timer);record();restoring=true;try{apply(safe);}finally{restoring=false;}record();say("Projekat vraćen. Promjenu možeš poništiti.");}
   const projectName=document.createElement("input");projectName.type="text";projectName.maxLength=80;projectName.value="Moj projekat";projectName.setAttribute("aria-label","Ime sačuvanog projekta");
   const select=document.createElement("select");select.setAttribute("aria-label","Sačuvani projekti na ovom uređaju");
   const databaseKey=key+"-projects-v2";
@@ -63,7 +63,16 @@
   const hub=document.createElement('a');hub.href='./moji-radovi.html';hub.className='secondary';hub.textContent='MOJI RADOVI · SVE APLIKACIJE ↗';
   bar.append(undo,redo,exportBtn,importBtn);box.append(heading,bar,projectName,select,save,load,previous,remove,autoLabel,recover,clearRecovery,clearAll,hub,file,message);root.append(box);list();sync();
   const requested=new URLSearchParams(location.search).get('projekat');
-  if(requested&&/^[a-z0-9_-]{1,80}$/i.test(requested))setTimeout(()=>{try{const p=database().find(p=>p.id===requested);if(!p)throw Error('Traženi projekat nije na ovom uređaju.');const safe=validate(clone(p.data));if(confirm('Otvoriti lokalni projekat „'+p.name+'”? Trenutni rad ostaje u undo historiji.')){restore(safe);select.value=p.id;projectName.value=p.name;}}catch(e){say('Projekat nije otvoren: '+e.message);}},0);
+  if(requested&&/^[a-z0-9_-]{1,80}$/i.test(requested))setTimeout(()=>{try{
+   const p=database().find(p=>p.id===requested);if(!p)throw Error('Traženi projekat nije na ovom uređaju.');validate(clone(p.data));
+   const dialog=document.createElement('dialog');dialog.className='project-open-dialog';dialog.setAttribute('aria-labelledby','project-open-heading');
+   const title=document.createElement('h2');title.id='project-open-heading';title.textContent='Otvoriti sačuvani projekat?';
+   const name=document.createElement('p');name.textContent=p.name;
+   const note=document.createElement('p');note.textContent='Rad se otvara s ovog uređaja. Trenutni sadržaj možeš vratiti dugmetom PONIŠTI.'+(app==='code'?' Otvaraj samo kod kojem vjeruješ; JavaScript se može pokrenuti u izoliranom pregledu.':'');
+   const actions=document.createElement('div');actions.className='project-actions';
+   actions.append(button('OTVORI OVAJ PROJEKAT',()=>{try{const latest=database().find(p=>p.id===requested);if(!latest)throw Error('Projekat više nije dostupan.');restore(validate(clone(latest.data)));select.value=latest.id;projectName.value=latest.name;dialog.close();select.focus();}catch(e){say('Projekat nije otvoren: '+e.message);dialog.close();}}),button('ODUSTANI',()=>{dialog.close();say('Otvaranje je otkazano. Trenutni rad nije izmijenjen.');select.focus();}));
+   dialog.append(title,name,note,actions);document.body.append(dialog);dialog.addEventListener('close',()=>dialog.remove(),{once:true});dialog.showModal();
+  }catch(e){say('Projekat nije otvoren: '+e.message);}},0);
   root.addEventListener("input",e=>{if(box.contains(e.target))return;clearTimeout(timer);timer=setTimeout(()=>{try{record();}catch(e){say(e.message);}},300);});
   window.addEventListener("beforeunload",e=>{const state=JSON.stringify(read());const isSaved=(()=>{try{return database().some(p=>JSON.stringify(p.data)===state)||JSON.stringify(JSON.parse(localStorage.getItem(key+"-recovery")||"null")?.data)===state;}catch{return false;}})();if(state!==JSON.stringify(history[0])&&!isSaved){e.preventDefault();e.returnValue="";}});
   return {record,restore,say};

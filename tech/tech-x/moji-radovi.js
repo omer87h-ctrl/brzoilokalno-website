@@ -18,6 +18,8 @@
   $('works-summary').textContent=`${shown.length} prikazanih / ${records.length} čitljivih sačuvanih projekata`;
   $('works-errors').hidden=!errors.length;$('works-errors').textContent=errors.join(' ');
   $('works-empty').hidden=shown.length>0;
+  $('works-empty').querySelector('h2').textContent=records.length?'Nema radova za ovaj filter.':'Prvi rad počinje u editoru.';
+  $('works-empty').querySelector('p').textContent=records.length?'Promijeni naziv u pretrazi ili izaberi Sve aplikacije. Sačuvani projekti nisu uklonjeni.':'Otvori alat i koristi SAČUVAJ PROJEKAT. Ako već imaš nacrt, vrati ga u aplikaciji i sačuvaj pod svojim nazivom.';
   $('works-backup').disabled=!records.length||errors.length>0;
   const root=$('works-list');root.replaceChildren();
   for(const {a,p} of shown){
