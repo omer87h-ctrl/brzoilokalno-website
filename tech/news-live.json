@@ -1,12 +1,52 @@
 {
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "method": "automatski-rss",
   "stories": [
     {
-      "title": "Microsoft’s new AI chip makes it less reliant on Nvidia’s GPUs",
+      "title": "Meta has some Wonder Full new AI models",
       "source": "The Verge",
       "date": "2026-10-12",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1009479/meta-muse-wonder-full-ai-model",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft’s new AI chip makes it less reliant on Nvidia’s GPUs",
+      "source": "The Verge AI",
+      "date": "2026-10-12",
       "url": "https://www.theverge.com/news/1009465/microsoft-maia-300-chip-improvements-rollout",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The Social Reckoning is flopping at the box office",
+      "source": "The Verge",
+      "date": "2026-10-12",
+      "url": "https://www.theverge.com/entertainment/1009630/social-reckoning-box-office-other-mommy",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Elon Musk has donated over $276 million to Republican midterm efforts",
+      "source": "The Verge",
+      "date": "2026-10-12",
+      "url": "https://www.theverge.com/tech/1009604/elon-musk-2026-midterm-republican-donations",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The Yandex outage probably didn’t blitz Russian bots",
+      "source": "The Verge",
+      "date": "2026-10-12",
+      "url": "https://www.theverge.com/tech/1009594/russian-bots-yandex-outage-drone-strikes-debunk",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -53,31 +93,41 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "CMF’s first wireless speakers look like musical milk cartons",
-      "source": "The Verge",
+      "title": "Norway fines Microsoft ad firm $9.6 million over Grindr data sharing",
+      "source": "BleepingComputer",
       "date": "2026-10-12",
-      "url": "https://www.theverge.com/tech/1008191/nothing-cmf-speaker-m-s-series-bluetooth-design-customize",
-      "category": "TEHNOLOGIJA",
+      "url": "https://www.bleepingcomputer.com/news/security/norway-fines-microsoft-ad-firm-96-million-over-grindr-data-sharing/",
+      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "The Fitbit Edge is for folks who don’t want to go totally screenless",
-      "source": "The Verge",
+      "title": "Yandex confirms service outage as users lose access to cloud files",
+      "source": "BleepingComputer",
       "date": "2026-10-12",
-      "url": "https://www.theverge.com/gadgets/1008410/fitbit-edge-price-battery-specs-fitness-tracker",
-      "category": "TEHNOLOGIJA",
+      "url": "https://www.bleepingcomputer.com/news/security/yandex-confirms-service-outage-as-users-lose-access-to-cloud-files/",
+      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "How Apple can win the smart home",
-      "source": "The Verge",
+      "title": "Anthropic takes risky AI tests offline after models breach govt sites",
+      "source": "BleepingComputer",
       "date": "2026-10-12",
-      "url": "https://www.theverge.com/tech/1009324/how-apple-can-win-the-smart-home",
-      "category": "TEHNOLOGIJA",
+      "url": "https://www.bleepingcomputer.com/news/security/anthropic-takes-risky-ai-tests-offline-after-models-breach-govt-sites/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+      "source": "BleepingComputer",
+      "date": "2026-10-12",
+      "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
+      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -123,16 +173,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Microsoft: Windows 11 23H2 reaches end of support in 30 days",
-      "source": "BleepingComputer",
-      "date": "2026-10-12",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-11-23h2-reaches-end-of-support-in-30-days/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Scientists discover a hidden factor that can make or break chemical reactions",
       "source": "ScienceDaily",
       "date": "2026-10-12",
@@ -158,16 +198,6 @@
       "date": "2026-10-11",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1008484/learning-local-ai-hermes-qwen-model-mac-studio-testing-diary-progress",
       "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Nippon Columbia malware incident exposes 8.6 million karaoke fan records",
-      "source": "BleepingComputer",
-      "date": "2026-10-11",
-      "url": "https://www.bleepingcomputer.com/news/security/nippon-columbia-malware-incident-exposes-86-million-karaoke-fan-records/",
-      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -263,26 +293,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Cyber exec arrested in case allegedly tied to ShinyHunters hackers",
-      "source": "BleepingComputer",
-      "date": "2026-10-10",
-      "url": "https://www.bleepingcomputer.com/news/security/cyber-exec-arrested-in-case-allegedly-tied-to-shinyhunters-hackers/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "ARTEX AI, Claude agents used in cyberattacks on South Korean banks",
-      "source": "BleepingComputer",
-      "date": "2026-10-10",
-      "url": "https://www.bleepingcomputer.com/news/security/hacker-used-artex-ai-and-claude-agents-to-target-south-korean-banks/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "NASA Seeks US Industry Plans for Commercial Space Stations",
       "source": "NASA",
       "date": "2026-10-09",
@@ -308,16 +318,6 @@
       "date": "2026-10-09",
       "url": "https://www.nasa.gov/image-article/cosmic-house-of-mirrors/",
       "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Anthropic’s AI gave Philadelphia police a fake tip about an unsolved homicide",
-      "source": "The Verge AI",
-      "date": "2026-10-09",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1009090/anthropic-fake-homicide-information-philadelphia-pd-tip",
-      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
