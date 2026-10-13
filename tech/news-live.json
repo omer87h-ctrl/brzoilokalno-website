@@ -3,11 +3,181 @@
   "method": "automatski-rss",
   "stories": [
     {
-      "title": "Meta has some Wonder Full new AI models",
+      "title": "NASA JPL Testing Readies Voyager Technologies Lander for Moon Mission",
+      "source": "NASA",
+      "date": "2026-10-13",
+      "url": "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA Science, Cargo Launch on 35th SpaceX Resupply Mission to Station",
+      "source": "NASA",
+      "date": "2026-10-13",
+      "url": "https://www.nasa.gov/news-release/nasa-science-cargo-launch-on-35th-spacex-resupply-mission-to-station/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "DLSS 5 gets toned down for its Hogwarts Legacy debut next month",
+      "source": "The Verge AI",
+      "date": "2026-10-13",
+      "url": "https://www.theverge.com/news/1009904/dlss-5-hogwarts-legacy-changes-improvements",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Apple launches HomeView, its first smart display for the home",
       "source": "The Verge",
+      "date": "2026-10-13",
+      "url": "https://www.theverge.com/tech/1009704/apple-homeview-smart-display-first-look",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Character.AI files for bankruptcy",
+      "source": "The Verge AI",
+      "date": "2026-10-13",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1009802/character-ai-files-for-bankruptcy-disney",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Where to preorder the new Apple TV 4K",
+      "source": "The Verge",
+      "date": "2026-10-13",
+      "url": "https://www.theverge.com/gadgets/1009921/apple-tv-4k-2026-preorder-buy",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Watch Apple’s reveal video for the HomeView",
+      "source": "The Verge",
+      "date": "2026-10-13",
+      "url": "https://www.theverge.com/1008810/apple-homeview-reveal-video-watch",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Getty Images is going private after failed Shutterstock merger",
+      "source": "The Verge",
+      "date": "2026-10-13",
+      "url": "https://www.theverge.com/business/1009893/getty-images-bankruptcy-private-plans-agreement",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The new Apple TV 4K has built-in microphones so you can talk to Siri AI",
+      "source": "The Verge",
+      "date": "2026-10-13",
+      "url": "https://www.theverge.com/tech/1009663/apple-tv-4k-siri-ai-microphones-4th-gen-announced",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Apple announces the HomePod Mini 2, but it isn&#8217;t ready for Siri AI at launch",
+      "source": "The Verge",
+      "date": "2026-10-13",
+      "url": "https://www.theverge.com/tech/1009672/homepod-mini-2-announced-apple-siri-ai",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The new Apple Home Collection includes a video doorbell, smart lock, and more",
+      "source": "The Verge",
+      "date": "2026-10-13",
+      "url": "https://www.theverge.com/tech/1009680/apple-home-collection-doorbell-lock-camera-smart-home-announced",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Elgato takes on DJI with a tiny wireless mic for creators on the go",
+      "source": "The Verge",
+      "date": "2026-10-13",
+      "url": "https://www.theverge.com/tech/1009752/elgato-wave-go-microphone-creators-pricing-release-date",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The MFA Gaps Attackers are Still Exploiting",
+      "source": "BleepingComputer",
+      "date": "2026-10-13",
+      "url": "https://www.bleepingcomputer.com/news/security/the-mfa-gaps-attackers-are-still-exploiting/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "SAP warns of maximum severity OAuth2 SSRF security flaw",
+      "source": "BleepingComputer",
+      "date": "2026-10-13",
+      "url": "https://www.bleepingcomputer.com/news/security/sap-warns-of-maximum-severity-oauth2-ssrf-security-flaw/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "James Webb reveals a massive cosmic structure that challenges our understanding of the Universe",
+      "source": "ScienceDaily",
+      "date": "2026-10-13",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261012185021.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Physicists discover “astonishing” property of light that defies expectations",
+      "source": "ScienceDaily",
+      "date": "2026-10-13",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261011211615.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists recreate a bizarre quantum effect that stops a particle cold",
+      "source": "ScienceDaily",
+      "date": "2026-10-13",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261011211554.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Meta has some Wonder Full new AI models",
+      "source": "The Verge AI",
       "date": "2026-10-12",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1009479/meta-muse-wonder-full-ai-model",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -18,76 +188,6 @@
       "date": "2026-10-12",
       "url": "https://www.theverge.com/news/1009465/microsoft-maia-300-chip-improvements-rollout",
       "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The Social Reckoning is flopping at the box office",
-      "source": "The Verge",
-      "date": "2026-10-12",
-      "url": "https://www.theverge.com/entertainment/1009630/social-reckoning-box-office-other-mommy",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Elon Musk has donated over $276 million to Republican midterm efforts",
-      "source": "The Verge",
-      "date": "2026-10-12",
-      "url": "https://www.theverge.com/tech/1009604/elon-musk-2026-midterm-republican-donations",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The Yandex outage probably didn’t blitz Russian bots",
-      "source": "The Verge",
-      "date": "2026-10-12",
-      "url": "https://www.theverge.com/tech/1009594/russian-bots-yandex-outage-drone-strikes-debunk",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Mechanism&#8217;s first Switch 2 case is as awesome as I hoped it would be",
-      "source": "The Verge",
-      "date": "2026-10-12",
-      "url": "https://www.theverge.com/tech/1008161/mechanism-basecase-switch-2-case-hands-on",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Android is the best and worst thing about Googlebooks",
-      "source": "The Verge",
-      "date": "2026-10-12",
-      "url": "https://www.theverge.com/tech/1008750/googlebooks-android-best-worst-notifications-app-cast-file-sharing",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "No Man’s Sky is coming to the iPhone and iPad",
-      "source": "The Verge",
-      "date": "2026-10-12",
-      "url": "https://www.theverge.com/entertainment/1009541/no-mans-sky-iphone-ipad-launch-date",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The OnePlus 16 is the company’s most interesting phone in years",
-      "source": "The Verge",
-      "date": "2026-10-12",
-      "url": "https://www.theverge.com/tech/1009570/oneplus-16-specs-features-china",
-      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -153,30 +253,10 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Retail giant Ahold Delhaize takes systems offline after cyberattack",
-      "source": "BleepingComputer",
-      "date": "2026-10-12",
-      "url": "https://www.bleepingcomputer.com/news/security/retail-giant-ahold-delhaize-takes-systems-offline-after-cyberattack/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "GitLab warns of max severity code execution vulnerability",
-      "source": "BleepingComputer",
-      "date": "2026-10-12",
-      "url": "https://www.bleepingcomputer.com/news/security/gitlab-warns-of-max-severity-rce-flaw-in-regex-compiler-engine/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Scientists discover a hidden factor that can make or break chemical reactions",
+      "title": "Europe's new Sentinel-3C satellite just sent back spectacular images of Earth",
       "source": "ScienceDaily",
       "date": "2026-10-12",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261008005244.htm",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261011211559.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -233,16 +313,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Scientists build a nuclear clock that could make atomic clocks obsolete",
-      "source": "ScienceDaily",
-      "date": "2026-10-11",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261008102701.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "NASA to Conduct Flyover, Engage NFL Fans at MetLife Stadium",
       "source": "NASA",
       "date": "2026-10-10",
@@ -263,90 +333,10 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "DistroKid has been quietly taking down songs in response to UMG lawsuit",
-      "source": "The Verge AI",
-      "date": "2026-10-10",
-      "url": "https://www.theverge.com/entertainment/1009309/distrokid-take-down-songs-umg-lawsuit",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Anthropic is cutting off its internal evaluations from the internet",
-      "source": "The Verge AI",
-      "date": "2026-10-10",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1009286/anthropic-is-cutting-off-its-internal-evaluations-from-the-internet",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "AI agent makers are promising privacy — will they deliver?",
-      "source": "The Verge AI",
-      "date": "2026-10-10",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1009051/privacy-ai-agent-promises-openai-meta-muse-dots",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA Seeks US Industry Plans for Commercial Space Stations",
-      "source": "NASA",
-      "date": "2026-10-09",
-      "url": "https://www.nasa.gov/news-release/nasa-seeks-us-industry-plans-for-commercial-space-stations/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA Demonstrates Next-Generation Heat Shield Technologies",
-      "source": "NASA",
-      "date": "2026-10-09",
-      "url": "https://www.nasa.gov/centers-and-facilities/ames/nasa-demonstrates-next-generation-heat-shield-technologies/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Cosmic House of Mirrors",
-      "source": "NASA",
-      "date": "2026-10-09",
-      "url": "https://www.nasa.gov/image-article/cosmic-house-of-mirrors/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "NASA astronauts splash down after 100 million miles in space",
       "source": "ScienceDaily",
       "date": "2026-10-09",
       "url": "https://www.sciencedaily.com/releases/2026/10/261008232629.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "October’s night sky is full of cosmic tricks and treats",
-      "source": "ScienceDaily",
-      "date": "2026-10-09",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261008102704.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA is searching for hidden caves to build its first Moon base",
-      "source": "ScienceDaily",
-      "date": "2026-10-08",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261008005247.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",

@@ -3,6 +3,176 @@
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
     {
+      "title": "NASA JPL Testing Readies Voyager Technologies Lander for Moon Mission",
+      "source": "NASA",
+      "date": "2026-10-13",
+      "url": "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA Science, Cargo Launch on 35th SpaceX Resupply Mission to Station",
+      "source": "NASA",
+      "date": "2026-10-13",
+      "url": "https://www.nasa.gov/news-release/nasa-science-cargo-launch-on-35th-spacex-resupply-mission-to-station/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "DLSS 5 gets toned down for its Hogwarts Legacy debut next month",
+      "source": "The Verge AI",
+      "date": "2026-10-13",
+      "url": "https://www.theverge.com/news/1009904/dlss-5-hogwarts-legacy-changes-improvements",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Apple launches HomeView, its first smart display for the home",
+      "source": "The Verge",
+      "date": "2026-10-13",
+      "url": "https://www.theverge.com/tech/1009704/apple-homeview-smart-display-first-look",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Character.AI files for bankruptcy",
+      "source": "The Verge AI",
+      "date": "2026-10-13",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1009802/character-ai-files-for-bankruptcy-disney",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Where to preorder the new Apple TV 4K",
+      "source": "The Verge",
+      "date": "2026-10-13",
+      "url": "https://www.theverge.com/gadgets/1009921/apple-tv-4k-2026-preorder-buy",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Watch Apple’s reveal video for the HomeView",
+      "source": "The Verge",
+      "date": "2026-10-13",
+      "url": "https://www.theverge.com/1008810/apple-homeview-reveal-video-watch",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Getty Images is going private after failed Shutterstock merger",
+      "source": "The Verge",
+      "date": "2026-10-13",
+      "url": "https://www.theverge.com/business/1009893/getty-images-bankruptcy-private-plans-agreement",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The new Apple TV 4K has built-in microphones so you can talk to Siri AI",
+      "source": "The Verge",
+      "date": "2026-10-13",
+      "url": "https://www.theverge.com/tech/1009663/apple-tv-4k-siri-ai-microphones-4th-gen-announced",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Apple announces the HomePod Mini 2, but it isn&#8217;t ready for Siri AI at launch",
+      "source": "The Verge",
+      "date": "2026-10-13",
+      "url": "https://www.theverge.com/tech/1009672/homepod-mini-2-announced-apple-siri-ai",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The new Apple Home Collection includes a video doorbell, smart lock, and more",
+      "source": "The Verge",
+      "date": "2026-10-13",
+      "url": "https://www.theverge.com/tech/1009680/apple-home-collection-doorbell-lock-camera-smart-home-announced",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Elgato takes on DJI with a tiny wireless mic for creators on the go",
+      "source": "The Verge",
+      "date": "2026-10-13",
+      "url": "https://www.theverge.com/tech/1009752/elgato-wave-go-microphone-creators-pricing-release-date",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The MFA Gaps Attackers are Still Exploiting",
+      "source": "BleepingComputer",
+      "date": "2026-10-13",
+      "url": "https://www.bleepingcomputer.com/news/security/the-mfa-gaps-attackers-are-still-exploiting/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "SAP warns of maximum severity OAuth2 SSRF security flaw",
+      "source": "BleepingComputer",
+      "date": "2026-10-13",
+      "url": "https://www.bleepingcomputer.com/news/security/sap-warns-of-maximum-severity-oauth2-ssrf-security-flaw/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "James Webb reveals a massive cosmic structure that challenges our understanding of the Universe",
+      "source": "ScienceDaily",
+      "date": "2026-10-13",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261012185021.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Physicists discover “astonishing” property of light that defies expectations",
+      "source": "ScienceDaily",
+      "date": "2026-10-13",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261011211615.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists recreate a bizarre quantum effect that stops a particle cold",
+      "source": "ScienceDaily",
+      "date": "2026-10-13",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261011211554.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
       "title": "Microsoft’s new AI chip makes it less reliant on Nvidia’s GPUs",
       "source": "The Verge AI",
       "date": "2026-10-12",
@@ -144,10 +314,10 @@
     },
     {
       "title": "Meta has some Wonder Full new AI models",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-12",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1009479/meta-muse-wonder-full-ai-model",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -218,6 +388,16 @@
       "date": "2026-10-12",
       "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
       "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Europe's new Sentinel-3C satellite just sent back spectacular images of Earth",
+      "source": "ScienceDaily",
+      "date": "2026-10-12",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261011211559.htm",
+      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
