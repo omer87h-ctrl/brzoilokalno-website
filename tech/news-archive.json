@@ -1,7 +1,77 @@
 {
-  "updated": "2026-10-13",
+  "updated": "2026-10-14",
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
+    {
+      "title": "The Tesla Roadster could have stayed vaporware",
+      "source": "The Verge",
+      "date": "2026-10-14",
+      "url": "https://www.theverge.com/transportation/1010694/tesla-roadster-reveal-vaporware-spacex-elon-musk",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Fairphone’s latest repairable earbuds are smaller, lighter, and longer-lasting",
+      "source": "The Verge",
+      "date": "2026-10-14",
+      "url": "https://www.theverge.com/tech/1010906/fairphone-fairbuds-2-price-release-audio-repairability",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Hirudo Android malware replaces banking apps to evade security checks",
+      "source": "BleepingComputer",
+      "date": "2026-10-14",
+      "url": "https://www.bleepingcomputer.com/news/security/hirudo-android-malware-replaces-banking-apps-to-evade-security-checks/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft: Recent Windows updates may trigger Remote Desktop failures",
+      "source": "BleepingComputer",
+      "date": "2026-10-14",
+      "url": "https://www.bleepingcomputer.com/news/security/microsoft-recent-windows-updates-may-trigger-remote-desktop-failures/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "AI reveals a hidden chemical shortcut that could turn CO2 into fuel",
+      "source": "ScienceDaily",
+      "date": "2026-10-14",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261013015758.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "AI can act exactly like a human, but we still don't think it's conscious",
+      "source": "ScienceDaily",
+      "date": "2026-10-14",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261012185017.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A planet 320 light-years away confirms what scientists long suspected",
+      "source": "ScienceDaily",
+      "date": "2026-10-14",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261012185015.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "NASA JPL Testing Readies Voyager Technologies Lander for Moon Mission",
       "source": "NASA",

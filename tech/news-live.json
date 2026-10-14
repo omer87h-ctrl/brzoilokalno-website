@@ -1,7 +1,77 @@
 {
-  "updated": "2026-10-13",
+  "updated": "2026-10-14",
   "method": "automatski-rss",
   "stories": [
+    {
+      "title": "The Tesla Roadster could have stayed vaporware",
+      "source": "The Verge",
+      "date": "2026-10-14",
+      "url": "https://www.theverge.com/transportation/1010694/tesla-roadster-reveal-vaporware-spacex-elon-musk",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Fairphone’s latest repairable earbuds are smaller, lighter, and longer-lasting",
+      "source": "The Verge",
+      "date": "2026-10-14",
+      "url": "https://www.theverge.com/tech/1010906/fairphone-fairbuds-2-price-release-audio-repairability",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Hirudo Android malware replaces banking apps to evade security checks",
+      "source": "BleepingComputer",
+      "date": "2026-10-14",
+      "url": "https://www.bleepingcomputer.com/news/security/hirudo-android-malware-replaces-banking-apps-to-evade-security-checks/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft: Recent Windows updates may trigger Remote Desktop failures",
+      "source": "BleepingComputer",
+      "date": "2026-10-14",
+      "url": "https://www.bleepingcomputer.com/news/security/microsoft-recent-windows-updates-may-trigger-remote-desktop-failures/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "AI reveals a hidden chemical shortcut that could turn CO2 into fuel",
+      "source": "ScienceDaily",
+      "date": "2026-10-14",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261013015758.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "AI can act exactly like a human, but we still don't think it's conscious",
+      "source": "ScienceDaily",
+      "date": "2026-10-14",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261012185017.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A planet 320 light-years away confirms what scientists long suspected",
+      "source": "ScienceDaily",
+      "date": "2026-10-14",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261012185015.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "NASA Names Astronaut Christina Koch Acting Deputy Chief Engineer",
       "source": "NASA",
@@ -37,26 +107,6 @@
       "source": "NASA",
       "date": "2026-10-13",
       "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-08-complex-modes-in-lightly-damped-structural-systemsa-two-mode-interaction-perspective/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA JPL Testing Readies Voyager Technologies Lander for Moon Mission",
-      "source": "NASA",
-      "date": "2026-10-13",
-      "url": "https://www.nasa.gov/missions/moon-base/nasa-jpl-testing-readies-voyager-technologies-lander-for-moon-mission/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA Science, Cargo Launch on 35th SpaceX Resupply Mission to Station",
-      "source": "NASA",
-      "date": "2026-10-13",
-      "url": "https://www.nasa.gov/news-release/nasa-science-cargo-launch-on-35th-spacex-resupply-mission-to-station/",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -173,26 +223,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Russian bot farms are still trolling, even after Ukraine&#8217;s drone strikes on Yandex",
-      "source": "The Verge",
-      "date": "2026-10-13",
-      "url": "https://www.theverge.com/news/1010424/yandex-drone-strike-outage-disinformation-zelenskyy",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Rivian partner Mind Robotics hires Doug Field as president",
-      "source": "The Verge",
-      "date": "2026-10-13",
-      "url": "https://www.theverge.com/transportation/1010050/rivian-mind-robotics-hires-doug-field-ford-tesla-apple",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "OpenAI engineer arrested for allegedly planting spy device in office",
       "source": "BleepingComputer",
       "date": "2026-10-13",
@@ -253,26 +283,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "UK Housing Ombudsman Service investigates 'security incident'",
-      "source": "BleepingComputer",
-      "date": "2026-10-13",
-      "url": "https://www.bleepingcomputer.com/news/security/uk-housing-ombudsman-service-investigates-security-incident/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Windows 11 KB5127648 & KB5126653 cumulative updates released",
-      "source": "BleepingComputer",
-      "date": "2026-10-13",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5127648-and-kb5126653-cumulative-updates-released/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "James Webb reveals a massive cosmic structure that challenges our understanding of the Universe",
       "source": "ScienceDaily",
       "date": "2026-10-13",
@@ -317,36 +327,6 @@
       "source": "ScienceDaily",
       "date": "2026-10-11",
       "url": "https://www.sciencedaily.com/releases/2026/10/261009025602.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The hidden math of Alzheimer's could point to new treatments",
-      "source": "ScienceDaily",
-      "date": "2026-10-11",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261008102714.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA spots a giant patch of Moon-like rock on Earth",
-      "source": "ScienceDaily",
-      "date": "2026-10-11",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261008102707.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA astronauts splash down after 100 million miles in space",
-      "source": "ScienceDaily",
-      "date": "2026-10-09",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261008232629.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
