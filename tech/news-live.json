@@ -3,11 +3,161 @@
   "method": "automatski-rss",
   "stories": [
     {
-      "title": "Time is a-changin’: say goodbye to the leap second",
+      "title": "NASA Names Stephen Cash Marshall Space Flight Center Director",
+      "source": "NASA",
+      "date": "2026-10-16",
+      "url": "https://www.nasa.gov/news-release/nasa-names-stephen-cash-marshall-space-flight-center-director/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Artemis II Heat Shield After Splashdown",
+      "source": "NASA",
+      "date": "2026-10-16",
+      "url": "https://www.nasa.gov/image-article/artemis-ii-heat-shield-after-splashdown/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "I Am Artemis: Allison Mjoen",
+      "source": "NASA",
+      "date": "2026-10-16",
+      "url": "https://www.nasa.gov/missions/station/i-am-artemis-allison-mjoen/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A week with RTX Spark: everything we’ve learned using Nvidia’s new laptops",
       "source": "The Verge",
       "date": "2026-10-16",
-      "url": "https://www.theverge.com/tech/1012689/leap-second-discontinue-timekeeping-change",
+      "url": "https://www.theverge.com/tech/1012748/nvidia-rtx-spark-windows-arm-laptops-asus-hp-lenovo-impressions",
       "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Meta’s new terms may allow it to train AI on news sites for free",
+      "source": "The Verge AI",
+      "date": "2026-10-16",
+      "url": "https://www.theverge.com/tech/1012846/meta-business-terms-scrape-news-publishers",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "We can finally hear some of Wu-Tang Clan&#8217;s Once Upon A Time in Shaolin album",
+      "source": "The Verge",
+      "date": "2026-10-16",
+      "url": "https://www.theverge.com/entertainment/1013277/wu-tang-once-upon-a-time-in-shaolin-pablo-torre-martin-shkreli",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Tesla driver says he was asleep and using FSD when he crashed into highway patrol cars",
+      "source": "The Verge",
+      "date": "2026-10-16",
+      "url": "https://www.theverge.com/transportation/1013280/tesla-chp-fsd-crash",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Why Apple is finally making its own smart home devices",
+      "source": "The Verge",
+      "date": "2026-10-16",
+      "url": "https://www.theverge.com/tech/1013025/apple-home-collection-products-lg-schneider-smart-home",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The new Apple TV 4K just got its first (very small) discount",
+      "source": "The Verge",
+      "date": "2026-10-16",
+      "url": "https://www.theverge.com/gadgets/1012962/apple-tv-4k-fourth-generation-fanttik-s1-pro-deal-sale",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Apple&#8217;s HomeView has an app problem",
+      "source": "The Verge",
+      "date": "2026-10-16",
+      "url": "https://www.theverge.com/podcast/1012911/apple-homeview-apps-carplay-vergecast",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Analogue is re-releasing its SNES and Genesis consoles with some nice upgrades",
+      "source": "The Verge",
+      "date": "2026-10-16",
+      "url": "https://www.theverge.com/tech/1012901/analogue-retro-console-supern-nt-plus-nintendo-sega-genesis-mega-plus",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A fake WhatsApp clone is showing up before the real version on the Play Store",
+      "source": "The Verge",
+      "date": "2026-10-16",
+      "url": "https://www.theverge.com/tech/1012918/google-play-store-fake-whatsapp-android",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Critical BlockStrap flaw lets hackers run code on Magento servers",
+      "source": "BleepingComputer",
+      "date": "2026-10-16",
+      "url": "https://www.bleepingcomputer.com/news/security/critical-blockstrap-flaw-lets-hackers-run-code-on-magento-servers/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Targeted ads installed Candiru spyware in zero-click attacks",
+      "source": "BleepingComputer",
+      "date": "2026-10-16",
+      "url": "https://www.bleepingcomputer.com/news/security/zero-click-attacks-used-targeted-ads-to-deliver-candiru-spyware/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Employees using personal ChatGPT at work? Here's what IT admins need to do",
+      "source": "BleepingComputer",
+      "date": "2026-10-16",
+      "url": "https://www.bleepingcomputer.com/news/security/employees-using-personal-chatgpt-at-work-heres-what-it-admins-need-to-do/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Burger King Japan data breach exposes 11 million customer records",
+      "source": "BleepingComputer",
+      "date": "2026-10-16",
+      "url": "https://www.bleepingcomputer.com/news/security/burger-king-japan-data-breach-exposes-11-million-customer-records/",
+      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -43,6 +193,36 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
+      "title": "The uranium cubes that exposed Nazi Germany’s nuclear failure",
+      "source": "ScienceDaily",
+      "date": "2026-10-16",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261015073218.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A quantum highway just one atom high could transform superconductors",
+      "source": "ScienceDaily",
+      "date": "2026-10-16",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261014072018.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Astronomers discover a strange universal rule behind black hole eruptions",
+      "source": "ScienceDaily",
+      "date": "2026-10-16",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261014015507.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
       "title": "Power Up: Roll Out Solar Arrays Boost Space Station Power Supply",
       "source": "NASA",
       "date": "2026-10-15",
@@ -63,81 +243,51 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "NASA Awards Enable Research, Technology to Build Future Workforce",
-      "source": "NASA",
-      "date": "2026-10-15",
-      "url": "https://www.nasa.gov/learning-resources/nasa-awards-enable-research-technology-to-build-future-workforce/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Rigorous Analysis Confirms NASA’s Artemis II Heat Shield Performance",
-      "source": "NASA",
-      "date": "2026-10-15",
-      "url": "https://www.nasa.gov/missions/artemis/artemis-2/rigorous-analysis-confirms-nasas-artemis-ii-heat-shield-performance/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Chandra Finds Possible Origin of ‘Treble Clef’ Waves",
-      "source": "NASA",
-      "date": "2026-10-15",
-      "url": "https://www.nasa.gov/image-article/chandra-finds-possible-origin-of-treble-clef-waves/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "ChatGPT can peek at your Chrome tabs now",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-15",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Sega pulls Total War: Shogun 2 remaster from sale following disastrous launch",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-15",
       "url": "https://www.theverge.com/games/1012512/sega-total-war-shogun-2-remaster-pulled",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "The tech backlash is now in theaters",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-15",
       "url": "https://www.theverge.com/entertainment/1012438/hollywood-tech-backlash-you-can-see-everything-musk-the-social-reckoning-artificial",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Trump posts AI-edited photo to brag about White House restoration work",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-15",
       "url": "https://www.theverge.com/policy/1012445/donald-trump-ai-photo-white-house-rennovation-column",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Bluesky&#8217;s AI tool now lets you make games and apps to share on social",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-15",
       "url": "https://www.theverge.com/tech/1012374/bluesky-ai-attie-small-social-games-apps",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -153,90 +303,10 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Friends don&#8217;t let friends feed their data to AI agents",
-      "source": "The Verge AI",
-      "date": "2026-10-15",
-      "url": "https://www.theverge.com/tech/1011938/muse-ai-data-friends-consent",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "How Windows is being optimized for Nvidia’s RTX Spark laptops",
-      "source": "The Verge AI",
-      "date": "2026-10-15",
-      "url": "https://www.theverge.com/tech/1011996/microsoft-windows-rtx-spark-platform-changes-notepad",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The Tesla Roadster flew, drove upside down, and hit 60mph in under a second",
-      "source": "The Verge",
-      "date": "2026-10-15",
-      "url": "https://www.theverge.com/transportation/1012552/tesla-roadster-next-gen-reveal-elon-musk",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Steam can now show game achievements in separate ‘sets’",
-      "source": "The Verge",
-      "date": "2026-10-15",
-      "url": "https://www.theverge.com/games/1012541/valve-steam-achievement-sets",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Hackers exploit Collabora RCE flaw to backdoor Nextcloud servers",
       "source": "BleepingComputer",
       "date": "2026-10-15",
       "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-collabora-rce-flaw-to-backdoor-nextcloud-servers/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Android gets AI defenses against messaging scams, fake calls",
-      "source": "BleepingComputer",
-      "date": "2026-10-15",
-      "url": "https://www.bleepingcomputer.com/news/security/android-gets-ai-defenses-against-messaging-scams-fake-calls/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Hackers hijack D-Link, Ubiquiti devices to resell your stolen bandwidth",
-      "source": "BleepingComputer",
-      "date": "2026-10-15",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-d-link-ubiquiti-devices-to-resell-your-stolen-bandwidth/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Fake Arch Linux packages push malware with root privileges",
-      "source": "BleepingComputer",
-      "date": "2026-10-15",
-      "url": "https://www.bleepingcomputer.com/news/security/fake-arch-linux-packages-push-malware-with-root-privileges/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Is AI pentesting as good as a human pentester?",
-      "source": "BleepingComputer",
-      "date": "2026-10-15",
-      "url": "https://www.bleepingcomputer.com/news/security/is-ai-pentesting-as-good-as-a-human-pentester/",
       "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -287,36 +357,6 @@
       "source": "ScienceDaily",
       "date": "2026-10-13",
       "url": "https://www.sciencedaily.com/releases/2026/10/261012185021.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Physicists discover “astonishing” property of light that defies expectations",
-      "source": "ScienceDaily",
-      "date": "2026-10-13",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261011211615.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Scientists recreate a bizarre quantum effect that stops a particle cold",
-      "source": "ScienceDaily",
-      "date": "2026-10-13",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261011211554.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Europe's new Sentinel-3C satellite just sent back spectacular images of Earth",
-      "source": "ScienceDaily",
-      "date": "2026-10-12",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261011211559.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
