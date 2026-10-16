@@ -1,7 +1,47 @@
 {
-  "updated": "2026-10-15",
+  "updated": "2026-10-16",
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
+    {
+      "title": "Time is a-changin’: say goodbye to the leap second",
+      "source": "The Verge",
+      "date": "2026-10-16",
+      "url": "https://www.theverge.com/tech/1012689/leap-second-discontinue-timekeeping-change",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft: October Windows update may break Smart App Control",
+      "source": "BleepingComputer",
+      "date": "2026-10-16",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/kb5127648-windows-security-update-may-break-smart-app-control/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "BAE Systems cyberattack disrupts US federal court operations",
+      "source": "BleepingComputer",
+      "date": "2026-10-16",
+      "url": "https://www.bleepingcomputer.com/news/security/bae-systems-cyberattack-disrupts-us-federal-court-operations/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "BeyondTrust patches zero-day exploited in attacks since August",
+      "source": "BleepingComputer",
+      "date": "2026-10-16",
+      "url": "https://www.bleepingcomputer.com/news/security/beyondtrust-patches-zero-day-exploited-in-attacks-since-august/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "Your secrets aren’t safe with this cute robot toy — they’re on Chinese servers ready to be hacked",
       "source": "The Verge",
@@ -114,10 +154,10 @@
     },
     {
       "title": "Meta and Apple team up to make Muse AI models run better on Macs",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-15",
       "url": "https://www.theverge.com/news/1012293/meta-apple-muse-spark-open-ai-model-mlx",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -288,6 +328,56 @@
       "date": "2026-10-15",
       "url": "https://www.bleepingcomputer.com/news/security/police-arrests-95-suspects-in-child-sexual-abuse-material-crackdown/",
       "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "ChatGPT can peek at your Chrome tabs now",
+      "source": "The Verge",
+      "date": "2026-10-15",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Sega pulls Total War: Shogun 2 remaster from sale following disastrous launch",
+      "source": "The Verge",
+      "date": "2026-10-15",
+      "url": "https://www.theverge.com/games/1012512/sega-total-war-shogun-2-remaster-pulled",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The tech backlash is now in theaters",
+      "source": "The Verge",
+      "date": "2026-10-15",
+      "url": "https://www.theverge.com/entertainment/1012438/hollywood-tech-backlash-you-can-see-everything-musk-the-social-reckoning-artificial",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The Tesla Roadster flew, drove upside down, and hit 60mph in under a second",
+      "source": "The Verge",
+      "date": "2026-10-15",
+      "url": "https://www.theverge.com/transportation/1012552/tesla-roadster-next-gen-reveal-elon-musk",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Steam can now show game achievements in separate ‘sets’",
+      "source": "The Verge",
+      "date": "2026-10-15",
+      "url": "https://www.theverge.com/games/1012541/valve-steam-achievement-sets",
+      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -1797,123 +1887,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
       "titleBs": "Oktobarsko noćno nebo donosi zanimljive astronomske pojave",
       "summaryBs": "Savjeti za posmatranje noćnog neba i kosmičkih objekata.",
-      "translationStatus": "urednicki-naslov"
-    },
-    {
-      "title": "Scientists create a lightsaber-like laser antenna that transmits radio waves",
-      "source": "ScienceDaily",
-      "date": "2026-10-09",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261008005239.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
-      "titleBs": "Naučnici napravili lasersku antenu koja prenosi radiovalove",
-      "summaryBs": "Istraživački rezultat iz oblasti optike i komunikacija.",
-      "translationStatus": "urednicki-naslov"
-    },
-    {
-      "title": "Scientists find hidden materials that could improve batteries and solar fuels",
-      "source": "ScienceDaily",
-      "date": "2026-10-09",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261007042118.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
-      "titleBs": "Pronađeni materijali koji bi mogli poboljšati baterije i solarna goriva",
-      "summaryBs": "Naučni rad o svojstvima novih materijala.",
-      "translationStatus": "urednicki-naslov"
-    },
-    {
-      "title": "Google Cloud predstavio Gemini agenta za radne zadatke",
-      "source": "Reuters",
-      "date": "2026-10-08",
-      "url": "https://www.reuters.com/business/google-cloud-introduces-gemini-agent-work-ai-race-heats-up-2026-10-08/",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "urednicki-odabrano",
-      "description": "Originalni izvor; provjeri naslov i datum na stranici izdavača.",
-      "titleBs": "Google Cloud predstavio Gemini agenta za radne zadatke",
-      "summaryBs": "Poslovna AI rješenja, prema izvornom medijskom izvještaju.",
-      "translationStatus": "urednicki-naslov"
-    },
-    {
-      "title": "NASA Briefing to Highlight Contributions to Martian Moons Mission",
-      "source": "NASA",
-      "date": "2026-10-08",
-      "url": "https://www.nasa.gov/news-release/nasa-briefing-to-highlight-contributions-to-martian-moons-mission/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
-      "titleBs": "NASA najavila informacije o misiji koja istražuje Marsove mjesece",
-      "summaryBs": "Zvanična agencijska najava; termin i ciljevi su u originalu.",
-      "translationStatus": "urednicki-naslov"
-    },
-    {
-      "title": "NASA Announces Bold Science Initiatives for America’s Golden Age Summit",
-      "source": "NASA",
-      "date": "2026-10-08",
-      "url": "https://www.nasa.gov/news-release/nasa-announces-bold-science-initiatives-for-americas-golden-age-summit/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
-      "titleBs": "NASA predstavila nove naučne inicijative na samitu",
-      "summaryBs": "Pojedinosti o inicijativama su u agencijskom izvještaju.",
-      "translationStatus": "urednicki-naslov"
-    },
-    {
-      "title": "NASA is searching for hidden caves to build its first Moon base",
-      "source": "ScienceDaily",
-      "date": "2026-10-08",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261008005247.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
-      "titleBs": "NASA istražuje skrivene mjesečeve pećine kao moguća buduća skloništa",
-      "summaryBs": "Naučna ideja o potencijalnoj infrastrukturi na Mjesecu; ne znači da baza već postoji.",
-      "translationStatus": "urednicki-naslov"
-    },
-    {
-      "title": "Android CLI dobio streaming fizičkih uređaja i nove razvojne vještine",
-      "source": "Android Developers",
-      "date": "2026-10-02",
-      "url": "https://developer.android.com/blog/posts/android-cli-device-streaming-and-skills",
-      "category": "UREĐAJI",
-      "kind": "vanjski",
-      "origin": "urednicki-odabrano",
-      "description": "Originalna službena objava izdavača.",
-      "titleBs": "Android CLI donosi pristup udaljenim fizičkim uređajima",
-      "summaryBs": "Službena objava o alatima za razvoj i testiranje.",
-      "translationStatus": "urednicki-naslov"
-    },
-    {
-      "title": "Instagram Direct: razvoj interfejsa pomoću Jetpack Compose arhitekture",
-      "source": "Android Developers",
-      "date": "2026-09-30",
-      "url": "https://developer.android.com/blog/posts/jetpack-compose-ai-native-ui-instagram-direct",
-      "category": "SOFTVER",
-      "kind": "vanjski",
-      "origin": "urednicki-odabrano",
-      "description": "Studija slučaja sa službenog bloga.",
-      "titleBs": "Instagram Direct koristi pristup zasnovan na Jetpack Composeu",
-      "summaryBs": "Studija o arhitekturi korisničkog interfejsa na Androidu.",
-      "translationStatus": "urednicki-naslov"
-    },
-    {
-      "title": "Google otvorio Android Studio za izbor različitih AI agenata",
-      "source": "Android Developers",
-      "date": "2026-09-24",
-      "url": "https://developer.android.com/blog/posts/build-your-way-use-any-ai-agent-of-your-choice-in-android-studio",
-      "category": "SOFTVER",
-      "kind": "vanjski",
-      "origin": "urednicki-odabrano",
-      "description": "Objava izdavača o razvojnim alatima.",
-      "titleBs": "Android Studio podržava veći izbor AI agenata",
-      "summaryBs": "Najava mogućnosti u službenim Android alatima.",
       "translationStatus": "urednicki-naslov"
     }
   ]

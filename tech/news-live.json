@@ -1,7 +1,47 @@
 {
-  "updated": "2026-10-15",
+  "updated": "2026-10-16",
   "method": "automatski-rss",
   "stories": [
+    {
+      "title": "Time is a-changin’: say goodbye to the leap second",
+      "source": "The Verge",
+      "date": "2026-10-16",
+      "url": "https://www.theverge.com/tech/1012689/leap-second-discontinue-timekeeping-change",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft: October Windows update may break Smart App Control",
+      "source": "BleepingComputer",
+      "date": "2026-10-16",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/kb5127648-windows-security-update-may-break-smart-app-control/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "BAE Systems cyberattack disrupts US federal court operations",
+      "source": "BleepingComputer",
+      "date": "2026-10-16",
+      "url": "https://www.bleepingcomputer.com/news/security/bae-systems-cyberattack-disrupts-us-federal-court-operations/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "BeyondTrust patches zero-day exploited in attacks since August",
+      "source": "BleepingComputer",
+      "date": "2026-10-16",
+      "url": "https://www.bleepingcomputer.com/news/security/beyondtrust-patches-zero-day-exploited-in-attacks-since-august/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "Power Up: Roll Out Solar Arrays Boost Space Station Power Supply",
       "source": "NASA",
@@ -53,6 +93,36 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
+      "title": "ChatGPT can peek at your Chrome tabs now",
+      "source": "The Verge",
+      "date": "2026-10-15",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Sega pulls Total War: Shogun 2 remaster from sale following disastrous launch",
+      "source": "The Verge",
+      "date": "2026-10-15",
+      "url": "https://www.theverge.com/games/1012512/sega-total-war-shogun-2-remaster-pulled",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The tech backlash is now in theaters",
+      "source": "The Verge",
+      "date": "2026-10-15",
+      "url": "https://www.theverge.com/entertainment/1012438/hollywood-tech-backlash-you-can-see-everything-musk-the-social-reckoning-artificial",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
       "title": "Trump posts AI-edited photo to brag about White House restoration work",
       "source": "The Verge",
       "date": "2026-10-15",
@@ -74,10 +144,10 @@
     },
     {
       "title": "Meta and Apple team up to make Muse AI models run better on Macs",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-15",
       "url": "https://www.theverge.com/news/1012293/meta-apple-muse-spark-open-ai-model-mlx",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -103,80 +173,20 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Nobody is safe from celebrity AI deepfakes",
-      "source": "The Verge AI",
-      "date": "2026-10-15",
-      "url": "https://www.theverge.com/report/1011927/instagram-celebrity-ai-slop-likeness-taylor-swift-mia-goth",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Benn Jordan on Flock, privacy, and the new surveillance backlash",
-      "source": "The Verge AI",
-      "date": "2026-10-15",
-      "url": "https://www.theverge.com/podcast/1011170/benn-jordan-flock-cameras-alpr-ai-surveillance-privacy",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Google launches its &#8216;universal&#8217; online shopping cart ahead of the holidays",
-      "source": "The Verge AI",
-      "date": "2026-10-15",
-      "url": "https://www.theverge.com/tech/1011797/google-ai-universal-cart-shopping-tool-launch",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Withings now charges $100 per year to sync your data to other apps",
+      "title": "The Tesla Roadster flew, drove upside down, and hit 60mph in under a second",
       "source": "The Verge",
       "date": "2026-10-15",
-      "url": "https://www.theverge.com/tech/1012350/withings-plus-subscription-new-users-october-13-2026",
+      "url": "https://www.theverge.com/transportation/1012552/tesla-roadster-next-gen-reveal-elon-musk",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Sony made a $5,900 gold-plated Walkman MP3 player",
+      "title": "Steam can now show game achievements in separate ‘sets’",
       "source": "The Verge",
       "date": "2026-10-15",
-      "url": "https://www.theverge.com/tech/1012200/sony-made-a-5900-gold-plated-walkman-mp3-player",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Volvo will use Nvidia’s tech for hands-free, point-to-point driving",
-      "source": "The Verge",
-      "date": "2026-10-15",
-      "url": "https://www.theverge.com/transportation/1011653/volvo-nvidia-autonomous-driving-level-2-hands-free-urban",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Alienware’s latest 34-inch QD-OLED gaming monitor is $50 off",
-      "source": "The Verge",
-      "date": "2026-10-15",
-      "url": "https://www.theverge.com/gadgets/1012134/alienware-34-ultrawide-qd-oled-belkin-screen-skinz-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Google is making inline links more prominent in AI responses",
-      "source": "The Verge",
-      "date": "2026-10-15",
-      "url": "https://www.theverge.com/tech/1012206/google-ai-mode-overview-inline-links",
+      "url": "https://www.theverge.com/games/1012541/valve-steam-achievement-sets",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -227,36 +237,6 @@
       "source": "BleepingComputer",
       "date": "2026-10-15",
       "url": "https://www.bleepingcomputer.com/news/security/is-ai-pentesting-as-good-as-a-human-pentester/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Microsoft: Windows Server 2022 reached end of mainstream support",
-      "source": "BleepingComputer",
-      "date": "2026-10-15",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2022-reached-end-of-mainstream-support/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Police arrests 95 suspects in international CSAM crackdown action",
-      "source": "BleepingComputer",
-      "date": "2026-10-15",
-      "url": "https://www.bleepingcomputer.com/news/security/police-arrests-95-suspects-in-child-sexual-abuse-material-crackdown/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Microsoft fixes bug causing Windows black screens, Explorer crashes",
-      "source": "BleepingComputer",
-      "date": "2026-10-15",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-bug-causing-windows-black-screens-explorer-crashes/",
       "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
