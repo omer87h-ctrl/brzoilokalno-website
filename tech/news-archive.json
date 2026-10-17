@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16",
+  "updated": "2026-10-17",
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
     {
@@ -74,10 +74,10 @@
     },
     {
       "title": "A week with RTX Spark: everything we’ve learned using Nvidia’s new laptops",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-16",
       "url": "https://www.theverge.com/tech/1012748/nvidia-rtx-spark-windows-arm-laptops-asus-hp-lenovo-impressions",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -228,6 +228,26 @@
       "date": "2026-10-16",
       "url": "https://www.sciencedaily.com/releases/2026/10/261014015507.htm",
       "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "All the news about the iPhone Duo",
+      "source": "The Verge",
+      "date": "2026-10-16",
+      "url": "https://www.theverge.com/tech/1010131/apple-iphone-duo-news-announcements",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Apple&#8217;s updated App Store rules go after &#8216;nudify&#8217; AI apps",
+      "source": "The Verge",
+      "date": "2026-10-16",
+      "url": "https://www.theverge.com/tech/1013314/apple-app-store-nudify-ai-apps-harassment",
+      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -1804,32 +1824,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
       "titleBs": "Muzička zvijezda Sunmi govori o Notionu i internetskim navikama",
       "summaryBs": "Intervju o digitalnim alatima i sadržajima koje koristi umjetnica.",
-      "translationStatus": "urednicki-naslov"
-    },
-    {
-      "title": "Will Warner Bros. kill Skydance — or will David Ellison kill Warner Bros?",
-      "source": "The Verge",
-      "date": "2026-10-10",
-      "url": "https://www.theverge.com/podcast/1008733/warner-skydance-paramount-ellison-debt-failure",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
-      "titleBs": "Šta će biti s Warner Brosom i Skydanceom?",
-      "summaryBs": "Medijska industrija i vlasnički odnosi u fokusu su vanjskog izvještaja.",
-      "translationStatus": "urednicki-naslov"
-    },
-    {
-      "title": "LG’s RGB LED TV is good for certain situations, but an OLED is better",
-      "source": "The Verge",
-      "date": "2026-10-10",
-      "url": "https://www.theverge.com/tech/1008957/lg-mrgb95b-rgb-led-tv-review",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
-      "titleBs": "LG-ov RGB LED televizor: u nekim uslovima dobar, OLED ima prednost",
-      "summaryBs": "Utisci izdavača o tehnologijama televizijskih ekrana; ovo nije naše nezavisno testiranje.",
       "translationStatus": "urednicki-naslov"
     }
   ]

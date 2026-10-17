@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16",
+  "updated": "2026-10-17",
   "method": "automatski-rss",
   "stories": [
     {
@@ -34,10 +34,10 @@
     },
     {
       "title": "A week with RTX Spark: everything we’ve learned using Nvidia’s new laptops",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-16",
       "url": "https://www.theverge.com/tech/1012748/nvidia-rtx-spark-windows-arm-laptops-asus-hp-lenovo-impressions",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -48,6 +48,26 @@
       "date": "2026-10-16",
       "url": "https://www.theverge.com/tech/1012846/meta-business-terms-scrape-news-publishers",
       "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "All the news about the iPhone Duo",
+      "source": "The Verge",
+      "date": "2026-10-16",
+      "url": "https://www.theverge.com/tech/1010131/apple-iphone-duo-news-announcements",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Apple&#8217;s updated App Store rules go after &#8216;nudify&#8217; AI apps",
+      "source": "The Verge",
+      "date": "2026-10-16",
+      "url": "https://www.theverge.com/tech/1013314/apple-app-store-nudify-ai-apps-harassment",
+      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -107,16 +127,6 @@
       "source": "The Verge",
       "date": "2026-10-16",
       "url": "https://www.theverge.com/tech/1012901/analogue-retro-console-supern-nt-plus-nintendo-sega-genesis-mega-plus",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A fake WhatsApp clone is showing up before the real version on the Play Store",
-      "source": "The Verge",
-      "date": "2026-10-16",
-      "url": "https://www.theverge.com/tech/1012918/google-play-store-fake-whatsapp-android",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -227,16 +237,6 @@
       "source": "NASA",
       "date": "2026-10-15",
       "url": "https://www.nasa.gov/missions/station/iss-research/power-up-roll-out-solar-arrays-boost-space-station-power-supply/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA to Conduct Low-Altitude Flights Over Texas Farmland",
-      "source": "NASA",
-      "date": "2026-10-15",
-      "url": "https://www.nasa.gov/general/nasa-to-conduct-low-altitude-flights-over-texas-farmland/",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
