@@ -3,6 +3,126 @@
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
     {
+      "title": "Meta removes language that may have allowed it to scrape news sites",
+      "source": "The Verge",
+      "date": "2026-10-17",
+      "url": "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Websites are closing their doors to AI agents",
+      "source": "The Verge",
+      "date": "2026-10-17",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "TikTok bans Musk documentary account",
+      "source": "The Verge",
+      "date": "2026-10-17",
+      "url": "https://www.theverge.com/tech/1013453/tiktok-bans-alex-gibneys-musk-documentary",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Mercedes-AMG’s first ground-up SUV is a 1,150hp electric beast",
+      "source": "The Verge",
+      "date": "2026-10-17",
+      "url": "https://www.theverge.com/transportation/1013088/mercedes-amg-gt-suv-price-specs-performance",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Elon Musk settles lawsuits over $1 million voter giveaway",
+      "source": "The Verge",
+      "date": "2026-10-17",
+      "url": "https://www.theverge.com/tech/1013431/elon-musk-settles-lawsuits-over-1-million-voter-giveaway",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Pikmin 4 is $20 off ahead of its $10 Nintendo Switch 2 update",
+      "source": "The Verge",
+      "date": "2026-10-17",
+      "url": "https://www.theverge.com/gadgets/1013105/pikmin-4-nintendo-switch-deal-sale",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Jad Abumrad loves a butterfly knife and a good springy pillow",
+      "source": "The Verge",
+      "date": "2026-10-17",
+      "url": "https://www.theverge.com/entertainment/1013381/jad-abumrad-radiolab-dolly-parton-fela-kuti-podcast-interview",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "SpaceX’s ambitious, expensive gamble to replace AT&#038;T, T-Mobile, and Verizon",
+      "source": "The Verge",
+      "date": "2026-10-17",
+      "url": "https://www.theverge.com/podcast/1012416/spacex-starlink-elon-musk-cell-carrier-wireless-mobile-att-verizon-t-mobile",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Hackers breach Microsoft 365 tenants via ConnectWise supply-chain attack",
+      "source": "BleepingComputer",
+      "date": "2026-10-17",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Drupal patches critical RCE flaws, warns exploits may emerge soon",
+      "source": "BleepingComputer",
+      "date": "2026-10-17",
+      "url": "https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaws-warns-exploits-may-emerge-soon/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA’s Roman Space Telescope exceeds expectations by nearly 30%",
+      "source": "ScienceDaily",
+      "date": "2026-10-17",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261016070630.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA’s Webb reveals the wild weather of a mysterious world 20 light-years away",
+      "source": "ScienceDaily",
+      "date": "2026-10-17",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261015073215.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
       "title": "Time is a-changin’: say goodbye to the leap second",
       "source": "The Verge",
       "date": "2026-10-16",
@@ -248,6 +368,26 @@
       "date": "2026-10-16",
       "url": "https://www.theverge.com/tech/1013314/apple-app-store-nudify-ai-apps-harassment",
       "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "SpaceX just delivered some very strange cargo to the International Space Station",
+      "source": "ScienceDaily",
+      "date": "2026-10-16",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261016070628.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "James Webb reveals a strange bulge in an alien planet's atmosphere",
+      "source": "ScienceDaily",
+      "date": "2026-10-16",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261015073205.htm",
+      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -1664,167 +1804,6 @@
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Vurt wants you to look at vertical videos as a genre of their own",
-      "source": "The Verge",
-      "date": "2026-10-11",
-      "url": "https://www.theverge.com/entertainment/1008720/vurt-microdramas-verticals-interview-hilmon-sorey",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "What to expect from Apple’s ‘Welcome Home’ event",
-      "source": "The Verge",
-      "date": "2026-10-11",
-      "url": "https://www.theverge.com/tech/1009317/apple-what-to-expect-welcome-home",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Horror is big business",
-      "source": "The Verge",
-      "date": "2026-10-11",
-      "url": "https://www.theverge.com/column/1008432/horror-popular-widows-bay-resident-evil",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Nippon Columbia malware incident exposes 8.6 million karaoke fan records",
-      "source": "BleepingComputer",
-      "date": "2026-10-11",
-      "url": "https://www.bleepingcomputer.com/news/security/nippon-columbia-malware-incident-exposes-86-million-karaoke-fan-records/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Scientists make stunning discovery that could help explain why life exists",
-      "source": "ScienceDaily",
-      "date": "2026-10-11",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261009025602.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The hidden math of Alzheimer's could point to new treatments",
-      "source": "ScienceDaily",
-      "date": "2026-10-11",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261008102714.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA spots a giant patch of Moon-like rock on Earth",
-      "source": "ScienceDaily",
-      "date": "2026-10-11",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261008102707.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA to Conduct Flyover, Engage NFL Fans at MetLife Stadium",
-      "source": "NASA",
-      "date": "2026-10-10",
-      "url": "https://www.nasa.gov/news-release/nasa-to-conduct-flyover-engage-nfl-fans-at-metlife-stadium/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
-      "titleBs": "NASA najavila prelet aviona iznad stadiona MetLife",
-      "summaryBs": "NASA je objavila najavu preleta i aktivnosti s navijačima; termin provjeri u izvornoj objavi.",
-      "translationStatus": "urednicki-naslov"
-    },
-    {
-      "title": "Satya Nadella says we should assume all AI models are ‘compromised’",
-      "source": "The Verge AI",
-      "date": "2026-10-10",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1009337/satya-nadella-says-we-should-assume-all-ai-models-are-compromised",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
-      "titleBs": "Satya Nadella: treba pretpostaviti da su svi AI modeli kompromitovani",
-      "summaryBs": "Izjava o sigurnosti i pouzdanosti AI modela; puni kontekst nalazi se kod izdavača.",
-      "translationStatus": "urednicki-naslov"
-    },
-    {
-      "title": "DistroKid has been quietly taking down songs in response to UMG lawsuit",
-      "source": "The Verge AI",
-      "date": "2026-10-10",
-      "url": "https://www.theverge.com/entertainment/1009309/distrokid-take-down-songs-umg-lawsuit",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
-      "titleBs": "DistroKid uklanja pjesme nakon tužbe Universal Music Groupa",
-      "summaryBs": "Vijest o distribuciji muzike i autorskim pravima; provjeri pojedinosti u originalu.",
-      "translationStatus": "urednicki-naslov"
-    },
-    {
-      "title": "Anthropic is cutting off its internal evaluations from the internet",
-      "source": "The Verge AI",
-      "date": "2026-10-10",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1009286/anthropic-is-cutting-off-its-internal-evaluations-from-the-internet",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
-      "titleBs": "Anthropic ograničava internetski pristup svojim internim AI evaluacijama",
-      "summaryBs": "Tema je sigurnost postupaka interne provjere AI sistema.",
-      "translationStatus": "urednicki-naslov"
-    },
-    {
-      "title": "AI agent makers are promising privacy — will they deliver?",
-      "source": "The Verge AI",
-      "date": "2026-10-10",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1009051/privacy-ai-agent-promises-openai-meta-muse-dots",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
-      "titleBs": "Proizvođači AI agenata obećavaju privatnost — mogu li to ispuniti?",
-      "summaryBs": "Pregled pitanja zaštite podataka u sistemima koji autonomno koriste alate.",
-      "translationStatus": "urednicki-naslov"
-    },
-    {
-      "title": "Ledger wallet tampering suspected after reports of crypto thefts",
-      "source": "The Verge",
-      "date": "2026-10-10",
-      "url": "https://www.theverge.com/tech/1009294/ledger-wallet-tampering-suspected-after-reports-of-crypto-thefts",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
-      "titleBs": "Sumnja na prepravke Ledger novčanika nakon izvještaja o krađama kriptovaluta",
-      "summaryBs": "Sigurnosne tvrdnje i rizike treba procijeniti na osnovu izvorne objave.",
-      "translationStatus": "urednicki-naslov"
-    },
-    {
-      "title": "K-pop star Sunmi loves Notion and ear cleaning videos",
-      "source": "The Verge",
-      "date": "2026-10-10",
-      "url": "https://www.theverge.com/entertainment/1008654/k-pop-sunmi-wonder-girls-interview",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
-      "titleBs": "Muzička zvijezda Sunmi govori o Notionu i internetskim navikama",
-      "summaryBs": "Intervju o digitalnim alatima i sadržajima koje koristi umjetnica.",
-      "translationStatus": "urednicki-naslov"
     }
   ]
 }
