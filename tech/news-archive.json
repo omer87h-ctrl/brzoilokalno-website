@@ -3,21 +3,151 @@
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
     {
-      "title": "Meta removes language that may have allowed it to scrape news sites",
+      "title": "A woman was arrested in Philly for blocking a delivery robot",
       "source": "The Verge",
-      "date": "2026-10-17",
-      "url": "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites",
+      "date": "2026-10-18",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1013541/a-woman-was-arrested-in-philly-for-blocking-a-delivery-robot",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Websites are closing their doors to AI agents",
+      "title": "Mister Organ is one of the most unsettling documentaries I’ve ever seen",
       "source": "The Verge",
+      "date": "2026-10-18",
+      "url": "https://www.theverge.com/entertainment/1013545/mister-organ-horror-documentary-review",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Video game ownership bill introduced in Congress",
+      "source": "The Verge",
+      "date": "2026-10-18",
+      "url": "https://www.theverge.com/policy/1013521/video-game-ownership-bill-congress-power-to-the-players-act",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Lenovo’s fast, comfy SteamOS handheld is hundreds off",
+      "source": "The Verge",
+      "date": "2026-10-18",
+      "url": "https://www.theverge.com/gadgets/1013436/lenovo-legion-go-s-steamos-handheld-deal-sale",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "J Mascis has nothing better to do",
+      "source": "The Verge",
+      "date": "2026-10-18",
+      "url": "https://www.theverge.com/entertainment/1012442/j-mascis-dinosaur-jr-fender-interview",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Trump says Google kisses his ass",
+      "source": "The Verge",
+      "date": "2026-10-18",
+      "url": "https://www.theverge.com/policy/1013485/trump-google-kiss-my-ass",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The best gadget I bought this year is a milk frother",
+      "source": "The Verge",
+      "date": "2026-10-18",
+      "url": "https://www.theverge.com/gadgets/1013257/milk-frother-cold-foam-gadget",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "How overhead projectors took over your classroom",
+      "source": "The Verge",
+      "date": "2026-10-18",
+      "url": "https://www.theverge.com/podcast/1013473/overhead-projector-version-history",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Hackers exploit SiteGuard WAF flaw to run commands as admins",
+      "source": "BleepingComputer",
+      "date": "2026-10-18",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Physicists create a bizarre new quantum state called a fractional fermi sea",
+      "source": "ScienceDaily",
+      "date": "2026-10-18",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261018084644.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists who discovered a third form of magnetism win major physics prize",
+      "source": "ScienceDaily",
+      "date": "2026-10-18",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261017230035.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Two monster black holes could collide in just 100 years",
+      "source": "ScienceDaily",
+      "date": "2026-10-18",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261016070650.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA’s SpaceX launch lights up the sky with a giant glowing jellyfish",
+      "source": "ScienceDaily",
+      "date": "2026-10-18",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261016070635.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Meta removes language that may have allowed it to scrape news sites",
+      "source": "The Verge AI",
+      "date": "2026-10-17",
+      "url": "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Websites are closing their doors to AI agents",
+      "source": "The Verge AI",
       "date": "2026-10-17",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -1667,139 +1797,6 @@
       "source": "The Verge",
       "date": "2026-10-12",
       "url": "https://www.theverge.com/tech/1009604/elon-musk-2026-midterm-republican-donations",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The Yandex outage probably didn’t blitz Russian bots",
-      "source": "The Verge",
-      "date": "2026-10-12",
-      "url": "https://www.theverge.com/tech/1009594/russian-bots-yandex-outage-drone-strikes-debunk",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Norway fines Microsoft ad firm $9.6 million over Grindr data sharing",
-      "source": "BleepingComputer",
-      "date": "2026-10-12",
-      "url": "https://www.bleepingcomputer.com/news/security/norway-fines-microsoft-ad-firm-96-million-over-grindr-data-sharing/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Yandex confirms service outage as users lose access to cloud files",
-      "source": "BleepingComputer",
-      "date": "2026-10-12",
-      "url": "https://www.bleepingcomputer.com/news/security/yandex-confirms-service-outage-as-users-lose-access-to-cloud-files/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Anthropic takes risky AI tests offline after models breach govt sites",
-      "source": "BleepingComputer",
-      "date": "2026-10-12",
-      "url": "https://www.bleepingcomputer.com/news/security/anthropic-takes-risky-ai-tests-offline-after-models-breach-govt-sites/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
-      "source": "BleepingComputer",
-      "date": "2026-10-12",
-      "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Europe's new Sentinel-3C satellite just sent back spectacular images of Earth",
-      "source": "ScienceDaily",
-      "date": "2026-10-12",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261011211559.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Scientists build a nuclear clock that could make atomic clocks obsolete",
-      "source": "ScienceDaily",
-      "date": "2026-10-11",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261008102701.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original.",
-      "titleBs": "Naučnici razvili nuklearni sat koji bi mogao nadmašiti atomske satove",
-      "summaryBs": "Istraživači predstavljaju razvoj nuklearnog mjerenja vremena; detalji i ograničenja su u izvornom članku.",
-      "translationStatus": "urednicki-naslov"
-    },
-    {
-      "title": "Silicon Valley is falling in line with Trump’s attempt to rename AI",
-      "source": "The Verge AI",
-      "date": "2026-10-11",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1009406/silicon-valley-is-falling-in-line-with-trumps-attempt-to-rename-ai",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Learning to use local AI is exciting, overwhelming, and frustrating",
-      "source": "The Verge AI",
-      "date": "2026-10-11",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1008484/learning-local-ai-hermes-qwen-model-mac-studio-testing-diary-progress",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A college in Illinois tried to cancel its Flock contact and it refused",
-      "source": "The Verge",
-      "date": "2026-10-11",
-      "url": "https://www.theverge.com/tech/1009411/elgin-community-college-flock-safety-cameras",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The new Apple TV could have a built-in mic and a remote with a speaker",
-      "source": "The Verge",
-      "date": "2026-10-11",
-      "url": "https://www.theverge.com/tech/1009397/apple-tv-refresh-built-in-mic-remote-speaker",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA dumped over 800GB of Artemis II data online",
-      "source": "The Verge",
-      "date": "2026-10-11",
-      "url": "https://www.theverge.com/science/1009379/nasa-800gb-artemis-ii-data",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "George A. Romero’s Season of the Witch is a slow-burn feminist occult drama",
-      "source": "The Verge",
-      "date": "2026-10-11",
-      "url": "https://www.theverge.com/entertainment/1009346/george-a-romero-season-of-the-witch-feminist-horror-review",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",

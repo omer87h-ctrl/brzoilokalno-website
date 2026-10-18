@@ -3,81 +3,151 @@
   "method": "automatski-rss",
   "stories": [
     {
-      "title": "Meta removes language that may have allowed it to scrape news sites",
+      "title": "A woman was arrested in Philly for blocking a delivery robot",
       "source": "The Verge",
+      "date": "2026-10-18",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1013541/a-woman-was-arrested-in-philly-for-blocking-a-delivery-robot",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Mister Organ is one of the most unsettling documentaries I’ve ever seen",
+      "source": "The Verge",
+      "date": "2026-10-18",
+      "url": "https://www.theverge.com/entertainment/1013545/mister-organ-horror-documentary-review",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Video game ownership bill introduced in Congress",
+      "source": "The Verge",
+      "date": "2026-10-18",
+      "url": "https://www.theverge.com/policy/1013521/video-game-ownership-bill-congress-power-to-the-players-act",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Lenovo’s fast, comfy SteamOS handheld is hundreds off",
+      "source": "The Verge",
+      "date": "2026-10-18",
+      "url": "https://www.theverge.com/gadgets/1013436/lenovo-legion-go-s-steamos-handheld-deal-sale",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "J Mascis has nothing better to do",
+      "source": "The Verge",
+      "date": "2026-10-18",
+      "url": "https://www.theverge.com/entertainment/1012442/j-mascis-dinosaur-jr-fender-interview",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Trump says Google kisses his ass",
+      "source": "The Verge",
+      "date": "2026-10-18",
+      "url": "https://www.theverge.com/policy/1013485/trump-google-kiss-my-ass",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The best gadget I bought this year is a milk frother",
+      "source": "The Verge",
+      "date": "2026-10-18",
+      "url": "https://www.theverge.com/gadgets/1013257/milk-frother-cold-foam-gadget",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "How overhead projectors took over your classroom",
+      "source": "The Verge",
+      "date": "2026-10-18",
+      "url": "https://www.theverge.com/podcast/1013473/overhead-projector-version-history",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Hackers exploit SiteGuard WAF flaw to run commands as admins",
+      "source": "BleepingComputer",
+      "date": "2026-10-18",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Physicists create a bizarre new quantum state called a fractional fermi sea",
+      "source": "ScienceDaily",
+      "date": "2026-10-18",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261018084644.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists who discovered a third form of magnetism win major physics prize",
+      "source": "ScienceDaily",
+      "date": "2026-10-18",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261017230035.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Two monster black holes could collide in just 100 years",
+      "source": "ScienceDaily",
+      "date": "2026-10-18",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261016070650.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA’s SpaceX launch lights up the sky with a giant glowing jellyfish",
+      "source": "ScienceDaily",
+      "date": "2026-10-18",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261016070635.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Meta removes language that may have allowed it to scrape news sites",
+      "source": "The Verge AI",
       "date": "2026-10-17",
       "url": "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Websites are closing their doors to AI agents",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-17",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "TikTok bans Musk documentary account",
-      "source": "The Verge",
-      "date": "2026-10-17",
-      "url": "https://www.theverge.com/tech/1013453/tiktok-bans-alex-gibneys-musk-documentary",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Mercedes-AMG’s first ground-up SUV is a 1,150hp electric beast",
-      "source": "The Verge",
-      "date": "2026-10-17",
-      "url": "https://www.theverge.com/transportation/1013088/mercedes-amg-gt-suv-price-specs-performance",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Elon Musk settles lawsuits over $1 million voter giveaway",
-      "source": "The Verge",
-      "date": "2026-10-17",
-      "url": "https://www.theverge.com/tech/1013431/elon-musk-settles-lawsuits-over-1-million-voter-giveaway",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Pikmin 4 is $20 off ahead of its $10 Nintendo Switch 2 update",
-      "source": "The Verge",
-      "date": "2026-10-17",
-      "url": "https://www.theverge.com/gadgets/1013105/pikmin-4-nintendo-switch-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Jad Abumrad loves a butterfly knife and a good springy pillow",
-      "source": "The Verge",
-      "date": "2026-10-17",
-      "url": "https://www.theverge.com/entertainment/1013381/jad-abumrad-radiolab-dolly-parton-fela-kuti-podcast-interview",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "SpaceX’s ambitious, expensive gamble to replace AT&#038;T, T-Mobile, and Verizon",
-      "source": "The Verge",
-      "date": "2026-10-17",
-      "url": "https://www.theverge.com/podcast/1012416/spacex-starlink-elon-musk-cell-carrier-wireless-mobile-att-verizon-t-mobile",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -223,16 +293,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "BAE Systems cyberattack disrupts US federal court operations",
-      "source": "BleepingComputer",
-      "date": "2026-10-16",
-      "url": "https://www.bleepingcomputer.com/news/security/bae-systems-cyberattack-disrupts-us-federal-court-operations/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "SpaceX just delivered some very strange cargo to the International Space Station",
       "source": "ScienceDaily",
       "date": "2026-10-16",
@@ -247,36 +307,6 @@
       "source": "ScienceDaily",
       "date": "2026-10-16",
       "url": "https://www.sciencedaily.com/releases/2026/10/261015073218.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "James Webb reveals a strange bulge in an alien planet's atmosphere",
-      "source": "ScienceDaily",
-      "date": "2026-10-16",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261015073205.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A quantum highway just one atom high could transform superconductors",
-      "source": "ScienceDaily",
-      "date": "2026-10-16",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261014072018.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Astronomers discover a strange universal rule behind black hole eruptions",
-      "source": "ScienceDaily",
-      "date": "2026-10-16",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261014015507.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -308,26 +338,6 @@
       "date": "2026-10-15",
       "url": "https://www.theverge.com/entertainment/1012438/hollywood-tech-backlash-you-can-see-everything-musk-the-social-reckoning-artificial",
       "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Trump posts AI-edited photo to brag about White House restoration work",
-      "source": "The Verge AI",
-      "date": "2026-10-15",
-      "url": "https://www.theverge.com/policy/1012445/donald-trump-ai-photo-white-house-rennovation-column",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "AI reveals a hidden chemical shortcut that could turn CO2 into fuel",
-      "source": "ScienceDaily",
-      "date": "2026-10-14",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261013015758.htm",
-      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
