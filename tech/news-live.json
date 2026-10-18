@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17",
+  "updated": "2026-10-18",
   "method": "automatski-rss",
   "stories": [
     {
@@ -277,16 +277,6 @@
       "source": "ScienceDaily",
       "date": "2026-10-16",
       "url": "https://www.sciencedaily.com/releases/2026/10/261014015507.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Power Up: Roll Out Solar Arrays Boost Space Station Power Supply",
-      "source": "NASA",
-      "date": "2026-10-15",
-      "url": "https://www.nasa.gov/missions/station/iss-research/power-up-roll-out-solar-arrays-boost-space-station-power-supply/",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
