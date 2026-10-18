@@ -31,6 +31,16 @@ window.BL_PORTAL_CONTENT={
       "href": "./clanci/sta-zaista-znaci-besplatan-softver.html"
     },
     {
+      "id": "blclea7-bi-vam-se-mogla-dopasti",
+      "title": "BLclea7 bi vam se mogla dopasti",
+      "summary": "Razvojno okruženje koje želi omogućiti i ljudima bez programerskog iskustva da naprave vlastite aplikacije.",
+      "category": "Projekti",
+      "kind": "PROJEKTI / RAZVOJ SOFTVERA",
+      "art": "BL CLEA7",
+      "artClass": "art-app",
+      "href": "./clanci/blclea7-bi-vam-se-mogla-dopasti.html"
+    },
+    {
       "id": "pwa-ili-android",
       "title": "PWA ili Android: šta korisniku stvarno treba?",
       "summary": "Dvije tehnologije, jedan cilj: da proizvod bude koristan i razumljiv.",
