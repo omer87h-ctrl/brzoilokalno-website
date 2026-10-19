@@ -1,7 +1,67 @@
 {
-  "updated": "2026-10-18",
+  "updated": "2026-10-19",
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
+    {
+      "title": "Democrats think cracking down on AI could give them an edge",
+      "source": "The Verge",
+      "date": "2026-10-19",
+      "url": "https://www.theverge.com/policy/1013113/democrats-ai-midterms",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Wyze moved the screen on its new smart scale to the handle so it’s easier to read at eye level",
+      "source": "The Verge",
+      "date": "2026-10-19",
+      "url": "https://www.theverge.com/tech/1013081/wyze-smart-scale-ultra-bodyscan-plus-handle-display",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Vibe coding is turning the music gear world upside down",
+      "source": "The Verge",
+      "date": "2026-10-19",
+      "url": "https://www.theverge.com/gadgets/1013493/vibe-coding-ai-music-gear-hacking-custom-firmware",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The Maeving RM2 is high-style electric riding with a few compromises",
+      "source": "The Verge",
+      "date": "2026-10-19",
+      "url": "https://www.theverge.com/transportation/1013049/maeving-rm2-electric-motorcycle-review-specs",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft fixes classic Outlook bug that hid Copilot buttons",
+      "source": "BleepingComputer",
+      "date": "2026-10-19",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-bug-that-hid-copilot-buttons-in-classic-outlook/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft: October Windows Server updates break Exchange sign-in, mail flow",
+      "source": "BleepingComputer",
+      "date": "2026-10-19",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-october-windows-server-updates-cause-exchange-issues/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "A woman was arrested in Philly for blocking a delivery robot",
       "source": "The Verge",
@@ -128,6 +188,16 @@
       "date": "2026-10-18",
       "url": "https://www.sciencedaily.com/releases/2026/10/261016070635.htm",
       "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A Savannah police officer gave her Flock login to her ICE agent husband",
+      "source": "The Verge",
+      "date": "2026-10-18",
+      "url": "https://www.theverge.com/policy/1013573/spd-officer-fired-flock-ice-husband",
+      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -1728,76 +1798,6 @@
       "date": "2026-10-12",
       "url": "https://www.bleepingcomputer.com/news/security/inside-avisloader-a-windows-malware-loader-built-to-resist-disruption/",
       "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Retail giant Ahold Delhaize takes systems offline after cyberattack",
-      "source": "BleepingComputer",
-      "date": "2026-10-12",
-      "url": "https://www.bleepingcomputer.com/news/security/retail-giant-ahold-delhaize-takes-systems-offline-after-cyberattack/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "GitLab warns of max severity code execution vulnerability",
-      "source": "BleepingComputer",
-      "date": "2026-10-12",
-      "url": "https://www.bleepingcomputer.com/news/security/gitlab-warns-of-max-severity-rce-flaw-in-regex-compiler-engine/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Microsoft: Windows 11 23H2 reaches end of support in 30 days",
-      "source": "BleepingComputer",
-      "date": "2026-10-12",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-11-23h2-reaches-end-of-support-in-30-days/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Scientists discover a hidden factor that can make or break chemical reactions",
-      "source": "ScienceDaily",
-      "date": "2026-10-12",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261008005244.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Meta has some Wonder Full new AI models",
-      "source": "The Verge AI",
-      "date": "2026-10-12",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1009479/meta-muse-wonder-full-ai-model",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The Social Reckoning is flopping at the box office",
-      "source": "The Verge",
-      "date": "2026-10-12",
-      "url": "https://www.theverge.com/entertainment/1009630/social-reckoning-box-office-other-mommy",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Elon Musk has donated over $276 million to Republican midterm efforts",
-      "source": "The Verge",
-      "date": "2026-10-12",
-      "url": "https://www.theverge.com/tech/1009604/elon-musk-2026-midterm-republican-donations",
-      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."

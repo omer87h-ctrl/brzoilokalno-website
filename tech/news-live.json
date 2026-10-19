@@ -1,12 +1,82 @@
 {
-  "updated": "2026-10-18",
+  "updated": "2026-10-19",
   "method": "automatski-rss",
   "stories": [
+    {
+      "title": "Democrats think cracking down on AI could give them an edge",
+      "source": "The Verge",
+      "date": "2026-10-19",
+      "url": "https://www.theverge.com/policy/1013113/democrats-ai-midterms",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Wyze moved the screen on its new smart scale to the handle so it’s easier to read at eye level",
+      "source": "The Verge",
+      "date": "2026-10-19",
+      "url": "https://www.theverge.com/tech/1013081/wyze-smart-scale-ultra-bodyscan-plus-handle-display",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Vibe coding is turning the music gear world upside down",
+      "source": "The Verge",
+      "date": "2026-10-19",
+      "url": "https://www.theverge.com/gadgets/1013493/vibe-coding-ai-music-gear-hacking-custom-firmware",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The Maeving RM2 is high-style electric riding with a few compromises",
+      "source": "The Verge",
+      "date": "2026-10-19",
+      "url": "https://www.theverge.com/transportation/1013049/maeving-rm2-electric-motorcycle-review-specs",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft fixes classic Outlook bug that hid Copilot buttons",
+      "source": "BleepingComputer",
+      "date": "2026-10-19",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-bug-that-hid-copilot-buttons-in-classic-outlook/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft: October Windows Server updates break Exchange sign-in, mail flow",
+      "source": "BleepingComputer",
+      "date": "2026-10-19",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-october-windows-server-updates-cause-exchange-issues/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "A woman was arrested in Philly for blocking a delivery robot",
       "source": "The Verge",
       "date": "2026-10-18",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1013541/a-woman-was-arrested-in-philly-for-blocking-a-delivery-robot",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A Savannah police officer gave her Flock login to her ICE agent husband",
+      "source": "The Verge",
+      "date": "2026-10-18",
+      "url": "https://www.theverge.com/policy/1013573/spd-officer-fired-flock-ice-husband",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -33,101 +103,11 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Lenovo’s fast, comfy SteamOS handheld is hundreds off",
-      "source": "The Verge",
-      "date": "2026-10-18",
-      "url": "https://www.theverge.com/gadgets/1013436/lenovo-legion-go-s-steamos-handheld-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "J Mascis has nothing better to do",
-      "source": "The Verge",
-      "date": "2026-10-18",
-      "url": "https://www.theverge.com/entertainment/1012442/j-mascis-dinosaur-jr-fender-interview",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Trump says Google kisses his ass",
-      "source": "The Verge",
-      "date": "2026-10-18",
-      "url": "https://www.theverge.com/policy/1013485/trump-google-kiss-my-ass",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The best gadget I bought this year is a milk frother",
-      "source": "The Verge",
-      "date": "2026-10-18",
-      "url": "https://www.theverge.com/gadgets/1013257/milk-frother-cold-foam-gadget",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "How overhead projectors took over your classroom",
-      "source": "The Verge",
-      "date": "2026-10-18",
-      "url": "https://www.theverge.com/podcast/1013473/overhead-projector-version-history",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Hackers exploit SiteGuard WAF flaw to run commands as admins",
       "source": "BleepingComputer",
       "date": "2026-10-18",
       "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/",
       "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Physicists create a bizarre new quantum state called a fractional fermi sea",
-      "source": "ScienceDaily",
-      "date": "2026-10-18",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261018084644.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Scientists who discovered a third form of magnetism win major physics prize",
-      "source": "ScienceDaily",
-      "date": "2026-10-18",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261017230035.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Two monster black holes could collide in just 100 years",
-      "source": "ScienceDaily",
-      "date": "2026-10-18",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261016070650.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA’s SpaceX launch lights up the sky with a giant glowing jellyfish",
-      "source": "ScienceDaily",
-      "date": "2026-10-18",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261016070635.htm",
-      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -168,26 +148,6 @@
       "date": "2026-10-17",
       "url": "https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaws-warns-exploits-may-emerge-soon/",
       "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA’s Roman Space Telescope exceeds expectations by nearly 30%",
-      "source": "ScienceDaily",
-      "date": "2026-10-17",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261016070630.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA’s Webb reveals the wild weather of a mysterious world 20 light-years away",
-      "source": "ScienceDaily",
-      "date": "2026-10-17",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261015073215.htm",
-      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -273,46 +233,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Burger King Japan data breach exposes 11 million customer records",
-      "source": "BleepingComputer",
-      "date": "2026-10-16",
-      "url": "https://www.bleepingcomputer.com/news/security/burger-king-japan-data-breach-exposes-11-million-customer-records/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Microsoft: October Windows update may break Smart App Control",
-      "source": "BleepingComputer",
-      "date": "2026-10-16",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/kb5127648-windows-security-update-may-break-smart-app-control/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "SpaceX just delivered some very strange cargo to the International Space Station",
-      "source": "ScienceDaily",
-      "date": "2026-10-16",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261016070628.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The uranium cubes that exposed Nazi Germany’s nuclear failure",
-      "source": "ScienceDaily",
-      "date": "2026-10-16",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261015073218.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "ChatGPT can peek at your Chrome tabs now",
       "source": "The Verge AI",
       "date": "2026-10-15",
@@ -327,16 +247,6 @@
       "source": "The Verge AI",
       "date": "2026-10-15",
       "url": "https://www.theverge.com/games/1012512/sega-total-war-shogun-2-remaster-pulled",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The tech backlash is now in theaters",
-      "source": "The Verge AI",
-      "date": "2026-10-15",
-      "url": "https://www.theverge.com/entertainment/1012438/hollywood-tech-backlash-you-can-see-everything-musk-the-social-reckoning-artificial",
       "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
