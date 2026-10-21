@@ -1,7 +1,57 @@
 {
-  "updated": "2026-10-20",
+  "updated": "2026-10-21",
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
+    {
+      "title": "A critical programming vulnerability may take websites down today",
+      "source": "The Verge",
+      "date": "2026-10-21",
+      "url": "https://www.theverge.com/tech/1015257/php-vulnerability-patch-website-security-wordpress",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft says October updates didn’t actually fix VPN issues",
+      "source": "BleepingComputer",
+      "date": "2026-10-21",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-didnt-actually-fix-vpn-issues-caused-by-windows-updates/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "CISA: SafePay ransomware hit over 600 critical infrastructure orgs",
+      "source": "BleepingComputer",
+      "date": "2026-10-21",
+      "url": "https://www.bleepingcomputer.com/news/security/cisa-and-fbi-safepay-ransomware-has-hit-over-600-critical-infrastructure-organizations/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Stolen UpdraftCentral keys used to backdoor WordPress sites",
+      "source": "BleepingComputer",
+      "date": "2026-10-21",
+      "url": "https://www.bleepingcomputer.com/news/security/stolen-updraftcentral-keys-used-to-backdoor-wordpress-sites/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Mozilla, Google, Apple block compromised eMudhra CA certificates",
+      "source": "BleepingComputer",
+      "date": "2026-10-21",
+      "url": "https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "Some Google Home Speakers caught downloading hundreds of gigs of data",
       "source": "The Verge",
@@ -328,6 +378,46 @@
       "date": "2026-10-20",
       "url": "https://www.sciencedaily.com/releases/2026/10/261018205050.htm",
       "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Judge dismisses Sam Altman’s sister’s sexual abuse lawsuit",
+      "source": "The Verge",
+      "date": "2026-10-20",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1014976/sam-altman-ann-altman-lawsuit-dismissed",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Google’s more personalized Gemini AI is heading to your car",
+      "source": "The Verge",
+      "date": "2026-10-20",
+      "url": "https://www.theverge.com/tech/1014999/google-gemini-ai-cars-android-auto",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "YouTube might be testing hiding the dislike button",
+      "source": "The Verge",
+      "date": "2026-10-20",
+      "url": "https://www.theverge.com/streaming/1015099/youtube-dislike-button-hide-menu",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Trump is giving Nick Shirley $10,000 and launching a $25 million fraud bounty program",
+      "source": "The Verge",
+      "date": "2026-10-20",
+      "url": "https://www.theverge.com/news/1014989/trump-fraud-tips-program-nick-shirley-influencers",
+      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -1708,96 +1798,6 @@
       "date": "2026-10-14",
       "url": "https://www.theverge.com/tech/1011324/apple-tv-4k-missed-features",
       "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Save up to 20 percent on gift cards for REI, Barnes &#038; Noble, and more",
-      "source": "The Verge",
-      "date": "2026-10-14",
-      "url": "https://www.theverge.com/gadgets/1010749/google-play-gift-card-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Apple&#8217;s new HomeView smart display is $10 cheaper at Amazon",
-      "source": "The Verge",
-      "date": "2026-10-14",
-      "url": "https://www.theverge.com/gadgets/1011227/apple-homeview-smart-display-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "FBI raids DPRK IT worker laptop farms in Texas, US nationals arrested",
-      "source": "BleepingComputer",
-      "date": "2026-10-14",
-      "url": "https://www.bleepingcomputer.com/news/security/fbi-raids-dprk-it-worker-laptop-farms-in-texas-us-nationals-arrested/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Ledger asks sellers across Asia to halt sales after supply-chain attack",
-      "source": "BleepingComputer",
-      "date": "2026-10-14",
-      "url": "https://www.bleepingcomputer.com/news/security/ledger-asks-sellers-across-asia-to-halt-sales-after-supply-chain-attack/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Cisco patches new Secure Email Gateway zero-day exploited in attacks",
-      "source": "BleepingComputer",
-      "date": "2026-10-14",
-      "url": "https://www.bleepingcomputer.com/news/security/cisco-patches-actively-exploited-secure-email-gateway-zero-day/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Microsoft fixes VPN issues caused by September Windows updates",
-      "source": "BleepingComputer",
-      "date": "2026-10-14",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-vpn-issues-caused-by-september-windows-updates/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The Blind Spots of Agentic Pentesting and How to Close Them",
-      "source": "BleepingComputer",
-      "date": "2026-10-14",
-      "url": "https://www.bleepingcomputer.com/news/security/the-blind-spots-of-agentic-pentesting-and-how-to-close-them/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Global takedown hits network behind 1 billion phishing messages",
-      "source": "BleepingComputer",
-      "date": "2026-10-14",
-      "url": "https://www.bleepingcomputer.com/news/security/global-takedown-hits-network-behind-1-billion-phishing-messages/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "CISA warns admins to immediately fix Ivanti flaw exploited as zero-day",
-      "source": "BleepingComputer",
-      "date": "2026-10-14",
-      "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-admins-to-immediately-fix-ivanti-flaw-exploited-as-zero-day/",
-      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."

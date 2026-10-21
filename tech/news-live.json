@@ -1,7 +1,57 @@
 {
-  "updated": "2026-10-20",
+  "updated": "2026-10-21",
   "method": "automatski-rss",
   "stories": [
+    {
+      "title": "A critical programming vulnerability may take websites down today",
+      "source": "The Verge",
+      "date": "2026-10-21",
+      "url": "https://www.theverge.com/tech/1015257/php-vulnerability-patch-website-security-wordpress",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft says October updates didn’t actually fix VPN issues",
+      "source": "BleepingComputer",
+      "date": "2026-10-21",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-didnt-actually-fix-vpn-issues-caused-by-windows-updates/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "CISA: SafePay ransomware hit over 600 critical infrastructure orgs",
+      "source": "BleepingComputer",
+      "date": "2026-10-21",
+      "url": "https://www.bleepingcomputer.com/news/security/cisa-and-fbi-safepay-ransomware-has-hit-over-600-critical-infrastructure-organizations/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Stolen UpdraftCentral keys used to backdoor WordPress sites",
+      "source": "BleepingComputer",
+      "date": "2026-10-21",
+      "url": "https://www.bleepingcomputer.com/news/security/stolen-updraftcentral-keys-used-to-backdoor-wordpress-sites/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Mozilla, Google, Apple block compromised eMudhra CA certificates",
+      "source": "BleepingComputer",
+      "date": "2026-10-21",
+      "url": "https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "NASA to Conduct Low-Altitude Flights Over Texas Farmland",
       "source": "NASA",
@@ -63,6 +113,26 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
+      "title": "Judge dismisses Sam Altman’s sister’s sexual abuse lawsuit",
+      "source": "The Verge",
+      "date": "2026-10-20",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1014976/sam-altman-ann-altman-lawsuit-dismissed",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Google’s more personalized Gemini AI is heading to your car",
+      "source": "The Verge",
+      "date": "2026-10-20",
+      "url": "https://www.theverge.com/tech/1014999/google-gemini-ai-cars-android-auto",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
       "title": "Meta pauses Muse sharing after researchers find AI chats on the web",
       "source": "The Verge AI",
       "date": "2026-10-20",
@@ -93,6 +163,26 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
+      "title": "YouTube might be testing hiding the dislike button",
+      "source": "The Verge",
+      "date": "2026-10-20",
+      "url": "https://www.theverge.com/streaming/1015099/youtube-dislike-button-hide-menu",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Trump is giving Nick Shirley $10,000 and launching a $25 million fraud bounty program",
+      "source": "The Verge",
+      "date": "2026-10-20",
+      "url": "https://www.theverge.com/news/1014989/trump-fraud-tips-program-nick-shirley-influencers",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
       "title": "Tesla and SpaceX are discussing a possible merger, Musk says",
       "source": "The Verge",
       "date": "2026-10-20",
@@ -117,56 +207,6 @@
       "source": "The Verge",
       "date": "2026-10-20",
       "url": "https://www.theverge.com/streaming/1014826/netflix-earnings-q3-2026-viewing-time",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Snap is paying Robert Downey Jr. to do the Iron Man thing",
-      "source": "The Verge",
-      "date": "2026-10-20",
-      "url": "https://www.theverge.com/tech/1014869/snap-specs-robert-downey-jr",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "SpaceX says big AI growth fueled revenue jump",
-      "source": "The Verge",
-      "date": "2026-10-20",
-      "url": "https://www.theverge.com/science/1014150/spacex-q3-2026-earnings",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Oura adds two new cardiovascular health tracking features to its smart rings",
-      "source": "The Verge",
-      "date": "2026-10-20",
-      "url": "https://www.theverge.com/tech/1014712/oura-smart-rings-track-cardio-effort-vo2-max-cardiovascular",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "TikTok has started censoring searches for popular peptides",
-      "source": "The Verge",
-      "date": "2026-10-20",
-      "url": "https://www.theverge.com/science/1014825/peptide-tiktok-search-ban",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Logitech’s refurbished G Pro X2 Superstrike is 35 percent off",
-      "source": "The Verge",
-      "date": "2026-10-20",
-      "url": "https://www.theverge.com/gadgets/1014764/logitech-x2-superstrike-haptics-wireless-gaming-mouse-deal-sale",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -213,46 +253,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "CJIS v6.1 Compliance: 5 Practical Priorities for Agencies",
-      "source": "BleepingComputer",
-      "date": "2026-10-20",
-      "url": "https://www.bleepingcomputer.com/news/security/cjis-v61-compliance-5-practical-priorities-for-agencies/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Hacker gets 8 years for stealing $3.3 million from taxpayers",
-      "source": "BleepingComputer",
-      "date": "2026-10-20",
-      "url": "https://www.bleepingcomputer.com/news/security/hacker-gets-8-years-for-stealing-33-million-from-taxpayers/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Windows Server 2025 gets support for quick machine recovery",
-      "source": "BleepingComputer",
-      "date": "2026-10-20",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/windows-server-2025-gets-support-for-quick-machine-recovery/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "OVHcloud CLI releases backdoored on GitHub to steal developer secrets",
-      "source": "BleepingComputer",
-      "date": "2026-10-20",
-      "url": "https://www.bleepingcomputer.com/news/security/ovhcloud-cli-releases-backdoored-on-github-to-steal-developer-secrets/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Astronomers uncover new secrets of the Universe’s first five minutes",
       "source": "ScienceDaily",
       "date": "2026-10-20",
@@ -293,16 +293,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "NASA Improves Shock, Vibration Analysis",
-      "source": "NASA",
-      "date": "2026-10-19",
-      "url": "https://www.nasa.gov/centers-and-facilities/kennedy/nasa-improves-shock-vibration-analysis/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "The fossil fuel comeback is here",
       "source": "The Verge AI",
       "date": "2026-10-19",
@@ -327,26 +317,6 @@
       "source": "The Verge AI",
       "date": "2026-10-19",
       "url": "https://www.theverge.com/podcast/1012839/pritzker-ai-privacy-data-centers-flock-congress-laws",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A hacker broke into John Deere and SharkNinja with an army of AI agents",
-      "source": "The Verge AI",
-      "date": "2026-10-19",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1013643/ai-agents-hack-john-deere-shark-ninja-cummins",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Democrats think cracking down on AI could give them an edge",
-      "source": "The Verge AI",
-      "date": "2026-10-19",
-      "url": "https://www.theverge.com/policy/1013113/democrats-ai-midterms",
       "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
