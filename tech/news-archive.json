@@ -1,7 +1,67 @@
 {
-  "updated": "2026-10-22",
+  "updated": "2026-10-23",
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
+    {
+      "title": "Startup equips genetically enhanced dogs with Palmer Luckey&#8217;s military tech",
+      "source": "The Verge",
+      "date": "2026-10-23",
+      "url": "https://www.theverge.com/tech/1017343/warhound-palmer-luckey-anduril-colossal-war-dogs",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "No, the iPhone Duo isn’t a small phone",
+      "source": "The Verge",
+      "date": "2026-10-23",
+      "url": "https://www.theverge.com/tech/1017090/iphone-duo-screen-size-mini",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Cambridge scientists create a $10 chip that could put a medical lab on your wrist",
+      "source": "ScienceDaily",
+      "date": "2026-10-23",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261022081312.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "MIT scientists build a tiny robot that swims using living muscle cells",
+      "source": "ScienceDaily",
+      "date": "2026-10-23",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261022081308.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A tiny defect in a crystal reveals a big quantum surprise",
+      "source": "ScienceDaily",
+      "date": "2026-10-23",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261022081302.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Nearly 3,000 exploding stars challenge our understanding of the Universe",
+      "source": "ScienceDaily",
+      "date": "2026-10-23",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261021231244.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "Eiliko maker says it&#8217;s hiring an ‘independent security firm’ after Verge report on its insecure robots",
       "source": "The Verge",
@@ -44,30 +104,30 @@
     },
     {
       "title": "Meta&#8217;s AI could still scrape news sites, legal experts say",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-22",
       "url": "https://www.theverge.com/tech/1017082/meta-terms-update-ai-training-concerns",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Meta turns Muse sharing back on",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-22",
       "url": "https://www.theverge.com/tech/1017066/meta-muse-sharing-back-on-artifiacts",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Sure, let’s smoosh SpaceX and Tesla together, who cares",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-22",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1016879/spacex-tesla-cursed-katamari",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -268,6 +328,56 @@
       "date": "2026-10-22",
       "url": "https://www.sciencedaily.com/releases/2026/10/261020085018.htm",
       "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA Invites Media to 2026 von Braun Space Exploration Symposium",
+      "source": "NASA",
+      "date": "2026-10-22",
+      "url": "https://www.nasa.gov/news-release/nasa-invites-media-to-2026-von-braun-space-exploration-symposium/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Canva’s first AI image model plans designs before generating them",
+      "source": "The Verge",
+      "date": "2026-10-22",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Etsy is cracking down on AI slop listings",
+      "source": "The Verge",
+      "date": "2026-10-22",
+      "url": "https://www.theverge.com/tech/1017261/etsy-ai-rules-policies-restrictions-listing",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Spotify says yes, it is busting people for using Family Plan sharing too widely",
+      "source": "The Verge",
+      "date": "2026-10-22",
+      "url": "https://www.theverge.com/entertainment/1017214/spotify-family-plan-sharing-qr-codes",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The next-gen Xbox won’t cost you $1,800. It can’t. Can it?",
+      "source": "The Verge",
+      "date": "2026-10-22",
+      "url": "https://www.theverge.com/games/1016134/xbox-helix-price-1800-isnt-affordable-editorial",
+      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -1688,116 +1798,6 @@
       "date": "2026-10-16",
       "url": "https://www.theverge.com/tech/1012901/analogue-retro-console-supern-nt-plus-nintendo-sega-genesis-mega-plus",
       "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A fake WhatsApp clone is showing up before the real version on the Play Store",
-      "source": "The Verge",
-      "date": "2026-10-16",
-      "url": "https://www.theverge.com/tech/1012918/google-play-store-fake-whatsapp-android",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Critical BlockStrap flaw lets hackers run code on Magento servers",
-      "source": "BleepingComputer",
-      "date": "2026-10-16",
-      "url": "https://www.bleepingcomputer.com/news/security/critical-blockstrap-flaw-lets-hackers-run-code-on-magento-servers/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Targeted ads installed Candiru spyware in zero-click attacks",
-      "source": "BleepingComputer",
-      "date": "2026-10-16",
-      "url": "https://www.bleepingcomputer.com/news/security/zero-click-attacks-used-targeted-ads-to-deliver-candiru-spyware/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Employees using personal ChatGPT at work? Here's what IT admins need to do",
-      "source": "BleepingComputer",
-      "date": "2026-10-16",
-      "url": "https://www.bleepingcomputer.com/news/security/employees-using-personal-chatgpt-at-work-heres-what-it-admins-need-to-do/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Burger King Japan data breach exposes 11 million customer records",
-      "source": "BleepingComputer",
-      "date": "2026-10-16",
-      "url": "https://www.bleepingcomputer.com/news/security/burger-king-japan-data-breach-exposes-11-million-customer-records/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The uranium cubes that exposed Nazi Germany’s nuclear failure",
-      "source": "ScienceDaily",
-      "date": "2026-10-16",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261015073218.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A quantum highway just one atom high could transform superconductors",
-      "source": "ScienceDaily",
-      "date": "2026-10-16",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261014072018.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Astronomers discover a strange universal rule behind black hole eruptions",
-      "source": "ScienceDaily",
-      "date": "2026-10-16",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261014015507.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "All the news about the iPhone Duo",
-      "source": "The Verge",
-      "date": "2026-10-16",
-      "url": "https://www.theverge.com/tech/1010131/apple-iphone-duo-news-announcements",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Apple&#8217;s updated App Store rules go after &#8216;nudify&#8217; AI apps",
-      "source": "The Verge",
-      "date": "2026-10-16",
-      "url": "https://www.theverge.com/tech/1013314/apple-app-store-nudify-ai-apps-harassment",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "SpaceX just delivered some very strange cargo to the International Space Station",
-      "source": "ScienceDaily",
-      "date": "2026-10-16",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261016070628.htm",
-      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."

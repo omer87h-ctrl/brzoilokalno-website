@@ -1,7 +1,77 @@
 {
-  "updated": "2026-10-22",
+  "updated": "2026-10-23",
   "method": "automatski-rss",
   "stories": [
+    {
+      "title": "Startup equips genetically enhanced dogs with Palmer Luckey&#8217;s military tech",
+      "source": "The Verge",
+      "date": "2026-10-23",
+      "url": "https://www.theverge.com/tech/1017343/warhound-palmer-luckey-anduril-colossal-war-dogs",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "No, the iPhone Duo isn’t a small phone",
+      "source": "The Verge",
+      "date": "2026-10-23",
+      "url": "https://www.theverge.com/tech/1017090/iphone-duo-screen-size-mini",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Cambridge scientists create a $10 chip that could put a medical lab on your wrist",
+      "source": "ScienceDaily",
+      "date": "2026-10-23",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261022081312.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "MIT scientists build a tiny robot that swims using living muscle cells",
+      "source": "ScienceDaily",
+      "date": "2026-10-23",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261022081308.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A tiny defect in a crystal reveals a big quantum surprise",
+      "source": "ScienceDaily",
+      "date": "2026-10-23",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261022081302.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Nearly 3,000 exploding stars challenge our understanding of the Universe",
+      "source": "ScienceDaily",
+      "date": "2026-10-23",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261021231244.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA Invites Media to 2026 von Braun Space Exploration Symposium",
+      "source": "NASA",
+      "date": "2026-10-22",
+      "url": "https://www.nasa.gov/news-release/nasa-invites-media-to-2026-von-braun-space-exploration-symposium/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "Spiral’s Edge",
       "source": "NASA",
@@ -13,31 +83,41 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Meta&#8217;s AI could still scrape news sites, legal experts say",
+      "title": "Canva’s first AI image model plans designs before generating them",
       "source": "The Verge",
       "date": "2026-10-22",
-      "url": "https://www.theverge.com/tech/1017082/meta-terms-update-ai-training-concerns",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model",
       "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Meta&#8217;s AI could still scrape news sites, legal experts say",
+      "source": "The Verge AI",
+      "date": "2026-10-22",
+      "url": "https://www.theverge.com/tech/1017082/meta-terms-update-ai-training-concerns",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Meta turns Muse sharing back on",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-22",
       "url": "https://www.theverge.com/tech/1017066/meta-muse-sharing-back-on-artifiacts",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Sure, let’s smoosh SpaceX and Tesla together, who cares",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-22",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1016879/spacex-tesla-cursed-katamari",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -83,11 +163,31 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Wildwood’s director says AI is ‘antithetical to everything that we are at this studio’",
-      "source": "The Verge AI",
+      "title": "Etsy is cracking down on AI slop listings",
+      "source": "The Verge",
       "date": "2026-10-22",
-      "url": "https://www.theverge.com/entertainment/1016647/wildwood-travis-knight-interview-ai-laika-stop-motion",
-      "category": "AI",
+      "url": "https://www.theverge.com/tech/1017261/etsy-ai-rules-policies-restrictions-listing",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Spotify says yes, it is busting people for using Family Plan sharing too widely",
+      "source": "The Verge",
+      "date": "2026-10-22",
+      "url": "https://www.theverge.com/entertainment/1017214/spotify-family-plan-sharing-qr-codes",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The next-gen Xbox won’t cost you $1,800. It can’t. Can it?",
+      "source": "The Verge",
+      "date": "2026-10-22",
+      "url": "https://www.theverge.com/games/1016134/xbox-helix-price-1800-isnt-affordable-editorial",
+      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -107,36 +207,6 @@
       "source": "The Verge",
       "date": "2026-10-22",
       "url": "https://www.theverge.com/tech/1016506/fall-2026-earnings-watch",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The FCC is beginning to block gadgets with ‘foreign surveillance chips’",
-      "source": "The Verge",
-      "date": "2026-10-22",
-      "url": "https://www.theverge.com/policy/1017016/fcc-block-foreign-surveillance-chips-hivision-huawei-loophole",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Teenage Engineering launched an instrument amp with a ton of built-in effects",
-      "source": "The Verge",
-      "date": "2026-10-22",
-      "url": "https://www.theverge.com/gadgets/1017022/teenage-engineering-ep-35-instrument-amp",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Republican politicians have embraced anti-Indian racism — and it’s costing them votes",
-      "source": "The Verge",
-      "date": "2026-10-22",
-      "url": "https://www.theverge.com/report/1017003/indian-americans-republican-racism-vivek-ramaswamy-texas",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -273,70 +343,10 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "NASA to Conduct NCAA Flyover, Engage Fans at University of Alabama",
-      "source": "NASA",
-      "date": "2026-10-21",
-      "url": "https://www.nasa.gov/news-release/nasa-to-conduct-ncaa-flyover-engage-fans-at-university-of-alabama/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Science on the Space Station with NASA Astronaut Jessica Watkins",
-      "source": "NASA",
-      "date": "2026-10-21",
-      "url": "https://www.nasa.gov/image-article/science-on-the-space-station-with-nasa-astronaut-jessica-watkins/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "A train was delayed by a solar storm. But something didn't add up.",
       "source": "ScienceDaily",
       "date": "2026-10-21",
       "url": "https://www.sciencedaily.com/releases/2026/10/261020085021.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Astronauts’ hearts just passed a surprising test for Mars",
-      "source": "ScienceDaily",
-      "date": "2026-10-21",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261020085016.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA’s Perseverance Mars rover just shattered the all-time off-world driving record",
-      "source": "ScienceDaily",
-      "date": "2026-10-21",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261020084818.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Astronomers uncover new secrets of the Universe’s first five minutes",
-      "source": "ScienceDaily",
-      "date": "2026-10-20",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261019093442.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA solves a strange mystery hidden inside asteroid Bennu’s boulders",
-      "source": "ScienceDaily",
-      "date": "2026-10-20",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261018205101.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
