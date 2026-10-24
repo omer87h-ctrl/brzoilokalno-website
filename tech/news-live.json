@@ -3,6 +3,116 @@
   "method": "automatski-rss",
   "stories": [
     {
+      "title": "Pennsylvania will require labels on AI-generated ads",
+      "source": "The Verge",
+      "date": "2026-10-24",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1018187/pennsylvania-ai-deceptive-advertising-act",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Fielded is obsessed with scammers and unhinged Japanese cyberpunk",
+      "source": "The Verge",
+      "date": "2026-10-24",
+      "url": "https://www.theverge.com/entertainment/1017460/fielded-some-kind-of-animal-interview",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "LG’s brilliant C6 OLED TV is already $400 off ahead of Black Friday",
+      "source": "The Verge",
+      "date": "2026-10-24",
+      "url": "https://www.theverge.com/gadgets/1017768/lg-c6-oled-tv-early-black-friday-2026-deal-sale",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "What to expect from Apple’s ‘Pro and tell’ event",
+      "source": "The Verge",
+      "date": "2026-10-24",
+      "url": "https://www.theverge.com/tech/1018169/what-to-expect-apple-pro-and-tell-event-touchscreen-macbook-pro",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "I hope Apple’s touchscreen MacBook takes some lessons from this Lenovo laptop",
+      "source": "The Verge",
+      "date": "2026-10-24",
+      "url": "https://www.theverge.com/report/1018131/apple-macbook-touchscreen-stylus-pencil-lenovo-laptop-analysis",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Lee Chang Dong ponders the ethics of the camera",
+      "source": "The Verge",
+      "date": "2026-10-24",
+      "url": "https://www.theverge.com/entertainment/1017888/possible-love-lee-chang-dong-director-interview",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Laika has spent 20 years building up to Wildwood",
+      "source": "The Verge",
+      "date": "2026-10-24",
+      "url": "https://www.theverge.com/entertainment/1017740/wildwood-stop-motion-interview-laika",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "It’s time to find a new browser",
+      "source": "The Verge",
+      "date": "2026-10-24",
+      "url": "https://www.theverge.com/tech/1018121/cod-4-claude-duet-wildwood-installer",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "BlackX UEFI bootkit exploits Baton Drop flaw to bypass Secure Boot",
+      "source": "BleepingComputer",
+      "date": "2026-10-24",
+      "url": "https://www.bleepingcomputer.com/news/security/blackx-uefi-bootkit-exploits-baton-drop-flaw-to-bypass-secure-boot/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA’s asteroid Bennu samples reveal a 4.5-billion-year-old secret",
+      "source": "ScienceDaily",
+      "date": "2026-10-24",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261023023734.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Astronomers uncover a mysterious magnetic web above the Sun",
+      "source": "ScienceDaily",
+      "date": "2026-10-24",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261023023723.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
       "title": "NASA, Partners Accelerate Lander Development for 2028 Moon Missions",
       "source": "NASA",
       "date": "2026-10-23",
@@ -44,30 +154,30 @@
     },
     {
       "title": "OpenAI now trains its frontier AI models with no internet access",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-23",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Jack Dorsey’s Block made an AI model that talks to you like an awkward new friend",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-23",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "The iPhone Duo should have been an iPad",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-23",
       "url": "https://www.theverge.com/podcast/1017447/iphone-duo-ipad-review-score-vergecast",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -98,56 +208,6 @@
       "date": "2026-10-23",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1015430/ai-retro-games-decomp-recomp-port",
       "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Xbox’s first chief operating officer is out after just a few months",
-      "source": "The Verge",
-      "date": "2026-10-23",
-      "url": "https://www.theverge.com/news/1018037/xbox-chief-operating-officer-helen-chiang-departure",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Abandoned Popcorn Time apps had to be disabled to prevent a zombie army",
-      "source": "The Verge",
-      "date": "2026-10-23",
-      "url": "https://www.theverge.com/tech/1017914/popcorn-time-piracy-botnet-avoided",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Soundcore’s latest noise-crushing headphones are on sale for a new low price",
-      "source": "The Verge",
-      "date": "2026-10-23",
-      "url": "https://www.theverge.com/gadgets/1017667/anker-soundcore-space-2-noise-canceling-headphones-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Fi’s GPS-equipped dog trackers are on sale for 30 percent off",
-      "source": "The Verge",
-      "date": "2026-10-23",
-      "url": "https://www.theverge.com/gadgets/1017196/fi-ultra-gps-dog-tracker-kirby-air-riders-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Elon Musk’s dangerous grip on outer space",
-      "source": "The Verge",
-      "date": "2026-10-23",
-      "url": "https://www.theverge.com/science/1017443/spacex-starlink-ukraine-elon-musk-monopoly",
-      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -293,26 +353,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Meta&#8217;s AI could still scrape news sites, legal experts say",
-      "source": "The Verge AI",
-      "date": "2026-10-22",
-      "url": "https://www.theverge.com/tech/1017082/meta-terms-update-ai-training-concerns",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Railway warns devs to rotate secrets after potential breach",
-      "source": "BleepingComputer",
-      "date": "2026-10-22",
-      "url": "https://www.bleepingcomputer.com/news/security/railway-warns-devs-to-rotate-secrets-after-potential-breach/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "NASA’s Curiosity rover reveals a spectacular new view of Mars with a mystery on the horizon",
       "source": "ScienceDaily",
       "date": "2026-10-22",
@@ -327,26 +367,6 @@
       "source": "ScienceDaily",
       "date": "2026-10-22",
       "url": "https://www.sciencedaily.com/releases/2026/10/261021231230.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "People are taking an unapproved weight-loss drug. AI found something surprising",
-      "source": "ScienceDaily",
-      "date": "2026-10-22",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261020085018.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A train was delayed by a solar storm. But something didn't add up.",
-      "source": "ScienceDaily",
-      "date": "2026-10-21",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261020085021.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
