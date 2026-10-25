@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-24",
+  "updated": "2026-10-25",
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
     {
@@ -108,6 +108,16 @@
       "date": "2026-10-24",
       "url": "https://www.sciencedaily.com/releases/2026/10/261023023723.htm",
       "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Blue Planet III is keeping the rough edges in the age of AI",
+      "source": "The Verge",
+      "date": "2026-10-24",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1018205/blue-planet-iii-authentic-organic-ai",
+      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -1787,16 +1797,6 @@
       "source": "The Verge",
       "date": "2026-10-18",
       "url": "https://www.theverge.com/gadgets/1013257/milk-frother-cold-foam-gadget",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "How overhead projectors took over your classroom",
-      "source": "The Verge",
-      "date": "2026-10-18",
-      "url": "https://www.theverge.com/podcast/1013473/overhead-projector-version-history",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",

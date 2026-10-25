@@ -1,7 +1,17 @@
 {
-  "updated": "2026-10-24",
+  "updated": "2026-10-25",
   "method": "automatski-rss",
   "stories": [
+    {
+      "title": "Blue Planet III is keeping the rough edges in the age of AI",
+      "source": "The Verge",
+      "date": "2026-10-24",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1018205/blue-planet-iii-authentic-organic-ai",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "Pennsylvania will require labels on AI-generated ads",
       "source": "The Verge",
@@ -67,16 +77,6 @@
       "source": "The Verge",
       "date": "2026-10-24",
       "url": "https://www.theverge.com/entertainment/1017740/wildwood-stop-motion-interview-laika",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "It’s time to find a new browser",
-      "source": "The Verge",
-      "date": "2026-10-24",
-      "url": "https://www.theverge.com/tech/1018121/cod-4-claude-duet-wildwood-installer",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -328,26 +328,6 @@
       "date": "2026-10-22",
       "url": "https://www.nasa.gov/news-release/nasa-invites-media-to-2026-von-braun-space-exploration-symposium/",
       "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Spiral’s Edge",
-      "source": "NASA",
-      "date": "2026-10-22",
-      "url": "https://www.nasa.gov/image-article/spirals-edge/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Canva’s first AI image model plans designs before generating them",
-      "source": "The Verge AI",
-      "date": "2026-10-22",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model",
-      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
