@@ -3,6 +3,106 @@
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
     {
+      "title": "r/opensource just banned AI, non-English speakers, and more",
+      "source": "The Verge",
+      "date": "2026-10-25",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1018217/reddit-opensource-ai-ban",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Google’s AI search changes upended online publishing",
+      "source": "The Verge",
+      "date": "2026-10-25",
+      "url": "https://www.theverge.com/column/1017983/google-ai-search-online-publishing",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A YouTuber dissected an iPhone Duo and thinks he found the cause of crackgate",
+      "source": "The Verge",
+      "date": "2026-10-25",
+      "url": "https://www.theverge.com/tech/1018290/dissected-iphone-duo-crackgate-hinge-screen",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Zen Browser is the Arc replacement I was looking for",
+      "source": "The Verge",
+      "date": "2026-10-25",
+      "url": "https://www.theverge.com/tech/1018275/zen-browser-arc-replacement",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "This Switch 2 sequel accessory was a few millimeters away from being good",
+      "source": "The Verge",
+      "date": "2026-10-25",
+      "url": "https://www.theverge.com/tech/1017508/crkd-nitro-deck-2-nintendo-switch-2-controller-case-hands-on",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Now you can watch Instagram Reels on your Apple TV",
+      "source": "The Verge",
+      "date": "2026-10-25",
+      "url": "https://www.theverge.com/tech/1018253/now-you-can-watch-instagram-reels-on-your-apple-tv",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "AI coding agents hijacked using AGENTS.md file in Downloads folder",
+      "source": "BleepingComputer",
+      "date": "2026-10-25",
+      "url": "https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Three giant black holes discovered in a galaxy from the dawn of time",
+      "source": "ScienceDaily",
+      "date": "2026-10-25",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261024222000.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Astronomers may have discovered the first moon beyond our Solar System",
+      "source": "ScienceDaily",
+      "date": "2026-10-25",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261023023736.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists discover a hidden flaw that challenges 40 years of superconductor science",
+      "source": "ScienceDaily",
+      "date": "2026-10-25",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261023023731.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
       "title": "Pennsylvania will require labels on AI-generated ads",
       "source": "The Verge",
       "date": "2026-10-24",
@@ -1698,106 +1798,6 @@
       "date": "2026-10-19",
       "url": "https://www.bleepingcomputer.com/news/security/inside-the-underground-market-for-know-your-client-services/",
       "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "F5 releases out-of-band patches for critical NGINX vulnerabilities",
-      "source": "BleepingComputer",
-      "date": "2026-10-19",
-      "url": "https://www.bleepingcomputer.com/news/security/f5-releases-out-of-band-patches-for-critical-nginx-vulnerabilities/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Elon Musk’s proposed SpaceX stock giveaway would go into &#8216;Trump Accounts&#8217;",
-      "source": "The Verge",
-      "date": "2026-10-19",
-      "url": "https://www.theverge.com/tech/1014115/elon-musk-spacex-trump-account",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Astronomers discover a ghostly green star unlike any known before",
-      "source": "ScienceDaily",
-      "date": "2026-10-19",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261017230018.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A woman was arrested in Philly for blocking a delivery robot",
-      "source": "The Verge AI",
-      "date": "2026-10-18",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1013541/a-woman-was-arrested-in-philly-for-blocking-a-delivery-robot",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Mister Organ is one of the most unsettling documentaries I’ve ever seen",
-      "source": "The Verge",
-      "date": "2026-10-18",
-      "url": "https://www.theverge.com/entertainment/1013545/mister-organ-horror-documentary-review",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Video game ownership bill introduced in Congress",
-      "source": "The Verge",
-      "date": "2026-10-18",
-      "url": "https://www.theverge.com/policy/1013521/video-game-ownership-bill-congress-power-to-the-players-act",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Lenovo’s fast, comfy SteamOS handheld is hundreds off",
-      "source": "The Verge",
-      "date": "2026-10-18",
-      "url": "https://www.theverge.com/gadgets/1013436/lenovo-legion-go-s-steamos-handheld-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "J Mascis has nothing better to do",
-      "source": "The Verge",
-      "date": "2026-10-18",
-      "url": "https://www.theverge.com/entertainment/1012442/j-mascis-dinosaur-jr-fender-interview",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Trump says Google kisses his ass",
-      "source": "The Verge",
-      "date": "2026-10-18",
-      "url": "https://www.theverge.com/policy/1013485/trump-google-kiss-my-ass",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The best gadget I bought this year is a milk frother",
-      "source": "The Verge",
-      "date": "2026-10-18",
-      "url": "https://www.theverge.com/gadgets/1013257/milk-frother-cold-foam-gadget",
-      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
