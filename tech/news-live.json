@@ -1,7 +1,87 @@
 {
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "method": "automatski-rss",
   "stories": [
+    {
+      "title": "The city that fought Flock",
+      "source": "The Verge",
+      "date": "2026-10-26",
+      "url": "https://www.theverge.com/features/1017836/flock-huntington-west-virginia-surveillance-ballot-measure",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Kali Linux 2026.3 released with 6 new tools, desktop updates",
+      "source": "BleepingComputer",
+      "date": "2026-10-26",
+      "url": "https://www.bleepingcomputer.com/news/linux/kali-linux-20263-released-with-6-new-tools-desktop-updates/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "PHP2Shell security flaws now sucessfully exploited in the wild",
+      "source": "BleepingComputer",
+      "date": "2026-10-26",
+      "url": "https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A 2,700-year-old solar eclipse just revealed something surprising about Earth",
+      "source": "ScienceDaily",
+      "date": "2026-10-26",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261025073055.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "New 3D thermal invisibility cloak makes objects disappear from infrared cameras",
+      "source": "ScienceDaily",
+      "date": "2026-10-26",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261025073051.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Tiny magnetic vortices could help computers work more like your brain",
+      "source": "ScienceDaily",
+      "date": "2026-10-26",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261025073038.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "AI detects “invisible” signs of pancreatic cancer years before diagnosis",
+      "source": "ScienceDaily",
+      "date": "2026-10-26",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261024222031.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists overcome a hidden obstacle to more powerful quantum computers",
+      "source": "ScienceDaily",
+      "date": "2026-10-26",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261024222024.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "r/opensource just banned AI, non-English speakers, and more",
       "source": "The Verge",
@@ -14,9 +94,29 @@
     },
     {
       "title": "Google’s AI search changes upended online publishing",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-25",
       "url": "https://www.theverge.com/column/1017983/google-ai-search-online-publishing",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "iFixit&#8217;s look inside the iPhone Duo may explain those broken screens and hinges",
+      "source": "The Verge",
+      "date": "2026-10-25",
+      "url": "https://www.theverge.com/tech/1018233/ifixit-iphone-duo-teardown-repairability-hinge",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scott Walker’s The Drift will get under your skin",
+      "source": "The Verge",
+      "date": "2026-10-25",
+      "url": "https://www.theverge.com/entertainment/1018300/scott-walker-the-drift-music-album-review",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -93,31 +193,21 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Scientists discover a hidden flaw that challenges 40 years of superconductor science",
-      "source": "ScienceDaily",
-      "date": "2026-10-25",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261023023731.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Blue Planet III is keeping the rough edges in the age of AI",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-24",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1018205/blue-planet-iii-authentic-organic-ai",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Pennsylvania will require labels on AI-generated ads",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-24",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1018187/pennsylvania-ai-deceptive-advertising-act",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -143,10 +233,40 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Astronomers uncover a mysterious magnetic web above the Sun",
-      "source": "ScienceDaily",
-      "date": "2026-10-24",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261023023723.htm",
+      "title": "NASA, Partners Accelerate Lander Development for 2028 Moon Missions",
+      "source": "NASA",
+      "date": "2026-10-23",
+      "url": "https://www.nasa.gov/missions/artemis/nasa-partners-accelerate-lander-development-for-2028-moon-missions/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA’s Artemis III Mission to Test Future Moon Lander Operations",
+      "source": "NASA",
+      "date": "2026-10-23",
+      "url": "https://www.nasa.gov/missions/artemis/nasas-artemis-iii-mission-to-test-future-moon-lander-operations/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "RS-25 Engine Tests at NASA Stennis",
+      "source": "NASA",
+      "date": "2026-10-23",
+      "url": "https://www.nasa.gov/image-article/rs-25-engine-tests-at-nasa-stennis/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA, Virginia Launch Power Partnership for Energy Security",
+      "source": "NASA",
+      "date": "2026-10-23",
+      "url": "https://www.nasa.gov/centers-and-facilities/langley/nasa-power-energy-partnership/",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -228,56 +348,6 @@
       "date": "2026-10-23",
       "url": "https://www.bleepingcomputer.com/news/security/quest-diagnostics-confirms-data-breach-exposed-patient-records/",
       "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "PHP shares mitigation for new RCE vulnerability with no patch",
-      "source": "BleepingComputer",
-      "date": "2026-10-23",
-      "url": "https://www.bleepingcomputer.com/news/security/php-shares-mitigation-for-new-and-unpatched-rce-vulnerability/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "You gave your AI agent access, but who is giving it orders?",
-      "source": "BleepingComputer",
-      "date": "2026-10-23",
-      "url": "https://www.bleepingcomputer.com/news/security/you-gave-your-ai-agent-access-but-who-is-giving-it-orders/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Cambridge scientists create a $10 chip that could put a medical lab on your wrist",
-      "source": "ScienceDaily",
-      "date": "2026-10-23",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261022081312.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "MIT scientists build a tiny robot that swims using living muscle cells",
-      "source": "ScienceDaily",
-      "date": "2026-10-23",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261022081308.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A tiny defect in a crystal reveals a big quantum surprise",
-      "source": "ScienceDaily",
-      "date": "2026-10-23",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261022081302.htm",
-      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
