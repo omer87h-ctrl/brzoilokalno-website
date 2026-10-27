@@ -1,7 +1,107 @@
 {
-  "updated": "2026-10-26",
+  "updated": "2026-10-27",
   "method": "automatski-rss",
   "stories": [
+    {
+      "title": "How a Johnson Mentor Shapes the Next Generation of NASA Talent",
+      "source": "NASA",
+      "date": "2026-10-27",
+      "url": "https://www.nasa.gov/general/how-a-johnson-mentor-shapes-the-next-generation-of-nasa-talent/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Data center backlash is uniting America",
+      "source": "The Verge",
+      "date": "2026-10-27",
+      "url": "https://www.theverge.com/policy/1019152/data-centers-midterm-elections",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Sterling Anderson doesn’t think humanoid robots should be building cars",
+      "source": "The Verge",
+      "date": "2026-10-27",
+      "url": "https://www.theverge.com/transportation/1018625/gm-sterling-anderson-interview-robots-ai-autonomous-data-privacy",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Acer is bringing a Predator gaming handheld to the US for the first time",
+      "source": "The Verge",
+      "date": "2026-10-27",
+      "url": "https://www.theverge.com/games/1019245/acer-predator-atlas-8-launch-price",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Apple backports CoreGraphics zero-day patches to older iPhones",
+      "source": "BleepingComputer",
+      "date": "2026-10-27",
+      "url": "https://www.bleepingcomputer.com/news/apple/apple-backports-coregraphics-zero-day-patches-to-older-iphones/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Energy giant ENGIE discloses data breach affecting customers",
+      "source": "BleepingComputer",
+      "date": "2026-10-27",
+      "url": "https://www.bleepingcomputer.com/news/security/energy-giant-engie-discloses-data-breach-affecting-customers/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "CISA confirms PHP2Shell vulnerabilities now exploited in attacks",
+      "source": "BleepingComputer",
+      "date": "2026-10-27",
+      "url": "https://www.bleepingcomputer.com/news/security/cisa-confirms-php2shell-vulnerabilities-now-exploited-in-attacks/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "James Webb discovers a scorching lava planet with a “giant sunscreen”",
+      "source": "ScienceDaily",
+      "date": "2026-10-27",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261026225603.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Smithsonian scientists just recreated the first 2 billion years of the Universe",
+      "source": "ScienceDaily",
+      "date": "2026-10-27",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261026225600.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A tiny laser beam could make computer memory 1,000 times faster",
+      "source": "ScienceDaily",
+      "date": "2026-10-27",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261025073046.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "NASA’s Perseverance Offers Clues to Protect Crews From Mars Dust",
       "source": "NASA",
@@ -33,11 +133,11 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "NASA, USDA Sign Agreement Advancing Earth Science, Agriculture",
-      "source": "NASA",
+      "title": "OpenAI announces three big science discoveries and a new way to work with academics",
+      "source": "The Verge",
       "date": "2026-10-26",
-      "url": "https://www.nasa.gov/news-release/nasa-usda-sign-agreement-advancing-earth-science-agriculture/",
-      "category": "NAUKA",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1019143/openai-eth-kaseya-science-math-physics",
+      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -54,20 +154,20 @@
     },
     {
       "title": "The RealReal won’t let AI agents hog designer clothing",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-26",
       "url": "https://www.theverge.com/news/1018713/meta-muse-agentic-shopping-ai-the-realreal",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Five weird details from Anthropic’s IPO filing",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-26",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1018738/anthropic-ipo-s1-filing-weird-details",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -103,16 +203,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Can AI help solve the COBOL code crisis?",
-      "source": "The Verge AI",
-      "date": "2026-10-26",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1018434/cobol-migration-legacy-code-openai-anthropic",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Samsung’s Switch 2-ready MicroSD Express card is on sale for less than $50",
       "source": "The Verge",
       "date": "2026-10-26",
@@ -137,26 +227,6 @@
       "source": "The Verge",
       "date": "2026-10-26",
       "url": "https://www.theverge.com/entertainment/1018818/nba-kalshi-polymarket",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Apple acknowledges iPhone Duo display &#8216;issue&#8217; after reports of cracked screens",
-      "source": "The Verge",
-      "date": "2026-10-26",
-      "url": "https://www.theverge.com/tech/1018760/iphone-duo-crackgate-inside-screen-hinge-crack",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Nothing&#8217;s eye-catching Ear 3A earbuds are matching their best price to date",
-      "source": "The Verge",
-      "date": "2026-10-26",
-      "url": "https://www.theverge.com/gadgets/1018612/nothing-ear-3a-noise-canceling-earbuds-deal-sale",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -213,36 +283,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Microsoft releases emergency .NET patches for critical Brotli flaw",
-      "source": "BleepingComputer",
-      "date": "2026-10-26",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-emergency-net-patches-for-critical-brotli-flaw/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "When an AI Agent Is the Incident, the Identity Record Is the Evidence",
-      "source": "BleepingComputer",
-      "date": "2026-10-26",
-      "url": "https://www.bleepingcomputer.com/news/security/when-an-ai-agent-is-the-incident-the-identity-record-is-the-evidence/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Chinese man extradited for role in $36 million cryptocurrency scam",
-      "source": "BleepingComputer",
-      "date": "2026-10-26",
-      "url": "https://www.bleepingcomputer.com/news/security/chinese-man-extradited-for-role-in-36-million-cryptocurrency-scam/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "A 2,700-year-old solar eclipse just revealed something surprising about Earth",
       "source": "ScienceDaily",
       "date": "2026-10-26",
@@ -287,46 +327,6 @@
       "source": "ScienceDaily",
       "date": "2026-10-26",
       "url": "https://www.sciencedaily.com/releases/2026/10/261024222024.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "r/opensource just banned AI, non-English speakers, and more",
-      "source": "The Verge AI",
-      "date": "2026-10-25",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1018217/reddit-opensource-ai-ban",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Three giant black holes discovered in a galaxy from the dawn of time",
-      "source": "ScienceDaily",
-      "date": "2026-10-25",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261024222000.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Astronomers may have discovered the first moon beyond our Solar System",
-      "source": "ScienceDaily",
-      "date": "2026-10-25",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261023023736.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA’s asteroid Bennu samples reveal a 4.5-billion-year-old secret",
-      "source": "ScienceDaily",
-      "date": "2026-10-24",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261023023734.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
