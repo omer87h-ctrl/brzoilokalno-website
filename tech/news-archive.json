@@ -1,7 +1,77 @@
 {
-  "updated": "2026-10-28",
+  "updated": "2026-10-29",
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
+    {
+      "title": "Caltech Names Artemis II Commander Reid Wiseman as NASA JPL Deputy",
+      "source": "NASA",
+      "date": "2026-10-29",
+      "url": "https://www.nasa.gov/centers-and-facilities/jpl/caltech-names-artemis-ii-commander-reid-wiseman-as-nasa-jpl-deputy/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "AI has come for Arizona’s water",
+      "source": "The Verge",
+      "date": "2026-10-29",
+      "url": "https://www.theverge.com/cs/features/1016650/arizona-water-data-center-tsmc",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "DoorDash is acquiring Instacart for $17 billion",
+      "source": "The Verge",
+      "date": "2026-10-29",
+      "url": "https://www.theverge.com/business/1021981/doordash-instacart-acquisition-announcement",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Windows 11 KB5127936 update released with 41 changes and fixes",
+      "source": "BleepingComputer",
+      "date": "2026-10-29",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5127936-update-released-with-41-changes-and-fixes/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "New Cisco firewall zero-day exploited to crash SSL VPN devices",
+      "source": "BleepingComputer",
+      "date": "2026-10-29",
+      "url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists just broke a textbook rule of physics",
+      "source": "ScienceDaily",
+      "date": "2026-10-29",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261027063713.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Meteors don't just burn up. What really happens is far more violent",
+      "source": "ScienceDaily",
+      "date": "2026-10-29",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261027063710.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "Voters in Texas agree: They hate data centers",
       "source": "The Verge AI",
@@ -174,10 +244,10 @@
     },
     {
       "title": "Google launches Gemini 4 Carbon with a ‘significant leap’ in cybersecurity",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-28",
       "url": "https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -368,6 +438,26 @@
       "date": "2026-10-28",
       "url": "https://www.sciencedaily.com/releases/2026/10/261027063659.htm",
       "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Adam Mosseri says negativity around AI is ‘going to get worse’",
+      "source": "The Verge",
+      "date": "2026-10-28",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1021644/adam-mosseri-instagram-ai-negativity",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Anduril now says its BlueChip laptop will meet Buy American standards at launch",
+      "source": "The Verge",
+      "date": "2026-10-28",
+      "url": "https://www.theverge.com/policy/1021554/anduril-bluechip-65-percent-domestic-buy-american",
+      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -1708,96 +1798,6 @@
       "date": "2026-10-22",
       "url": "https://www.bleepingcomputer.com/news/security/capcom-confirms-data-breach-affecting-117-million-accounts/",
       "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "LiteLLM release pipeline hacked to distribute info-stealer malware",
-      "source": "BleepingComputer",
-      "date": "2026-10-22",
-      "url": "https://www.bleepingcomputer.com/news/security/litellm-release-pipeline-hacked-to-distribute-info-stealer-malware/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Arista patches new VeloCloud Orchestrator zero-day exploited in attacks",
-      "source": "BleepingComputer",
-      "date": "2026-10-22",
-      "url": "https://www.bleepingcomputer.com/news/security/arista-patches-new-velocloud-orchestrator-zero-day-exploited-in-attacks/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Microsoft shares how to fix broken Exchange Online EWS apps",
-      "source": "BleepingComputer",
-      "date": "2026-10-22",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-how-to-fix-broken-exchange-online-ews-apps/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Machine speed attacks require machine speed detection and response",
-      "source": "BleepingComputer",
-      "date": "2026-10-22",
-      "url": "https://www.bleepingcomputer.com/news/security/machine-speed-attacks-require-machine-speed-detection-and-response/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Amazon says PHP2Shell exploitation began 4 days before patches",
-      "source": "BleepingComputer",
-      "date": "2026-10-22",
-      "url": "https://www.bleepingcomputer.com/news/security/amazon-says-php2shell-exploitation-began-4-days-before-patches/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA’s Curiosity rover reveals a spectacular new view of Mars with a mystery on the horizon",
-      "source": "ScienceDaily",
-      "date": "2026-10-22",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261021231238.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A revolutionary new microscope could reveal the hidden machinery of life",
-      "source": "ScienceDaily",
-      "date": "2026-10-22",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261021231230.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "People are taking an unapproved weight-loss drug. AI found something surprising",
-      "source": "ScienceDaily",
-      "date": "2026-10-22",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261020085018.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA Invites Media to 2026 von Braun Space Exploration Symposium",
-      "source": "NASA",
-      "date": "2026-10-22",
-      "url": "https://www.nasa.gov/news-release/nasa-invites-media-to-2026-von-braun-space-exploration-symposium/",
-      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."

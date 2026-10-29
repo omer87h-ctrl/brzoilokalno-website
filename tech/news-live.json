@@ -1,7 +1,77 @@
 {
-  "updated": "2026-10-28",
+  "updated": "2026-10-29",
   "method": "automatski-rss",
   "stories": [
+    {
+      "title": "Caltech Names Artemis II Commander Reid Wiseman as NASA JPL Deputy",
+      "source": "NASA",
+      "date": "2026-10-29",
+      "url": "https://www.nasa.gov/centers-and-facilities/jpl/caltech-names-artemis-ii-commander-reid-wiseman-as-nasa-jpl-deputy/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "AI has come for Arizona’s water",
+      "source": "The Verge",
+      "date": "2026-10-29",
+      "url": "https://www.theverge.com/cs/features/1016650/arizona-water-data-center-tsmc",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "DoorDash is acquiring Instacart for $17 billion",
+      "source": "The Verge",
+      "date": "2026-10-29",
+      "url": "https://www.theverge.com/business/1021981/doordash-instacart-acquisition-announcement",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Windows 11 KB5127936 update released with 41 changes and fixes",
+      "source": "BleepingComputer",
+      "date": "2026-10-29",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5127936-update-released-with-41-changes-and-fixes/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "New Cisco firewall zero-day exploited to crash SSL VPN devices",
+      "source": "BleepingComputer",
+      "date": "2026-10-29",
+      "url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists just broke a textbook rule of physics",
+      "source": "ScienceDaily",
+      "date": "2026-10-29",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261027063713.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Meteors don't just burn up. What really happens is far more violent",
+      "source": "ScienceDaily",
+      "date": "2026-10-29",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261027063710.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "NASA Welcomes Vietnam as Newest Artemis Accords Signatory",
       "source": "NASA",
@@ -43,6 +113,16 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
+      "title": "Adam Mosseri says negativity around AI is ‘going to get worse’",
+      "source": "The Verge",
+      "date": "2026-10-28",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1021644/adam-mosseri-instagram-ai-negativity",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
       "title": "Akai is embracing vibe-coded mods with an open-source MPC",
       "source": "The Verge",
       "date": "2026-10-28",
@@ -54,10 +134,10 @@
     },
     {
       "title": "Google launches Gemini 4 Carbon with a ‘significant leap’ in cybersecurity",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-28",
       "url": "https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -103,21 +183,11 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Voters in Texas agree: They hate data centers",
-      "source": "The Verge AI",
+      "title": "Anduril now says its BlueChip laptop will meet Buy American standards at launch",
+      "source": "The Verge",
       "date": "2026-10-28",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1018676/data-center-midterm-election-energy-water-texas",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Meta quietly launched an &#8216;AI pet journal&#8217; app",
-      "source": "The Verge AI",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1020410/meta-launched-ai-pet-journal-app-waddle-world",
-      "category": "AI",
+      "url": "https://www.theverge.com/policy/1021554/anduril-bluechip-65-percent-domestic-buy-american",
+      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -147,36 +217,6 @@
       "source": "The Verge",
       "date": "2026-10-28",
       "url": "https://www.theverge.com/tech/1020811/alphabet-google-earnings-q3-2026",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Microsoft reveals strong cloud growth amid financial reporting overhaul",
-      "source": "The Verge",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/tech/1020785/microsoft-earnings-revenue-q1-2027",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Apple charges $14,549 for a fully specced touchscreen MacBook Pro",
-      "source": "The Verge",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/tech/1021308/apple-touchscreen-macbook-pro-proled-xdr-fully-specced",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Foreign gadget bans: all the news about the FCC’s clampdown on Chinese tech",
-      "source": "The Verge",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/policy/1019851/fcc-foreign-gadget-ban-drone-robot-roomba-storystream",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -243,26 +283,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Even after PHP2Shell, blast radius matters more than a CVSS score",
-      "source": "BleepingComputer",
-      "date": "2026-10-28",
-      "url": "https://www.bleepingcomputer.com/news/security/even-after-php2shell-blast-radius-matters-more-than-a-cvss-score/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Hackers now scanning systems for recently-patched Oracle flaw",
-      "source": "BleepingComputer",
-      "date": "2026-10-28",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-now-scanning-systems-for-recently-patched-oracle-flaw/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Smaller EV batteries, longer range? Scientists may have found a way",
       "source": "ScienceDaily",
       "date": "2026-10-28",
@@ -277,26 +297,6 @@
       "source": "ScienceDaily",
       "date": "2026-10-28",
       "url": "https://www.sciencedaily.com/releases/2026/10/261027063659.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA Invites Media to Crew Completion of Yearlong Mars Simulation",
-      "source": "NASA",
-      "date": "2026-10-27",
-      "url": "https://www.nasa.gov/news-release/nasa-invites-media-to-crew-completion-of-yearlong-mars-simulation/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA’s Neo Surveyor Sunshade",
-      "source": "NASA",
-      "date": "2026-10-27",
-      "url": "https://www.nasa.gov/image-article/nasas-neo-surveyor-sunshade/",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -323,16 +323,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "A tiny laser beam could make computer memory 1,000 times faster",
-      "source": "ScienceDaily",
-      "date": "2026-10-27",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261025073046.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "A 2,700-year-old solar eclipse just revealed something surprising about Earth",
       "source": "ScienceDaily",
       "date": "2026-10-26",
@@ -347,16 +337,6 @@
       "source": "ScienceDaily",
       "date": "2026-10-26",
       "url": "https://www.sciencedaily.com/releases/2026/10/261025073051.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Tiny magnetic vortices could help computers work more like your brain",
-      "source": "ScienceDaily",
-      "date": "2026-10-26",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261025073038.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
