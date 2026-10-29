@@ -3,51 +3,231 @@
   "method": "automatski-rss",
   "stories": [
     {
-      "title": "Caltech Names Artemis II Commander Reid Wiseman as NASA JPL Deputy",
-      "source": "NASA",
+      "title": "You can generate and edit Google Docs files directly in Gemini chats now",
+      "source": "The Verge",
       "date": "2026-10-29",
-      "url": "https://www.nasa.gov/centers-and-facilities/jpl/caltech-names-artemis-ii-commander-reid-wiseman-as-nasa-jpl-deputy/",
-      "category": "NAUKA",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1022519/google-gemini-file-editing-documents-pdfs",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft’s AI future has fewer jobs",
+      "source": "The Verge AI",
+      "date": "2026-10-29",
+      "url": "https://www.theverge.com/tech/1022023/microsoft-exit-offer-layoffs-notepad",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The NYT Cooking app is testing AI recipe modifications",
+      "source": "The Verge AI",
+      "date": "2026-10-29",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1022193/nyt-cooking-app-ai-recipe-modification-tool",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Anthropic is asking Wall Street to believe in AGI",
+      "source": "The Verge AI",
+      "date": "2026-10-29",
+      "url": "https://www.theverge.com/podcast/1021322/anthropic-ipo-filing-s-1-claude-semianalysis-joey-brookhart-interview",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Anthropic’s business plan: Build God or die trying",
+      "source": "The Verge AI",
+      "date": "2026-10-29",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1021476/anthropic-s-1-compute-recursive",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "AI has come for Arizona’s water",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-29",
       "url": "https://www.theverge.com/cs/features/1016650/arizona-water-data-center-tsmc",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "DoorDash is acquiring Instacart for $17 billion",
+      "title": "Reddit’s CEO says Google’s AI Mode ‘does not drive traffic’",
       "source": "The Verge",
       "date": "2026-10-29",
-      "url": "https://www.theverge.com/business/1021981/doordash-instacart-acquisition-announcement",
+      "url": "https://www.theverge.com/tech/1022848/reddit-ceo-google-ai-mode-traffic",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Windows 11 KB5127936 update released with 41 changes and fixes",
+      "title": "Patrick Stewart has died at age 86",
+      "source": "The Verge",
+      "date": "2026-10-29",
+      "url": "https://www.theverge.com/news/1022626/patrick-stewart-star-trek-death",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Reddit will force everyone to log in",
+      "source": "The Verge",
+      "date": "2026-10-29",
+      "url": "https://www.theverge.com/tech/1022571/reddit-login-requirement-q3-2026-earnings",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Rivian’s R2 is officially its best-selling vehicle",
+      "source": "The Verge",
+      "date": "2026-10-29",
+      "url": "https://www.theverge.com/transportation/1022420/rivian-q3-earnings-r2-sales-volkswagen-software",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "GM to pay $220 million to resolve claims it sold driving habits data",
+      "source": "The Verge",
+      "date": "2026-10-29",
+      "url": "https://www.theverge.com/transportation/1022555/gm-data-privacy-attorneys-general-lawsuit",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Ikea&#8217;s colorful donut-shaped smart lamp is $20 off",
+      "source": "The Verge",
+      "date": "2026-10-29",
+      "url": "https://www.theverge.com/gadgets/1022440/ikea-varmblixt-smart-lamp-deal-sale",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Apple’s new laptop supports one of the coolest features for color pros",
+      "source": "The Verge",
+      "date": "2026-10-29",
+      "url": "https://www.theverge.com/1022347/apple-macbook-supports-new-cmf",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Binance probes potential $5.8 billion crypto-theft hack",
       "source": "BleepingComputer",
       "date": "2026-10-29",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5127936-update-released-with-41-changes-and-fixes/",
+      "url": "https://www.bleepingcomputer.com/news/security/binance-probes-potential-58-billion-crypto-theft-hack/",
       "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "New Cisco firewall zero-day exploited to crash SSL VPN devices",
+      "title": "Hugging Face malware campaign returns to hijack GPUs for crypto mining",
       "source": "BleepingComputer",
       "date": "2026-10-29",
-      "url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/",
+      "url": "https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/",
       "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Japan Airlines suffers third-party data breach exposing passenger info",
+      "source": "BleepingComputer",
+      "date": "2026-10-29",
+      "url": "https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Polymarket halts trading after crypto-draining script breach, $2.5M traced",
+      "source": "BleepingComputer",
+      "date": "2026-10-29",
+      "url": "https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Fake crypto app on Apple App Store linked to $23K wallet theft",
+      "source": "BleepingComputer",
+      "date": "2026-10-29",
+      "url": "https://www.bleepingcomputer.com/news/security/fake-crypto-app-on-apple-app-store-linked-to-23k-wallet-theft/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Hackers exploit Cisco SD-WAN flaw to deploy custom KeyDrift malware",
+      "source": "BleepingComputer",
+      "date": "2026-10-29",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-cisco-sd-wan-flaw-to-deploy-custom-keydrift-malware/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Chrome extensions with 13.4 million installs caught hijacking searches",
+      "source": "BleepingComputer",
+      "date": "2026-10-29",
+      "url": "https://www.bleepingcomputer.com/news/security/chrome-extensions-with-134-million-installs-caught-hijacking-searches/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft fixes Remote Desktop failures caused by recent Windows updates",
+      "source": "BleepingComputer",
+      "date": "2026-10-29",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-remote-desktop-failures-caused-by-recent-windows-updates/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Einstein's equations may explain the universe without dark energy",
+      "source": "ScienceDaily",
+      "date": "2026-10-29",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261028232719.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA discovers Jupiter’s invisible shield is more complex than Earth’s",
+      "source": "ScienceDaily",
+      "date": "2026-10-29",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261028232715.htm",
+      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -73,211 +253,21 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "NASA Welcomes Vietnam as Newest Artemis Accords Signatory",
-      "source": "NASA",
-      "date": "2026-10-28",
-      "url": "https://www.nasa.gov/organizations/oiir/nasa-welcomes-vietnam-as-newest-artemis-accords-signatory/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Artemis III SLS Core Stage Joins Boosters at Kennedy",
-      "source": "NASA",
-      "date": "2026-10-28",
-      "url": "https://www.nasa.gov/image-article/artemis-iii-sls-core-stage-joins-boosters-at-kennedy/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA University Challenge Ignites Trajectory of Drone Entrepreneur",
-      "source": "NASA",
-      "date": "2026-10-28",
-      "url": "https://www.nasa.gov/aeronautics/nasa-challenge-drone-entrepreneur/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Webb Sees Turbulent Star Nursery",
-      "source": "NASA",
-      "date": "2026-10-28",
-      "url": "https://www.nasa.gov/image-article/webb-sees-turbulent-star-nursery/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Adam Mosseri says negativity around AI is ‘going to get worse’",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-28",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1021644/adam-mosseri-instagram-ai-negativity",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Akai is embracing vibe-coded mods with an open-source MPC",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-28",
       "url": "https://www.theverge.com/gadgets/1021405/akai-open-source-mpc-sample-key",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Google launches Gemini 4 Carbon with a ‘significant leap’ in cybersecurity",
-      "source": "The Verge AI",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier",
       "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Microsoft is ending Copilot support on smart TVs",
-      "source": "The Verge AI",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/tech/1021143/microsoft-lg-samsung-copilot-ai-assistant-smart-tvs-ending",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Chrome’s enhanced autofill can now pull info from Gmail to help you fill out forms",
-      "source": "The Verge AI",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/tech/1020626/chrome-enhanced-autofill-gmail-forms-gemini-personal-intelligence",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Meta says it&#8217;ll probably delay its controversial new business terms again",
-      "source": "The Verge AI",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/tech/1020769/meta-updated-business-terms-delay-indefinitely",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "xAI is buying out homeowners who promise not to sue over data center noise",
-      "source": "The Verge AI",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1020596/xai-mississippi-neighborhood-data-center-lawsuit",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Anduril now says its BlueChip laptop will meet Buy American standards at launch",
-      "source": "The Verge",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/policy/1021554/anduril-bluechip-65-percent-domestic-buy-american",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A hacker stole more than 40,000 DHS employee records",
-      "source": "The Verge",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/tech/1021528/ice-cbp-data-leak",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Readwise is taking on Kindle and Kobo for ebook supremacy",
-      "source": "The Verge",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/tech/1020264/readwise-books-launch-ebook-store",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Google says its investments in AI are driving more searches",
-      "source": "The Verge",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/tech/1020811/alphabet-google-earnings-q3-2026",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Police seize Virtualine bulletproof service tied to ransowmare, cybercrime",
-      "source": "BleepingComputer",
-      "date": "2026-10-28",
-      "url": "https://www.bleepingcomputer.com/news/security/police-seize-virtualine-bulletproof-service-tied-to-ransowmare-cybercrime/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Discord to let search engines index public server messages",
-      "source": "BleepingComputer",
-      "date": "2026-10-28",
-      "url": "https://www.bleepingcomputer.com/news/security/discord-to-let-search-engines-index-public-server-messages/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Sony ISP subsidiary data breach exposes 2.5 million customer records",
-      "source": "BleepingComputer",
-      "date": "2026-10-28",
-      "url": "https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Volt Typhoon hides zero-day attacks using 'Silent Train' framework",
-      "source": "BleepingComputer",
-      "date": "2026-10-28",
-      "url": "https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Microsoft urges Entra ID admins to migrate users to passkeys",
-      "source": "BleepingComputer",
-      "date": "2026-10-28",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-reminds-entra-id-admins-to-migrate-users-to-passkeys/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "InfraTrust report warns of exploited flaws in critical network infrastructure",
-      "source": "BleepingComputer",
-      "date": "2026-10-28",
-      "url": "https://www.bleepingcomputer.com/news/security/infratrust-report-warns-of-exploited-flaws-in-critical-network-infrastructure/",
-      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -317,26 +307,6 @@
       "source": "ScienceDaily",
       "date": "2026-10-27",
       "url": "https://www.sciencedaily.com/releases/2026/10/261026225600.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A 2,700-year-old solar eclipse just revealed something surprising about Earth",
-      "source": "ScienceDaily",
-      "date": "2026-10-26",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261025073055.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "New 3D thermal invisibility cloak makes objects disappear from infrared cameras",
-      "source": "ScienceDaily",
-      "date": "2026-10-26",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261025073051.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
