@@ -1,7 +1,27 @@
 {
-  "updated": "2026-10-30",
+  "updated": "2026-10-31",
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
+    {
+      "title": "Touchscreens everywhere!",
+      "source": "The Verge",
+      "date": "2026-10-31",
+      "url": "https://www.theverge.com/tech/1023569/ipad-mini-alexa-photo-frame-readwise-installer",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Here’s why you can&#8217;t shake those unhinged political texts",
+      "source": "The Verge",
+      "date": "2026-10-31",
+      "url": "https://www.theverge.com/policy/1023899/political-texts-midterm-elections",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "Maine’s data center revolt will decide who controls the Senate",
       "source": "The Verge AI",
@@ -308,6 +328,16 @@
       "date": "2026-10-30",
       "url": "https://www.bleepingcomputer.com/news/security/hackers-now-exploiting-max-severity-gitlab-flaw-in-attacks/",
       "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Apple Intelligence is finally coming to China with iOS 27.3",
+      "source": "The Verge",
+      "date": "2026-10-30",
+      "url": "https://www.theverge.com/tech/1023974/apple-intelligence-china-ios-27-3",
+      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -1768,36 +1798,6 @@
       "date": "2026-10-25",
       "url": "https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/",
       "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Three giant black holes discovered in a galaxy from the dawn of time",
-      "source": "ScienceDaily",
-      "date": "2026-10-25",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261024222000.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Astronomers may have discovered the first moon beyond our Solar System",
-      "source": "ScienceDaily",
-      "date": "2026-10-25",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261023023736.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Scientists discover a hidden flaw that challenges 40 years of superconductor science",
-      "source": "ScienceDaily",
-      "date": "2026-10-25",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261023023731.htm",
-      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."

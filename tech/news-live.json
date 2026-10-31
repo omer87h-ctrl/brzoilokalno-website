@@ -1,7 +1,27 @@
 {
-  "updated": "2026-10-30",
+  "updated": "2026-10-31",
   "method": "automatski-rss",
   "stories": [
+    {
+      "title": "Touchscreens everywhere!",
+      "source": "The Verge",
+      "date": "2026-10-31",
+      "url": "https://www.theverge.com/tech/1023569/ipad-mini-alexa-photo-frame-readwise-installer",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Here’s why you can&#8217;t shake those unhinged political texts",
+      "source": "The Verge",
+      "date": "2026-10-31",
+      "url": "https://www.theverge.com/policy/1023899/political-texts-midterm-elections",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "NASA Releases MAX POWER Key Events for Media, Participants",
       "source": "NASA",
@@ -18,6 +38,16 @@
       "date": "2026-10-30",
       "url": "https://www.nasa.gov/image-article/nasas-james-webb-space-telescope-captures-eerie-cats-head/",
       "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Apple Intelligence is finally coming to China with iOS 27.3",
+      "source": "The Verge",
+      "date": "2026-10-30",
+      "url": "https://www.theverge.com/tech/1023974/apple-intelligence-china-ios-27-3",
+      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -93,50 +123,10 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Maine’s data center revolt will decide who controls the Senate",
-      "source": "The Verge AI",
-      "date": "2026-10-30",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1021080/maine-senate-race-susan-collins-ai-data-centers",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Exclusive details about Akai’s MPC Sample Key",
       "source": "The Verge",
       "date": "2026-10-30",
       "url": "https://www.theverge.com/gadgets/1023649/akai-mpc-sample-key-exclusive",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The delightfully messy state of Apple gadgets",
-      "source": "The Verge",
-      "date": "2026-10-30",
-      "url": "https://www.theverge.com/podcast/1023194/the-delightfully-messy-state-of-apple-gadgets",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Rivian’s autonomy gamble faces its first real test",
-      "source": "The Verge",
-      "date": "2026-10-30",
-      "url": "https://www.theverge.com/transportation/1023143/rivian-autonomy-point-to-point-robotaxi-q3-2026",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Vizio’s discounted Mini LED TV lets you skip the sign-ups and smarts",
-      "source": "The Verge",
-      "date": "2026-10-30",
-      "url": "https://www.theverge.com/gadgets/1022794/vizio-mini-led-quantum-tv-65-inch-walmart-deal-sale",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -277,16 +267,6 @@
       "source": "NASA",
       "date": "2026-10-29",
       "url": "https://www.nasa.gov/centers-and-facilities/johnson/halloween-aboard-the-international-space-station/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA-funded Study Details One of Oldest Mars Meteorites Ever Found",
-      "source": "NASA",
-      "date": "2026-10-29",
-      "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-funded-study-details-one-of-oldest-mars-meteorites-ever-found/",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
