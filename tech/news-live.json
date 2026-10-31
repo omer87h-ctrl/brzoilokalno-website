@@ -3,6 +3,76 @@
   "method": "automatski-rss",
   "stories": [
     {
+      "title": "I built an AI Tamagotchi before Meta could",
+      "source": "The Verge",
+      "date": "2026-10-31",
+      "url": "https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Keyboards of The Verge",
+      "source": "The Verge",
+      "date": "2026-10-31",
+      "url": "https://www.theverge.com/gadgets/1017979/keyboards-of-the-verge-staff-picks",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Binance CEO says 90 percent of stolen assets have been ‘replenished’",
+      "source": "The Verge",
+      "date": "2026-10-31",
+      "url": "https://www.theverge.com/tech/1024091/binance-ceo-90-percent-stolen-crypto",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Happy Pikmin Day Eve",
+      "source": "The Verge",
+      "date": "2026-10-31",
+      "url": "https://www.theverge.com/games/1024085/happy-pikmin-day-eve",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Windows 11 tries new shortcuts for Xbox gaming mode and search",
+      "source": "The Verge",
+      "date": "2026-10-31",
+      "url": "https://www.theverge.com/tech/1024058/windows-11-search-improvements-xbox-quick-settings",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Best Buy is bundling a $100 gift card with touchscreen MacBook Pro preorders",
+      "source": "The Verge",
+      "date": "2026-10-31",
+      "url": "https://www.theverge.com/gadgets/1023302/best-buy-gift-card-macbook-pro-proled-xdr-preorder-deal-sale",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Vic Mensa can’t live without the Voice Memos app",
+      "source": "The Verge",
+      "date": "2026-10-31",
+      "url": "https://www.theverge.com/entertainment/1023477/vic-mensa-voice-memos-app-interview",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
       "title": "Touchscreens everywhere!",
       "source": "The Verge",
       "date": "2026-10-31",
@@ -13,11 +83,71 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Here’s why you can&#8217;t shake those unhinged political texts",
-      "source": "The Verge",
+      "title": "Northflank security breach leads to abuse of customers' AI API keys",
+      "source": "BleepingComputer",
       "date": "2026-10-31",
-      "url": "https://www.theverge.com/policy/1023899/political-texts-midterm-elections",
-      "category": "TEHNOLOGIJA",
+      "url": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "New Android SMS of Death exploit can remotely crash unpatched phones",
+      "source": "BleepingComputer",
+      "date": "2026-10-31",
+      "url": "https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Reddit to lock content behind logins to fight scrapers",
+      "source": "BleepingComputer",
+      "date": "2026-10-31",
+      "url": "https://www.bleepingcomputer.com/news/security/reddit-to-lock-content-behind-logins-to-fight-scrapers/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "From Beginner to Bug Hunter: Learning Cybersecurity in the AI Era.",
+      "source": "BleepingComputer",
+      "date": "2026-10-31",
+      "url": "https://www.bleepingcomputer.com/news/security/from-beginner-to-bug-hunter-learning-cybersecurity-in-the-ai-era/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Chainalysis discloses data breach from \"offensive agentic techniques\"",
+      "source": "BleepingComputer",
+      "date": "2026-10-31",
+      "url": "https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists smash oxygen nuclei to recreate matter from the Big Bang",
+      "source": "ScienceDaily",
+      "date": "2026-10-31",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261030002935.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists discover metals that defy the deep freeze at -424°F",
+      "source": "ScienceDaily",
+      "date": "2026-10-31",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261029072127.htm",
+      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -44,50 +174,50 @@
     },
     {
       "title": "Apple Intelligence is finally coming to China with iOS 27.3",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-30",
       "url": "https://www.theverge.com/tech/1023974/apple-intelligence-china-ios-27-3",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Sam Altman says it’s better for RAM to be in a data center than on your desk",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-30",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1023820/sam-altman-ram-shortage-cloud-servers",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "The biggest names in AI are backing a new way to opt out of scraping",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-30",
       "url": "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Google&#8217;s satellite AI server transmits its first response to Earth",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-30",
       "url": "https://www.theverge.com/tech/1023528/google-project-suncatcher-ai-satellite-transmission",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Starbucks wants to use AI to show you a ‘personalized digital menu’ at the drive-thru",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-10-30",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1023440/starbucks-ai-personalized-menu-drive-thru",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -108,26 +238,6 @@
       "date": "2026-10-30",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1023070/anthropic-ipo-risk-factors-filing-miracles",
       "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Sam Altman sympathizes with mathematicians, but says OpenAI’s math onslaught won’t stop",
-      "source": "The Verge AI",
-      "date": "2026-10-30",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1023054/altman-cheeky-pint-ai-math-interview",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Exclusive details about Akai’s MPC Sample Key",
-      "source": "The Verge",
-      "date": "2026-10-30",
-      "url": "https://www.theverge.com/gadgets/1023649/akai-mpc-sample-key-exclusive",
-      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -157,56 +267,6 @@
       "source": "BleepingComputer",
       "date": "2026-10-30",
       "url": "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "SS7 and Diameter Attacks: How Signaling Flaws Expose Your Phone",
-      "source": "BleepingComputer",
-      "date": "2026-10-30",
-      "url": "https://www.bleepingcomputer.com/news/security/ss7-and-diameter-attacks-how-signaling-flaws-expose-your-phone/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "CISA says max severity GitLab flaw now exploited in the wild",
-      "source": "BleepingComputer",
-      "date": "2026-10-30",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-now-exploiting-max-severity-gitlab-flaw-in-attacks/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Microsoft finally fixes VPN issues caused by September updates",
-      "source": "BleepingComputer",
-      "date": "2026-10-30",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-finally-fixes-vpn-issues-caused-by-september-updates/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Drupal warns of critical Commerce Core flaw exploited in attacks",
-      "source": "BleepingComputer",
-      "date": "2026-10-30",
-      "url": "https://www.bleepingcomputer.com/news/security/drupal-warns-of-critical-commerce-core-flaw-exploited-in-attacks/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Binance links $6.3 billion crypto theft to compromised DevOps laptop",
-      "source": "BleepingComputer",
-      "date": "2026-10-30",
-      "url": "https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/",
       "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -253,16 +313,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "A mysterious star system just 16 light-years away may be hiding habitable planets",
-      "source": "ScienceDaily",
-      "date": "2026-10-30",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261028232711.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Halloween Aboard the International Space Station",
       "source": "NASA",
       "date": "2026-10-29",
@@ -287,16 +337,6 @@
       "source": "ScienceDaily",
       "date": "2026-10-29",
       "url": "https://www.sciencedaily.com/releases/2026/10/261028232715.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Scientists just broke a textbook rule of physics",
-      "source": "ScienceDaily",
-      "date": "2026-10-29",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261027063713.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
