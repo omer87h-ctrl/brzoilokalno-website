@@ -1,12 +1,42 @@
 {
-  "updated": "2026-10-31",
+  "updated": "2026-11-01",
   "method": "automatski-rss",
   "stories": [
+    {
+      "title": "Scientists say a forgotten particle may explain why the universe exists",
+      "source": "ScienceDaily",
+      "date": "2026-11-01",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261031221201.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists shrink Archimedes’ screw to the size of a single molecule",
+      "source": "ScienceDaily",
+      "date": "2026-11-01",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261030002940.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "I built an AI Tamagotchi before Meta could",
       "source": "The Verge",
       "date": "2026-10-31",
       "url": "https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Get in the spirit with these horrors from YouTube",
+      "source": "The Verge",
+      "date": "2026-10-31",
+      "url": "https://www.theverge.com/entertainment/1024096/halloween-spirit-youtube-horror",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -67,16 +97,6 @@
       "source": "The Verge",
       "date": "2026-10-31",
       "url": "https://www.theverge.com/entertainment/1023477/vic-mensa-voice-memos-app-interview",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Touchscreens everywhere!",
-      "source": "The Verge",
-      "date": "2026-10-31",
-      "url": "https://www.theverge.com/tech/1023569/ipad-mini-alexa-photo-frame-readwise-installer",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -307,36 +327,6 @@
       "source": "ScienceDaily",
       "date": "2026-10-30",
       "url": "https://www.sciencedaily.com/releases/2026/10/261028234703.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Halloween Aboard the International Space Station",
-      "source": "NASA",
-      "date": "2026-10-29",
-      "url": "https://www.nasa.gov/centers-and-facilities/johnson/halloween-aboard-the-international-space-station/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Einstein's equations may explain the universe without dark energy",
-      "source": "ScienceDaily",
-      "date": "2026-10-29",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261028232719.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA discovers Jupiter’s invisible shield is more complex than Earth’s",
-      "source": "ScienceDaily",
-      "date": "2026-10-29",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261028232715.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
