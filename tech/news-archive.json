@@ -1,7 +1,187 @@
 {
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
+    {
+      "title": "Vivo’s first Pro Max phone proves its Ultra is still in a league of its own",
+      "source": "The Verge",
+      "date": "2026-11-02",
+      "url": "https://www.theverge.com/tech/1023131/vivo-x500-pro-max-review-cameras-specs-price",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Could data center backlash flip Florida?",
+      "source": "The Verge",
+      "date": "2026-11-02",
+      "url": "https://www.theverge.com/policy/1024357/florida-governors-race-donalds-jolly-data-centers",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "YouTuber Druski is going to make exclusive content for Netflix",
+      "source": "The Verge",
+      "date": "2026-11-02",
+      "url": "https://www.theverge.com/streaming/1023777/youtube-druski-netflix-deal",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The 16GB Raspberry Pi 5 got another ‘unavoidable’ RAM price hike",
+      "source": "The Verge",
+      "date": "2026-11-02",
+      "url": "https://www.theverge.com/tech/1024342/raspberry-pi-5-16gb-price-hike-ram",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "SpaceX could buy Boost Mobile as part of its big mobile carrier plans",
+      "source": "The Verge",
+      "date": "2026-11-02",
+      "url": "https://www.theverge.com/science/1024330/spacex-boost-mobile-deal-report",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Affinity’s creative studio is now available on iPad for free",
+      "source": "The Verge",
+      "date": "2026-11-02",
+      "url": "https://www.theverge.com/1024283/canva-affinity-for-ipad-design-app-availability",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "More European supermarkets are getting their freezers hacked",
+      "source": "The Verge",
+      "date": "2026-11-02",
+      "url": "https://www.theverge.com/tech/1024300/europe-freezer-fridge-hack-cyberattack",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Jackery made its portable power stations even smaller",
+      "source": "The Verge",
+      "date": "2026-11-02",
+      "url": "https://www.theverge.com/tech/1023173/jackery-explorer-100d-portable-power-station-battery-lithium-iron-phosphate",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "BTCPay Server warns of hot wallet thefts targeting outdated instances",
+      "source": "BleepingComputer",
+      "date": "2026-11-02",
+      "url": "https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Your Mobile Carrier Stores Your Call Logs for Years",
+      "source": "BleepingComputer",
+      "date": "2026-11-02",
+      "url": "https://www.bleepingcomputer.com/news/security/your-mobile-carrier-stores-your-call-logs-for-years/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Hackers disrupt refrigeration systems at European supermarkets",
+      "source": "BleepingComputer",
+      "date": "2026-11-02",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-disrupt-refrigeration-systems-at-european-supermarkets/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft fixes Smart App Control broken by October Windows update",
+      "source": "BleepingComputer",
+      "date": "2026-11-02",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-smart-app-control-broken-by-october-windows-update/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Over 1,000 GitLab servers vulnerable to ongoing RCE attacks",
+      "source": "BleepingComputer",
+      "date": "2026-11-02",
+      "url": "https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Synology warns of C3RB3R ransomware attacks targeting NAS devices",
+      "source": "BleepingComputer",
+      "date": "2026-11-02",
+      "url": "https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Ivanti patches two more Connect Secure zero-days chained in attacks",
+      "source": "BleepingComputer",
+      "date": "2026-11-02",
+      "url": "https://www.bleepingcomputer.com/news/security/ivanti-patches-two-more-connect-secure-zero-days-chained-in-attacks/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA’s Perseverance Mars rover breaks historic record after traveling 28 miles",
+      "source": "ScienceDaily",
+      "date": "2026-11-02",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261101010536.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "IceCube detects ghost particles with 10 billion times the energy of solar neutrinos",
+      "source": "ScienceDaily",
+      "date": "2026-11-02",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261101010533.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA's Hubble and Webb discover ancient worlds that remember their past",
+      "source": "ScienceDaily",
+      "date": "2026-11-02",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261031221209.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "Scientists say a forgotten particle may explain why the universe exists",
       "source": "ScienceDaily",
@@ -1618,186 +1798,6 @@
       "date": "2026-10-27",
       "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-convertr-analytics-script-to-steal-payment-card-data/",
       "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Microsoft releases Windows OOB updates to distrust eMudhra certificates",
-      "source": "BleepingComputer",
-      "date": "2026-10-27",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-oob-updates-to-distrust-emudhra-certificates/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Warp discloses breach exposing AI agent logs, user telemetry data",
-      "source": "BleepingComputer",
-      "date": "2026-10-27",
-      "url": "https://www.bleepingcomputer.com/news/security/warp-discloses-breach-exposing-ai-agent-logs-user-telemetry-data/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Tailscale warns of SSH flaws allowing root privilege escalation",
-      "source": "BleepingComputer",
-      "date": "2026-10-27",
-      "url": "https://www.bleepingcomputer.com/news/security/tailscale-warns-of-serious-ssh-flaws-allowing-root-privilege-escalation/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The Huntress Tragic Quadrant: Ranking Threats Hitting Businesses Hardest",
-      "source": "BleepingComputer",
-      "date": "2026-10-27",
-      "url": "https://www.bleepingcomputer.com/news/security/the-huntress-tragic-quadrant-ranking-threats-hitting-businesses-hardest/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Japan's GMO urges customers to shut down PCs amid ransomware threat",
-      "source": "BleepingComputer",
-      "date": "2026-10-27",
-      "url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "OpenAI's GPT-6.1 Terra is safer overall, but shows more destructive-action flags in tests",
-      "source": "BleepingComputer",
-      "date": "2026-10-27",
-      "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openais-gpt-61-terra-is-safer-overall-but-shows-more-destructive-action-flags-in-tests/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The city that fought Flock",
-      "source": "The Verge",
-      "date": "2026-10-26",
-      "url": "https://www.theverge.com/features/1017836/flock-huntington-west-virginia-surveillance-ballot-measure",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Kali Linux 2026.3 released with 6 new tools, desktop updates",
-      "source": "BleepingComputer",
-      "date": "2026-10-26",
-      "url": "https://www.bleepingcomputer.com/news/linux/kali-linux-20263-released-with-6-new-tools-desktop-updates/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "PHP2Shell security flaws now sucessfully exploited in the wild",
-      "source": "BleepingComputer",
-      "date": "2026-10-26",
-      "url": "https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A 2,700-year-old solar eclipse just revealed something surprising about Earth",
-      "source": "ScienceDaily",
-      "date": "2026-10-26",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261025073055.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "New 3D thermal invisibility cloak makes objects disappear from infrared cameras",
-      "source": "ScienceDaily",
-      "date": "2026-10-26",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261025073051.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Tiny magnetic vortices could help computers work more like your brain",
-      "source": "ScienceDaily",
-      "date": "2026-10-26",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261025073038.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "AI detects “invisible” signs of pancreatic cancer years before diagnosis",
-      "source": "ScienceDaily",
-      "date": "2026-10-26",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261024222031.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Scientists overcome a hidden obstacle to more powerful quantum computers",
-      "source": "ScienceDaily",
-      "date": "2026-10-26",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261024222024.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA’s Perseverance Offers Clues to Protect Crews From Mars Dust",
-      "source": "NASA",
-      "date": "2026-10-26",
-      "url": "https://www.nasa.gov/missions/mars-2020-perseverance/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA Invites Media to Moon Landing Simulation Experience in California",
-      "source": "NASA",
-      "date": "2026-10-26",
-      "url": "https://www.nasa.gov/news-release/nasa-invites-media-to-moon-landing-simulation-experience-in-california/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA’s X-59 Aircraft and Test Pilot",
-      "source": "NASA",
-      "date": "2026-10-26",
-      "url": "https://www.nasa.gov/image-article/nasas-x-59-aircraft-and-test-pilot/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA, USDA Sign Agreement Advancing Earth Science, Agriculture",
-      "source": "NASA",
-      "date": "2026-10-26",
-      "url": "https://www.nasa.gov/news-release/nasa-usda-sign-agreement-advancing-earth-science-agriculture/",
-      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
