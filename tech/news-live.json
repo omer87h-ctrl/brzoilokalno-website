@@ -3,11 +3,131 @@
   "method": "automatski-rss",
   "stories": [
     {
-      "title": "Anthropic clamps down on Claude’s AI video game clones",
+      "title": "Apple is restricting dating apps and romanceable chatbots to over 18s",
       "source": "The Verge",
+      "date": "2026-11-03",
+      "url": "https://www.theverge.com/tech/1025185/apple-app-store-age-rating-dating-apps-ai-companion",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Redmagic upgrades its liquid-cooled gaming phone with extra RGBs",
+      "source": "The Verge",
+      "date": "2026-11-03",
+      "url": "https://www.theverge.com/gadgets/1024504/redmagic-12-pro-liquid-cooling-rgb-lighting-185hz-camera",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Rivian spinoff Also wants to reinvent the wheel — but first, it has to ship",
+      "source": "The Verge",
+      "date": "2026-11-03",
+      "url": "https://www.theverge.com/transportation/1024747/rivian-spinoff-also-chris-yu-interview-ebike-production-ramp",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "UK school estate hit by 3AM ransomware in suspected AI-assisted attack",
+      "source": "BleepingComputer",
+      "date": "2026-11-03",
+      "url": "https://www.bleepingcomputer.com/news/security/uk-school-estate-hit-by-3am-ransomware-in-suspected-ai-assisted-attack/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Police seizes over 100 servers in investment scam crackdown",
+      "source": "BleepingComputer",
+      "date": "2026-11-03",
+      "url": "https://www.bleepingcomputer.com/news/security/police-seizes-over-100-servers-in-investment-scam-crackdown/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Google adds new $250,000 Cloud VRP reward for Root-in-Cloud bugs",
+      "source": "BleepingComputer",
+      "date": "2026-11-03",
+      "url": "https://www.bleepingcomputer.com/news/google/google-adds-new-250-000-cloud-vrp-reward-for-root-in-cloud-bugs/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Harvard University data breach exposed info of 851,000 accounts",
+      "source": "BleepingComputer",
+      "date": "2026-11-03",
+      "url": "https://www.bleepingcomputer.com/news/security/harvard-university-data-breach-exposed-info-of-851-000-accounts/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA smashed into an asteroid. Now Hera is closing in to see what happened",
+      "source": "ScienceDaily",
+      "date": "2026-11-03",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261103003154.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA’s Voyager 1 is about to reach a historic one-light-day milestone",
+      "source": "ScienceDaily",
+      "date": "2026-11-03",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261103003152.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "All 5 genetic “letters” of DNA and RNA discovered in a 4.5-billion-year-old asteroid",
+      "source": "ScienceDaily",
+      "date": "2026-11-03",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261102075903.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists just found a loophole that could let black holes split in two",
+      "source": "ScienceDaily",
+      "date": "2026-11-03",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261101010525.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Large Hadron Collider reveals evidence of Big Bang matter in surprisingly small collisions",
+      "source": "ScienceDaily",
+      "date": "2026-11-03",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261031221211.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Anthropic clamps down on Claude’s AI video game clones",
+      "source": "The Verge AI",
       "date": "2026-11-02",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -83,26 +203,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "The Apple Watch Ultra 4 is $100 off, matching its best price to date",
-      "source": "The Verge",
-      "date": "2026-11-02",
-      "url": "https://www.theverge.com/gadgets/1024416/apple-watch-ultra-4-ugreen-finetrack-2-bluetooth-tracker-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Ford promises not to sell your driving habits to data brokers",
-      "source": "The Verge",
-      "date": "2026-11-02",
-      "url": "https://www.theverge.com/transportation/1024386/ford-customer-driving-data-privacy-promise-data-brokers",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Chinese hackers use ARTEX AI in automated attacks against 200 orgs",
       "source": "BleepingComputer",
       "date": "2026-11-02",
@@ -143,46 +243,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Your Mobile Carrier Stores Your Call Logs for Years",
-      "source": "BleepingComputer",
-      "date": "2026-11-02",
-      "url": "https://www.bleepingcomputer.com/news/security/your-mobile-carrier-stores-your-call-logs-for-years/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Hackers disrupt refrigeration systems at European supermarkets",
-      "source": "BleepingComputer",
-      "date": "2026-11-02",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-disrupt-refrigeration-systems-at-european-supermarkets/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Microsoft fixes Smart App Control broken by October Windows update",
-      "source": "BleepingComputer",
-      "date": "2026-11-02",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-smart-app-control-broken-by-october-windows-update/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Over 1,000 GitLab servers vulnerable to ongoing RCE attacks",
-      "source": "BleepingComputer",
-      "date": "2026-11-02",
-      "url": "https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "NASA’s Perseverance Mars rover breaks historic record after traveling 28 miles",
       "source": "ScienceDaily",
       "date": "2026-11-02",
@@ -213,41 +273,11 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Scientists say a forgotten particle may explain why the universe exists",
-      "source": "ScienceDaily",
-      "date": "2026-11-01",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261031221201.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Scientists shrink Archimedes’ screw to the size of a single molecule",
-      "source": "ScienceDaily",
-      "date": "2026-11-01",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261030002940.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "I built an AI Tamagotchi before Meta could",
       "source": "The Verge AI",
       "date": "2026-10-31",
       "url": "https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code",
       "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Scientists smash oxygen nuclei to recreate matter from the Big Bang",
-      "source": "ScienceDaily",
-      "date": "2026-10-31",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261030002935.htm",
-      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -288,26 +318,6 @@
       "date": "2026-10-30",
       "url": "https://www.theverge.com/tech/1023528/google-project-suncatcher-ai-satellite-transmission",
       "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Astronauts just gave the International Space Station a powerful upgrade",
-      "source": "ScienceDaily",
-      "date": "2026-10-30",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261030002931.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A computer scientist breaks through a limit that stood since 1996",
-      "source": "ScienceDaily",
-      "date": "2026-10-30",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261029072146.htm",
-      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
