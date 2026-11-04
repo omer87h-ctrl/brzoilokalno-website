@@ -1,7 +1,117 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
+    {
+      "title": "Google hasn&#8217;t figured out how to make AI pay like its search engine",
+      "source": "The Verge",
+      "date": "2026-11-04",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1024862/google-search-ai-overviews-alphabet-earnings-q3",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Does opting out of TV tracking work?",
+      "source": "The Verge",
+      "date": "2026-11-04",
+      "url": "https://www.theverge.com/tech/1026088/northeastern-university-acr-tracking-study",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The Legend of Zelda: Ocarina of Time never gets old",
+      "source": "The Verge",
+      "date": "2026-11-04",
+      "url": "https://www.theverge.com/games/1025415/the-legend-of-zelda-ocarina-of-time-review-nintendo-switch-2",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "US charges two Canadians accused of hacking US universities",
+      "source": "BleepingComputer",
+      "date": "2026-11-04",
+      "url": "https://www.bleepingcomputer.com/news/security/us-charges-two-canadians-accused-of-hacking-us-universities/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "CISA flags WordPress RCE flaw as actively exploited in attacks",
+      "source": "BleepingComputer",
+      "date": "2026-11-04",
+      "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-wordpress-rce-flaw-as-actively-exploited-in-attacks/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Hackers use n-day exploits in zero-click attacks on iOS, Android devices",
+      "source": "BleepingComputer",
+      "date": "2026-11-04",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-use-n-day-exploits-in-zero-click-attacks-on-ios-android-devices/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "SLAC scientists find conclusive proof of a mysterious third type of magnetism",
+      "source": "ScienceDaily",
+      "date": "2026-11-04",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261104012256.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA is racing against time to save the Hubble Space Telescope",
+      "source": "ScienceDaily",
+      "date": "2026-11-04",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261104012254.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "MIT scientists break a 20-year rule and unlock never-before-seen crystal structures",
+      "source": "ScienceDaily",
+      "date": "2026-11-04",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261104012248.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A hidden star is plowing through Betelgeuse’s atmosphere, new evidence suggests",
+      "source": "ScienceDaily",
+      "date": "2026-11-04",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261103003149.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A tiny squeeze dramatically changes the magnetism of exotic materials",
+      "source": "ScienceDaily",
+      "date": "2026-11-04",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261101010541.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "Apple is restricting dating apps and romanceable chatbots to over 18s",
       "source": "The Verge",
@@ -154,10 +264,10 @@
     },
     {
       "title": "Those Jeff Bezos hair transplant photos are very fake",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-03",
       "url": "https://www.theverge.com/tech/1025745/fake-jeff-bezos-hair-replacement-photos-debunk",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -358,6 +468,46 @@
       "date": "2026-11-03",
       "url": "https://www.bleepingcomputer.com/news/security/gartner-predicts-socs-will-have-50-percent-more-engineers-than-analysts-by-2028/",
       "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The biggest modding site in PC gaming is taking a stance on AI",
+      "source": "The Verge",
+      "date": "2026-11-03",
+      "url": "https://www.theverge.com/games/1026085/nexus-mods-ai-disclosures",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Please stop asking me when the AI bubble will pop",
+      "source": "The Verge",
+      "date": "2026-11-03",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1025826/ai-bubble-pimco-apollo-bonds",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "AMD rides data center riches to &#8216;largest and most profitable&#8217; quarter in history",
+      "source": "The Verge",
+      "date": "2026-11-03",
+      "url": "https://www.theverge.com/tech/1026148/amd-earnings-q3-2026-data-center-pc",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "All the news about The Legend of Zelda: Ocarina of Time remake",
+      "source": "The Verge",
+      "date": "2026-11-03",
+      "url": "https://www.theverge.com/games/1026112/the-legend-of-zelda-ocarina-of-time-remake-nintendo-switch-2-news",
+      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -1648,156 +1798,6 @@
       "date": "2026-10-29",
       "url": "https://www.nasa.gov/news-release/nasa-names-troy-asher-armstrong-flight-research-center-director/",
       "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NIH–NASA QuSAFE Challenge",
-      "source": "NASA",
-      "date": "2026-10-29",
-      "url": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/center-of-excellence-for-collaborative-innovation-coeci/nih-nasa-qusafe-challenge/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Envía tu nombre a Titán a bordo de la misión Dragonfly de la NASA",
-      "source": "NASA",
-      "date": "2026-10-29",
-      "url": "https://www.nasa.gov/news-release/envia-tu-nombre-a-titan-a-bordo-de-la-mision-dragonfly-de-la-nasa/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The director of Obsession put a new horror short on YouTube",
-      "source": "The Verge",
-      "date": "2026-10-29",
-      "url": "https://www.theverge.com/streaming/1022934/curry-barker-obsession-horror-short-youtube-mama-bear",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Intel says it&#8217;s selling every affordable laptop chip it can make",
-      "source": "The Verge",
-      "date": "2026-10-29",
-      "url": "https://www.theverge.com/tech/1022911/intel-wildcat-lake-sold-out-ram-shortage",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "OpenAI doubles ChatGPT Pro usage limits after backlash over planned 50% cut",
-      "source": "BleepingComputer",
-      "date": "2026-10-29",
-      "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-doubles-chatgpt-pro-usage-limits-after-backlash-over-planned-50-percent-cut/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Voters in Texas agree: They hate data centers",
-      "source": "The Verge AI",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1018676/data-center-midterm-election-energy-water-texas",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Meta quietly launched an &#8216;AI pet journal&#8217; app",
-      "source": "The Verge AI",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1020410/meta-launched-ai-pet-journal-app-waddle-world",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Inside Amazon’s Echo hardware event",
-      "source": "The Verge",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/tech/1020388/inside-amazons-echo-hardware-event",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Almost all of Amazon’s new Echo gear is available now",
-      "source": "The Verge",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/gadgets/1019686/amazon-echo-dot-studio-camera-frame-show-16-buy",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Everything announced at Amazon&#8217;s October 2026 hardware launch",
-      "source": "The Verge",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/tech/1020403/everything-announced-at-amazons-october-2026-hardware-launch",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Amazon&#8217;s new Echo line is here: the 6 biggest updates",
-      "source": "The Verge",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/tech/1020035/amazon-fall-2026-hardware-launch-biggest-announcements",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Amazon’s first digital picture frame lets you add voice notes to photos",
-      "source": "The Verge",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/tech/1019626/amazon-alexa-plus-photo-digital-picture-frame-smart-speaker",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "How a grocery merger could expand a surveillance network",
-      "source": "The Verge",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/policy/1020187/kroger-grocery-merger-surveillance",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Amazon’s new Echo Studio speaker has a camera",
-      "source": "The Verge",
-      "date": "2026-10-28",
-      "url": "https://www.theverge.com/tech/1020241/amazon-echo-studio-home-camera-dot-smart-home-hub",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Hackers now scanning systems for recently-patched Oracle flaw",
-      "source": "BleepingComputer",
-      "date": "2026-10-28",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-now-scanning-systems-for-recently-patched-oracle-flaw/",
-      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
