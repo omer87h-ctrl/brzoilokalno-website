@@ -3,60 +3,250 @@
   "method": "automatski-rss",
   "stories": [
     {
-      "title": "Google hasn&#8217;t figured out how to make AI pay like its search engine",
+      "title": "NASA Shares Plans to Accelerate Artemis, Return to Moon",
+      "source": "NASA",
+      "date": "2026-11-04",
+      "url": "https://www.nasa.gov/missions/artemis/nasa-shares-plans-to-accelerate-artemis-return-to-moon/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA Announces Ka-Band Satellite Relay Awards for Space Communications",
+      "source": "NASA",
+      "date": "2026-11-04",
+      "url": "https://www.nasa.gov/news-release/nasa-announces-ka-band-satellite-relay-awards-for-space-communications/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA Navigation Experiment Shows Promise for Planetary Landings",
+      "source": "NASA",
+      "date": "2026-11-04",
+      "url": "https://www.nasa.gov/centers-and-facilities/armstrong/nasa-navigation-experiment-shows-promise-for-planetary-landings/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA Space Grant Students Fuel Agency’s Inspiration Tour",
+      "source": "NASA",
+      "date": "2026-11-04",
+      "url": "https://www.nasa.gov/learning-resources/nasa-space-grant-students-fuel-agencys-inspiration-tour/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Hubble Reveals Cosmic Mystery",
+      "source": "NASA",
+      "date": "2026-11-04",
+      "url": "https://www.nasa.gov/image-article/hubble-reveals-cosmic-mystery/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Qualcomm is betting big on data centers as smartphone sales sink",
       "source": "The Verge",
       "date": "2026-11-04",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1024862/google-search-ai-overviews-alphabet-earnings-q3",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1026867/qualcomm-earnings-data-centers",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Does opting out of TV tracking work?",
+      "title": "17 better ways Elon Musk could have wasted $446 million",
       "source": "The Verge",
       "date": "2026-11-04",
-      "url": "https://www.theverge.com/tech/1026088/northeastern-university-acr-tracking-study",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1026878/not-even-good-at-being-rich",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "The Legend of Zelda: Ocarina of Time never gets old",
+      "title": "Gemini for Home now plugs into AT&#038;T’s smart security system",
       "source": "The Verge",
       "date": "2026-11-04",
-      "url": "https://www.theverge.com/games/1025415/the-legend-of-zelda-ocarina-of-time-review-nintendo-switch-2",
+      "url": "https://www.theverge.com/tech/1026787/att-gemini-for-home-connected-life-security-system",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "US charges two Canadians accused of hacking US universities",
+      "title": "Nothing teases a screen-free AI device ahead of launch next month",
+      "source": "The Verge",
+      "date": "2026-11-04",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1026586/nothing-screen-free-ai-device-carl-pei",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "My therapist thinks I should chuck the Amazon Bee Frontier out a window",
+      "source": "The Verge AI",
+      "date": "2026-11-04",
+      "url": "https://www.theverge.com/column/1026464/optimizer-amazon-bee-frontier-ambient-listening-wearables",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "ChatGPT will now make you animated GIFs",
+      "source": "The Verge AI",
+      "date": "2026-11-04",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Data centers lost the midterms",
+      "source": "The Verge AI",
+      "date": "2026-11-04",
+      "url": "https://www.theverge.com/policy/1026365/data-centers-midterms-results",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Uber only fulfilled 4 rides from AI agents last quarter",
+      "source": "The Verge AI",
+      "date": "2026-11-04",
+      "url": "https://www.theverge.com/transportation/1026306/uber-ai-agents-q3-earnings-disintermediation",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "How I learned to love an obnoxious phone grip",
+      "source": "The Verge",
+      "date": "2026-11-04",
+      "url": "https://www.theverge.com/tech/1026743/bright-colorful-phone-grip-case",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Bose’s QuietComfort Headphones are more than half off",
+      "source": "The Verge",
+      "date": "2026-11-04",
+      "url": "https://www.theverge.com/gadgets/1026807/bose-quietcomfort-headphones-wireless-deal-sale",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Google’s Pixel 11 phones are up to 27 percent off",
+      "source": "The Verge",
+      "date": "2026-11-04",
+      "url": "https://www.theverge.com/gadgets/1025370/google-pixel-11-pro-phone-deal-sale",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Xbox previews two new ways to control cloud games",
+      "source": "The Verge",
+      "date": "2026-11-04",
+      "url": "https://www.theverge.com/news/1026455/xbox-nano-direct-cloud-wifi-connection-xbox-cloud-gaming-phone-controller",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Vercel rolls out new protection against stolen session cookie attacks",
       "source": "BleepingComputer",
       "date": "2026-11-04",
-      "url": "https://www.bleepingcomputer.com/news/security/us-charges-two-canadians-accused-of-hacking-us-universities/",
+      "url": "https://www.bleepingcomputer.com/news/security/vercel-rolls-out-new-protection-against-stolen-session-cookie-attacks/",
       "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "CISA flags WordPress RCE flaw as actively exploited in attacks",
+      "title": "Zyxel fixes zero-day exploited to hack nearly 1,000 network switches",
       "source": "BleepingComputer",
       "date": "2026-11-04",
-      "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-wordpress-rce-flaw-as-actively-exploited-in-attacks/",
+      "url": "https://www.bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches/",
       "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Hackers use n-day exploits in zero-click attacks on iOS, Android devices",
+      "title": "DreamHost confirms data breach exposed FTP logins and webmail sessions",
       "source": "BleepingComputer",
       "date": "2026-11-04",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-use-n-day-exploits-in-zero-click-attacks-on-ios-android-devices/",
+      "url": "https://www.bleepingcomputer.com/news/security/dreamhost-confirms-data-breach-exposed-ftp-logins-and-webmail-sessions/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Cyberattack disrupts blood storage refrigeration systems in France",
+      "source": "BleepingComputer",
+      "date": "2026-11-04",
+      "url": "https://www.bleepingcomputer.com/news/security/cyberattack-disrupts-blood-storage-refrigeration-systems-in-france/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NIKKE PC game launcher hacked to spread remote access, data-stealing malware",
+      "source": "BleepingComputer",
+      "date": "2026-11-04",
+      "url": "https://www.bleepingcomputer.com/news/security/nikke-pc-game-launcher-hacked-to-spread-remote-access-data-stealing-malware/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "mSecure password manager hack prompts password reset warnings",
+      "source": "BleepingComputer",
+      "date": "2026-11-04",
+      "url": "https://www.bleepingcomputer.com/news/security/msecure-password-manager-hack-prompts-password-reset-warnings/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Google Calendar phishing campaign hijacks sessions, bypasses MFA",
+      "source": "BleepingComputer",
+      "date": "2026-11-04",
+      "url": "https://www.bleepingcomputer.com/news/security/google-calendar-phishing-campaign-hijacks-sessions-bypasses-mfa/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "SonicWall warns of unpatched flaws in end-of-life GMS software",
+      "source": "BleepingComputer",
+      "date": "2026-11-04",
+      "url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-unpatched-flaws-in-end-of-life-gms-software/",
       "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -143,156 +333,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "The biggest modding site in PC gaming is taking a stance on AI",
-      "source": "The Verge",
-      "date": "2026-11-03",
-      "url": "https://www.theverge.com/games/1026085/nexus-mods-ai-disclosures",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Please stop asking me when the AI bubble will pop",
-      "source": "The Verge",
-      "date": "2026-11-03",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1025826/ai-bubble-pimco-apollo-bonds",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Those Jeff Bezos hair transplant photos are very fake",
-      "source": "The Verge AI",
-      "date": "2026-11-03",
-      "url": "https://www.theverge.com/tech/1025745/fake-jeff-bezos-hair-replacement-photos-debunk",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Apple starts giving Siri AI access to third-party apps",
-      "source": "The Verge AI",
-      "date": "2026-11-03",
-      "url": "https://www.theverge.com/tech/1025694/apple-siri-ai-third-party-apps",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Apple’s latest watchOS beta includes its new always-on Audio Intelligence features",
-      "source": "The Verge AI",
-      "date": "2026-11-03",
-      "url": "https://www.theverge.com/tech/1025002/apple-watch-audio-intelligence-watchos-beta",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "OpenAI says ChatGPT is catching up to Google in search",
-      "source": "The Verge AI",
-      "date": "2026-11-03",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1025482/openai-says-chatgpt-is-catching-up-to-google-in-search",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Indie games are missing launch dates because Steam is backed up",
-      "source": "The Verge AI",
-      "date": "2026-11-03",
-      "url": "https://www.theverge.com/games/1025596/valve-steam-indie-games-missing-launch-dates",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "AMD rides data center riches to &#8216;largest and most profitable&#8217; quarter in history",
-      "source": "The Verge",
-      "date": "2026-11-03",
-      "url": "https://www.theverge.com/tech/1026148/amd-earnings-q3-2026-data-center-pc",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "All the news about The Legend of Zelda: Ocarina of Time remake",
-      "source": "The Verge",
-      "date": "2026-11-03",
-      "url": "https://www.theverge.com/games/1026112/the-legend-of-zelda-ocarina-of-time-remake-nintendo-switch-2-news",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Canva is announcing changes and layoffs affecting 22 percent of its staff",
-      "source": "The Verge",
-      "date": "2026-11-03",
-      "url": "https://www.theverge.com/tech/1025971/canva-changes-layoffs",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Hackers hijack cPGuard autoupdate to deploy backdoor, steal data",
-      "source": "BleepingComputer",
-      "date": "2026-11-03",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-cpguard-autoupdate-to-deploy-backdoor-steal-data/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "WorkOS says attacker used ARTEX AI to breach internal sales app",
-      "source": "BleepingComputer",
-      "date": "2026-11-03",
-      "url": "https://www.bleepingcomputer.com/news/security/workos-says-attacker-used-artex-ai-to-breach-internal-sales-app/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Binance says fake job interview led to $6.3 billion crypto heist",
-      "source": "BleepingComputer",
-      "date": "2026-11-03",
-      "url": "https://www.bleepingcomputer.com/news/security/binance-says-fake-job-interview-led-to-63-billion-crypto-heist/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Google: LLMjacking attacks rack up $1 million in cloud AI charges",
-      "source": "BleepingComputer",
-      "date": "2026-11-03",
-      "url": "https://www.bleepingcomputer.com/news/security/google-llmjacking-attacks-rack-up-1-million-in-cloud-ai-charges/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Barracuda warns of critical flaws allowing root access to devices",
-      "source": "BleepingComputer",
-      "date": "2026-11-03",
-      "url": "https://www.bleepingcomputer.com/news/security/barracuda-warns-of-critical-flaws-allowing-root-access-to-devices/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "NASA smashed into an asteroid. Now Hera is closing in to see what happened",
       "source": "ScienceDaily",
       "date": "2026-11-03",
@@ -317,36 +357,6 @@
       "source": "ScienceDaily",
       "date": "2026-11-03",
       "url": "https://www.sciencedaily.com/releases/2026/11/261102075903.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Happy 65 Years: NASA’s Johnson Space Center Then and Now",
-      "source": "NASA",
-      "date": "2026-11-02",
-      "url": "https://www.nasa.gov/centers-and-facilities/johnson/happy-65-years-nasas-johnson-space-center-then-and-now/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "TB 26-09 Measured Hammer-Tap Inputs",
-      "source": "NASA",
-      "date": "2026-11-02",
-      "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-09-measured-hammer-tap-inputs/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA’s CHAPEA Crew “Returns” to Earth",
-      "source": "NASA",
-      "date": "2026-11-02",
-      "url": "https://www.nasa.gov/image-article/nasas-chapea-crew-returns-to-earth/",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
