@@ -1,7 +1,137 @@
 {
-  "updated": "2026-11-04",
+  "updated": "2026-11-05",
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
+    {
+      "title": "NASA Announces X-70 Experimental Aircraft to Advance Flight Research",
+      "source": "NASA",
+      "date": "2026-11-05",
+      "url": "https://www.nasa.gov/news-release/nasa-announces-x-70-experimental-aircraft-to-advance-flight-research/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Big Tech’s big AI buildout will not end until someone stops it",
+      "source": "The Verge AI",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1027344/amazon-microsoft-alphabet-google-meta-data-centers-earnings-q3",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Tech is about to get hammered in Congress",
+      "source": "The Verge",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/policy/1027430/democratic-control-congress-tech-policy",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The X-70 is NASA’s next experimental X-plane",
+      "source": "The Verge",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/tech/1027426/nasa-experimental-x-70-fractal-aircraft",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The touchscreen MacBook Pro is a winner",
+      "source": "The Verge",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/tech/1026570/apple-macbook-pro-proled-xdr-display-review",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The new iMac is a good desktop computer that needs a redesign",
+      "source": "The Verge",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/tech/1027177/2026-imac-m6-review",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The M6 MacBook Pro is probably the last of its kind",
+      "source": "The Verge",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/tech/1027250/m6-macbook-pro-review",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Spotify is coming to United Airlines seatbacks — with help from Starlink",
+      "source": "The Verge",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/transportation/1026472/united-seatback-spotify-app-starlink-wifi",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Motorola is going ultra premium with its $1,600 ‘Signature’ phone",
+      "source": "The Verge",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/gadgets/1026643/motorola-signature-27-price-specs-availability",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Discord is ditching Electron and its new app uses less RAM",
+      "source": "The Verge",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/news/1027379/discord-ditching-electron-web-app",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "GhostMap Android flaw lets malicious app trigger persistent boot loop",
+      "source": "BleepingComputer",
+      "date": "2026-11-05",
+      "url": "https://www.bleepingcomputer.com/news/security/ghostmap-android-flaw-lets-malicious-app-trigger-persistent-boot-loop/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists discover that a clogged filter could revolutionize oil refining",
+      "source": "ScienceDaily",
+      "date": "2026-11-05",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261103003207.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A clever molecular trick unlocks previously impossible properties in glass",
+      "source": "ScienceDaily",
+      "date": "2026-11-05",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261103003202.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "Google hasn&#8217;t figured out how to make AI pay like its search engine",
       "source": "The Verge",
@@ -164,40 +294,40 @@
     },
     {
       "title": "Qualcomm is betting big on data centers as smartphone sales sink",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-04",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1026867/qualcomm-earnings-data-centers",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "17 better ways Elon Musk could have wasted $446 million",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-04",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1026878/not-even-good-at-being-rich",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Gemini for Home now plugs into AT&#038;T’s smart security system",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-04",
       "url": "https://www.theverge.com/tech/1026787/att-gemini-for-home-connected-life-security-system",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Nothing teases a screen-free AI device ahead of launch next month",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-04",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1026586/nothing-screen-free-ai-device-carl-pei",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -1668,136 +1798,6 @@
       "date": "2026-10-30",
       "url": "https://www.theverge.com/gadgets/1022794/vizio-mini-led-quantum-tv-65-inch-walmart-deal-sale",
       "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Critical Linux kernel flaw allows remote root attacks on MPTCP servers",
-      "source": "BleepingComputer",
-      "date": "2026-10-30",
-      "url": "https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Trezor warns of suspected crypto-theft implant in hardware wallet",
-      "source": "BleepingComputer",
-      "date": "2026-10-30",
-      "url": "https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Malicious Claude Code extension on Cursor planted SSH backdoors",
-      "source": "BleepingComputer",
-      "date": "2026-10-30",
-      "url": "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "SS7 and Diameter Attacks: How Signaling Flaws Expose Your Phone",
-      "source": "BleepingComputer",
-      "date": "2026-10-30",
-      "url": "https://www.bleepingcomputer.com/news/security/ss7-and-diameter-attacks-how-signaling-flaws-expose-your-phone/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "CISA says max severity GitLab flaw now exploited in the wild",
-      "source": "BleepingComputer",
-      "date": "2026-10-30",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-now-exploiting-max-severity-gitlab-flaw-in-attacks/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Apple Intelligence is finally coming to China with iOS 27.3",
-      "source": "The Verge AI",
-      "date": "2026-10-30",
-      "url": "https://www.theverge.com/tech/1023974/apple-intelligence-china-ios-27-3",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Caltech Names Artemis II Commander Reid Wiseman as NASA JPL Deputy",
-      "source": "NASA",
-      "date": "2026-10-29",
-      "url": "https://www.nasa.gov/centers-and-facilities/jpl/caltech-names-artemis-ii-commander-reid-wiseman-as-nasa-jpl-deputy/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "AI has come for Arizona’s water",
-      "source": "The Verge AI",
-      "date": "2026-10-29",
-      "url": "https://www.theverge.com/cs/features/1016650/arizona-water-data-center-tsmc",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "DoorDash is acquiring Instacart for $17 billion",
-      "source": "The Verge",
-      "date": "2026-10-29",
-      "url": "https://www.theverge.com/business/1021981/doordash-instacart-acquisition-announcement",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Windows 11 KB5127936 update released with 41 changes and fixes",
-      "source": "BleepingComputer",
-      "date": "2026-10-29",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5127936-update-released-with-41-changes-and-fixes/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "New Cisco firewall zero-day exploited to crash SSL VPN devices",
-      "source": "BleepingComputer",
-      "date": "2026-10-29",
-      "url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Scientists just broke a textbook rule of physics",
-      "source": "ScienceDaily",
-      "date": "2026-10-29",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261027063713.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Meteors don't just burn up. What really happens is far more violent",
-      "source": "ScienceDaily",
-      "date": "2026-10-29",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261027063710.htm",
-      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."

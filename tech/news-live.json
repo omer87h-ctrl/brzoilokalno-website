@@ -1,7 +1,137 @@
 {
-  "updated": "2026-11-04",
+  "updated": "2026-11-05",
   "method": "automatski-rss",
   "stories": [
+    {
+      "title": "NASA Announces X-70 Experimental Aircraft to Advance Flight Research",
+      "source": "NASA",
+      "date": "2026-11-05",
+      "url": "https://www.nasa.gov/news-release/nasa-announces-x-70-experimental-aircraft-to-advance-flight-research/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Big Tech’s big AI buildout will not end until someone stops it",
+      "source": "The Verge AI",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1027344/amazon-microsoft-alphabet-google-meta-data-centers-earnings-q3",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Tech is about to get hammered in Congress",
+      "source": "The Verge",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/policy/1027430/democratic-control-congress-tech-policy",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The X-70 is NASA’s next experimental X-plane",
+      "source": "The Verge",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/tech/1027426/nasa-experimental-x-70-fractal-aircraft",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The touchscreen MacBook Pro is a winner",
+      "source": "The Verge",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/tech/1026570/apple-macbook-pro-proled-xdr-display-review",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The new iMac is a good desktop computer that needs a redesign",
+      "source": "The Verge",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/tech/1027177/2026-imac-m6-review",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The M6 MacBook Pro is probably the last of its kind",
+      "source": "The Verge",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/tech/1027250/m6-macbook-pro-review",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Spotify is coming to United Airlines seatbacks — with help from Starlink",
+      "source": "The Verge",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/transportation/1026472/united-seatback-spotify-app-starlink-wifi",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Motorola is going ultra premium with its $1,600 ‘Signature’ phone",
+      "source": "The Verge",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/gadgets/1026643/motorola-signature-27-price-specs-availability",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Discord is ditching Electron and its new app uses less RAM",
+      "source": "The Verge",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/news/1027379/discord-ditching-electron-web-app",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "GhostMap Android flaw lets malicious app trigger persistent boot loop",
+      "source": "BleepingComputer",
+      "date": "2026-11-05",
+      "url": "https://www.bleepingcomputer.com/news/security/ghostmap-android-flaw-lets-malicious-app-trigger-persistent-boot-loop/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists discover that a clogged filter could revolutionize oil refining",
+      "source": "ScienceDaily",
+      "date": "2026-11-05",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261103003207.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A clever molecular trick unlocks previously impossible properties in glass",
+      "source": "ScienceDaily",
+      "date": "2026-11-05",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261103003202.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "NASA Shares Plans to Accelerate Artemis, Return to Moon",
       "source": "NASA",
@@ -54,40 +184,40 @@
     },
     {
       "title": "Qualcomm is betting big on data centers as smartphone sales sink",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-04",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1026867/qualcomm-earnings-data-centers",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "17 better ways Elon Musk could have wasted $446 million",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-04",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1026878/not-even-good-at-being-rich",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Gemini for Home now plugs into AT&#038;T’s smart security system",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-04",
       "url": "https://www.theverge.com/tech/1026787/att-gemini-for-home-connected-life-security-system",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Nothing teases a screen-free AI device ahead of launch next month",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-04",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1026586/nothing-screen-free-ai-device-carl-pei",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -118,56 +248,6 @@
       "date": "2026-11-04",
       "url": "https://www.theverge.com/policy/1026365/data-centers-midterms-results",
       "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Uber only fulfilled 4 rides from AI agents last quarter",
-      "source": "The Verge AI",
-      "date": "2026-11-04",
-      "url": "https://www.theverge.com/transportation/1026306/uber-ai-agents-q3-earnings-disintermediation",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "How I learned to love an obnoxious phone grip",
-      "source": "The Verge",
-      "date": "2026-11-04",
-      "url": "https://www.theverge.com/tech/1026743/bright-colorful-phone-grip-case",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Bose’s QuietComfort Headphones are more than half off",
-      "source": "The Verge",
-      "date": "2026-11-04",
-      "url": "https://www.theverge.com/gadgets/1026807/bose-quietcomfort-headphones-wireless-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Google’s Pixel 11 phones are up to 27 percent off",
-      "source": "The Verge",
-      "date": "2026-11-04",
-      "url": "https://www.theverge.com/gadgets/1025370/google-pixel-11-pro-phone-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Xbox previews two new ways to control cloud games",
-      "source": "The Verge",
-      "date": "2026-11-04",
-      "url": "https://www.theverge.com/news/1026455/xbox-nano-direct-cloud-wifi-connection-xbox-cloud-gaming-phone-controller",
-      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -243,16 +323,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "SonicWall warns of unpatched flaws in end-of-life GMS software",
-      "source": "BleepingComputer",
-      "date": "2026-11-04",
-      "url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-unpatched-flaws-in-end-of-life-gms-software/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "SLAC scientists find conclusive proof of a mysterious third type of magnetism",
       "source": "ScienceDaily",
       "date": "2026-11-04",
@@ -293,46 +363,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "A tiny squeeze dramatically changes the magnetism of exotic materials",
-      "source": "ScienceDaily",
-      "date": "2026-11-04",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261101010541.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Astronaut and Earth",
-      "source": "NASA",
-      "date": "2026-11-03",
-      "url": "https://www.nasa.gov/image-article/astronaut-and-earth/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "TB 26-10 Printed Circuit Board Assembly Chip Resistor Body Cracking",
-      "source": "NASA",
-      "date": "2026-11-03",
-      "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-10-printed-circuit-board-assembly-chip-resistor-body-cracking/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA Astronaut, STEM Creator Connect with Students for STEM Day",
-      "source": "NASA",
-      "date": "2026-11-03",
-      "url": "https://www.nasa.gov/learning-resources/nasa-astronaut-stem-creator-connect-with-students-for-stem-day/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "NASA smashed into an asteroid. Now Hera is closing in to see what happened",
       "source": "ScienceDaily",
       "date": "2026-11-03",
@@ -347,16 +377,6 @@
       "source": "ScienceDaily",
       "date": "2026-11-03",
       "url": "https://www.sciencedaily.com/releases/2026/11/261103003152.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "All 5 genetic “letters” of DNA and RNA discovered in a 4.5-billion-year-old asteroid",
-      "source": "ScienceDaily",
-      "date": "2026-11-03",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261102075903.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
