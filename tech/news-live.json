@@ -3,6 +3,26 @@
   "method": "automatski-rss",
   "stories": [
     {
+      "title": "Midwestern City Lights",
+      "source": "NASA",
+      "date": "2026-11-05",
+      "url": "https://www.nasa.gov/image-article/midwestern-city-lights/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA Astronauts to Answer Questions from Florida Students",
+      "source": "NASA",
+      "date": "2026-11-05",
+      "url": "https://www.nasa.gov/learning-resources/nasa-astronauts-to-answer-questions-from-florida-students-2/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
       "title": "NASA Announces X-70 Experimental Aircraft to Advance Flight Research",
       "source": "NASA",
       "date": "2026-11-05",
@@ -13,91 +33,211 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Big Tech’s big AI buildout will not end until someone stops it",
+      "title": "Perplexity launches its own take on AI agents for work",
+      "source": "The Verge",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1028302/perplexity-teammates-ai-agents-work",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Muse has a voice mode now",
+      "source": "The Verge",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/tech/1028015/meta-muse-ai-voice-mode-expressive-avatar",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Claude AI can plug directly into your bank account",
       "source": "The Verge AI",
       "date": "2026-11-05",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1027344/amazon-microsoft-alphabet-google-meta-data-centers-earnings-q3",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1027652/anthropic-claude-plaid-personal-finance",
       "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Tech is about to get hammered in Congress",
+      "title": "‘Total repudiation’: The blue wave is about to hit AI",
+      "source": "The Verge AI",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1026927/total-repudiation-the-blue-wave-is-about-to-hit-ai",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Grimes is going to star in an AI movie that’s coming to theaters",
+      "source": "The Verge AI",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/entertainment/1026282/grimes-ai-movie",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "OpenAI says its new cybersecurity model is better at not hacking other companies",
+      "source": "The Verge AI",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1027599/openai-gpt-6-cyber-launch",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The hidden supply chain costs of the AI boom",
+      "source": "The Verge AI",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/podcast/1024438/willy-shih-supply-chain-ai-chips-ram-where-does-my-stuff-come-from-book",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "You can post AI music straight to SoundCloud from ElevenLabs",
+      "source": "The Verge AI",
+      "date": "2026-11-05",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1027427/ai-music-soundcloud-elevenlabs",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "T-Mobile owner on Elon Musk launching a wireless carrier: &#8216;Welcome to the party&#8217;",
       "source": "The Verge",
       "date": "2026-11-05",
-      "url": "https://www.theverge.com/policy/1027430/democratic-control-congress-tech-policy",
+      "url": "https://www.theverge.com/tech/1028346/t-mobile-deutsche-telecom-spacex-starlink-mobile",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "The X-70 is NASA’s next experimental X-plane",
+      "title": "Salon is shutting down after 31 years",
       "source": "The Verge",
       "date": "2026-11-05",
-      "url": "https://www.theverge.com/tech/1027426/nasa-experimental-x-70-fractal-aircraft",
+      "url": "https://www.theverge.com/news/1028281/salon-dot-com-shuts-down",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "The touchscreen MacBook Pro is a winner",
+      "title": "The midterms proved once and for all that X is not real life",
       "source": "The Verge",
       "date": "2026-11-05",
-      "url": "https://www.theverge.com/tech/1026570/apple-macbook-pro-proled-xdr-display-review",
+      "url": "https://www.theverge.com/policy/1028253/midterm-elections-x-right-wing-memes",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "The new iMac is a good desktop computer that needs a redesign",
+      "title": "Blue Origin’s next launch now won’t happen until 2027",
       "source": "The Verge",
       "date": "2026-11-05",
-      "url": "https://www.theverge.com/tech/1027177/2026-imac-m6-review",
+      "url": "https://www.theverge.com/science/1028178/blue-origins-next-launch-now-wont-happen-until-2027",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "The M6 MacBook Pro is probably the last of its kind",
+      "title": "Samsung’s Galaxy Z Fold 8 is $300 off ahead of Black Friday",
       "source": "The Verge",
       "date": "2026-11-05",
-      "url": "https://www.theverge.com/tech/1027250/m6-macbook-pro-review",
+      "url": "https://www.theverge.com/gadgets/1027659/samsung-galaxy-z-fold-8-beats-pill-deal-sale",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Spotify is coming to United Airlines seatbacks — with help from Starlink",
+      "title": "EA is bringing 25 classic PC games to Steam",
       "source": "The Verge",
       "date": "2026-11-05",
-      "url": "https://www.theverge.com/transportation/1026472/united-seatback-spotify-app-starlink-wifi",
+      "url": "https://www.theverge.com/games/1023553/ea-classic-pc-games-steam-anniversary-edition",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Motorola is going ultra premium with its $1,600 ‘Signature’ phone",
-      "source": "The Verge",
+      "title": "Fake OpenAI, SpaceX events used to steal Microsoft, Google accounts",
+      "source": "BleepingComputer",
       "date": "2026-11-05",
-      "url": "https://www.theverge.com/gadgets/1026643/motorola-signature-27-price-specs-availability",
-      "category": "TEHNOLOGIJA",
+      "url": "https://www.bleepingcomputer.com/news/security/fake-openai-spacex-events-used-to-steal-microsoft-google-accounts/",
+      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Discord is ditching Electron and its new app uses less RAM",
-      "source": "The Verge",
+      "title": "Nearly 1.5 million exposed secrets targeted in new revocation program",
+      "source": "BleepingComputer",
       "date": "2026-11-05",
-      "url": "https://www.theverge.com/news/1027379/discord-ditching-electron-web-app",
-      "category": "TEHNOLOGIJA",
+      "url": "https://www.bleepingcomputer.com/news/security/truffle-security-launches-program-to-revoke-14-million-live-secrets/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "OpenAI’s GPT-6 Astra silently obstructed safety research tasks",
+      "source": "BleepingComputer",
+      "date": "2026-11-05",
+      "url": "https://www.bleepingcomputer.com/news/security/openais-gpt-6-astra-silently-obstructed-safety-research-tasks/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "OpenSSH flaw lets attackers log into password-disabled Linux accounts",
+      "source": "BleepingComputer",
+      "date": "2026-11-05",
+      "url": "https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Hackers backdoor Linux servers using trojanized CWP web server",
+      "source": "BleepingComputer",
+      "date": "2026-11-05",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-backdoor-linux-servers-using-trojanized-cwp-web-server/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "DigiCert data breach exposes customer information, identity documents",
+      "source": "BleepingComputer",
+      "date": "2026-11-05",
+      "url": "https://www.bleepingcomputer.com/news/security/digicert-data-breach-exposes-customer-information-identity-documents/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Closing the Identity Gap at the Service Desk",
+      "source": "BleepingComputer",
+      "date": "2026-11-05",
+      "url": "https://www.bleepingcomputer.com/news/security/closing-the-identity-gap-at-the-service-desk/",
+      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -168,156 +308,6 @@
       "date": "2026-11-04",
       "url": "https://www.nasa.gov/learning-resources/nasa-space-grant-students-fuel-agencys-inspiration-tour/",
       "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Hubble Reveals Cosmic Mystery",
-      "source": "NASA",
-      "date": "2026-11-04",
-      "url": "https://www.nasa.gov/image-article/hubble-reveals-cosmic-mystery/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Qualcomm is betting big on data centers as smartphone sales sink",
-      "source": "The Verge AI",
-      "date": "2026-11-04",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1026867/qualcomm-earnings-data-centers",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "17 better ways Elon Musk could have wasted $446 million",
-      "source": "The Verge AI",
-      "date": "2026-11-04",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1026878/not-even-good-at-being-rich",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Gemini for Home now plugs into AT&#038;T’s smart security system",
-      "source": "The Verge AI",
-      "date": "2026-11-04",
-      "url": "https://www.theverge.com/tech/1026787/att-gemini-for-home-connected-life-security-system",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Nothing teases a screen-free AI device ahead of launch next month",
-      "source": "The Verge AI",
-      "date": "2026-11-04",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1026586/nothing-screen-free-ai-device-carl-pei",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "My therapist thinks I should chuck the Amazon Bee Frontier out a window",
-      "source": "The Verge AI",
-      "date": "2026-11-04",
-      "url": "https://www.theverge.com/column/1026464/optimizer-amazon-bee-frontier-ambient-listening-wearables",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "ChatGPT will now make you animated GIFs",
-      "source": "The Verge AI",
-      "date": "2026-11-04",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Data centers lost the midterms",
-      "source": "The Verge AI",
-      "date": "2026-11-04",
-      "url": "https://www.theverge.com/policy/1026365/data-centers-midterms-results",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Vercel rolls out new protection against stolen session cookie attacks",
-      "source": "BleepingComputer",
-      "date": "2026-11-04",
-      "url": "https://www.bleepingcomputer.com/news/security/vercel-rolls-out-new-protection-against-stolen-session-cookie-attacks/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Zyxel fixes zero-day exploited to hack nearly 1,000 network switches",
-      "source": "BleepingComputer",
-      "date": "2026-11-04",
-      "url": "https://www.bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "DreamHost confirms data breach exposed FTP logins and webmail sessions",
-      "source": "BleepingComputer",
-      "date": "2026-11-04",
-      "url": "https://www.bleepingcomputer.com/news/security/dreamhost-confirms-data-breach-exposed-ftp-logins-and-webmail-sessions/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Cyberattack disrupts blood storage refrigeration systems in France",
-      "source": "BleepingComputer",
-      "date": "2026-11-04",
-      "url": "https://www.bleepingcomputer.com/news/security/cyberattack-disrupts-blood-storage-refrigeration-systems-in-france/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NIKKE PC game launcher hacked to spread remote access, data-stealing malware",
-      "source": "BleepingComputer",
-      "date": "2026-11-04",
-      "url": "https://www.bleepingcomputer.com/news/security/nikke-pc-game-launcher-hacked-to-spread-remote-access-data-stealing-malware/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "mSecure password manager hack prompts password reset warnings",
-      "source": "BleepingComputer",
-      "date": "2026-11-04",
-      "url": "https://www.bleepingcomputer.com/news/security/msecure-password-manager-hack-prompts-password-reset-warnings/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Google Calendar phishing campaign hijacks sessions, bypasses MFA",
-      "source": "BleepingComputer",
-      "date": "2026-11-04",
-      "url": "https://www.bleepingcomputer.com/news/security/google-calendar-phishing-campaign-hijacks-sessions-bypasses-mfa/",
-      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
