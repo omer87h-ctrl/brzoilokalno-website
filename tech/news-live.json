@@ -1,13 +1,63 @@
 {
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "method": "automatski-rss",
   "stories": [
+    {
+      "title": "Why a new report on Anthropic automating AI development is alarming researchers",
+      "source": "The Verge",
+      "date": "2026-11-07",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "SonicWall warns of new SSL-VPN MFA bypass flaw exploited in attacks",
+      "source": "BleepingComputer",
+      "date": "2026-11-07",
+      "url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Rubin Observatory discovers two hidden companions of the Milky Way. Hundreds more may be waiting",
+      "source": "ScienceDaily",
+      "date": "2026-11-07",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261104012252.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "M30’s Sparkling Stars",
       "source": "NASA",
       "date": "2026-11-06",
       "url": "https://www.nasa.gov/image-article/m30s-sparkling-stars/",
       "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "OpenAI valued at $1.25 trillion, as rival Anthropic nears its IPO",
+      "source": "The Verge",
+      "date": "2026-11-06",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029380/openai-1-25-trillion-investment-valuation",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "China reportedly recruited AI exec to spy on Jensen Huang",
+      "source": "The Verge",
+      "date": "2026-11-06",
+      "url": "https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy",
+      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -24,10 +74,10 @@
     },
     {
       "title": "Meta&#8217;s Muse AI can create custom &#8216;spaces&#8217; for the version of the app you need right now",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-06",
       "url": "https://www.theverge.com/tech/1028871/meta-muse-ai-spaces",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -73,26 +123,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Protesters break into Microsoft data center site in Amsterdam",
-      "source": "The Verge AI",
-      "date": "2026-11-06",
-      "url": "https://www.theverge.com/news/1028549/protesters-microsoft-data-center-site-amsterdam",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "China reportedly recruited AI exec to spy on Jensen Huang",
-      "source": "The Verge",
-      "date": "2026-11-06",
-      "url": "https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Starlink Mobile: All the news on SpaceX&#8217;s major mobile carrier ambitions",
       "source": "The Verge",
       "date": "2026-11-06",
@@ -127,16 +157,6 @@
       "source": "The Verge",
       "date": "2026-11-06",
       "url": "https://www.theverge.com/policy/1028228/energy-infrastructure-permitting-reform-bill-congress-vote",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Amazon is now making a Melania Trump TV series",
-      "source": "The Verge",
-      "date": "2026-11-06",
-      "url": "https://www.theverge.com/tech/1028854/amazon-melania-the-series-mgm-studios-prime-video",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -213,16 +233,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "D-Link warns of multiple zero-days in DGS-3130 Series switches",
-      "source": "BleepingComputer",
-      "date": "2026-11-06",
-      "url": "https://www.bleepingcomputer.com/news/security/d-link-warns-of-multiple-zero-days-in-dgs-3130-series-switches/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Don't miss: Meteor showers, fireballs, and a supermoon light up November's night sky",
       "source": "ScienceDaily",
       "date": "2026-11-06",
@@ -237,6 +247,16 @@
       "source": "ScienceDaily",
       "date": "2026-11-06",
       "url": "https://www.sciencedaily.com/releases/2026/11/261105224545.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A dead star's mysterious rings reveal what could happen when our Sun dies",
+      "source": "ScienceDaily",
+      "date": "2026-11-06",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261104012250.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -263,40 +283,10 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "NASA Announces X-70 Experimental Aircraft to Advance Flight Research",
-      "source": "NASA",
-      "date": "2026-11-05",
-      "url": "https://www.nasa.gov/news-release/nasa-announces-x-70-experimental-aircraft-to-advance-flight-research/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "OpenAI is stepping back from NDAs for data center projects",
-      "source": "The Verge AI",
-      "date": "2026-11-05",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1028454/openai-data-center-nda",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Scientists discover that a clogged filter could revolutionize oil refining",
       "source": "ScienceDaily",
       "date": "2026-11-05",
       "url": "https://www.sciencedaily.com/releases/2026/11/261103003207.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A clever molecular trick unlocks previously impossible properties in glass",
-      "source": "ScienceDaily",
-      "date": "2026-11-05",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261103003202.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -327,16 +317,6 @@
       "source": "ScienceDaily",
       "date": "2026-11-04",
       "url": "https://www.sciencedaily.com/releases/2026/11/261104012248.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA smashed into an asteroid. Now Hera is closing in to see what happened",
-      "source": "ScienceDaily",
-      "date": "2026-11-03",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261103003154.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
