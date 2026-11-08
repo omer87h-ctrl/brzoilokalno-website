@@ -1,7 +1,47 @@
 {
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
+    {
+      "title": "There’s no slowing down media’s pivot-to-video 2.0",
+      "source": "The Verge",
+      "date": "2026-11-08",
+      "url": "https://www.theverge.com/column/1026252/video-media-news-tiktok-pivot",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A nuclear blast could save Earth from an asteroid, but there's a catch",
+      "source": "ScienceDaily",
+      "date": "2026-11-08",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261106174532.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Mysterious gas leaks suggest Mars may still be volcanically alive",
+      "source": "ScienceDaily",
+      "date": "2026-11-08",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261106174525.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists squeeze record-breaking X-ray power into an incredibly tiny spot",
+      "source": "ScienceDaily",
+      "date": "2026-11-08",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261104012329.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "Why a new report on Anthropic automating AI development is alarming researchers",
       "source": "The Verge AI",
@@ -138,6 +178,26 @@
       "date": "2026-11-07",
       "url": "https://www.bleepingcomputer.com/news/security/ctm360-exposes-fake-gift-card-scams-exploiting-trusted-brands/",
       "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA Awards Moon Base Transportation, Technology, Science Projects",
+      "source": "NASA",
+      "date": "2026-11-07",
+      "url": "https://www.nasa.gov/news-release/nasa-awards-moon-base-transportation-technology-science-projects/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A hidden limit of space and time could unlock electronics 100,000 times faster",
+      "source": "ScienceDaily",
+      "date": "2026-11-07",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261106174537.htm",
+      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -1738,66 +1798,6 @@
       "date": "2026-11-02",
       "url": "https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/",
       "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Synology warns of C3RB3R ransomware attacks targeting NAS devices",
-      "source": "BleepingComputer",
-      "date": "2026-11-02",
-      "url": "https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Ivanti patches two more Connect Secure zero-days chained in attacks",
-      "source": "BleepingComputer",
-      "date": "2026-11-02",
-      "url": "https://www.bleepingcomputer.com/news/security/ivanti-patches-two-more-connect-secure-zero-days-chained-in-attacks/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA’s Perseverance Mars rover breaks historic record after traveling 28 miles",
-      "source": "ScienceDaily",
-      "date": "2026-11-02",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261101010536.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "IceCube detects ghost particles with 10 billion times the energy of solar neutrinos",
-      "source": "ScienceDaily",
-      "date": "2026-11-02",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261101010533.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA's Hubble and Webb discover ancient worlds that remember their past",
-      "source": "ScienceDaily",
-      "date": "2026-11-02",
-      "url": "https://www.sciencedaily.com/releases/2026/10/261031221209.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Anthropic clamps down on Claude’s AI video game clones",
-      "source": "The Verge AI",
-      "date": "2026-11-02",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
-      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."

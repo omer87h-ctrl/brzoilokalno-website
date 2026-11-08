@@ -1,7 +1,57 @@
 {
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "method": "automatski-rss",
   "stories": [
+    {
+      "title": "There’s no slowing down media’s pivot-to-video 2.0",
+      "source": "The Verge",
+      "date": "2026-11-08",
+      "url": "https://www.theverge.com/column/1026252/video-media-news-tiktok-pivot",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A nuclear blast could save Earth from an asteroid, but there's a catch",
+      "source": "ScienceDaily",
+      "date": "2026-11-08",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261106174532.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Mysterious gas leaks suggest Mars may still be volcanically alive",
+      "source": "ScienceDaily",
+      "date": "2026-11-08",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261106174525.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists squeeze record-breaking X-ray power into an incredibly tiny spot",
+      "source": "ScienceDaily",
+      "date": "2026-11-08",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261104012329.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA Awards Moon Base Transportation, Technology, Science Projects",
+      "source": "NASA",
+      "date": "2026-11-07",
+      "url": "https://www.nasa.gov/news-release/nasa-awards-moon-base-transportation-technology-science-projects/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "NASA Seeks Next Generation of Explorers to Join Astronaut Corps",
       "source": "NASA",
@@ -93,16 +143,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Zelda is back and better than ever",
-      "source": "The Verge",
-      "date": "2026-11-07",
-      "url": "https://www.theverge.com/tech/1028930/zelda-ocarina-godzilla-minus-zero-affinity-installer",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Hackers pull off $133 million French bank heist via service provider",
       "source": "BleepingComputer",
       "date": "2026-11-07",
@@ -133,10 +173,10 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Rubin Observatory discovers two hidden companions of the Milky Way. Hundreds more may be waiting",
+      "title": "A hidden limit of space and time could unlock electronics 100,000 times faster",
       "source": "ScienceDaily",
       "date": "2026-11-07",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261104012252.htm",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261106174537.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -263,16 +303,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "A dead star's mysterious rings reveal what could happen when our Sun dies",
-      "source": "ScienceDaily",
-      "date": "2026-11-06",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261104012250.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Midwestern City Lights",
       "source": "NASA",
       "date": "2026-11-05",
@@ -293,16 +323,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Scientists discover that a clogged filter could revolutionize oil refining",
-      "source": "ScienceDaily",
-      "date": "2026-11-05",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261103003207.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "SLAC scientists find conclusive proof of a mysterious third type of magnetism",
       "source": "ScienceDaily",
       "date": "2026-11-04",
@@ -317,16 +337,6 @@
       "source": "ScienceDaily",
       "date": "2026-11-04",
       "url": "https://www.sciencedaily.com/releases/2026/11/261104012254.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "MIT scientists break a 20-year rule and unlock never-before-seen crystal structures",
-      "source": "ScienceDaily",
-      "date": "2026-11-04",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261104012248.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
