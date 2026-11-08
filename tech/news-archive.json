@@ -43,6 +43,86 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
+      "title": "NASA Announces $1 Million to Students for Moon Base Challenge",
+      "source": "NASA",
+      "date": "2026-11-08",
+      "url": "https://www.nasa.gov/news-release/nasa-announces-1-million-to-students-for-moon-base-challenge/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Nvidia is investigating Jensen Huang’s relationship with a Chinese spy",
+      "source": "The Verge",
+      "date": "2026-11-08",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029562/nvidia-investigating-jensen-huang-relationship-chinese-spy",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Apple is racing to make Siri more agentic",
+      "source": "The Verge",
+      "date": "2026-11-08",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Elvis and Eminem rights holders are suing Suno",
+      "source": "The Verge",
+      "date": "2026-11-08",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029533/elvis-eminem-suno-ai-music-clone-lawsuit",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Epic Games Launcher is coming to SteamOS",
+      "source": "The Verge",
+      "date": "2026-11-08",
+      "url": "https://www.theverge.com/games/1029557/epic-games-launcher-is-coming-to-steamos",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Apple’s M5 MacBook Air is down to its lowest price since July",
+      "source": "The Verge",
+      "date": "2026-11-08",
+      "url": "https://www.theverge.com/gadgets/1029019/apple-macbook-air-13-15-inch-m5-deal-sale",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Chatbots might be coming to Apple’s HomeView",
+      "source": "The Verge",
+      "date": "2026-11-08",
+      "url": "https://www.theverge.com/tech/1029526/chatbots-might-be-coming-to-apples-homeview",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Iris Ohyama data cloud breach exposes info of 7.7 million customers",
+      "source": "BleepingComputer",
+      "date": "2026-11-08",
+      "url": "https://www.bleepingcomputer.com/news/security/iris-ohyama-data-cloud-breach-exposes-info-of-77-million-customers/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
       "title": "Why a new report on Anthropic automating AI development is alarming researchers",
       "source": "The Verge AI",
       "date": "2026-11-07",
@@ -84,30 +164,30 @@
     },
     {
       "title": "NYT Cooking’s AI assistant saved my weeknight chicken, but almost ruined my cake",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-07",
       "url": "https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "The US let Nvidia sell chips to an empty office in China",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-07",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1029483/nvidia-ai-chips-china-blacklist-government",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "AI broke the cybersecurity world. What’s next?",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-07",
       "url": "https://www.theverge.com/podcast/1029038/ai-cybersecurity-hackers-data-breach-dark-age-alex-stamos",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -1718,86 +1798,6 @@
       "date": "2026-11-02",
       "url": "https://www.theverge.com/science/1024330/spacex-boost-mobile-deal-report",
       "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Affinity’s creative studio is now available on iPad for free",
-      "source": "The Verge",
-      "date": "2026-11-02",
-      "url": "https://www.theverge.com/1024283/canva-affinity-for-ipad-design-app-availability",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "More European supermarkets are getting their freezers hacked",
-      "source": "The Verge",
-      "date": "2026-11-02",
-      "url": "https://www.theverge.com/tech/1024300/europe-freezer-fridge-hack-cyberattack",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Jackery made its portable power stations even smaller",
-      "source": "The Verge",
-      "date": "2026-11-02",
-      "url": "https://www.theverge.com/tech/1023173/jackery-explorer-100d-portable-power-station-battery-lithium-iron-phosphate",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "BTCPay Server warns of hot wallet crypto thefts on outdated instances",
-      "source": "BleepingComputer",
-      "date": "2026-11-02",
-      "url": "https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Your Mobile Carrier Stores Your Call Logs for Years",
-      "source": "BleepingComputer",
-      "date": "2026-11-02",
-      "url": "https://www.bleepingcomputer.com/news/security/your-mobile-carrier-stores-your-call-logs-for-years/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Hackers disrupt refrigeration systems at European supermarkets",
-      "source": "BleepingComputer",
-      "date": "2026-11-02",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-disrupt-refrigeration-systems-at-european-supermarkets/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Microsoft fixes Smart App Control broken by October Windows update",
-      "source": "BleepingComputer",
-      "date": "2026-11-02",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-smart-app-control-broken-by-october-windows-update/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Over 1,000 GitLab servers vulnerable to ongoing RCE attacks",
-      "source": "BleepingComputer",
-      "date": "2026-11-02",
-      "url": "https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/",
-      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."

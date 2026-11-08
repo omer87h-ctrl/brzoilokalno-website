@@ -3,11 +3,91 @@
   "method": "automatski-rss",
   "stories": [
     {
+      "title": "NASA Announces $1 Million to Students for Moon Base Challenge",
+      "source": "NASA",
+      "date": "2026-11-08",
+      "url": "https://www.nasa.gov/news-release/nasa-announces-1-million-to-students-for-moon-base-challenge/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Nvidia is investigating Jensen Huang’s relationship with a Chinese spy",
+      "source": "The Verge",
+      "date": "2026-11-08",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029562/nvidia-investigating-jensen-huang-relationship-chinese-spy",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Apple is racing to make Siri more agentic",
+      "source": "The Verge",
+      "date": "2026-11-08",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Elvis and Eminem rights holders are suing Suno",
+      "source": "The Verge",
+      "date": "2026-11-08",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029533/elvis-eminem-suno-ai-music-clone-lawsuit",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Epic Games Launcher is coming to SteamOS",
+      "source": "The Verge",
+      "date": "2026-11-08",
+      "url": "https://www.theverge.com/games/1029557/epic-games-launcher-is-coming-to-steamos",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Apple’s M5 MacBook Air is down to its lowest price since July",
+      "source": "The Verge",
+      "date": "2026-11-08",
+      "url": "https://www.theverge.com/gadgets/1029019/apple-macbook-air-13-15-inch-m5-deal-sale",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Chatbots might be coming to Apple’s HomeView",
+      "source": "The Verge",
+      "date": "2026-11-08",
+      "url": "https://www.theverge.com/tech/1029526/chatbots-might-be-coming-to-apples-homeview",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
       "title": "There’s no slowing down media’s pivot-to-video 2.0",
       "source": "The Verge",
       "date": "2026-11-08",
       "url": "https://www.theverge.com/column/1026252/video-media-news-tiktok-pivot",
       "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Iris Ohyama data cloud breach exposes info of 7.7 million customers",
+      "source": "BleepingComputer",
+      "date": "2026-11-08",
+      "url": "https://www.bleepingcomputer.com/news/security/iris-ohyama-data-cloud-breach-exposes-info-of-77-million-customers/",
+      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -64,30 +144,30 @@
     },
     {
       "title": "NYT Cooking’s AI assistant saved my weeknight chicken, but almost ruined my cake",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-07",
       "url": "https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "The US let Nvidia sell chips to an empty office in China",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-07",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1029483/nvidia-ai-chips-china-blacklist-government",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "AI broke the cybersecurity world. What’s next?",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-07",
       "url": "https://www.theverge.com/podcast/1029038/ai-cybersecurity-hackers-data-breach-dark-age-alex-stamos",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -107,36 +187,6 @@
       "source": "The Verge",
       "date": "2026-11-07",
       "url": "https://www.theverge.com/tech/1023230/the90-gem-necklace-hands-on-impressions",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Costco members can get $5 off the reimagined Ocarina of Time",
-      "source": "The Verge",
-      "date": "2026-11-07",
-      "url": "https://www.theverge.com/gadgets/1028917/legend-of-zelda-ocarina-of-time-remake-switch-2-costco-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Discogs’ Kevin Lewandowski can’t live without his AeroPress",
-      "source": "The Verge",
-      "date": "2026-11-07",
-      "url": "https://www.theverge.com/tech/1029474/discogs-kevin-lewandowski-aeropress-interview",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Good riddance, Cybertruck!",
-      "source": "The Verge",
-      "date": "2026-11-07",
-      "url": "https://www.theverge.com/transportation/1029460/elon-musk-cybertruck-death-election-backlash",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -203,36 +253,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "China reportedly recruited AI exec to spy on Jensen Huang",
-      "source": "The Verge AI",
-      "date": "2026-11-06",
-      "url": "https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "All the latest updates on AI data centers",
-      "source": "The Verge AI",
-      "date": "2026-11-06",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Meta&#8217;s Muse AI can create custom &#8216;spaces&#8217; for the version of the app you need right now",
-      "source": "The Verge AI",
-      "date": "2026-11-06",
-      "url": "https://www.theverge.com/tech/1028871/meta-muse-ai-spaces",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Runaway AI hacking agent behind WorkOS breach after escaping sandbox",
       "source": "BleepingComputer",
       "date": "2026-11-06",
@@ -273,16 +293,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Veeam warns of Software Appliance boot failures on AMD EPYC hosts",
-      "source": "BleepingComputer",
-      "date": "2026-11-06",
-      "url": "https://www.bleepingcomputer.com/news/security/veeam-software-appliance-vms-fail-to-boot-on-amd-epyc-hosts/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Don't miss: Meteor showers, fireballs, and a supermoon light up November's night sky",
       "source": "ScienceDaily",
       "date": "2026-11-06",
@@ -307,16 +317,6 @@
       "source": "NASA",
       "date": "2026-11-05",
       "url": "https://www.nasa.gov/image-article/midwestern-city-lights/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA Astronauts to Answer Questions from Florida Students",
-      "source": "NASA",
-      "date": "2026-11-05",
-      "url": "https://www.nasa.gov/learning-resources/nasa-astronauts-to-answer-questions-from-florida-students-2/",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
