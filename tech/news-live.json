@@ -1,7 +1,207 @@
 {
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "method": "automatski-rss",
   "stories": [
+    {
+      "title": "MAX POWER: NASA’s Inaugural Aerospace Expo Ignites America’s Future",
+      "source": "NASA",
+      "date": "2026-11-09",
+      "url": "https://www.nasa.gov/general/max-power-nasas-inaugural-aerospace-expo-ignites-americas-future/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "CHAPEA Mission 2 Crew Reflects After 378 Days on Simulated Mars",
+      "source": "NASA",
+      "date": "2026-11-09",
+      "url": "https://www.nasa.gov/centers-and-facilities/johnson/chapea-mission-2-crew-reflects-after-378-days-on-simulated-mars/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Trump’s 60 Minutes interview touched on AI safety, threat to arrest an AI exec",
+      "source": "The Verge",
+      "date": "2026-11-09",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029802/trump-60-minutes-ai",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Disney and Adobe are building generative AI tools together",
+      "source": "The Verge",
+      "date": "2026-11-09",
+      "url": "https://www.theverge.com/tech/1029773/disney-adobe-generative-ai-partnership",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Hold up — I had a great time talking to the RIAA guy",
+      "source": "The Verge",
+      "date": "2026-11-09",
+      "url": "https://www.theverge.com/podcast/1029684/riaa-mitch-glazier-napster-ai-labels-music",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Jonathan Kanter is using AI to take on Big Tech",
+      "source": "The Verge AI",
+      "date": "2026-11-09",
+      "url": "https://www.theverge.com/policy/1029652/kanter-doj-biden-legal-tech",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Medium is launching a new note-taking app called TK",
+      "source": "The Verge",
+      "date": "2026-11-09",
+      "url": "https://www.theverge.com/tech/1029676/medium-tk-notes-app",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "How to shop like a pro during Black Friday and Cyber Monday",
+      "source": "The Verge",
+      "date": "2026-11-09",
+      "url": "https://www.theverge.com/21587765/black-friday-cyber-monday-best-deals-how-to-find",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Here are the price-matching policies for Best Buy, Walmart, and others",
+      "source": "The Verge",
+      "date": "2026-11-09",
+      "url": "https://www.theverge.com/21570383/price-matching-policy-apple-google-microsoft",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Here’s when the Black Friday sales start at Walmart, Target, and other retailers",
+      "source": "The Verge",
+      "date": "2026-11-09",
+      "url": "https://www.theverge.com/21569881/black-friday-deals-start-time-hours-cyber-monday-stores",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Here are the shipping and return policies for all the big-name retailers",
+      "source": "The Verge",
+      "date": "2026-11-09",
+      "url": "https://www.theverge.com/21570161/holiday-shipping-return-policy-apple-google-microsoft-amazon",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Binance denies data breach after alleged ShinyHunters claims",
+      "source": "BleepingComputer",
+      "date": "2026-11-09",
+      "url": "https://www.bleepingcomputer.com/news/security/binance-denies-data-breach-after-alleged-shinyhunters-claims/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Hackers exploit SSHole OpenSSH flaw to breach Linux systems",
+      "source": "BleepingComputer",
+      "date": "2026-11-09",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The Biggest Threat to Your GRC Job Isn’t AI. It’s Ignoring AI.",
+      "source": "BleepingComputer",
+      "date": "2026-11-09",
+      "url": "https://www.bleepingcomputer.com/news/security/the-biggest-threat-to-your-grc-job-isnt-ai-its-ignoring-ai/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "FBI agent stole $2.5 million in crypto from hackers under investigation",
+      "source": "BleepingComputer",
+      "date": "2026-11-09",
+      "url": "https://www.bleepingcomputer.com/news/security/fbi-agent-stole-25-million-in-crypto-from-hackers-fraud-victims/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "US bans MEXC crypto exchange over sanctions evasion, cybercrime links",
+      "source": "BleepingComputer",
+      "date": "2026-11-09",
+      "url": "https://www.bleepingcomputer.com/news/security/us-bans-mexc-crypto-exchange-over-sanctions-evasion-cybercrime-links/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Ukraine dismantles crypto scam network that stole €4.3 million",
+      "source": "BleepingComputer",
+      "date": "2026-11-09",
+      "url": "https://www.bleepingcomputer.com/news/security/ukraine-dismantles-crypto-scam-network-that-stole-43-million/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA reveals bold new plan to return astronauts to the Moon in 2028",
+      "source": "ScienceDaily",
+      "date": "2026-11-09",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261108233054.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Caltech robot makes history by building a structure in space",
+      "source": "ScienceDaily",
+      "date": "2026-11-09",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261108233043.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A quantum breakthrough makes light behave like both a solid and a liquid",
+      "source": "ScienceDaily",
+      "date": "2026-11-09",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261105224536.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "NASA Announces $1 Million to Students for Moon Base Challenge",
       "source": "NASA",
@@ -13,71 +213,41 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Nvidia is investigating Jensen Huang’s relationship with a Chinese spy",
-      "source": "The Verge",
+      "title": "Here’s the full text of Jensen Huang’s memo to Nvidia",
+      "source": "The Verge AI",
+      "date": "2026-11-08",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029595/full-text-jensen-huang-affair-memo-nvidia",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Nvidia is investigating Jensen Huang’s relationship with an alleged Chinese spy",
+      "source": "The Verge AI",
       "date": "2026-11-08",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1029562/nvidia-investigating-jensen-huang-relationship-chinese-spy",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Apple is racing to make Siri more agentic",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-08",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Elvis and Eminem rights holders are suing Suno",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-08",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1029533/elvis-eminem-suno-ai-music-clone-lawsuit",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Epic Games Launcher is coming to SteamOS",
-      "source": "The Verge",
-      "date": "2026-11-08",
-      "url": "https://www.theverge.com/games/1029557/epic-games-launcher-is-coming-to-steamos",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Apple’s M5 MacBook Air is down to its lowest price since July",
-      "source": "The Verge",
-      "date": "2026-11-08",
-      "url": "https://www.theverge.com/gadgets/1029019/apple-macbook-air-13-15-inch-m5-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Chatbots might be coming to Apple’s HomeView",
-      "source": "The Verge",
-      "date": "2026-11-08",
-      "url": "https://www.theverge.com/tech/1029526/chatbots-might-be-coming-to-apples-homeview",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "There’s no slowing down media’s pivot-to-video 2.0",
-      "source": "The Verge",
-      "date": "2026-11-08",
-      "url": "https://www.theverge.com/column/1026252/video-media-news-tiktok-pivot",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -113,16 +283,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Scientists squeeze record-breaking X-ray power into an incredibly tiny spot",
-      "source": "ScienceDaily",
-      "date": "2026-11-08",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261104012329.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "NASA Awards Moon Base Transportation, Technology, Science Projects",
       "source": "NASA",
       "date": "2026-11-07",
@@ -143,80 +303,10 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "NYT Cooking’s AI assistant saved my weeknight chicken, but almost ruined my cake",
-      "source": "The Verge AI",
-      "date": "2026-11-07",
-      "url": "https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The US let Nvidia sell chips to an empty office in China",
-      "source": "The Verge AI",
-      "date": "2026-11-07",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1029483/nvidia-ai-chips-china-blacklist-government",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "AI broke the cybersecurity world. What’s next?",
-      "source": "The Verge AI",
-      "date": "2026-11-07",
-      "url": "https://www.theverge.com/podcast/1029038/ai-cybersecurity-hackers-data-breach-dark-age-alex-stamos",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Why a new report on Anthropic automating AI development is alarming researchers",
-      "source": "The Verge AI",
-      "date": "2026-11-07",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The UV-tracking Gem made me rethink how sunlight affects my health, not just my appearance",
-      "source": "The Verge",
-      "date": "2026-11-07",
-      "url": "https://www.theverge.com/tech/1023230/the90-gem-necklace-hands-on-impressions",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Hackers pull off $133 million French bank heist via service provider",
       "source": "BleepingComputer",
       "date": "2026-11-07",
       "url": "https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "CTM360 Exposes Fake Gift Card Scams Exploiting Trusted Brands",
-      "source": "BleepingComputer",
-      "date": "2026-11-07",
-      "url": "https://www.bleepingcomputer.com/news/security/ctm360-exposes-fake-gift-card-scams-exploiting-trusted-brands/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "SonicWall warns of new SSL-VPN MFA bypass flaw exploited in attacks",
-      "source": "BleepingComputer",
-      "date": "2026-11-07",
-      "url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks/",
       "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -243,56 +333,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "OpenAI valued at $1.25 trillion, as rival Anthropic nears its IPO",
-      "source": "The Verge AI",
-      "date": "2026-11-06",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1029380/openai-1-25-trillion-investment-valuation",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Runaway AI hacking agent behind WorkOS breach after escaping sandbox",
-      "source": "BleepingComputer",
-      "date": "2026-11-06",
-      "url": "https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "OpenAI's new GPT-6 Cyber AI finds 81 Firefox flaws, 948 Linux bugs",
-      "source": "BleepingComputer",
-      "date": "2026-11-06",
-      "url": "https://www.bleepingcomputer.com/news/security/openais-new-gpt-6-cyber-ai-finds-81-firefox-flaws-948-linux-bugs/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Fake security tools on GitHub push backdoors and infostealers",
-      "source": "BleepingComputer",
-      "date": "2026-11-06",
-      "url": "https://www.bleepingcomputer.com/news/security/fake-security-tools-on-github-push-backdoors-and-infostealers/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "QNAP says hackers breaching NAS devices in Plex2Shell attacks",
-      "source": "BleepingComputer",
-      "date": "2026-11-06",
-      "url": "https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Don't miss: Meteor showers, fireballs, and a supermoon light up November's night sky",
       "source": "ScienceDaily",
       "date": "2026-11-06",
@@ -307,36 +347,6 @@
       "source": "ScienceDaily",
       "date": "2026-11-06",
       "url": "https://www.sciencedaily.com/releases/2026/11/261105224545.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Midwestern City Lights",
-      "source": "NASA",
-      "date": "2026-11-05",
-      "url": "https://www.nasa.gov/image-article/midwestern-city-lights/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "SLAC scientists find conclusive proof of a mysterious third type of magnetism",
-      "source": "ScienceDaily",
-      "date": "2026-11-04",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261104012256.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA is racing against time to save the Hubble Space Telescope",
-      "source": "ScienceDaily",
-      "date": "2026-11-04",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261104012254.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
