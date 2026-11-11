@@ -1,7 +1,127 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-11",
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
+    {
+      "title": "Adobe’s AI experiments let you walk around in photos and interview your characters",
+      "source": "The Verge",
+      "date": "2026-11-11",
+      "url": "https://www.theverge.com/tech/1031505/adobe-max-2026-sneaks-experiments-ai",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Sony’s latest Pulse wireless headset packs planar magnetic drivers at a good price",
+      "source": "The Verge",
+      "date": "2026-11-11",
+      "url": "https://www.theverge.com/games/1031291/sony-playstation-pulse-wireless-gaming-headset-hands-on",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Streaming is still trying to be TikTok",
+      "source": "The Verge",
+      "date": "2026-11-11",
+      "url": "https://www.theverge.com/streaming/1030864/streaming-skydance-paramount-disney-hulu-earnings-tiktok-short-form-video",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "I asked every TV manufacturer 17 questions about how they spy on you",
+      "source": "The Verge",
+      "date": "2026-11-11",
+      "url": "https://www.theverge.com/tech/1012372/tv-privacy-acr-questions",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Not everyone is loving their new iPhone Duo",
+      "source": "The Verge",
+      "date": "2026-11-11",
+      "url": "https://www.theverge.com/tech/1030398/iphone-duo-returns-screen-apps",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Serve Robotics wants to democratize sidewalk delivery robots",
+      "source": "The Verge",
+      "date": "2026-11-11",
+      "url": "https://www.theverge.com/transportation/1030902/serve-robotics-open-developer-api-sidewalk-delivery",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Apple is killing its Support Community forum next week",
+      "source": "The Verge",
+      "date": "2026-11-11",
+      "url": "https://www.theverge.com/tech/1031507/apple-community-support-forum-shutting-down",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "N-able releases security hotfixes for zero-day vulnerabilities",
+      "source": "BleepingComputer",
+      "date": "2026-11-11",
+      "url": "https://www.bleepingcomputer.com/news/security/n-able-releases-security-hotfixes-for-zero-day-vulnerabilities/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft fixes audio issues caused by September security updates",
+      "source": "BleepingComputer",
+      "date": "2026-11-11",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-usb-audio-issues-caused-by-september-security-updates/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "CISA flags Cisco BroadWorks flaw as actively exploited in attacks",
+      "source": "BleepingComputer",
+      "date": "2026-11-11",
+      "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft fixes Exchange sign-ins broken by Windows Server updates",
+      "source": "BleepingComputer",
+      "date": "2026-11-11",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-exchange-sign-ins-broken-by-october-windows-server-updates/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A radical theory says the universe is twice as old as we thought",
+      "source": "ScienceDaily",
+      "date": "2026-11-11",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261108233040.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "Anthropic targets $1.4 trillion IPO",
       "source": "The Verge AI",
@@ -174,10 +294,10 @@
     },
     {
       "title": "The US is winning the AI race. Jensen Huang could have blown it",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-10",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1031063/jensen-huang-ai-race-us-china-spy",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -378,6 +498,56 @@
       "date": "2026-11-10",
       "url": "https://www.bleepingcomputer.com/news/security/binance-warns-of-ios-flaw-that-could-leak-crypto-wallet-secrets/",
       "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft’s DLSS competitor is out for the Xbox Ally X and works in handheld mode",
+      "source": "The Verge",
+      "date": "2026-11-10",
+      "url": "https://www.theverge.com/tech/1031446/microsoft-automatic-super-resolution-auto-sr-upscaling",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA’s CHAPEA Mars crew finally emerges after more than a year in isolation",
+      "source": "ScienceDaily",
+      "date": "2026-11-10",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261109205406.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA offers $500,000 to develop next-generation electric rocket engines",
+      "source": "ScienceDaily",
+      "date": "2026-11-10",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261109205404.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Global fossil fuel emissions set to fall in 2026, but total CO2 keeps rising",
+      "source": "ScienceDaily",
+      "date": "2026-11-10",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261109205358.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Astronomers discover hidden alien planet in James Webb images",
+      "source": "ScienceDaily",
+      "date": "2026-11-10",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261108233028.htm",
+      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -1628,176 +1798,6 @@
       "date": "2026-11-05",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1027427/ai-music-soundcloud-elevenlabs",
       "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "T-Mobile owner on Elon Musk launching a wireless carrier: &#8216;Welcome to the party&#8217;",
-      "source": "The Verge",
-      "date": "2026-11-05",
-      "url": "https://www.theverge.com/tech/1028346/t-mobile-deutsche-telecom-spacex-starlink-mobile",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Salon is shutting down after 31 years",
-      "source": "The Verge",
-      "date": "2026-11-05",
-      "url": "https://www.theverge.com/news/1028281/salon-dot-com-shuts-down",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The midterms proved once and for all that X is not real life",
-      "source": "The Verge",
-      "date": "2026-11-05",
-      "url": "https://www.theverge.com/policy/1028253/midterm-elections-x-right-wing-memes",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Blue Origin’s next launch now won’t happen until 2027",
-      "source": "The Verge",
-      "date": "2026-11-05",
-      "url": "https://www.theverge.com/science/1028178/blue-origins-next-launch-now-wont-happen-until-2027",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Samsung’s Galaxy Z Fold 8 is $300 off ahead of Black Friday",
-      "source": "The Verge",
-      "date": "2026-11-05",
-      "url": "https://www.theverge.com/gadgets/1027659/samsung-galaxy-z-fold-8-beats-pill-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "EA is bringing 25 classic PC games to Steam",
-      "source": "The Verge",
-      "date": "2026-11-05",
-      "url": "https://www.theverge.com/games/1023553/ea-classic-pc-games-steam-anniversary-edition",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Fake OpenAI, SpaceX events used to steal Microsoft, Google accounts",
-      "source": "BleepingComputer",
-      "date": "2026-11-05",
-      "url": "https://www.bleepingcomputer.com/news/security/fake-openai-spacex-events-used-to-steal-microsoft-google-accounts/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Nearly 1.5 million exposed secrets targeted in new revocation program",
-      "source": "BleepingComputer",
-      "date": "2026-11-05",
-      "url": "https://www.bleepingcomputer.com/news/security/truffle-security-launches-program-to-revoke-14-million-live-secrets/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "OpenAI’s GPT-6 Astra silently obstructed safety research tasks",
-      "source": "BleepingComputer",
-      "date": "2026-11-05",
-      "url": "https://www.bleepingcomputer.com/news/security/openais-gpt-6-astra-silently-obstructed-safety-research-tasks/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "OpenSSH flaw lets attackers log into password-disabled Linux accounts",
-      "source": "BleepingComputer",
-      "date": "2026-11-05",
-      "url": "https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Hackers backdoor Linux servers using trojanized CWP web server",
-      "source": "BleepingComputer",
-      "date": "2026-11-05",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-backdoor-linux-servers-using-trojanized-cwp-web-server/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "DigiCert data breach exposes customer information, identity documents",
-      "source": "BleepingComputer",
-      "date": "2026-11-05",
-      "url": "https://www.bleepingcomputer.com/news/security/digicert-data-breach-exposes-customer-information-identity-documents/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Closing the Identity Gap at the Service Desk",
-      "source": "BleepingComputer",
-      "date": "2026-11-05",
-      "url": "https://www.bleepingcomputer.com/news/security/closing-the-identity-gap-at-the-service-desk/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "OpenAI is stepping back from NDAs for data center projects",
-      "source": "The Verge AI",
-      "date": "2026-11-05",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1028454/openai-data-center-nda",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Airbnb is working on an AI travel agent",
-      "source": "The Verge",
-      "date": "2026-11-05",
-      "url": "https://www.theverge.com/tech/1028412/airbnb-ai-travel-agent-q3-2026-earnings",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Google hasn&#8217;t figured out how to make AI pay like its search engine",
-      "source": "The Verge",
-      "date": "2026-11-04",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1024862/google-search-ai-overviews-alphabet-earnings-q3",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Does opting out of TV tracking work?",
-      "source": "The Verge",
-      "date": "2026-11-04",
-      "url": "https://www.theverge.com/tech/1026088/northeastern-university-acr-tracking-study",
-      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."

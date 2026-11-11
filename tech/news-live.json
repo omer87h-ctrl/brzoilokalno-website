@@ -1,7 +1,127 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-11",
   "method": "automatski-rss",
   "stories": [
+    {
+      "title": "Adobe’s AI experiments let you walk around in photos and interview your characters",
+      "source": "The Verge",
+      "date": "2026-11-11",
+      "url": "https://www.theverge.com/tech/1031505/adobe-max-2026-sneaks-experiments-ai",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Sony’s latest Pulse wireless headset packs planar magnetic drivers at a good price",
+      "source": "The Verge",
+      "date": "2026-11-11",
+      "url": "https://www.theverge.com/games/1031291/sony-playstation-pulse-wireless-gaming-headset-hands-on",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Streaming is still trying to be TikTok",
+      "source": "The Verge",
+      "date": "2026-11-11",
+      "url": "https://www.theverge.com/streaming/1030864/streaming-skydance-paramount-disney-hulu-earnings-tiktok-short-form-video",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "I asked every TV manufacturer 17 questions about how they spy on you",
+      "source": "The Verge",
+      "date": "2026-11-11",
+      "url": "https://www.theverge.com/tech/1012372/tv-privacy-acr-questions",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Not everyone is loving their new iPhone Duo",
+      "source": "The Verge",
+      "date": "2026-11-11",
+      "url": "https://www.theverge.com/tech/1030398/iphone-duo-returns-screen-apps",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Serve Robotics wants to democratize sidewalk delivery robots",
+      "source": "The Verge",
+      "date": "2026-11-11",
+      "url": "https://www.theverge.com/transportation/1030902/serve-robotics-open-developer-api-sidewalk-delivery",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Apple is killing its Support Community forum next week",
+      "source": "The Verge",
+      "date": "2026-11-11",
+      "url": "https://www.theverge.com/tech/1031507/apple-community-support-forum-shutting-down",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "N-able releases security hotfixes for zero-day vulnerabilities",
+      "source": "BleepingComputer",
+      "date": "2026-11-11",
+      "url": "https://www.bleepingcomputer.com/news/security/n-able-releases-security-hotfixes-for-zero-day-vulnerabilities/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft fixes audio issues caused by September security updates",
+      "source": "BleepingComputer",
+      "date": "2026-11-11",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-usb-audio-issues-caused-by-september-security-updates/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "CISA flags Cisco BroadWorks flaw as actively exploited in attacks",
+      "source": "BleepingComputer",
+      "date": "2026-11-11",
+      "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft fixes Exchange sign-ins broken by Windows Server updates",
+      "source": "BleepingComputer",
+      "date": "2026-11-11",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-exchange-sign-ins-broken-by-october-windows-server-updates/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A radical theory says the universe is twice as old as we thought",
+      "source": "ScienceDaily",
+      "date": "2026-11-11",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261108233040.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "NASA Invites Media, Public to Join Voyager 1 One-Light Day Activities",
       "source": "NASA",
@@ -34,10 +154,10 @@
     },
     {
       "title": "The US is winning the AI race. Jensen Huang could have blown it",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-10",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1031063/jensen-huang-ai-race-us-china-spy",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -103,80 +223,10 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Adobe is going all in on agentic AI",
-      "source": "The Verge AI",
-      "date": "2026-11-10",
-      "url": "https://www.theverge.com/tech/1030593/adobe-max-ai-agents-mcp-firefly-assistant-updates",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The VR Disney Plus app on Meta Quest now has 3D movies",
+      "title": "Microsoft’s DLSS competitor is out for the Xbox Ally X and works in handheld mode",
       "source": "The Verge",
       "date": "2026-11-10",
-      "url": "https://www.theverge.com/tech/1031256/meta-quest-disney-plus-vr-3d-movies",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Oura is acquiring medical AI chatbot startup Counsel Health",
-      "source": "The Verge",
-      "date": "2026-11-10",
-      "url": "https://www.theverge.com/gadgets/1031284/oura-counsel-health-acquisition",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Sony cancels live-service shooter Fairgames",
-      "source": "The Verge",
-      "date": "2026-11-10",
-      "url": "https://www.theverge.com/games/1031242/sony-playstation-fairgames-canceled",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The PlayStation Plus PC app is shutting down next month",
-      "source": "The Verge",
-      "date": "2026-11-10",
-      "url": "https://www.theverge.com/games/1031144/sony-playstation-plus-windows-pc-app-shutting-down",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Starlink Mini 2 adds a swappable battery",
-      "source": "The Verge",
-      "date": "2026-11-10",
-      "url": "https://www.theverge.com/tech/1031028/spacex-starlink-mini-2-satellite-internet-terminal-hot-swap-battery",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Google’s Pixel Tag tracker is now available",
-      "source": "The Verge",
-      "date": "2026-11-10",
-      "url": "https://www.theverge.com/tech/1030766/google-pixel-tag-tracker-find-hub-uwb-bluetooth-sounding",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Google is making Pixel HiLight slightly more useful",
-      "source": "The Verge",
-      "date": "2026-11-10",
-      "url": "https://www.theverge.com/tech/1031089/google-pixel-drop-november-2026-hilight",
+      "url": "https://www.theverge.com/tech/1031446/microsoft-automatic-super-resolution-auto-sr-upscaling",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -223,41 +273,31 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Microsoft November 2026 Patch Tuesday fixes 1,235 flaws, Outlook zero-day",
-      "source": "BleepingComputer",
+      "title": "NASA’s CHAPEA Mars crew finally emerges after more than a year in isolation",
+      "source": "ScienceDaily",
       "date": "2026-11-10",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/",
-      "category": "SIGURNOST",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261109205406.htm",
+      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Windows 11 KB5132061 & KB5131087 cumulative updates released",
-      "source": "BleepingComputer",
+      "title": "NASA offers $500,000 to develop next-generation electric rocket engines",
+      "source": "ScienceDaily",
       "date": "2026-11-10",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5132061-and-kb5131087-cumulative-updates-released/",
-      "category": "SIGURNOST",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261109205404.htm",
+      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Critical Xen Orchestra auth bypass flaw exploited to hijack VM servers",
-      "source": "BleepingComputer",
+      "title": "Global fossil fuel emissions set to fall in 2026, but total CO2 keeps rising",
+      "source": "ScienceDaily",
       "date": "2026-11-10",
-      "url": "https://www.bleepingcomputer.com/news/security/critical-xen-orchestra-auth-bypass-flaw-exploited-to-hijack-vm-servers/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Binance warns of iOS flaw that could leak crypto wallet secrets",
-      "source": "BleepingComputer",
-      "date": "2026-11-10",
-      "url": "https://www.bleepingcomputer.com/news/security/binance-warns-of-ios-flaw-that-could-leak-crypto-wallet-secrets/",
-      "category": "SIGURNOST",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261109205358.htm",
+      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -267,6 +307,16 @@
       "source": "ScienceDaily",
       "date": "2026-11-10",
       "url": "https://www.sciencedaily.com/releases/2026/11/261108233047.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Astronomers discover hidden alien planet in James Webb images",
+      "source": "ScienceDaily",
+      "date": "2026-11-10",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261108233028.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -287,56 +337,6 @@
       "source": "ScienceDaily",
       "date": "2026-11-09",
       "url": "https://www.sciencedaily.com/releases/2026/11/261108233043.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A nuclear blast could save Earth from an asteroid, but there's a catch",
-      "source": "ScienceDaily",
-      "date": "2026-11-08",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261106174532.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Mysterious gas leaks suggest Mars may still be volcanically alive",
-      "source": "ScienceDaily",
-      "date": "2026-11-08",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261106174525.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A hidden limit of space and time could unlock electronics 100,000 times faster",
-      "source": "ScienceDaily",
-      "date": "2026-11-07",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261106174537.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Don't miss: Meteor showers, fireballs, and a supermoon light up November's night sky",
-      "source": "ScienceDaily",
-      "date": "2026-11-06",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261105224547.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA’s Swift telescope falls to Earth after nearly 22 years in space",
-      "source": "ScienceDaily",
-      "date": "2026-11-06",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261105224545.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
