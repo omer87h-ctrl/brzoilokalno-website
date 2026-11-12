@@ -3,31 +3,221 @@
   "method": "automatski-rss",
   "stories": [
     {
-      "title": "Nvidia is reportedly preparing to fire Jensen Huang",
+      "title": "Through NASA’s Lens: Capturing Space Shuttle Endeavour’s Move to LA",
+      "source": "NASA",
+      "date": "2026-11-12",
+      "url": "https://www.nasa.gov/centers-and-facilities/armstrong/through-nasas-lens-capturing-space-shuttle-endeavours-move-to-la/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang has resigned. What happens next?",
       "source": "The Verge",
+      "date": "2026-11-12",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "I reviewed the Apple HomeView, ask me anything",
+      "source": "The Verge",
+      "date": "2026-11-12",
+      "url": "https://www.theverge.com/tech/1031868/i-reviewed-the-apple-homeview-ask-me-anything",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang resigns amid spy, affair scandals",
+      "source": "The Verge",
+      "date": "2026-11-12",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1031689/jensen-huang-nvidia-ceo-resigns",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Lego’s BrickLink marketplace has been offline for a week following ‘unusual activity’",
+      "source": "The Verge",
+      "date": "2026-11-12",
+      "url": "https://www.theverge.com/tech/1031889/lego-bricklink-marketplace-offline-unusual-activity",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The pricey new Apple TV 4K is still the best streamer around",
+      "source": "The Verge",
+      "date": "2026-11-12",
+      "url": "https://www.theverge.com/tech/1031633/apple-tv-4k-4th-gen-review",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "I tried Google’s AI glasses and Meta’s finally got real competition",
+      "source": "The Verge",
+      "date": "2026-11-12",
+      "url": "https://www.theverge.com/tech/1031647/google-android-xr-warby-parker-gentle-monster-hands-on",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Apple’s HomeView is my new favorite smart display — but not my daughter’s",
+      "source": "The Verge",
+      "date": "2026-11-12",
+      "url": "https://www.theverge.com/tech/1031726/apple-homeview-review-smart-display-homekit",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Ring confirms its camera drone won’t have manual controls after crashing on CBS News",
+      "source": "The Verge",
+      "date": "2026-11-12",
+      "url": "https://www.theverge.com/tech/1031817/ring-drone-cam-manual-flight-controls",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Police dismantle Gootloader, CastleRAT, StealC malware infrastructure",
+      "source": "BleepingComputer",
+      "date": "2026-11-12",
+      "url": "https://www.bleepingcomputer.com/news/security/police-dismantles-gootloader-castlerat-stealc-malware-infrastructure/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Your Endpoint Management Platform Could Be Your Biggest Security Risk",
+      "source": "BleepingComputer",
+      "date": "2026-11-12",
+      "url": "https://www.bleepingcomputer.com/news/security/your-endpoint-management-platform-could-be-your-biggest-security-risk/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Apify rotates API tokens, prompts 2FA resets after breach",
+      "source": "BleepingComputer",
+      "date": "2026-11-12",
+      "url": "https://www.bleepingcomputer.com/news/security/apify-rotates-api-tokens-prompts-2fa-resets-after-breach/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft: Recent Windows updates cause SQL Server performance issues",
+      "source": "BleepingComputer",
+      "date": "2026-11-12",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-recent-windows-updates-cause-sql-server-performance-issues/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft confirms Windows security updates installation issues",
+      "source": "BleepingComputer",
+      "date": "2026-11-12",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-kb5132061-installation-issues-0x80070306-0x800f0989-0x800f0993-errors/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Hackers plant GSocket on Linux servers for persistent access",
+      "source": "BleepingComputer",
+      "date": "2026-11-12",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-plant-gsocket-on-linux-servers-for-persistent-access/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Earth's fiery birth may have created hundreds of oceans' worth of water",
+      "source": "ScienceDaily",
+      "date": "2026-11-12",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261110042549.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A massive new simulation reveals how the universe emerged from darkness",
+      "source": "ScienceDaily",
+      "date": "2026-11-12",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261110042534.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Inside this quantum computer, memory vibrates like a guitar string",
+      "source": "ScienceDaily",
+      "date": "2026-11-12",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261109205416.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA’s Parker Solar Probe discovers a hidden pattern in the Sun’s chaotic magnetic fields",
+      "source": "ScienceDaily",
+      "date": "2026-11-12",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261109205411.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Nvidia is reportedly preparing to fire Jensen Huang",
+      "source": "The Verge AI",
       "date": "2026-11-11",
       "url": "https://www.theverge.com/tech/1031652/jensen-huang-rumor",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "United won’t let your AI agent book your flight",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-11",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Google’s Tabletop AI experiment lets you build custom collaboration apps",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-11",
       "url": "https://www.theverge.com/tech/1031526/google-tabletop-ai-experiment-waitlist-availability",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -53,56 +243,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Hands on with Home Assistant’s new ‘smart home multi-tool’",
-      "source": "The Verge",
-      "date": "2026-11-11",
-      "url": "https://www.theverge.com/tech/1031601/home-assistant-connect-aux-2-hands-on",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Loot boxes, influencers, and addictive features face an EU crackdown",
-      "source": "The Verge",
-      "date": "2026-11-11",
-      "url": "https://www.theverge.com/policy/1031575/digital-fairness-act-eu-dfa-consumer-protection",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Toyota’s Scion is back, starting with an American-made, 25-mph kei truck",
-      "source": "The Verge",
-      "date": "2026-11-11",
-      "url": "https://www.theverge.com/transportation/1031554/oyota-scion-kei-01-truck-revival",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The best early Black Friday deals you can already shop",
-      "source": "The Verge",
-      "date": "2026-11-11",
-      "url": "https://www.theverge.com/gadgets/1028991/black-friday-best-early-deals-2026",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Sharge’s eye-catching MacBook charger is over 25 percent off",
-      "source": "The Verge",
-      "date": "2026-11-11",
-      "url": "https://www.theverge.com/gadgets/1031301/sharge-140w-gan-charger-lenovo-yoga-mini-desktop-pc-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Baker Tilly notifies clients of data breach at third-party provider",
       "source": "BleepingComputer",
       "date": "2026-11-11",
@@ -123,76 +263,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "eMudhra revokes 8 more CA certificates after private key mishap",
-      "source": "BleepingComputer",
-      "date": "2026-11-11",
-      "url": "https://www.bleepingcomputer.com/news/security/emudhra-revokes-8-more-ca-certificates-after-private-key-mishap/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Notion says Fireworks breach exposed customer AI chat transcripts",
-      "source": "BleepingComputer",
-      "date": "2026-11-11",
-      "url": "https://www.bleepingcomputer.com/news/security/notion-says-fireworks-breach-exposed-customer-ai-chat-transcripts/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Maersk confirms data breach as WhiteArmor ransomware demands $5 million",
-      "source": "BleepingComputer",
-      "date": "2026-11-11",
-      "url": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Hackers use AntiFox AI agents in AWS credential-theft attacks",
-      "source": "BleepingComputer",
-      "date": "2026-11-11",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "eBPF Rootkits: Why Underground Actors Are Taking Notice",
-      "source": "BleepingComputer",
-      "date": "2026-11-11",
-      "url": "https://www.bleepingcomputer.com/news/security/ebpf-rootkits-why-underground-actors-are-taking-notice/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "N-able releases security hotfixes for zero-day vulnerabilities",
-      "source": "BleepingComputer",
-      "date": "2026-11-11",
-      "url": "https://www.bleepingcomputer.com/news/security/n-able-releases-security-hotfixes-for-zero-day-vulnerabilities/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A radical theory says the universe is twice as old as we thought",
-      "source": "ScienceDaily",
-      "date": "2026-11-11",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261108233040.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "NASA Invites Media, Public to Join Voyager 1 One-Light Day Activities",
       "source": "NASA",
       "date": "2026-11-10",
@@ -208,46 +278,6 @@
       "date": "2026-11-10",
       "url": "https://www.nasa.gov/news-release/nasa-to-welcome-expedition-74-astronauts-home-at-space-center-houston/",
       "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "CHAPEA Crew Leaves a Mark",
-      "source": "NASA",
-      "date": "2026-11-10",
-      "url": "https://www.nasa.gov/image-article/chapea-crew-leaves-a-mark/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The US is winning the AI race. Jensen Huang could have blown it",
-      "source": "The Verge AI",
-      "date": "2026-11-10",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1031063/jensen-huang-ai-race-us-china-spy",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "ChatGPT is getting verified AI ‘Business Agents’",
-      "source": "The Verge AI",
-      "date": "2026-11-10",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1030552/openai-chatgpt-business-agents-hub",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The indie game community is in disarray over AI and Big Walk",
-      "source": "The Verge AI",
-      "date": "2026-11-10",
-      "url": "https://www.theverge.com/games/1030994/big-walk-independent-games-festival-igf-ai",
-      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -283,40 +313,10 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "After 40 years, CERN finds evidence of a one-in-10-billion particle decay",
-      "source": "ScienceDaily",
-      "date": "2026-11-10",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261108233047.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Astronomers discover hidden alien planet in James Webb images",
-      "source": "ScienceDaily",
-      "date": "2026-11-10",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261108233028.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "NASA reveals bold new plan to return astronauts to the Moon in 2028",
       "source": "ScienceDaily",
       "date": "2026-11-09",
       "url": "https://www.sciencedaily.com/releases/2026/11/261108233054.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Caltech robot makes history by building a structure in space",
-      "source": "ScienceDaily",
-      "date": "2026-11-09",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261108233043.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
