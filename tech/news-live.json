@@ -1,7 +1,137 @@
 {
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "method": "automatski-rss",
   "stories": [
+    {
+      "title": "Claude’s Duet agent is a little neurotic and surprisingly helpful",
+      "source": "The Verge",
+      "date": "2026-11-13",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Let’s talk about Jensen Huang’s many affairs!",
+      "source": "The Verge",
+      "date": "2026-11-13",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032339/lets-talk-about-the-nvidia-shitshow",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Meta discussed attacking Jonathan Haidt — now even his haters are annoyed",
+      "source": "The Verge",
+      "date": "2026-11-13",
+      "url": "https://www.theverge.com/policy/1032645/jonathan-haidt-critics-response-meta",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Apple should have made the MacBook logo RGB",
+      "source": "The Verge",
+      "date": "2026-11-13",
+      "url": "https://www.theverge.com/tech/1032550/apple-macbook-pro-proled-xdr-lid-logo-led-rgb-colors",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft&#8217;s massive Outlook outage continues",
+      "source": "The Verge",
+      "date": "2026-11-13",
+      "url": "https://www.theverge.com/tech/1032862/microsoft-outlook-down-outage",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft says November security updates cause printing issues",
+      "source": "BleepingComputer",
+      "date": "2026-11-13",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-says-november-security-updates-cause-printing-issues/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Check Point warns of zero-day flaw exploited for root access",
+      "source": "BleepingComputer",
+      "date": "2026-11-13",
+      "url": "https://www.bleepingcomputer.com/news/security/check-point-patches-zero-day-that-lets-hackers-get-root-access/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft confirms Windows activation failures after November updates",
+      "source": "BleepingComputer",
+      "date": "2026-11-13",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-windows-activation-failures-after-november-updates/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Police arrest 354 suspects in dark web cybercrime crackdown",
+      "source": "BleepingComputer",
+      "date": "2026-11-13",
+      "url": "https://www.bleepingcomputer.com/news/security/police-arrest-354-vendors-buyers-in-global-cybercrime-crackdown/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The Sun unleashed a monster storm. Earth may have made it worse",
+      "source": "ScienceDaily",
+      "date": "2026-11-13",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261111005905.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Dark energy may have flipped from negative to positive 9.5 billion years ago",
+      "source": "ScienceDaily",
+      "date": "2026-11-13",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261111005901.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Tiny flaws in diamonds could unlock a quantum computing revolution",
+      "source": "ScienceDaily",
+      "date": "2026-11-13",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261111005855.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A breakthrough in magnetism could make AI chips use dramatically less energy",
+      "source": "ScienceDaily",
+      "date": "2026-11-13",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261111005853.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "I Am Artemis Katie Spicer",
       "source": "NASA",
@@ -44,10 +174,10 @@
     },
     {
       "title": "Google’s new Gemini model is better at understanding complicated questions",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-12",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -103,90 +233,30 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Jensen Huang is out. What did China want from him?",
-      "source": "The Verge AI",
-      "date": "2026-11-12",
-      "url": "https://www.theverge.com/podcast/1031260/nvidia-jensen-huang-resign-china-spy-scandal-ai-chips-trump",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Read Nvidia’s internal emails about the ‘extraordinarily difficult period’ amid CEO shakeup",
-      "source": "The Verge AI",
-      "date": "2026-11-12",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1032028/read-nvidias-internal-emails-jensen-huang",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Humble Bundle redesign removes two-factor verification from settings",
+      "title": "Donald Trump really wants Tim Cook to run Nvidia",
       "source": "The Verge",
       "date": "2026-11-12",
-      "url": "https://www.theverge.com/games/1032659/humble-bundle-redesign-two-factor-verification-security-settings",
+      "url": "https://www.theverge.com/tech/1032774/president-donald-trump-tim-cook-nvidia-jensen-huang",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Microsoft Outlook is still down",
+      "title": "Xbox announces Wolfenstein 3",
       "source": "The Verge",
       "date": "2026-11-12",
-      "url": "https://www.theverge.com/tech/1032226/microsoft-outlook-is-down",
+      "url": "https://www.theverge.com/news/1032431/xbox-bethesda-wolfenstein-3",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Xbox owners are getting more customizations for backgrounds and the Guide menu",
+      "title": "Whoop launched a social network where every user has a ‘verified heartbeat’",
       "source": "The Verge",
       "date": "2026-11-12",
-      "url": "https://www.theverge.com/news/1032396/xbox-dashboard-guide-menu-right-side-background-shuffle-feature",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "‘It’s a mistake’: reactions from tech leaders on Jensen Huang’s resignation",
-      "source": "The Verge",
-      "date": "2026-11-12",
-      "url": "https://www.theverge.com/tech/1032434/nvidia-jensen-huang-resignation-reactions",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The Oura Ring 4 is almost as good as the newer model, but $150 cheaper",
-      "source": "The Verge",
-      "date": "2026-11-12",
-      "url": "https://www.theverge.com/gadgets/1032311/oura-ring-4-smart-ring-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Here are the 25 original Xbox games you can now play on PC",
-      "source": "The Verge",
-      "date": "2026-11-12",
-      "url": "https://www.theverge.com/games/1032321/microsoft-xbox-original-games-pc-backwards-compatibility",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Meet the people who want peptides to be made in America",
-      "source": "The Verge",
-      "date": "2026-11-12",
-      "url": "https://www.theverge.com/column/1032243/peptides-american-manufacturing-maha",
+      "url": "https://www.theverge.com/gadgets/1032630/whoop-humans-social-network",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -233,41 +303,21 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Apache HTTP Server patches critical HTTP/2 remote code execution flaw",
-      "source": "BleepingComputer",
+      "title": "NASA’s Perseverance confirms a key ingredient for life hidden in ancient Mars rocks",
+      "source": "ScienceDaily",
       "date": "2026-11-12",
-      "url": "https://www.bleepingcomputer.com/news/security/apache-http-server-patches-critical-http-2-remote-code-execution-flaw/",
-      "category": "SIGURNOST",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261111005908.htm",
+      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "New Windows SignDrop zero-day gives hackers SYSTEM privileges",
-      "source": "BleepingComputer",
+      "title": "AI-powered bionic eye breakthrough could help the blind see again",
+      "source": "ScienceDaily",
       "date": "2026-11-12",
-      "url": "https://www.bleepingcomputer.com/news/security/new-windows-signdrop-zero-day-gives-hackers-system-privileges/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Police dismantle Gootloader, CastleRAT, StealC malware infrastructure",
-      "source": "BleepingComputer",
-      "date": "2026-11-12",
-      "url": "https://www.bleepingcomputer.com/news/security/police-dismantles-gootloader-castlerat-stealc-malware-infrastructure/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Your Endpoint Management Platform Could Be Your Biggest Security Risk",
-      "source": "BleepingComputer",
-      "date": "2026-11-12",
-      "url": "https://www.bleepingcomputer.com/news/security/your-endpoint-management-platform-could-be-your-biggest-security-risk/",
-      "category": "SIGURNOST",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261110042553.htm",
+      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -287,66 +337,6 @@
       "source": "ScienceDaily",
       "date": "2026-11-12",
       "url": "https://www.sciencedaily.com/releases/2026/11/261110042534.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Inside this quantum computer, memory vibrates like a guitar string",
-      "source": "ScienceDaily",
-      "date": "2026-11-12",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261109205416.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA’s Parker Solar Probe discovers a hidden pattern in the Sun’s chaotic magnetic fields",
-      "source": "ScienceDaily",
-      "date": "2026-11-12",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261109205411.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA’s CHAPEA Mars crew finally emerges after more than a year in isolation",
-      "source": "ScienceDaily",
-      "date": "2026-11-10",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261109205406.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA offers $500,000 to develop next-generation electric rocket engines",
-      "source": "ScienceDaily",
-      "date": "2026-11-10",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261109205404.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Global fossil fuel emissions set to fall in 2026, but total CO2 keeps rising",
-      "source": "ScienceDaily",
-      "date": "2026-11-10",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261109205358.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA reveals bold new plan to return astronauts to the Moon in 2028",
-      "source": "ScienceDaily",
-      "date": "2026-11-09",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261108233054.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
