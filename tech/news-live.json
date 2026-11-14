@@ -1,7 +1,57 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "method": "automatski-rss",
   "stories": [
+    {
+      "title": "Jensen Huang and the decline of the visionary showman founder CEO",
+      "source": "The Verge",
+      "date": "2026-11-14",
+      "url": "https://www.theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A gadget to make your dumb house smarter",
+      "source": "The Verge",
+      "date": "2026-11-14",
+      "url": "https://www.theverge.com/tech/1033761/home-assistant-tk-tripod-tabletop-installer",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A giant icy world hiding beyond Pluto could be our sixth dwarf planet",
+      "source": "ScienceDaily",
+      "date": "2026-11-14",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261112230447.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists discover a surprisingly simple way to turn coffee waste into fuel",
+      "source": "ScienceDaily",
+      "date": "2026-11-14",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261112025544.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists capture electrons making seemingly impossible quantum jumps",
+      "source": "ScienceDaily",
+      "date": "2026-11-14",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261112025523.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "Outbursts from a Massive Star",
       "source": "NASA",
@@ -18,6 +68,16 @@
       "date": "2026-11-13",
       "url": "https://www.nasa.gov/image-article/gemini-astronaut-photos-inspired-early-earth-observation-program/",
       "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Amazon has a plan to index the world’s online shopping data",
+      "source": "The Verge",
+      "date": "2026-11-13",
+      "url": "https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search",
+      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -63,7 +123,7 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "FAA ground stop shuts down flights nationwide",
+      "title": "FAA lifts nationwide ground stop that blocked takeoffs for hours",
       "source": "The Verge",
       "date": "2026-11-13",
       "url": "https://www.theverge.com/news/1033489/faa-ground-stop",
@@ -97,36 +157,6 @@
       "source": "The Verge",
       "date": "2026-11-13",
       "url": "https://www.theverge.com/tech/1033159/keychron-t1-he-trackball-wireless-mouse-adjustable",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Jensen Huang was reckless with the environment, too",
-      "source": "The Verge",
-      "date": "2026-11-13",
-      "url": "https://www.theverge.com/tech/1033051/nvidia-jensen-huang-chips-gpu-supply-chain-climate-pollution",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The smallest version of Camp Snap’s retro digital camcorder fits on your keychain",
-      "source": "The Verge",
-      "date": "2026-11-13",
-      "url": "https://www.theverge.com/tech/1033026/camp-snap-retro-digital-video-campcorder-cs-8-micro-keychain",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The new Apple TV has a YouTube problem",
-      "source": "The Verge",
-      "date": "2026-11-13",
-      "url": "https://www.theverge.com/tech/1033076/apple-tv-4k-youtube-error",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -213,6 +243,16 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
+      "title": "AI supercharges laser physics with a stunning 250x speed boost",
+      "source": "ScienceDaily",
+      "date": "2026-11-13",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261111005913.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
       "title": "The Sun unleashed a monster storm. Earth may have made it worse",
       "source": "ScienceDaily",
       "date": "2026-11-13",
@@ -237,16 +277,6 @@
       "source": "ScienceDaily",
       "date": "2026-11-13",
       "url": "https://www.sciencedaily.com/releases/2026/11/261111005855.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A breakthrough in magnetism could make AI chips use dramatically less energy",
-      "source": "ScienceDaily",
-      "date": "2026-11-13",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261111005853.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -313,60 +343,10 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Oh, Palantir is ‘progressive’ now, is it?",
-      "source": "The Verge AI",
-      "date": "2026-11-12",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1032126/alex-baby-you-were-recorded-on-video",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The Jensen Huang scandal is hardly over",
-      "source": "The Verge AI",
-      "date": "2026-11-12",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1032069/jensen-huang-resignation-affair-chips-smuggling",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "NASA’s Perseverance confirms a key ingredient for life hidden in ancient Mars rocks",
       "source": "ScienceDaily",
       "date": "2026-11-12",
       "url": "https://www.sciencedaily.com/releases/2026/11/261111005908.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "AI-powered bionic eye breakthrough could help the blind see again",
-      "source": "ScienceDaily",
-      "date": "2026-11-12",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261110042553.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Earth's fiery birth may have created hundreds of oceans' worth of water",
-      "source": "ScienceDaily",
-      "date": "2026-11-12",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261110042549.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A massive new simulation reveals how the universe emerged from darkness",
-      "source": "ScienceDaily",
-      "date": "2026-11-12",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261110042534.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",

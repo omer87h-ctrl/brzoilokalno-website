@@ -1,7 +1,57 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
+    {
+      "title": "Jensen Huang and the decline of the visionary showman founder CEO",
+      "source": "The Verge",
+      "date": "2026-11-14",
+      "url": "https://www.theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A gadget to make your dumb house smarter",
+      "source": "The Verge",
+      "date": "2026-11-14",
+      "url": "https://www.theverge.com/tech/1033761/home-assistant-tk-tripod-tabletop-installer",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A giant icy world hiding beyond Pluto could be our sixth dwarf planet",
+      "source": "ScienceDaily",
+      "date": "2026-11-14",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261112230447.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists discover a surprisingly simple way to turn coffee waste into fuel",
+      "source": "ScienceDaily",
+      "date": "2026-11-14",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261112025544.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists capture electrons making seemingly impossible quantum jumps",
+      "source": "ScienceDaily",
+      "date": "2026-11-14",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261112025523.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "Claude’s Duet agent is a little neurotic and surprisingly helpful",
       "source": "The Verge AI",
@@ -173,7 +223,7 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "FAA ground stop shuts down flights nationwide",
+      "title": "FAA lifts nationwide ground stop that blocked takeoffs for hours",
       "source": "The Verge",
       "date": "2026-11-13",
       "url": "https://www.theverge.com/news/1033489/faa-ground-stop",
@@ -278,6 +328,26 @@
       "date": "2026-11-13",
       "url": "https://www.bleepingcomputer.com/news/security/how-one-ai-agent-exposed-five-critical-enterprise-security-gaps/",
       "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Amazon has a plan to index the world’s online shopping data",
+      "source": "The Verge",
+      "date": "2026-11-13",
+      "url": "https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "AI supercharges laser physics with a stunning 250x speed boost",
+      "source": "ScienceDaily",
+      "date": "2026-11-13",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261111005913.htm",
+      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -1728,76 +1798,6 @@
       "date": "2026-11-09",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1030328/what-could-china-get-from-jensen-huang",
       "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Here’s what Trump said he knew about Jensen Huang",
-      "source": "The Verge AI",
-      "date": "2026-11-09",
-      "url": "https://www.theverge.com/tech/1030446/trump-jensen-huang-press-conference",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Apple’s $50 Intelligence Usage Packs extend access to some AI features",
-      "source": "The Verge",
-      "date": "2026-11-09",
-      "url": "https://www.theverge.com/tech/1030084/apple-intelligence-usage-packs-ai-features-creator-studio-logic-pro",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Anthropic launches new Claude Fable and Mythos 5.2 models",
-      "source": "The Verge",
-      "date": "2026-11-09",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Instagram’s Effect Builder makes new filters from AI prompts",
-      "source": "The Verge AI",
-      "date": "2026-11-09",
-      "url": "https://www.theverge.com/tech/1030061/instagram-ai-effect-builder-filters",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The future of AI hinges on… Jensen Huang’s sex life?",
-      "source": "The Verge AI",
-      "date": "2026-11-09",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1029990/jensen-huang-the-spy-who-loved-me",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "MSI’s refurbished QD-OLED gaming monitor is on sale for under $300",
-      "source": "The Verge",
-      "date": "2026-11-09",
-      "url": "https://www.theverge.com/gadgets/1030262/msi-mag-272qp-qd-oled-x24-monitor-woot-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The global pledge to use AI for climate good is a cruel joke",
-      "source": "The Verge",
-      "date": "2026-11-09",
-      "url": "https://www.theverge.com/science/1030252/ai-data-center-climate-pledge-united-nations-cop31",
-      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
