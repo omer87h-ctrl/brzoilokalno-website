@@ -1,7 +1,47 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-15",
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
+    {
+      "title": "An overview of Jensen Huang’s messy days",
+      "source": "The Verge",
+      "date": "2026-11-15",
+      "url": "https://www.theverge.com/column/1033943/jensen-huang-nvidia-china-spying-scandal-resignation",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Euclid discovers ancient cosmic beacons from the dawn of time, shining like a trillion suns",
+      "source": "ScienceDaily",
+      "date": "2026-11-15",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261112230504.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Physicists use laser light to unlock a crystal's hidden electrical powers",
+      "source": "ScienceDaily",
+      "date": "2026-11-15",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261112230500.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "AI discovers a hidden heart signal that could predict sudden death",
+      "source": "ScienceDaily",
+      "date": "2026-11-15",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261112230456.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "Jensen Huang and the decline of the visionary showman founder CEO",
       "source": "The Verge AI",
@@ -1757,46 +1797,6 @@
       "source": "BleepingComputer",
       "date": "2026-11-09",
       "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The Biggest Threat to Your GRC Job Isn’t AI. It’s Ignoring AI.",
-      "source": "BleepingComputer",
-      "date": "2026-11-09",
-      "url": "https://www.bleepingcomputer.com/news/security/the-biggest-threat-to-your-grc-job-isnt-ai-its-ignoring-ai/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "FBI agent stole $2.5 million in crypto from hackers under investigation",
-      "source": "BleepingComputer",
-      "date": "2026-11-09",
-      "url": "https://www.bleepingcomputer.com/news/security/fbi-agent-stole-25-million-in-crypto-from-hackers-fraud-victims/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "US bans MEXC crypto exchange over sanctions evasion, cybercrime links",
-      "source": "BleepingComputer",
-      "date": "2026-11-09",
-      "url": "https://www.bleepingcomputer.com/news/security/us-bans-mexc-crypto-exchange-over-sanctions-evasion-cybercrime-links/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Ukraine dismantles crypto scam network that stole €4.3 million",
-      "source": "BleepingComputer",
-      "date": "2026-11-09",
-      "url": "https://www.bleepingcomputer.com/news/security/ukraine-dismantles-crypto-scam-network-that-stole-43-million/",
       "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
