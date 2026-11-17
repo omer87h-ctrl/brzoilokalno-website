@@ -3,6 +3,206 @@
   "method": "automatski-rss",
   "stories": [
     {
+      "title": "The aliens are coming in 3 Body Problem’s first season 2 trailer",
+      "source": "The Verge",
+      "date": "2026-11-17",
+      "url": "https://www.theverge.com/streaming/1035221/3-body-problem-season-two-trailer-premiere-date-netflix",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "This E Ink photo frame can double as your family’s digital dashboard",
+      "source": "The Verge",
+      "date": "2026-11-17",
+      "url": "https://www.theverge.com/tech/1035258/trmnl-e-ink-spectra-6-frame-dashboard-display-poster-photos",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Get ready for a nationwide emergency alert test at 2:20PM ET today",
+      "source": "The Verge",
+      "date": "2026-11-17",
+      "url": "https://www.theverge.com/tech/1035257/fema-fcc-emergency-alert-system-test-2026",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The Fire TV Stick 4K Plus is on sale for less than Amazon’s entry-level streamer",
+      "source": "The Verge",
+      "date": "2026-11-17",
+      "url": "https://www.theverge.com/gadgets/1034612/amazon-fire-tv-stick-4k-plus-black-friday-2026-deal-sale",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Windows 11 actually runs better on 8GB of RAM now",
+      "source": "The Verge",
+      "date": "2026-11-17",
+      "url": "https://www.theverge.com/tech/1035159/windows-11-8gb-ram-updates-performance-improvements-surface-laptop-testing",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Disney Plus and Hulu’s fully unified app arrives next month",
+      "source": "The Verge",
+      "date": "2026-11-17",
+      "url": "https://www.theverge.com/streaming/1035226/disney-plus-hulu-app-merger-q4-2026",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Uber and Zipline’s drone delivery service takes flight in Houston",
+      "source": "The Verge",
+      "date": "2026-11-17",
+      "url": "https://www.theverge.com/transportation/1034794/uber-eats-zipline-drone-delivery-launch-texas-houston-dallas",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The Verge Best of 2026",
+      "source": "The Verge",
+      "date": "2026-11-17",
+      "url": "https://www.theverge.com/gadgets/1034881/the-verge-best-of-2026",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Inside Modern Phishing Kits Built to Steal Microsoft 365 Sessions",
+      "source": "BleepingComputer",
+      "date": "2026-11-17",
+      "url": "https://www.bleepingcomputer.com/news/security/inside-modern-phishing-kits-built-to-steal-microsoft-365-sessions/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft testing Remote Lock for lost or stolen Windows devices",
+      "source": "BleepingComputer",
+      "date": "2026-11-17",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-remote-lock-for-lost-or-stolen-windows-devices/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Court clears brothers of $25 million Ethereum crypto heist charges",
+      "source": "BleepingComputer",
+      "date": "2026-11-17",
+      "url": "https://www.bleepingcomputer.com/news/security/court-clears-brothers-of-25-million-ethereum-crypto-heist-charges/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Uber notifies drivers of data breach affecting nearly 150,000 people",
+      "source": "BleepingComputer",
+      "date": "2026-11-17",
+      "url": "https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Ransomware affiliate suspect extradited to US, faces 27 years in prison",
+      "source": "BleepingComputer",
+      "date": "2026-11-17",
+      "url": "https://www.bleepingcomputer.com/news/security/alleged-inc-lynx-ransomware-affiliate-extradited-to-us-faces-27-years-in-prison/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Optimizely hack infected CNN, Fox News, BBC, Salesforce sites with malware",
+      "source": "BleepingComputer",
+      "date": "2026-11-17",
+      "url": "https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "This remarkable new material could solve a major carbon capture problem",
+      "source": "ScienceDaily",
+      "date": "2026-11-17",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261116023405.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A mysterious twist in the universe’s oldest light could reveal new physics",
+      "source": "ScienceDaily",
+      "date": "2026-11-17",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261116023348.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists tracked kids for 8 years. What they found about screen time was surprising",
+      "source": "ScienceDaily",
+      "date": "2026-11-17",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261116014725.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Quantum computers are getting too powerful to check. Scientists have a solution",
+      "source": "ScienceDaily",
+      "date": "2026-11-17",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261115085557.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A material just one atom thick reveals a strange quantum secret",
+      "source": "ScienceDaily",
+      "date": "2026-11-17",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261115085554.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "ESA’s Hera spacecraft is flying rectangles around NASA’s asteroid crash site",
+      "source": "ScienceDaily",
+      "date": "2026-11-17",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261115085545.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
       "title": "NASA Receives 16th Consecutive ‘Clean’ Financial Audit Opinion",
       "source": "NASA",
       "date": "2026-11-16",
@@ -34,40 +234,40 @@
     },
     {
       "title": "Tech leaders are convinced that Jensen Huang’s exit was a plot against him",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-16",
       "url": "https://www.theverge.com/tech/1035027/tech-leaders-nvidia-jensen-huang-theories",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "California sues OpenAI over rogue AI hacking incidents",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-16",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Sam Altman says he wants everyone ‘to have a lot of RAM’",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-16",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1034787/sam-altman-ram-shortage-semafor",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Big Nuclear isn’t worried about the Democrats stopping data centers",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-16",
       "url": "https://www.theverge.com/science/1034694/nuclear-energy-constellation-earnings-data-centers-democrats",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -113,46 +313,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Hacker behind 2022 GTA VI leaks pleads guilty",
-      "source": "The Verge",
-      "date": "2026-11-16",
-      "url": "https://www.theverge.com/games/1035087/gta-vi-leaks-2022-hacker-pleads-guilty-arion-kurtaj",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "United Airlines system outage disrupts departures just days after the big ground stop",
-      "source": "The Verge",
-      "date": "2026-11-16",
-      "url": "https://www.theverge.com/transportation/1035025/united-airlines-outage-down-departures",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "In Get Huge, the manosphere is here to make friends — with deadly consequences",
-      "source": "The Verge",
-      "date": "2026-11-16",
-      "url": "https://www.theverge.com/entertainment/1033466/hulu-disney-plus-get-huge-looksmaxxing-to-death",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Some of our favorite PlayStation games are steeply discounted for Black Friday",
-      "source": "The Verge",
-      "date": "2026-11-16",
-      "url": "https://www.theverge.com/gadgets/1034339/sony-black-friday-game-sale-2026-deals",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Gemini AI agents repeatedly bypassed safeguards to attack real website",
       "source": "BleepingComputer",
       "date": "2026-11-16",
@@ -173,66 +333,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "California sues OpenAI over AI agents escaping sandboxes, hacking firms",
-      "source": "BleepingComputer",
-      "date": "2026-11-16",
-      "url": "https://www.bleepingcomputer.com/news/security/california-sues-openai-over-ai-agents-escaping-sandboxes-hacking-firms/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Barracuda links cloud breach to ARTEX AI-powered cyberattack",
-      "source": "BleepingComputer",
-      "date": "2026-11-16",
-      "url": "https://www.bleepingcomputer.com/news/security/barracuda-links-cloud-breach-to-artex-ai-powered-cyberattack/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Microsoft says months-old bug caused global Microsoft 365 outage",
-      "source": "BleepingComputer",
-      "date": "2026-11-16",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-says-months-old-bug-caused-global-microsoft-365-outage/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Fandango says hackers stole payment card details from checkout pages",
-      "source": "BleepingComputer",
-      "date": "2026-11-16",
-      "url": "https://www.bleepingcomputer.com/news/security/fandango-says-hackers-stole-payment-card-details-from-checkout-pages/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "7 Tips For Complying with CJIS Password and MFA Requirements",
-      "source": "BleepingComputer",
-      "date": "2026-11-16",
-      "url": "https://www.bleepingcomputer.com/news/security/7-tips-for-complying-with-cjis-password-and-mfa-requirements/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Google warns that fully-automated AI attacks are coming soon",
-      "source": "BleepingComputer",
-      "date": "2026-11-16",
-      "url": "https://www.bleepingcomputer.com/news/security/google-warns-that-fully-automated-ai-attacks-are-coming-soon/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "NASA smashed into an asteroid. Now Hera has revealed a strange new world",
       "source": "ScienceDaily",
       "date": "2026-11-16",
@@ -247,86 +347,6 @@
       "source": "ScienceDaily",
       "date": "2026-11-16",
       "url": "https://www.sciencedaily.com/releases/2026/11/261115085549.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA is offering $1 million for bold ideas to help build a Moon base",
-      "source": "ScienceDaily",
-      "date": "2026-11-16",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261115085542.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Physicists defy expectations by controlling the magnetic heart of a single atom",
-      "source": "ScienceDaily",
-      "date": "2026-11-16",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261114202232.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Uranus and Neptune’s bizarre magnetic fields may finally be explained",
-      "source": "ScienceDaily",
-      "date": "2026-11-15",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261114202204.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Astronomers discover a dead star spinning every 8 minutes and sending mysterious radio pulses",
-      "source": "ScienceDaily",
-      "date": "2026-11-15",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261114202136.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Euclid discovers ancient cosmic beacons from the dawn of time, shining like a trillion suns",
-      "source": "ScienceDaily",
-      "date": "2026-11-15",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261112230504.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Physicists use laser light to unlock a crystal's hidden electrical powers",
-      "source": "ScienceDaily",
-      "date": "2026-11-15",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261112230500.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Outbursts from a Massive Star",
-      "source": "NASA",
-      "date": "2026-11-13",
-      "url": "https://www.nasa.gov/image-article/outbursts-from-a-massive-star/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Gemini Astronaut Photos Inspired Early Earth Observation Program",
-      "source": "NASA",
-      "date": "2026-11-13",
-      "url": "https://www.nasa.gov/image-article/gemini-astronaut-photos-inspired-early-earth-observation-program/",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
