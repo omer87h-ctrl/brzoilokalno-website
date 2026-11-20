@@ -3,11 +3,141 @@
   "method": "automatski-rss",
   "stories": [
     {
+      "title": "The week everything fell apart",
+      "source": "The Verge",
+      "date": "2026-11-20",
+      "url": "https://www.theverge.com/podcast/1038419/outage-outlook-ground-stop-tech-failure-vergecast",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Signal is blocking Gemini and Siri AI from reading your screen",
+      "source": "The Verge",
+      "date": "2026-11-20",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "UN court cites military Facebook posts while finding Myanmar guilty of genocide",
+      "source": "The Verge",
+      "date": "2026-11-20",
+      "url": "https://www.theverge.com/policy/1038450/facebook-myanmar-genocide-un",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Let’s talk about GTA VI",
+      "source": "The Verge",
+      "date": "2026-11-20",
+      "url": "https://www.theverge.com/entertainment/1037545/gta-6-discussion",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Why the robots are ditching Uber",
+      "source": "The Verge",
+      "date": "2026-11-20",
+      "url": "https://www.theverge.com/transportation/1037667/waymo-serve-robotics-ditch-uber-autonomous-partnerships",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Still tracking company passwords in spreadsheets? You’re flying blind.",
+      "source": "BleepingComputer",
+      "date": "2026-11-20",
+      "url": "https://www.bleepingcomputer.com/news/security/still-tracking-company-passwords-in-spreadsheets-youre-flying-blind/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "N-able says recent security breach led to major service outage",
+      "source": "BleepingComputer",
+      "date": "2026-11-20",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/n-able-says-recent-security-breach-led-to-major-service-outage/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft now automatically installs Windows 11 26H2 on unmanaged devices",
+      "source": "BleepingComputer",
+      "date": "2026-11-20",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-now-automatically-installs-windows-11-26h2-on-personal-and-unmanaged-pcs/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "F5 releases emergency patches for critical BIG-IP RCE flaws",
+      "source": "BleepingComputer",
+      "date": "2026-11-20",
+      "url": "https://www.bleepingcomputer.com/news/security/f5-releases-emergency-patches-for-critical-big-ip-rce-flaws/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Windows 11 KB5132057 update released with 28 changes and fixes",
+      "source": "BleepingComputer",
+      "date": "2026-11-20",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5132057-update-released-with-28-changes-and-fixes/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
       "title": "VMware patches vCenter zero-day exploited in attacks since September",
       "source": "BleepingComputer",
       "date": "2026-11-20",
       "url": "https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/",
       "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Two massive stars may be secretly feeding the Milky Way’s supermassive black hole",
+      "source": "ScienceDaily",
+      "date": "2026-11-20",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261119194605.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "CERN scientists finally find evidence of a particle decay so rare it took 40 years to detect",
+      "source": "ScienceDaily",
+      "date": "2026-11-20",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261119194530.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Scientists turn Moon dust into LEGO-like bricks for future lunar bases",
+      "source": "ScienceDaily",
+      "date": "2026-11-20",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261119194525.htm",
+      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -74,20 +204,20 @@
     },
     {
       "title": "Meta’s Muse Charm might cost $300",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-19",
       "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Google is putting AI chats right on the homepage",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-19",
       "url": "https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -113,60 +243,10 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "ChatGPT can transcribe as you speak now with Live Dictation",
-      "source": "The Verge AI",
-      "date": "2026-11-19",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "With the biggest IPO of all time, Anthropic’s ‘good guy’ reputation is on the line",
-      "source": "The Verge AI",
-      "date": "2026-11-19",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1037459/anthropic-ipo-safe-ai-reputation-power-structure",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Meta now sells 3D movies on Quest VR headsets",
       "source": "The Verge",
       "date": "2026-11-19",
       "url": "https://www.theverge.com/tech/1038157/meta-quest-vr-3d-movies-tv-app",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "FCC greenlights rule allowing prisons to jam cellphone signals",
-      "source": "The Verge",
-      "date": "2026-11-19",
-      "url": "https://www.theverge.com/policy/1037987/fcc-prison-cellphone-signal-jamming",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Sony’s WH-1000XM5 are cheaper than ever for Black Friday",
-      "source": "The Verge",
-      "date": "2026-11-19",
-      "url": "https://www.theverge.com/gadgets/1037790/sony-wh-1000xm5-black-friday-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "You can now buy a Steam Machine without getting on a waitlist",
-      "source": "The Verge",
-      "date": "2026-11-19",
-      "url": "https://www.theverge.com/games/1038010/valve-steam-machine-waitlist-supply",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -193,56 +273,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Transport for London breach exposes 265,000 Oyster card users' data",
-      "source": "BleepingComputer",
-      "date": "2026-11-19",
-      "url": "https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "PHP security updates fix 18 flaws, including critical RCE bugs",
-      "source": "BleepingComputer",
-      "date": "2026-11-19",
-      "url": "https://www.bleepingcomputer.com/news/security/php-security-updates-fix-18-flaws-including-critical-rce-bugs/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Five warning signs of ransomware breach before encryption or data theft",
-      "source": "BleepingComputer",
-      "date": "2026-11-19",
-      "url": "https://www.bleepingcomputer.com/news/security/five-warning-signs-of-ransomware-breach-before-encryption-or-data-theft/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Critical NGINX ‘NGINX2Root’ bugs let attackers hijack servers",
-      "source": "BleepingComputer",
-      "date": "2026-11-19",
-      "url": "https://www.bleepingcomputer.com/news/security/critical-nginx-nginx2root-bugs-let-attackers-hijack-servers/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Drupal patches critical RCE flaw, warns exploits may surface quickly",
-      "source": "BleepingComputer",
-      "date": "2026-11-19",
-      "url": "https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaw-warns-exploits-may-surface-quickly/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Why hydrogen flames can glow orange, then turn nearly invisible",
       "source": "ScienceDaily",
       "date": "2026-11-19",
@@ -257,26 +287,6 @@
       "source": "NASA",
       "date": "2026-11-18",
       "url": "https://www.nasa.gov/news-release/nasa-sets-coverage-for-northrop-grumman-crs-25-launch-prelaunch/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "MAF EAP – Holidays – How to manage the BAH HUMBUG that tries to sneak in",
-      "source": "NASA",
-      "date": "2026-11-18",
-      "url": "https://www.nasa.gov/centers-and-facilities/michoud/maf-eap/maf-eap-holidays-how-to-manage-the-bah-humbug-that-tries-to-sneak-in/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA Announces Mid-Power Electric Rocket Challenge for US Companies",
-      "source": "NASA",
-      "date": "2026-11-18",
-      "url": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/nasa-announces-mid-power-electric-rocket-challenge-for-us-companies/",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -317,36 +327,6 @@
       "source": "ScienceDaily",
       "date": "2026-11-17",
       "url": "https://www.sciencedaily.com/releases/2026/11/261116023405.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A mysterious twist in the universe’s oldest light could reveal new physics",
-      "source": "ScienceDaily",
-      "date": "2026-11-17",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261116023348.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Scientists tracked kids for 8 years. What they found about screen time was surprising",
-      "source": "ScienceDaily",
-      "date": "2026-11-17",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261116014725.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA smashed into an asteroid. Now Hera has revealed a strange new world",
-      "source": "ScienceDaily",
-      "date": "2026-11-16",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261116023351.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
