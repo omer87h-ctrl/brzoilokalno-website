@@ -1,7 +1,87 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
+    {
+      "title": "Chess.com’s next move is a new hub for classic games, from mahjong to sudoku",
+      "source": "The Verge",
+      "date": "2026-11-21",
+      "url": "https://www.theverge.com/games/1038099/chess-classic-games-expansion-ai",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The Xiaomi 18 Pro proves two screens aren’t better than one",
+      "source": "The Verge",
+      "date": "2026-11-21",
+      "url": "https://www.theverge.com/tech/1038562/xiaomi-18-pro-max-review",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The game of the year is finally here",
+      "source": "The Verge",
+      "date": "2026-11-21",
+      "url": "https://www.theverge.com/tech/1039433/gta-vi-alfred-6-clockwisetv-installer",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Harbinger is building the unsexy EVs that keep the economy moving",
+      "source": "The Verge",
+      "date": "2026-11-21",
+      "url": "https://www.theverge.com/transportation/1038448/harbinger-ev-startup-240m-series-d-fedex-army-trucks",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "FBI reportedly hacked again, this time targeting nationwide police database",
+      "source": "BleepingComputer",
+      "date": "2026-11-21",
+      "url": "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA’s Voyager 1 is now so far away that light takes 24 hours to reach it",
+      "source": "ScienceDaily",
+      "date": "2026-11-21",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261120075554.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "After 8 years in space, a groundbreaking X-ray telescope finally opens its eyes",
+      "source": "ScienceDaily",
+      "date": "2026-11-21",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261120075547.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A decades-old mystery about light could hold the key to faster internet",
+      "source": "ScienceDaily",
+      "date": "2026-11-21",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261119194544.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "VMware patches vCenter zero-day exploited in attacks since September",
       "source": "BleepingComputer",
@@ -1718,86 +1798,6 @@
       "date": "2026-11-16",
       "url": "https://www.theverge.com/tech/1034581/apple-intelligence-siri-ai-daily-usage-limits-icloud-subscription",
       "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "OpenAI wants to stop deepfakes from overwhelming child abuse tiplines",
-      "source": "The Verge AI",
-      "date": "2026-11-16",
-      "url": "https://www.theverge.com/policy/1034527/openai-csam-classifier",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Nvidia’s board is reportedly ‘not considering’ hiring Jensen Huang back",
-      "source": "The Verge AI",
-      "date": "2026-11-16",
-      "url": "https://www.theverge.com/tech/1034501/nvidia-board-jensen-huang-not-bringing-back",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Hacker behind 2022 GTA VI leaks pleads guilty",
-      "source": "The Verge",
-      "date": "2026-11-16",
-      "url": "https://www.theverge.com/games/1035087/gta-vi-leaks-2022-hacker-pleads-guilty-arion-kurtaj",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "United Airlines system outage disrupts departures just days after the big ground stop",
-      "source": "The Verge",
-      "date": "2026-11-16",
-      "url": "https://www.theverge.com/transportation/1035025/united-airlines-outage-down-departures",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "In Get Huge, the manosphere is here to make friends — with deadly consequences",
-      "source": "The Verge",
-      "date": "2026-11-16",
-      "url": "https://www.theverge.com/entertainment/1033466/hulu-disney-plus-get-huge-looksmaxxing-to-death",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Some of our favorite PlayStation games are steeply discounted for Black Friday",
-      "source": "The Verge",
-      "date": "2026-11-16",
-      "url": "https://www.theverge.com/gadgets/1034339/sony-black-friday-game-sale-2026-deals",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Gemini AI agents repeatedly bypassed safeguards to attack real website",
-      "source": "BleepingComputer",
-      "date": "2026-11-16",
-      "url": "https://www.bleepingcomputer.com/news/security/gemini-ai-agents-repeatedly-bypassed-safeguards-to-attack-real-website/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Google Project Zero cuts bug disclosures to 30 days amid AI threats",
-      "source": "BleepingComputer",
-      "date": "2026-11-16",
-      "url": "https://www.bleepingcomputer.com/news/security/google-project-zero-cuts-bug-disclosure-deadline-to-30-days-amid-ai-threats/",
-      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."

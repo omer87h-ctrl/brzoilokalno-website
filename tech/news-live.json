@@ -1,7 +1,87 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "method": "automatski-rss",
   "stories": [
+    {
+      "title": "Chess.com’s next move is a new hub for classic games, from mahjong to sudoku",
+      "source": "The Verge",
+      "date": "2026-11-21",
+      "url": "https://www.theverge.com/games/1038099/chess-classic-games-expansion-ai",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The Xiaomi 18 Pro proves two screens aren’t better than one",
+      "source": "The Verge",
+      "date": "2026-11-21",
+      "url": "https://www.theverge.com/tech/1038562/xiaomi-18-pro-max-review",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The game of the year is finally here",
+      "source": "The Verge",
+      "date": "2026-11-21",
+      "url": "https://www.theverge.com/tech/1039433/gta-vi-alfred-6-clockwisetv-installer",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Harbinger is building the unsexy EVs that keep the economy moving",
+      "source": "The Verge",
+      "date": "2026-11-21",
+      "url": "https://www.theverge.com/transportation/1038448/harbinger-ev-startup-240m-series-d-fedex-army-trucks",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "FBI reportedly hacked again, this time targeting nationwide police database",
+      "source": "BleepingComputer",
+      "date": "2026-11-21",
+      "url": "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA’s Voyager 1 is now so far away that light takes 24 hours to reach it",
+      "source": "ScienceDaily",
+      "date": "2026-11-21",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261120075554.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "After 8 years in space, a groundbreaking X-ray telescope finally opens its eyes",
+      "source": "ScienceDaily",
+      "date": "2026-11-21",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261120075547.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A decades-old mystery about light could hold the key to faster internet",
+      "source": "ScienceDaily",
+      "date": "2026-11-21",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261119194544.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "New NASA Seed Funding Primes Small Businesses for Innovation",
       "source": "NASA",
@@ -103,46 +183,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Multiplying your Switch 2’s storage costs less than usual right now",
-      "source": "The Verge",
-      "date": "2026-11-20",
-      "url": "https://www.theverge.com/gadgets/1037749/microsd-express-card-nintendo-switch-2-black-friday-2026-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Google says it’s going to shut off Google Assistant on smart speakers next year",
-      "source": "The Verge",
-      "date": "2026-11-20",
-      "url": "https://www.theverge.com/tech/1038834/google-assistant-smart-speakers-nest-app-killed-shut-down",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Here are the Apple deals actually worth picking up ahead of Black Friday",
-      "source": "The Verge",
-      "date": "2026-11-20",
-      "url": "https://www.theverge.com/gadgets/1035460/best-early-black-friday-apple-deals-2026",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Teenage Engineering’s first CD player puts the spinning disc on display",
-      "source": "The Verge",
-      "date": "2026-11-20",
-      "url": "https://www.theverge.com/tech/1038692/teenage-engineering-ep-bc-1-cd-compact-disc-player-broadcast-series-bluetooth",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Bell Canada says 'agentic' hacker stole enterprise customer data",
       "source": "BleepingComputer",
       "date": "2026-11-20",
@@ -213,16 +253,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Windows 11 KB5132057 update released with 28 changes and fixes",
-      "source": "BleepingComputer",
-      "date": "2026-11-20",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5132057-update-released-with-28-changes-and-fixes/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Two massive stars may be secretly feeding the Milky Way’s supermassive black hole",
       "source": "ScienceDaily",
       "date": "2026-11-20",
@@ -273,16 +303,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "NASA Conducts Latest RS-25 Engine Test in Support of Future Artemis Missions",
-      "source": "NASA",
-      "date": "2026-11-19",
-      "url": "https://www.nasa.gov/image-article/latest-rs-25-engine-test-in-support-of-future-artemis-missions/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Apple is hiring engineers to build its own AI agent",
       "source": "The Verge AI",
       "date": "2026-11-19",
@@ -313,16 +333,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Google is putting AI chats right on the homepage",
-      "source": "The Verge AI",
-      "date": "2026-11-19",
-      "url": "https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Why hydrogen flames can glow orange, then turn nearly invisible",
       "source": "ScienceDaily",
       "date": "2026-11-19",
@@ -337,36 +347,6 @@
       "source": "ScienceDaily",
       "date": "2026-11-18",
       "url": "https://www.sciencedaily.com/releases/2026/11/261117033920.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Scientists create a remarkable new rechargeable battery using vitamin B12",
-      "source": "ScienceDaily",
-      "date": "2026-11-18",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261117033909.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "New discovery reveals what may be holding back room-temperature superconductors",
-      "source": "ScienceDaily",
-      "date": "2026-11-18",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261116023358.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "This remarkable new material could solve a major carbon capture problem",
-      "source": "ScienceDaily",
-      "date": "2026-11-17",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261116023405.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
