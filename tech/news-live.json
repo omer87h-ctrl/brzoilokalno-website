@@ -1,7 +1,37 @@
 {
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "method": "automatski-rss",
   "stories": [
+    {
+      "title": "How Tamagotchis got us hooked on digital pets",
+      "source": "The Verge",
+      "date": "2026-11-22",
+      "url": "https://www.theverge.com/podcast/1039716/tamagotchi-history-digital-pets-anniversary",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Your questions about Apple HomeView’s audio, answered",
+      "source": "The Verge",
+      "date": "2026-11-22",
+      "url": "https://www.theverge.com/tech/1038713/apple-homeview-audio-smart-speaker-spotify-airplay",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The vibe-coding revolution is coming to all the gadgets",
+      "source": "The Verge",
+      "date": "2026-11-22",
+      "url": "https://www.theverge.com/column/1039139/vibe-coding-gadgets-tv-camera",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
     {
       "title": "The UN fails to agree on rules regulating ‘killer robots’",
       "source": "The Verge",
@@ -14,20 +44,20 @@
     },
     {
       "title": "Can Anthropic afford to put safety first?",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-21",
       "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Chess.com’s next move is a new hub for classic games, from mahjong to sudoku",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-21",
       "url": "https://www.theverge.com/games/1038099/chess-classic-games-expansion-ai",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -67,16 +97,6 @@
       "source": "The Verge",
       "date": "2026-11-21",
       "url": "https://www.theverge.com/gadgets/1038762/amazon-alexa-photo-frame-black-friday-2026-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Our go-to earbuds for taking calls have fallen to their lowest price to date",
-      "source": "The Verge",
-      "date": "2026-11-21",
-      "url": "https://www.theverge.com/gadgets/1039160/anker-soundcore-liberty-5-pro-black-friday-2026-deal-sale",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -317,16 +337,6 @@
       "source": "NASA",
       "date": "2026-11-19",
       "url": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/center-of-excellence-for-collaborative-innovation-coeci/challenge-public-input-on-life-and-the-world-in-2075/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Lake Pelku",
-      "source": "NASA",
-      "date": "2026-11-19",
-      "url": "https://www.nasa.gov/image-article/lake-pelku/",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
