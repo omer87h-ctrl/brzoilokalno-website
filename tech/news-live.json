@@ -1,103 +1,173 @@
 {
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "method": "automatski-rss",
   "stories": [
     {
-      "title": "White House brags that Trump was ‘totally involved’ in getting Jensen reinstated",
+      "title": "Trump engineered a risky comeback for Jensen Huang",
       "source": "The Verge",
       "date": "2026-11-23",
-      "url": "https://www.theverge.com/policy/1040096/trump-nvidia-jensen-huang-reinstated",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1040652/jensen-huang-nvidia-trump-reinstated",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Tech leaders are celebrating Jensen Huang’s return",
+      "title": "Nvidia CEO Jensen Huang is back. What happens next?",
       "source": "The Verge",
       "date": "2026-11-23",
-      "url": "https://www.theverge.com/tech/1040069/jensen-huang-return-elon-musk-sam-altman-yay",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Jensen Huang is back as Nvidia’s CEO",
+      "title": "Welcome to elite impunity, Jensen Huang",
+      "source": "The Verge",
+      "date": "2026-11-23",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1040819/welcome-to-elite-impunity-jensen-huang",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "AI data centers throw another wrench into chaotic UN climate talks",
       "source": "The Verge AI",
       "date": "2026-11-23",
-      "url": "https://www.theverge.com/tech/1039937/nvidia-ceo-jensen-huang-reinstated",
+      "url": "https://www.theverge.com/science/1040497/ai-data-centers-electricity-un-climate-summit",
       "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Meta Muse can do your Black Friday shopping at Walmart",
+      "title": "Claude AI can review pull requests and ship fixes on its own now",
       "source": "The Verge AI",
       "date": "2026-11-23",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1039874/walmart-agent-gateway-meta-muse-black-friday",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests",
       "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "The best Black Friday deals we’ve already found",
+      "title": "How Jensen Huang ended up as Nvidia CEO again",
+      "source": "The Verge AI",
+      "date": "2026-11-23",
+      "url": "https://www.theverge.com/tech/1040428/nvidia-jensen-huang-ceo-return",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Nothing’s upcoming Ear Note is a pair of earbuds with AI transcription",
+      "source": "The Verge AI",
+      "date": "2026-11-23",
+      "url": "https://www.theverge.com/gadgets/1040357/nothing-ear-note-earbuds-ai-recording",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Oregon and Virginia sue SpaceX over Grok’s porn deepfakes",
+      "source": "The Verge AI",
+      "date": "2026-11-23",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1040255/x-grok-ai-deepfakes-oregon-virginia-lawsuit",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Google alternative Kagi launches an email service",
       "source": "The Verge",
       "date": "2026-11-23",
-      "url": "https://www.theverge.com/gadgets/1028991/black-friday-best-early-deals-2026",
+      "url": "https://www.theverge.com/tech/1041000/kagi-mail-email-google-gmail-alternative",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "My trusty 27-inch Alienware QD-OLED gaming monitor is just $280",
+      "title": "The hacker behind early GTA VI leaks has been sentenced — and released",
       "source": "The Verge",
       "date": "2026-11-23",
-      "url": "https://www.theverge.com/gadgets/1039999/alienware-aw2726dm-qdoled-gaming-monitor-black-friday-2026-deal-sale",
+      "url": "https://www.theverge.com/games/1040966/arion-kurtaj-gta-vi-leaks-sentenced-released",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Apple’s AirPods Pro 3 are 40 percent off ahead of Black Friday",
+      "title": "The Verge’s 2026 holiday gift guide",
       "source": "The Verge",
       "date": "2026-11-23",
-      "url": "https://www.theverge.com/gadgets/1039978/airpods-pro-3-apple-earbuds-black-friday-2026-deal-sale",
+      "url": "https://www.theverge.com/gadgets/1026041/holiday-gift-guide-2026",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "The Verge’s favorite holiday gifts that cost $50 or less",
+      "title": "Ladybird, the first new browser engine in years, is now available to test",
       "source": "The Verge",
       "date": "2026-11-23",
-      "url": "https://www.theverge.com/gadgets/1023471/best-gifts-under-50-2026",
+      "url": "https://www.theverge.com/tech/1040872/ladybird-indie-browser-engine-alpha-testing",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "How one router caused the worst ground stop since 9/11",
+      "title": "The Apple Watch Series 12 is cheaper than ever ahead of Black Friday",
       "source": "The Verge",
       "date": "2026-11-23",
-      "url": "https://www.theverge.com/podcast/1039215/faa-ground-stop-cause-trump-elon-musk-doge-airlines-safety",
+      "url": "https://www.theverge.com/gadgets/1034512/apple-watch-series-12-black-friday-deal-sale",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Tesla’s FSD v15 turns driving visuals into Grand Theft Auto",
-      "source": "The Verge",
+      "title": "South Korea’s power giant KEPCO confirms data breach impacting 1.5 million",
+      "source": "BleepingComputer",
       "date": "2026-11-23",
-      "url": "https://www.theverge.com/transportation/1039919/tesla-fsd-v15-reality-view-gta-nhtsa-safety-rollout",
-      "category": "TEHNOLOGIJA",
+      "url": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "OpenRouter drops AI providers over leaked prompts and secrets",
+      "source": "BleepingComputer",
+      "date": "2026-11-23",
+      "url": "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Microsoft Azure flaw exploited to steal customers' API credentials",
+      "source": "BleepingComputer",
+      "date": "2026-11-23",
+      "url": "https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Spanish LaLiga confirms hackers stole soccer fans’ personal data",
+      "source": "BleepingComputer",
+      "date": "2026-11-23",
+      "url": "https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/",
+      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -143,26 +213,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Microsoft confirms Windows printing issues affecting Forcepoint users",
-      "source": "BleepingComputer",
-      "date": "2026-11-23",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-printing-issues-after-kb5132043-windows-hotpatch/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "CISA flags critical Cisco RCE flaw as actively exploited in attacks",
-      "source": "BleepingComputer",
-      "date": "2026-11-23",
-      "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-critical-cisco-expressway-rce-flaw-as-actively-exploited/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Two monster black holes from the dawn of time defy explanation",
       "source": "ScienceDaily",
       "date": "2026-11-23",
@@ -193,56 +243,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "We haven’t seen the last of the major tech outages",
-      "source": "The Verge AI",
-      "date": "2026-11-22",
-      "url": "https://www.theverge.com/tech/1039851/major-tech-outages",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Binding of Isaac developer removes AI music from Repentance Plus",
-      "source": "The Verge AI",
-      "date": "2026-11-22",
-      "url": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The vibe-coding revolution is coming to all the gadgets",
-      "source": "The Verge AI",
-      "date": "2026-11-22",
-      "url": "https://www.theverge.com/column/1039139/vibe-coding-gadgets-tv-camera",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices",
-      "source": "BleepingComputer",
-      "date": "2026-11-22",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Cleverbridge warns hackers stole credit card numbers, CVVs in data breach",
-      "source": "BleepingComputer",
-      "date": "2026-11-22",
-      "url": "https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "A mysterious gap hints at black holes born from stars that never exploded",
       "source": "ScienceDaily",
       "date": "2026-11-22",
@@ -258,16 +258,6 @@
       "date": "2026-11-22",
       "url": "https://www.sciencedaily.com/releases/2026/11/261120075604.htm",
       "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The UN fails to agree on rules regulating ‘killer robots’",
-      "source": "The Verge AI",
-      "date": "2026-11-21",
-      "url": "https://www.theverge.com/tech/1039554/un-regulations-killer-robots",
-      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
