@@ -3,31 +3,231 @@
   "method": "automatski-rss",
   "stories": [
     {
-      "title": "Trump engineered a risky comeback for Jensen Huang",
+      "title": "Tidal will start banning AI-generated music next month",
       "source": "The Verge",
+      "date": "2026-11-24",
+      "url": "https://www.theverge.com/entertainment/1041362/tidal-ai-music-ban",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Jensen Huang deepfakes are the hot new AI slop",
+      "source": "The Verge",
+      "date": "2026-11-24",
+      "url": "https://www.theverge.com/tech/1041222/jensen-huang-nvidia-scandal-deepfakes",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The New York Times warns photographers not to update Photoshop over AI features",
+      "source": "The Verge",
+      "date": "2026-11-24",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Dreame and Eufy are offering nearly 60 percent off robovacs for Black Friday",
+      "source": "The Verge",
+      "date": "2026-11-24",
+      "url": "https://www.theverge.com/gadgets/1040315/black-friday-best-early-robot-vacuum-mop-deals-2026",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "US Commerce Department adds Megaspeed to trade blacklist as Huang retakes control of Nvidia",
+      "source": "The Verge",
+      "date": "2026-11-24",
+      "url": "https://www.theverge.com/policy/1041270/nvidia-megaspeed-commerce-dept-entity-list",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "You can lock in Hulu and Disney Plus for as low as $5 per month for a year",
+      "source": "The Verge",
+      "date": "2026-11-24",
+      "url": "https://www.theverge.com/gadgets/1041150/hulu-disney-plus-black-friday-ad-free-streaming-subscription-deal-sale-2026",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Wyze’s new window feeder records birds from a camera inside your home",
+      "source": "The Verge",
+      "date": "2026-11-24",
+      "url": "https://www.theverge.com/tech/1041164/wyze-window-bird-cam-camera-identification",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Harman Kardon’s classic, see-through SoundSticks 4 are half off",
+      "source": "The Verge",
+      "date": "2026-11-24",
+      "url": "https://www.theverge.com/gadgets/1040300/harman-kardon-soundsticks-4-speakers-black-friday-2026-deal-sale",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "ShinyHunters claims to return after FBI arrests, uses old PGP keys as proof",
+      "source": "BleepingComputer",
+      "date": "2026-11-24",
+      "url": "https://www.bleepingcomputer.com/news/security/shinyhunters-resurfaces-after-fbi-arrests-uses-old-pgp-keys-as-proof/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "European Commission confirms data theft in EU Academy breach",
+      "source": "BleepingComputer",
+      "date": "2026-11-24",
+      "url": "https://www.bleepingcomputer.com/news/security/european-commission-confirms-data-theft-in-eu-academy-breach/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Hackers compromise Check Point Servers in 22 organizations",
+      "source": "BleepingComputer",
+      "date": "2026-11-24",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-check-point-servers-in-22-organizations/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Police disrupt 57 illegal streaming services with 7.3 million visits",
+      "source": "BleepingComputer",
+      "date": "2026-11-24",
+      "url": "https://www.bleepingcomputer.com/news/security/police-disrupt-57-illegal-streaming-services-with-73-million-visits/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "From Vulnerability Noise to Resilience: Rethinking Security in the AI Era",
+      "source": "BleepingComputer",
+      "date": "2026-11-24",
+      "url": "https://www.bleepingcomputer.com/news/security/from-vulnerability-noise-to-resilience-rethinking-security-in-the-ai-era/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "McDonald's Japan data breach exposes customer location information",
+      "source": "BleepingComputer",
+      "date": "2026-11-24",
+      "url": "https://www.bleepingcomputer.com/news/security/mcdonalds-japan-data-breach-exposes-customer-location-information/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "New Shirudo tool uses AI to shield unpatched Linux systems from exploits",
+      "source": "BleepingComputer",
+      "date": "2026-11-24",
+      "url": "https://www.bleepingcomputer.com/news/security/new-shirudo-tool-uses-ai-to-shield-unpatched-linux-systems-from-exploits/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "IBM quantum computer solves problem classical computers can’t in just 15 minutes",
+      "source": "ScienceDaily",
+      "date": "2026-11-24",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261123231244.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A simple metal is hiding a strange new form of magnetism",
+      "source": "ScienceDaily",
+      "date": "2026-11-24",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261123005341.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "America is building just 10% of the power lines it needs, experts warn",
+      "source": "ScienceDaily",
+      "date": "2026-11-24",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261123005339.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Strange new materials can crawl, walk, and dig like living creatures",
+      "source": "ScienceDaily",
+      "date": "2026-11-24",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261121221137.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Ancient rocks from the Moon’s far side rewrite the Solar System’s violent past",
+      "source": "ScienceDaily",
+      "date": "2026-11-24",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261121221136.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Trump engineered a risky comeback for Jensen Huang",
+      "source": "The Verge AI",
       "date": "2026-11-23",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1040652/jensen-huang-nvidia-trump-reinstated",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Nvidia CEO Jensen Huang is back. What happens next?",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-23",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Welcome to elite impunity, Jensen Huang",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-23",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1040819/welcome-to-elite-impunity-jensen-huang",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -53,160 +253,10 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "How Jensen Huang ended up as Nvidia CEO again",
-      "source": "The Verge AI",
-      "date": "2026-11-23",
-      "url": "https://www.theverge.com/tech/1040428/nvidia-jensen-huang-ceo-return",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Nothing’s upcoming Ear Note is a pair of earbuds with AI transcription",
-      "source": "The Verge AI",
-      "date": "2026-11-23",
-      "url": "https://www.theverge.com/gadgets/1040357/nothing-ear-note-earbuds-ai-recording",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Oregon and Virginia sue SpaceX over Grok’s porn deepfakes",
-      "source": "The Verge AI",
-      "date": "2026-11-23",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1040255/x-grok-ai-deepfakes-oregon-virginia-lawsuit",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Google alternative Kagi launches an email service",
-      "source": "The Verge",
-      "date": "2026-11-23",
-      "url": "https://www.theverge.com/tech/1041000/kagi-mail-email-google-gmail-alternative",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The hacker behind early GTA VI leaks has been sentenced — and released",
-      "source": "The Verge",
-      "date": "2026-11-23",
-      "url": "https://www.theverge.com/games/1040966/arion-kurtaj-gta-vi-leaks-sentenced-released",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The Verge’s 2026 holiday gift guide",
-      "source": "The Verge",
-      "date": "2026-11-23",
-      "url": "https://www.theverge.com/gadgets/1026041/holiday-gift-guide-2026",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Ladybird, the first new browser engine in years, is now available to test",
-      "source": "The Verge",
-      "date": "2026-11-23",
-      "url": "https://www.theverge.com/tech/1040872/ladybird-indie-browser-engine-alpha-testing",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The Apple Watch Series 12 is cheaper than ever ahead of Black Friday",
-      "source": "The Verge",
-      "date": "2026-11-23",
-      "url": "https://www.theverge.com/gadgets/1034512/apple-watch-series-12-black-friday-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "South Korea’s power giant KEPCO confirms data breach impacting 1.5 million",
       "source": "BleepingComputer",
       "date": "2026-11-23",
       "url": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "OpenRouter drops AI providers over leaked prompts and secrets",
-      "source": "BleepingComputer",
-      "date": "2026-11-23",
-      "url": "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Microsoft Azure flaw exploited to steal customers' API credentials",
-      "source": "BleepingComputer",
-      "date": "2026-11-23",
-      "url": "https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Spanish LaLiga confirms hackers stole soccer fans’ personal data",
-      "source": "BleepingComputer",
-      "date": "2026-11-23",
-      "url": "https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "GlobeTopper loses $2.5 million after hackers steal $70k in gift cards",
-      "source": "BleepingComputer",
-      "date": "2026-11-23",
-      "url": "https://www.bleepingcomputer.com/news/security/globetopper-loses-25-million-after-hackers-steal-70k-in-gift-cards/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "AI Agents Are Creating a Shared Responsibility Gap",
-      "source": "BleepingComputer",
-      "date": "2026-11-23",
-      "url": "https://www.bleepingcomputer.com/news/security/ai-agents-are-creating-a-shared-responsibility-gap/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Microsoft testing fix for Windows 11 Bluetooth audio quality drops",
-      "source": "BleepingComputer",
-      "date": "2026-11-23",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-fix-for-windows-11-bluetooth-audio-quality-drops/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Call center operator gets 8 years for helping scam 30,000 Americans",
-      "source": "BleepingComputer",
-      "date": "2026-11-23",
-      "url": "https://www.bleepingcomputer.com/news/security/call-center-operator-gets-8-years-for-helping-scam-30-000-americans/",
       "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
@@ -237,56 +287,6 @@
       "source": "ScienceDaily",
       "date": "2026-11-23",
       "url": "https://www.sciencedaily.com/releases/2026/11/261122060329.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A mysterious gap hints at black holes born from stars that never exploded",
-      "source": "ScienceDaily",
-      "date": "2026-11-22",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261121221126.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "AI uncovers hidden bladder cancer warning signs years before diagnosis",
-      "source": "ScienceDaily",
-      "date": "2026-11-22",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261120075604.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "AI may not work like the human brain after all, scientists discover",
-      "source": "ScienceDaily",
-      "date": "2026-11-21",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261120075701.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Time may be far stranger than we realize. Scientists have a way to test it",
-      "source": "ScienceDaily",
-      "date": "2026-11-21",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261120075558.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Einstein’s relativity just upended a fundamental rule of chemistry",
-      "source": "ScienceDaily",
-      "date": "2026-11-20",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261120075602.htm",
       "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",

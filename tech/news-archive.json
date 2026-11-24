@@ -3,6 +3,206 @@
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
     {
+      "title": "Tidal will start banning AI-generated music next month",
+      "source": "The Verge",
+      "date": "2026-11-24",
+      "url": "https://www.theverge.com/entertainment/1041362/tidal-ai-music-ban",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Jensen Huang deepfakes are the hot new AI slop",
+      "source": "The Verge",
+      "date": "2026-11-24",
+      "url": "https://www.theverge.com/tech/1041222/jensen-huang-nvidia-scandal-deepfakes",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The New York Times warns photographers not to update Photoshop over AI features",
+      "source": "The Verge",
+      "date": "2026-11-24",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Dreame and Eufy are offering nearly 60 percent off robovacs for Black Friday",
+      "source": "The Verge",
+      "date": "2026-11-24",
+      "url": "https://www.theverge.com/gadgets/1040315/black-friday-best-early-robot-vacuum-mop-deals-2026",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "US Commerce Department adds Megaspeed to trade blacklist as Huang retakes control of Nvidia",
+      "source": "The Verge",
+      "date": "2026-11-24",
+      "url": "https://www.theverge.com/policy/1041270/nvidia-megaspeed-commerce-dept-entity-list",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "You can lock in Hulu and Disney Plus for as low as $5 per month for a year",
+      "source": "The Verge",
+      "date": "2026-11-24",
+      "url": "https://www.theverge.com/gadgets/1041150/hulu-disney-plus-black-friday-ad-free-streaming-subscription-deal-sale-2026",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Wyze’s new window feeder records birds from a camera inside your home",
+      "source": "The Verge",
+      "date": "2026-11-24",
+      "url": "https://www.theverge.com/tech/1041164/wyze-window-bird-cam-camera-identification",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Harman Kardon’s classic, see-through SoundSticks 4 are half off",
+      "source": "The Verge",
+      "date": "2026-11-24",
+      "url": "https://www.theverge.com/gadgets/1040300/harman-kardon-soundsticks-4-speakers-black-friday-2026-deal-sale",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "ShinyHunters claims to return after FBI arrests, uses old PGP keys as proof",
+      "source": "BleepingComputer",
+      "date": "2026-11-24",
+      "url": "https://www.bleepingcomputer.com/news/security/shinyhunters-resurfaces-after-fbi-arrests-uses-old-pgp-keys-as-proof/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "European Commission confirms data theft in EU Academy breach",
+      "source": "BleepingComputer",
+      "date": "2026-11-24",
+      "url": "https://www.bleepingcomputer.com/news/security/european-commission-confirms-data-theft-in-eu-academy-breach/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Hackers compromise Check Point Servers in 22 organizations",
+      "source": "BleepingComputer",
+      "date": "2026-11-24",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-check-point-servers-in-22-organizations/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Police disrupt 57 illegal streaming services with 7.3 million visits",
+      "source": "BleepingComputer",
+      "date": "2026-11-24",
+      "url": "https://www.bleepingcomputer.com/news/security/police-disrupt-57-illegal-streaming-services-with-73-million-visits/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "From Vulnerability Noise to Resilience: Rethinking Security in the AI Era",
+      "source": "BleepingComputer",
+      "date": "2026-11-24",
+      "url": "https://www.bleepingcomputer.com/news/security/from-vulnerability-noise-to-resilience-rethinking-security-in-the-ai-era/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "McDonald's Japan data breach exposes customer location information",
+      "source": "BleepingComputer",
+      "date": "2026-11-24",
+      "url": "https://www.bleepingcomputer.com/news/security/mcdonalds-japan-data-breach-exposes-customer-location-information/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "New Shirudo tool uses AI to shield unpatched Linux systems from exploits",
+      "source": "BleepingComputer",
+      "date": "2026-11-24",
+      "url": "https://www.bleepingcomputer.com/news/security/new-shirudo-tool-uses-ai-to-shield-unpatched-linux-systems-from-exploits/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "IBM quantum computer solves problem classical computers can’t in just 15 minutes",
+      "source": "ScienceDaily",
+      "date": "2026-11-24",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261123231244.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "A simple metal is hiding a strange new form of magnetism",
+      "source": "ScienceDaily",
+      "date": "2026-11-24",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261123005341.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "America is building just 10% of the power lines it needs, experts warn",
+      "source": "ScienceDaily",
+      "date": "2026-11-24",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261123005339.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Strange new materials can crawl, walk, and dig like living creatures",
+      "source": "ScienceDaily",
+      "date": "2026-11-24",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261121221137.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Ancient rocks from the Moon’s far side rewrite the Solar System’s violent past",
+      "source": "ScienceDaily",
+      "date": "2026-11-24",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261121221136.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
       "title": "White House brags that Trump was ‘totally involved’ in getting Jensen reinstated",
       "source": "The Verge",
       "date": "2026-11-23",
@@ -194,30 +394,30 @@
     },
     {
       "title": "Trump engineered a risky comeback for Jensen Huang",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-23",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1040652/jensen-huang-nvidia-trump-reinstated",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Nvidia CEO Jensen Huang is back. What happens next?",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-23",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Welcome to elite impunity, Jensen Huang",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-23",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1040819/welcome-to-elite-impunity-jensen-huang",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -1598,206 +1798,6 @@
       "date": "2026-11-18",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1036776/nvidia-earnings-kress-jensen-huang-petition",
       "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Disney’s new Star Wars animatronics interact with guests using AI",
-      "source": "The Verge AI",
-      "date": "2026-11-18",
-      "url": "https://www.theverge.com/tech/1036729/disney-star-wars-anzellans-animatronic-amazon-aws-cloud-ai",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Remember the frontier AI pause? Chip companies don’t either",
-      "source": "The Verge AI",
-      "date": "2026-11-18",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1036549/nvidia-amd-earnings-fall-2026-chips-pause-frontier-models",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Democrats skip a vote on adding Brendan Carr’s adviser to the FCC",
-      "source": "The Verge",
-      "date": "2026-11-18",
-      "url": "https://www.theverge.com/policy/1037134/democrats-boycott-fcc-nomination-vote-danielle-thumann-severs",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Absolute Batman can save DC Studios",
-      "source": "The Verge",
-      "date": "2026-11-18",
-      "url": "https://www.theverge.com/entertainment/1035722/absolute-batman-can-save-dc-studios",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Sony’s impressive Bravia 8 II OLED hits a new low price ahead of Black Friday",
-      "source": "The Verge",
-      "date": "2026-11-18",
-      "url": "https://www.theverge.com/gadgets/1036693/sony-bravia-8-ii-oled-black-friday-2026-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Instagram now lets you edit your stories after you post them",
-      "source": "The Verge",
-      "date": "2026-11-18",
-      "url": "https://www.theverge.com/tech/1036941/instagram-now-lets-you-edit-your-stories-after-you-post-them",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The leaked Lenovo Legion Go Beam could be the affordable handheld we need",
-      "source": "The Verge",
-      "date": "2026-11-18",
-      "url": "https://www.theverge.com/games/1036819/the-leaked-lenovo-legion-go-beam-could-be-the-affordable-handheld-we-need",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Ukraine, FBI arrest ransomware gang members tied to $40M in ransoms",
-      "source": "BleepingComputer",
-      "date": "2026-11-18",
-      "url": "https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Coinbase blocks $4.7 million in transfers to Elon Musk deepfake scam",
-      "source": "BleepingComputer",
-      "date": "2026-11-18",
-      "url": "https://www.bleepingcomputer.com/news/security/coinbase-blocks-47-million-in-transfers-to-elon-musk-deepfake-scam/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Data breach impacts 40 Irish credit unions in reported IT provider hack",
-      "source": "BleepingComputer",
-      "date": "2026-11-18",
-      "url": "https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Microsoft’s Agent Framework PyPI package compromised to steal credentials",
-      "source": "BleepingComputer",
-      "date": "2026-11-18",
-      "url": "https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA Sets Coverage for Northrop Grumman CRS-25 Launch, Prelaunch",
-      "source": "NASA",
-      "date": "2026-11-18",
-      "url": "https://www.nasa.gov/news-release/nasa-sets-coverage-for-northrop-grumman-crs-25-launch-prelaunch/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "MAF EAP – Holidays – How to manage the BAH HUMBUG that tries to sneak in",
-      "source": "NASA",
-      "date": "2026-11-18",
-      "url": "https://www.nasa.gov/centers-and-facilities/michoud/maf-eap/maf-eap-holidays-how-to-manage-the-bah-humbug-that-tries-to-sneak-in/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA Announces Mid-Power Electric Rocket Challenge for US Companies",
-      "source": "NASA",
-      "date": "2026-11-18",
-      "url": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/nasa-announces-mid-power-electric-rocket-challenge-for-us-companies/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Empire State Building Goes Gold for Voyager",
-      "source": "NASA",
-      "date": "2026-11-18",
-      "url": "https://www.nasa.gov/image-article/empire-state-building-goes-gold-for-voyager/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The aliens are coming in 3 Body Problem’s first season 2 trailer",
-      "source": "The Verge",
-      "date": "2026-11-17",
-      "url": "https://www.theverge.com/streaming/1035221/3-body-problem-season-two-trailer-premiere-date-netflix",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "This E Ink photo frame can double as your family’s digital dashboard",
-      "source": "The Verge",
-      "date": "2026-11-17",
-      "url": "https://www.theverge.com/tech/1035258/trmnl-e-ink-spectra-6-frame-dashboard-display-poster-photos",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Get ready for a nationwide emergency alert test at 2:20PM ET today",
-      "source": "The Verge",
-      "date": "2026-11-17",
-      "url": "https://www.theverge.com/tech/1035257/fema-fcc-emergency-alert-system-test-2026",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The Fire TV Stick 4K Plus is on sale for less than Amazon’s entry-level streamer",
-      "source": "The Verge",
-      "date": "2026-11-17",
-      "url": "https://www.theverge.com/gadgets/1034612/amazon-fire-tv-stick-4k-plus-black-friday-2026-deal-sale",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Windows 11 actually runs better on 8GB of RAM now",
-      "source": "The Verge",
-      "date": "2026-11-17",
-      "url": "https://www.theverge.com/tech/1035159/windows-11-8gb-ram-updates-performance-improvements-surface-laptop-testing",
-      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
