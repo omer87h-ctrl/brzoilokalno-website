@@ -2,7 +2,7 @@
  * Service worker - scope /app/
  * Cache only static assets. Never cache Firestore data.
  */
-const CACHE_NAME = "bil-app-static-v66";
+const CACHE_NAME = "bil-app-static-v67";
 const STATIC_ASSETS = [
   "./",
   "./index.html",
@@ -97,7 +97,7 @@ self.addEventListener("install", (event) => {
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((keys) =>
-      Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key)))
+      Promise.all(keys.filter((key) => key.startsWith("bil-app-static-") && key !== CACHE_NAME).map((key) => caches.delete(key)))
     ).then(() => self.clients.claim())
   );
 });
@@ -110,6 +110,20 @@ self.addEventListener("fetch", (event) => {
   }
 
   if (event.request.method !== "GET") {
+    return;
+  }
+
+  if (url.origin !== self.location.origin || !url.pathname.startsWith("/app/")) return;
+
+  // Fetch current HTML when online; use cached app shell only when offline.
+  if (event.request.mode === "navigate") {
+    event.respondWith(fetch(event.request).then(async (response) => {
+      if (response.ok && response.type === "basic") {
+        const cache = await caches.open(CACHE_NAME);
+        await cache.put(event.request, response.clone());
+      }
+      return response;
+    }).catch(async () => (await caches.match(event.request)) || (await caches.match("./index.html")) || Response.error()));
     return;
   }
 
