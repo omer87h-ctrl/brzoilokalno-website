@@ -17,7 +17,8 @@
   <meta name="twitter:title" content="Brzo i Lokalno — web aplikacija">
   <meta name="twitter:description" content="Majstori, kreatori i usluge u tvom gradu. Koristi Brzo i Lokalno u browseru.">
   <meta name="twitter:image" content="https://brzoilokalno.com/app/icons/icon-512.png">
-  <title>Brzo i Lokalno</title>
+  <title>Brzo i Lokalno — web aplikacija za majstore i kreatore</title>
+  <meta name="robots" content="index,follow">
   <link rel="icon" href="icons/icon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
   <link rel="manifest" href="manifest.webmanifest">
@@ -27,22 +28,24 @@
   <link rel="stylesheet" href="app.css">
 </head>
 <body class="app-body">
-  <div id="app-root" aria-live="polite"></div>
+  <div id="app-root" aria-live="polite"><main class="screen screen--center screen--auth"><section class="status-card"><h1 class="status-card__title">Brzo i Lokalno — web aplikacija</h1><p>Pronađi majstore i kreatore, pregledaj radove i objavi lokalni posao.</p><p data-nosnippet>Učitavanje aplikacije…</p><a href="/">O platformi Brzo i Lokalno</a></section></main></div>
   <script type="module">
     import("./app.js").catch((error) => {
       console.error("App boot failed:", error);
       const root = document.getElementById("app-root");
       if (!root) return;
-      const message = error?.message ? String(error.message) : "Nepoznata greška";
       root.innerHTML = `
         <div class="screen screen--center screen--auth">
           <div class="status-card">
             <img class="status-card__logo" src="icons/icon-192.png" alt="" width="72" height="72">
-            <h1 class="status-card__title">Greška pri učitavanju</h1>
+            <h1 class="status-card__title">Brzo i Lokalno — web aplikacija</h1>
+            <div data-nosnippet role="status">
             <p class="status-card__text">Aplikacija se nije mogla pokrenuti. Osvježite stranicu (Ctrl+Shift+R).</p>
-            <p class="status-card__text status-card__text--muted">${message.replace(/</g, "&lt;")}</p>
+            </div>
+            <p class="status-card__text">Pronađi majstore i kreatore, pregledaj radove i objavi lokalni posao.</p>
             <div class="status-card__actions">
               <button type="button" class="btn btn--primary" onclick="location.reload()">Osvježi</button>
+              <a href="/">O platformi</a>
             </div>
           </div>
         </div>`;
