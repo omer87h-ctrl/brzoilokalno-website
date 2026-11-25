@@ -1,83 +1,203 @@
 {
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "method": "automatski-rss",
   "stories": [
     {
-      "title": "Tidal will start banning AI-generated music next month",
+      "title": "NASA+ Content Coming to Big Screen at Greenbelt, Maryland Cinema",
+      "source": "NASA",
+      "date": "2026-11-24",
+      "url": "https://www.nasa.gov/nasa/nasa-content-coming-to-big-screen-at-greenbelt-maryland-cinema/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Teams Lock in Mission Architecture for NASA’s SR-1 Freedom",
+      "source": "NASA",
+      "date": "2026-11-24",
+      "url": "https://www.nasa.gov/general/nasa-locks-in-sr1-freedom-mission-architecture/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA’s Northrop Grumman CRS-25 Mission Overview",
+      "source": "NASA",
+      "date": "2026-11-24",
+      "url": "https://www.nasa.gov/missions/station/nasas-northrop-grumman-crs-25-mission-overview/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Webb Reveals New Details in Supernova Remnant",
+      "source": "NASA",
+      "date": "2026-11-24",
+      "url": "https://www.nasa.gov/image-article/webb-reveals-new-details-in-supernova-remnant/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Jensen Huang reportedly tells Nvidia staff it&#8217;s ‘not true’ Trump got him rehired",
       "source": "The Verge",
       "date": "2026-11-24",
-      "url": "https://www.theverge.com/entertainment/1041362/tidal-ai-music-ban",
+      "url": "https://www.theverge.com/tech/1041571/jensen-huang-all-hands-nvidia-apology",
       "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "David Fincher is being dragged for suspected use of AI in his latest film",
+      "source": "The Verge AI",
+      "date": "2026-11-24",
+      "url": "https://www.theverge.com/entertainment/1041417/david-fincher-netflix-cliff-booth-ai-interpositive",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Tidal will start banning AI-generated music next month",
+      "source": "The Verge AI",
+      "date": "2026-11-24",
+      "url": "https://www.theverge.com/entertainment/1041362/tidal-ai-music-ban",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Jensen Huang deepfakes are the hot new AI slop",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-24",
       "url": "https://www.theverge.com/tech/1041222/jensen-huang-nvidia-scandal-deepfakes",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "The New York Times warns photographers not to update Photoshop over AI features",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-24",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "US financial crimes bureau discloses ‘cybersecurity incident’",
+      "source": "The Verge",
+      "date": "2026-11-24",
+      "url": "https://www.theverge.com/policy/1041957/fincen-treasury-cybersecurity-incident",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Dreame and Eufy are offering nearly 60 percent off robovacs for Black Friday",
+      "title": "The Verge’s 2026 gift guide for dads",
       "source": "The Verge",
       "date": "2026-11-24",
-      "url": "https://www.theverge.com/gadgets/1040315/black-friday-best-early-robot-vacuum-mop-deals-2026",
+      "url": "https://www.theverge.com/gadgets/1024777/best-gifts-for-dad-2026",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "US Commerce Department adds Megaspeed to trade blacklist as Huang retakes control of Nvidia",
+      "title": "Why the US Army is about to blow up nearly 10,000 pounds of unstable explosives in Iowa",
       "source": "The Verge",
       "date": "2026-11-24",
-      "url": "https://www.theverge.com/policy/1041270/nvidia-megaspeed-commerce-dept-entity-list",
+      "url": "https://www.theverge.com/science/1041819/us-army-detonation-lead-explosives-iowa",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "You can lock in Hulu and Disney Plus for as low as $5 per month for a year",
+      "title": "Huawei found guilty of stealing trade secrets",
       "source": "The Verge",
       "date": "2026-11-24",
-      "url": "https://www.theverge.com/gadgets/1041150/hulu-disney-plus-black-friday-ad-free-streaming-subscription-deal-sale-2026",
+      "url": "https://www.theverge.com/tech/1041820/huawei-guilty-trade-secrets-trial",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Wyze’s new window feeder records birds from a camera inside your home",
+      "title": "GTA VI PC recompilation project shut down by Take-Two",
       "source": "The Verge",
       "date": "2026-11-24",
-      "url": "https://www.theverge.com/tech/1041164/wyze-window-bird-cam-camera-identification",
+      "url": "https://www.theverge.com/news/1041690/grand-theft-auto-6-pc-recompilation-project-leonida-takedown-take-two",
       "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Harman Kardon’s classic, see-through SoundSticks 4 are half off",
+      "title": "The Verge’s 2026 holiday gift guide for moms",
       "source": "The Verge",
       "date": "2026-11-24",
-      "url": "https://www.theverge.com/gadgets/1040300/harman-kardon-soundsticks-4-speakers-black-friday-2026-deal-sale",
+      "url": "https://www.theverge.com/gadgets/1021621/best-gifts-for-mom-2026",
       "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "TikTok was down",
+      "source": "The Verge",
+      "date": "2026-11-24",
+      "url": "https://www.theverge.com/tech/1041618/tiktok-down-outage",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Rackspace shuts down Spot cloud platform after security breach",
+      "source": "BleepingComputer",
+      "date": "2026-11-24",
+      "url": "https://www.bleepingcomputer.com/news/security/rackspace-shuts-down-spot-cloud-platform-after-security-breach/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "New Inception extortion gang launches large-scale vishing campaign",
+      "source": "BleepingComputer",
+      "date": "2026-11-24",
+      "url": "https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Turnitin discloses cyberattack affecting customer-facing systems",
+      "source": "BleepingComputer",
+      "date": "2026-11-24",
+      "url": "https://www.bleepingcomputer.com/news/security/turnitin-discloses-cyberattack-affecting-customer-facing-systems/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Radware discloses breach exposing customer cloud access keys",
+      "source": "BleepingComputer",
+      "date": "2026-11-24",
+      "url": "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/",
+      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -123,86 +243,6 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "From Vulnerability Noise to Resilience: Rethinking Security in the AI Era",
-      "source": "BleepingComputer",
-      "date": "2026-11-24",
-      "url": "https://www.bleepingcomputer.com/news/security/from-vulnerability-noise-to-resilience-rethinking-security-in-the-ai-era/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "McDonald's Japan data breach exposes customer location information",
-      "source": "BleepingComputer",
-      "date": "2026-11-24",
-      "url": "https://www.bleepingcomputer.com/news/security/mcdonalds-japan-data-breach-exposes-customer-location-information/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "New Shirudo tool uses AI to shield unpatched Linux systems from exploits",
-      "source": "BleepingComputer",
-      "date": "2026-11-24",
-      "url": "https://www.bleepingcomputer.com/news/security/new-shirudo-tool-uses-ai-to-shield-unpatched-linux-systems-from-exploits/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "IBM quantum computer solves problem classical computers can’t in just 15 minutes",
-      "source": "ScienceDaily",
-      "date": "2026-11-24",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261123231244.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A simple metal is hiding a strange new form of magnetism",
-      "source": "ScienceDaily",
-      "date": "2026-11-24",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261123005341.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "America is building just 10% of the power lines it needs, experts warn",
-      "source": "ScienceDaily",
-      "date": "2026-11-24",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261123005339.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Strange new materials can crawl, walk, and dig like living creatures",
-      "source": "ScienceDaily",
-      "date": "2026-11-24",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261121221137.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Ancient rocks from the Moon’s far side rewrite the Solar System’s violent past",
-      "source": "ScienceDaily",
-      "date": "2026-11-24",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261121221136.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
       "title": "Trump engineered a risky comeback for Jensen Huang",
       "source": "The Verge AI",
       "date": "2026-11-23",
@@ -228,66 +268,6 @@
       "date": "2026-11-23",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1040819/welcome-to-elite-impunity-jensen-huang",
       "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "AI data centers throw another wrench into chaotic UN climate talks",
-      "source": "The Verge AI",
-      "date": "2026-11-23",
-      "url": "https://www.theverge.com/science/1040497/ai-data-centers-electricity-un-climate-summit",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Claude AI can review pull requests and ship fixes on its own now",
-      "source": "The Verge AI",
-      "date": "2026-11-23",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "South Korea’s power giant KEPCO confirms data breach impacting 1.5 million",
-      "source": "BleepingComputer",
-      "date": "2026-11-23",
-      "url": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Two monster black holes from the dawn of time defy explanation",
-      "source": "ScienceDaily",
-      "date": "2026-11-23",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261122060342.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Mysterious new viruses reveal a missing link in evolution",
-      "source": "ScienceDaily",
-      "date": "2026-11-23",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261122060334.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "A galactic shock wave could rewrite the map of the Milky Way",
-      "source": "ScienceDaily",
-      "date": "2026-11-23",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261122060329.htm",
-      "category": "NAUKA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
