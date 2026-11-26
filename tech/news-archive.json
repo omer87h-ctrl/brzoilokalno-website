@@ -3,6 +3,126 @@
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
     {
+      "title": "The best Black Friday deals we’ve already found",
+      "source": "The Verge",
+      "date": "2026-11-26",
+      "url": "https://www.theverge.com/gadgets/1028991/black-friday-best-early-deals-2026",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "42 state AGs are trying to stop Character.AI from selling users’ chats",
+      "source": "The Verge AI",
+      "date": "2026-11-26",
+      "url": "https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Federal judge blocks the FCC from reviewing ABC’s licenses early",
+      "source": "The Verge",
+      "date": "2026-11-26",
+      "url": "https://www.theverge.com/policy/1043116/fcc-disney-abc-broadcast-licenses-review-early-judge-block",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Disney Plus, Hulu, and HBO Max are all over 50 percent off for Black Friday",
+      "source": "The Verge",
+      "date": "2026-11-26",
+      "url": "https://www.theverge.com/gadgets/1041762/best-black-friday-streaming-deals-2026",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "GTA VI developers vote against unionization",
+      "source": "The Verge",
+      "date": "2026-11-26",
+      "url": "https://www.theverge.com/games/1043169/rockstar-games-union-vote-iwgb",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Why GTA VI’s version of Florida feels so real",
+      "source": "The Verge",
+      "date": "2026-11-26",
+      "url": "https://www.theverge.com/entertainment/1042629/gta-6-city-design",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Here’s where you can save (a little) on the Ocarina of Time remake",
+      "source": "The Verge",
+      "date": "2026-11-26",
+      "url": "https://www.theverge.com/gadgets/1040110/zelda-ocarina-of-time-switch-2-black-friday-2026-deal-sale",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Samsung’s R95H TV shows what RGB LED is capable of",
+      "source": "The Verge",
+      "date": "2026-11-26",
+      "url": "https://www.theverge.com/tech/1042613/samsung-r95h-rgb-led-tv-review",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Waymo conquered city streets — why does it keep stumbling on freeways?",
+      "source": "The Verge",
+      "date": "2026-11-26",
+      "url": "https://www.theverge.com/transportation/1042151/waymo-highway-ban-ai-safety-recalls",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Remus malware steals Gmail messages via fake Google Sheets extension",
+      "source": "BleepingComputer",
+      "date": "2026-11-26",
+      "url": "https://www.bleepingcomputer.com/news/security/remus-malware-steals-gmail-messages-via-fake-google-sheets-extension/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "SYS010 malware abuses browser management to spy on Gmail, Outlook",
+      "source": "BleepingComputer",
+      "date": "2026-11-26",
+      "url": "https://www.bleepingcomputer.com/news/security/sys010-malware-abuses-browser-management-to-spy-on-gmail-outlook/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Deep beneath Australia, hidden caves could unlock the secrets of alien worlds",
+      "source": "ScienceDaily",
+      "date": "2026-11-26",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261124055901.htm",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
       "title": "Childhood, Career Come Full Circle for Budget Analyst at NASA Goddard",
       "source": "NASA",
       "date": "2026-11-25",
@@ -224,10 +344,10 @@
     },
     {
       "title": "Google’s patent for custom AI video feeds paints a bleak picture of entertainment’s future",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-25",
       "url": "https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -748,16 +868,6 @@
       "date": "2026-11-23",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1039874/walmart-agent-gateway-meta-muse-black-friday",
       "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The best Black Friday deals we’ve already found",
-      "source": "The Verge",
-      "date": "2026-11-23",
-      "url": "https://www.theverge.com/gadgets/1028991/black-friday-best-early-deals-2026",
-      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -1688,116 +1798,6 @@
       "date": "2026-11-20",
       "url": "https://www.theverge.com/tech/1038834/google-assistant-smart-speakers-nest-app-killed-shut-down",
       "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Here are the Apple deals actually worth picking up ahead of Black Friday",
-      "source": "The Verge",
-      "date": "2026-11-20",
-      "url": "https://www.theverge.com/gadgets/1035460/best-early-black-friday-apple-deals-2026",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Teenage Engineering’s first CD player puts the spinning disc on display",
-      "source": "The Verge",
-      "date": "2026-11-20",
-      "url": "https://www.theverge.com/tech/1038692/teenage-engineering-ep-bc-1-cd-compact-disc-player-broadcast-series-bluetooth",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Bell Canada says 'agentic' hacker stole enterprise customer data",
-      "source": "BleepingComputer",
-      "date": "2026-11-20",
-      "url": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Hackers use autonomous AI tool Cairn to find zero-day, take over server",
-      "source": "BleepingComputer",
-      "date": "2026-11-20",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Vendor data breach exposes Chase, Visa, Mastercard customer info",
-      "source": "BleepingComputer",
-      "date": "2026-11-20",
-      "url": "https://www.bleepingcomputer.com/news/security/vendor-data-breach-exposes-chase-visa-mastercard-customer-info/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA's powerful Moon rocket engine roars through a dramatic 200-second test",
-      "source": "ScienceDaily",
-      "date": "2026-11-20",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261120075551.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Einstein’s relativity just upended a fundamental rule of chemistry",
-      "source": "ScienceDaily",
-      "date": "2026-11-20",
-      "url": "https://www.sciencedaily.com/releases/2026/11/261120075602.htm",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Lake Pelku",
-      "source": "NASA",
-      "date": "2026-11-19",
-      "url": "https://www.nasa.gov/image-article/lake-pelku/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA Conducts Latest RS-25 Engine Test in Support of Future Artemis Missions",
-      "source": "NASA",
-      "date": "2026-11-19",
-      "url": "https://www.nasa.gov/image-article/latest-rs-25-engine-test-in-support-of-future-artemis-missions/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "NASA’s Voyager 1 Makes History Reaching One Light-Day From Earth",
-      "source": "NASA",
-      "date": "2026-11-19",
-      "url": "https://www.nasa.gov/news-release/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth/",
-      "category": "NAUKA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "ChatGPT can transcribe as you speak now with Live Dictation",
-      "source": "The Verge AI",
-      "date": "2026-11-19",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation",
-      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
