@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "method": "RSS i urednicki odabrani linkovi",
   "stories": [
     {
@@ -24,30 +24,30 @@
     },
     {
       "title": "Nothing offers a full look at its AI earbuds and charging case",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-25",
       "url": "https://www.theverge.com/gadgets/1042162/nothing-ear-note-ai-earbuds-reveal",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Amazon is reportedly in talks to end Muse AI shopping block",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-25",
       "url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
       "title": "Has vibe coding made open source the new normal for synths?",
-      "source": "The Verge",
+      "source": "The Verge AI",
       "date": "2026-11-25",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1040081/vibe-coding-open-source-music-firmware",
-      "category": "TEHNOLOGIJA",
+      "category": "AI",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -208,6 +208,136 @@
       "date": "2026-11-25",
       "url": "https://www.sciencedaily.com/releases/2026/11/261123005343.htm",
       "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "NASA Enhances Supplier Program, Announces Mentor-Protégé Agreement",
+      "source": "NASA",
+      "date": "2026-11-25",
+      "url": "https://www.nasa.gov/organizations/osbp/nasa-enhances-supplier-program-announces-mentor-protege-agreement/",
+      "category": "NAUKA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Google’s patent for custom AI video feeds paints a bleak picture of entertainment’s future",
+      "source": "The Verge",
+      "date": "2026-11-25",
+      "url": "https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "FCC signs off on SpaceX’s plan to put up to 1 million data center satellites into space",
+      "source": "The Verge AI",
+      "date": "2026-11-25",
+      "url": "https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers",
+      "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Now Google’s Familiar Faces AI feature works on Walmart’s $35 smart home camera too",
+      "source": "The Verge",
+      "date": "2026-11-25",
+      "url": "https://www.theverge.com/tech/1042938/google-home-familiar-faces-onn-cameras",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Amazon loses its latest attempt to get out of handling more recall notices",
+      "source": "The Verge",
+      "date": "2026-11-25",
+      "url": "https://www.theverge.com/tech/1042870/amazon-recall-order-cpsc",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The Verge’s 2026 holiday gift guide for travelers",
+      "source": "The Verge",
+      "date": "2026-11-25",
+      "url": "https://www.theverge.com/gadgets/1021917/best-gifts-for-travelers-2026",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "WhatsApp’s new scheduled messages let you choose the right time to send",
+      "source": "The Verge",
+      "date": "2026-11-25",
+      "url": "https://www.theverge.com/tech/1042532/whatsapp-scheduled-messages",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "EPA reports ‘zero’ airborne lead following controlled Army detonation in Iowa",
+      "source": "The Verge",
+      "date": "2026-11-25",
+      "url": "https://www.theverge.com/science/1042109/us-army-detonation-lead-azide-explosives-iowa-ammunition-plant",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "1Password breach leaked customer names and emails, but not passwords",
+      "source": "The Verge",
+      "date": "2026-11-25",
+      "url": "https://www.theverge.com/tech/1042409/1password-data-breach-leak",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The Fairphone 6 Plus is modular, repairable, and $100 off right now",
+      "source": "The Verge",
+      "date": "2026-11-25",
+      "url": "https://www.theverge.com/gadgets/1041460/fairphone-6-plus-repairable-phone-black-friday-2026-deal-sale",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Palo Alto Networks warns of Fragnesia flaw exploited in PAN-OS attacks",
+      "source": "BleepingComputer",
+      "date": "2026-11-25",
+      "url": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "1Password customer data stolen after employee GitHub account breach",
+      "source": "BleepingComputer",
+      "date": "2026-11-25",
+      "url": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/",
+      "category": "SIGURNOST",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Italy and Switzerland warn of autonomous AI-driven cyberattacks",
+      "source": "BleepingComputer",
+      "date": "2026-11-25",
+      "url": "https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/",
+      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -1668,136 +1798,6 @@
       "date": "2026-11-19",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation",
       "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "With the biggest IPO of all time, Anthropic’s ‘good guy’ reputation is on the line",
-      "source": "The Verge AI",
-      "date": "2026-11-19",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1037459/anthropic-ipo-safe-ai-reputation-power-structure",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "I let Apple’s always-listening AI summarize my life for two weeks",
-      "source": "The Verge",
-      "date": "2026-11-19",
-      "url": "https://www.theverge.com/tech/1037100/apple-siri-recap-audio-intelligence-hands-on",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Canva adds an AI ‘off’ button",
-      "source": "The Verge AI",
-      "date": "2026-11-19",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1037126/canva-ai-features-off-button",
-      "category": "AI",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "How Silicon Valley lost the public, with Crooked Media’s Jon Favreau",
-      "source": "The Verge",
-      "date": "2026-11-19",
-      "url": "https://www.theverge.com/podcast/1036484/jon-favreau-pod-save-america-offline-crooked-media-trump-big-tech-ai-2028-election",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The Analogue 3D can now update itself over Wi-Fi",
-      "source": "The Verge",
-      "date": "2026-11-19",
-      "url": "https://www.theverge.com/tech/1037552/analogue-3d-nintendo-64-console-wi-fi-activated-automatic-updates",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "The wait begins for GTA VI on PC",
-      "source": "The Verge",
-      "date": "2026-11-19",
-      "url": "https://www.theverge.com/games/1036550/grand-theft-auto-6-gta-vi-pc-version-fomo",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Blue Origin will launch Google&#8217;s AI server satellites in 2029",
-      "source": "The Verge",
-      "date": "2026-11-19",
-      "url": "https://www.theverge.com/tech/1037535/google-blue-origin-project-suncatcher-2029",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Grand Theft Auto VI understands just how important a smartphone is",
-      "source": "The Verge",
-      "date": "2026-11-19",
-      "url": "https://www.theverge.com/entertainment/1037106/grand-theft-auto-6-smartphone",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Five warning signs of ransomware breach before encryption or data theft",
-      "source": "BleepingComputer",
-      "date": "2026-11-19",
-      "url": "https://www.bleepingcomputer.com/news/security/five-warning-signs-of-ransomware-breach-before-encryption-or-data-theft/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Critical NGINX ‘NGINX2Root’ bugs let attackers hijack servers",
-      "source": "BleepingComputer",
-      "date": "2026-11-19",
-      "url": "https://www.bleepingcomputer.com/news/security/critical-nginx-nginx2root-bugs-let-attackers-hijack-servers/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Drupal patches critical RCE flaw, warns exploits may surface quickly",
-      "source": "BleepingComputer",
-      "date": "2026-11-19",
-      "url": "https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaw-warns-exploits-may-surface-quickly/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Microsoft tests new Edge Lockdown Mode that disables GPU APIs",
-      "source": "BleepingComputer",
-      "date": "2026-11-19",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-tests-new-edge-lockdown-mode-that-disables-gpu-apis/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Microsoft confirms app installation, launch issues after hotpatch",
-      "source": "BleepingComputer",
-      "date": "2026-11-19",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-app-installation-launch-issues-after-hotpatch/",
-      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
