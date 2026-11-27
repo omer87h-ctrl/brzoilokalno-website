@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "method": "automatski-rss",
   "stories": [
     {
@@ -8,6 +8,46 @@
       "date": "2026-11-26",
       "url": "https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats",
       "category": "AI",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Netflix’s coziest show has made a very quiet return",
+      "source": "The Verge",
+      "date": "2026-11-26",
+      "url": "https://www.theverge.com/entertainment/1043489/midnight-diner-season3",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The Garmin Forerunner 265S is down to $300, its best price of the year",
+      "source": "The Verge",
+      "date": "2026-11-26",
+      "url": "https://www.theverge.com/gadgets/1042483/garmin-forerunner-265s-fitness-tracker-wearable-deal-sale-black-friday",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "The MacBook Neo is receiving a rare $100 discount for Black Friday",
+      "source": "The Verge",
+      "date": "2026-11-26",
+      "url": "https://www.theverge.com/gadgets/1035932/apple-macbook-neo-black-friday-2026-deal-sale",
+      "category": "TEHNOLOGIJA",
+      "kind": "vanjski",
+      "origin": "automatski-rss",
+      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
+    },
+    {
+      "title": "Android app developers will soon have to share their address publicly",
+      "source": "The Verge",
+      "date": "2026-11-26",
+      "url": "https://www.theverge.com/tech/1043228/android-play-store-google-developer-address-eu",
+      "category": "TEHNOLOGIJA",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -53,41 +93,31 @@
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Why GTA VI’s version of Florida feels so real",
-      "source": "The Verge",
+      "title": "OpenAI warns GPT-6.2 Astra will hit usage limits 40% faster because it fixed a bug",
+      "source": "BleepingComputer",
       "date": "2026-11-26",
-      "url": "https://www.theverge.com/entertainment/1042629/gta-6-city-design",
-      "category": "TEHNOLOGIJA",
+      "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-warns-gpt-62-astra-will-hit-usage-limits-40-percent-faster-because-it-fixed-a-bug/",
+      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Here’s where you can save (a little) on the Ocarina of Time remake",
-      "source": "The Verge",
+      "title": "NordVPN Black Friday Deal: Get 78% off VPN plans in 2026",
+      "source": "BleepingComputer",
       "date": "2026-11-26",
-      "url": "https://www.theverge.com/gadgets/1040110/zelda-ocarina-of-time-switch-2-black-friday-2026-deal-sale",
-      "category": "TEHNOLOGIJA",
+      "url": "https://www.bleepingcomputer.com/news/security/nordvpn-black-friday-deal-get-78-percent-off-vpn-plans-in-2026/",
+      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
     },
     {
-      "title": "Samsung’s R95H TV shows what RGB LED is capable of",
-      "source": "The Verge",
+      "title": "Fake paid expert interviews impersonate brands to steal Google logins",
+      "source": "BleepingComputer",
       "date": "2026-11-26",
-      "url": "https://www.theverge.com/tech/1042613/samsung-r95h-rgb-led-tv-review",
-      "category": "TEHNOLOGIJA",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "Waymo conquered city streets — why does it keep stumbling on freeways?",
-      "source": "The Verge",
-      "date": "2026-11-26",
-      "url": "https://www.theverge.com/transportation/1042151/waymo-highway-ban-ai-safety-recalls",
-      "category": "TEHNOLOGIJA",
+      "url": "https://www.bleepingcomputer.com/news/apple/fake-paid-expert-interviews-impersonate-brands-to-steal-google-logins/",
+      "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
       "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
@@ -227,36 +257,6 @@
       "source": "BleepingComputer",
       "date": "2026-11-25",
       "url": "https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "CISA warns of critical unpatched flaw in Danfoss refrigeration controllers",
-      "source": "BleepingComputer",
-      "date": "2026-11-25",
-      "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "More Pentests Without More Pentesters: Where AI Safely Helps",
-      "source": "BleepingComputer",
-      "date": "2026-11-25",
-      "url": "https://www.bleepingcomputer.com/news/security/more-pentests-without-more-pentesters-where-ai-safely-helps/",
-      "category": "SIGURNOST",
-      "kind": "vanjski",
-      "origin": "automatski-rss",
-      "description": "Naslov iz izdavačevog RSS izvora. Otvori original."
-    },
-    {
-      "title": "InfraTrust warns of exploited supply chain flaws in network appliances",
-      "source": "BleepingComputer",
-      "date": "2026-11-25",
-      "url": "https://www.bleepingcomputer.com/news/security/infratrust-warns-of-exploited-supply-chain-flaws-in-network-appliances/",
       "category": "SIGURNOST",
       "kind": "vanjski",
       "origin": "automatski-rss",
